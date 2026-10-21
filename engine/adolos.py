@@ -972,7 +972,23 @@ def cronologia(gruppo, fonti, adesso):
     }
 
 
-def costruisci_storia(gruppo, adesso, affidabili, approvati, rifiutati, regole_bot=None):
+def id_stabili(gruppi, memoria):
+    """Ogni storia tiene lo stesso ID da un giro all'altro anche se arrivano nuovi articoli:
+    l'ID si eredita dagli articoli già visti (così l'approvazione su Notion non si perde)."""
+    presi, out = set(), {}
+    for g in sorted(gruppi, key=len, reverse=True):
+        voti = Counter(memoria[x["link"]] for x in g if x.get("link") in memoria)
+        sid = next((c for c, _ in voti.most_common() if c not in presi), None)
+        if not sid:
+            sid = fid(g[0]["link"] or g[0]["titolo"])
+            if sid in presi:
+                sid = fid(g[0]["link"] or g[0]["titolo"], str(len(presi)))
+        presi.add(sid)
+        out[id(g)] = sid
+    return out
+
+
+def costruisci_storia(gruppo, adesso, affidabili, approvati, rifiutati, regole_bot=None, sid=None):
     gruppo = sorted(gruppo, key=lambda x: x["data"])
     date = [a_data(x["data"]) for x in gruppo]
     principale, nativo = scegli_titolo(gruppo)
@@ -1009,7 +1025,7 @@ def costruisci_storia(gruppo, adesso, affidabili, approvati, rifiutati, regole_b
     n_testate = sum(1 for f in fonti if f["tipo"] != "social")
     confermato = (not solo_social) and (n_testate >= 2 or agenzia or correlati >= 2)
     stato = "confermato" if confermato else ("voce" if solo_social else "una_fonte")
-    sid = fid(gruppo[0]["link"] or gruppo[0]["titolo"])
+    sid = sid or fid(gruppo[0]["link"] or gruppo[0]["titolo"])
     if sid in rifiutati:
         return None
     # sul sito va tutto ciò che viene da una testata vera; le voci social restano nella Diretta finché qualcuno conferma
@@ -1142,10 +1158,11 @@ def esegui(campione=False, solo_archivio=False):
     print(f"\nArticoli nella finestra: {len(items)}")
     regole = fonti.get("bot", {})
     gruppi = raggruppa(items)
+    id_di_gruppo = id_stabili(gruppi, {} if campione else leggi_json(CACHE / "id_storie.json", {}))
     gruppo_di = {}
     storie = []
     for g in gruppi:
-        s = costruisci_storia(g, adesso, affidabili, approvati, rifiutati, regole)
+        s = costruisci_storia(g, adesso, affidabili, approvati, rifiutati, regole, sid=id_di_gruppo[id(g)])
         if s:
             try:
                 import copertura
@@ -1155,6 +1172,9 @@ def esegui(campione=False, solo_archivio=False):
                 s["copertura"], s["punto_cieco"] = {}, ""
             storie.append(s)
             gruppo_di[s["id"]] = g
+    if not campione:      # memoria degli ID: articolo -> storia (solo articoli ancora nella finestra)
+        scrivi_json(CACHE / "id_storie.json",
+                    {x["link"]: sid for g in gruppi for sid in [id_di_gruppo[id(g)]] for x in g if x.get("link")})
     storie.sort(key=lambda s: (s["calore"], s["n_fonti"]), reverse=True)
     storie = storie[:MAX_STORIE]
     # il bot non deve intasare Instagram: solo i primi N post e N storie, gli altri scalano di un gradino
