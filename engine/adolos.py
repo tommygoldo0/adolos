@@ -367,7 +367,9 @@ RE_SPAM = re.compile(r"(?i)(xxx|xvideos|xnxx|xhamster|porn|\+18|18\+|onlyfans|\b
 RE_INIZIO_NON_NOTIZIA = re.compile(
     r"(?i)^\s*(assista|assistir|watch live|watch:|guarda il video|ascolta|listen|regarder|écouter|escucha|sehen sie|"
     r"podcast|newsletter|oroscopo|horoscope|horóscopo|meteo:|weather forecast|crossword|cruciverba|sudoku|"
-    r"quiz:|the morning|the evening|buongiorno|good morning)\b")
+    r"quiz:|the morning|the evening|buongiorno|good morning|v[ií]deos? d[oae]s? |videos? del |"
+    r"programa |programma |puntata )|"
+    r"\b(assista|assistir|telejornai?s?|telejornal|ao vivo:|en vivo:|live:|en direct vidéo)\b")
 RE_NON_NOTIZIA = re.compile(
     r"(?i)\b(ao vivo|en vivo|live stream|livestream|in streaming|diretta tv|tg\d* (delle|ore)|"
     r"edizione delle ore|replay|full episode|episodio completo|puntata del)\b")
