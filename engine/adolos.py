@@ -990,7 +990,10 @@ def id_stabili(gruppi, memoria):
     return out
 
 
-def ritrova_approvate(gruppi, id_di_gruppo, approvati, link_approvati):
+RITROVO_BLOCCATO = {}     # scheda approvata -> ID che occupa già la sua storia (per il controllo)
+
+
+def ritrova_approvate(gruppi, id_di_gruppo, approvati, link_approvati, con_testo=()):
     """Se una storia approvata su Notion ha cambiato ID (per esempio perché il raggruppamento è
     cambiato), la ritrova dal link del suo articolo principale e le ridà l'ID della scheda."""
     usati = set(id_di_gruppo.values())
@@ -999,7 +1002,12 @@ def ritrova_approvate(gruppi, id_di_gruppo, approvati, link_approvati):
         if sid in usati or sid not in approvati:
             continue
         g = gruppo_del_link.get(link)
-        if g is None or id_di_gruppo[id(g)] in approvati:
+        if g is None:
+            continue
+        attuale = id_di_gruppo[id(g)]
+        # una scheda approvata con il titolo Adolos vince su una approvata senza testi
+        if attuale in approvati and (attuale in con_testo or sid not in con_testo):
+            RITROVO_BLOCCATO[sid] = attuale
             continue
         print(f"Storia approvata ritrovata dal link: {id_di_gruppo[id(g)]} -> {sid}")
         id_di_gruppo[id(g)] = sid
@@ -1179,7 +1187,8 @@ def esegui(campione=False, solo_archivio=False):
     regole = fonti.get("bot", {})
     gruppi = raggruppa(items)
     id_di_gruppo = id_stabili(gruppi, {} if campione else leggi_json(CACHE / "id_storie.json", {}))
-    ritrova_approvate(gruppi, id_di_gruppo, approvati, link_approvati)
+    ritrova_approvate(gruppi, id_di_gruppo, approvati, link_approvati,
+                      {k for k, v in testi_approvati.items() if isinstance(v, dict) and v.get("titolo")})
     gruppo_di = {}
     storie = []
     for g in gruppi:
@@ -1278,6 +1287,7 @@ def esegui(campione=False, solo_archivio=False):
         if t and sid not in ids_storie:
             l = link_approvati.get(sid)
             mancanti[sid] = ("articolo principale uscito dalla finestra di 48 ore" if l and l not in link_finestra
+                             else f"la sua storia ha già l'ID approvato {RITROVO_BLOCCATO[sid]}" if sid in RITROVO_BLOCCATO
                              else "storia non trovata in questo giro" if l else "manca il link fonte sulla scheda")
     uscita["dati"]["approvate_non_sul_sito"] = mancanti
     for sid, motivo in mancanti.items():
