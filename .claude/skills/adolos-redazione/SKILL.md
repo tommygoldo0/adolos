@@ -40,3 +40,9 @@ Controllo legale, e infine **Pacchetto pronto = sì**.
 ## 4. Alla fine
 Una riga per notizia: titolo, indice, zona, esito legale, cosa resta da fare alla persona.
 Poi la persona controlla, mette Stato = Approvata e spunta "Pubblica su Instagram": il motore pubblica al giro dopo.
+
+## Fonti in più e niente attendibilità pubblica
+- Se per i fatti (risultato, numeri, nomi) usi articoli che il motore non ha raccolto, incolla i link nel campo
+  Notion **"Altre fonti"**, uno per riga: il motore li aggiunge a "Chi ne parla" sul sito e nel carosello.
+- Una notizia sportiva senza risultato non è un pacchetto pronto: cerca il risultato e i marcatori su almeno 2 testate.
+- L'attendibilità serve solo alla redazione su Notion: non scriverla nei testi pubblici.

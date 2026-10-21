@@ -25,6 +25,15 @@ try:
 except Exception:
     _CONF_SITO = {}
 EMAIL = _CONF_SITO.get("email") or "redazioneadolos@gmail.com"
+# l'attendibilità resta su Notion per la redazione; sul sito si mostra solo se attivata in fonti.json
+MOSTRA_ATT = bool(_CONF_SITO.get("mostra_attendibilita", False))
+
+
+def pill(s, classe="liv-pill", numero=False):
+    if not MOSTRA_ATT:
+        return ""
+    a = s.get("attendibilita", 50)
+    return f'<span class="{classe}" style="--a:{a}">{E(s.get("livello", ""))}' + (f" · {a}/100" if numero else "") + "</span>"
 ROMA = ZoneInfo("Europe/Rome")
 E = html.escape
 
@@ -240,7 +249,7 @@ def provenienza(s, nomi, n=2):
 
 def voce(s, nomi, prof=""):
     return (f'<a class="voce" href="{prof}{storia_url(s)}"><span class="riga-calore"><span class="ora">{ora(s["aggiornata"])}</span>{termo(s["calore"])}'
-            f'<span class="liv-pill mini" style="--a:{s.get("attendibilita", 50)}">{E(s.get("livello", ""))}</span>'
+            + pill(s, "liv-pill mini") +
             f'<span class="chip-cat">{E(s.get("sezione", ""))}</span></span>'
             f'<h4 class="t">{E(s["titolo"])}</h4>{provenienza(s, nomi)}</a>')
 
@@ -330,15 +339,19 @@ def riga_diretta(s, prof=""):
     fuoco = f'<span class="sale">+{s["crescita"]} nell\'ultima ora</span>' if s.get("crescita", 0) >= 2 else ""
     return (f'<a class="rd{" voce" if s.get("stato") == "voce" else ""}" href="{prof}{storia_url(s)}" data-id="{s["id"]}" style="--a:{a}">'
             f'<div class="rd-tempo"><span class="ora">{ora(prima["data"])}</span><span class="fa" data-t="{prima["data"]}"></span></div>'
-            f'<div class="rd-corpo"><div class="rd-top"><span class="liv">{E(s.get("livello", ""))}</span>'
+            f'<div class="rd-corpo"><div class="rd-top">'
+            + (f'<span class="liv">{E(s.get("livello", ""))}</span>' if MOSTRA_ATT else "") +
             f'<span class="chip-cat">{E(s.get("sezione", ""))}</span>{fuoco}</div>'
             f'<h4>{E(s["titolo"])}</h4>'
             f'<p class="rd-orig">Uscita da <b>{E(prima["fonte"])}</b>{veloce} · {stato_fonte(s)}</p>'
-            f'<div class="rd-barra" role="img" aria-label="Attendibilità {a} su 100"><i style="width:{a}%"></i></div></div>'
+            + (f'<div class="rd-barra" role="img" aria-label="Attendibilità {a} su 100"><i style="width:{a}%"></i></div>'
+               if MOSTRA_ATT else "") + '</div>'
             f'<div class="rd-curva">{curva_svg(s.get("curva"))}<span>{s.get("n_fonti", 1)} testate · {len(s["paesi"])} paesi</span></div></a>')
 
 
 def legenda():
+    if not MOSTRA_ATT:
+        return ""
     return '<ul class="legenda">' + "".join(
         f'<li style="--a:{a}"><span class="pallino"></span><span><b>{E(n)}</b> {E(t)}</span></li>' for n, a, t in LIVELLI_INFO) + "</ul>"
 
@@ -353,7 +366,7 @@ def diretta(notizie, storie, live):
  <div>
   <span class="kicker-live"><span class="punto"></span> In diretta</span>
   <h1>Segui la notizia</h1>
-  <p>Le notizie appena uscite, anche quando le dà una sola fonte. Guarda da dove arrivano e come crescono: la barra è rossa finché è solo una voce e diventa verde man mano che altre testate, in altri paesi, la confermano.</p>
+  <p>Le notizie appena uscite, anche quando le dà una sola fonte. Guarda da dove arrivano e quante testate, in quali paesi, le riprendono.</p>
  </div>
  {legenda()}
 </div></section>
@@ -505,7 +518,7 @@ def mondo(notizie, storie, live):
             f'<li><div><div class="chi">{E(f["fonte"])} <span>da {E(nomi.get(f["paese"], f["paese"]))}, {data_lunga(f["data"])}</span></div>'
             + fonte_titolo(f) + "</div></li>" for f in s["fonti"])
         traduci = originale(s)
-        stato = f'<span class="liv-pill" style="--a:{s.get("attendibilita", 50)}">{E(s.get("livello", ""))}</span>' + badge_cieco(s)
+        stato = pill(s) + badge_cieco(s)
         prima = s["prima_segnalazione"]
         righe.append(f"""<article class="storia" id="{s['id']}" data-c="{E(s['continenti'][0])}" data-p="{' '.join(s['paesi'])}">
  <div class="quando"><span class="ora">{ora(s['aggiornata'])}</span>{data_breve(s['aggiornata'])}</div>
@@ -621,7 +634,7 @@ def punto_cieco(notizie, storie):
 def pagina_storia(s, storie, nomi):
     prof = "../"
     a = s.get("attendibilita", 50)
-    stato = f'<span class="liv-pill" style="--a:{a}">{E(s.get("livello", ""))} · {a}/100</span>'
+    stato = pill(s, numero=True)
     prima = s["prima_segnalazione"]
     p1 = s["prima"]
     c = s.get("conferma")
@@ -636,13 +649,16 @@ def pagina_storia(s, storie, nomi):
     if s.get("stato") == "voce":
         avviso = ('<div class="avviso-voce"><b>Attenzione: è una voce.</b> Per ora la riporta solo un canale social o un aggregatore. '
                   'Nessuna testata l\'ha confermata: prendila con le pinze. Se arriva una conferma, questa pagina si aggiorna.</div>')
-    elif s.get("stato") == "una_fonte":
+    elif s.get("stato") == "una_fonte" and MOSTRA_ATT:
         avviso = '<div class="avviso-voce tenue">Per ora la notizia arriva da una sola testata.</div>'
+    barra_att = (f'<div class="rd-barra grande"><i style="width:{a}%"></i></div><p class="meta">Attendibilità: '
+                 f'<b>{E(s.get("livello", ""))}</b>, {a} su 100. Sale ogni volta che una testata indipendente la riprende.</p>'
+                 if MOSTRA_ATT else "")
     traccia = f"""<section class="traccia" style="--a:{a}">
    {avviso}
    <h2>Come sta andando</h2>
    <div class="traccia-grid">
-    <div><div class="rd-barra grande"><i style="width:{a}%"></i></div><p class="meta">Attendibilità: <b>{E(s.get("livello", ""))}</b>, {a} su 100. Sale ogni volta che una testata indipendente la riprende.</p>
+    <div>{barra_att}
     <ol class="tappe">{"".join(passi)}</ol></div>
     {f'<div class="curva-box">{curva_svg(s.get("curva"), 260, 80)}<p class="meta">Testate che la riportano, dalla prima uscita a ora</p></div>' if curva_svg(s.get("curva")) else ""}
    </div>
@@ -797,7 +813,7 @@ def chi_siamo(storie):
  <p>Il nostro motto è oltre i fatti: ogni notizia arriva con il contesto e i numeri che servono per capirla.</p>
  <h2>Come lavoriamo</h2>
  <p>Il sistema di Adolos legge, più volte all'ora, i feed RSS ufficiali delle testate di tutti i continenti. Quando più giornali raccontano lo stesso fatto li raggruppiamo e mostriamo chi lo riporta e da quale paese, con il link all'articolo originale. Il titolo lo scriviamo noi: non riportiamo titoli né testi delle testate.</p>
- <p>Ogni notizia ha un livello di attendibilità: sale ogni volta che una testata indipendente la riprende. Con una sola fonte lo diciamo chiaramente.</p>
+ <p>Per ogni notizia mostriamo quante testate la riportano e da quali paesi, con il link a ciascun articolo.</p>
  <p>Non copiamo articoli e non ne traduciamo il testo. Le nostre sintesi partono dai fatti riportati da almeno due testate e sono scritte da zero; quando ci aiuta l'intelligenza artificiale lo indichiamo, e una persona della redazione le controlla sempre prima della pubblicazione.</p>
  <p>Tutti i dettagli su fonti, immagini e richieste di rimozione: <a href="fonti-diritti.html" style="color:var(--rosso);text-decoration:underline">Fonti, diritti e rimozioni</a>.</p>
  <h2>Contatti</h2>

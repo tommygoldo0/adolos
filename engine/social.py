@@ -127,106 +127,248 @@ def _sfondo_chiaro():
     return img, d
 
 
+GIALLO = (255, 212, 0)
+ROSSO_SCURO = (156, 20, 28)
+ROSA = (255, 222, 222)
+ARCHIVO = RADICE / "site" / "assets" / "fonts" / "archivo.woff2"
+
+
+def _arch(size, peso=900):
+    """Archivo (lo stesso carattere del sito), con il peso scelto. Se manca, Instrument Sans."""
+    from PIL import ImageFont
+    try:
+        f = ImageFont.truetype(str(ARCHIVO), size)
+        try:
+            f.set_variation_by_axes([peso])
+        except Exception:
+            pass
+        return f
+    except Exception:
+        return _f("InstrumentSans-Bold.ttf", size)
+
+
+def _righe_strette(draw, testo, font, larghezza, stretto):
+    """Va a capo tenendo conto che ogni riga verrà schiacciata in orizzontale (carattere "stretto")."""
+    return _a_capo(draw, testo, font, larghezza / stretto)
+
+
+def _scrivi_stretto(img, x, y, riga, font, colore, stretto=0.84):
+    """Disegna una riga e la stringe in orizzontale: titoli spessi e stretti come nei post @adolos.it."""
+    from PIL import Image, ImageDraw
+    w = int(ImageDraw.Draw(img).textlength(riga, font=font)) + 8
+    h = int(font.size * 1.3)
+    strato = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    ImageDraw.Draw(strato).text((0, 0), riga, font=font, fill=colore + (255,))
+    strato = strato.resize((max(1, int(w * stretto)), h), Image.LANCZOS)
+    img.paste(strato, (int(x), int(y)), strato)
+
+
+def _titolo(img, draw, blocchi, x, y, larghezza, altezza, size=118, min_size=56, interlinea=0.98, stretto=0.84,
+            colore=(255, 255, 255)):
+    """Scrive uno o più blocchi di testo maiuscolo (con una riga vuota tra un blocco e l'altro),
+    rimpicciolendo il carattere finché non ci sta. Restituisce la y finale."""
+    while True:
+        font = _arch(size, 900)
+        tutte = []
+        for k, b in enumerate(blocchi):
+            if k:
+                tutte.append("")
+            tutte += _righe_strette(draw, b.upper(), font, larghezza, stretto)
+        alt = sum(size * (interlinea if r else 0.45) for r in tutte)
+        largo = max([draw.textlength(r, font=font) * stretto for r in tutte if r] or [0])
+        if (alt <= altezza and largo <= larghezza) or size <= min_size:
+            break
+        size -= 4
+    for r in tutte:
+        if r:
+            _scrivi_stretto(img, x, y, r, font, colore, stretto)
+        y += size * (interlinea if r else 0.45)
+    return y
+
+
+def _sfondo_rosso(variante=0):
+    """Rosso Adolos pieno con una leggera sfumatura diagonale (niente foto: nessun problema di diritti)."""
+    from PIL import Image, ImageDraw
+    a, b = [(ROSSO_SCURO, ROSSO), (BORDEAUX, ROSSO_SCURO), (ROSSO_SCURO, (186, 26, 36))][variante % 3]
+    img = Image.new("RGB", (W, H), a)
+    d = ImageDraw.Draw(img)
+    for i in range(0, W + H, 3):
+        t = i / (W + H)
+        c = tuple(int(a[k] + (b[k] - a[k]) * t) for k in range(3))
+        d.line([(i, 0), (i - H, H)], fill=c, width=4)
+    return img, ImageDraw.Draw(img)
+
+
+def _alfa(draw, x, y, size=84, colore=(255, 255, 255)):
+    draw.text((x, y), "α", font=_f("DejaVuSerif-BoldItalic.ttf", size), fill=colore, anchor="rt")
+
+
+def _piede_ig(draw, n, tot, ultimo=False, scuro=False):
+    c = (80, 60, 60) if scuro else ROSA
+    draw.text((70, H - 72), f"{n}/{tot}", font=_arch(30, 600), fill=c, anchor="lm")
+    draw.text((W / 2, H - 72), "α", font=_f("DejaVuSerif-BoldItalic.ttf", 40), fill=ROSSO if scuro else c, anchor="mm")
+    if ultimo:
+        draw.text((W - 70, H - 72), "adolos.it", font=_arch(30, 700), fill=c, anchor="rm")
+    else:   # la freccia con DejaVu: Archivo non ha il carattere →
+        draw.text((W - 70, H - 72), "→", font=_f("DejaVuSerif-BoldItalic.ttf", 34), fill=c, anchor="rm")
+        draw.text((W - 118, H - 72), "Scorri", font=_arch(30, 700), fill=c, anchor="rm")
+
+
+def _kicker(draw, x, y, testo, colore=GIALLO, size=32):
+    draw.text((x, y), testo.upper(), font=_arch(size, 800), fill=colore)
+
+
+def _divide_titolo(titolo):
+    """ "PSG-Barcellona 4-2: Vitinha decide" -> ["PSG-Barcellona 4-2:", "Vitinha decide"] (stile @adolos.it)."""
+    if ":" in titolo:
+        a, b = titolo.split(":", 1)
+        if 3 <= len(a) <= 45 and b.strip():
+            return [a.strip() + ":", b.strip()]
+    return [titolo]
+
+
+def _testate_uniche(s):
+    viste = []
+    for f in sorted(s["fonti"], key=lambda f: not _latino(f["fonte"])):
+        if f.get("tipo") == "social" or f["fonte"] in [v["fonte"] for v in viste] or not _latino(f["fonte"]):
+            continue
+        viste.append(f)
+    return viste
+
+
 def carosello(s, testi, nomi_paesi, cont_di):
-    """Disegna le 5 immagini. Restituisce la lista di oggetti PIL."""
-    att = s.get("attendibilita", 50)
+    """Disegna il carosello nello stile della pagina @adolos.it. Restituisce la lista di immagini PIL.
+    Copertina + una slide per ogni fatto + "Chi ne parla" + fonti. Niente attendibilità: resta su Notion."""
     titolo = testi.get("titolo") or s["titolo"]
     punti = testi.get("punti") or [p.strip() + "." for p in testi["sintesi"].split(". ") if len(p.strip()) > 20][:4]
+    punti = [p for p in punti if p][:4]
     paesi = s.get("paesi", [])
-    tot = 5
+    testate = _testate_uniche(s)
+    n_test = max(s.get("n_fonti", 0), len(testate))
+    tot = 1 + len(punti) + 2
     slide = []
 
     # 1. copertina
-    img, d = _sfondo_scuro()
-    _logo(d, 70, 70)
-    x = _pillola(d, 70, 200, s.get("sezione", "Notizie").upper(), ROSSO)
-    _pillola(d, x + 14, 200, s.get("livello", ""), colore_att(att), (20, 20, 20))
-    _blocco(d, (70, 330), titolo, "Lora-Bold.ttf", 96, W - 140, 640, (255, 255, 255), 1.12, 48)
-    d.text((70, H - 230), f"Ripresa da {s['n_fonti']} {'testata' if s['n_fonti'] == 1 else 'testate'} in {len(paesi)} {'paese' if len(paesi) == 1 else 'paesi'}",
-           font=_f("InstrumentSans-Bold.ttf", 36), fill=(255, 255, 255))
-    d.text((70, H - 180), "Scorri per i fatti e le fonti  →", font=_f("InstrumentSans-Regular.ttf", 30), fill=(230, 205, 205))
-    _piede(d, 1, tot)
+    img, d = _sfondo_rosso(0)
+    _kicker(d, 70, 92, s.get("sezione") or "Notizie")
+    _alfa(d, W - 64, 56, 96)
+    y0 = 200
+    if s.get("punto_cieco") == "italia":
+        f = _arch(30, 800)
+        testo = "IL MONDO NE PARLA, L'ITALIA NO"
+        w = d.textlength(testo, font=f)
+        d.rectangle((70, y0, 70 + w + 36, y0 + 56), fill=GIALLO)
+        d.text((88, y0 + 28), testo, font=f, fill=BORDEAUX, anchor="lm")
+        y0 += 96
+    _titolo(img, d, _divide_titolo(titolo), 70, y0, W - 140, H - y0 - 260)
+    riga = f"{n_test} {'testata' if n_test == 1 else 'testate'} · {len(paesi)} {'paese' if len(paesi) == 1 else 'paesi'}"
+    d.text((70, H - 170), riga.upper(), font=_arch(32, 800), fill=(255, 255, 255))
+    _piede_ig(d, 1, tot)
     slide.append(img)
 
-    # 2. in breve
-    img, d = _sfondo_chiaro()
-    d.text((70, 90), "IN BREVE", font=_f("InstrumentSans-Bold.ttf", 34), fill=ROSSO)
-    _blocco(d, (70, 170), testi["sintesi"], "Lora-Regular.ttf", 46, W - 140, H - 380, INK, 1.42, 30)
-    _piede(d, 2, tot, chiaro=False)
-    slide.append(img)
-
-    # 3. i fatti
-    img, d = _sfondo_chiaro()
-    d.text((70, 90), "I FATTI", font=_f("InstrumentSans-Bold.ttf", 34), fill=ROSSO)
-    y = 180
-    spazio = (H - 330) // max(1, len(punti))
+    # 2. un fatto per slide, scritto grande
     for i, p in enumerate(punti, 1):
-        d.ellipse((70, y, 136, y + 66), fill=ROSSO)
-        d.text((103, y + 34), str(i), font=_f("InstrumentSans-Bold.ttf", 34), fill=(255, 255, 255), anchor="mm")
-        _blocco(d, (165, y + 4), p, "InstrumentSans-Bold.ttf", 40, W - 235, spazio - 40, INK, 1.25, 28)
-        y += spazio
-    _piede(d, 3, tot, chiaro=False)
-    slide.append(img)
+        img, d = _sfondo_rosso(1 if i % 2 else 2)
+        _kicker(d, 70, 92, f"I fatti · {i} di {len(punti)}")
+        _alfa(d, W - 64, 56, 72, ROSA)
+        size = 76
+        while True:
+            font = _arch(size, 800)
+            righe = _a_capo(d, p, font, W - 140)
+            if len(righe) * size * 1.18 <= H - 420 or size <= 40:
+                break
+            size -= 4
+        y = (H - len(righe) * size * 1.18) / 2
+        for r in righe:
+            d.text((70, y), r, font=font, fill=(255, 255, 255))
+            y += size * 1.18
+        _piede_ig(d, 1 + i, tot)
+        slide.append(img)
 
-    # 4. chi ne parla
-    img, d = _sfondo_chiaro()
-    d.text((70, 90), "CHI NE PARLA", font=_f("InstrumentSans-Bold.ttf", 34), fill=ROSSO)
-    d.text((70, 150), f"{s.get('livello', '')}: attendibilità {att} su 100", font=_f("InstrumentSans-Bold.ttf", 38), fill=INK)
-    d.rounded_rectangle((70, 215, W - 70, 245), radius=15, fill=(225, 216, 205))
-    d.rounded_rectangle((70, 215, 70 + int((W - 140) * att / 100), 245), radius=15, fill=colore_att(att))
+    # 3. chi ne parla (il tratto che ci distingue, alla Ground News)
+    from PIL import Image, ImageDraw
+    img = Image.new("RGB", (W, H), CARTA)
+    d = ImageDraw.Draw(img)
+    d.rectangle((0, 0, W, 16), fill=ROSSO)
+    _kicker(d, 70, 92, "Chi ne parla", ROSSO)
+    _titolo(img, d, [riga], 70, 150, W - 140, 130, size=92, min_size=50, colore=INK)
     y = 300
-    viste = []
-    latine = sorted(s["fonti"], key=lambda f: not _latino(f["fonte"]))
-    for f in latine:
-        if f["fonte"] in viste or f.get("tipo") == "social" or not _latino(f["fonte"]):
-            continue
-        viste.append(f["fonte"])
-        if len(viste) > 8:
-            break
-        d.text((70, y), f["fonte"][:38], font=_f("InstrumentSans-Bold.ttf", 36), fill=INK)
-        d.text((W - 70, y + 4), nomi_paesi.get(f["paese"], f["paese"])[:22], font=_f("InstrumentSans-Regular.ttf", 30),
-               fill=GRIGIO, anchor="ra")
-        y += 62
-    resto = s["n_fonti"] - len(viste[:8])
+    mostrate = testate[:9]
+    for f in mostrate:
+        d.text((70, y), f["fonte"][:34], font=_arch(38, 750), fill=INK)
+        d.text((W - 70, y + 4), nomi_paesi.get(f["paese"], f["paese"])[:22], font=_arch(30, 450), fill=GRIGIO, anchor="ra")
+        d.line([(70, y + 56), (W - 70, y + 56)], fill=(225, 214, 202), width=2)
+        y += 70
+    resto = n_test - len(mostrate)
     if resto > 0:
-        d.text((70, y + 6), f"e altre {resto} testate", font=_f("Lora-Italic.ttf", 32), fill=GRIGIO)
-    # copertura per continente (alla Ground News)
+        d.text((70, y + 8), f"e altre {resto} testate", font=_f("Lora-Italic.ttf", 32), fill=GRIGIO)
     conti = {}
     for p in paesi:
         c = cont_di.get(p, "Altro")
         conti[c] = conti.get(c, 0) + 1
     if conti:
-        y0 = H - 300
-        d.text((70, y0), "Da dove arriva", font=_f("InstrumentSans-Bold.ttf", 30), fill=INK)
+        y0 = H - 270
+        d.text((70, y0), "DA DOVE ARRIVA", font=_arch(28, 800), fill=INK)
         x = 70
         totale = sum(conti.values())
         for i, (c, n) in enumerate(sorted(conti.items(), key=lambda kv: -kv[1])):
             w = int((W - 140) * n / totale)
-            tinta = [ROSSO, (120, 30, 36), (190, 120, 60), (90, 110, 90), (100, 100, 140)][i % 5]
-            d.rectangle((x, y0 + 50, x + w, y0 + 90), fill=tinta)
+            tinta = [ROSSO, BORDEAUX, (190, 120, 60), (90, 110, 90), (100, 100, 140)][i % 5]
+            d.rectangle((x, y0 + 48, x + w, y0 + 96), fill=tinta)
             if w > 150:
-                d.text((x + 10, y0 + 70), f"{c} {n}", font=_f("InstrumentSans-Bold.ttf", 24), fill=(255, 255, 255), anchor="lm")
+                d.text((x + 12, y0 + 72), f"{c} {n}", font=_arch(24, 800), fill=(255, 255, 255), anchor="lm")
             x += w
-    _piede(d, 4, tot, chiaro=False)
+    _piede_ig(d, tot - 1, tot, scuro=True)
     slide.append(img)
 
-    # 5. chiusura
-    img, d = _sfondo_scuro()
-    _logo(d, 70, 70)
-    _blocco(d, (70, 420), "Tutte le fonti, con i link agli articoli originali, su adolos.it", "Lora-Bold.ttf", 70,
-            W - 140, 400, (255, 255, 255), 1.16)
-    nota = ("Sintesi preparata con l'aiuto dell'intelligenza artificiale e verificata dalla redazione."
-            if testi.get("con_ai") else "Sintesi scritta dalla redazione di Adolos.")
-    _blocco(d, (70, H - 300), nota, "InstrumentSans-Regular.ttf", 30, W - 140, 120, (230, 205, 205), 1.3)
-    _piede(d, 5, tot)
+    # 4. fonti e chiusura
+    img, d = _sfondo_rosso(0)
+    _kicker(d, 70, 92, "Fonti")
+    _alfa(d, W - 64, 56, 96)
+    nomi = [f["fonte"] for f in testate[:6]]
+    if n_test > len(nomi):
+        nomi.append(f"e altre {n_test - len(nomi)}")
+    y = _titolo(img, d, [", ".join(nomi)], 70, 190, W - 140, 560, size=84, min_size=44)
+    _titolo(img, d, ["Tutti i link agli articoli su adolos.it"], 70, max(y + 50, 820), W - 140, 200, size=64,
+            min_size=40, colore=GIALLO)
+    nota = "Testo preparato con l'aiuto dell'AI e verificato dalla redazione."   # regola 9: sempre dichiarato
+    d.text((70, H - 160), nota, font=_arch(28, 500), fill=ROSA)
+    _piede_ig(d, tot, tot, ultimo=True)
     slide.append(img)
     return slide
 
 
+VERSIONE_GRAFICA = 2      # cambiarla ridisegna tutti i caroselli
+
+
 def _impronta(s, testi):
-    base = json.dumps([testi.get("titolo"), testi.get("sintesi"), testi.get("punti"), s.get("livello"), s["n_fonti"]],
-                      ensure_ascii=False)
+    base = json.dumps([VERSIONE_GRAFICA, testi.get("titolo"), testi.get("sintesi"), testi.get("punti"), s["n_fonti"],
+                       s.get("punto_cieco")], ensure_ascii=False)
     return hashlib.sha1(base.encode()).hexdigest()[:12]
+
+
+def _pagina_carosello(cartella, s, t):
+    """Pagina semplice con tutte le slide da scaricare e la didascalia da copiare (link messo su Notion)."""
+    import html as _h
+    n = len(s["carosello"])
+    slide = "".join(f'<figure><img src="{i}.jpg" alt="Slide {i}" loading="lazy"><a href="{i}.jpg" download>Scarica slide {i}</a></figure>'
+                    for i in range(1, n + 1))
+    didas = _h.escape(t.get("didascalia") or "")
+    (cartella / "index.html").write_text(f"""<!doctype html><html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Carosello Adolos</title><style>
+body{{margin:0;font-family:system-ui,sans-serif;background:#1f0709;color:#fff;padding:20px}}
+h1{{font-size:20px;margin:0 0 6px}}p{{color:#f3cfcf;margin:0 0 18px}}
+.g{{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}}
+figure{{margin:0}}img{{width:100%;border-radius:8px;display:block}}
+a{{display:block;margin-top:6px;color:#ffd400;font-weight:700;text-decoration:none}}
+textarea{{width:100%;min-height:180px;margin-top:18px;border-radius:8px;padding:10px;font:15px system-ui;box-sizing:border-box}}
+button{{margin-top:8px;padding:10px 16px;border:0;border-radius:8px;background:#d3202b;color:#fff;font-weight:700}}
+</style></head><body><h1>{_h.escape(t.get('titolo') or s['titolo'])}</h1>
+<p>{n} slide, formato 1080×1350. Sul telefono: tieni premuto su un'immagine e scegli "Salva".</p>
+<div class="g">{slide}</div>
+{f'<textarea id="d" readonly>{didas}</textarea><button onclick="navigator.clipboard.writeText(document.getElementById(&quot;d&quot;).value);this.textContent=&quot;Copiata&quot;">Copia la didascalia</button>' if didas else ''}
+</body></html>""", encoding="utf-8")
 
 
 def genera_caroselli(storie):
@@ -243,16 +385,22 @@ def genera_caroselli(storie):
         meta = cartella / "info.json"
         imp = _impronta(s, t)
         try:
-            if json.loads(meta.read_text())["impronta"] == imp:
-                s["carosello"] = [f"social/{s['id']}/{i}.jpg" for i in range(1, 6)]
+            info = json.loads(meta.read_text())
+            if info["impronta"] == imp:
+                s["carosello"] = [f"social/{s['id']}/{i}.jpg" for i in range(1, int(info.get("slide", 5)) + 1)]
                 continue
         except Exception:
             pass
         cartella.mkdir(parents=True, exist_ok=True)
-        for i, img in enumerate(carosello(s, t, PAESI, CONT_DI), 1):
-            img.save(cartella / f"{i}.jpg", "JPEG", quality=88, optimize=True, progressive=False)
-        meta.write_text(json.dumps({"impronta": imp, "creato": datetime.now(timezone.utc).isoformat()}))
-        s["carosello"] = [f"social/{s['id']}/{i}.jpg" for i in range(1, 6)]
+        for vecchia in cartella.glob("*.jpg"):
+            vecchia.unlink()
+        immagini = carosello(s, t, PAESI, CONT_DI)
+        for i, img in enumerate(immagini, 1):
+            img.save(cartella / f"{i}.jpg", "JPEG", quality=90, optimize=True, progressive=False)
+        meta.write_text(json.dumps({"impronta": imp, "slide": len(immagini),
+                                    "creato": datetime.now(timezone.utc).isoformat()}))
+        s["carosello"] = [f"social/{s['id']}/{i}.jpg" for i in range(1, len(immagini) + 1)]
+        _pagina_carosello(cartella, s, t)
         fatti.append(s["id"])
     # pulizia dei caroselli vecchi
     limite = time.time() - GIORNI_TENUTA * 86400
@@ -336,10 +484,10 @@ def esegui(storie, richieste_ig, campione=False, indici=None):
     st = redazione._leggi_inviati()
     # link al carosello sulla scheda Notion
     for s in storie:
-        if s.get("carosello") and sito and s["id"] in st["notion"] and s["id"] not in st["caroselli"]:
+        if s.get("carosello") and sito and s["id"] in st["notion"] and s["id"] not in st.setdefault("caroselli_v2", []):
             try:
-                redazione.aggiorna_scheda(st["notion"][s["id"]], {"Carosello": f"{sito}/{s['carosello'][0]}"})
-                st["caroselli"].append(s["id"])
+                redazione.aggiorna_scheda(st["notion"][s["id"]], {"Carosello": f"{sito}/social/{s['id']}/"})
+                st["caroselli_v2"].append(s["id"])
             except Exception as e:
                 print("Link carosello non scritto su Notion:", str(e)[:120])
     redazione._scrivi_inviati(st)

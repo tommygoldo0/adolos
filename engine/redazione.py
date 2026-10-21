@@ -165,7 +165,7 @@ def aggiungi_fonti_da_notion(fonti):
 
 def leggi_redazione():
     """Legge le schede: Stato, testi corretti dalla redazione e richieste di pubblicazione su Instagram."""
-    out = {"si": set(), "no": set(), "testi": {}, "instagram": {}, "link": {}}
+    out = {"si": set(), "no": set(), "testi": {}, "instagram": {}, "link": {}, "extra": {}}
     if not notion_attivo():
         return out
     try:
@@ -180,6 +180,11 @@ def leggi_redazione():
                 link = _leggi_testo(p.get("Link fonte"))
                 if link:                          # serve a ritrovare la storia se il suo ID cambia
                     out["link"][sid] = link
+                # "Altre fonti": link di articoli che la redazione ha usato e che il motore non aveva raccolto
+                import re as _re
+                extra = _re.findall(r"https?://[^\s,;<>\"']+", _leggi_testo(p.get("Altre fonti")) or "")
+                if extra:
+                    out["extra"][sid] = extra[:20]
                 sint = _leggi_testo(p.get("Sintesi"))
                 titolo = _leggi_testo(p.get("Titolo Adolos"))
                 if titolo and not sint:          # modalità gratis: basta il titolo scritto dalla redazione

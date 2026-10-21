@@ -990,6 +990,35 @@ def id_stabili(gruppi, memoria):
     return out
 
 
+def aggiungi_fonti_extra(gruppi, id_di_gruppo, fonti_extra, fonti, adesso):
+    """Aggiunge alla storia gli articoli che la redazione ha indicato in "Altre fonti" su Notion.
+    Il nome della testata e il paese si prendono da fonti.json; altrimenti dal dominio del link."""
+    from urllib.parse import urlparse
+    if not fonti_extra:
+        return
+    def dominio(u):
+        return urlparse(u).netloc.lower().removeprefix("www.")
+    note = {}
+    for f in fonti.get("rss_diretti", []):
+        note.setdefault(dominio(f.get("url", "")).removeprefix("feeds.").removeprefix("rss."), (f["nome"], f.get("paese", "")))
+    note.update({k: tuple(v) for k, v in fonti.get("testate_note", {}).items() if not k.startswith("_")})
+    gruppo_di_id = {sid: g for g in gruppi for sid in [id_di_gruppo[id(g)]]}
+    for sid, links in fonti_extra.items():
+        g = gruppo_di_id.get(sid)
+        if g is None:
+            continue
+        gia = {x.get("link") for x in g}
+        for u in links:
+            if u in gia:
+                continue
+            d = dominio(u)
+            nome, paese = next((v for k, v in note.items() if k and (d == k or d.endswith("." + k))), (d, ""))
+            x = item(g[0].get("titolo_it") or g[0]["titolo"], u, adesso.isoformat(), nome, paese, "", "giornale", "redazione")
+            x["titolo_it"] = g[0].get("titolo_it")
+            g.append(x)
+            gia.add(u)
+
+
 RITROVO_BLOCCATO = {}     # scheda approvata -> ID che occupa già la sua storia (per il controllo)
 
 
@@ -1131,6 +1160,7 @@ def esegui(campione=False, solo_archivio=False):
     testi_approvati = {}          # sintesi approvate dalla redazione (da Notion)
     da_pubblicare_ig = {}
     link_approvati = {}           # ID storia approvata -> link dell'articolo principale (da Notion)
+    fonti_extra = {}              # ID storia approvata -> altri link aggiunti dalla redazione (da Notion)
     if campione:                  # esempio di sintesi approvata, solo per la prova senza internet
         testi_approvati = leggi_json(ENGINE / "sample" / "sintesi_prova.json", {})
         approvati |= set(testi_approvati)
@@ -1142,6 +1172,7 @@ def esegui(campione=False, solo_archivio=False):
         testi_approvati.update(dec["testi"])
         da_pubblicare_ig = dec["instagram"]
         link_approvati = dec.get("link", {})
+        fonti_extra = dec.get("extra", {})
 
     if campione:
         nuovi, errori = raccogli_campione()
@@ -1189,6 +1220,7 @@ def esegui(campione=False, solo_archivio=False):
     id_di_gruppo = id_stabili(gruppi, {} if campione else leggi_json(CACHE / "id_storie.json", {}))
     ritrova_approvate(gruppi, id_di_gruppo, approvati, link_approvati,
                       {k for k, v in testi_approvati.items() if isinstance(v, dict) and v.get("titolo")})
+    aggiungi_fonti_extra(gruppi, id_di_gruppo, fonti_extra, fonti, adesso)
     gruppo_di = {}
     storie = []
     for g in gruppi:
