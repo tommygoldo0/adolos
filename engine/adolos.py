@@ -990,6 +990,22 @@ def id_stabili(gruppi, memoria):
     return out
 
 
+def ritrova_approvate(gruppi, id_di_gruppo, approvati, link_approvati):
+    """Se una storia approvata su Notion ha cambiato ID (per esempio perché il raggruppamento è
+    cambiato), la ritrova dal link del suo articolo principale e le ridà l'ID della scheda."""
+    usati = set(id_di_gruppo.values())
+    gruppo_del_link = {x.get("link"): g for g in gruppi for x in g if x.get("link")}
+    for sid, link in link_approvati.items():
+        if sid in usati or sid not in approvati:
+            continue
+        g = gruppo_del_link.get(link)
+        if g is None or id_di_gruppo[id(g)] in approvati:
+            continue
+        print(f"Storia approvata ritrovata dal link: {id_di_gruppo[id(g)]} -> {sid}")
+        id_di_gruppo[id(g)] = sid
+        usati.add(sid)
+
+
 def costruisci_storia(gruppo, adesso, affidabili, approvati, rifiutati, regole_bot=None, sid=None):
     gruppo = sorted(gruppo, key=lambda x: x["data"])
     date = [a_data(x["data"]) for x in gruppo]
@@ -1106,6 +1122,7 @@ def esegui(campione=False, solo_archivio=False):
     CACHE.mkdir(parents=True, exist_ok=True)
     testi_approvati = {}          # sintesi approvate dalla redazione (da Notion)
     da_pubblicare_ig = {}
+    link_approvati = {}           # ID storia approvata -> link dell'articolo principale (da Notion)
     if campione:                  # esempio di sintesi approvata, solo per la prova senza internet
         testi_approvati = leggi_json(ENGINE / "sample" / "sintesi_prova.json", {})
         approvati |= set(testi_approvati)
@@ -1116,6 +1133,7 @@ def esegui(campione=False, solo_archivio=False):
         rifiutati |= dec["no"]
         testi_approvati.update(dec["testi"])
         da_pubblicare_ig = dec["instagram"]
+        link_approvati = dec.get("link", {})
 
     if campione:
         nuovi, errori = raccogli_campione()
@@ -1161,6 +1179,7 @@ def esegui(campione=False, solo_archivio=False):
     regole = fonti.get("bot", {})
     gruppi = raggruppa(items)
     id_di_gruppo = id_stabili(gruppi, {} if campione else leggi_json(CACHE / "id_storie.json", {}))
+    ritrova_approvate(gruppi, id_di_gruppo, approvati, link_approvati)
     gruppo_di = {}
     storie = []
     for g in gruppi:
