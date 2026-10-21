@@ -107,6 +107,9 @@ Su Notion, database **Fonti Adolos**: una riga per testata, con tipo **Sito (fee
 
 ## Parte 5 — L'AI per titoli, sintesi, indice e voce (a pagamento, pochi euro)
 
+**Modalità gratis (consigliata per partire):** nessuna chiave. Titoli e sintesi li scrivono gli agenti in Claude Code (skill `adolos-redazione`) con l'abbonamento Claude che avete già, e li salvano su Notion. Sul sito vanno solo le notizie approvate su Notion con un "Titolo Adolos". Per la voce dei video si può usare a mano Google AI Studio e scaricare l'audio.
+Con la chiave (sotto) il motore scrive da solo i titoli di tutte le notizie, ogni 10 minuti.
+
 Una sola chiave fa tutto: **Gemini API** di Google (testi con `gemini-3.1-flash-lite`, voce con Gemini TTS).
 
 1. Vai su **aistudio.google.com**, entra con l'account Google della redazione e crea una **API key**.

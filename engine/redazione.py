@@ -178,6 +178,9 @@ def leggi_redazione():
             if stato in ("Approvata", "Pubblicata"):
                 out["si"].add(sid)
                 sint = _leggi_testo(p.get("Sintesi"))
+                titolo = _leggi_testo(p.get("Titolo Adolos"))
+                if titolo and not sint:          # modalità gratis: basta il titolo scritto dalla redazione
+                    out["testi"][sid] = {"titolo": titolo}
                 if sint:
                     punti = [x.strip(" -•\t") for x in _leggi_testo(p.get("Punti carosello")).splitlines() if x.strip(" -•\t")]
                     out["testi"][sid] = {"titolo": _leggi_testo(p.get("Titolo Adolos")), "sintesi": sint,
