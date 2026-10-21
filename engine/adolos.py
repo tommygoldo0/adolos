@@ -1270,6 +1270,18 @@ def esegui(campione=False, solo_archivio=False):
     # dati pubblici: solo notizie con titolo Adolos; delle testate solo nome, paese, data e link
     uscita["storie"] = [titoli.versione_pubblica(s, titoli_adolos[s["id"]]) for s in storie if titoli_adolos.get(s["id"])]
     print(f"Sul sito: {len(uscita['storie'])} notizie con titolo Adolos, {len(storie) - len(uscita['storie'])} restano solo su Notion")
+    # controllo per la redazione: le schede approvate con titolo che NON sono finite sul sito, e perché
+    ids_storie = {s["id"] for s in storie}
+    link_finestra = {x.get("link") for x in items}
+    mancanti = {}
+    for sid, t in titoli_approvati.items():
+        if t and sid not in ids_storie:
+            l = link_approvati.get(sid)
+            mancanti[sid] = ("articolo principale uscito dalla finestra di 48 ore" if l and l not in link_finestra
+                             else "storia non trovata in questo giro" if l else "manca il link fonte sulla scheda")
+    uscita["dati"]["approvate_non_sul_sito"] = mancanti
+    for sid, motivo in mancanti.items():
+        print(f"Approvata ma non sul sito: {sid} ({motivo})")
     SITO_DATI.mkdir(parents=True, exist_ok=True)
     scrivi_json(SITO_DATI / "notizie.json", uscita)
     # versione .js: così il sito funziona anche aprendo index.html con doppio clic
