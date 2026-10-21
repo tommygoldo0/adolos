@@ -1,0 +1,100 @@
+name: Aggiorna notizie
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"      # ogni 10 minuti
+  workflow_dispatch:             # pulsante "Run workflow" per lanciarlo a mano
+  push:                          # e ogni volta che modifichi articoli, fonti o grafica
+    branches: [main]
+    paths: ["engine/**", "site/assets/**", "site/img/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: adolos
+  cancel-in-progress: false
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.pubblica.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      # Dati di lavoro (archivio, traduzioni, bozze, spesa AI): restano nella cache di GitHub,
+      # NON nel repository pubblico, perché contengono le descrizioni dei feed e le bozze non approvate.
+      - name: Recupera i dati di lavoro
+        uses: actions/cache/restore@v4
+        with:
+          path: engine/cache
+          key: adolos-cache-${{ github.run_id }}
+          restore-keys: adolos-cache-
+
+      # Caratteri del sito ospitati da noi (licenza OFL): si scaricano una volta sola da npm.
+      - name: Caratteri del sito
+        run: |
+          if [ ! -f site/assets/fonts/archivo.woff2 ]; then
+            mkdir -p site/assets/fonts /tmp/caratteri && cd /tmp/caratteri
+            npm pack @fontsource-variable/archivo@5 @fontsource-variable/newsreader@5 >/dev/null
+            for f in *.tgz; do mkdir -p "${f%.tgz}" && tar xzf "$f" -C "${f%.tgz}"; done
+            scegli() { ls $1 2>/dev/null | head -n1; }
+            A=$(scegli "fontsource-variable-archivo-*/package/files/archivo-latin-full-normal.woff2"); [ -z "$A" ] && A=$(scegli "fontsource-variable-archivo-*/package/files/archivo-latin-wght-normal.woff2")
+            N=$(scegli "fontsource-variable-newsreader-*/package/files/newsreader-latin-full-normal.woff2"); [ -z "$N" ] && N=$(scegli "fontsource-variable-newsreader-*/package/files/newsreader-latin-wght-normal.woff2")
+            I=$(scegli "fontsource-variable-newsreader-*/package/files/newsreader-latin-full-italic.woff2"); [ -z "$I" ] && I=$(scegli "fontsource-variable-newsreader-*/package/files/newsreader-latin-wght-italic.woff2")
+            cd "$GITHUB_WORKSPACE"
+            [ -n "$A" ] && cp "/tmp/caratteri/$A" site/assets/fonts/archivo.woff2
+            [ -n "$N" ] && cp "/tmp/caratteri/$N" site/assets/fonts/newsreader.woff2
+            [ -n "$I" ] && cp "/tmp/caratteri/$I" site/assets/fonts/newsreader-italic.woff2
+            ls -la site/assets/fonts || true
+          fi
+
+      - name: Raccogli, traduci, sintetizza e avvisa la redazione
+        env:
+          # Tutte facoltative: se non le hai ancora create, il sito funziona lo stesso (gratis).
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DB_REDAZIONE: ${{ secrets.NOTION_DB_REDAZIONE }}
+          NOTION_DB_FONTI: ${{ secrets.NOTION_DB_FONTI }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DEEPL_KEY: ${{ secrets.DEEPL_KEY }}
+          AI_KEY: ${{ secrets.AI_KEY }}
+          AI_PROVIDER: ${{ vars.AI_PROVIDER }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_GRAPH_HOST: ${{ vars.IG_GRAPH_HOST }}
+          SITO_URL: ${{ vars.SITO_URL }}
+        run: python engine/adolos.py
+
+      - name: Salva i dati di lavoro
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: engine/cache
+          key: adolos-cache-${{ github.run_id }}
+
+      - name: Salva il sito nel repository
+        run: |
+          git config user.name "adolos-bot"
+          git config user.email "adolos-bot@users.noreply.github.com"
+          git add site engine/*.json
+          git commit -m "Notizie aggiornate $(date -u +'%Y-%m-%d %H:%M') [skip ci]" || echo "niente di nuovo"
+          git pull --rebase -X ours || true
+          git push || true
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: pubblica
+        uses: actions/deploy-pages@v4

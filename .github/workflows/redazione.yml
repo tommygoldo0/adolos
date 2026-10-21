@@ -1,0 +1,62 @@
+name: Redazione (Pubblica / Scarta)
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: adolos
+  cancel-in-progress: false
+
+jobs:
+  decidi:
+    # Solo il proprietario del repository puo' pubblicare o scartare
+    if: >-
+      github.event.issue.user.login == github.repository_owner &&
+      (startsWith(github.event.issue.title, 'PUBBLICA ') || startsWith(github.event.issue.title, 'SCARTA '))
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.pubblica.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Recupera i dati di lavoro
+        uses: actions/cache/restore@v4
+        with:
+          path: engine/cache
+          key: adolos-cache-${{ github.run_id }}
+          restore-keys: adolos-cache-
+      - name: Applica la decisione
+        env:
+          TITOLO: ${{ github.event.issue.title }}
+        run: |
+          AZIONE=$(echo "$TITOLO" | cut -d' ' -f1)
+          ID=$(echo "$TITOLO" | cut -d' ' -f2 | tr -cd 'a-f0-9')
+          if [ "$AZIONE" = "PUBBLICA" ]; then python engine/adolos.py approva "$ID"; else python engine/adolos.py rifiuta "$ID"; fi
+          git config user.name "adolos-bot"
+          git config user.email "adolos-bot@users.noreply.github.com"
+          git add engine/approvati.json site/data
+          git commit -m "$AZIONE $ID" || true
+          git pull --rebase -X ours || true
+          git push
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: pubblica
+        uses: actions/deploy-pages@v4
+      - name: Chiudi la issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }} --comment "Fatto. Il sito e' aggiornato."
