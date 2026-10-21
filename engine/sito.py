@@ -698,7 +698,8 @@ def pagina_storia(s, storie, nomi):
  <section><div class="sez-testa"><h2>Altre notizie: {E(s.get('sezione', ''))}</h2><a href="{prof}{sez_url(s.get('sezione', 'Mondo'))}">Tutte</a></div>
  {flusso(simili, nomi, prof, n=6, live=False)}</section>
 </div>"""
-    descr = f"{titolo_h1}. Ripresa da {s['n_fonti']} testate in {len(s['paesi'])} paesi."
+    descr = (f"{titolo_h1}. Ripresa da {s['n_fonti']} {'testata' if s['n_fonti'] == 1 else 'testate'} "
+             f"in {len(s['paesi'])} {'paese' if len(s['paesi']) == 1 else 'paesi'}.")
     og = s["carosello"][0] if s.get("carosello") else None
     return pagina(f"{titolo_h1} | Adolos", descr, corpo, s.get("sezione", ""), prof, ultime=storie, og_img=og)
 

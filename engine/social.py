@@ -142,7 +142,7 @@ def carosello(s, testi, nomi_paesi, cont_di):
     x = _pillola(d, 70, 200, s.get("sezione", "Notizie").upper(), ROSSO)
     _pillola(d, x + 14, 200, s.get("livello", ""), colore_att(att), (20, 20, 20))
     _blocco(d, (70, 330), titolo, "Lora-Bold.ttf", 96, W - 140, 640, (255, 255, 255), 1.12, 48)
-    d.text((70, H - 230), f"Ripresa da {s['n_fonti']} testate in {len(paesi)} {'paese' if len(paesi) == 1 else 'paesi'}",
+    d.text((70, H - 230), f"Ripresa da {s['n_fonti']} {'testata' if s['n_fonti'] == 1 else 'testate'} in {len(paesi)} {'paese' if len(paesi) == 1 else 'paesi'}",
            font=_f("InstrumentSans-Bold.ttf", 36), fill=(255, 255, 255))
     d.text((70, H - 180), "Scorri per i fatti e le fonti  →", font=_f("InstrumentSans-Regular.ttf", 30), fill=(230, 205, 205))
     _piede(d, 1, tot)
