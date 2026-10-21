@@ -139,7 +139,8 @@ The This That With From After Before Over Under About Into Their There These Tho
 Exclusive Live Video Foto Breaking News Update Oggi Ieri Domani Ecco Come Perché Dopo Sono Anche Ancora Della Delle
 Dalla Nella Nelle Questo Questa Tutti Tutto Sabato Domenica Lunedì Martedì Mercoledì Giovedì Venerdì Monday Tuesday
 Wednesday Thursday Friday Saturday Sunday Diese Nach Eine Einer Wird Pour Avec Dans Sans Cette Leur Para Como Pero
-Desde Entre Sobre Será Ante Mais Pelo Pela Após DIRECT DIRETTA Direct Diretta
+Desde Entre Sobre Será Ante Mais Pelo Pela Após DIRECT DIRETTA Direct Diretta Casa Bianca White House Weißen Hauses
+Maison Blanche Blanca
 Consiglio Sicurezza Stati Uniti Banca Mondiale Fondo Monetario Internazionale Corte Suprema Nazioni Unite Unione
 Europea Primo Ministro Presidente Governo Paese Paesi Città Regione Polizia Ministero Partito Nuova Nuovo Ultim
 Guerra Notizie Secondo Mentre Questa Quando Dove Perché Cosa Chi Gli Una Uno Dal Alla Nel Sul Per Con Tra
@@ -362,9 +363,33 @@ RE_SPAM = re.compile(r"(?i)(xxx|xvideos|xnxx|xhamster|porn|\+18|18\+|onlyfans|\b
                      r"video viral|viral video|full video|trending on social media|filtrad|𝕍|𝚅|™️|🍆)")
 
 
+# titoli che non sono notizie: programmi tv, dirette, rubriche, oroscopi, newsletter, nomi di siti
+RE_INIZIO_NON_NOTIZIA = re.compile(
+    r"(?i)^\s*(assista|assistir|watch live|watch:|guarda il video|ascolta|listen|regarder|écouter|escucha|sehen sie|"
+    r"podcast|newsletter|oroscopo|horoscope|horóscopo|meteo:|weather forecast|crossword|cruciverba|sudoku|"
+    r"quiz:|the morning|the evening|buongiorno|good morning)\b")
+RE_NON_NOTIZIA = re.compile(
+    r"(?i)\b(ao vivo|en vivo|live stream|livestream|in streaming|diretta tv|tg\d* (delle|ore)|"
+    r"edizione delle ore|replay|full episode|episodio completo|puntata del)\b")
+
+
+def non_e_notizia(it):
+    """Vero per i titoli che non raccontano un fatto (programmi, rubriche, nomi del sito)."""
+    t = (it.get("titolo") or "").strip()
+    parole = re.findall(r"\w+", t)
+    if len(parole) < 4 and len(t) < 25 and " " in t:      # "Bom Dia ES", "Sport ES" (non i titoli giapponesi)
+        return True
+    if RE_INIZIO_NON_NOTIZIA.search(t):
+        return True
+    if len(parole) < 8 and RE_NON_NOTIZIA.search(t):     # "Jornal Nacional ao vivo", non le dirette con un fatto
+        return True
+    fonte = normalizza(it.get("fonte") or "").strip()
+    return bool(fonte) and normalizza(t).strip() == fonte   # il titolo è solo il nome della testata
+
+
 def e_spam(it, bloccati=()):
     t = it["titolo"]
-    if RE_SPAM.search(t):
+    if RE_SPAM.search(t) or non_e_notizia(it):
         return True
     host = (it.get("link") or "").lower()
     if any(b in host or b in it["fonte"].lower() for b in bloccati):
@@ -519,13 +544,27 @@ def entita(titolo):
     return out
 
 
+def gruppi_nomi(titolo):
+    """Per ogni nome restituisce il numero del "blocco" di parole maiuscole in cui si trova:
+    "Elon Musk" vale un solo nome, non due."""
+    out = {}
+    for k, m in enumerate(re.finditer(r"[A-ZÀ-Ý][\w'’\-]{3,}(?:\s+[A-ZÀ-Ý][\w'’\-]{3,})*", titolo)):
+        for p in m.group(0).split():
+            out.setdefault(normalizza(p).strip(), k)
+    basso = " " + titolo.lower() + " "
+    for k, v in SINONIMI.items():
+        if re.search(r"(?<!\w)" + re.escape(k) + r"(?!\w)", basso):
+            out.setdefault(v, out.get(normalizza(k).strip(), "s-" + v))
+    return out
+
+
 PAROLE_VUOTE = set("""
 alla alle allo agli dalla dalle dallo dagli della delle dello degli nella nelle nello negli sulla sulle sullo sugli
 con per tra fra che chi cui non piu più dopo prima oggi ieri domani anche ancora come dove quando perche perché
 sono stato stata stati essere sara sarà ha hanno aveva fatto fare dice dicono detto secondo verso contro senza sotto
 sopra fino mentre questa questo questi queste quella quello loro suoi sue suo sua nuovo nuova nuovi nuove ultime ultim
 notizie diretta live video foto ecco cosa tutto tutti tutte molto altre altri altro dell nell sull dall all
-oltre circa dice dicono parla parlano grande grandi guerra
+oltre circa dice dicono parla parlano grande grandi guerra casa bianca stati uniti white house
 """.split())
 SOGLIA_PAROLE = 10.0     # più alto = raggruppa meno
 RAGGIO_TESTO = 0.40      # somiglianza delle lettere: più basso = raggruppa meno
@@ -536,6 +575,11 @@ STESSA_RADICE = {"congel": "sospen", "blocca": "sospen", "ferma": "sospen", "ese
                  "rinunc": "sospen", "deroga": "sospen", "dimess": "lascia", "lascer": "lascia", "licenz": "lascia",
                  "uccis": "morti", "morto": "morti", "morta": "morti", "vittim": "morti", "attacc": "attacc",
                  "bombar": "attacc", "raid": "attacc", "colpis": "attacc", "incend": "incend", "fiamme": "incend"}
+
+
+# parole di cronaca che compaiono in mille storie diverse: da sole non dicono "stesso fatto"
+PAROLE_EVENTO = {"morti", "attacc", "feriti", "incend", "sospen", "lascia", "arrest", "uccide", "esplos",
+                 "scontr", "proteste", "protes", "polizi", "manife", "allarm", "emerge", "milita"}
 
 
 def radici_it(titolo):
@@ -549,13 +593,26 @@ def radici_it(titolo):
     return out
 
 
+# nomi così comuni nelle notizie che, da soli, non bastano per dire "stessa storia"
+NOMI_LARGHI = {"UCRAINA", "PUTIN", "ZELENSKY", "PAPA", "GAZA", "CISGIORDANIA", "trump", "russia", "israele",
+               "cina", "usa", "europa", "italia", "meloni", "iran"}
+COPERTURA_MIN = 0.34     # quota di articoli del gruppo più piccolo collegati all'altro: più alto = raggruppa meno
+
+
 def raggruppa(items):
-    """Unisce gli articoli che parlano dello stesso fatto (anche in lingue diverse)."""
+    """Unisce gli articoli che parlano dello stesso fatto (anche in lingue diverse).
+
+    Prima raccoglie i collegamenti tra coppie di articoli (testo simile, parole rare in comune,
+    nomi propri in comune), poi unisce i gruppi partendo dai collegamenti più forti. Due gruppi si
+    uniscono solo se abbastanza articoli dell'uno sono collegati a quelli dell'altro: così un solo
+    articolo "ponte" (es. Zelensky che parla di Starlink) non incolla insieme due storie diverse
+    (Starlink rallentato e fusione SpaceX-Tesla)."""
     from sklearn.feature_extraction.text import TfidfVectorizer
     from sklearn.neighbors import NearestNeighbors
 
     n = len(items)
     padre = list(range(n))
+    membri = {i: [i] for i in range(n)}
 
     def trova(x):
         while padre[x] != x:
@@ -565,10 +622,28 @@ def raggruppa(items):
 
     def unisci(a, b):
         ra, rb = trova(a), trova(b)
-        if ra != rb:
-            padre[rb] = ra
+        if ra == rb:
+            return
+        if len(membri[ra]) < len(membri[rb]):
+            ra, rb = rb, ra
+        padre[rb] = ra
+        membri[ra].extend(membri.pop(rb))
 
-    # 1) suggerimenti di Google News (articoli correlati)
+    def vicini_nel_tempo(i, j, ore):
+        di, dj = a_data(items[i]["data"]), a_data(items[j]["data"])
+        return di is not None and dj is not None and abs((di - dj).total_seconds()) < ore * 3600
+
+    archi = {}          # (i, j) -> forza del collegamento
+    tipi = {}           # (i, j) -> da quale prova viene (per il controllo a mano)
+
+    def collega(i, j, forza, tipo=""):
+        if i == j:
+            return
+        k = (i, j) if i < j else (j, i)
+        archi[k] = max(archi.get(k, 0.0), forza)
+        tipi.setdefault(k, set()).add(tipo)
+
+    # 1) suggerimenti di Google News (articoli correlati): si fidano, si uniscono subito
     per_gruppo = defaultdict(list)
     for i, it in enumerate(items):
         if it.get("gruppo"):
@@ -577,21 +652,20 @@ def raggruppa(items):
         for j in idx[1:]:
             unisci(idx[0], j)
 
-    # 2) somiglianza del testo (n-grammi di caratteri, funziona anche tra lingue vicine)
-    testi = [normalizza(it["titolo"]) for it in items]   # titoli originali: qui conta la stessa lingua
+    unita = [trova(i) for i in range(n)]
+
+    # 2) somiglianza del testo (n-grammi di caratteri, funziona tra titoli nella stessa lingua)
+    testi = [normalizza(it["titolo"]) for it in items]
     if n > 1:
         tfidf = TfidfVectorizer(analyzer="char_wb", ngram_range=(3, 5), min_df=1, sublinear_tf=True).fit_transform(testi)
         nn = NearestNeighbors(metric="cosine", algorithm="brute").fit(tfidf)
-        grafo = nn.radius_neighbors_graph(tfidf, radius=RAGGIO_TESTO, mode="connectivity")
-        a, b = grafo.nonzero()
-        for i, j in zip(a, b):
-            if i < j and abs((a_data(items[i]["data"]) - a_data(items[j]["data"])).total_seconds()) < 36 * 3600:
-                unisci(int(i), int(j))
+        dist, vic = nn.radius_neighbors(tfidf, radius=RAGGIO_TESTO)
+        for i in range(n):
+            for d, j in zip(dist[i], vic[i]):
+                if i < j and vicini_nel_tempo(i, int(j), 36):
+                    collega(i, int(j), 1.0 + (RAGGIO_TESTO - float(d)), "testo")
 
-    # 2b) parole in comune nei titoli tradotti in italiano (funziona tra tutte le lingue:
-    #     "Trump sospende le sanzioni alla Russia" in giapponese, polacco e arabo diventa la stessa frase).
-    #     Due articoli sono la stessa storia se hanno almeno 3 parole importanti in comune e quelle
-    #     parole, insieme, sono abbastanza rare (peso = quanto è insolita ogni parola).
+    # 2b) parole rare in comune nei titoli tradotti in italiano (funziona tra tutte le lingue)
     radici = [set(radici_it(it.get("titolo_it") or "")) for it in items]
     titoli_unici = {}
     for r, it in zip(radici, items):
@@ -612,36 +686,78 @@ def raggruppa(items):
             for x in range(len(lista)):
                 for y in range(x + 1, len(lista)):
                     candidati.add((lista[x], lista[y]))
+    # una parola maiuscola a inizio titolo ("Attacco", "Raid") non è un nome se altrove si scrive minuscola
+    minuscole = Counter(w for t in titoli_unici for w in set(re.findall(r"(?<![\w'’])[a-zà-ÿ][\w'’\-]{3,}", t)))
+    comune = {normalizza(w).strip() for w, c in minuscole.items() if c >= 2}
+    ent = [{e for e in entita(it.get("titolo_it") or it["titolo"]) if e not in comune} for it in items]
+    blocchi = [gruppi_nomi(it.get("titolo_it") or it["titolo"]) for it in items]
+    radici_nomi = [{w[:6] for e in s for w in e.lower().split()} for s in ent]
     for i, j in candidati:
         comuni = radici[i] & radici[j]
         quota = len(comuni) / max(1, min(len(radici[i]), len(radici[j])))
-        if len(comuni) >= 3 and quota >= 0.4 and sum(peso[w] for w in comuni) >= SOGLIA_PAROLE and \
-                abs((a_data(items[i]["data"]) - a_data(items[j]["data"])).total_seconds()) < 30 * 3600:
-            unisci(i, j)
+        forza = sum(peso[w] for w in comuni)
+        # oltre ai nomi (Musk, SpaceX...) servono almeno 2 parole comuni che dicono cosa è successo
+        fatti = [w for w in comuni if w not in radici_nomi[i] and w not in radici_nomi[j]]
+        specifici = [w for w in fatti if w not in PAROLE_EVENTO]
+        if len(comuni) >= 3 and quota >= 0.4 and forza >= SOGLIA_PAROLE and len(fatti) >= 2 and specifici and \
+                sum(peso[w] for w in fatti) >= SOGLIA_PAROLE / 2 and vicini_nel_tempo(i, j, 30):
+            collega(i, j, 0.6 + min(0.6, forza / 40), "parole")
 
     # 3) nomi propri in comune (es. "Katie Zacharia" in inglese, francese, tedesco, portoghese)
-    ent = [entita(it.get("titolo_it") or it["titolo"]) for it in items]
-    df = Counter(e for s in ent for e in s)
-    limite = max(8, int(n * 0.02))
+    # quanti titoli DIVERSI contengono il nome (le copie di Google News contano una volta)
+    ent_unici = {}
+    for s_, it in zip(ent, items):
+        ent_unici.setdefault(it.get("titolo_it") or it["titolo"], s_)
+    df = Counter(e for s_ in ent_unici.values() for e in s_)
+    limite = max(15, int(len(ent_unici) * 0.03))   # i nomi più frequenti di così non aiutano
     indice = defaultdict(list)
     for i, s in enumerate(ent):
         for e in s:
             if 1 < df[e] <= limite:
                 indice[e].append(i)
-    coppie = Counter()
-    for lista in indice.values():
+    coppie = defaultdict(set)
+    for e, lista in indice.items():
         for x in range(len(lista)):
             for y in range(x + 1, len(lista)):
-                coppie[(lista[x], lista[y])] += 1
+                coppie[(lista[x], lista[y])].add(e)
     for (i, j), comuni in coppie.items():
-        if comuni >= 2:
-            unisci(i, j)
-    # un solo nome in comune basta se è un nome della lista SINONIMI (curata a mano) e le date sono vicine
-    for e, lista in indice.items():
-        if e.isupper() and df[e] <= 6:
-            for j in lista[1:]:
-                if abs((a_data(items[lista[0]]["data"]) - a_data(items[j]["data"])).total_seconds()) < 24 * 3600:
-                    unisci(lista[0], j)
+        # "Elon Musk" conta come un solo nome (si contano i blocchi di parole maiuscole)
+        nomi = min(len({blocchi[i].get(e, e) for e in comuni}), len({blocchi[j].get(e, e) for e in comuni}))
+        rari = [e for e in comuni if e not in NOMI_LARGHI]
+        # due nomi da soli non bastano ("Musk" e "SpaceX" compaiono in tante storie diverse):
+        # serve anche una parola in comune che non sia un nome (fusione, rallentamento, portavoce...)
+        altro = {w for w in radici[i] & radici[j] if w not in radici_nomi[i] | radici_nomi[j] and w not in PAROLE_EVENTO}
+        if (nomi >= 3 or (nomi >= 2 and altro)) and rari and vicini_nel_tempo(i, j, 36):
+            collega(i, j, 0.5 + 0.1 * len(rari), "nomi")
+        # un nome completo ("Katie Zacharia") più una parola sul fatto ("portavoce") basta
+        elif nomi == 1 and len(rari) >= 2 and altro and vicini_nel_tempo(i, j, 30):
+            collega(i, j, 0.5, "nome completo")
+        # un solo nome basta se è davvero raro (massimo 4 titoli) e le date sono vicine
+        elif len(rari) == 1 and df[rari[0]] <= 4 and altro and vicini_nel_tempo(i, j, 24):
+            collega(i, j, 0.4, "nome raro")
+
+    # 4) unione prudente: dal collegamento più forte al più debole, solo tra gruppi ben collegati
+    vicini = defaultdict(set)
+    for i, j in archi:
+        vicini[i].add(j)
+        vicini[j].add(i)
+    for (i, j), _ in sorted(archi.items(), key=lambda kv: -kv[1]):
+        ra, rb = trova(i), trova(j)
+        if ra == rb:
+            continue
+        a, b = membri[ra], membri[rb]
+        if len(a) > len(b):
+            a, b = b, a
+        insieme_a, insieme_b = set(a), set(b)
+        # si contano le "unità": un gruppo di Google News vale come un solo articolo
+        ua, ub = {unita[x] for x in a}, {unita[x] for x in b}
+        da_a = len({unita[x] for x in a if vicini[x] & insieme_b})      # unità di A collegate a B
+        da_b = len({unita[x] for x in b if vicini[x] & insieme_a})      # unità di B collegate ad A
+        if len(ua) > len(ub):
+            ua, ub, da_a, da_b = ub, ua, da_b, da_a
+        if da_a >= max(1, math.ceil(COPERTURA_MIN * len(ua))) and da_b >= max(1, math.ceil(COPERTURA_MIN / 2 * len(ub))):
+            unisci(ra, rb)
+    raggruppa.archi, raggruppa.tipi = archi, tipi       # per il controllo a mano
 
     gruppi = defaultdict(list)
     for i in range(n):
