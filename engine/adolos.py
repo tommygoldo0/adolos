@@ -1206,7 +1206,8 @@ def esegui(campione=False, solo_archivio=False):
         scrivi_json(CACHE / "id_storie.json",
                     {x["link"]: sid for g in gruppi for sid in [id_di_gruppo[id(g)]] for x in g if x.get("link")})
     storie.sort(key=lambda s: (s["calore"], s["n_fonti"]), reverse=True)
-    storie = storie[:MAX_STORIE]
+    # le storie approvate dalla redazione restano sempre, anche se sono scese oltre le prime MAX_STORIE
+    storie = storie[:MAX_STORIE] + [s for s in storie[MAX_STORIE:] if s["id"] in approvati]
     # il bot non deve intasare Instagram: solo i primi N post e N storie, gli altri scalano di un gradino
     limiti = {**BOT_PREDEFINITO, **regole}
     conta = Counter()
