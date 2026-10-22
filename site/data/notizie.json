@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-22T11:53:05.088899+00:00",
+ "aggiornato": "2026-10-22T16:13:36.448110+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -145,60 +145,75 @@
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "Kyiv Post",
-    "data": "2026-10-20T18:59:57+00:00",
+    "fonte": "Meduza",
+    "data": "2026-10-20T16:41:39+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://www.kyivpost.com/post/87670"
+    "link": "https://meduza.io/en/news/2026/10/20/nyt-trump-s-envoys-plan-to-meet-putin-in-st-petersburg-on-wednesday-and-seek-the-release-of-an-american-held-in-russia"
    },
    "conferma": {
-    "fonte": "la Repubblica",
-    "data": "2026-10-20T22:38:18+00:00",
-    "dopo_min": 218
+    "fonte": "Kyiv Post",
+    "data": "2026-10-20T18:59:57+00:00",
+    "dopo_min": 138
    },
    "curva": [
     1,
     2,
-    2,
-    2,
-    6,
-    11,
-    13,
-    17,
-    18,
-    18,
+    3,
+    3,
+    10,
     20,
-    20
+    23,
+    25,
+    26,
+    27,
+    29,
+    29
    ],
    "crescita": 0,
    "pubblicata": true,
    "approvata_a_mano": true,
    "paesi": [
+    "AE",
     "AT",
     "CA",
+    "CG",
+    "CY",
     "DE",
     "FR",
     "GB",
+    "IE",
     "IN",
     "IT",
     "LV",
     "QA",
+    "SG",
     "UA",
-    "US"
+    "US",
+    "ZA"
    ],
    "lingue": [
     "de",
     "en",
     "it"
    ],
-   "n_fonti": 20,
+   "n_fonti": 29,
    "prima_segnalazione": {
-    "fonte": "Kyiv Post",
-    "paese": "UA",
-    "data": "2026-10-20T18:59:57+00:00"
+    "fonte": "Meduza",
+    "paese": "LV",
+    "data": "2026-10-20T16:41:39+00:00"
    },
-   "aggiornata": "2026-10-22T10:07:18+00:00",
+   "aggiornata": "2026-10-22T15:26:53+00:00",
    "fonti": [
+    {
+     "fonte": "Meduza",
+     "link": "https://meduza.io/en/news/2026/10/20/nyt-trump-s-envoys-plan-to-meet-putin-in-st-petersburg-on-wednesday-and-seek-the-release-of-an-american-held-in-russia",
+     "paese": "LV",
+     "lingua": "en",
+     "data": "2026-10-20T16:41:39+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
     {
      "fonte": "Kyiv Post",
      "link": "https://www.kyivpost.com/post/87670",
@@ -214,15 +229,6 @@
      "paese": "IT",
      "lingua": "it",
      "data": "2026-10-20T22:38:18+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Meduza",
-     "link": "https://meduza.io/en/news/2026/10/21/witkoff-arrives-in-st-petersburg-for-talks-with-putin-where-he-s-expected-to-present-an-updated-plan-to-end-the-war",
-     "paese": "LV",
-     "lingua": "en",
-     "data": "2026-10-21T07:13:45+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -245,11 +251,38 @@
      "origine": "rss"
     },
     {
-     "fonte": "Tagesschau",
-     "link": "https://www.tagesschau.de/ausland/europa/ukraine-russland-usa-verhandlungen-104.html",
+     "fonte": "NBC News",
+     "link": "https://www.nbcnews.com/world/russia/russia-released-american-stephen-hubbard-trump-putin-ukraine-war-talks-rcna604730",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-10-21T09:25:37+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Straits Times",
+     "link": "https://www.straitstimes.com/world/europe/putin-says-russia-has-freed-us-citizen-stephen-hubbard",
+     "paese": "SG",
+     "lingua": "en",
+     "data": "2026-10-21T09:41:35+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Deutsche Welle",
+     "link": "https://www.dw.com/en/russia-frees-jailed-american-stephen-hubbard-us-envoy-says/a-79719452?maca=en-rss-en-all-1573-rdf",
      "paese": "DE",
-     "lingua": "de",
-     "data": "2026-10-21T09:37:12+00:00",
+     "lingua": "en",
+     "data": "2026-10-21T09:42:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Fox News",
+     "link": "https://www.foxnews.com/world/stephen-hubbard-russia-american-prisoner-release",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-10-21T09:43:13+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -263,20 +296,20 @@
      "origine": "rss"
     },
     {
-     "fonte": "Times of India",
-     "link": "https://timesofindia.indiatimes.com/world/europe/ukraine-peace-prisoner-release-trump-meeting-what-was-discussed-in-putins-meeting-with-us-envoy-witkoff/articleshow/135088653.cms",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-10-21T10:17:13+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "France 24",
      "link": "https://www.france24.com/en/ukraine-talks-us-envoy-meets-vladimir-putin-in-russia",
      "paese": "FR",
      "lingua": "en",
      "data": "2026-10-21T11:04:31+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The National",
+     "link": "https://www.thenationalnews.com/news/europe/2026/10/21/putin-says-russia-has-freed-us-citizen-stephen-hubbard/",
+     "paese": "AE",
+     "lingua": "en",
+     "data": "2026-10-21T11:10:42+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -290,29 +323,74 @@
      "origine": "rss"
     },
     {
-     "fonte": "ANSA",
-     "link": "https://www.ansa.it/sito/notizie/mondo/2026/10/21/il-cremlino-putin-esaminera-le-proposte-di-witkoff-ma-molto-dipende-da-kiev_62ff8056-bbec-4377-a0c7-7fa4a07823ec.html",
-     "paese": "IT",
+     "fonte": "CBS News",
+     "link": "https://www.cbsnews.com/video/russia-frees-wrongly-detained-american-stephen-hubbard/",
+     "paese": "US",
      "lingua": "en",
-     "data": "2026-10-21T12:57:40+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Sky TG24",
-     "link": "https://tg24.sky.it/mondo/video/2026/10/21/ucraina-inviato-usa-witkoff-incontra-putin-a-s-pietroburgo-1133330",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-10-21T13:44:06.680340+00:00",
+     "data": "2026-10-21T11:43:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
      "fonte": "The Hill",
-     "link": "https://thehill.com/homenews/administration/6162316-steve-witkoff-vladimir-putin-humanitarian-backlash/",
+     "link": "https://thehill.com/policy/international/6161795-trump-announces-hubbard-release-russia/",
      "paese": "US",
      "lingua": "en",
-     "data": "2026-10-21T14:13:45+00:00",
+     "data": "2026-10-21T11:50:33+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "cyprus-mail.com",
+     "link": "https://cyprus-mail.com/2026/10/21/russia-frees-retired-us-schoolteacher-stephen-hubbard-as-putin-meets-witkoff",
+     "paese": "CY",
+     "lingua": "en",
+     "data": "2026-10-21T12:00:00+00:00",
+     "tipo": "giornale",
+     "origine": "gdelt"
+    },
+    {
+     "fonte": "The New York Times",
+     "link": "https://www.nytimes.com/2026/10/21/world/europe/who-stephen-hubbard-american-russia-prisoner-release.html",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-10-21T13:10:45+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Africanews",
+     "link": "http://www.africanews.com/2026/10/21/russia-frees-imprisoned-american-teacher-as-putin-meets-trumps-envoy-for-ukraine-peace-tal/",
+     "paese": "CG",
+     "lingua": "en",
+     "data": "2026-10-21T13:32:10+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "RTÉ",
+     "link": "https://www.rte.ie/news/2026/1021/1596296-russia-frees-retired-schoolteacher-ukraine/",
+     "paese": "IE",
+     "lingua": "en",
+     "data": "2026-10-21T13:34:55+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "BBC News",
+     "link": "https://www.bbc.co.uk/news/articles/c6m24l9v3745o?at_medium=RSS&at_campaign=rss",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-10-21T13:49:50+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Axios",
+     "link": "https://www.axios.com/2026/10/21/russia-ukraine-putin-witkoff-peace",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-10-21T15:22:02+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -322,6 +400,15 @@
      "paese": "US",
      "lingua": "en",
      "data": "2026-10-21T18:15:43+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Hindustan Times",
+     "link": "https://www.hindustantimes.com/world-news/us-news/russia-frees-retired-us-schoolteacher-in-goodwill-gesture-as-putin-meets-witkoff-101792607480613.html",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-10-21T18:31:20+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -344,29 +431,11 @@
      "origine": "rss"
     },
     {
-     "fonte": "Hindustan Times",
-     "link": "https://www.hindustantimes.com/world-news/us-news/trump-envoy-criticized-for-calling-putin-humanitarian-101792613586193.html",
-     "paese": "IN",
+     "fonte": "The Guardian",
+     "link": "https://www.theguardian.com/world/2026/oct/21/putin-witkoff-russia-ukraine-trump-stephen-hubbard-release",
+     "paese": "GB",
      "lingua": "en",
-     "data": "2026-10-21T20:13:05+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "CBS News",
-     "link": "https://www.cbsnews.com/news/steve-witkoff-putin-humanitarian-backlash/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-10-21T21:13:49+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Deutsche Welle",
-     "link": "https://www.dw.com/en/ukraine-russia-trade-strikes-after-witkoff-talks/a-79727542?maca=en-rss-en-all-1573-rdf",
-     "paese": "DE",
-     "lingua": "en",
-     "data": "2026-10-22T04:57:00+00:00",
+     "data": "2026-10-22T01:16:20+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -378,16 +447,35 @@
      "data": "2026-10-22T06:28:31+00:00",
      "tipo": "giornale",
      "origine": "rss"
+    },
+    {
+     "fonte": "Daily Maverick",
+     "link": "https://www.dailymaverick.co.za/article/2026-10-22-russia-frees-retired-us-schoolteacher-in-goodwill-gesture-as-putin-meets-witkoff/",
+     "paese": "ZA",
+     "lingua": "en",
+     "data": "2026-10-22T10:40:37+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ABC News",
+     "link": "https://abcnews.com/International/witkoff-arrives-st-petersburg-putin-talks-kremlin-aide/story?id=137438106",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-10-22T11:39:13+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
     }
    ],
    "copertura": {
-    "italia": 3,
-    "estero": 17,
-    "paesi_esteri": 10,
+    "italia": 1,
+    "estero": 28,
+    "paesi_esteri": 16,
     "continenti": {
-     "Europa": 11,
-     "Asia e Medio Oriente": 5,
-     "Americhe": 4
+     "Europa": 12,
+     "Americhe": 9,
+     "Asia e Medio Oriente": 6,
+     "Africa": 2
     }
    },
    "punto_cieco": "",
@@ -420,7 +508,7 @@
    "categoria": "Tecnologia e crypto",
    "curiosita": false,
    "sezione": "Tecnologia",
-   "calore": 94,
+   "calore": 88,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -440,9 +528,9 @@
     1,
     4,
     5,
-    9,
-    15,
-    17,
+    11,
+    16,
+    19,
     19,
     19,
     19,
@@ -695,7 +783,7 @@
    "categoria": "Politica",
    "curiosita": false,
    "sezione": "Politica",
-   "calore": 53,
+   "calore": 47,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -716,9 +804,9 @@
     1,
     2,
     2,
-    4,
     6,
     6,
+    7,
     7,
     7,
     7,
@@ -852,7 +940,7 @@
    "categoria": "Politica",
    "curiosita": false,
    "sezione": "Politica",
-   "calore": 33,
+   "calore": 27,
    "stato": "confermato",
    "attendibilita": 90,
    "livello": "Certa",
@@ -872,7 +960,7 @@
     1,
     3,
     3,
-    3,
+    4,
     4,
     4,
     4,
@@ -1079,90 +1167,95 @@
   }
  ],
  "dati": {
-  "articoli_analizzati": 10224,
-  "storie": 402,
-  "paesi_coperti": 68,
-  "fonti_diverse": 224,
+  "articoli_analizzati": 11466,
+  "storie": 404,
+  "paesi_coperti": 69,
+  "fonti_diverse": 233,
   "per_paese": [
    [
     "BR",
     "Brasile",
-    986
-   ],
-   [
-    "US",
-    "Stati Uniti",
-    848
+    1110
    ],
    [
     "FR",
     "Francia",
-    840
+    973
+   ],
+   [
+    "US",
+    "Stati Uniti",
+    956
    ],
    [
     "AR",
     "Argentina",
-    736
+    830
    ],
    [
     "DE",
     "Germania",
-    618
+    715
    ],
    [
     "ES",
     "Spagna",
-    572
-   ],
-   [
-    "IN",
-    "India",
-    503
+    654
    ],
    [
     "IT",
     "Italia",
-    495
+    581
+   ],
+   [
+    "IN",
+    "India",
+    551
    ],
    [
     "GB",
     "Regno Unito",
-    465
+    523
    ],
    [
     "NG",
     "Nigeria",
-    293
+    337
    ],
    [
     "SG",
     "Singapore",
-    271
-   ],
-   [
-    "AU",
-    "Australia",
-    253
+    309
    ],
    [
     "MX",
     "Messico",
-    245
+    285
    ],
    [
-    "ZA",
-    "Sudafrica",
-    182
+    "AU",
+    "Australia",
+    267
    ],
    [
     "PH",
     "Filippine",
-    181
+    204
+   ],
+   [
+    "ZA",
+    "Sudafrica",
+    193
    ],
    [
     "AT",
     "Austria",
-    159
+    187
+   ],
+   [
+    "NL",
+    "Paesi Bassi",
+    157
    ],
    [
     "IE",
@@ -1170,24 +1263,24 @@
     152
    ],
    [
-    "NL",
-    "Paesi Bassi",
-    145
-   ],
-   [
     "QA",
     "Qatar",
-    130
-   ],
-   [
-    "KR",
-    "Corea del Sud",
-    130
+    148
    ],
    [
     "HK",
     "Hong Kong",
-    120
+    132
+   ],
+   [
+    "KR",
+    "Corea del Sud",
+    131
+   ],
+   [
+    "PT",
+    "Portogallo",
+    130
    ],
    [
     "CY",
@@ -1195,57 +1288,52 @@
     116
    ],
    [
-    "PT",
-    "Portogallo",
-    110
+    "AE",
+    "Emirati Arabi",
+    109
    ],
    [
     "XK",
     "Kosovo",
     101
-   ],
-   [
-    "AE",
-    "Emirati Arabi",
-    98
    ]
   ],
   "per_lingua": [
    [
     "en",
-    5160
+    5714
    ],
    [
     "es",
-    1428
+    1609
    ],
    [
     "pt",
-    1097
+    1241
    ],
    [
     "de",
-    790
+    921
    ],
    [
     "fr",
-    662
-   ],
-   [
-    "?",
-    430
+    762
    ],
    [
     "it",
-    392
+    465
+   ],
+   [
+    "?",
+    439
    ],
    [
     "nl",
-    145
+    157
    ],
    [
     "ar",
-    83
+    112
    ],
    [
     "tr",
@@ -1253,193 +1341,193 @@
    ],
    [
     "ru",
-    3
+    12
    ]
   ],
   "per_categoria": [
    [
     "Altro",
-    193
+    192
    ],
    [
     "Politica",
-    56
+    59
    ],
    [
     "Esteri e conflitti",
-    49
+    45
    ],
    [
     "Cronaca",
-    29
+    33
    ],
    [
     "Società",
-    29
+    28
    ],
    [
     "Tecnologia e crypto",
-    21
+    18
    ],
    [
     "Sport",
-    11
+    14
    ],
    [
     "Economia",
-    8
+    11
    ],
    [
     "Clima e ambiente",
-    6
+    4
    ]
   ],
   "fonti_top": [
    [
     "G1",
-    435
+    475
    ],
    [
     "Folha de S.Paulo",
-    291
+    331
    ],
    [
     "Infobae",
-    285
+    323
    ],
    [
     "La Nación",
-    264
+    300
    ],
    [
     "El Universal",
-    245
+    285
    ],
    [
     "Globo Esporte",
-    219
+    257
    ],
    [
     "Times of India",
-    215
+    239
    ],
    [
     "Punch",
-    207
+    236
    ],
    [
     "Sky TG24",
-    185
+    220
    ],
    [
     "L'Équipe",
-    178
-   ],
-   [
-    "Fox News",
-    152
+    207
    ],
    [
     "Der Spiegel",
-    146
+    176
+   ],
+   [
+    "Fox News",
+    176
    ]
   ],
   "per_ora": [
    [
     23,
-    613
-   ],
-   [
-    22,
-    686
-   ],
-   [
-    21,
-    379
-   ],
-   [
-    20,
-    481
-   ],
-   [
-    19,
-    207
-   ],
-   [
-    18,
-    230
-   ],
-   [
-    17,
-    329
-   ],
-   [
-    16,
-    413
-   ],
-   [
-    15,
-    222
-   ],
-   [
-    14,
-    276
-   ],
-   [
-    13,
-    384
-   ],
-   [
-    12,
     219
    ],
    [
+    22,
+    244
+   ],
+   [
+    21,
+    366
+   ],
+   [
+    20,
+    339
+   ],
+   [
+    19,
+    254
+   ],
+   [
+    18,
+    329
+   ],
+   [
+    17,
+    318
+   ],
+   [
+    16,
+    255
+   ],
+   [
+    15,
+    263
+   ],
+   [
+    14,
+    133
+   ],
+   [
+    13,
+    183
+   ],
+   [
+    12,
+    224
+   ],
+   [
     11,
-    300
+    249
    ],
    [
     10,
-    155
+    279
    ],
    [
     9,
-    167
+    126
    ],
    [
     8,
-    196
+    136
    ],
    [
     7,
-    253
+    207
    ],
    [
     6,
-    278
+    268
    ],
    [
     5,
-    164
+    442
    ],
    [
     4,
-    142
+    373
    ],
    [
     3,
-    164
+    171
    ],
    [
     2,
-    243
+    250
    ],
    [
     1,
-    394
+    368
    ],
    [
     0,
-    451
+    511
    ]
   ],
   "approvate_non_sul_sito": {
@@ -1449,18 +1537,17 @@
  "errori_fonti": [
   "The Washington Post: 502 Server Error: Bad Gateway for url: https://feeds.washingtonpost.com/rss/world",
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
+  "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT syria: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:syria&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT sudan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:sudan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT libya: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:libya&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT democraticrepublicofthecongo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:democraticrepublicofthecongo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT zambia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:zambia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT rwanda: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:rwanda&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT myanmar: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:myanmar&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT cambodia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:cambodia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT laos: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:laos&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT mongolia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:mongolia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT georgia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:georgia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT azerbaijan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:azerbaijan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT armenia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:armenia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT belarus: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:belarus&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
