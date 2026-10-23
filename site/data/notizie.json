@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-23T20:34:29.124331+00:00",
+ "aggiornato": "2026-10-23T23:31:16.401733+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -140,7 +140,7 @@
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 52,
+   "calore": 48,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -162,7 +162,7 @@
     5,
     5,
     5,
-    5,
+    6,
     6,
     6,
     6,
@@ -287,41 +287,40 @@
    "categoria": "Tecnologia e crypto",
    "curiosita": false,
    "sezione": "Tecnologia",
-   "calore": 39,
+   "calore": 23,
    "stato": "confermato",
-   "attendibilita": 90,
-   "livello": "Certa",
+   "attendibilita": 67,
+   "livello": "Confermata",
    "prima": {
-    "fonte": "BBC News",
-    "data": "2026-10-21T23:04:03+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.bbc.co.uk/news/articles/cr93z1e87e0do?at_medium=RSS&at_campaign=rss"
-   },
-   "conferma": {
     "fonte": "CNBC",
     "data": "2026-10-22T21:58:42+00:00",
-    "dopo_min": 1375
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.cnbc.com/2026/10/22/elon-musk-midterm-election-spacex-tesla.html"
+   },
+   "conferma": {
+    "fonte": "The Japan Times",
+    "data": "2026-10-23T03:43:00+00:00",
+    "dopo_min": 344
    },
    "curva": [
     1,
     1,
     1,
-    1,
-    1,
-    1,
-    2,
     3,
-    4,
-    4,
-    4,
-    4
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
    ],
    "crescita": 0,
    "pubblicata": true,
    "approvata_a_mano": true,
    "paesi": [
-    "GB",
     "IN",
     "JP",
     "US"
@@ -329,23 +328,14 @@
    "lingue": [
     "en"
    ],
-   "n_fonti": 4,
+   "n_fonti": 3,
    "prima_segnalazione": {
-    "fonte": "BBC News",
-    "paese": "GB",
-    "data": "2026-10-21T23:04:03+00:00"
+    "fonte": "CNBC",
+    "paese": "US",
+    "data": "2026-10-22T21:58:42+00:00"
    },
    "aggiornata": "2026-10-23T04:05:46+00:00",
    "fonti": [
-    {
-     "fonte": "BBC News",
-     "link": "https://www.bbc.co.uk/news/articles/cr93z1e87e0do?at_medium=RSS&at_campaign=rss",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-10-21T23:04:03+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "CNBC",
      "link": "https://www.cnbc.com/2026/10/22/elon-musk-midterm-election-spacex-tesla.html",
@@ -376,12 +366,11 @@
    ],
    "copertura": {
     "italia": 0,
-    "estero": 4,
-    "paesi_esteri": 4,
+    "estero": 3,
+    "paesi_esteri": 3,
     "continenti": {
      "Asia e Medio Oriente": 2,
-     "Americhe": 1,
-     "Europa": 1
+     "Americhe": 1
     }
    },
    "punto_cieco": "",
@@ -409,125 +398,125 @@
   }
  ],
  "dati": {
-  "articoli_analizzati": 12945,
-  "storie": 400,
+  "articoli_analizzati": 12802,
+  "storie": 401,
   "paesi_coperti": 55,
-  "fonti_diverse": 182,
+  "fonti_diverse": 181,
   "per_paese": [
    [
     "BR",
     "Brasile",
-    1294
+    1287
    ],
    [
     "FR",
     "Francia",
-    1157
+    1150
    ],
    [
     "AR",
     "Argentina",
-    1067
+    1057
    ],
    [
     "US",
     "Stati Uniti",
-    1058
+    1033
    ],
    [
     "DE",
     "Germania",
-    878
+    871
    ],
    [
     "ES",
     "Spagna",
-    709
+    696
    ],
    [
     "IT",
     "Italia",
-    649
+    637
    ],
    [
     "IN",
     "India",
-    633
+    626
    ],
    [
     "GB",
     "Regno Unito",
-    613
+    594
    ],
    [
     "NG",
     "Nigeria",
-    443
+    431
    ],
    [
     "MX",
     "Messico",
-    437
+    424
    ],
    [
     "AU",
     "Australia",
-    387
+    389
    ],
    [
     "SG",
     "Singapore",
-    350
+    337
    ],
    [
     "PH",
     "Filippine",
-    268
+    262
    ],
    [
     "AT",
     "Austria",
-    234
+    232
    ],
    [
     "PT",
     "Portogallo",
-    189
+    185
    ],
    [
     "QA",
     "Qatar",
-    185
+    182
    ],
    [
     "NL",
     "Paesi Bassi",
-    175
+    173
    ],
    [
     "ZA",
     "Sudafrica",
-    171
-   ],
-   [
-    "KR",
-    "Corea del Sud",
-    155
+    166
    ],
    [
     "IE",
     "Irlanda",
-    151
+    150
    ],
    [
     "HK",
     "Hong Kong",
-    149
+    148
+   ],
+   [
+    "KR",
+    "Corea del Sud",
+    148
    ],
    [
     "AE",
     "Emirati Arabi",
-    139
+    137
    ],
    [
     "AZ",
@@ -535,39 +524,39 @@
     131
    ],
    [
-    "JP",
-    "Giappone",
-    92
+    "TW",
+    "Taiwan",
+    109
    ]
   ],
   "per_lingua": [
    [
     "en",
-    6510
+    6452
    ],
    [
     "es",
-    1941
+    1906
    ],
    [
     "pt",
-    1483
+    1472
    ],
    [
     "de",
-    1146
+    1134
    ],
    [
     "fr",
-    875
+    873
    ],
    [
     "it",
-    525
+    511
    ],
    [
     "nl",
-    175
+    173
    ],
    [
     "ru",
@@ -579,7 +568,7 @@
    ],
    [
     "ar",
-    52
+    43
    ],
    [
     "tr",
@@ -589,187 +578,187 @@
   "per_categoria": [
    [
     "Altro",
-    212
+    217
    ],
    [
     "Politica",
-    54
-   ],
-   [
-    "Esteri e conflitti",
-    38
+    50
    ],
    [
     "Cronaca",
-    32
+    35
    ],
    [
-    "Società",
-    23
+    "Esteri e conflitti",
+    32
    ],
    [
     "Sport",
     22
    ],
    [
+    "Società",
+    17
+   ],
+   [
     "Tecnologia e crypto",
-    8
+    13
    ],
    [
     "Economia",
-    7
+    8
    ],
    [
     "Clima e ambiente",
-    4
+    7
    ]
   ],
   "fonti_top": [
    [
     "Infobae",
-    465
-   ],
-   [
-    "El Universal",
-    437
+    468
    ],
    [
     "Folha de S.Paulo",
-    435
+    433
    ],
    [
     "G1",
-    434
+    432
+   ],
+   [
+    "El Universal",
+    424
    ],
    [
     "La Nación",
-    385
-   ],
-   [
-    "Globo Esporte",
     374
    ],
    [
-    "Punch",
-    330
+    "Globo Esporte",
+    370
    ],
    [
-    "L'Équipe",
-    296
+    "Punch",
+    320
    ],
    [
     "Sky TG24",
-    281
+    290
+   ],
+   [
+    "L'Équipe",
+    287
    ],
    [
     "Times of India",
-    265
+    260
    ],
    [
     "Fox News",
-    227
+    221
    ],
    [
     "Inquirer",
-    220
+    215
    ]
   ],
   "per_ora": [
    [
     23,
-    288
+    246
    ],
    [
     22,
-    273
+    208
    ],
    [
     21,
-    328
-   ],
-   [
-    20,
-    250
-   ],
-   [
-    19,
-    207
-   ],
-   [
-    18,
     180
    ],
    [
-    17,
-    198
+    20,
+    202
    ],
    [
-    16,
-    214
+    19,
+    205
    ],
    [
-    15,
-    239
-   ],
-   [
-    14,
-    321
-   ],
-   [
-    13,
-    167
-   ],
-   [
-    12,
-    166
-   ],
-   [
-    11,
-    267
-   ],
-   [
-    10,
-    323
-   ],
-   [
-    9,
-    357
-   ],
-   [
-    8,
-    354
-   ],
-   [
-    7,
-    195
-   ],
-   [
-    6,
-    250
-   ],
-   [
-    5,
-    314
-   ],
-   [
-    4,
-    335
-   ],
-   [
-    3,
-    348
-   ],
-   [
-    2,
+    18,
     234
    ],
    [
+    17,
+    319
+   ],
+   [
+    16,
+    180
+   ],
+   [
+    15,
+    162
+   ],
+   [
+    14,
+    265
+   ],
+   [
+    13,
+    322
+   ],
+   [
+    12,
+    348
+   ],
+   [
+    11,
+    365
+   ],
+   [
+    10,
+    193
+   ],
+   [
+    9,
+    247
+   ],
+   [
+    8,
+    301
+   ],
+   [
+    7,
+    328
+   ],
+   [
+    6,
+    365
+   ],
+   [
+    5,
+    224
+   ],
+   [
+    4,
+    272
+   ],
+   [
+    3,
+    361
+   ],
+   [
+    2,
+    197
+   ],
+   [
     1,
-    289
+    242
    ],
    [
     0,
-    342
+    281
    ]
   ],
   "approvate_non_sul_sito": {
@@ -785,15 +774,14 @@
   "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT syria: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:syria&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT sudan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:sudan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT democraticrepublicofthecongo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:democraticrepublicofthecongo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT angola: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:angola&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT mozambique: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:mozambique&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT rwanda: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)",
-  "GDELT myanmar: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:myanmar&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT cambodia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:cambodia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT laos: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:laos&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT mongolia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:mongolia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT georgia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:georgia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT armenia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:armenia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT azerbaijan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:azerbaijan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT belarus: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:belarus&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
