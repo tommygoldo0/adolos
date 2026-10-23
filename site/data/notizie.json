@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-23T01:55:10.145249+00:00",
+ "aggiornato": "2026-10-23T06:44:04.086164+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -158,17 +158,17 @@
    },
    "curva": [
     1,
-    9,
-    14,
+    11,
     15,
-    18,
-    20,
+    17,
+    19,
     21,
-    21,
-    21,
-    21,
-    21,
-    21
+    22,
+    22,
+    22,
+    22,
+    22,
+    22
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -192,7 +192,7 @@
     "en",
     "it"
    ],
-   "n_fonti": 21,
+   "n_fonti": 22,
    "prima_segnalazione": {
     "fonte": "Meduza",
     "paese": "LV",
@@ -260,6 +260,15 @@
      "paese": "CA",
      "lingua": "en",
      "data": "2026-10-21T09:55:28+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Süddeutsche Zeitung",
+     "link": "https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-witkoff-gespraeche-russland-putin-li.3563283",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-10-21T10:06:07+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -392,12 +401,12 @@
    ],
    "copertura": {
     "italia": 2,
-    "estero": 19,
+    "estero": 20,
     "paesi_esteri": 11,
     "continenti": {
-     "Europa": 10,
-     "Asia e Medio Oriente": 5,
+     "Europa": 11,
      "Americhe": 5,
+     "Asia e Medio Oriente": 5,
      "Africa": 1
     }
    },
@@ -431,35 +440,35 @@
    "categoria": "Tecnologia e crypto",
    "curiosita": false,
    "sezione": "Tecnologia",
-   "calore": 99,
+   "calore": 100,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "Al Jazeera",
-    "data": "2026-10-21T03:51:39+00:00",
+    "fonte": "Tagesschau",
+    "data": "2026-10-21T07:11:45+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://www.aljazeera.com/economy/2026/10/21/elon-musk-says-spacex-and-tesla-exploring-largest-merger-in?traffic_source=rss"
+    "link": "https://www.tagesschau.de/wirtschaft/unternehmen/tesla-spacex-zusammenschluss-moeglich-100.html"
    },
    "conferma": {
-    "fonte": "Deutsche Welle",
-    "data": "2026-10-21T05:53:00+00:00",
-    "dopo_min": 121
+    "fonte": "telegrafi.com",
+    "data": "2026-10-21T07:30:00+00:00",
+    "dopo_min": 18
    },
    "curva": [
     1,
-    5,
+    8,
+    11,
     12,
-    15,
-    15,
-    15,
-    15,
-    15,
-    15,
-    15,
-    15,
-    15
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    14
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -473,8 +482,7 @@
     "GB",
     "IN",
     "IT",
-    "PH",
-    "QA",
+    "JP",
     "US",
     "XK"
    ],
@@ -484,41 +492,14 @@
     "it",
     "pt"
    ],
-   "n_fonti": 15,
+   "n_fonti": 14,
    "prima_segnalazione": {
-    "fonte": "Al Jazeera",
-    "paese": "QA",
-    "data": "2026-10-21T03:51:39+00:00"
+    "fonte": "Tagesschau",
+    "paese": "DE",
+    "data": "2026-10-21T07:11:45+00:00"
    },
-   "aggiornata": "2026-10-22T21:58:42+00:00",
+   "aggiornata": "2026-10-23T04:05:46+00:00",
    "fonti": [
-    {
-     "fonte": "Al Jazeera",
-     "link": "https://www.aljazeera.com/economy/2026/10/21/elon-musk-says-spacex-and-tesla-exploring-largest-merger-in?traffic_source=rss",
-     "paese": "QA",
-     "lingua": "en",
-     "data": "2026-10-21T03:51:39+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Deutsche Welle",
-     "link": "https://www.dw.com/en/musk-says-spacex-tesla-merger-good-idea-as-companies-explore-union/a-79719220?maca=en-rss-en-all-1573-rdf",
-     "paese": "DE",
-     "lingua": "en",
-     "data": "2026-10-21T05:53:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Rappler",
-     "link": "https://www.rappler.com/technology/elon-musk-spacex-tesla-merger-good-idea-companies-form-deal-committees/",
-     "paese": "PH",
-     "lingua": "en",
-     "data": "2026-10-21T06:06:09+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "Tagesschau",
      "link": "https://www.tagesschau.de/wirtschaft/unternehmen/tesla-spacex-zusammenschluss-moeglich-100.html",
@@ -626,14 +607,32 @@
      "data": "2026-10-21T15:51:29+00:00",
      "tipo": "giornale",
      "origine": "rss"
+    },
+    {
+     "fonte": "The Japan Times",
+     "link": "https://www.japantimes.co.jp/business/2026/10/23/companies/why-merge-spacex-tesla/",
+     "paese": "JP",
+     "lingua": "en",
+     "data": "2026-10-23T03:43:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NDTV",
+     "link": "https://www.ndtv.com/world-news/elon-musk-to-merge-spacex-tesla-a-look-into-3-5-trillion-corporate-deal-12223421#publisher=newsstand",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-10-23T04:05:46+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 1,
-    "estero": 14,
-    "paesi_esteri": 11,
+    "estero": 13,
+    "paesi_esteri": 10,
     "continenti": {
-     "Europa": 8,
+     "Europa": 7,
      "Americhe": 4,
      "Asia e Medio Oriente": 3
     }
@@ -668,7 +667,7 @@
    "categoria": "Politica",
    "curiosita": false,
    "sezione": "Politica",
-   "calore": 14,
+   "calore": 8,
    "stato": "confermato",
    "attendibilita": 90,
    "livello": "Certa",
@@ -687,7 +686,7 @@
    "curva": [
     1,
     3,
-    3,
+    4,
     4,
     4,
     4,
@@ -790,69 +789,58 @@
   {
    "id": "1ad9181b53",
    "titolo": "Ebola arriva in Nigeria: primo caso confermato ad Abuja",
-   "lingua": "fr",
-   "categoria": "Politica",
+   "lingua": "en",
+   "categoria": "Società",
    "curiosita": false,
-   "sezione": "Politica",
+   "sezione": "Società",
    "calore": 1,
    "stato": "confermato",
-   "attendibilita": 67,
-   "livello": "Confermata",
+   "attendibilita": 52,
+   "livello": "Prime conferme",
    "prima": {
-    "fonte": "RFI",
-    "data": "2026-10-21T03:04:49+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.rfi.fr/fr/afrique/20261021-un-premier-cas-d-ebola-bundibugyo-d%C3%A9tect%C3%A9-au-nigeria"
-   },
-   "conferma": {
     "fonte": "The Hindu",
     "data": "2026-10-21T09:59:43+00:00",
-    "dopo_min": 415
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.thehindu.com/news/international/nigeria-confirms-its-first-ebola-case-is-bundibugyo-strain/article71607018.ece"
+   },
+   "conferma": {
+    "fonte": "Dawn",
+    "data": "2026-10-21T10:29:50+00:00",
+    "dopo_min": 30
    },
    "curva": [
     1,
-    1,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
    ],
    "crescita": 0,
    "pubblicata": true,
    "approvata_a_mano": true,
    "paesi": [
-    "FR",
     "IN",
     "PK"
    ],
    "lingue": [
-    "en",
-    "fr"
+    "en"
    ],
-   "n_fonti": 3,
+   "n_fonti": 2,
    "prima_segnalazione": {
-    "fonte": "RFI",
-    "paese": "FR",
-    "data": "2026-10-21T03:04:49+00:00"
+    "fonte": "The Hindu",
+    "paese": "IN",
+    "data": "2026-10-21T09:59:43+00:00"
    },
    "aggiornata": "2026-10-21T10:29:50+00:00",
    "fonti": [
-    {
-     "fonte": "RFI",
-     "link": "https://www.rfi.fr/fr/afrique/20261021-un-premier-cas-d-ebola-bundibugyo-d%C3%A9tect%C3%A9-au-nigeria",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-10-21T03:04:49+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "The Hindu",
      "link": "https://www.thehindu.com/news/international/nigeria-confirms-its-first-ebola-case-is-bundibugyo-strain/article71607018.ece",
@@ -874,11 +862,10 @@
    ],
    "copertura": {
     "italia": 0,
-    "estero": 3,
-    "paesi_esteri": 3,
+    "estero": 2,
+    "paesi_esteri": 2,
     "continenti": {
-     "Asia e Medio Oriente": 2,
-     "Europa": 1
+     "Asia e Medio Oriente": 2
     }
    },
    "punto_cieco": "",
@@ -903,189 +890,103 @@
     "social/1ad9181b53/6.jpg",
     "social/1ad9181b53/7.jpg"
    ]
-  },
-  {
-   "id": "68456230da",
-   "titolo": "Alberta, oltre 3 elettori su 4 scelgono di restare nel Canada",
-   "lingua": "en",
-   "categoria": "Altro",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 1,
-   "stato": "confermato",
-   "attendibilita": 42,
-   "livello": "Una fonte",
-   "prima": {
-    "fonte": "The New York Times",
-    "data": "2026-10-21T02:51:17+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.nytimes.com/2026/10/19/world/canada/alberta-secession-canada-referendum.html"
-   },
-   "conferma": null,
-   "curva": [
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": true,
-   "paesi": [
-    "US"
-   ],
-   "lingue": [
-    "en"
-   ],
-   "n_fonti": 1,
-   "prima_segnalazione": {
-    "fonte": "The New York Times",
-    "paese": "US",
-    "data": "2026-10-21T02:51:17+00:00"
-   },
-   "aggiornata": "2026-10-21T02:51:17+00:00",
-   "fonti": [
-    {
-     "fonte": "The New York Times",
-     "link": "https://www.nytimes.com/2026/10/19/world/canada/alberta-secession-canada-referendum.html",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-10-21T02:51:17+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 1,
-    "paesi_esteri": 1,
-    "continenti": {
-     "Americhe": 1
-    }
-   },
-   "punto_cieco": "",
-   "sintesi": {
-    "titolo": "Alberta, oltre 3 elettori su 4 scelgono di restare nel Canada",
-    "sintesi": "Lunedì 19 ottobre gli elettori dell'Alberta, provincia occidentale del Canada, hanno respinto la proposta di avviare il percorso verso un referendum per separarsi dal Paese. Secondo i dati non ufficiali riportati da Euronews e MercoPress, circa il 76-77% ha votato per restare. Il primo ministro Mark Carney ha detto che gli albertani hanno scelto l'unità del Canada; la premier della provincia, Danielle Smith, ha parlato di un'Alberta più forte dentro un Canada unito. Secondo Euronews i leader separatisti dicono che andranno avanti.",
-    "punti": [
-     "Alberta (Canada): gli elettori dicono no alla strada verso l'indipendenza",
-     "Circa il 76-77% ha votato per restare nel Canada (dati non ufficiali)",
-     "Il voto non era sull'indipendenza: avrebbe avviato il percorso verso un referendum",
-     "Carney: gli albertani hanno scelto il Canada"
-    ],
-    "didascalia": "Gli elettori dell'Alberta, provincia del Canada, hanno respinto la proposta di avviare il percorso verso un referendum per l'indipendenza. Secondo i dati non ufficiali circa il 76-77% ha votato per restare. Il primo ministro Mark Carney ha detto che gli albertani hanno scelto il Canada.\n\nFonti: Euronews, MercoPress, The Guardian, The New York Times, The Hindu. Link agli articoli su adolos.it\n\nTesto preparato con l'aiuto dell'AI e verificato dalla redazione.\n\n#adolos #oltreifatti #mondo #canada #politica",
-    "con_ai": false
-   },
-   "carosello": [
-    "social/68456230da/1.jpg",
-    "social/68456230da/2.jpg",
-    "social/68456230da/3.jpg",
-    "social/68456230da/4.jpg",
-    "social/68456230da/5.jpg",
-    "social/68456230da/6.jpg",
-    "social/68456230da/7.jpg"
-   ]
   }
  ],
  "dati": {
-  "articoli_analizzati": 13656,
-  "storie": 405,
+  "articoli_analizzati": 14295,
+  "storie": 404,
   "paesi_coperti": 70,
   "fonti_diverse": 257,
   "per_paese": [
    [
     "BR",
     "Brasile",
-    1407
+    1503
    ],
    [
     "FR",
     "Francia",
-    1137
-   ],
-   [
-    "US",
-    "Stati Uniti",
-    1097
+    1198
    ],
    [
     "AR",
     "Argentina",
-    1076
+    1169
+   ],
+   [
+    "US",
+    "Stati Uniti",
+    1104
    ],
    [
     "DE",
     "Germania",
-    826
+    877
    ],
    [
     "ES",
     "Spagna",
-    720
+    741
    ],
    [
     "IT",
     "Italia",
-    671
+    697
    ],
    [
     "IN",
     "India",
-    622
+    674
    ],
    [
     "GB",
     "Regno Unito",
-    600
+    613
    ],
    [
     "NG",
     "Nigeria",
-    454
+    474
    ],
    [
     "MX",
     "Messico",
-    394
-   ],
-   [
-    "SG",
-    "Singapore",
-    377
+    429
    ],
    [
     "AU",
     "Australia",
-    367
+    396
+   ],
+   [
+    "SG",
+    "Singapore",
+    389
    ],
    [
     "PH",
     "Filippine",
-    258
+    279
    ],
    [
     "AT",
     "Austria",
-    212
+    235
    ],
    [
     "ZA",
     "Sudafrica",
-    195
+    200
    ],
    [
     "QA",
     "Qatar",
-    187
+    188
+   ],
+   [
+    "PT",
+    "Portogallo",
+    184
    ],
    [
     "NL",
@@ -1093,29 +994,24 @@
     183
    ],
    [
-    "PT",
-    "Portogallo",
-    174
-   ],
-   [
     "IE",
     "Irlanda",
-    162
+    160
    ],
    [
     "HK",
     "Hong Kong",
-    151
+    155
    ],
    [
     "KR",
     "Corea del Sud",
-    150
+    154
    ],
    [
     "AE",
     "Emirati Arabi",
-    126
+    129
    ],
    [
     "CY",
@@ -1131,31 +1027,31 @@
   "per_lingua": [
    [
     "en",
-    6664
+    6892
    ],
    [
     "es",
-    2001
+    2164
    ],
    [
     "pt",
-    1582
+    1688
    ],
    [
     "de",
-    1066
+    1153
    ],
    [
     "fr",
-    910
+    955
    ],
    [
     "it",
-    535
+    556
    ],
    [
     "?",
-    469
+    471
    ],
    [
     "nl",
@@ -1163,7 +1059,7 @@
    ],
    [
     "ar",
-    120
+    107
    ],
    [
     "ru",
@@ -1177,179 +1073,179 @@
   "per_categoria": [
    [
     "Altro",
-    188
+    202
    ],
    [
     "Politica",
-    80
+    60
    ],
    [
     "Esteri e conflitti",
-    40
+    43
    ],
    [
     "Cronaca",
-    31
+    27
    ],
    [
     "Società",
-    21
-   ],
-   [
-    "Sport",
-    17
+    26
    ],
    [
     "Tecnologia e crypto",
-    13
+    16
+   ],
+   [
+    "Sport",
+    15
    ],
    [
     "Economia",
-    11
+    10
    ],
    [
     "Clima e ambiente",
-    4
+    5
    ]
   ],
   "fonti_top": [
    [
     "G1",
-    578
-   ],
-   [
-    "Folha de S.Paulo",
-    437
+    616
    ],
    [
     "Infobae",
-    436
+    476
+   ],
+   [
+    "Folha de S.Paulo",
+    468
    ],
    [
     "El Universal",
-    394
+    429
    ],
    [
     "La Nación",
-    381
+    416
    ],
    [
     "Globo Esporte",
-    340
+    367
    ],
    [
     "Punch",
-    326
+    342
    ],
    [
     "L'Équipe",
-    272
-   ],
-   [
-    "Sky TG24",
-    272
+    295
    ],
    [
     "Times of India",
-    268
+    287
+   ],
+   [
+    "Sky TG24",
+    287
+   ],
+   [
+    "Inquirer",
+    229
    ],
    [
     "Fox News",
     224
-   ],
-   [
-    "Inquirer",
-    209
    ]
   ],
   "per_ora": [
    [
     23,
-    163
+    146
    ],
    [
     22,
-    195
+    147
    ],
    [
     21,
-    255
+    236
    ],
    [
     20,
-    278
+    369
    ],
    [
     19,
-    156
+    478
    ],
    [
     18,
-    145
+    199
    ],
    [
     17,
-    163
+    206
    ],
    [
     16,
-    245
+    302
    ],
    [
     15,
-    399
+    502
    ],
    [
     14,
-    473
+    368
    ],
    [
     13,
-    165
+    217
    ],
    [
     12,
-    204
+    290
    ],
    [
     11,
-    332
+    386
    ],
    [
     10,
-    516
+    261
    ],
    [
     9,
-    330
+    304
    ],
    [
     8,
-    205
+    271
    ],
    [
     7,
-    312
+    322
    ],
    [
     6,
-    413
+    248
    ],
    [
     5,
-    215
+    217
    ],
    [
     4,
-    336
+    160
    ],
    [
     3,
-    242
+    200
    ],
    [
     2,
-    313
+    221
    ],
    [
     1,
@@ -1357,27 +1253,31 @@
    ],
    [
     0,
-    246
+    349
    ]
   ],
   "approvate_non_sul_sito": {
+   "68456230da": "articolo principale uscito dalla finestra di 48 ore",
    "5c7f4eddd8": "articolo principale uscito dalla finestra di 48 ore"
   }
  },
  "errori_fonti": [
   "The Washington Post: 502 Server Error: Bad Gateway for url: https://feeds.washingtonpost.com/rss/world",
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
-  "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT syria: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:syria&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT sudan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:sudan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT libya: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:libya&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT democraticrepublicofthecongo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:democraticrepublicofthecongo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT mozambique: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:mozambique&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT zambia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:zambia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT myanmar: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:myanmar&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT mongolia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:mongolia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT azerbaijan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:azerbaijan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT belarus: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:belarus&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
+  "GDELT moldova: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:moldova&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT albania: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:albania&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT bosniaandherzegovina: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:bosniaandherzegovina&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT macedonia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:macedonia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT kosovo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:kosovo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT iceland: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:iceland&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT cyprus: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:cyprus&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT malta: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:malta&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT luxembourg: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:luxembourg&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT haiti: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:haiti&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT guatemala: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:guatemala&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT honduras: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:honduras&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT panama: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:panama&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT costarica: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:costarica&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT bolivia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:bolivia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
