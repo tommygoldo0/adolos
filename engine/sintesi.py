@@ -45,7 +45,13 @@ Rispondi SOLO con questo JSON:
  "fatti": {"chi": "", "cosa": "", "dove": "", "quando": "", "perche": ""},
  "punti": ["3 o 4 frasi brevi per un carosello Instagram, massimo 120 caratteri ciascuna"],
  "versioni_diverse": "una frase se le fonti non concordano, altrimenti stringa vuota",
- "persone_accusate": true o false}"""
+ "persone_accusate": true o false,
+ "copione_tiktok": "video di 20-30 secondi in 4-5 scene, una per riga: '1 (0-3 s) Testo: ... · Voce: ...'. Prima scena = il gancio",
+ "testo_facebook": "60-100 parole, apre con il fatto, chiude con una domanda semplice ai lettori",
+ "scena_immagine": "in inglese, una scena GENERICA per illustrare la notizia SENZA persone riconoscibili, volti, loghi, scritte o bandiere (es. 'empty football stadium at night with floodlights'); stringa vuota se la notizia riguarda morti, violenza o vittime"}
+
+Regole per i testi social: italiano semplice e diretto, niente frasi da intelligenza artificiale ("Ecco", "Scopriamolo
+insieme", "Questo cambia tutto", "Non è solo... è..."), niente emoji, niente punti esclamativi. Numeri in cifre."""
 
 
 # ---------------------------------------------------------------- utilità
@@ -138,7 +144,7 @@ def prepara(storie, gruppi, max_al_giro=8):
         bozza, avviso = None, ""
         for tentativo in range(2):
             try:
-                risposta = ai.chiedi(SISTEMA, richiesta + avviso, max_token=900)
+                risposta = ai.chiedi(SISTEMA, richiesta + avviso, max_token=1500)
                 b = ai.json_da(risposta)
             except ai.TettoRaggiunto:
                 print("Sintesi: tetto di spesa mensile raggiunto")
@@ -147,7 +153,8 @@ def prepara(storie, gruppi, max_al_giro=8):
             except Exception as e:
                 print("Sintesi non riuscita:", str(e)[:120])
                 break
-            tutto = " ".join([b.get("titolo", ""), b.get("sintesi", "")] + list(b.get("punti", [])))
+            tutto = " ".join([b.get("titolo", ""), b.get("sintesi", ""), b.get("copione_tiktok", ""),
+                              b.get("testo_facebook", "")] + list(b.get("punti", [])))
             copiate = frasi_copiate(tutto, testi_fonti)
             if not copiate:
                 bozza = b
@@ -169,6 +176,9 @@ def prepara(storie, gruppi, max_al_giro=8):
             "versioni_diverse": str(bozza.get("versioni_diverse", "")).strip(),
             "persone_accusate": bool(bozza.get("persone_accusate")),
             "fonti_usate": [r.split("(")[0].strip("- ").strip() for r in righe],
+            "copione_tiktok": str(bozza.get("copione_tiktok", "")).strip()[:1500],
+            "testo_facebook": str(bozza.get("testo_facebook", "")).strip()[:1500],
+            "scena_immagine": str(bozza.get("scena_immagine", "")).strip()[:300],
         }
     _scrivi(dati)
     spesa = ai.spesa_mese()

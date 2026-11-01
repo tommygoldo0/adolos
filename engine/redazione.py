@@ -231,6 +231,12 @@ def _props_bozza(b, s):
         "Sintesi": {"rich_text": _testo(b.get("sintesi", ""))},
         "Punti carosello": {"rich_text": _testo("\n".join(b.get("punti", [])))},
         "Didascalia Instagram": {"rich_text": _testo(social.didascalia(s, {**b, "con_ai": True}))},
+        "Copione TikTok": {"rich_text": _testo(b.get("copione_tiktok", "") + ("\nScritta \"Voce generata con AI\" se si usa la voce AI."
+                                                                              if b.get("copione_tiktok") else ""))},
+        "Testo Facebook": {"rich_text": _testo((b.get("testo_facebook", "") + "\n\nTesto preparato con l'aiuto dell'AI "
+                                                "e verificato dalla redazione.") if b.get("testo_facebook") else "")},
+        # pacchetto pronto = l'AI ha scritto tutto e il controllo anti-copia è passato; la persona controlla i fatti
+        "Pacchetto pronto": {"checkbox": bool(b.get("sintesi") and b.get("punti"))},
     }
 
 

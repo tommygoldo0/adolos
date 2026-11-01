@@ -199,6 +199,25 @@ def _sfondo_rosso(variante=0):
     return img, ImageDraw.Draw(img)
 
 
+def _sfondo_foto(percorso):
+    """Foto a tutto schermo con il velo rosso Adolos sopra (come nei post @adolos.it)."""
+    from PIL import Image, ImageDraw
+    foto = Image.open(percorso).convert("RGB")
+    sc = max(W / foto.width, H / foto.height)
+    foto = foto.resize((int(foto.width * sc) + 1, int(foto.height * sc) + 1), Image.LANCZOS)
+    x0, y0 = (foto.width - W) // 2, max(0, (foto.height - H) // 3)
+    foto = foto.crop((x0, y0, x0 + W, y0 + H))
+    velo = Image.new("RGB", (W, H), ROSSO_SCURO)
+    img = Image.blend(foto, velo, 0.62)
+    # più scuro in basso, dove c'è il testo
+    scuro = Image.new("L", (W, H), 0)
+    ds = ImageDraw.Draw(scuro)
+    for i in range(H):
+        ds.line([(0, i), (W, i)], fill=int(150 * max(0, (i - H * 0.35) / (H * 0.65))))
+    img = Image.composite(Image.new("RGB", (W, H), BORDEAUX), img, scuro)
+    return img, ImageDraw.Draw(img)
+
+
 def _alfa(draw, x, y, size=84, colore=(255, 255, 255)):
     draw.text((x, y), "α", font=_f("DejaVuSerif-BoldItalic.ttf", size), fill=colore, anchor="rt")
 
@@ -248,8 +267,13 @@ def carosello(s, testi, nomi_paesi, cont_di):
     tot = 1 + len(punti) + 2
     slide = []
 
-    # 1. copertina
-    img, d = _sfondo_rosso(0)
+    # 1. copertina (con la foto se c'è: Wikimedia con crediti, o scena AI etichettata)
+    foto = testi.get("_immagine") or {}
+    try:
+        img, d = _sfondo_foto(foto["file"]) if foto.get("file") else _sfondo_rosso(0)
+    except Exception:
+        foto = {}
+        img, d = _sfondo_rosso(0)
     _kicker(d, 70, 92, s.get("sezione") or "Notizie")
     _alfa(d, W - 64, 56, 96)
     y0 = 200
@@ -263,6 +287,8 @@ def carosello(s, testi, nomi_paesi, cont_di):
     _titolo(img, d, _divide_titolo(titolo), 70, y0, W - 140, H - y0 - 260)
     riga = f"{n_test} {'testata' if n_test == 1 else 'testate'} · {len(paesi)} {'paese' if len(paesi) == 1 else 'paesi'}"
     d.text((70, H - 170), riga.upper(), font=_arch(32, 800), fill=(255, 255, 255))
+    if foto.get("credito"):
+        d.text((70, H - 118), foto["credito"][:95], font=_arch(20, 500), fill=ROSA)
     _piede_ig(d, 1, tot)
     slide.append(img)
 
@@ -338,12 +364,12 @@ def carosello(s, testi, nomi_paesi, cont_di):
     return slide
 
 
-VERSIONE_GRAFICA = 2      # cambiarla ridisegna tutti i caroselli
+VERSIONE_GRAFICA = 3      # cambiarla ridisegna tutti i caroselli
 
 
 def _impronta(s, testi):
     base = json.dumps([VERSIONE_GRAFICA, testi.get("titolo"), testi.get("sintesi"), testi.get("punti"), s["n_fonti"],
-                       s.get("punto_cieco")], ensure_ascii=False)
+                       s.get("punto_cieco"), (testi.get("_immagine") or {}).get("credito")], ensure_ascii=False)
     return hashlib.sha1(base.encode()).hexdigest()[:12]
 
 
@@ -371,18 +397,33 @@ button{{margin-top:8px;padding:10px 16px;border:0;border-radius:8px;background:#
 </body></html>""", encoding="utf-8")
 
 
-def genera_caroselli(storie):
+def genera_caroselli(storie, gruppi=None):
     """Disegna i caroselli delle notizie approvate (solo se mancano o se il testo è cambiato)."""
     from sito import CONT_DI
     from adolos import PAESI
     CARTELLA.mkdir(parents=True, exist_ok=True)
     fatti = []
+    try:
+        import sintesi
+        bozze_ai = sintesi.bozze()
+    except Exception:
+        bozze_ai = {}
     for s in storie:
         t = s.get("sintesi")
         if not t or not t.get("sintesi"):
             continue
         cartella = CARTELLA / s["id"]
         meta = cartella / "info.json"
+        try:
+            import immagini
+            scena = (bozze_ai.get(s["id"]) or {}).get("scena_immagine", "")
+            foto = immagini.per_storia(s, t.get("titolo") or s["titolo"], (gruppi or {}).get(s["id"], []), scena)
+        except Exception as e:
+            print("Immagine non cercata:", str(e)[:120])
+            foto = None
+        if foto:
+            t = {**t, "_immagine": foto}
+            s["immagine"] = {"credito": foto["credito"], "tipo": foto["tipo"]}
         imp = _impronta(s, t)
         try:
             info = json.loads(meta.read_text())
@@ -413,14 +454,22 @@ def genera_caroselli(storie):
 
 # ---------------------------------------------------------------- Instagram (API ufficiale)
 def didascalia(s, t):
+    """Didascalia Instagram con i crediti della foto (obbligatori per le licenze CC BY e per le immagini AI)."""
+    testo = _didascalia_base(s, t)
+    cred = (s.get("immagine") or {}).get("credito")
+    if cred and cred not in testo:
+        testo = testo.rstrip() + "\n\n" + cred + "."
+    return testo[:2190]
+
+
+def _didascalia_base(s, t):
     if t.get("didascalia") and t["didascalia"] != s.get("didascalia"):
         return t["didascalia"]          # scritta o corretta dalla redazione su Notion
     nomi = list(dict.fromkeys(f["fonte"] for f in sorted(s["fonti"], key=lambda f: (f["paese"] != "IT", not _latino(f["fonte"])))
                               if f.get("tipo") != "social"))[:4]
     altre = s["n_fonti"] - len(nomi)
     fonti = ", ".join(nomi) + (f" e altre {altre} testate" if altre > 0 else "")
-    nota = ("Sintesi preparata con l'aiuto dell'AI e verificata dalla redazione."
-            if t.get("con_ai") else "Sintesi della redazione di Adolos.")
+    nota = "Testo preparato con l'aiuto dell'AI e verificato dalla redazione."
     tag = {"Italia": "#italia", "Politica": "#politica", "Mondo": "#esteri", "Economia": "#economia",
            "Società": "#società", "Tecnologia": "#tecnologia", "Sport": "#sport", "Curiosità": "#curiosità"}
     return (f"{t.get('titolo') or s['titolo']}\n\n{t['sintesi']}\n\nFonti: {fonti}. Link agli articoli originali su adolos.it\n\n"
@@ -486,7 +535,9 @@ def esegui(storie, richieste_ig, campione=False, indici=None):
     for s in storie:
         if s.get("carosello") and sito and s["id"] in st["notion"] and s["id"] not in st.setdefault("caroselli_v2", []):
             try:
-                redazione.aggiorna_scheda(st["notion"][s["id"]], {"Carosello": f"{sito}/social/{s['id']}/"})
+                extra = {"Immagine": "Copertina: " + s["immagine"]["credito"] + ". Controllare che la foto sia quella giusta "
+                         "prima di spuntare Pubblica su Instagram."} if s.get("immagine") else {}
+                redazione.aggiorna_scheda(st["notion"][s["id"]], {"Carosello": f"{sito}/social/{s['id']}/", **extra})
                 st["caroselli_v2"].append(s["id"])
             except Exception as e:
                 print("Link carosello non scritto su Notion:", str(e)[:120])

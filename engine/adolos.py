@@ -1299,7 +1299,7 @@ def esegui(campione=False, solo_archivio=False):
     privati = {s["id"]: s.pop("_bozza") for s in storie}
     try:
         import social
-        social.genera_caroselli(storie)      # grafiche Adolos per le notizie approvate
+        social.genera_caroselli(storie, gruppo_di)      # grafiche Adolos per le notizie approvate
     except Exception as e:
         print("Errore nei caroselli:", e)
     # la didascalia proposta su Notion non deve contenere il titolo della testata: usiamo quello di Adolos

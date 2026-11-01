@@ -2075,7 +2075,7 @@
   },
   "instagram": {
     "_info": "Pubblicazione dei caroselli con l'API ufficiale di Meta. Si accende solo con i secret IG_USER_ID e IG_TOKEN. Pubblica solo le schede Notion con la casella 'Pubblica su Instagram' spuntata da una persona.",
-    "max_al_giorno": 6,
+    "max_al_giorno": 10,
     "versione_api": "v23.0"
   },
   "sito": {
@@ -2089,15 +2089,22 @@
     "max_ai_al_giro": 10
   },
   "immagini": {
-    "_info": "Ordine: A template senza foto (predefinito), D foto con licenza libera da Wikimedia con crediti, B scene generiche create con AI (solo se 'ai' è true, con etichetta). Mai volti veri creati con AI.",
-    "ai": false,
+    "_info": "Ordine: 1) foto con licenza libera da Wikimedia Commons (autore e licenza sulla copertina e nella didascalia); 2) solo se 'ai' è true e c'è la chiave: scena generica creata con Gemini, senza persone riconoscibili, con l'etichetta 'Immagine illustrativa generata con AI', massimo 'ai_max_al_giorno' al giorno e 'ai_budget_mensile_usd' al mese; 3) fondo rosso Adolos. Mai volti veri creati con AI, mai foto dei giornali.",
+    "ai": true,
     "wikimedia": true,
     "licenze_ammesse": [
       "CC0",
       "Public domain",
       "CC BY",
       "CC BY-SA"
-    ]
+    ],
+    "ai_modelli": [
+      "gemini-nano-banana-2.1",
+      "gemini-3.1-flash-image"
+    ],
+    "ai_max_al_giorno": 3,
+    "ai_budget_mensile_usd": 3.5,
+    "ai_costo_immagine_usd": 0.07
   },
   "punto_cieco": {
     "_info": "Punto cieco italiano: almeno min_estero testate straniere da min_paesi_esteri paesi e al massimo max_italia testate italiane (tra quelle che leggiamo). Solo in Italia: almeno min_italia_solo testate italiane e nessuna estera.",
@@ -2113,7 +2120,7 @@
     "modello": "gemini-3.8-flash-tts",
     "voce": "Charon",
     "stile": "Italian news presenter: clear, calm and neutral, steady brisk pace, no drama",
-    "budget_mensile_usd": 3.0,
+    "budget_mensile_usd": 1.0,
     "costo_per_10_secondi_usd": 0.00225,
     "max_caratteri": 1500
   },
@@ -2179,5 +2186,6 @@
       "The New York Times",
       "US"
     ]
-  }
+  },
+  "_budget": "Tetto totale circa 9,5 $ al mese (circa 9 €): testi 5 $ (ai), immagini AI 3,5 $ (immagini), voce 1 $ (voce). Ogni parte si ferma da sola quando arriva al suo tetto."
 }
