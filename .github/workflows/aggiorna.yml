@@ -12,6 +12,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  actions: write                 # serve solo a svegliare il giro veloce
 
 concurrency:
   group: adolos
@@ -25,6 +26,11 @@ jobs:
       name: github-pages
       url: ${{ steps.pubblica.outputs.page_url }}
     steps:
+      # Il giro veloce (veloce.yml) resta di guardia sulle approvazioni mentre questo giro lavora
+      - name: Sveglia il giro veloce
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run veloce.yml --repo ${{ github.repository }} || echo "::warning::Giro veloce non svegliato"
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:

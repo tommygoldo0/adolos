@@ -2,7 +2,9 @@ name: Giro veloce (approvate su Notion → sito e carosello)
 
 # Fa solo una cosa: porta sul sito le schede che una persona ha approvato (o scartato) su Notion.
 # Non scarica le fonti, non crea schede, non manda avvisi e non pubblica su Instagram.
-# Se su Notion non è cambiato niente si ferma dopo pochi secondi.
+# Resta di guardia 9 minuti guardando Notion ogni minuto; appena una persona approva o scarta, aggiorna il sito.
+# Lo sveglia "Aggiorna notizie" a ogni giro (quindi basta la sveglia esterna che c'è già), e dopo ogni
+# pubblicazione si rimette di guardia da solo.
 
 on:
   schedule:
@@ -19,7 +21,7 @@ concurrency:
 jobs:
   controlla:
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 13
     outputs:
       cambiato: ${{ steps.controllo.outputs.cambiato }}
     steps:
@@ -33,7 +35,7 @@ jobs:
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DB_REDAZIONE: ${{ secrets.NOTION_DB_REDAZIONE }}
-        run: python engine/veloce.py controlla
+        run: python engine/veloce.py controlla --attesa 9
 
   pubblica:
     needs: controlla
@@ -44,6 +46,7 @@ jobs:
       contents: write
       pages: write
       id-token: write
+      actions: write               # serve solo a rimettersi di guardia (ultimo passo)
     environment:
       name: github-pages
       url: ${{ steps.pubblica.outputs.page_url }}
@@ -93,3 +96,9 @@ jobs:
           path: site
       - id: pubblica
         uses: actions/deploy-pages@v4
+
+      # solo se è andato tutto bene: se qualcosa fallisce non deve riprovare a raffica (lo risveglia Aggiorna notizie)
+      - name: Torna di guardia
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run veloce.yml --repo ${{ github.repository }} || echo "::warning::Giro veloce non rimesso di guardia: riparte al prossimo giro di Aggiorna notizie"
