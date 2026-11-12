@@ -1184,6 +1184,11 @@ def esegui(campione=False, solo_archivio=False, veloce=False):
         import redazione
         if veloce and not redazione.notion_attivo():
             raise SystemExit("ERRORE giro veloce: mancano NOTION_TOKEN o NOTION_DB_REDAZIONE")
+        try:                       # prima i clic fatti dalle persone su Telegram (Approva / Scarta): aggiornano Notion
+            import telegram
+            telegram.leggi_risposte()
+        except Exception as e:
+            print("Errore nella lettura dei clic di Telegram:", str(e)[:160])
         dec = redazione.leggi_redazione(solo_decise=veloce)   # le scelte fatte dallo staff sulle schede Notion
         if veloce and dec.get("errore"):
             # senza le decisioni il sito perderebbe le notizie approvate: meglio fermarsi e lasciarlo com'è
@@ -1391,6 +1396,11 @@ def esegui(campione=False, solo_archivio=False, veloce=False):
             redazione.invia(storie, privati, indici)  # schede su Notion e avviso su Telegram (se configurati)
         except Exception as e:
             print("Errore nell'invio alla redazione:", e)
+        try:
+            import telegram
+            telegram.invia_pacchetti(storie, gruppo_di)   # pacchetti pronti con i pulsanti Approva / Scarta
+        except Exception as e:
+            print("Errore nell'invio dei pacchetti su Telegram:", str(e)[:160])
     try:
         import social
         # giro veloce: scrive solo il link del carosello sulla scheda; su Instagram pubblica il giro completo

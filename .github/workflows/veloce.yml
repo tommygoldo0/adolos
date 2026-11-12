@@ -35,6 +35,10 @@ jobs:
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DB_REDAZIONE: ${{ secrets.NOTION_DB_REDAZIONE }}
+          # per leggere i clic "Approva" e "Scarta" fatti dalle persone nel gruppo Telegram
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_APPROVATORI: ${{ vars.TELEGRAM_APPROVATORI }}
         run: python engine/veloce.py controlla --attesa 14
 
   pubblica:

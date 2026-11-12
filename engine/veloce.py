@@ -40,6 +40,11 @@ def controlla(attesa_minuti=0):
     fine = time.time() + attesa_minuti * 60
     cambiato, errori, controlli = False, 0, 0
     while True:
+        try:                              # i clic su Telegram cambiano Notion: si leggono prima
+            import telegram
+            telegram.leggi_risposte()
+        except Exception as e:
+            print("Errore nella lettura dei clic di Telegram:", str(e)[:160], flush=True)
         dec = redazione.leggi_redazione(solo_decise=True)
         controlli += 1
         if dec.get("errore"):

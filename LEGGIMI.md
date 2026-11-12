@@ -99,6 +99,10 @@ Le chiavi segrete vanno solo nei Secrets di GitHub, mai nei file o in chat.
 
 ---
 
+**Approvare da Telegram.** Quando una scheda ha **Pacchetto pronto**, il bot manda nel gruppo copertina, titolo e sintesi con i pulsanti **Approva (sito)** e **Scarta**. Il clic viene letto entro un minuto circa: la scheda cambia Stato su Notion e resta scritto chi ha premuto. In zona rossa il bot chiede una conferma in più. "Approva" non pubblica su Instagram: per quello serve la spunta su Notion. Per far valere solo i clic di alcune persone, crea su GitHub la variabile `TELEGRAM_APPROVATORI` con i loro ID numerici Telegram separati da virgola.
+
+---
+
 ## Parte 4 — Aggiungere testate
 
 Su Notion, database **Fonti Adolos**: una riga per testata, con tipo **Sito (feed RSS)** o **Agenzia (feed RSS)**. Nell'indirizzo va quello del feed. Spunta **Attiva**, e **Termini verificati** dopo aver letto le condizioni del feed.

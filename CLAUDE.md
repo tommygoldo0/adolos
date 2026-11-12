@@ -28,6 +28,8 @@ una persona approva su Notion prima di ogni pubblicazione. Rispondi sempre in it
 - Campi scritti dagli agenti: Angoli proposti, Titolo Adolos, Sintesi, Punti carosello, Ganci alternativi,
   Didascalia Instagram, Copione TikTok, Testo Facebook, Link Canva, Controllo legale, Pacchetto pronto.
 - Gli agenti NON mettono mai Stato = Approvata e NON spuntano "Pubblica su Instagram": lo fa una persona.
+  Unica eccezione nel codice: `engine/telegram.py` cambia lo Stato quando una persona preme "Approva" o "Scarta"
+  nel gruppo Telegram della redazione (mai la casella Instagram). Senza clic umano non cambia niente.
 
 ## Regole che non si discutono (dettagli nella skill `adolos-controllo-legale`)
 1. Solo fatti presenti nelle fonti, almeno 2 testate. Niente numeri, citazioni o fonti inventate.

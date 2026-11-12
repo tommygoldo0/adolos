@@ -446,7 +446,8 @@ def invia_telegram(storie, st, indici=None):
             st["telegram"].append(s["id"])
             fatte += 1
         except Exception as e:
-            print("Telegram non inviato:", str(e)[:160])
+            # mai str(e): contiene l'indirizzo della chiamata, che ha dentro il token
+            print("Telegram non inviato:", type(e).__name__, getattr(getattr(e, "response", None), "status_code", ""))
             break
     print(f"Telegram: {fatte} avvisi inviati")
     return fatte
