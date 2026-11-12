@@ -1311,6 +1311,25 @@ def esegui(campione=False, solo_archivio=False):
                                else "Manca il titolo Adolos: scrivilo in 'Titolo Adolos' prima di usare la didascalia.")
     # dati pubblici: solo notizie con titolo Adolos; delle testate solo nome, paese, data e link
     uscita["storie"] = [titoli.versione_pubblica(s, titoli_adolos[s["id"]]) for s in storie if titoli_adolos.get(s["id"])]
+    # archivio: le notizie approvate restano sul sito anche quando escono dalla finestra di 48 ore.
+    # Contiene solo dati già pubblici (versione_pubblica), quindi sta in site/data ed è salvato nel repository.
+    if not campione:
+        arch_file = SITO_DATI / "archivio.json"
+        archivio = leggi_json(arch_file, {})
+        for sp in uscita["storie"]:
+            if sp.get("pubblicata"):
+                archivio[sp["id"]] = sp
+        for sid in list(archivio):            # scartata o tolta dalla redazione: sparisce anche dall'archivio
+            if sid in rifiutati:
+                del archivio[sid]
+        if len(archivio) > 1500:              # si tengono le 1500 più recenti
+            for sid, _ in sorted(archivio.items(), key=lambda kv: kv[1].get("prima_segnalazione", {}).get("data", ""))[:-1500]:
+                del archivio[sid]
+        scrivi_json(arch_file, archivio)
+        presenti = {sp["id"] for sp in uscita["storie"]}
+        vecchie = [dict(sp, archivio=True, calore=min(sp.get("calore", 0), 20)) for sid, sp in archivio.items() if sid not in presenti]
+        uscita["storie"] += sorted(vecchie, key=lambda sp: sp.get("prima_segnalazione", {}).get("data", ""), reverse=True)
+        print(f"Archivio: {len(archivio)} notizie pubblicate in tutto, {len(vecchie)} fuori dalla finestra")
     print(f"Sul sito: {len(uscita['storie'])} notizie con titolo Adolos, {len(storie) - len(uscita['storie'])} restano solo su Notion")
     # controllo per la redazione: le schede approvate con titolo che NON sono finite sul sito, e perché
     ids_storie = {s["id"] for s in storie}
