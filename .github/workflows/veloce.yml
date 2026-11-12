@@ -2,7 +2,7 @@ name: Giro veloce (approvate su Notion → sito e carosello)
 
 # Fa solo una cosa: porta sul sito le schede che una persona ha approvato (o scartato) su Notion.
 # Non scarica le fonti, non crea schede, non manda avvisi e non pubblica su Instagram.
-# Resta di guardia 9 minuti guardando Notion ogni minuto; appena una persona approva o scarta, aggiorna il sito.
+# Resta di guardia 14 minuti (la sveglia esterna passa ogni 15) guardando Notion ogni minuto; appena una persona approva o scarta, aggiorna il sito.
 # Lo sveglia "Aggiorna notizie" a ogni giro (quindi basta la sveglia esterna che c'è già), e dopo ogni
 # pubblicazione si rimette di guardia da solo.
 
@@ -21,7 +21,7 @@ concurrency:
 jobs:
   controlla:
     runs-on: ubuntu-latest
-    timeout-minutes: 13
+    timeout-minutes: 18
     outputs:
       cambiato: ${{ steps.controllo.outputs.cambiato }}
     steps:
@@ -35,7 +35,7 @@ jobs:
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DB_REDAZIONE: ${{ secrets.NOTION_DB_REDAZIONE }}
-        run: python engine/veloce.py controlla --attesa 9
+        run: python engine/veloce.py controlla --attesa 14
 
   pubblica:
     needs: controlla

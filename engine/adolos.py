@@ -1255,6 +1255,7 @@ def esegui(campione=False, solo_archivio=False, veloce=False):
             try:
                 import copertura
                 s["copertura"], s["punto_cieco"] = copertura.calcola(g, fonti.get("punto_cieco"))
+                s["_proprieta"] = copertura.proprieta(g)      # dato interno ("_" = non va nei dati pubblici)
             except Exception as e:
                 print("Copertura non calcolata:", e)
                 s["copertura"], s["punto_cieco"] = {}, ""

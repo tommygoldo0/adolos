@@ -1,0 +1,650 @@
+{
+ "_info": "Chi possiede ogni testata. tipo: pubblica (Stato o servizio pubblico), privata, no profit. Elenco preparato con l'aiuto dell'AI: ogni riga va controllata da una persona, poi si mette verificata = true. Finché non è verificata serve solo alla redazione (Telegram e Notion) e NON va sul sito né nei post. Le testate che mancano qui contano come 'non nota'.",
+ "testate": {
+  "ABC Australia": {
+   "gruppo": "Australian Broadcasting Corporation",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "ABC News": {
+   "gruppo": "The Walt Disney Company",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "ANSA": {
+   "gruppo": "ANSA (cooperativa di editori italiani)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "AS": {
+   "gruppo": "Prisa",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Africanews": {
+   "gruppo": "Euronews (Alpac Capital)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Ahram Online": {
+   "gruppo": "Al-Ahram (fondazione dello Stato egiziano)",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "Al Jazeera": {
+   "gruppo": "Al Jazeera Media Network (finanziata dallo Stato del Qatar)",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "AllAfrica": {
+   "gruppo": "AllAfrica Global Media",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Arab News": {
+   "gruppo": "Saudi Research and Media Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Ars Technica": {
+   "gruppo": "Condé Nast (Advance Publications)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Axios": {
+   "gruppo": "Cox Enterprises",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "BBC News": {
+   "gruppo": "BBC",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "BBC Sport": {
+   "gruppo": "BBC",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "Bangkok Post": {
+   "gruppo": "Bangkok Post PCL",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "CBC News": {
+   "gruppo": "CBC/Radio-Canada",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "CBS News": {
+   "gruppo": "Paramount",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "CNA": {
+   "gruppo": "Mediacorp (controllata dal fondo statale Temasek)",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "Clarín": {
+   "gruppo": "Grupo Clarín",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "CoinDesk": {
+   "gruppo": "Bullish",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Corriere della Sera": {
+   "gruppo": "RCS MediaGroup (Cairo Communication)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Corriere dello Sport": {
+   "gruppo": "Gruppo Amodei",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Daily Maverick": {
+   "gruppo": "Daily Maverick",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Dawn": {
+   "gruppo": "Dawn Media Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Der Spiegel": {
+   "gruppo": "Spiegel-Verlag",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Der Standard": {
+   "gruppo": "Standard Medien",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Deutsche Welle": {
+   "gruppo": "Deutsche Welle (ente pubblico tedesco)",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "Die Zeit": {
+   "gruppo": "Holtzbrinck",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "ESPN": {
+   "gruppo": "The Walt Disney Company",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "El Comercio": {
+   "gruppo": "Grupo El Comercio",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "El Confidencial": {
+   "gruppo": "Titania Compañía Editorial",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "El Mundo": {
+   "gruppo": "RCS MediaGroup (Cairo Communication)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "El País": {
+   "gruppo": "Prisa",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "El Tiempo": {
+   "gruppo": "Casa Editorial El Tiempo",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "El Universal": {
+   "gruppo": "El Universal Compañía Periodística Nacional",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Estadão": {
+   "gruppo": "Grupo Estado",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Euronews": {
+   "gruppo": "Euronews (Alpac Capital)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Expresso": {
+   "gruppo": "Impresa",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "FAZ": {
+   "gruppo": "Fazit-Stiftung",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Focus Taiwan": {
+   "gruppo": "Central News Agency (agenzia pubblica di Taiwan)",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "Folha de S.Paulo": {
+   "gruppo": "Grupo Folha",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Fox News": {
+   "gruppo": "Fox Corporation",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "France 24": {
+   "gruppo": "France Médias Monde",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "France Info": {
+   "gruppo": "Radio France e France Télévisions",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "G1": {
+   "gruppo": "Grupo Globo",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Globo Esporte": {
+   "gruppo": "Grupo Globo",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Gazzetta dello Sport": {
+   "gruppo": "RCS MediaGroup (Cairo Communication)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "GhanaWeb": {
+   "gruppo": "AfricaWeb",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Gulf News": {
+   "gruppo": "Al Nisr Publishing",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Haaretz": {
+   "gruppo": "Haaretz Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Hacker News (prima pagina)": {
+   "gruppo": "Y Combinator",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Hindustan Times": {
+   "gruppo": "HT Media",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Hürriyet Daily News": {
+   "gruppo": "Demirören Holding",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Il Sole 24 Ore": {
+   "gruppo": "Gruppo 24 Ore (Confindustria)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Infobae": {
+   "gruppo": "Grupo Infobae",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Inquirer": {
+   "gruppo": "Inquirer Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Kathimerini": {
+   "gruppo": "Kathimerini SA",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Kicker": {
+   "gruppo": "Olympia-Verlag",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Kyiv Independent": {
+   "gruppo": "Kyiv Independent",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Kyodo News": {
+   "gruppo": "Kyodo News (cooperativa no profit di testate giapponesi)",
+   "tipo": "no profit",
+   "verificata": false
+  },
+  "L'Équipe": {
+   "gruppo": "Groupe Amaury",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "La Nación": {
+   "gruppo": "S.A. La Nación",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "La Tercera": {
+   "gruppo": "Copesa",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "La Vanguardia": {
+   "gruppo": "Grupo Godó",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Le Figaro": {
+   "gruppo": "Groupe Dassault",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Le Monde": {
+   "gruppo": "Groupe Le Monde",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Le Soir": {
+   "gruppo": "Groupe Rossel",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Los Angeles Times": {
+   "gruppo": "Los Angeles Times (Patrick Soon-Shiong)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Mail & Guardian": {
+   "gruppo": "M&G Media",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Marca": {
+   "gruppo": "RCS MediaGroup (Cairo Communication)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Milenio": {
+   "gruppo": "Grupo Multimedios",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Mundo Deportivo": {
+   "gruppo": "Grupo Godó",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "NBC News": {
+   "gruppo": "NBCUniversal (Comcast)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "NDTV": {
+   "gruppo": "Adani Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "NHK": {
+   "gruppo": "NHK (ente pubblico giapponese)",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "NOS": {
+   "gruppo": "NOS (ente pubblico olandese)",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "NPR": {
+   "gruppo": "NPR",
+   "tipo": "no profit",
+   "verificata": false
+  },
+  "NZZ": {
+   "gruppo": "NZZ-Mediengruppe",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Nation Africa": {
+   "gruppo": "Nation Media Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "News24": {
+   "gruppo": "Media24 (Naspers)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Notes from Poland": {
+   "gruppo": "Notes from Poland Foundation",
+   "tipo": "no profit",
+   "verificata": false
+  },
+  "ORF": {
+   "gruppo": "ORF (ente pubblico austriaco)",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "Olé": {
+   "gruppo": "Grupo Clarín",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Ouest-France": {
+   "gruppo": "SIPA Ouest-France",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Politico": {
+   "gruppo": "Axel Springer",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Politico Europe": {
+   "gruppo": "Axel Springer",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Premium Times": {
+   "gruppo": "Premium Times Services",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Punch": {
+   "gruppo": "Punch Nigeria",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Público": {
+   "gruppo": "Sonae",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "RFI": {
+   "gruppo": "France Médias Monde",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "RNZ": {
+   "gruppo": "Radio New Zealand",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "RNZ Pacific": {
+   "gruppo": "Radio New Zealand",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "RTÉ": {
+   "gruppo": "RTÉ (ente pubblico irlandese)",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "Rappler": {
+   "gruppo": "Rappler Holdings",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Sky News": {
+   "gruppo": "Sky (Comcast)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Sky Sports": {
+   "gruppo": "Sky (Comcast)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Sky TG24": {
+   "gruppo": "Sky (Comcast)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "South China Morning Post": {
+   "gruppo": "Alibaba Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Space.com": {
+   "gruppo": "Future plc",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Swissinfo": {
+   "gruppo": "SRG SSR",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "Sydney Morning Herald": {
+   "gruppo": "Nine Entertainment",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Süddeutsche Zeitung": {
+   "gruppo": "Südwestdeutsche Medien Holding",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Tagesschau": {
+   "gruppo": "ARD",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "Taipei Times": {
+   "gruppo": "Liberty Times Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The East African": {
+   "gruppo": "Nation Media Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Globe and Mail": {
+   "gruppo": "The Woodbridge Company",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Guardian": {
+   "gruppo": "Guardian Media Group (Scott Trust)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Guardian Australia": {
+   "gruppo": "Guardian Media Group (Scott Trust)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Guardian Sport": {
+   "gruppo": "Guardian Media Group (Scott Trust)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Hill": {
+   "gruppo": "Nexstar Media Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Hindu": {
+   "gruppo": "The Hindu Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Independent": {
+   "gruppo": "Independent Digital News & Media",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Indian Express": {
+   "gruppo": "Indian Express Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Irish Times": {
+   "gruppo": "The Irish Times Trust",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Jakarta Post": {
+   "gruppo": "PT Bina Media Tenggara",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Jerusalem Post": {
+   "gruppo": "Jerusalem Post Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Korea Herald": {
+   "gruppo": "Herald Corporation",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The National": {
+   "gruppo": "International Media Investments (Abu Dhabi)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The New York Times": {
+   "gruppo": "The New York Times Company",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Straits Times": {
+   "gruppo": "SPH Media Trust",
+   "tipo": "no profit",
+   "verificata": false
+  },
+  "The Verge": {
+   "gruppo": "Vox Media",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "The Washington Post": {
+   "gruppo": "Nash Holdings (Jeff Bezos)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Times of India": {
+   "gruppo": "The Times Group",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "UN News": {
+   "gruppo": "Nazioni Unite",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "USA Today": {
+   "gruppo": "Gannett",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "VnExpress International": {
+   "gruppo": "VnExpress (ente statale del Vietnam)",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "Wired Italia": {
+   "gruppo": "Condé Nast (Advance Publications)",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "Yonhap": {
+   "gruppo": "Yonhap (agenzia finanziata con fondi pubblici)",
+   "tipo": "pubblica",
+   "verificata": false
+  },
+  "de Volkskrant": {
+   "gruppo": "DPG Media",
+   "tipo": "privata",
+   "verificata": false
+  },
+  "la Repubblica": {
+   "gruppo": "GEDI Gruppo Editoriale",
+   "tipo": "privata",
+   "verificata": false
+  }
+ }
+}

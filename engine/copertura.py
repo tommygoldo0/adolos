@@ -51,4 +51,48 @@ def calcola(gruppo, conf=None):
             "continenti": dict(continenti.most_common())}, cieco
 
 
+_PROPRIETA = None
+
+
+def proprieta(gruppo):
+    """Chi possiede le testate che ne parlano (dati di engine/proprieta.json). Serve alla redazione: molte testate
+    dello stesso gruppo editoriale non sono voci indipendenti. Dato interno: non va sul sito finché non è verificato."""
+    global _PROPRIETA
+    if _PROPRIETA is None:
+        import json
+        from pathlib import Path
+        try:
+            dati = json.loads((Path(__file__).resolve().parent / "proprieta.json").read_text(encoding="utf-8"))
+            _PROPRIETA = {k.lower(): v for k, v in dati.get("testate", {}).items()}
+        except Exception as e:
+            print("Proprietà delle testate non lette:", e)
+            _PROPRIETA = {}
+    viste, tipi, gruppi = set(), Counter(), Counter()
+    for x in gruppo:
+        if x.get("tipo") == "social" or x.get("correlato"):
+            continue
+        k = x["fonte"].lower()
+        if k in viste:
+            continue
+        viste.add(k)
+        p = _PROPRIETA.get(k)
+        tipi[p["tipo"] if p else "non nota"] += 1
+        gruppi[p["gruppo"] if p else "?" + k] += 1          # testata senza dato: conta come gruppo a sé
+    return {"tipi": dict(tipi.most_common()), "gruppi_diversi": len(gruppi),
+            "stesso_gruppo": [[g, n] for g, n in gruppi.most_common() if n > 1 and not g.startswith("?")]}
+
+
+def riga_proprieta(p):
+    """Una riga leggibile per Telegram e Notion, es. '5 private, 2 pubbliche · 6 gruppi editoriali diversi (BBC ×2)'."""
+    if not p or not p.get("tipi"):
+        return ""
+    nomi = {"privata": ("privata", "private"), "pubblica": ("pubblica", "pubbliche"), "no profit": ("no profit", "no profit"),
+            "non nota": ("non nota", "non note")}
+    parti = [f"{n} {nomi.get(t, (t, t))[n > 1]}" for t, n in p["tipi"].items()]
+    riga = ", ".join(parti) + f" · {p['gruppi_diversi']} " + ("gruppi editoriali diversi" if p["gruppi_diversi"] != 1 else "gruppo editoriale")
+    if p.get("stesso_gruppo"):
+        riga += " (" + ", ".join(f"{g} ×{n}" for g, n in p["stesso_gruppo"][:3]) + ")"
+    return riga
+
+
 ETICHETTE = {"italia": "Punto cieco italiano", "solo_italia": "Solo in Italia"}

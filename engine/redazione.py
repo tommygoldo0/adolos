@@ -266,6 +266,17 @@ def _props_indice(v):
     }
 
 
+def _nota_proprieta(s, prima=""):
+    """Tipo di proprietà delle testate e gruppi editoriali diversi: dato interno per la redazione."""
+    try:
+        import copertura
+        riga = copertura.riga_proprieta(s.get("_proprieta"))
+    except Exception as e:
+        print("Proprietà non scritta:", str(e)[:120])
+        riga = ""
+    return (prima + riga) if riga else ""
+
+
 def _scheda(s, db, bozza, ind=None):
     global PAESI_NOMI
     if PAESI_NOMI is None:
@@ -285,7 +296,7 @@ def _scheda(s, db, bozza, ind=None):
         "Lingue": {"number": len(s.get("lingue", []))},
         "Sezione": {"select": {"name": s["sezione"]}},
         "Paesi": {"multi_select": [{"name": PAESI_NOMI.get(p, p)[:90]} for p in s["paesi"][:12]]},
-        "Fonti": {"rich_text": _testo(elenco)},
+        "Fonti": {"rich_text": _testo(elenco + _nota_proprieta(s, "\nProprietà (da verificare): "))},
         "Immagine": {"rich_text": _testo("Carosello Adolos generato dal sistema dopo l'approvazione. "
                                          "Niente foto delle testate: solo grafiche Adolos o foto con licenza libera.")},
         "Attendibilità": {"number": s.get("attendibilita", 0)},
@@ -407,6 +418,20 @@ def invia_telegram(storie, st, indici=None):
                  "", f"<b>{html.escape(s['titolo'])}</b>", "",
                  html.escape(s.get("bot_motivo", "")),
                  "Fonti: " + html.escape(", ".join(f["fonte"] for f in s["fonti"][:5]))]
+        global PAESI_NOMI
+        if PAESI_NOMI is None:
+            from adolos import PAESI
+            PAESI_NOMI = PAESI
+        if s.get("paesi"):
+            righe.append("Paesi: " + html.escape(", ".join(PAESI_NOMI.get(p, p) for p in s["paesi"][:8])))
+        cop = s.get("copertura") or {}
+        if cop:
+            righe.append(f"Italia {cop.get('italia', 0)} · estero {cop.get('estero', 0)} testate"
+                         + (" · PUNTO CIECO ITALIANO" if s.get("punto_cieco") == "italia" else ""))
+        if s["n_fonti"] < 2:
+            righe.append("⚠️ Una sola testata: da verificare, non è un pacchetto")
+        if _nota_proprieta(s):
+            righe.append(html.escape(_nota_proprieta(s, "Proprietà (da verificare): ")))
         ind = indici.get(s["id"])
         if ind:
             righe.append(f"Indice virale {ind['indice']}/100 · zona {ind['zona'].lower()}")

@@ -36,5 +36,10 @@ elenchi di tre aggettivi, frasi con trattini a effetto, domande retoriche in ape
 - Su ogni notizia mostriamo quante testate italiane ed estere la raccontano e da quali continenti.
 - "Punto cieco italiano" = molte testate straniere, nessuna italiana tra quelle che leggiamo.
   "Solo in Italia" = solo testate italiane. Sono numeri, non opinioni: niente etichette destra/sinistra.
+- **Paese e proprietà, non orientamento politico** (deciso da Tommaso il 12 novembre 2026): di ogni testata
+  diciamo il paese e chi la possiede (pubblica, privata, no profit, gruppo editoriale), mai "di destra" o
+  "di sinistra". I dati stanno in `engine/proprieta.json`. Finché una riga non ha `verificata: true` (controllata
+  da una persona) si usa solo in redazione (Telegram, Notion) e non va sul sito né nei post.
+  Più testate dello stesso gruppo editoriale non sono voci indipendenti: dillo ("3 testate, 2 dello stesso gruppo").
 - Formato social dedicato: copertina "IL MONDO NE PARLA, L'ITALIA NO" + la notizia + slide "Chi ne parla"
   (barra dei continenti) + fonti.
