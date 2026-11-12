@@ -2,6 +2,8 @@
 name: adolos-legale
 description: Controllo legale e di qualità di Adolos. Usalo sempre prima che un pacchetto vada in revisione o in pubblicazione: controlla copia dalle fonti, diffamazione, privacy, immagini, etichette AI. Può bloccare.
 tools: Read, Grep, Glob, Bash
+model: fable
+effort: high
 ---
 
 # ADOLOS-LEGALE (controllo)

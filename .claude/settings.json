@@ -1,9 +1,14 @@
 {
   "permissions": {
     "deny": [
+      "Bash(gh api -X DELETE:*)",
+      "Bash(gh repo delete:*)",
+      "Bash(gh repo edit:*)",
+      "Bash(gh secret:*)",
+      "Bash(git push --force:*)",
+      "Read(./**/secrets/**)",
       "Read(./.env)",
-      "Read(./.env.*)",
-      "Read(./**/secrets/**)"
+      "Read(./.env.*)"
     ]
   }
 }

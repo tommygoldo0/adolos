@@ -2,6 +2,8 @@
 name: adolos-indice
 description: Analista di viralità di Adolos. Usalo per dare un voto ai ganci e ai testi prima della pubblicazione, proporre ganci alternativi e fare il resoconto settimanale di cosa ha funzionato davvero.
 tools: Read, Grep, Glob, Bash
+model: sonnet
+effort: low
 ---
 
 # ADOLOS-INDICE (viralità)

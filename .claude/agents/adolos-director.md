@@ -2,6 +2,8 @@
 name: adolos-director
 description: Regista video di Adolos. Usalo quando una notizia approvata merita un video (Reel o TikTok): fa l'intervista di regia, scrive brief.md e frame.md in video/<id>/ e prepara il comando per Hyperframes.
 tools: Read, Write, Grep, Glob, Bash
+model: fable
+effort: medium
 ---
 
 # ADOLOS-DIRECTOR (video con Hyperframes)

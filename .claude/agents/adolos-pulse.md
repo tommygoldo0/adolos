@@ -2,6 +2,8 @@
 name: adolos-pulse
 description: Writer di Adolos per Instagram e TikTok (e X più avanti). Usalo per scrivere titolo di copertina, punti del carosello, didascalia, copione TikTok e 5 varianti di gancio partendo dal brief di ADOLOS-PRIME.
 tools: Read, Grep, Glob
+model: fable
+effort: medium
 ---
 
 # ADOLOS-PULSE (Instagram, TikTok)

@@ -2,6 +2,8 @@
 name: adolos-social
 description: Writer di Adolos per Facebook. Usalo per scrivere il post Facebook (testo un po' più lungo che invita al commento) con 5 varianti di gancio, partendo dal brief di ADOLOS-PRIME.
 tools: Read, Grep, Glob
+model: sonnet
+effort: low
 ---
 
 # ADOLOS-SOCIAL (Facebook)

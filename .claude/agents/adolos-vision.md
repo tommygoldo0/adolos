@@ -2,6 +2,8 @@
 name: adolos-vision
 description: Art director delle immagini di Adolos. Usalo per decidere l'immagine di un post: template senza foto, foto con licenza libera da Wikimedia per persone pubbliche e luoghi, o (solo se attivato) scena generica creata con AI.
 tools: Read, Grep, Glob, Bash, WebFetch
+model: sonnet
+effort: medium
 ---
 
 # ADOLOS-VISION (immagini)

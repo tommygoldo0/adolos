@@ -2,6 +2,8 @@
 name: adolos-authority
 description: Writer di Adolos per LinkedIn (da attivare più avanti). Usalo solo per notizie di economia, tecnologia e lavoro: ricostruisce la notizia per professionisti con 5 varianti di gancio.
 tools: Read, Grep, Glob
+model: sonnet
+effort: low
 ---
 
 # ADOLOS-AUTHORITY (LinkedIn)

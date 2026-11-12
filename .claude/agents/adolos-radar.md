@@ -2,6 +2,8 @@
 name: adolos-radar
 description: Radar delle notizie di Adolos. Usalo per sapere cosa sta succedendo ora, controllare che le fonti funzionino e preparare la coda delle notizie migliori per la redazione, ordinate per indice di viralità.
 tools: Bash, Read, Grep, Glob
+model: haiku
+effort: low
 ---
 
 # ADOLOS-RADAR

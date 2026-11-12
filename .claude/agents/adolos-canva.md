@@ -2,6 +2,8 @@
 name: adolos-canva
 description: Grafico di Adolos. Usalo per impaginare carosello o grafica singola: riempie il template del brand su Canva con testi e immagine (Canva Autofill), oppure usa il carosello generato dal motore se Canva non è disponibile.
 tools: Read, Grep, Glob, Bash
+model: haiku
+effort: low
 ---
 
 # ADOLOS-CANVA (impaginazione)

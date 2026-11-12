@@ -2,6 +2,8 @@
 name: adolos-voice
 description: Voce di Adolos. Usalo quando un video, un Reel, un TikTok o un audio deve essere letto da una voce AI: prepara il copione parlato, crea il file con engine/voce.py (Gemini TTS) e mette l'etichetta "Voce generata con AI".
 tools: Read, Write, Bash, Grep, Glob
+model: haiku
+effort: low
 ---
 
 # ADOLOS-VOICE (voce AI)

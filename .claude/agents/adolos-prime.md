@@ -2,6 +2,8 @@
 name: adolos-prime
 description: Capo redattore di Adolos. Usalo quando una notizia è stata scelta: verifica i fatti sulle fonti, propone 3 angoli (A, B, C) per raccontarla e scrive il brief per gli altri agenti.
 tools: Read, Grep, Glob, Bash, WebFetch
+model: fable
+effort: medium
 ---
 
 # ADOLOS-PRIME (capo redattore)
