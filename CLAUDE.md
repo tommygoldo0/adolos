@@ -17,6 +17,9 @@ una persona approva su Notion prima di ogni pubblicazione. Rispondi sempre in it
 ## Comandi
 - Prova senza internet: `python3 engine/adolos.py --campione`
 - Giro reale (servono le chiavi come variabili d'ambiente): `python3 engine/adolos.py`
+- Giro veloce (solo schede decise su Notion -> sito e carosello, usa i dati dell'ultimo giro completo; non scarica
+  fonti, non crea schede, non avvisa, non pubblica su Instagram): `python3 engine/adolos.py --veloce`.
+  Workflow `veloce.yml`: prima `python3 engine/veloce.py controlla` (pochi secondi), poi il giro solo se serve.
 - Redazione completa su una notizia approvata: skill `adolos-redazione`
 
 ## Notion

@@ -1151,7 +1151,23 @@ def statistiche(items, storie, adesso):
 
 
 # ---------------------------------------------------------------- principale
-def esegui(campione=False, solo_archivio=False):
+def gruppi_da_memoria(items, memoria):
+    """Giro veloce: rimette insieme le storie come nell'ultimo giro completo (memoria: link -> ID storia),
+    senza rifare il raggruppamento. Un articolo che non è in memoria resta da solo."""
+    gruppi, soli = defaultdict(list), []
+    for x in items:
+        sid = memoria.get(x.get("link"))
+        if sid:
+            gruppi[sid].append(x)
+        else:
+            soli.append([x])
+    return list(gruppi.values()) + soli
+
+
+def esegui(campione=False, solo_archivio=False, veloce=False):
+    """veloce=True: solo "schede decise su Notion -> sito e carosello". Non scarica le fonti, non raggruppa,
+    non crea schede, non manda avvisi e non pubblica su Instagram: usa i dati dell'ultimo giro completo."""
+    inizio = time.time()
     fonti = leggi_json(ENGINE / "fonti.json", {})
     affidabili = [a.lower() for a in fonti.get("agenzie_affidabili", [])]
     stato_approv = leggi_json(APPROVATI, {"approvati": [], "rifiutati": []})
@@ -1166,7 +1182,13 @@ def esegui(campione=False, solo_archivio=False):
         approvati |= set(testi_approvati)
     if not campione:
         import redazione
-        dec = redazione.leggi_redazione()              # le scelte fatte dallo staff sulle schede Notion
+        if veloce and not redazione.notion_attivo():
+            raise SystemExit("ERRORE giro veloce: mancano NOTION_TOKEN o NOTION_DB_REDAZIONE")
+        dec = redazione.leggi_redazione(solo_decise=veloce)   # le scelte fatte dallo staff sulle schede Notion
+        if veloce and dec.get("errore"):
+            # senza le decisioni il sito perderebbe le notizie approvate: meglio fermarsi e lasciarlo com'è
+            raise SystemExit("ERRORE giro veloce: schede Notion non lette, il sito resta com'è (" + dec["errore"] + ")")
+        impronta_decisioni = redazione.impronta(dec)
         approvati |= dec["si"]
         rifiutati |= dec["no"]
         testi_approvati.update(dec["testi"])
@@ -1178,11 +1200,14 @@ def esegui(campione=False, solo_archivio=False):
         nuovi, errori = raccogli_campione()
         adesso = max(a_data(x["data"]) for x in nuovi) + timedelta(minutes=20)
         archivio = []
-    elif solo_archivio:
-        # usato dopo Pubblica/Scarta: ricalcola senza riscaricare tutto
+    elif solo_archivio or veloce:
+        # usato dopo Pubblica/Scarta e nel giro veloce: ricalcola senza riscaricare tutto
         nuovi, errori = [], leggi_json(SITO_DATI / "notizie.json", {}).get("errori_fonti", [])
         adesso = ora_utc()
         archivio = leggi_json(ARCHIVIO, [])
+        if veloce and not (archivio and leggi_json(CACHE / "id_storie.json", {})):
+            raise SystemExit("ERRORE giro veloce: mancano i dati di lavoro dell'ultimo giro completo "
+                             "(engine/cache). Il sito resta com'è: serve prima un giro di 'Aggiorna notizie'.")
     else:
         import redazione
         fonti = redazione.aggiungi_fonti_da_notion(fonti)   # le testate e i canali aggiunti dallo staff su Notion
@@ -1209,15 +1234,16 @@ def esegui(campione=False, solo_archivio=False):
     for x in items:
         if x["fonte"].lower() in solo_conta:
             x["uso"] = "conta_e_link"
-    if not campione:
+    if not campione and not veloce:
         import traduci
         traduci.traduci_items(items)          # thailandese, giapponese, arabo... tutto in italiano
         scrivi_json(ARCHIVIO, items)
 
     print(f"\nArticoli nella finestra: {len(items)}")
     regole = fonti.get("bot", {})
-    gruppi = raggruppa(items)
-    id_di_gruppo = id_stabili(gruppi, {} if campione else leggi_json(CACHE / "id_storie.json", {}))
+    memoria_id = {} if campione else leggi_json(CACHE / "id_storie.json", {})
+    gruppi = gruppi_da_memoria(items, memoria_id) if veloce else raggruppa(items)
+    id_di_gruppo = id_stabili(gruppi, memoria_id)
     ritrova_approvate(gruppi, id_di_gruppo, approvati, link_approvati,
                       {k for k, v in testi_approvati.items() if isinstance(v, dict) and v.get("titolo")})
     aggiungi_fonti_extra(gruppi, id_di_gruppo, fonti_extra, fonti, adesso)
@@ -1234,7 +1260,7 @@ def esegui(campione=False, solo_archivio=False):
                 s["copertura"], s["punto_cieco"] = {}, ""
             storie.append(s)
             gruppo_di[s["id"]] = g
-    if not campione:      # memoria degli ID: articolo -> storia (solo articoli ancora nella finestra)
+    if not campione and not veloce:   # memoria degli ID: articolo -> storia (solo articoli ancora nella finestra)
         scrivi_json(CACHE / "id_storie.json",
                     {x["link"]: sid for g in gruppi for sid in [id_di_gruppo[id(g)]] for x in g if x.get("link")})
     storie.sort(key=lambda s: (s["calore"], s["n_fonti"]), reverse=True)
@@ -1254,7 +1280,8 @@ def esegui(campione=False, solo_archivio=False):
     try:
         import sintesi
         conf_ai = fonti.get("ai", {})
-        bozze = sintesi.prepara(storie, gruppo_di, int(conf_ai.get("sintesi_al_giro", 8)))
+        # giro veloce: niente AI, si usano solo le bozze già scritte
+        bozze = sintesi.bozze() if veloce else sintesi.prepara(storie, gruppo_di, int(conf_ai.get("sintesi_al_giro", 8)))
     except Exception as e:
         print("Errore nelle sintesi:", e)
         bozze = {}
@@ -1270,7 +1297,7 @@ def esegui(campione=False, solo_archivio=False):
     # indice di viralità e zona di rischio: servono solo a ordinare la coda su Notion (dati privati)
     try:
         import indice
-        indici = indice.calcola(storie, {k: v for k, v in bozze.items() if v.get("sintesi")})
+        indici = {} if veloce else indice.calcola(storie, {k: v for k, v in bozze.items() if v.get("sintesi")})
     except Exception as e:
         print("Errore nell'indice di viralità:", e)
         indici = {}
@@ -1282,7 +1309,8 @@ def esegui(campione=False, solo_archivio=False):
         titoli_approvati.update({k: v for k, v in leggi_json(ENGINE / "sample" / "titoli_prova.json", {}).items()
                                  if not k.startswith("_")})
     try:
-        titoli_adolos = titoli.prepara(storie, gruppo_di, int(fonti.get("ai", {}).get("titoli_al_giro", 120)),
+        n_titoli = 0 if veloce else int(fonti.get("ai", {}).get("titoli_al_giro", 120))   # veloce: nessun titolo nuovo
+        titoli_adolos = titoli.prepara(storie, gruppo_di, n_titoli,
                                        approvati=titoli_approvati) if not campione else titoli_approvati
     except Exception as e:
         print("Errore nei titoli Adolos:", e)
@@ -1356,7 +1384,7 @@ def esegui(campione=False, solo_archivio=False):
         sito.genera()
     except Exception as e:  # il sito non deve mai bloccare la raccolta
         print("Errore nella generazione del sito:", e)
-    if not campione:
+    if not campione and not veloce:
         try:
             import redazione
             redazione.invia(storie, privati, indici)  # schede su Notion e avviso su Telegram (se configurati)
@@ -1364,15 +1392,23 @@ def esegui(campione=False, solo_archivio=False):
             print("Errore nell'invio alla redazione:", e)
     try:
         import social
-        social.esegui(storie, da_pubblicare_ig, campione, indici)   # pubblicazione Instagram via API ufficiale
+        # giro veloce: scrive solo il link del carosello sulla scheda; su Instagram pubblica il giro completo
+        social.esegui(storie, {} if veloce else da_pubblicare_ig, campione, indici)   # Instagram via API ufficiale
     except Exception as e:
         print("Errore nella pubblicazione su Instagram:", e)
-    if not campione:
+    if not campione and not veloce:
         try:
             indice.raccogli_risultati()      # risultati veri dei post di 2 giorni fa
             indice.calibra()                 # una volta a settimana aggiusta i pesi
         except Exception as e:
             print("Errore nella lettura dei risultati:", e)
+    if not campione:
+        # impronta delle decisioni lette in questo giro: il giro veloce riparte solo se su Notion cambia qualcosa
+        scrivi_json(ENGINE / "veloce_stato.json", {"impronta": impronta_decisioni, "quando": adesso.isoformat(),
+                                                   "giro": "veloce" if veloce else "completo"})
+    if veloce:
+        print(f"Giro veloce finito in {time.time() - inizio:.0f} secondi: {pubbl} notizie pubblicate sul sito")
+        return
     if indici:
         print("Coda per indice di viralità:")
         for sid, v in sorted(indici.items(), key=lambda kv: kv[1]["indice"], reverse=True)[:8]:
@@ -1399,4 +1435,4 @@ if __name__ == "__main__":
         if ARCHIVIO.exists():
             esegui(solo_archivio=True)
     else:
-        esegui(campione="--campione" in args, solo_archivio="--solo-archivio" in args)
+        esegui(campione="--campione" in args, solo_archivio="--solo-archivio" in args, veloce="--veloce" in args)

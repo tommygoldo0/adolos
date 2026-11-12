@@ -97,10 +97,12 @@ def _leggi_testo(prop):
     return ""
 
 
-def _tutte_le_righe(db):
+def _tutte_le_righe(db, filtro=None):
     righe, cursore = [], None
     while True:
         corpo = {"page_size": 100}
+        if filtro:
+            corpo["filter"] = filtro
         if cursore:
             corpo["start_cursor"] = cursore
         r = _notion("POST", f"databases/{db}/query", corpo)
@@ -163,13 +165,27 @@ def aggiungi_fonti_da_notion(fonti):
     return fonti
 
 
-def leggi_redazione():
-    """Legge le schede: Stato, testi corretti dalla redazione e richieste di pubblicazione su Instagram."""
-    out = {"si": set(), "no": set(), "testi": {}, "instagram": {}, "link": {}, "extra": {}}
+# Le schede su cui una persona ha deciso (tutte tranne "Da valutare" e "In revisione"): sono poche, si leggono in fretta.
+FILTRO_DECISE = {"or": [{"property": "Stato", "status": {"equals": x}} for x in ("Approvata", "Pubblicata", "Scartata")]}
+
+
+def impronta(dec):
+    """Codice breve che cambia quando cambia una decisione o un testo approvato su Notion (non contiene i testi)."""
+    import hashlib
+    base = json.dumps([sorted(dec["si"]), sorted(dec["no"]), dec["testi"], dec["link"], dec["extra"]],
+                      ensure_ascii=False, sort_keys=True)
+    return hashlib.sha1(base.encode("utf-8")).hexdigest()[:16]
+
+
+def leggi_redazione(solo_decise=False):
+    """Legge le schede: Stato, testi corretti dalla redazione e richieste di pubblicazione su Instagram.
+    solo_decise=True (giro veloce) chiede a Notion solo le schede Approvata, Pubblicata o Scartata.
+    Se la lettura fallisce l'errore finisce nel registro e in out["errore"]."""
+    out = {"si": set(), "no": set(), "testi": {}, "instagram": {}, "link": {}, "extra": {}, "errore": ""}
     if not notion_attivo():
         return out
     try:
-        for r in _tutte_le_righe(_env("NOTION_DB_REDAZIONE")):
+        for r in _tutte_le_righe(_env("NOTION_DB_REDAZIONE"), FILTRO_DECISE if solo_decise else None):
             p = r["properties"]
             sid = _leggi_testo(p.get("ID storia"))
             stato = _leggi_testo(p.get("Stato"))
@@ -201,6 +217,7 @@ def leggi_redazione():
                 out["no"].add(sid)
     except Exception as e:
         print("Decisioni da Notion non lette:", e)
+        out["errore"] = str(e)[:200]
     return out
 
 

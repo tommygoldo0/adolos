@@ -1,0 +1,95 @@
+name: Giro veloce (approvate su Notion → sito e carosello)
+
+# Fa solo una cosa: porta sul sito le schede che una persona ha approvato (o scartato) su Notion.
+# Non scarica le fonti, non crea schede, non manda avvisi e non pubblica su Instagram.
+# Se su Notion non è cambiato niente si ferma dopo pochi secondi.
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"        # riserva: GitHub lo fa partire quando può (la sveglia vera è cron-job.org)
+  workflow_dispatch:             # pulsante "Run workflow" e sveglia esterna
+
+permissions:
+  contents: read
+
+concurrency:
+  group: adolos-veloce           # gruppo diverso da "Aggiorna notizie": non aspetta il giro lungo
+  cancel-in-progress: false
+
+jobs:
+  controlla:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    outputs:
+      cambiato: ${{ steps.controllo.outputs.cambiato }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q "requests>=2.31"
+      - name: C'è qualcosa di nuovo su Notion?
+        id: controllo
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DB_REDAZIONE: ${{ secrets.NOTION_DB_REDAZIONE }}
+        run: python engine/veloce.py controlla
+
+  pubblica:
+    needs: controlla
+    if: needs.controlla.outputs.cambiato == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.pubblica.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -q -r requirements.txt
+
+      # Dati di lavoro dell'ultimo giro completo (solo lettura: qui non si salvano di nuovo)
+      - name: Recupera i dati di lavoro
+        uses: actions/cache/restore@v4
+        with:
+          path: engine/cache
+          key: adolos-cache-${{ github.run_id }}
+          restore-keys: adolos-cache-
+
+      - name: Schede approvate → sito e carosello
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DB_REDAZIONE: ${{ secrets.NOTION_DB_REDAZIONE }}
+          SITO_URL: ${{ vars.SITO_URL }}
+        run: python engine/adolos.py --veloce
+
+      - name: Salva il sito nel repository
+        run: |
+          git config user.name "adolos-bot"
+          git config user.email "adolos-bot@users.noreply.github.com"
+          git add site engine/*.json
+          if git diff --cached --quiet; then echo "Niente da salvare"; exit 0; fi
+          git commit -q -m "Giro veloce $(date -u +'%Y-%m-%d %H:%M') [skip ci]"
+          # Se nel frattempo il giro lungo ha salvato, si riprova; in caso di conflitto vince questo giro
+          # (ha le decisioni più recenti). Se non riesce, il passo fallisce e si vede in rosso.
+          for tentativo in 1 2 3; do
+            if git pull --rebase -X theirs && git push; then echo "Salvato al tentativo $tentativo"; exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+          done
+          echo "ERRORE: sito non salvato nel repository dopo 3 tentativi"
+          exit 1
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: pubblica
+        uses: actions/deploy-pages@v4

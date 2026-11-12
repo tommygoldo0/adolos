@@ -85,6 +85,10 @@ Le chiavi segrete vanno solo nei Secrets di GitHub, mai nei file o in chat.
 
 ---
 
+**Giro veloce (approvazioni sul sito in 1-2 minuti).** Il workflow **Giro veloce** (`.github/workflows/veloce.yml`) guarda solo le schede Approvata, Pubblicata e Scartata. Se non è cambiato niente si ferma dopo pochi secondi; se hai approvato o scartato qualcosa aggiorna sito e carosello senza rifare la raccolta. Non pubblica su Instagram: quello resta al giro completo. Per farlo partire spesso, su cron-job.org crea una seconda sveglia uguale a quella di `aggiorna.yml` ma con `veloce.yml` nell'indirizzo, ogni 2-3 minuti. Se Notion non risponde il giro diventa rosso e il sito resta com'è.
+
+---
+
 ## Parte 3 — Avvisi su Telegram (5 minuti, gratis, facoltativo)
 
 È il vostro bot che vi scrive, con l'API ufficiale di Telegram.
