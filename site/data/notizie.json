@@ -140,6 +140,11 @@
   "fonti_diverse": 123,
   "per_paese": [
    [
+    "AR",
+    "Argentina",
+    1072
+   ],
+   [
     "BR",
     "Brasile",
     1047
@@ -187,7 +192,7 @@
    [
     "AU",
     "Australia",
-    329
+    331
    ],
    [
     "MX",
@@ -205,9 +210,14 @@
     307
    ],
    [
+    "NG",
+    "Nigeria",
+    310
+   ],
+   [
     "AT",
     "Austria",
-    198
+    197
    ],
    [
     "PH",
@@ -227,7 +237,7 @@
    [
     "QA",
     "Qatar",
-    162
+    163
    ],
    [
     "ZA",
@@ -262,6 +272,11 @@
    [
     "IL",
     "Israele",
+    93
+   ],
+   [
+    "JP",
+    "Giappone",
     92
    ]
   ],
@@ -310,11 +325,11 @@
    ],
    [
     "Politica",
-    51
+    50
    ],
    [
     "Esteri e conflitti",
-    47
+    46
    ],
    [
     "Cronaca",
@@ -326,29 +341,29 @@
    ],
    [
     "Sport",
-    14
+    13
    ],
    [
     "Tecnologia e crypto",
     11
    ],
    [
-    "Clima e ambiente",
+    "Economia",
     5
    ],
    [
-    "Economia",
-    4
+    "Clima e ambiente",
+    5
    ]
   ],
   "fonti_top": [
    [
     "Infobae",
-    523
+    552
    ],
    [
     "G1",
-    393
+    407
    ],
    [
     "El Universal",
@@ -356,11 +371,11 @@
    ],
    [
     "La Nación",
-    303
+    307
    ],
    [
     "Globo Esporte",
-    303
+    304
    ],
    [
     "Folha de S.Paulo",
@@ -372,7 +387,7 @@
    ],
    [
     "Punch",
-    217
+    218
    ],
    [
     "Times of India",
@@ -450,11 +465,11 @@
    ],
    [
     9,
-    129
+    125
    ],
    [
     8,
-    100
+    99
    ],
    [
     7,
@@ -501,20 +516,16 @@
  "errori_fonti": [
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
+  "GDELT moldova: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:moldova&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT albania: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:albania&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT bosniaandherzegovina: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:bosniaandherzegovina&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT macedonia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:macedonia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT kosovo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:kosovo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT iceland: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:iceland&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT cyprus: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:cyprus&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT malta: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:malta&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT luxembourg: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:luxembourg&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT haiti: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:haiti&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT dominicanrepublic: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:dominicanrepublic&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT guatemala: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:guatemala&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT honduras: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:honduras&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT panama: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:panama&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT costarica: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:costarica&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT jamaica: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:jamaica&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT bolivia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:bolivia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
+  "GDELT jamaica: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:jamaica&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
