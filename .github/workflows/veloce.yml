@@ -101,4 +101,5 @@ jobs:
       - name: Torna di guardia
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh workflow run veloce.yml --repo ${{ github.repository }} || echo "::warning::Giro veloce non rimesso di guardia: riparte al prossimo giro di Aggiorna notizie"
+        run: |
+          gh workflow run veloce.yml --repo ${{ github.repository }} || echo "::warning::Giro veloce non rimesso di guardia, riparte al prossimo giro di Aggiorna notizie"
