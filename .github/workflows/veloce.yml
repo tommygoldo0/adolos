@@ -39,6 +39,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_APPROVATORI: ${{ vars.TELEGRAM_APPROVATORI }}
+          TELEGRAM_ATTESA_SECONDA: ${{ vars.TELEGRAM_ATTESA_SECONDA }}
         run: python engine/veloce.py controlla --attesa 14
 
   pubblica:

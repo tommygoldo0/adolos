@@ -11,7 +11,9 @@ Regole:
     contiene degli ID utente Telegram (separati da virgola), valgono solo quelli.
   - "Approva" mette Stato = Approvata: la notizia va sul sito e si disegna il carosello.
     NON spunta "Pubblica su Instagram": quello si fa su Notion.
-  - Zona Rossa: il primo clic chiede una conferma ("ho controllato nomi, accuse e fonti").
+  - Zona Rossa: il primo clic chiede una conferma ("ho controllato nomi, accuse e fonti") e servono DUE persone
+    diverse. Se dopo 30 minuti (variabile TELEGRAM_ATTESA_SECONDA) non c'è una seconda persona, la prima può
+    confermare da sola: sulla scheda resta scritto che ha approvato una persona sola.
   - Prima di cambiare lo Stato si ricontrolla la scheda: deve essere ancora da decidere, con Pacchetto pronto,
     Titolo Adolos, Sintesi e Controllo legale diverso da "Da sistemare".
   - Sulla scheda resta scritto chi ha premuto e quando (campo "Motivo del bot").
@@ -209,32 +211,79 @@ def _scheda_per_id(sid):
     return r["results"][0] if r.get("results") else None
 
 
-def _decidi(azione, sid, chi):
-    """Cambia lo Stato della scheda dopo il clic di una persona. Restituisce (riuscito, frase per Telegram)."""
+ATTESA_SECONDA_MIN = 30        # zona rossa: dopo questi minuti senza una seconda persona, la prima può confermare da sola
+_RE_PRIMA = None
+
+
+def _attesa_seconda():
+    try:
+        return max(0, int(redazione._env("TELEGRAM_ATTESA_SECONDA") or ATTESA_SECONDA_MIN))
+    except ValueError:
+        return ATTESA_SECONDA_MIN
+
+
+def _prima_approvazione(nota):
+    """Cerca nella nota della scheda la prima approvazione di zona rossa: (nome, id utente, minuti passati) o None."""
+    global _RE_PRIMA
+    import re
+    if _RE_PRIMA is None:
+        _RE_PRIMA = re.compile(r"Prima approvazione zona rossa: (.+?) \[(\d+)\] (\d{4}-\d\d-\d\dT\d\d:\d\d)")
+    m = None
+    for m in _RE_PRIMA.finditer(nota or ""):
+        pass                               # vale l'ultima
+    if not m:
+        return None
+    quando = datetime.strptime(m.group(3), "%Y-%m-%dT%H:%M").replace(tzinfo=timezone.utc)
+    return m.group(1), m.group(2), (datetime.now(timezone.utc) - quando).total_seconds() / 60
+
+
+def _decidi(azione, sid, chi, uid=""):
+    """Cambia lo Stato della scheda dopo il clic di una persona. Restituisce (esito, frase per Telegram):
+    esito "fatto" = Stato cambiato · "attesa" = zona rossa, registrata la prima approvazione · "no" = niente.
+    Zona rossa: servono due persone diverse. Se dopo ATTESA_SECONDA_MIN minuti non c'è una seconda persona,
+    la prima può confermare da sola (e sulla scheda resta scritto)."""
     lt = redazione._leggi_testo
     pagina = _scheda_per_id(sid)
     if not pagina:
-        return False, "Scheda non trovata su Notion."
+        return "no", "Scheda non trovata su Notion."
     p = pagina["properties"]
     stato = lt(p.get("Stato"))
     if stato not in DA_DECIDERE:
-        return False, f"Già decisa: la scheda è \"{stato}\"."
+        return "no", f"Già decisa: la scheda è \"{stato}\"."
     if azione == "ok":
         if lt(p.get("Pacchetto pronto")) != "si":
-            return False, "Il pacchetto non è più segnato come pronto: guarda la scheda su Notion."
+            return "no", "Il pacchetto non è più segnato come pronto: guarda la scheda su Notion."
         if lt(p.get("Controllo legale")) == "Da sistemare":
-            return False, "Bloccata dal controllo legale: va sistemata su Notion."
+            return "no", "Bloccata dal controllo legale: va sistemata su Notion."
         if not (lt(p.get("Titolo Adolos")) and lt(p.get("Sintesi"))):
-            return False, "Mancano Titolo Adolos o Sintesi: non si può approvare."
+            return "no", "Mancano Titolo Adolos o Sintesi: non si può approvare."
+    firma = chi
+    if azione == "ok" and lt(p.get("Zona")) == "Rossa":
+        prima, attesa = _prima_approvazione(lt(p.get("Motivo del bot"))), _attesa_seconda()
+        if not prima:
+            adesso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M")
+            nota = (lt(p.get("Motivo del bot")) + f"\nPrima approvazione zona rossa: {chi} [{uid}] {adesso}").strip()
+            redazione._notion("PATCH", f"pages/{pagina['id']}", {"properties": {
+                "Motivo del bot": {"rich_text": redazione._testo(nota[-1900:])}}})
+            print(f"Telegram: {sid} zona rossa, prima approvazione registrata: ne serve una seconda")
+            return "attesa", (f"Zona rossa: prima approvazione di {chi}. Serve una seconda persona. "
+                              f"Se tra {attesa} minuti non c'è nessuno, {chi} può confermare da solo.")
+        if str(prima[1]) == str(uid):
+            if prima[2] < attesa:
+                return "no", (f"Hai già approvato: serve un'altra persona. Se non c'è nessuno, "
+                              f"potrai confermare da solo tra {int(attesa - prima[2]) + 1} minuti.")
+            firma = f"{chi} da solo (nessuna seconda persona dopo {attesa} minuti)"
+        else:
+            firma = f"{prima[0]} e {chi}"
     nuovo = "Approvata" if azione == "ok" else "Scartata"
-    nota = (lt(p.get("Motivo del bot")) + f"\n{nuovo} da Telegram da {chi} il {_ora_roma()}.").strip()
+    nota = (lt(p.get("Motivo del bot")) + f"\n{nuovo} da Telegram da {firma} il {_ora_roma()}.").strip()
     redazione._notion("PATCH", f"pages/{pagina['id']}", {"properties": {
         "Stato": {"status": {"name": nuovo}}, "Motivo del bot": {"rich_text": redazione._testo(nota[-1900:])}}})
     titolo = lt(p.get("Titolo Adolos")) or lt(p.get("Titolo"))
     print(f"Telegram: {sid} -> {nuovo} (premuto da una persona nel gruppo)")
     if azione == "ok":
-        return True, f"✅ Approvata da {chi}: «{titolo[:120]}». Sul sito tra pochi minuti. Per Instagram: spunta su Notion."
-    return True, f"🗑 Scartata da {chi}: «{titolo[:120]}»."
+        return "fatto", f"✅ Approvata da {firma}: «{titolo[:100]}». Sul sito tra pochi minuti. Per Instagram: spunta su Notion."
+    return "fatto", f"🗑 Scartata da {chi}: «{titolo[:120]}»."
 
 
 def leggi_risposte():
@@ -274,9 +323,15 @@ def leggi_risposte():
             if azione not in ("ok", "no") or not sid:
                 _tg("answerCallbackQuery", {"callback_query_id": cq["id"], "text": "Pulsante non riconosciuto."})
                 continue
-            riuscito, frase = _decidi(azione, sid, _nome(cq))
-            _tg("answerCallbackQuery", {"callback_query_id": cq["id"], "text": frase[:190], "show_alert": not riuscito})
-            if riuscito:
+            esito, frase = _decidi(azione, sid, _nome(cq), str((cq.get("from") or {}).get("id", "")))
+            _tg("answerCallbackQuery", {"callback_query_id": cq["id"], "text": frase[:190], "show_alert": esito != "fatto"})
+            if esito == "attesa":          # zona rossa: resta il pulsante per la seconda persona
+                extra = [riga for riga in ((msg.get("reply_markup") or {}).get("inline_keyboard") or []) if any("url" in t for t in riga)]
+                _tg("editMessageReplyMarkup", {**dove, "reply_markup": {"inline_keyboard": [
+                    [{"text": "✅ Seconda approvazione", "callback_data": f"ok:{sid}"}, {"text": "🗑 Scarta", "callback_data": f"no:{sid}"}]] + extra}})
+                _tg("sendMessage", {"chat_id": dove["chat_id"], "text": frase, "reply_to_message_id": dove["message_id"],
+                                    "allow_sending_without_reply": True})
+            if esito == "fatto":
                 cambiate += 1
                 _tg("editMessageReplyMarkup", {**dove, "reply_markup": {"inline_keyboard": []}})
                 _tg("sendMessage", {"chat_id": dove["chat_id"], "text": frase, "reply_to_message_id": dove["message_id"],
