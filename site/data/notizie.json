@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-12T20:52:18.342586+00:00",
+ "aggiornato": "2026-11-12T21:07:58.176866+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -134,7 +134,7 @@
  },
  "storie": [],
  "dati": {
-  "articoli_analizzati": 10748,
+  "articoli_analizzati": 10809,
   "storie": 400,
   "paesi_coperti": 46,
   "fonti_diverse": 123,
@@ -142,42 +142,42 @@
    [
     "FR",
     "Francia",
-    1043
+    1045
    ],
    [
     "BR",
     "Brasile",
-    1021
+    1033
    ],
    [
     "AR",
     "Argentina",
-    947
+    995
    ],
    [
     "US",
     "Stati Uniti",
-    943
+    942
    ],
    [
     "DE",
     "Germania",
-    726
+    724
    ],
    [
     "ES",
     "Spagna",
-    652
+    653
    ],
    [
     "IN",
     "India",
-    534
+    537
    ],
    [
     "IT",
     "Italia",
-    532
+    529
    ],
    [
     "GB",
@@ -187,12 +187,12 @@
    [
     "AU",
     "Australia",
-    330
+    331
    ],
    [
     "MX",
     "Messico",
-    319
+    320
    ],
    [
     "NG",
@@ -202,7 +202,7 @@
    [
     "SG",
     "Singapore",
-    307
+    306
    ],
    [
     "AT",
@@ -217,22 +217,22 @@
    [
     "PT",
     "Portogallo",
-    172
+    173
    ],
    [
     "NL",
     "Paesi Bassi",
-    165
+    166
    ],
    [
     "QA",
     "Qatar",
-    160
+    159
    ],
    [
     "ZA",
     "Sudafrica",
-    160
+    159
    ],
    [
     "KR",
@@ -262,37 +262,37 @@
    [
     "IL",
     "Israele",
-    91
+    92
    ]
   ],
   "per_lingua": [
    [
     "en",
-    5576
+    5574
    ],
    [
     "es",
-    1622
+    1672
    ],
    [
     "pt",
-    1193
+    1206
    ],
    [
     "de",
-    942
+    940
    ],
    [
     "fr",
-    757
+    761
    ],
    [
     "it",
-    433
+    430
    ],
    [
     "nl",
-    165
+    166
    ],
    [
     "?",
@@ -306,27 +306,27 @@
   "per_categoria": [
    [
     "Altro",
-    220
+    216
    ],
    [
     "Politica",
-    49
+    52
    ],
    [
     "Esteri e conflitti",
-    40
+    43
    ],
    [
     "Cronaca",
-    39
-   ],
-   [
-    "Sport",
-    17
+    36
    ],
    [
     "Società",
-    14
+    16
+   ],
+   [
+    "Sport",
+    16
    ],
    [
     "Tecnologia e crypto",
@@ -344,113 +344,113 @@
   "fonti_top": [
    [
     "Infobae",
-    464
+    496
    ],
    [
     "G1",
-    370
+    382
    ],
    [
     "El Universal",
-    319
-   ],
-   [
-    "Folha de S.Paulo",
-    298
+    320
    ],
    [
     "La Nación",
-    295
+    301
    ],
    [
     "Globo Esporte",
+    299
+   ],
+   [
+    "Folha de S.Paulo",
     295
    ],
    [
     "L'Équipe",
-    234
+    233
    ],
    [
     "Punch",
-    215
+    217
    ],
    [
     "Times of India",
-    213
+    216
    ],
    [
     "Sky TG24",
-    202
+    199
    ],
    [
     "Fox News",
     179
    ],
    [
-    "ABC Australia",
-    172
+    "Record",
+    173
    ]
   ],
   "per_ora": [
    [
     23,
-    301
+    239
    ],
    [
     22,
-    163
+    182
    ],
    [
     21,
-    195
+    239
    ],
    [
     20,
-    209
+    148
    ],
    [
     19,
-    203
+    227
    ],
    [
     18,
-    221
+    173
    ],
    [
     17,
-    64
+    76
    ],
    [
     16,
-    106
+    128
    ],
    [
     15,
-    169
+    158
    ],
    [
     14,
-    168
+    242
    ],
    [
     13,
-    253
+    197
    ],
    [
     12,
-    224
+    250
    ],
    [
     11,
-    320
+    384
    ],
    [
     10,
-    304
+    184
    ],
    [
     9,
-    134
+    124
    ],
    [
     8,
@@ -458,27 +458,27 @@
    ],
    [
     7,
-    114
+    151
    ],
    [
     6,
-    213
+    196
    ],
    [
     5,
-    183
+    226
    ],
    [
     4,
-    312
+    314
    ],
    [
     3,
-    360
+    416
    ],
    [
     2,
-    503
+    514
    ],
    [
     1,
@@ -486,7 +486,7 @@
    ],
    [
     0,
-    504
+    461
    ]
   ],
   "approvate_non_sul_sito": {
@@ -502,20 +502,16 @@
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
   "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT syria: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:syria&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT sudan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:sudan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT libya: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:libya&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT democraticrepublicofthecongo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:democraticrepublicofthecongo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT angola: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:angola&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT zambia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:zambia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT rwanda: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:rwanda&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT myanmar: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:myanmar&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT cambodia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:cambodia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT laos: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:laos&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT mongolia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:mongolia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT georgia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:georgia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT armenia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:armenia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT azerbaijan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:azerbaijan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT belarus: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:belarus&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
+  "GDELT azerbaijan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:azerbaijan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
