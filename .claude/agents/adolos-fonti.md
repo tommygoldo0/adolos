@@ -27,8 +27,10 @@ e da dove arriva un fatto, con la prova scritta.
    clausole su AI, robot e raccolta automatica.
 3. Scrivi nella riga della testata in `engine/fonti.json`:
    `"livello"`: verde, giallo o arancio · `"termini_url"`: l'indirizzo letto · `"termini_data"`: la data di oggi ·
-   `"termini_nota"`: una riga con parole tue su cosa è permesso · `"termini"`: `ok` se hai letto la pagina
-   ufficiale, `no` se vieta anche il solo link (in quel caso il feed non si legge più).
+   `"termini_nota"`: una riga con parole tue su cosa è permesso · `"termini"`: `letti` se hai letto la pagina
+   ufficiale, `ok` solo se c'è una prova scritta che l'uso è permesso, `no` se vieta anche il solo link (in quel
+   caso il feed non si legge più). Se una clausola sembra vietare anche il conteggio con link, comincia la nota
+   con "ATTENZIONE" e scrivi "da chiedere all'avvocato".
 4. Non riuscire ad aprire la pagina, o non trovare niente sui feed, vuol dire giallo, con la nota "termini non trovati".
 5. Non alzare mai una fonte a verde o arancio senza l'indirizzo della pagina che lo permette.
 

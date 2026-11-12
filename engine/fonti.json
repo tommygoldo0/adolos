@@ -1,2191 +1,4233 @@
 {
-  "_info": "Elenco delle fonti. Puoi aggiungere o togliere righe. 'attivo': false spegne una fonte senza cancellarla.",
-  "_regole_legali": "Adolos legge SOLO feed RSS ufficiali delle testate e l'API aperta di GDELT. Niente pagine web scaricate (scraping), niente Telegram via web, niente Reddit, niente Google News RSS. Per riattivare una di queste fonti serve un permesso o un contratto: cambiate il valore qui sotto solo se lo avete.",
-  "fonti_attive": {
-    "rss_diretti": true,
-    "gdelt": true,
-    "google_news": false,
-    "telegram_web": false,
-    "reddit": false,
-    "_info": "true = la fonte viene letta. google_news, telegram_web e reddit sono spente per rispettare le regole sullo scraping e i termini d'uso."
-  },
-  "gdelt_per_giro": 18,
-  "_info_termini": "Per ogni feed in rss_diretti: 'termini' dice se avete controllato le condizioni d'uso del feed (di solito in fondo al sito, alla voce RSS o Termini). Valori: da_verificare, ok, no. Con 'no' il feed non viene letto.",
-  "google_news_edizioni": [
-    "US:en",
-    "GB:en",
-    "IT:it",
-    "FR:fr",
-    "DE:de",
-    "ES:es",
-    "PT:pt-150",
-    "BR:pt-419",
-    "MX:es-419",
-    "AR:es-419",
-    "CO:es-419",
-    "CL:es-419",
-    "PE:es-419",
-    "VE:es-419",
-    "CU:es-419",
-    "EC:es-419",
-    "UY:es-419",
-    "PY:es-419",
-    "JP:ja",
-    "KR:ko",
-    "CN:zh-Hans",
-    "TW:zh-Hant",
-    "HK:zh-Hant",
-    "IN:en",
-    "IN:hi",
-    "PK:en",
-    "BD:bn",
-    "LK:en",
-    "NP:en",
-    "TH:th",
-    "VN:vi",
-    "ID:id",
-    "MY:en",
-    "PH:en",
-    "SG:en",
-    "AU:en",
-    "NZ:en",
-    "CA:en",
-    "CA:fr",
-    "ZA:en",
-    "NG:en",
-    "KE:en",
-    "GH:en",
-    "UG:en",
-    "TZ:en",
-    "ZW:en",
-    "NA:en",
-    "BW:en",
-    "ET:en",
-    "EG:ar",
-    "SA:ar",
-    "AE:ar",
-    "LB:ar",
-    "QA:ar",
-    "KW:ar",
-    "JO:ar",
-    "IQ:ar",
-    "IR:fa",
-    "IL:he",
-    "TR:tr",
-    "MA:fr",
-    "DZ:fr",
-    "TN:fr",
-    "SN:fr",
-    "CI:fr",
-    "CM:fr",
-    "RU:ru",
-    "UA:uk",
-    "KZ:ru",
-    "PL:pl",
-    "CZ:cs",
-    "SK:sk",
-    "HU:hu",
-    "RO:ro",
-    "BG:bg",
-    "GR:el",
-    "RS:sr",
-    "HR:hr",
-    "SI:sl",
-    "EE:et",
-    "LV:lv",
-    "LT:lt",
-    "NL:nl",
-    "BE:nl",
-    "BE:fr",
-    "CH:de",
-    "AT:de",
-    "SE:sv",
-    "NO:no",
-    "DK:da",
-    "FI:fi",
-    "IE:en"
+ "_info": "Elenco delle fonti. Puoi aggiungere o togliere righe. 'attivo': false spegne una fonte senza cancellarla.",
+ "_regole_legali": "Adolos legge SOLO feed RSS ufficiali delle testate e l'API aperta di GDELT. Niente pagine web scaricate (scraping), niente Telegram via web, niente Reddit, niente Google News RSS. Per riattivare una di queste fonti serve un permesso o un contratto: cambiate il valore qui sotto solo se lo avete.",
+ "fonti_attive": {
+  "rss_diretti": true,
+  "gdelt": true,
+  "google_news": false,
+  "telegram_web": false,
+  "reddit": false,
+  "_info": "true = la fonte viene letta. google_news, telegram_web e reddit sono spente per rispettare le regole sullo scraping e i termini d'uso."
+ },
+ "gdelt_per_giro": 18,
+ "_info_termini": "Per ogni feed in rss_diretti: 'termini' dice se sono state lette le condizioni d'uso UFFICIALI del sito. Valori: da_verificare (non ancora lette), letti (lette: vedi termini_url, termini_data e termini_nota), ok (c'è una prova scritta che l'uso è permesso), no (vietano anche il solo link: il feed non viene letto). 'livello': giallo (solo nome, paese, data e link), verde (si può riscrivere con il link alla fonte), arancio (accordo scritto per feed o riassunti). Ogni fonte entra gialla e sale solo con una prova scritta.",
+ "google_news_edizioni": [
+  "US:en",
+  "GB:en",
+  "IT:it",
+  "FR:fr",
+  "DE:de",
+  "ES:es",
+  "PT:pt-150",
+  "BR:pt-419",
+  "MX:es-419",
+  "AR:es-419",
+  "CO:es-419",
+  "CL:es-419",
+  "PE:es-419",
+  "VE:es-419",
+  "CU:es-419",
+  "EC:es-419",
+  "UY:es-419",
+  "PY:es-419",
+  "JP:ja",
+  "KR:ko",
+  "CN:zh-Hans",
+  "TW:zh-Hant",
+  "HK:zh-Hant",
+  "IN:en",
+  "IN:hi",
+  "PK:en",
+  "BD:bn",
+  "LK:en",
+  "NP:en",
+  "TH:th",
+  "VN:vi",
+  "ID:id",
+  "MY:en",
+  "PH:en",
+  "SG:en",
+  "AU:en",
+  "NZ:en",
+  "CA:en",
+  "CA:fr",
+  "ZA:en",
+  "NG:en",
+  "KE:en",
+  "GH:en",
+  "UG:en",
+  "TZ:en",
+  "ZW:en",
+  "NA:en",
+  "BW:en",
+  "ET:en",
+  "EG:ar",
+  "SA:ar",
+  "AE:ar",
+  "LB:ar",
+  "QA:ar",
+  "KW:ar",
+  "JO:ar",
+  "IQ:ar",
+  "IR:fa",
+  "IL:he",
+  "TR:tr",
+  "MA:fr",
+  "DZ:fr",
+  "TN:fr",
+  "SN:fr",
+  "CI:fr",
+  "CM:fr",
+  "RU:ru",
+  "UA:uk",
+  "KZ:ru",
+  "PL:pl",
+  "CZ:cs",
+  "SK:sk",
+  "HU:hu",
+  "RO:ro",
+  "BG:bg",
+  "GR:el",
+  "RS:sr",
+  "HR:hr",
+  "SI:sl",
+  "EE:et",
+  "LV:lv",
+  "LT:lt",
+  "NL:nl",
+  "BE:nl",
+  "BE:fr",
+  "CH:de",
+  "AT:de",
+  "SE:sv",
+  "NO:no",
+  "DK:da",
+  "FI:fi",
+  "IE:en"
+ ],
+ "gdelt_paesi": [
+  [
+   "afghanistan",
+   "AF"
   ],
-  "gdelt_paesi": [
-    [
-      "afghanistan",
-      "AF"
-    ],
-    [
-      "syria",
-      "SY"
-    ],
-    [
-      "yemen",
-      "YE"
-    ],
-    [
-      "sudan",
-      "SD"
-    ],
-    [
-      "libya",
-      "LY"
-    ],
-    [
-      "democraticrepublicofthecongo",
-      "CD"
-    ],
-    [
-      "angola",
-      "AO"
-    ],
-    [
-      "mozambique",
-      "MZ"
-    ],
-    [
-      "zambia",
-      "ZM"
-    ],
-    [
-      "rwanda",
-      "RW"
-    ],
-    [
-      "myanmar",
-      "MM"
-    ],
-    [
-      "cambodia",
-      "KH"
-    ],
-    [
-      "laos",
-      "LA"
-    ],
-    [
-      "mongolia",
-      "MN"
-    ],
-    [
-      "georgia",
-      "GE"
-    ],
-    [
-      "armenia",
-      "AM"
-    ],
-    [
-      "azerbaijan",
-      "AZ"
-    ],
-    [
-      "belarus",
-      "BY"
-    ],
-    [
-      "moldova",
-      "MD"
-    ],
-    [
-      "albania",
-      "AL"
-    ],
-    [
-      "bosniaandherzegovina",
-      "BA"
-    ],
-    [
-      "macedonia",
-      "MK"
-    ],
-    [
-      "montenegro",
-      "ME"
-    ],
-    [
-      "kosovo",
-      "XK"
-    ],
-    [
-      "iceland",
-      "IS"
-    ],
-    [
-      "cyprus",
-      "CY"
-    ],
-    [
-      "malta",
-      "MT"
-    ],
-    [
-      "luxembourg",
-      "LU"
-    ],
-    [
-      "haiti",
-      "HT"
-    ],
-    [
-      "dominicanrepublic",
-      "DO"
-    ],
-    [
-      "guatemala",
-      "GT"
-    ],
-    [
-      "honduras",
-      "HN"
-    ],
-    [
-      "panama",
-      "PA"
-    ],
-    [
-      "costarica",
-      "CR"
-    ],
-    [
-      "jamaica",
-      "JM"
-    ],
-    [
-      "bolivia",
-      "BO"
-    ]
+  [
+   "syria",
+   "SY"
   ],
-  "rss_diretti": [
-    {
-      "nome": "BBC News",
-      "paese": "GB",
-      "continente": "Europa",
-      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
-      "tipo": "servizio pubblico",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "The Guardian",
-      "paese": "GB",
-      "continente": "Europa",
-      "url": "https://www.theguardian.com/world/rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Le Monde",
-      "paese": "FR",
-      "continente": "Europa",
-      "url": "https://www.lemonde.fr/rss/une.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Le Figaro",
-      "paese": "FR",
-      "continente": "Europa",
-      "url": "https://www.lefigaro.fr/rss/figaro_actualites.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "France 24",
-      "paese": "FR",
-      "continente": "Europa",
-      "url": "https://www.france24.com/en/rss",
-      "tipo": "servizio pubblico",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Der Spiegel",
-      "paese": "DE",
-      "continente": "Europa",
-      "url": "https://www.spiegel.de/schlagzeilen/index.rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Tagesschau",
-      "paese": "DE",
-      "continente": "Europa",
-      "url": "https://www.tagesschau.de/xml/rss2/",
-      "tipo": "servizio pubblico",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Deutsche Welle",
-      "paese": "DE",
-      "continente": "Europa",
-      "url": "https://rss.dw.com/rdf/rss-en-all",
-      "tipo": "servizio pubblico",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "El País",
-      "paese": "ES",
-      "continente": "Europa",
-      "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "El Mundo",
-      "paese": "ES",
-      "continente": "Europa",
-      "url": "https://e00-elmundo.uecdn.es/elmundo/rss/portada.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "ANSA",
-      "paese": "IT",
-      "continente": "Europa",
-      "url": "https://www.ansa.it/sito/ansait_rss.xml",
-      "tipo": "agenzia",
-      "attivo": true,
-      "termini": "da_verificare",
-      "_motivo": "Condizioni ANSA (27/09/2021, punti 1.1 e 3.2): consultazione solo per uso personale, vietata la riproduzione. Scelta della redazione: usarla SOLO per contare e linkare (nessun titolo o testo mostrato, nulla passato all'AI). Rischio residuo: uso automatico del feed. Da chiedere all'avvocato o ad ANSA; per spegnerla: termini = no.",
-      "uso": "conta_e_link"
-    },
-    {
-      "nome": "Corriere della Sera",
-      "paese": "IT",
-      "continente": "Europa",
-      "url": "https://xml2.corriereobjects.it/rss/homepage.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "uso": "conta_e_link"
-    },
-    {
-      "nome": "la Repubblica",
-      "paese": "IT",
-      "continente": "Europa",
-      "url": "https://www.repubblica.it/rss/homepage/rss2.0.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "uso": "conta_e_link"
-    },
-    {
-      "nome": "Il Post",
-      "paese": "IT",
-      "continente": "Europa",
-      "url": "https://www.ilpost.it/feed/",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "uso": "conta_e_link",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "NOS",
-      "paese": "NL",
-      "continente": "Europa",
-      "url": "https://feeds.nos.nl/nosnieuwsalgemeen",
-      "tipo": "servizio pubblico",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "RTÉ",
-      "paese": "IE",
-      "continente": "Europa",
-      "url": "https://www.rte.ie/feeds/rss/?index=/news/",
-      "tipo": "servizio pubblico",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Euronews",
-      "paese": "FR",
-      "continente": "Europa",
-      "url": "https://www.euronews.com/rss?format=mrss&level=theme&name=news",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Politico Europe",
-      "paese": "BE",
-      "continente": "Europa",
-      "url": "https://www.politico.eu/feed/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Kyiv Independent",
-      "paese": "UA",
-      "continente": "Europa",
-      "url": "https://kyivindependent.com/rss/",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "Meduza",
-      "paese": "LV",
-      "continente": "Europa",
-      "url": "https://meduza.io/rss/en/all",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Notes from Poland",
-      "paese": "PL",
-      "continente": "Europa",
-      "url": "https://notesfrompoland.com/feed/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "The New York Times",
-      "paese": "US",
-      "continente": "Nord America",
-      "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "The Washington Post",
-      "paese": "US",
-      "continente": "Nord America",
-      "url": "https://feeds.washingtonpost.com/rss/world",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "NPR",
-      "paese": "US",
-      "continente": "Nord America",
-      "url": "https://feeds.npr.org/1001/rss.xml",
-      "tipo": "servizio pubblico",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "CBS News",
-      "paese": "US",
-      "continente": "Nord America",
-      "url": "https://www.cbsnews.com/latest/rss/main",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "ABC News",
-      "paese": "US",
-      "continente": "Nord America",
-      "url": "https://feeds.abcnews.com/abcnews/topstories",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Fox News",
-      "paese": "US",
-      "continente": "Nord America",
-      "url": "https://moxie.foxnews.com/google-publisher/latest.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Politico",
-      "paese": "US",
-      "continente": "Nord America",
-      "url": "https://rss.politico.com/politics-news.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "CBC News",
-      "paese": "CA",
-      "continente": "Nord America",
-      "url": "https://www.cbc.ca/webfeed/rss/rss-topstories",
-      "tipo": "servizio pubblico",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Folha de S.Paulo",
-      "paese": "BR",
-      "continente": "Sud America",
-      "url": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "G1",
-      "paese": "BR",
-      "continente": "Sud America",
-      "url": "https://g1.globo.com/rss/g1/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Clarín",
-      "paese": "AR",
-      "continente": "Sud America",
-      "url": "https://www.clarin.com/rss/lo-ultimo/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "La Nación",
-      "paese": "AR",
-      "continente": "Sud America",
-      "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "La Tercera",
-      "paese": "CL",
-      "continente": "Sud America",
-      "url": "https://www.latercera.com/arc/outboundfeeds/rss/",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "El Comercio",
-      "paese": "PE",
-      "continente": "Sud America",
-      "url": "https://elcomercio.pe/arc/outboundfeeds/rss/",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "MercoPress",
-      "paese": "UY",
-      "continente": "Sud America",
-      "url": "https://en.mercopress.com/rss/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Al Jazeera",
-      "paese": "QA",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.aljazeera.com/xml/rss/all.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Times of Israel",
-      "paese": "IL",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.timesofisrael.com/feed/",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "The Hindu",
-      "paese": "IN",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.thehindu.com/news/international/feeder/default.rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Times of India",
-      "paese": "IN",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Dawn",
-      "paese": "PK",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.dawn.com/feeds/home",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "South China Morning Post",
-      "paese": "HK",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.scmp.com/rss/91/feed",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "The Japan Times",
-      "paese": "JP",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.japantimes.co.jp/feed/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "NHK",
-      "paese": "JP",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www3.nhk.or.jp/rss/news/cat0.xml",
-      "tipo": "servizio pubblico",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Yonhap",
-      "paese": "KR",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://en.yna.co.kr/RSS/news.xml",
-      "tipo": "agenzia",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "The Straits Times",
-      "paese": "SG",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.straitstimes.com/news/world/rss.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "CNA",
-      "paese": "SG",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Bangkok Post",
-      "paese": "TH",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.bangkokpost.com/rss/data/topstories.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "VnExpress International",
-      "paese": "VN",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://e.vnexpress.net/rss/news.rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Rappler",
-      "paese": "PH",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.rappler.com/feed/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "ABC Australia",
-      "paese": "AU",
-      "continente": "Oceania",
-      "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
-      "tipo": "servizio pubblico",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Sydney Morning Herald",
-      "paese": "AU",
-      "continente": "Oceania",
-      "url": "https://www.smh.com.au/rss/feed.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "The Guardian Australia",
-      "paese": "AU",
-      "continente": "Oceania",
-      "url": "https://www.theguardian.com/australia-news/rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "RNZ",
-      "paese": "NZ",
-      "continente": "Oceania",
-      "url": "https://www.rnz.co.nz/rss/world.xml",
-      "tipo": "servizio pubblico",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "RNZ Pacific",
-      "paese": "NZ",
-      "continente": "Oceania",
-      "url": "https://www.rnz.co.nz/rss/pacific.xml",
-      "tipo": "servizio pubblico",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "AllAfrica",
-      "paese": "ZA",
-      "continente": "Africa",
-      "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Africanews",
-      "paese": "CG",
-      "continente": "Africa",
-      "url": "https://www.africanews.com/feed/rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "News24",
-      "paese": "ZA",
-      "continente": "Africa",
-      "url": "https://feeds.news24.com/articles/news24/TopStories/rss",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "Daily Maverick",
-      "paese": "ZA",
-      "continente": "Africa",
-      "url": "https://www.dailymaverick.co.za/dmrss/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Mail & Guardian",
-      "paese": "ZA",
-      "continente": "Africa",
-      "url": "https://mg.co.za/feed/",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "Premium Times",
-      "paese": "NG",
-      "continente": "Africa",
-      "url": "https://www.premiumtimesng.com/feed",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Punch",
-      "paese": "NG",
-      "continente": "Africa",
-      "url": "https://punchng.com/feed/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Morocco World News",
-      "paese": "MA",
-      "continente": "Africa",
-      "url": "https://www.moroccoworldnews.com/feed/",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "UN News",
-      "paese": "WEB",
-      "continente": "Internazionale",
-      "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
-      "tipo": "istituzione",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "UPI Odd News",
-      "paese": "US",
-      "continente": "Americhe",
-      "url": "https://rss.upi.com/news/odd_news.rss",
-      "tipo": "giornale",
-      "sezione": "Curiosità",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Oddity Central",
-      "paese": "WEB",
-      "continente": "Web",
-      "url": "https://www.odditycentral.com/feed",
-      "tipo": "giornale",
-      "sezione": "Curiosità",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "The Verge",
-      "paese": "US",
-      "continente": "Americhe",
-      "url": "https://www.theverge.com/rss/index.xml",
-      "tipo": "giornale",
-      "sezione": "Tecnologia",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Ars Technica",
-      "paese": "US",
-      "continente": "Americhe",
-      "url": "https://feeds.arstechnica.com/arstechnica/index",
-      "tipo": "giornale",
-      "sezione": "Tecnologia",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "TechCrunch",
-      "paese": "US",
-      "continente": "Americhe",
-      "url": "https://techcrunch.com/feed/",
-      "tipo": "giornale",
-      "sezione": "Tecnologia",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Hacker News (prima pagina)",
-      "paese": "WEB",
-      "continente": "Web",
-      "url": "https://hnrss.org/frontpage",
-      "tipo": "giornale",
-      "sezione": "Tecnologia",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "HDblog",
-      "paese": "IT",
-      "continente": "Europa",
-      "url": "https://www.hdblog.it/feed/",
-      "tipo": "giornale",
-      "sezione": "Tecnologia",
-      "attivo": true,
-      "termini": "da_verificare",
-      "uso": "conta_e_link"
-    },
-    {
-      "nome": "Wired Italia",
-      "paese": "IT",
-      "continente": "Europa",
-      "url": "https://www.wired.it/feed/rss",
-      "tipo": "giornale",
-      "sezione": "Tecnologia",
-      "attivo": true,
-      "termini": "da_verificare",
-      "uso": "conta_e_link"
-    },
-    {
-      "nome": "Space.com",
-      "paese": "US",
-      "continente": "Americhe",
-      "url": "https://www.space.com/feeds/all",
-      "tipo": "giornale",
-      "sezione": "Tecnologia",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "CoinDesk",
-      "paese": "US",
-      "continente": "Americhe",
-      "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
-      "tipo": "giornale",
-      "sezione": "Economia",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "BBC Sport",
-      "paese": "GB",
-      "continente": "Europa",
-      "url": "https://feeds.bbci.co.uk/sport/rss.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "sezione": "Sport"
-    },
-    {
-      "nome": "The Guardian Sport",
-      "paese": "GB",
-      "continente": "Europa",
-      "url": "https://www.theguardian.com/sport/rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "sezione": "Sport"
-    },
-    {
-      "nome": "ESPN",
-      "paese": "US",
-      "continente": "Americhe",
-      "url": "https://www.espn.com/espn/rss/news",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "sezione": "Sport"
-    },
-    {
-      "nome": "Sky Sports",
-      "paese": "GB",
-      "continente": "Europa",
-      "url": "https://www.skysports.com/rss/12040",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "sezione": "Sport"
-    },
-    {
-      "nome": "L'Équipe",
-      "paese": "FR",
-      "continente": "Europa",
-      "url": "https://dwh.lequipe.fr/api/edito/rss?path=/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "sezione": "Sport"
-    },
-    {
-      "nome": "Marca",
-      "paese": "ES",
-      "continente": "Europa",
-      "url": "https://e00-marca.uecdn.es/rss/portada.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "sezione": "Sport"
-    },
-    {
-      "nome": "AS",
-      "paese": "ES",
-      "continente": "Europa",
-      "url": "https://as.com/rss/tags/ultimas_noticias.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "sezione": "Sport"
-    },
-    {
-      "nome": "Mundo Deportivo",
-      "paese": "ES",
-      "continente": "Europa",
-      "url": "https://www.mundodeportivo.com/rss/home.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "sezione": "Sport"
-    },
-    {
-      "nome": "Kicker",
-      "paese": "DE",
-      "continente": "Europa",
-      "url": "https://newsfeed.kicker.de/news/aktuell",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "sezione": "Sport"
-    },
-    {
-      "nome": "Record",
-      "paese": "PT",
-      "continente": "Europa",
-      "url": "https://www.record.pt/rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "sezione": "Sport"
-    },
-    {
-      "nome": "Olé",
-      "paese": "AR",
-      "continente": "Americhe",
-      "url": "https://www.ole.com.ar/rss/ultimas-noticias/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "sezione": "Sport"
-    },
-    {
-      "nome": "Globo Esporte",
-      "paese": "BR",
-      "continente": "Americhe",
-      "url": "https://ge.globo.com/rss/ge/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "sezione": "Sport"
-    },
-    {
-      "nome": "Sky News",
-      "paese": "GB",
-      "continente": "Europa",
-      "url": "https://feeds.skynews.com/feeds/rss/world.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "The Independent",
-      "paese": "GB",
-      "continente": "Europa",
-      "url": "https://www.independent.co.uk/news/world/rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "The Irish Times",
-      "paese": "IE",
-      "continente": "Europa",
-      "url": "https://www.irishtimes.com/arc/outboundfeeds/feed-irish-news/?outputType=xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "France Info",
-      "paese": "FR",
-      "continente": "Europa",
-      "url": "https://www.francetvinfo.fr/titres.rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "RFI",
-      "paese": "FR",
-      "continente": "Europa",
-      "url": "https://www.rfi.fr/fr/rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Libération",
-      "paese": "FR",
-      "continente": "Europa",
-      "url": "https://www.liberation.fr/arc/outboundfeeds/rss-all/?outputType=xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Ouest-France",
-      "paese": "FR",
-      "continente": "Europa",
-      "url": "https://www.ouest-france.fr/rss/une",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Süddeutsche Zeitung",
-      "paese": "DE",
-      "continente": "Europa",
-      "url": "https://rss.sueddeutsche.de/rss/Topthemen",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Die Zeit",
-      "paese": "DE",
-      "continente": "Europa",
-      "url": "https://newsfeed.zeit.de/index",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "FAZ",
-      "paese": "DE",
-      "continente": "Europa",
-      "url": "https://www.faz.net/rss/aktuell/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Der Standard",
-      "paese": "AT",
-      "continente": "Europa",
-      "url": "https://www.derstandard.at/rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "ORF",
-      "paese": "AT",
-      "continente": "Europa",
-      "url": "https://rss.orf.at/news.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "NZZ",
-      "paese": "CH",
-      "continente": "Europa",
-      "url": "https://www.nzz.ch/recent.rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Swissinfo",
-      "paese": "CH",
-      "continente": "Europa",
-      "url": "https://www.swissinfo.ch/eng/rss/latest-news",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "El Confidencial",
-      "paese": "ES",
-      "continente": "Europa",
-      "url": "https://rss.elconfidencial.com/espana/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "La Vanguardia",
-      "paese": "ES",
-      "continente": "Europa",
-      "url": "https://www.lavanguardia.com/rss/home.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Público",
-      "paese": "PT",
-      "continente": "Europa",
-      "url": "https://www.publico.pt/rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Expresso",
-      "paese": "PT",
-      "continente": "Europa",
-      "url": "https://expresso.pt/rss",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "Kathimerini",
-      "paese": "GR",
-      "continente": "Europa",
-      "url": "https://www.ekathimerini.com/rss",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "Hürriyet Daily News",
-      "paese": "TR",
-      "continente": "Europa",
-      "url": "https://www.hurriyetdailynews.com/rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Kyiv Post",
-      "paese": "UA",
-      "continente": "Europa",
-      "url": "https://www.kyivpost.com/feed",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "de Volkskrant",
-      "paese": "NL",
-      "continente": "Europa",
-      "url": "https://www.volkskrant.nl/voorpagina/rss.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Le Soir",
-      "paese": "BE",
-      "continente": "Europa",
-      "url": "https://www.lesoir.be/rss/81853/cible_principale_gratuit",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "USA Today",
-      "paese": "US",
-      "continente": "Americhe",
-      "url": "https://rssfeeds.usatoday.com/usatoday-NewsTopStories",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "Los Angeles Times",
-      "paese": "US",
-      "continente": "Americhe",
-      "url": "https://www.latimes.com/world-nation/rss2.0.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "The Hill",
-      "paese": "US",
-      "continente": "Americhe",
-      "url": "https://thehill.com/feed/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Axios",
-      "paese": "US",
-      "continente": "Americhe",
-      "url": "https://api.axios.com/feed/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "CNBC",
-      "paese": "US",
-      "continente": "Americhe",
-      "url": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "NBC News",
-      "paese": "US",
-      "continente": "Americhe",
-      "url": "https://feeds.nbcnews.com/nbcnews/public/news",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "The Globe and Mail",
-      "paese": "CA",
-      "continente": "Americhe",
-      "url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/world/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "El Universal",
-      "paese": "MX",
-      "continente": "Americhe",
-      "url": "https://www.eluniversal.com.mx/arc/outboundfeeds/rss/?outputType=xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Milenio",
-      "paese": "MX",
-      "continente": "Americhe",
-      "url": "https://www.milenio.com/rss",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "El Tiempo",
-      "paese": "CO",
-      "continente": "Americhe",
-      "url": "https://www.eltiempo.com/rss/mundo.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Infobae",
-      "paese": "AR",
-      "continente": "Americhe",
-      "url": "https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Estadão",
-      "paese": "BR",
-      "continente": "Americhe",
-      "url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/internacional/",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Hindustan Times",
-      "paese": "IN",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.hindustantimes.com/feeds/rss/world-news/rssfeed.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "NDTV",
-      "paese": "IN",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://feeds.feedburner.com/ndtvnews-world-news",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "The Indian Express",
-      "paese": "IN",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://indianexpress.com/section/world/feed/",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "Kyodo News",
-      "paese": "JP",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://english.kyodonews.net/rss/all.xml",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "The Korea Herald",
-      "paese": "KR",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.koreaherald.com/rss/020000000000.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Focus Taiwan",
-      "paese": "TW",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://focustaiwan.tw/rss/aall.xml",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "Taipei Times",
-      "paese": "TW",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.taipeitimes.com/xml/index.rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "The Jakarta Post",
-      "paese": "ID",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.thejakartapost.com/rss",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "Inquirer",
-      "paese": "PH",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.inquirer.net/fullfeed",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Arab News",
-      "paese": "SA",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.arabnews.com/rss.xml",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "The National",
-      "paese": "AE",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Gulf News",
-      "paese": "AE",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://gulfnews.com/feeds/rss/world",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "The Jerusalem Post",
-      "paese": "IL",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.jpost.com/rss/rssfeedsfrontpage.aspx",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "Haaretz",
-      "paese": "IL",
-      "continente": "Asia e Medio Oriente",
-      "url": "https://www.haaretz.com/srv/haaretz-latest-headlines",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "Ahram Online",
-      "paese": "EG",
-      "continente": "Africa",
-      "url": "https://english.ahram.org.eg/rss.ashx",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "Nation Africa",
-      "paese": "KE",
-      "continente": "Africa",
-      "url": "https://nation.africa/kenya/rss.xml",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "The East African",
-      "paese": "KE",
-      "continente": "Africa",
-      "url": "https://www.theeastafrican.co.ke/rss.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare"
-    },
-    {
-      "nome": "GhanaWeb",
-      "paese": "GH",
-      "continente": "Africa",
-      "url": "https://www.ghanaweb.com/GhanaHomePage/NewsArchive/rss.xml",
-      "tipo": "giornale",
-      "attivo": false,
-      "termini": "da_verificare",
-      "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto"
-    },
-    {
-      "nome": "Gazzetta dello Sport",
-      "paese": "IT",
-      "continente": "Europa",
-      "url": "https://www.gazzetta.it/rss/home.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "uso": "conta_e_link"
-    },
-    {
-      "nome": "Corriere dello Sport",
-      "paese": "IT",
-      "continente": "Europa",
-      "url": "https://www.corrieredellosport.it/rss",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "uso": "conta_e_link"
-    },
-    {
-      "nome": "Sky TG24",
-      "paese": "IT",
-      "continente": "Europa",
-      "url": "https://tg24.sky.it/rss/tg24.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "uso": "conta_e_link"
-    },
-    {
-      "nome": "Il Sole 24 Ore",
-      "paese": "IT",
-      "continente": "Europa",
-      "url": "https://www.ilsole24ore.com/rss/mondo.xml",
-      "tipo": "giornale",
-      "attivo": true,
-      "termini": "da_verificare",
-      "uso": "conta_e_link"
-    }
+  [
+   "yemen",
+   "YE"
   ],
-  "reddit": [
-    {
-      "sub": "worldnews",
-      "attivo": true
-    },
-    {
-      "sub": "europe",
-      "attivo": true
-    },
-    {
-      "sub": "italy",
-      "attivo": true
-    },
-    {
-      "sub": "nottheonion",
-      "attivo": true,
-      "curiosita": true
-    },
-    {
-      "sub": "Damnthatsinteresting",
-      "attivo": true,
-      "curiosita": true
-    },
-    {
-      "sub": "UpliftingNews",
-      "attivo": true,
-      "curiosita": true
-    }
+  [
+   "sudan",
+   "SD"
   ],
-  "telegram": [
-    {
-      "canale": "repubblica",
-      "nome": "la Repubblica",
-      "paese": "IT",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "corrieredellasera",
-      "nome": "Corriere della Sera",
-      "paese": "IT",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "tgcom24",
-      "nome": "Tgcom24",
-      "paese": "IT",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "pagellapolitica",
-      "nome": "Pagella Politica",
-      "paese": "IT",
-      "affidabilita": "ufficiale",
-      "nota": "fact-checking",
-      "attivo": true
-    },
-    {
-      "canale": "limesonline",
-      "nome": "Limes",
-      "paese": "IT",
-      "affidabilita": "ufficiale",
-      "nota": "geopolitica, feed del sito",
-      "attivo": true
-    },
-    {
-      "canale": "adnkronos",
-      "nome": "Adnkronos (feed)",
-      "paese": "IT",
-      "affidabilita": "ufficiale",
-      "nota": "feed RSS non ufficiale ma fedele",
-      "attivo": true
-    },
-    {
-      "canale": "ansanews",
-      "nome": "ANSA (feed)",
-      "paese": "IT",
-      "affidabilita": "ufficiale",
-      "nota": "feed non ufficiale",
-      "attivo": true
-    },
-    {
-      "canale": "ultimora",
-      "nome": "Ultimora.net",
-      "paese": "IT",
-      "affidabilita": "aggregatore",
-      "nota": "velocissimo, da verificare",
-      "attivo": true
-    },
-    {
-      "canale": "AJENews_Official",
-      "nome": "Al Jazeera English",
-      "paese": "QA",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "guardian",
-      "nome": "The Guardian",
-      "paese": "GB",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "france24_en",
-      "nome": "France 24 English",
-      "paese": "FR",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "bloomberg",
-      "nome": "Bloomberg",
-      "paese": "US",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "bbcworld",
-      "nome": "BBC News World",
-      "paese": "GB",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "elpais",
-      "nome": "El País",
-      "paese": "ES",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "clarincom",
-      "nome": "Clarín",
-      "paese": "AR",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "cnnbrasil",
-      "nome": "CNN Brasil",
-      "paese": "BR",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "animalpolitico",
-      "nome": "Animal Político",
-      "paese": "MX",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "nhkworld",
-      "nome": "NHK World",
-      "paese": "JP",
-      "affidabilita": "ufficiale",
-      "nota": "feed non ufficiale",
-      "attivo": true
-    },
-    {
-      "canale": "kyivindependent_official",
-      "nome": "The Kyiv Independent",
-      "paese": "UA",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "suspilnenews",
-      "nome": "Suspilne (servizio pubblico ucraino)",
-      "paese": "UA",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "bbcrussian",
-      "nome": "BBC Russian",
-      "paese": "GB",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "meduzalive",
-      "nome": "Meduza",
-      "paese": "LV",
-      "affidabilita": "ufficiale",
-      "nota": "media russo indipendente in esilio",
-      "attivo": true
-    },
-    {
-      "canale": "currenttime",
-      "nome": "Current Time (RFE/RL)",
-      "paese": "CZ",
-      "affidabilita": "ufficiale",
-      "nota": "",
-      "attivo": true
-    },
-    {
-      "canale": "trtworld",
-      "nome": "TRT World",
-      "paese": "TR",
-      "affidabilita": "di parte",
-      "nota": "TV di Stato turca",
-      "attivo": true
-    },
-    {
-      "canale": "alarabiya",
-      "nome": "Al Arabiya",
-      "paese": "SA",
-      "affidabilita": "di parte",
-      "nota": "proprietà saudita",
-      "attivo": true
-    },
-    {
-      "canale": "tass_agency",
-      "nome": "TASS",
-      "paese": "RU",
-      "affidabilita": "di parte",
-      "nota": "agenzia di Stato russa: solo come versione di Mosca",
-      "attivo": true
-    },
-    {
-      "canale": "V_Zelenskiy_official",
-      "nome": "Zelensky (canale ufficiale)",
-      "paese": "UA",
-      "affidabilita": "di parte",
-      "nota": "fonte primaria di parte",
-      "attivo": true
-    },
-    {
-      "canale": "idfofficial",
-      "nome": "Esercito israeliano (IDF)",
-      "paese": "IL",
-      "affidabilita": "di parte",
-      "nota": "fonte primaria di parte",
-      "attivo": true
-    },
-    {
-      "canale": "insiderpaper",
-      "nome": "Insider Paper",
-      "paese": "US",
-      "affidabilita": "aggregatore",
-      "nota": "breaking veloce, da verificare",
-      "attivo": true
-    },
-    {
-      "canale": "WatcherGuru",
-      "nome": "Watcher Guru",
-      "paese": "US",
-      "affidabilita": "aggregatore",
-      "nota": "crypto e finanza, spesso esagera",
-      "attivo": true
-    },
-    {
-      "canale": "cointelegraph",
-      "nome": "Cointelegraph",
-      "paese": "US",
-      "affidabilita": "aggregatore",
-      "nota": "crypto",
-      "attivo": true
-    },
-    {
-      "canale": "whale_alert_io",
-      "nome": "Whale Alert",
-      "paese": "WEB",
-      "affidabilita": "aggregatore",
-      "nota": "movimenti crypto, dati automatici",
-      "attivo": true
-    },
-    {
-      "canale": "FabrizioRomano",
-      "nome": "Fabrizio Romano",
-      "paese": "IT",
-      "affidabilita": "aggregatore",
-      "nota": "calciomercato",
-      "attivo": true
-    }
+  [
+   "libya",
+   "LY"
   ],
-  "agenzie_affidabili": [
-    "abc australia",
-    "adnkronos",
-    "afp",
-    "agence france-presse",
-    "agi",
-    "ansa",
-    "ap news",
-    "associated press",
-    "bbc",
-    "cbc",
-    "deutsche welle",
-    "dpa",
-    "efe",
-    "el país",
-    "kyodo",
-    "le monde",
-    "nhk",
-    "nos",
-    "npr",
-    "rainews",
-    "reuters",
-    "rnz",
-    "rte",
-    "sky tg24",
-    "tagesschau",
-    "the guardian",
-    "the new york times",
-    "the washington post",
-    "yonhap"
+  [
+   "democraticrepublicofthecongo",
+   "CD"
   ],
-  "bot": {
-    "_info": "Regole del bot della redazione. Calore da 0 a 100. Cambia i numeri per avere più o meno proposte.",
-    "post_calore": 62,
-    "post_paesi": 3,
-    "post_italia_calore": 50,
-    "post_italia_fonti": 4,
-    "storia_calore": 42,
-    "verifica_calore": 30,
-    "max_post_al_giro": 3,
-    "max_storie_al_giro": 6
-  },
-  "google_news_argomenti": [
-    {
-      "edizione": "IT:it",
-      "argomenti": [
-        "TECHNOLOGY",
-        "SCIENCE",
-        "SPORTS",
-        "BUSINESS"
-      ]
-    },
-    {
-      "edizione": "US:en-US",
-      "argomenti": [
-        "TECHNOLOGY",
-        "SCIENCE",
-        "SPORTS",
-        "BUSINESS"
-      ]
-    },
-    {
-      "edizione": "GB:en-GB",
-      "argomenti": [
-        "TECHNOLOGY",
-        "SCIENCE",
-        "SPORTS"
-      ]
-    },
-    {
-      "edizione": "FR:fr",
-      "argomenti": [
-        "TECHNOLOGY",
-        "SCIENCE"
-      ]
-    },
-    {
-      "edizione": "DE:de",
-      "argomenti": [
-        "TECHNOLOGY",
-        "SCIENCE"
-      ]
-    },
-    {
-      "edizione": "ES:es",
-      "argomenti": [
-        "TECHNOLOGY",
-        "SCIENCE"
-      ]
-    },
-    {
-      "edizione": "JP:ja",
-      "argomenti": [
-        "TECHNOLOGY",
-        "SCIENCE"
-      ]
-    },
-    {
-      "edizione": "KR:ko",
-      "argomenti": [
-        "TECHNOLOGY"
-      ]
-    },
-    {
-      "edizione": "IN:en-IN",
-      "argomenti": [
-        "TECHNOLOGY",
-        "SCIENCE"
-      ]
-    },
-    {
-      "edizione": "BR:pt-419",
-      "argomenti": [
-        "TECHNOLOGY",
-        "SPORTS"
-      ]
-    }
+  [
+   "angola",
+   "AO"
   ],
-  "google_news_ricerche": [
-    {
-      "edizione": "IT:it",
-      "sezione": "Curiosità",
-      "q": "curiosità OR incredibile OR bizzarro OR virale OR insolito when:1d"
-    },
-    {
-      "edizione": "US:en-US",
-      "sezione": "Curiosità",
-      "q": "bizarre OR weird OR \"goes viral\" OR \"world record\" OR odd when:1d"
-    },
-    {
-      "edizione": "GB:en-GB",
-      "sezione": "Curiosità",
-      "q": "bizarre OR weird OR \"world record\" OR quirky when:1d"
-    },
-    {
-      "edizione": "ES:es",
-      "sezione": "Curiosità",
-      "q": "insólito OR curioso OR récord when:1d"
-    },
-    {
-      "edizione": "FR:fr",
-      "sezione": "Curiosità",
-      "q": "insolite OR incroyable OR record when:1d"
-    },
-    {
-      "edizione": "DE:de",
-      "sezione": "Curiosità",
-      "q": "kurios OR skurril OR Rekord when:1d"
-    },
-    {
-      "edizione": "JP:ja",
-      "sezione": "Curiosità",
-      "q": "珍しい OR 話題 OR 世界記録 when:1d"
-    },
-    {
-      "edizione": "IT:it",
-      "sezione": "Tecnologia",
-      "q": "intelligenza artificiale OR smartphone OR app OR spazio when:1d"
-    },
-    {
-      "edizione": "US:en-US",
-      "sezione": "Tecnologia",
-      "q": "AI OR OpenAI OR Apple OR Nvidia OR SpaceX when:1d"
-    }
+  [
+   "mozambique",
+   "MZ"
   ],
-  "domini_bloccati": [
-    "uco.es"
+  [
+   "zambia",
+   "ZM"
   ],
-  "_info_veloci": "Canali Telegram 'aggregatore' (Insider Paper, Watcher Guru...) sono le fonti veloci: le loro notizie entrano come VOCE (rossa) e salgono quando una testata le conferma.",
-  "ai": {
-    "_info": "Intelligenza artificiale per traduzioni e sintesi. Si accende solo se su GitHub c'è il secret AI_KEY. Senza chiave il sito funziona lo stesso, gratis: titoli nella lingua originale e sintesi scritte a mano su Notion.",
-    "provider": "gemini",
-    "modello": "gemini-3.1-flash-lite",
-    "prezzo_input_per_milione": 0.25,
-    "prezzo_output_per_milione": 1.5,
-    "budget_mensile_usd": 5,
-    "traduci_titoli": true,
-    "sintesi_al_giro": 8,
-    "_info_provider": "Predefinito: Gemini (una sola chiave per testi e voce). Si può passare ad anthropic (claude-haiku-5-5, 0,10/0,50 $), openai o mistral con le variabili AI_PROVIDER e AI_MODEL: i prezzi dei modelli noti li prende da ai.py.",
-    "titoli_al_giro": 120
+  [
+   "rwanda",
+   "RW"
+  ],
+  [
+   "myanmar",
+   "MM"
+  ],
+  [
+   "cambodia",
+   "KH"
+  ],
+  [
+   "laos",
+   "LA"
+  ],
+  [
+   "mongolia",
+   "MN"
+  ],
+  [
+   "georgia",
+   "GE"
+  ],
+  [
+   "armenia",
+   "AM"
+  ],
+  [
+   "azerbaijan",
+   "AZ"
+  ],
+  [
+   "belarus",
+   "BY"
+  ],
+  [
+   "moldova",
+   "MD"
+  ],
+  [
+   "albania",
+   "AL"
+  ],
+  [
+   "bosniaandherzegovina",
+   "BA"
+  ],
+  [
+   "macedonia",
+   "MK"
+  ],
+  [
+   "montenegro",
+   "ME"
+  ],
+  [
+   "kosovo",
+   "XK"
+  ],
+  [
+   "iceland",
+   "IS"
+  ],
+  [
+   "cyprus",
+   "CY"
+  ],
+  [
+   "malta",
+   "MT"
+  ],
+  [
+   "luxembourg",
+   "LU"
+  ],
+  [
+   "haiti",
+   "HT"
+  ],
+  [
+   "dominicanrepublic",
+   "DO"
+  ],
+  [
+   "guatemala",
+   "GT"
+  ],
+  [
+   "honduras",
+   "HN"
+  ],
+  [
+   "panama",
+   "PA"
+  ],
+  [
+   "costarica",
+   "CR"
+  ],
+  [
+   "jamaica",
+   "JM"
+  ],
+  [
+   "bolivia",
+   "BO"
+  ]
+ ],
+ "rss_diretti": [
+  {
+   "nome": "BBC News",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "letti",
+   "livello": "giallo",
+   "termini_url": "https://www.bbc.co.uk/usingthebbc/terms-of-use/",
+   "termini_data": "2026-11-13",
+   "termini_nota": "ATTENZIONE: il feed si può mostrare su un sito solo senza modificarlo; per l'uso da parte di un'attività serve il permesso (può essere a pagamento). Vietato estrarre dati dai feed e usare i contenuti per l'AI. Da chiedere all'avvocato se il solo conteggio con link è ammesso."
   },
-  "instagram": {
-    "_info": "Pubblicazione dei caroselli con l'API ufficiale di Meta. Si accende solo con i secret IG_USER_ID e IG_TOKEN. Pubblica solo le schede Notion con la casella 'Pubblica su Instagram' spuntata da una persona.",
-    "max_al_giorno": 10,
-    "versione_api": "v23.0"
+  {
+   "nome": "The Guardian",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://www.theguardian.com/world/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "letti",
+   "livello": "giallo",
+   "termini_url": "https://www.theguardian.com/help/terms-of-service",
+   "termini_data": "2026-11-13",
+   "termini_nota": "Solo uso personale e non commerciale. Vietati robot e raccolta automatica senza approvazione scritta. Per gli aggregatori esistono licenze a pagamento (NLA)."
   },
-  "sito": {
-    "_info": "Dati che compaiono nelle pagine Fonti e Privacy. Il responsabile (nome e cognome, o la società) è obbligatorio prima di andare online.",
-    "responsabile": "Redazione Adolos",
-    "email": "redazioneadolos@gmail.com"
+  {
+   "nome": "Le Monde",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.lemonde.fr/rss/une.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
   },
-  "indice": {
-    "_info": "Indice di viralità 0-100: ordina la coda su Notion. 'ai': voto AI sul testo (serve AI_KEY). Si calibra da solo con i risultati di Instagram.",
-    "ai": true,
-    "max_ai_al_giro": 10
+  {
+   "nome": "Le Figaro",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.lefigaro.fr/rss/figaro_actualites.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
   },
-  "immagini": {
-    "_info": "Ordine: 1) foto con licenza libera da Wikimedia Commons (autore e licenza sulla copertina e nella didascalia); 2) solo se 'ai' è true e c'è la chiave: scena generica creata con Gemini, senza persone riconoscibili, con l'etichetta 'Immagine illustrativa generata con AI', massimo 'ai_max_al_giorno' al giorno e 'ai_budget_mensile_usd' al mese; 3) fondo rosso Adolos. Mai volti veri creati con AI, mai foto dei giornali.",
-    "ai": true,
-    "wikimedia": true,
-    "licenze_ammesse": [
-      "CC0",
-      "Public domain",
-      "CC BY",
-      "CC BY-SA"
-    ],
-    "ai_modelli": [
-      "gemini-nano-banana-2.1",
-      "gemini-3.1-flash-image"
-    ],
-    "ai_max_al_giorno": 3,
-    "ai_budget_mensile_usd": 3.5,
-    "ai_costo_immagine_usd": 0.07
+  {
+   "nome": "France 24",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.france24.com/en/rss",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "termini_data": "2026-11-13",
+   "termini_nota": "Pagina dei termini non leggibile in automatico (france24.com): va letta a mano. Resta gialla."
   },
-  "punto_cieco": {
-    "_info": "Punto cieco italiano: almeno min_estero testate straniere da min_paesi_esteri paesi e al massimo max_italia testate italiane (tra quelle che leggiamo). Solo in Italia: almeno min_italia_solo testate italiane e nessuna estera.",
-    "min_estero": 5,
-    "min_paesi_esteri": 3,
-    "max_italia": 0,
-    "min_italia_solo": 3
+  {
+   "nome": "Der Spiegel",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://www.spiegel.de/schlagzeilen/index.rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
   },
-  "_info_uso": "uso: 'completo' (titoli e descrizioni passati all'AI per scrivere titoli e sintesi nuovi) oppure 'conta_e_link' (la testata serve solo a contare chi ne parla e a mettere il link). Sul sito nessun titolo o testo delle testate viene mostrato in ogni caso.",
-  "voce": {
-    "_info": "Voce AI per video e audio (engine/voce.py, Gemini TTS a pagamento: nell'UE la quota gratuita non si può usare per app e siti). Chiave: GEMINI_API_KEY. Etichetta obbligatoria 'Voce generata con AI'. Solo voci predefinite; replica solo della voce di un membro della redazione con consenso scritto.",
-    "attiva": true,
-    "modello": "gemini-3.8-flash-tts",
-    "voce": "Charon",
-    "stile": "Italian news presenter: clear, calm and neutral, steady brisk pace, no drama",
-    "budget_mensile_usd": 1.0,
-    "costo_per_10_secondi_usd": 0.00225,
-    "max_caratteri": 1500
+  {
+   "nome": "Tagesschau",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://www.tagesschau.de/xml/rss2/",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
   },
-  "testate_note": {
-    "_info": "Testate senza feed nell'elenco: servono a dare nome e paese ai link aggiunti dalla redazione in 'Altre fonti' su Notion.",
-    "nbcsports.com": [
-      "NBC Sports",
-      "US"
-    ],
-    "espn.com": [
-      "ESPN",
-      "US"
-    ],
-    "reuters.com": [
-      "Reuters",
-      "GB"
-    ],
-    "apnews.com": [
-      "AP News",
-      "US"
-    ],
-    "cnn.com": [
-      "CNN",
-      "US"
-    ],
-    "bloomberg.com": [
-      "Bloomberg",
-      "US"
-    ],
-    "ft.com": [
-      "Financial Times",
-      "GB"
-    ],
-    "wsj.com": [
-      "The Wall Street Journal",
-      "US"
-    ],
-    "theathletic.com": [
-      "The Athletic",
-      "US"
-    ],
-    "uefa.com": [
-      "UEFA",
-      "CH"
-    ],
-    "vavel.com": [
-      "VAVEL",
-      "ES"
-    ],
-    "sofascore.com": [
-      "Sofascore",
-      "HR"
-    ],
-    "bbc.com": [
-      "BBC News",
-      "GB"
-    ],
-    "bbc.co.uk": [
-      "BBC News",
-      "GB"
-    ],
-    "nytimes.com": [
-      "The New York Times",
-      "US"
-    ]
+  {
+   "nome": "Deutsche Welle",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://rss.dw.com/rdf/rss-en-all",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "termini_data": "2026-11-13",
+   "termini_nota": "Pagina dei termini non leggibile in automatico (corporate.dw.com): va letta a mano. Resta gialla."
   },
-  "_budget": "Tetto totale circa 9,5 $ al mese (circa 9 €): testi 5 $ (ai), immagini AI 3,5 $ (immagini), voce 1 $ (voce). Ogni parte si ferma da sola quando arriva al suo tetto."
+  {
+   "nome": "El País",
+   "paese": "ES",
+   "continente": "Europa",
+   "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "El Mundo",
+   "paese": "ES",
+   "continente": "Europa",
+   "url": "https://e00-elmundo.uecdn.es/elmundo/rss/portada.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "ANSA",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.ansa.it/sito/ansait_rss.xml",
+   "tipo": "agenzia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "_motivo": "Condizioni ANSA (27/09/2021, punti 1.1 e 3.2): consultazione solo per uso personale, vietata la riproduzione. Scelta della redazione: usarla SOLO per contare e linkare (nessun titolo o testo mostrato, nulla passato all'AI). Rischio residuo: uso automatico del feed. Da chiedere all'avvocato o ad ANSA; per spegnerla: termini = no.",
+   "uso": "conta_e_link",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Corriere della Sera",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://xml2.corriereobjects.it/rss/homepage.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "uso": "conta_e_link",
+   "livello": "giallo"
+  },
+  {
+   "nome": "la Repubblica",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.repubblica.it/rss/homepage/rss2.0.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "uso": "conta_e_link",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Il Post",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.ilpost.it/feed/",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "uso": "conta_e_link",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "NOS",
+   "paese": "NL",
+   "continente": "Europa",
+   "url": "https://feeds.nos.nl/nosnieuwsalgemeen",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "RTÉ",
+   "paese": "IE",
+   "continente": "Europa",
+   "url": "https://www.rte.ie/feeds/rss/?index=/news/",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Euronews",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.euronews.com/rss?format=mrss&level=theme&name=news",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Politico Europe",
+   "paese": "BE",
+   "continente": "Europa",
+   "url": "https://www.politico.eu/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Kyiv Independent",
+   "paese": "UA",
+   "continente": "Europa",
+   "url": "https://kyivindependent.com/rss/",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Meduza",
+   "paese": "LV",
+   "continente": "Europa",
+   "url": "https://meduza.io/rss/en/all",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Notes from Poland",
+   "paese": "PL",
+   "continente": "Europa",
+   "url": "https://notesfrompoland.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The New York Times",
+   "paese": "US",
+   "continente": "Nord America",
+   "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "termini_data": "2026-11-13",
+   "termini_nota": "Pagina dei termini non leggibile in automatico (help.nytimes.com): va letta a mano. Resta gialla."
+  },
+  {
+   "nome": "The Washington Post",
+   "paese": "US",
+   "continente": "Nord America",
+   "url": "https://feeds.washingtonpost.com/rss/world",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "NPR",
+   "paese": "US",
+   "continente": "Nord America",
+   "url": "https://feeds.npr.org/1001/rss.xml",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "letti",
+   "livello": "giallo",
+   "termini_url": "https://www.npr.org/about-npr/179876898/terms-of-use",
+   "termini_data": "2026-11-13",
+   "termini_nota": "Solo uso personale e non commerciale; ogni altro uso chiede un permesso scritto. I link sono incoraggiati, senza far credere che NPR approvi il sito."
+  },
+  {
+   "nome": "CBS News",
+   "paese": "US",
+   "continente": "Nord America",
+   "url": "https://www.cbsnews.com/latest/rss/main",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "ABC News",
+   "paese": "US",
+   "continente": "Nord America",
+   "url": "https://feeds.abcnews.com/abcnews/topstories",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Fox News",
+   "paese": "US",
+   "continente": "Nord America",
+   "url": "https://moxie.foxnews.com/google-publisher/latest.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "letti",
+   "livello": "giallo",
+   "termini_url": "https://www.foxnews.com/terms-of-use",
+   "termini_data": "2026-11-13",
+   "termini_nota": "ATTENZIONE: solo uso personale e non commerciale. Tra i divieti ci sono la raccolta automatica e anche il link diretto alle pagine interne, salvo dove espressamente permesso. Da chiedere all'avvocato."
+  },
+  {
+   "nome": "Politico",
+   "paese": "US",
+   "continente": "Nord America",
+   "url": "https://rss.politico.com/politics-news.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "CBC News",
+   "paese": "CA",
+   "continente": "Nord America",
+   "url": "https://www.cbc.ca/webfeed/rss/rss-topstories",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "termini_data": "2026-11-13",
+   "termini_nota": "Pagina dei termini non leggibile in automatico (cbc.ca): va letta a mano. Resta gialla."
+  },
+  {
+   "nome": "Folha de S.Paulo",
+   "paese": "BR",
+   "continente": "Sud America",
+   "url": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "G1",
+   "paese": "BR",
+   "continente": "Sud America",
+   "url": "https://g1.globo.com/rss/g1/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Clarín",
+   "paese": "AR",
+   "continente": "Sud America",
+   "url": "https://www.clarin.com/rss/lo-ultimo/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "La Nación",
+   "paese": "AR",
+   "continente": "Sud America",
+   "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "La Tercera",
+   "paese": "CL",
+   "continente": "Sud America",
+   "url": "https://www.latercera.com/arc/outboundfeeds/rss/",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "El Comercio",
+   "paese": "PE",
+   "continente": "Sud America",
+   "url": "https://elcomercio.pe/arc/outboundfeeds/rss/",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "MercoPress",
+   "paese": "UY",
+   "continente": "Sud America",
+   "url": "https://en.mercopress.com/rss/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Al Jazeera",
+   "paese": "QA",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.aljazeera.com/xml/rss/all.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "letti",
+   "livello": "giallo",
+   "termini_url": "https://www.aljazeera.com/terms-and-conditions/",
+   "termini_data": "2026-11-13",
+   "termini_nota": "Solo uso personale e non commerciale; ogni riuso chiede un permesso scritto. Vietati robot e analisi automatica dei contenuti. Il link a una pagina intera è permesso, senza incorniciarla."
+  },
+  {
+   "nome": "Times of Israel",
+   "paese": "IL",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.timesofisrael.com/feed/",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The Hindu",
+   "paese": "IN",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.thehindu.com/news/international/feeder/default.rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Times of India",
+   "paese": "IN",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://timesofindia.indiatimes.com/rssfeedstopstories.cms",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "termini_data": "2026-11-13",
+   "termini_nota": "Pagina dei termini non leggibile in automatico (timesofindia.indiatimes.com): va letta a mano. Resta gialla."
+  },
+  {
+   "nome": "Dawn",
+   "paese": "PK",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.dawn.com/feeds/home",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "South China Morning Post",
+   "paese": "HK",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.scmp.com/rss/91/feed",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The Japan Times",
+   "paese": "JP",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.japantimes.co.jp/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "NHK",
+   "paese": "JP",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www3.nhk.or.jp/rss/news/cat0.xml",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Yonhap",
+   "paese": "KR",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://en.yna.co.kr/RSS/news.xml",
+   "tipo": "agenzia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The Straits Times",
+   "paese": "SG",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.straitstimes.com/news/world/rss.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "CNA",
+   "paese": "SG",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Bangkok Post",
+   "paese": "TH",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.bangkokpost.com/rss/data/topstories.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "VnExpress International",
+   "paese": "VN",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://e.vnexpress.net/rss/news.rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Rappler",
+   "paese": "PH",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.rappler.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "ABC Australia",
+   "paese": "AU",
+   "continente": "Oceania",
+   "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "termini_data": "2026-11-13",
+   "termini_nota": "Pagina dei termini non leggibile in automatico (abc.net.au): va letta a mano. Resta gialla."
+  },
+  {
+   "nome": "Sydney Morning Herald",
+   "paese": "AU",
+   "continente": "Oceania",
+   "url": "https://www.smh.com.au/rss/feed.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The Guardian Australia",
+   "paese": "AU",
+   "continente": "Oceania",
+   "url": "https://www.theguardian.com/australia-news/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "letti",
+   "livello": "giallo",
+   "termini_url": "https://www.theguardian.com/help/terms-of-service",
+   "termini_data": "2026-11-13",
+   "termini_nota": "Solo uso personale e non commerciale. Vietati robot e raccolta automatica senza approvazione scritta. Per gli aggregatori esistono licenze a pagamento (NLA)."
+  },
+  {
+   "nome": "RNZ",
+   "paese": "NZ",
+   "continente": "Oceania",
+   "url": "https://www.rnz.co.nz/rss/world.xml",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "RNZ Pacific",
+   "paese": "NZ",
+   "continente": "Oceania",
+   "url": "https://www.rnz.co.nz/rss/pacific.xml",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "AllAfrica",
+   "paese": "ZA",
+   "continente": "Africa",
+   "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Africanews",
+   "paese": "CG",
+   "continente": "Africa",
+   "url": "https://www.africanews.com/feed/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "News24",
+   "paese": "ZA",
+   "continente": "Africa",
+   "url": "https://feeds.news24.com/articles/news24/TopStories/rss",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Daily Maverick",
+   "paese": "ZA",
+   "continente": "Africa",
+   "url": "https://www.dailymaverick.co.za/dmrss/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Mail & Guardian",
+   "paese": "ZA",
+   "continente": "Africa",
+   "url": "https://mg.co.za/feed/",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Premium Times",
+   "paese": "NG",
+   "continente": "Africa",
+   "url": "https://www.premiumtimesng.com/feed",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Punch",
+   "paese": "NG",
+   "continente": "Africa",
+   "url": "https://punchng.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Morocco World News",
+   "paese": "MA",
+   "continente": "Africa",
+   "url": "https://www.moroccoworldnews.com/feed/",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "UN News",
+   "paese": "WEB",
+   "continente": "Internazionale",
+   "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+   "tipo": "istituzione",
+   "attivo": true,
+   "termini": "letti",
+   "livello": "giallo",
+   "termini_url": "https://www.un.org/en/about-us/terms-of-use",
+   "termini_data": "2026-11-13",
+   "termini_nota": "I termini generali dell'ONU ammettono solo uso personale e non commerciale e vietano le opere derivate. Non è una fonte verde finché non si trova una licenza specifica per UN News."
+  },
+  {
+   "nome": "UPI Odd News",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://rss.upi.com/news/odd_news.rss",
+   "tipo": "giornale",
+   "sezione": "Curiosità",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Oddity Central",
+   "paese": "WEB",
+   "continente": "Web",
+   "url": "https://www.odditycentral.com/feed",
+   "tipo": "giornale",
+   "sezione": "Curiosità",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The Verge",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://www.theverge.com/rss/index.xml",
+   "tipo": "giornale",
+   "sezione": "Tecnologia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Ars Technica",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://feeds.arstechnica.com/arstechnica/index",
+   "tipo": "giornale",
+   "sezione": "Tecnologia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "TechCrunch",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://techcrunch.com/feed/",
+   "tipo": "giornale",
+   "sezione": "Tecnologia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Hacker News (prima pagina)",
+   "paese": "WEB",
+   "continente": "Web",
+   "url": "https://hnrss.org/frontpage",
+   "tipo": "giornale",
+   "sezione": "Tecnologia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "HDblog",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.hdblog.it/feed/",
+   "tipo": "giornale",
+   "sezione": "Tecnologia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "uso": "conta_e_link",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Wired Italia",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.wired.it/feed/rss",
+   "tipo": "giornale",
+   "sezione": "Tecnologia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "uso": "conta_e_link",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Space.com",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://www.space.com/feeds/all",
+   "tipo": "giornale",
+   "sezione": "Tecnologia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "CoinDesk",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+   "tipo": "giornale",
+   "sezione": "Economia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "BBC Sport",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://feeds.bbci.co.uk/sport/rss.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "letti",
+   "sezione": "Sport",
+   "livello": "giallo",
+   "termini_url": "https://www.bbc.co.uk/usingthebbc/terms-of-use/",
+   "termini_data": "2026-11-13",
+   "termini_nota": "ATTENZIONE: il feed si può mostrare su un sito solo senza modificarlo; per l'uso da parte di un'attività serve il permesso (può essere a pagamento). Vietato estrarre dati dai feed e usare i contenuti per l'AI. Da chiedere all'avvocato se il solo conteggio con link è ammesso."
+  },
+  {
+   "nome": "The Guardian Sport",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://www.theguardian.com/sport/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "letti",
+   "sezione": "Sport",
+   "livello": "giallo",
+   "termini_url": "https://www.theguardian.com/help/terms-of-service",
+   "termini_data": "2026-11-13",
+   "termini_nota": "Solo uso personale e non commerciale. Vietati robot e raccolta automatica senza approvazione scritta. Per gli aggregatori esistono licenze a pagamento (NLA)."
+  },
+  {
+   "nome": "ESPN",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://www.espn.com/espn/rss/news",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "sezione": "Sport",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Sky Sports",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://www.skysports.com/rss/12040",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "sezione": "Sport",
+   "livello": "giallo"
+  },
+  {
+   "nome": "L'Équipe",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://dwh.lequipe.fr/api/edito/rss?path=/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "sezione": "Sport",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Marca",
+   "paese": "ES",
+   "continente": "Europa",
+   "url": "https://e00-marca.uecdn.es/rss/portada.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "sezione": "Sport",
+   "livello": "giallo"
+  },
+  {
+   "nome": "AS",
+   "paese": "ES",
+   "continente": "Europa",
+   "url": "https://as.com/rss/tags/ultimas_noticias.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "sezione": "Sport",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Mundo Deportivo",
+   "paese": "ES",
+   "continente": "Europa",
+   "url": "https://www.mundodeportivo.com/rss/home.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "sezione": "Sport",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Kicker",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://newsfeed.kicker.de/news/aktuell",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "sezione": "Sport",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Record",
+   "paese": "PT",
+   "continente": "Europa",
+   "url": "https://www.record.pt/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "sezione": "Sport",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Olé",
+   "paese": "AR",
+   "continente": "Americhe",
+   "url": "https://www.ole.com.ar/rss/ultimas-noticias/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "sezione": "Sport",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Globo Esporte",
+   "paese": "BR",
+   "continente": "Americhe",
+   "url": "https://ge.globo.com/rss/ge/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "sezione": "Sport",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Sky News",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://feeds.skynews.com/feeds/rss/world.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The Independent",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://www.independent.co.uk/news/world/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The Irish Times",
+   "paese": "IE",
+   "continente": "Europa",
+   "url": "https://www.irishtimes.com/arc/outboundfeeds/feed-irish-news/?outputType=xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "France Info",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.francetvinfo.fr/titres.rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "RFI",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.rfi.fr/fr/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Libération",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.liberation.fr/arc/outboundfeeds/rss-all/?outputType=xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Ouest-France",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.ouest-france.fr/rss/une",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Süddeutsche Zeitung",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://rss.sueddeutsche.de/rss/Topthemen",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Die Zeit",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://newsfeed.zeit.de/index",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "FAZ",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://www.faz.net/rss/aktuell/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Der Standard",
+   "paese": "AT",
+   "continente": "Europa",
+   "url": "https://www.derstandard.at/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "ORF",
+   "paese": "AT",
+   "continente": "Europa",
+   "url": "https://rss.orf.at/news.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "NZZ",
+   "paese": "CH",
+   "continente": "Europa",
+   "url": "https://www.nzz.ch/recent.rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Swissinfo",
+   "paese": "CH",
+   "continente": "Europa",
+   "url": "https://www.swissinfo.ch/eng/rss/latest-news",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "El Confidencial",
+   "paese": "ES",
+   "continente": "Europa",
+   "url": "https://rss.elconfidencial.com/espana/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "La Vanguardia",
+   "paese": "ES",
+   "continente": "Europa",
+   "url": "https://www.lavanguardia.com/rss/home.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Público",
+   "paese": "PT",
+   "continente": "Europa",
+   "url": "https://www.publico.pt/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Expresso",
+   "paese": "PT",
+   "continente": "Europa",
+   "url": "https://expresso.pt/rss",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Kathimerini",
+   "paese": "GR",
+   "continente": "Europa",
+   "url": "https://www.ekathimerini.com/rss",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Hürriyet Daily News",
+   "paese": "TR",
+   "continente": "Europa",
+   "url": "https://www.hurriyetdailynews.com/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Kyiv Post",
+   "paese": "UA",
+   "continente": "Europa",
+   "url": "https://www.kyivpost.com/feed",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "de Volkskrant",
+   "paese": "NL",
+   "continente": "Europa",
+   "url": "https://www.volkskrant.nl/voorpagina/rss.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Le Soir",
+   "paese": "BE",
+   "continente": "Europa",
+   "url": "https://www.lesoir.be/rss/81853/cible_principale_gratuit",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "USA Today",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://rssfeeds.usatoday.com/usatoday-NewsTopStories",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Los Angeles Times",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://www.latimes.com/world-nation/rss2.0.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The Hill",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://thehill.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Axios",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://api.axios.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "CNBC",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "NBC News",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://feeds.nbcnews.com/nbcnews/public/news",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The Globe and Mail",
+   "paese": "CA",
+   "continente": "Americhe",
+   "url": "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/world/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "El Universal",
+   "paese": "MX",
+   "continente": "Americhe",
+   "url": "https://www.eluniversal.com.mx/arc/outboundfeeds/rss/?outputType=xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Milenio",
+   "paese": "MX",
+   "continente": "Americhe",
+   "url": "https://www.milenio.com/rss",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "El Tiempo",
+   "paese": "CO",
+   "continente": "Americhe",
+   "url": "https://www.eltiempo.com/rss/mundo.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Infobae",
+   "paese": "AR",
+   "continente": "Americhe",
+   "url": "https://www.infobae.com/arc/outboundfeeds/rss/?outputType=xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Estadão",
+   "paese": "BR",
+   "continente": "Americhe",
+   "url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/internacional/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Hindustan Times",
+   "paese": "IN",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.hindustantimes.com/feeds/rss/world-news/rssfeed.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "NDTV",
+   "paese": "IN",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://feeds.feedburner.com/ndtvnews-world-news",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The Indian Express",
+   "paese": "IN",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://indianexpress.com/section/world/feed/",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Kyodo News",
+   "paese": "JP",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://english.kyodonews.net/rss/all.xml",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The Korea Herald",
+   "paese": "KR",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.koreaherald.com/rss/020000000000.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Focus Taiwan",
+   "paese": "TW",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://focustaiwan.tw/rss/aall.xml",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Taipei Times",
+   "paese": "TW",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.taipeitimes.com/xml/index.rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The Jakarta Post",
+   "paese": "ID",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.thejakartapost.com/rss",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Inquirer",
+   "paese": "PH",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.inquirer.net/fullfeed",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Arab News",
+   "paese": "SA",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.arabnews.com/rss.xml",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The National",
+   "paese": "AE",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Gulf News",
+   "paese": "AE",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://gulfnews.com/feeds/rss/world",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The Jerusalem Post",
+   "paese": "IL",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.jpost.com/rss/rssfeedsfrontpage.aspx",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Haaretz",
+   "paese": "IL",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.haaretz.com/srv/haaretz-latest-headlines",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Ahram Online",
+   "paese": "EG",
+   "continente": "Africa",
+   "url": "https://english.ahram.org.eg/rss.ashx",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Nation Africa",
+   "paese": "KE",
+   "continente": "Africa",
+   "url": "https://nation.africa/kenya/rss.xml",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "The East African",
+   "paese": "KE",
+   "continente": "Africa",
+   "url": "https://www.theeastafrican.co.ke/rss.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo"
+  },
+  {
+   "nome": "GhanaWeb",
+   "paese": "GH",
+   "continente": "Africa",
+   "url": "https://www.ghanaweb.com/GhanaHomePage/NewsArchive/rss.xml",
+   "tipo": "giornale",
+   "attivo": false,
+   "termini": "da_verificare",
+   "_spento": "feed non raggiungibile il 21/10/2026: trovare l'indirizzo giusto",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Gazzetta dello Sport",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.gazzetta.it/rss/home.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "uso": "conta_e_link",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Corriere dello Sport",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.corrieredellosport.it/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "uso": "conta_e_link",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Sky TG24",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://tg24.sky.it/rss/tg24.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "uso": "conta_e_link",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Il Sole 24 Ore",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.ilsole24ore.com/rss/mondo.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "uso": "conta_e_link",
+   "livello": "giallo"
+  },
+  {
+   "nome": "Il Fatto Quotidiano",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.ilfattoquotidiano.it/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "La Stampa",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.lastampa.it/rss/copertina.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Rai News",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.rainews.it/rss/tutti",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Open",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.open.online/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Domani",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.editorialedomani.it/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Adnkronos",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.adnkronos.com/RSS_PrimaPagina.xml",
+   "tipo": "agenzia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "TGCOM24",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.tgcom24.mediaset.it/rss/homepage.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Linkiesta",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.linkiesta.it/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Internazionale",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.internazionale.it/sitemaps/rss.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "il manifesto",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://ilmanifesto.it/feed",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Today",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.today.it/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Askanews",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.askanews.it/feed/",
+   "tipo": "agenzia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Die Welt",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://www.welt.de/feeds/latest.rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Der Tagesspiegel",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://www.tagesspiegel.de/contentexport/feed/home",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "taz",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://taz.de/!p4608;rss/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "n-tv",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://www.n-tv.de/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "ZDF heute",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://www.zdf.de/rss/zdf/nachrichten",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Handelsblatt",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://www.handelsblatt.com/contentexport/feed/schlagzeilen",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "20 Minutes",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.20minutes.fr/feeds/rss-une.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Mediapart",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.mediapart.fr/articles/feed",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "L'Obs",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.nouvelobs.com/rss.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "BFMTV",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.bfmtv.com/rss/news-24-7/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Courrier international",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.courrierinternational.com/feed/all/rss.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "ABC (Spagna)",
+   "paese": "ES",
+   "continente": "Europa",
+   "url": "https://www.abc.es/rss/2.0/portada/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "elDiario.es",
+   "paese": "ES",
+   "continente": "Europa",
+   "url": "https://www.eldiario.es/rss/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "20minutos",
+   "paese": "ES",
+   "continente": "Europa",
+   "url": "https://www.20minutos.es/rss/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Telegraph",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://www.telegraph.co.uk/rss.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Financial Times",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://www.ft.com/rss/home",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Daily Mail",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://www.dailymail.co.uk/news/index.rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Evening Standard",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://www.standard.co.uk/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Economist",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://www.economist.com/international/rss.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Mirror",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://www.mirror.co.uk/news/?service=rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "SVT Nyheter",
+   "paese": "SE",
+   "continente": "Europa",
+   "url": "https://www.svt.se/nyheter/rss.xml",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Aftonbladet",
+   "paese": "SE",
+   "continente": "Europa",
+   "url": "https://rss.aftonbladet.se/rss2/small/pages/sections/senastenytt/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Dagens Nyheter",
+   "paese": "SE",
+   "continente": "Europa",
+   "url": "https://www.dn.se/rss/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "NRK",
+   "paese": "NO",
+   "continente": "Europa",
+   "url": "https://www.nrk.no/toppsaker.rss",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Aftenposten",
+   "paese": "NO",
+   "continente": "Europa",
+   "url": "https://www.aftenposten.no/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "VG",
+   "paese": "NO",
+   "continente": "Europa",
+   "url": "https://www.vg.no/rss/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "DR",
+   "paese": "DK",
+   "continente": "Europa",
+   "url": "https://www.dr.dk/nyheder/service/feeds/allenyheder",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Politiken",
+   "paese": "DK",
+   "continente": "Europa",
+   "url": "https://politiken.dk/rss/senestenyt.rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Yle News",
+   "paese": "FI",
+   "continente": "Europa",
+   "url": "https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_NEWS",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Helsingin Sanomat",
+   "paese": "FI",
+   "continente": "Europa",
+   "url": "https://www.hs.fi/rss/tuoreimmat.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "RÚV",
+   "paese": "IS",
+   "continente": "Europa",
+   "url": "https://www.ruv.is/rss/frettir",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Iceland Review",
+   "paese": "IS",
+   "continente": "Europa",
+   "url": "https://www.icelandreview.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "NRC",
+   "paese": "NL",
+   "continente": "Europa",
+   "url": "https://www.nrc.nl/rss/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "VRT NWS",
+   "paese": "BE",
+   "continente": "Europa",
+   "url": "https://www.vrt.be/vrtnws/nl.rss.articles.xml",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Le Temps",
+   "paese": "CH",
+   "continente": "Europa",
+   "url": "https://www.letemps.ch/articles.rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "RTBF",
+   "paese": "BE",
+   "continente": "Europa",
+   "url": "https://rss.rtbf.be/article/rss/highlight_rtbf_info.xml?source=internal",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Gazeta.pl",
+   "paese": "PL",
+   "continente": "Europa",
+   "url": "https://rss.gazeta.pl/pub/rss/wiadomosci.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "TVN24",
+   "paese": "PL",
+   "continente": "Europa",
+   "url": "https://tvn24.pl/najnowsze.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Radio Prague International",
+   "paese": "CZ",
+   "continente": "Europa",
+   "url": "https://english.radio.cz/rcz-rss/en",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Hungary Today",
+   "paese": "HU",
+   "continente": "Europa",
+   "url": "https://hungarytoday.hu/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Telex",
+   "paese": "HU",
+   "continente": "Europa",
+   "url": "https://telex.hu/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Romania Insider",
+   "paese": "RO",
+   "continente": "Europa",
+   "url": "https://www.romania-insider.com/feed",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Digi24",
+   "paese": "RO",
+   "continente": "Europa",
+   "url": "https://www.digi24.ro/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Novinite",
+   "paese": "BG",
+   "continente": "Europa",
+   "url": "https://www.novinite.com/services/news_rdf.php",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Balkan Insight",
+   "paese": "RS",
+   "continente": "Europa",
+   "url": "https://balkaninsight.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "N1 Serbia",
+   "paese": "RS",
+   "continente": "Europa",
+   "url": "https://n1info.rs/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Total Croatia News",
+   "paese": "HR",
+   "continente": "Europa",
+   "url": "https://total-croatia-news.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Slovenia Times",
+   "paese": "SI",
+   "continente": "Europa",
+   "url": "https://sloveniatimes.com/feed",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Slovak Spectator",
+   "paese": "SK",
+   "continente": "Europa",
+   "url": "https://spectator.sme.sk/rss-title",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "LRT English",
+   "paese": "LT",
+   "continente": "Europa",
+   "url": "https://www.lrt.lt/en/news-in-english?rss",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "LSM English",
+   "paese": "LV",
+   "continente": "Europa",
+   "url": "https://eng.lsm.lv/rss/",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Cyprus Mail",
+   "paese": "CY",
+   "continente": "Europa",
+   "url": "https://cyprus-mail.com/feed",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Euractiv",
+   "paese": "BE",
+   "continente": "Europa",
+   "url": "https://www.euractiv.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Moscow Times",
+   "paese": "RU",
+   "continente": "Europa",
+   "url": "https://www.themoscowtimes.com/rss/news",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "TASS",
+   "paese": "RU",
+   "continente": "Europa",
+   "url": "https://tass.com/rss/v2.xml",
+   "tipo": "agenzia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Ukrainska Pravda",
+   "paese": "UA",
+   "continente": "Europa",
+   "url": "https://www.pravda.com.ua/eng/rss/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Daily Sabah",
+   "paese": "TR",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.dailysabah.com/rssFeed/home",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Luxembourg Times",
+   "paese": "LU",
+   "continente": "Europa",
+   "url": "https://www.luxtimes.lu/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "OC Media",
+   "paese": "GE",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://oc-media.org/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Civil.ge",
+   "paese": "GE",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://civil.ge/feed",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "JAMnews",
+   "paese": "GE",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://jam-news.net/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Azernews",
+   "paese": "AZ",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.azernews.az/feed.php",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Middle East Eye",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://www.middleeasteye.net/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The New Arab",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://www.newarab.com/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Tehran Times",
+   "paese": "IR",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.tehrantimes.com/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Al-Monitor",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://www.al-monitor.com/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Asharq Al-Awsat",
+   "paese": "SA",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://english.aawsat.com/feed",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Asahi Shimbun",
+   "paese": "JP",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.asahi.com/rss/asahi/newsheadlines.rdf",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Mainichi",
+   "paese": "JP",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://mainichi.jp/rss/etc/english_latest.rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Korea Times",
+   "paese": "KR",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.koreatimes.co.kr/www/rss/nation.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Hong Kong Free Press",
+   "paese": "HK",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://hongkongfp.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Mint",
+   "paese": "IN",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.livemint.com/rss/news",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Economic Times",
+   "paese": "IN",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://economictimes.indiatimes.com/rssfeedsdefault.cms",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Express Tribune",
+   "paese": "PK",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://tribune.com.pk/feed/home",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Khaama Press",
+   "paese": "AF",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.khaama.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Malay Mail",
+   "paese": "MY",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.malaymail.com/feed/rss/malaysia",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Antara",
+   "paese": "ID",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://en.antaranews.com/rss/news.xml",
+   "tipo": "agenzia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Manila Times",
+   "paese": "PH",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.manilatimes.net/news/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "PhilStar",
+   "paese": "PH",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.philstar.com/rss/headlines",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Khmer Times",
+   "paese": "KH",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.khmertimeskh.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Myanmar Now",
+   "paese": "MM",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://myanmar-now.org/en/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Irrawaddy",
+   "paese": "MM",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.irrawaddy.com/feed",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Laotian Times",
+   "paese": "LA",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://laotiantimes.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Diplomat",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://thediplomat.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Astana Times",
+   "paese": "KZ",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://astanatimes.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Times of Central Asia",
+   "paese": "KZ",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://timesca.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Iraqi News",
+   "paese": "IQ",
+   "continente": "Asia e Medio Oriente",
+   "url": "https://www.iraqinews.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Vanguard",
+   "paese": "NG",
+   "continente": "Africa",
+   "url": "https://www.vanguardngr.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Daily Trust",
+   "paese": "NG",
+   "continente": "Africa",
+   "url": "https://dailytrust.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Africa Report",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.theafricareport.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Jeune Afrique",
+   "paese": "FR",
+   "continente": "Europa",
+   "url": "https://www.jeuneafrique.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Egypt Independent",
+   "paese": "EG",
+   "continente": "Africa",
+   "url": "https://egyptindependent.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Herald",
+   "paese": "ZW",
+   "continente": "Africa",
+   "url": "https://www.herald.co.zw/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "MyJoyOnline",
+   "paese": "GH",
+   "continente": "Africa",
+   "url": "https://www.myjoyonline.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Hespress English",
+   "paese": "MA",
+   "continente": "Africa",
+   "url": "https://en.hespress.com/feed",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "TSA Algérie",
+   "paese": "DZ",
+   "continente": "Africa",
+   "url": "https://www.tsa-algerie.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "La Presse de Tunisie",
+   "paese": "TN",
+   "continente": "Africa",
+   "url": "https://lapresse.tn/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Libya Herald",
+   "paese": "LY",
+   "continente": "Africa",
+   "url": "https://libyaherald.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Lusaka Times",
+   "paese": "ZM",
+   "continente": "Africa",
+   "url": "https://www.lusakatimes.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Club of Mozambique",
+   "paese": "MZ",
+   "continente": "Africa",
+   "url": "https://clubofmozambique.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Namibian",
+   "paese": "NA",
+   "continente": "Africa",
+   "url": "https://www.namibian.com.na/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Actualite.cd",
+   "paese": "CD",
+   "continente": "Africa",
+   "url": "https://actualite.cd/rss.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The EastAfrican Business",
+   "paese": "KE",
+   "continente": "Africa",
+   "url": "https://www.businessdailyafrica.com/bd/rss.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "NZ Herald",
+   "paese": "NZ",
+   "continente": "Oceania",
+   "url": "https://www.nzherald.co.nz/arc/outboundfeeds/rss/curated/78/?outputType=xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Stuff",
+   "paese": "NZ",
+   "continente": "Oceania",
+   "url": "https://www.stuff.co.nz/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Age",
+   "paese": "AU",
+   "continente": "Oceania",
+   "url": "https://www.theage.com.au/rss/feed.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Post-Courier",
+   "paese": "PG",
+   "continente": "Oceania",
+   "url": "https://www.postcourier.com.pg/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Islands Business",
+   "paese": "FJ",
+   "continente": "Oceania",
+   "url": "https://islandsbusiness.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "La Presse",
+   "paese": "CA",
+   "continente": "Americhe",
+   "url": "https://www.lapresse.ca/actualites/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Le Devoir",
+   "paese": "CA",
+   "continente": "Americhe",
+   "url": "https://www.ledevoir.com/rss/manchettes.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Global News",
+   "paese": "CA",
+   "continente": "Americhe",
+   "url": "https://globalnews.ca/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "PBS NewsHour",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://www.pbs.org/newshour/feeds/rss/headlines",
+   "tipo": "servizio pubblico",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "ProPublica",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://www.propublica.org/feeds/propublica/main",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Time",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://time.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "The Atlantic",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://www.theatlantic.com/feed/all/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Vox",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://www.vox.com/rss/index.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "New York Post",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://nypost.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Newsweek",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://www.newsweek.com/rss",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Prensa Libre",
+   "paese": "GT",
+   "continente": "Americhe",
+   "url": "https://www.prensalibre.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "La Nación (Costa Rica)",
+   "paese": "CR",
+   "continente": "Americhe",
+   "url": "https://www.nacion.com/arc/outboundfeeds/rss/?outputType=xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Semana",
+   "paese": "CO",
+   "continente": "Americhe",
+   "url": "https://www.semana.com/arc/outboundfeeds/rss/?outputType=xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "El Nacional",
+   "paese": "VE",
+   "continente": "Americhe",
+   "url": "https://www.elnacional.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "El Comercio (Ecuador)",
+   "paese": "EC",
+   "continente": "Americhe",
+   "url": "https://www.elcomercio.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "El Universo",
+   "paese": "EC",
+   "continente": "Americhe",
+   "url": "https://www.eluniverso.com/arc/outboundfeeds/rss/?outputType=xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "ABC Color",
+   "paese": "PY",
+   "continente": "Americhe",
+   "url": "https://www.abc.com.py/arc/outboundfeeds/rss/?outputType=xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "O Globo",
+   "paese": "BR",
+   "continente": "Americhe",
+   "url": "https://oglobo.globo.com/rss/oglobo",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Agência Brasil",
+   "paese": "BR",
+   "continente": "Americhe",
+   "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
+   "tipo": "agenzia",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Jamaica Gleaner",
+   "paese": "JM",
+   "continente": "Americhe",
+   "url": "https://jamaica-gleaner.com/feed/rss.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Jamaica Observer",
+   "paese": "JM",
+   "continente": "Americhe",
+   "url": "https://www.jamaicaobserver.com/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "HaïtiLibre",
+   "paese": "HT",
+   "continente": "Americhe",
+   "url": "https://www.haitilibre.com/rss-flash-en.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Diario Libre",
+   "paese": "DO",
+   "continente": "Americhe",
+   "url": "https://www.diariolibre.com/rss/portada.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "14ymedio",
+   "paese": "CU",
+   "continente": "Americhe",
+   "url": "https://www.14ymedio.com/rss/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Havana Times",
+   "paese": "CU",
+   "continente": "Americhe",
+   "url": "https://havanatimes.org/feed/",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "La Prensa (Panama)",
+   "paese": "PA",
+   "continente": "Americhe",
+   "url": "https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "La República (Perù)",
+   "paese": "PE",
+   "continente": "Americhe",
+   "url": "https://larepublica.pe/rss/politica.xml",
+   "tipo": "giornale",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Commissione europea",
+   "paese": "BE",
+   "continente": "Europa",
+   "url": "https://ec.europa.eu/commission/presscorner/api/rss?language=en",
+   "tipo": "istituzione",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "BCE",
+   "paese": "DE",
+   "continente": "Europa",
+   "url": "https://www.ecb.europa.eu/rss/press.html",
+   "tipo": "istituzione",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "NASA",
+   "paese": "US",
+   "continente": "Americhe",
+   "url": "https://www.nasa.gov/news-release/feed/",
+   "tipo": "istituzione",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "ISTAT",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.istat.it/feed/",
+   "tipo": "istituzione",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "AIEA",
+   "paese": "AT",
+   "continente": "Europa",
+   "url": "https://www.iaea.org/feeds/topnews",
+   "tipo": "istituzione",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Governo britannico",
+   "paese": "GB",
+   "continente": "Europa",
+   "url": "https://www.gov.uk/search/news-and-communications.atom",
+   "tipo": "istituzione",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Governo italiano",
+   "paese": "IT",
+   "continente": "Europa",
+   "url": "https://www.governo.it/it/rss.xml",
+   "tipo": "istituzione",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  },
+  {
+   "nome": "Eurostat",
+   "paese": "LU",
+   "continente": "Europa",
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/catalogue/rss/en/statistics-update.rss",
+   "tipo": "istituzione",
+   "attivo": true,
+   "termini": "da_verificare",
+   "livello": "giallo",
+   "uso": "conta_e_link",
+   "aggiunta": "2026-11-13"
+  }
+ ],
+ "reddit": [
+  {
+   "sub": "worldnews",
+   "attivo": true
+  },
+  {
+   "sub": "europe",
+   "attivo": true
+  },
+  {
+   "sub": "italy",
+   "attivo": true
+  },
+  {
+   "sub": "nottheonion",
+   "attivo": true,
+   "curiosita": true
+  },
+  {
+   "sub": "Damnthatsinteresting",
+   "attivo": true,
+   "curiosita": true
+  },
+  {
+   "sub": "UpliftingNews",
+   "attivo": true,
+   "curiosita": true
+  }
+ ],
+ "telegram": [
+  {
+   "canale": "repubblica",
+   "nome": "la Repubblica",
+   "paese": "IT",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "corrieredellasera",
+   "nome": "Corriere della Sera",
+   "paese": "IT",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "tgcom24",
+   "nome": "Tgcom24",
+   "paese": "IT",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "pagellapolitica",
+   "nome": "Pagella Politica",
+   "paese": "IT",
+   "affidabilita": "ufficiale",
+   "nota": "fact-checking",
+   "attivo": true
+  },
+  {
+   "canale": "limesonline",
+   "nome": "Limes",
+   "paese": "IT",
+   "affidabilita": "ufficiale",
+   "nota": "geopolitica, feed del sito",
+   "attivo": true
+  },
+  {
+   "canale": "adnkronos",
+   "nome": "Adnkronos (feed)",
+   "paese": "IT",
+   "affidabilita": "ufficiale",
+   "nota": "feed RSS non ufficiale ma fedele",
+   "attivo": true
+  },
+  {
+   "canale": "ansanews",
+   "nome": "ANSA (feed)",
+   "paese": "IT",
+   "affidabilita": "ufficiale",
+   "nota": "feed non ufficiale",
+   "attivo": true
+  },
+  {
+   "canale": "ultimora",
+   "nome": "Ultimora.net",
+   "paese": "IT",
+   "affidabilita": "aggregatore",
+   "nota": "velocissimo, da verificare",
+   "attivo": true
+  },
+  {
+   "canale": "AJENews_Official",
+   "nome": "Al Jazeera English",
+   "paese": "QA",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "guardian",
+   "nome": "The Guardian",
+   "paese": "GB",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "france24_en",
+   "nome": "France 24 English",
+   "paese": "FR",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "bloomberg",
+   "nome": "Bloomberg",
+   "paese": "US",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "bbcworld",
+   "nome": "BBC News World",
+   "paese": "GB",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "elpais",
+   "nome": "El País",
+   "paese": "ES",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "clarincom",
+   "nome": "Clarín",
+   "paese": "AR",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "cnnbrasil",
+   "nome": "CNN Brasil",
+   "paese": "BR",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "animalpolitico",
+   "nome": "Animal Político",
+   "paese": "MX",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "nhkworld",
+   "nome": "NHK World",
+   "paese": "JP",
+   "affidabilita": "ufficiale",
+   "nota": "feed non ufficiale",
+   "attivo": true
+  },
+  {
+   "canale": "kyivindependent_official",
+   "nome": "The Kyiv Independent",
+   "paese": "UA",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "suspilnenews",
+   "nome": "Suspilne (servizio pubblico ucraino)",
+   "paese": "UA",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "bbcrussian",
+   "nome": "BBC Russian",
+   "paese": "GB",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "meduzalive",
+   "nome": "Meduza",
+   "paese": "LV",
+   "affidabilita": "ufficiale",
+   "nota": "media russo indipendente in esilio",
+   "attivo": true
+  },
+  {
+   "canale": "currenttime",
+   "nome": "Current Time (RFE/RL)",
+   "paese": "CZ",
+   "affidabilita": "ufficiale",
+   "nota": "",
+   "attivo": true
+  },
+  {
+   "canale": "trtworld",
+   "nome": "TRT World",
+   "paese": "TR",
+   "affidabilita": "di parte",
+   "nota": "TV di Stato turca",
+   "attivo": true
+  },
+  {
+   "canale": "alarabiya",
+   "nome": "Al Arabiya",
+   "paese": "SA",
+   "affidabilita": "di parte",
+   "nota": "proprietà saudita",
+   "attivo": true
+  },
+  {
+   "canale": "tass_agency",
+   "nome": "TASS",
+   "paese": "RU",
+   "affidabilita": "di parte",
+   "nota": "agenzia di Stato russa: solo come versione di Mosca",
+   "attivo": true
+  },
+  {
+   "canale": "V_Zelenskiy_official",
+   "nome": "Zelensky (canale ufficiale)",
+   "paese": "UA",
+   "affidabilita": "di parte",
+   "nota": "fonte primaria di parte",
+   "attivo": true
+  },
+  {
+   "canale": "idfofficial",
+   "nome": "Esercito israeliano (IDF)",
+   "paese": "IL",
+   "affidabilita": "di parte",
+   "nota": "fonte primaria di parte",
+   "attivo": true
+  },
+  {
+   "canale": "insiderpaper",
+   "nome": "Insider Paper",
+   "paese": "US",
+   "affidabilita": "aggregatore",
+   "nota": "breaking veloce, da verificare",
+   "attivo": true
+  },
+  {
+   "canale": "WatcherGuru",
+   "nome": "Watcher Guru",
+   "paese": "US",
+   "affidabilita": "aggregatore",
+   "nota": "crypto e finanza, spesso esagera",
+   "attivo": true
+  },
+  {
+   "canale": "cointelegraph",
+   "nome": "Cointelegraph",
+   "paese": "US",
+   "affidabilita": "aggregatore",
+   "nota": "crypto",
+   "attivo": true
+  },
+  {
+   "canale": "whale_alert_io",
+   "nome": "Whale Alert",
+   "paese": "WEB",
+   "affidabilita": "aggregatore",
+   "nota": "movimenti crypto, dati automatici",
+   "attivo": true
+  },
+  {
+   "canale": "FabrizioRomano",
+   "nome": "Fabrizio Romano",
+   "paese": "IT",
+   "affidabilita": "aggregatore",
+   "nota": "calciomercato",
+   "attivo": true
+  }
+ ],
+ "agenzie_affidabili": [
+  "abc australia",
+  "adnkronos",
+  "afp",
+  "agence france-presse",
+  "agi",
+  "ansa",
+  "ap news",
+  "associated press",
+  "bbc",
+  "cbc",
+  "deutsche welle",
+  "dpa",
+  "efe",
+  "el país",
+  "kyodo",
+  "le monde",
+  "nhk",
+  "nos",
+  "npr",
+  "rainews",
+  "reuters",
+  "rnz",
+  "rte",
+  "sky tg24",
+  "tagesschau",
+  "the guardian",
+  "the new york times",
+  "the washington post",
+  "yonhap"
+ ],
+ "bot": {
+  "_info": "Regole del bot della redazione. Calore da 0 a 100. Cambia i numeri per avere più o meno proposte.",
+  "post_calore": 62,
+  "post_paesi": 3,
+  "post_italia_calore": 50,
+  "post_italia_fonti": 4,
+  "storia_calore": 42,
+  "verifica_calore": 30,
+  "max_post_al_giro": 3,
+  "max_storie_al_giro": 6
+ },
+ "google_news_argomenti": [
+  {
+   "edizione": "IT:it",
+   "argomenti": [
+    "TECHNOLOGY",
+    "SCIENCE",
+    "SPORTS",
+    "BUSINESS"
+   ]
+  },
+  {
+   "edizione": "US:en-US",
+   "argomenti": [
+    "TECHNOLOGY",
+    "SCIENCE",
+    "SPORTS",
+    "BUSINESS"
+   ]
+  },
+  {
+   "edizione": "GB:en-GB",
+   "argomenti": [
+    "TECHNOLOGY",
+    "SCIENCE",
+    "SPORTS"
+   ]
+  },
+  {
+   "edizione": "FR:fr",
+   "argomenti": [
+    "TECHNOLOGY",
+    "SCIENCE"
+   ]
+  },
+  {
+   "edizione": "DE:de",
+   "argomenti": [
+    "TECHNOLOGY",
+    "SCIENCE"
+   ]
+  },
+  {
+   "edizione": "ES:es",
+   "argomenti": [
+    "TECHNOLOGY",
+    "SCIENCE"
+   ]
+  },
+  {
+   "edizione": "JP:ja",
+   "argomenti": [
+    "TECHNOLOGY",
+    "SCIENCE"
+   ]
+  },
+  {
+   "edizione": "KR:ko",
+   "argomenti": [
+    "TECHNOLOGY"
+   ]
+  },
+  {
+   "edizione": "IN:en-IN",
+   "argomenti": [
+    "TECHNOLOGY",
+    "SCIENCE"
+   ]
+  },
+  {
+   "edizione": "BR:pt-419",
+   "argomenti": [
+    "TECHNOLOGY",
+    "SPORTS"
+   ]
+  }
+ ],
+ "google_news_ricerche": [
+  {
+   "edizione": "IT:it",
+   "sezione": "Curiosità",
+   "q": "curiosità OR incredibile OR bizzarro OR virale OR insolito when:1d"
+  },
+  {
+   "edizione": "US:en-US",
+   "sezione": "Curiosità",
+   "q": "bizarre OR weird OR \"goes viral\" OR \"world record\" OR odd when:1d"
+  },
+  {
+   "edizione": "GB:en-GB",
+   "sezione": "Curiosità",
+   "q": "bizarre OR weird OR \"world record\" OR quirky when:1d"
+  },
+  {
+   "edizione": "ES:es",
+   "sezione": "Curiosità",
+   "q": "insólito OR curioso OR récord when:1d"
+  },
+  {
+   "edizione": "FR:fr",
+   "sezione": "Curiosità",
+   "q": "insolite OR incroyable OR record when:1d"
+  },
+  {
+   "edizione": "DE:de",
+   "sezione": "Curiosità",
+   "q": "kurios OR skurril OR Rekord when:1d"
+  },
+  {
+   "edizione": "JP:ja",
+   "sezione": "Curiosità",
+   "q": "珍しい OR 話題 OR 世界記録 when:1d"
+  },
+  {
+   "edizione": "IT:it",
+   "sezione": "Tecnologia",
+   "q": "intelligenza artificiale OR smartphone OR app OR spazio when:1d"
+  },
+  {
+   "edizione": "US:en-US",
+   "sezione": "Tecnologia",
+   "q": "AI OR OpenAI OR Apple OR Nvidia OR SpaceX when:1d"
+  }
+ ],
+ "domini_bloccati": [
+  "uco.es"
+ ],
+ "_info_veloci": "Canali Telegram 'aggregatore' (Insider Paper, Watcher Guru...) sono le fonti veloci: le loro notizie entrano come VOCE (rossa) e salgono quando una testata le conferma.",
+ "ai": {
+  "_info": "Intelligenza artificiale per traduzioni e sintesi. Si accende solo se su GitHub c'è il secret AI_KEY. Senza chiave il sito funziona lo stesso, gratis: titoli nella lingua originale e sintesi scritte a mano su Notion.",
+  "provider": "gemini",
+  "modello": "gemini-3.1-flash-lite",
+  "prezzo_input_per_milione": 0.25,
+  "prezzo_output_per_milione": 1.5,
+  "budget_mensile_usd": 5,
+  "traduci_titoli": true,
+  "sintesi_al_giro": 8,
+  "_info_provider": "Predefinito: Gemini (una sola chiave per testi e voce). Si può passare ad anthropic (claude-haiku-5-5, 0,10/0,50 $), openai o mistral con le variabili AI_PROVIDER e AI_MODEL: i prezzi dei modelli noti li prende da ai.py.",
+  "titoli_al_giro": 120
+ },
+ "instagram": {
+  "_info": "Pubblicazione dei caroselli con l'API ufficiale di Meta. Si accende solo con i secret IG_USER_ID e IG_TOKEN. Pubblica solo le schede Notion con la casella 'Pubblica su Instagram' spuntata da una persona.",
+  "max_al_giorno": 10,
+  "versione_api": "v23.0"
+ },
+ "sito": {
+  "_info": "Dati che compaiono nelle pagine Fonti e Privacy. Il responsabile (nome e cognome, o la società) è obbligatorio prima di andare online.",
+  "responsabile": "Redazione Adolos",
+  "email": "redazioneadolos@gmail.com"
+ },
+ "indice": {
+  "_info": "Indice di viralità 0-100: ordina la coda su Notion. 'ai': voto AI sul testo (serve AI_KEY). Si calibra da solo con i risultati di Instagram.",
+  "ai": true,
+  "max_ai_al_giro": 10
+ },
+ "immagini": {
+  "_info": "Ordine: 1) foto con licenza libera da Wikimedia Commons (autore e licenza sulla copertina e nella didascalia); 2) solo se 'ai' è true e c'è la chiave: scena generica creata con Gemini, senza persone riconoscibili, con l'etichetta 'Immagine illustrativa generata con AI', massimo 'ai_max_al_giorno' al giorno e 'ai_budget_mensile_usd' al mese; 3) fondo rosso Adolos. Mai volti veri creati con AI, mai foto dei giornali.",
+  "ai": true,
+  "wikimedia": true,
+  "licenze_ammesse": [
+   "CC0",
+   "Public domain",
+   "CC BY",
+   "CC BY-SA"
+  ],
+  "ai_modelli": [
+   "gemini-nano-banana-2.1",
+   "gemini-3.1-flash-image"
+  ],
+  "ai_max_al_giorno": 3,
+  "ai_budget_mensile_usd": 3.5,
+  "ai_costo_immagine_usd": 0.07
+ },
+ "punto_cieco": {
+  "_info": "Punto cieco italiano: almeno min_estero testate straniere da min_paesi_esteri paesi e al massimo max_italia testate italiane (tra quelle che leggiamo). Solo in Italia: almeno min_italia_solo testate italiane e nessuna estera.",
+  "min_estero": 5,
+  "min_paesi_esteri": 3,
+  "max_italia": 0,
+  "min_italia_solo": 3
+ },
+ "_info_uso": "uso: 'completo' (titoli e descrizioni passati all'AI per scrivere titoli e sintesi nuovi) oppure 'conta_e_link' (la testata serve solo a contare chi ne parla e a mettere il link). Sul sito nessun titolo o testo delle testate viene mostrato in ogni caso.",
+ "voce": {
+  "_info": "Voce AI per video e audio (engine/voce.py, Gemini TTS a pagamento: nell'UE la quota gratuita non si può usare per app e siti). Chiave: GEMINI_API_KEY. Etichetta obbligatoria 'Voce generata con AI'. Solo voci predefinite; replica solo della voce di un membro della redazione con consenso scritto.",
+  "attiva": true,
+  "modello": "gemini-3.8-flash-tts",
+  "voce": "Charon",
+  "stile": "Italian news presenter: clear, calm and neutral, steady brisk pace, no drama",
+  "budget_mensile_usd": 1.0,
+  "costo_per_10_secondi_usd": 0.00225,
+  "max_caratteri": 1500
+ },
+ "testate_note": {
+  "_info": "Testate senza feed nell'elenco: servono a dare nome e paese ai link aggiunti dalla redazione in 'Altre fonti' su Notion.",
+  "nbcsports.com": [
+   "NBC Sports",
+   "US"
+  ],
+  "espn.com": [
+   "ESPN",
+   "US"
+  ],
+  "reuters.com": [
+   "Reuters",
+   "GB"
+  ],
+  "apnews.com": [
+   "AP News",
+   "US"
+  ],
+  "cnn.com": [
+   "CNN",
+   "US"
+  ],
+  "bloomberg.com": [
+   "Bloomberg",
+   "US"
+  ],
+  "ft.com": [
+   "Financial Times",
+   "GB"
+  ],
+  "wsj.com": [
+   "The Wall Street Journal",
+   "US"
+  ],
+  "theathletic.com": [
+   "The Athletic",
+   "US"
+  ],
+  "uefa.com": [
+   "UEFA",
+   "CH"
+  ],
+  "vavel.com": [
+   "VAVEL",
+   "ES"
+  ],
+  "sofascore.com": [
+   "Sofascore",
+   "HR"
+  ],
+  "bbc.com": [
+   "BBC News",
+   "GB"
+  ],
+  "bbc.co.uk": [
+   "BBC News",
+   "GB"
+  ],
+  "nytimes.com": [
+   "The New York Times",
+   "US"
+  ]
+ },
+ "_budget": "Tetto totale circa 9,5 $ al mese (circa 9 €): testi 5 $ (ai), immagini AI 3,5 $ (immagini), voce 1 $ (voce). Ogni parte si ferma da sola quando arriva al suo tetto."
 }

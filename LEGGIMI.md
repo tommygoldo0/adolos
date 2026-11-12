@@ -31,7 +31,7 @@ Un sito di notizie che si aggiorna da solo ogni 10 minuti. Legge i feed ufficial
 
 ## Come funziona
 
-1. **Raccoglie**: i feed RSS ufficiali di 74 testate e l'API di GDELT, 18 paesi diversi a ogni giro.
+1. **Raccoglie**: i feed RSS ufficiali di circa 300 testate di 97 paesi (letti 12 alla volta) e l'API di GDELT, 18 paesi diversi a ogni giro. Ogni testata entra al livello **giallo**: di lei usiamo solo nome, paese, data e link. I termini letti finora sono in `engine/fonti.json` (`termini_nota`).
 2. **Traduce i titoli**, solo con servizi ufficiali: l'AI configurata oppure DeepL. Senza chiave i titoli restano in lingua originale.
 3. **Raggruppa**: se Le Monde, NHK e BBC parlano dello stesso fatto, diventa una sola notizia con tutte le fonti.
 4. **Valuta**: assegna il calore (quanto se ne parla) e l'attendibilità (da rosso a verde, sale con ogni testata indipendente).

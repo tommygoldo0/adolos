@@ -51,7 +51,7 @@ CONTINENTI = {
     "Americhe": "US CA MX CU HT DO GT HN PA CR JM BR AR CO CL PE VE EC UY PY BO",
     "Asia e Medio Oriente": "JP KR CN TW HK IN PK BD LK NP TH VN ID MY PH SG KZ MN MM KH LA AF IR IQ IL PS TR SA AE QA KW JO LB SY YE GE AM AZ",
     "Africa": "EG MA DZ TN LY SD ET KE UG TZ NG GH SN CI CM ZA NA BW ZW ZM AO MZ RW CD CG",
-    "Oceania": "AU NZ",
+    "Oceania": "AU NZ FJ PG",
 }
 CONT_DI = {cc: c for c, codici in CONTINENTI.items() for cc in codici.split()}
 

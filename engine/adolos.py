@@ -41,7 +41,7 @@ UA = "Mozilla/5.0 (compatible; AdolosBot/1.0; +https://github.com)"
 PAESI = {
     "US": "Stati Uniti", "GB": "Regno Unito", "IT": "Italia", "FR": "Francia", "DE": "Germania", "ES": "Spagna",
     "PT": "Portogallo", "BR": "Brasile", "MX": "Messico", "AR": "Argentina", "CO": "Colombia", "CL": "Cile",
-    "PE": "Perù", "VE": "Venezuela", "CU": "Cuba", "EC": "Ecuador", "UY": "Uruguay", "PY": "Paraguay",
+    "PE": "Perù", "VE": "Venezuela", "CU": "Cuba", "EC": "Ecuador", "UY": "Uruguay", "PY": "Paraguay", "FJ": "Figi", "PG": "Papua Nuova Guinea",
     "JP": "Giappone", "KR": "Corea del Sud", "CN": "Cina", "TW": "Taiwan", "HK": "Hong Kong", "IN": "India",
     "PK": "Pakistan", "BD": "Bangladesh", "LK": "Sri Lanka", "NP": "Nepal", "TH": "Thailandia", "VN": "Vietnam",
     "ID": "Indonesia", "MY": "Malesia", "PH": "Filippine", "SG": "Singapore", "AU": "Australia", "NZ": "Nuova Zelanda",
@@ -416,19 +416,48 @@ def raccogli_dal_vivo(fonti):
     attive = {"rss_diretti": True, "gdelt": True, "google_news": False, "telegram_web": False, "reddit": False,
               **{k: v for k, v in fonti.get("fonti_attive", {}).items() if not k.startswith("_")}}
     print("Fonti attive:", ", ".join(k for k, v in attive.items() if v))
+    t0 = time.time()
     if attive["rss_diretti"]:
         print("Feed RSS ufficiali delle testate")
-        for f in fonti["rss_diretti"]:
-            if f.get("attivo", True) and f.get("termini") != "no":
-                prova(f["nome"], da_rss, f)
+        from concurrent.futures import ThreadPoolExecutor
+        da_leggere = [f for f in fonti["rss_diretti"] if f.get("attivo", True) and f.get("termini") != "no"]
+
+        def leggi(f):
+            try:
+                return da_rss(f), None
+            except Exception as e:
+                return None, e
+        # 12 feed alla volta (siti diversi); i risultati si mettono in fila nell'ordine dell'elenco, come prima
+        with ThreadPoolExecutor(max_workers=12) as gruppo:
+            esiti = list(gruppo.map(leggi, da_leggere))
+        for f, (risultato, errore) in zip(da_leggere, esiti):
+            if errore is None:
+                tutti.extend(risultato)
+                print(f"  ok  {f['nome']:<40} {len(risultato):>4}")
+            else:
+                errori.append(f"{f['nome']}: {errore}")
+                print(f"  --  {f['nome']:<40} errore: {str(errore)[:80]}")
+        print(f"Feed letti: {sum(1 for _, e in esiti if e is None)} su {len(da_leggere)} in {time.time() - t0:.0f} secondi")
     if attive["gdelt"]:
         quanti = int(fonti.get("gdelt_per_giro", 12))
         print(f"GDELT, API aperta (paesi a rotazione: {quanti} per giro)")
         gdelt = fonti["gdelt_paesi"]
         giro = int(time.time() // 600) % max(1, -(-len(gdelt) // quanti))
+        t1, rifiuti = time.time(), 0
         for nome, codice in gdelt[giro * quanti:(giro + 1) * quanti]:
+            prima = len(errori)
             prova("GDELT " + nome, da_gdelt, nome, codice)
+            if len(errori) > prima and "429" in errori[-1]:
+                rifiuti += 1
+                if rifiuti >= 3:
+                    # "troppe richieste" tre volte di fila: insistere non serve e non è educato. Si riprova al prossimo giro.
+                    print("GDELT chiede di rallentare (429): per questo giro mi fermo qui")
+                    break
+                time.sleep(14)      # pausa più lunga dopo un rifiuto
+            else:
+                rifiuti = 0
             time.sleep(6)  # GDELT chiede massimo 1 richiesta ogni 5 secondi
+        print(f"GDELT letto in {time.time() - t1:.0f} secondi")
     # le fonti qui sotto sono spente: si riaccendono in fonti.json SOLO con un permesso o un contratto
     if attive["google_news"]:
         print("Google News")
