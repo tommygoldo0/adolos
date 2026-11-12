@@ -1,7 +1,8 @@
 """
 ADOLOS – approvazione da Telegram
 =================================
-Il bot manda nel gruppo della redazione ogni PACCHETTO PRONTO (copertina, titolo, sintesi) con due pulsanti:
+Il bot manda nel gruppo della redazione ogni PACCHETTO PRONTO (tutte le slide del carosello in un album, poi
+titolo e sintesi) con due pulsanti:
 "Approva (sito)" e "Scarta". Una persona preme; il motore legge il clic e cambia lo Stato della scheda Notion.
 
 Regole:
@@ -36,14 +37,17 @@ def attivo():
     return bool(redazione._env("TELEGRAM_BOT_TOKEN") and redazione._env("TELEGRAM_CHAT_ID") and redazione.notion_attivo())
 
 
-def _tg(metodo, dati=None, foto=None):
-    """Chiamata all'API ufficiale di Telegram. Gli errori non contengono mai l'indirizzo (che ha dentro il token)."""
+def _tg(metodo, dati=None, foto=None, allegati=None):
+    """Chiamata all'API ufficiale di Telegram. Gli errori non contengono mai l'indirizzo (che ha dentro il token).
+    foto = una sola immagine (bytes); allegati = {nome: bytes} per un album (sendMediaGroup, "attach://nome")."""
     import requests
     url = f"https://api.telegram.org/bot{redazione._env('TELEGRAM_BOT_TOKEN')}/{metodo}"
     try:
-        if foto is not None:
+        if foto is not None or allegati:
             campi = {k: (v if isinstance(v, str) else json.dumps(v)) for k, v in (dati or {}).items()}
-            r = requests.post(url, data=campi, files={"photo": ("copertina.jpg", foto, "image/jpeg")}, timeout=40)
+            file = {"photo": ("copertina.jpg", foto, "image/jpeg")} if foto is not None else \
+                   {n: (n + ".jpg", b, "image/jpeg") for n, b in allegati.items()}
+            r = requests.post(url, data=campi, files=file, timeout=90)
         else:
             r = requests.post(url, json=dati or {}, timeout=25)
         corpo = r.json()
@@ -74,8 +78,9 @@ def _tastiera(sid, zona, conferma=False):
                                  {"text": "🗑 Scarta", "callback_data": f"no:{sid}"}]]}
 
 
-def _copertina(s, gruppo, testi):
-    """Anteprima della copertina del carosello (stessa grafica che uscirà dopo l'approvazione). Restituisce (bytes, credito)."""
+def _slide(s, gruppo, testi):
+    """Anteprima di TUTTE le slide del carosello (la stessa grafica che uscirà dopo l'approvazione).
+    Le disegna il codice, non un'AI: non costa niente. Restituisce (lista di JPEG in bytes, credito della foto)."""
     import social
     from sito import CONT_DI
     from adolos import PAESI
@@ -86,10 +91,12 @@ def _copertina(s, gruppo, testi):
     except Exception as e:
         print("Telegram: foto della copertina non cercata:", str(e)[:120])
     t = {**testi, "_immagine": foto} if foto else testi
-    img = social.carosello(s, t, PAESI, CONT_DI)[0]
-    buf = io.BytesIO()
-    img.convert("RGB").save(buf, "JPEG", quality=85)
-    return buf.getvalue(), (foto or {}).get("credito", "")
+    fatte = []
+    for img in social.carosello(s, t, PAESI, CONT_DI)[:10]:       # Telegram: al massimo 10 immagini per album
+        buf = io.BytesIO()
+        img.convert("RGB").save(buf, "JPEG", quality=85)
+        fatte.append(buf.getvalue())
+    return fatte, (foto or {}).get("credito", "")
 
 
 def _testo_pacchetto(p, s, credito=""):
@@ -124,7 +131,8 @@ def invia_pacchetti(storie, gruppi=None):
     if not attivo():
         return 0
     st = redazione._leggi_inviati()
-    mandati = st.setdefault("pacchetti", [])
+    # "pacchetti_v2": con il nuovo stile e l'album completo i pacchetti ancora da decidere si rimandano una volta
+    mandati = st.setdefault("pacchetti_v2", [])
     try:
         righe = redazione._tutte_le_righe(redazione._env("NOTION_DB_REDAZIONE"), FILTRO_PRONTI)
     except Exception as e:
@@ -144,30 +152,38 @@ def invia_pacchetti(storie, gruppi=None):
             continue                       # pacchetto incompleto o bloccato dal controllo legale: niente pulsanti
         s = per_id.get(sid)
         zona = lt(p.get("Zona"))
-        foto, credito = None, ""
+        slide, credito = [], ""
         if s:
             try:
                 punti = [x.strip(" -•\t") for x in lt(p.get("Punti carosello")).splitlines() if x.strip(" -•\t")]
-                foto, credito = _copertina(s, (gruppi or {}).get(sid), {"titolo": lt(p.get("Titolo Adolos")),
-                                                                         "sintesi": lt(p.get("Sintesi")), "punti": punti[:4]})
+                slide, credito = _slide(s, (gruppi or {}).get(sid), {"titolo": lt(p.get("Titolo Adolos")),
+                                                                     "sintesi": lt(p.get("Sintesi")), "punti": punti[:4]})
             except Exception as e:
-                print("Telegram: copertina non disegnata per", sid, "-", str(e)[:120])
+                print("Telegram: carosello non disegnato per", sid, "-", str(e)[:120])
         testo = _testo_pacchetto(p, s, credito)
         tasti = _tastiera(sid, zona)
         if r.get("url"):
             tasti["inline_keyboard"].append([{"text": "Apri la scheda su Notion", "url": r["url"]}])
         try:
-            if foto:
-                _tg("sendPhoto", {"chat_id": chat, "caption": testo[:1020], "parse_mode": "HTML", "reply_markup": tasti}, foto=foto)
-            else:
-                _tg("sendMessage", {"chat_id": chat, "text": testo, "parse_mode": "HTML",
-                                    "disable_web_page_preview": True, "reply_markup": tasti})
+            # un album non può avere pulsanti: prima tutte le slide, poi il messaggio con testo e pulsanti in risposta
+            risposta = {}
+            if len(slide) >= 2:
+                try:
+                    album = _tg("sendMediaGroup", {"chat_id": chat, "media": [
+                        {"type": "photo", "media": f"attach://s{i}"} for i in range(len(slide))]},
+                        allegati={f"s{i}": b for i, b in enumerate(slide)})
+                    if album:
+                        risposta = {"reply_to_message_id": album[0]["message_id"], "allow_sending_without_reply": True}
+                except Exception as e:
+                    print("Telegram: album non inviato, mando solo il testo:", str(e)[:160])
+            _tg("sendMessage", {"chat_id": chat, "text": testo, "parse_mode": "HTML",
+                                "disable_web_page_preview": True, "reply_markup": tasti, **risposta})
             mandati.append(r["id"])
             fatte += 1
         except Exception as e:
             print("Telegram: pacchetto non inviato:", str(e)[:160])
             break
-    st["pacchetti"] = mandati[-3000:]
+    st["pacchetti_v2"] = mandati[-3000:]
     redazione._scrivi_inviati(st)
     print(f"Telegram: {fatte} pacchetti pronti inviati con i pulsanti")
     return fatte

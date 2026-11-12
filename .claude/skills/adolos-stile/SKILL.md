@@ -17,20 +17,30 @@ description: Usala per qualsiasi testo o grafica di Adolos: voce del brand, fras
 "Senza precedenti" (se non è vero), "Un vero e proprio", "Andiamo a vedere", "Scopriamolo insieme",
 elenchi di tre aggettivi, frasi con trattini a effetto, domande retoriche in apertura.
 
-## Grafica (dalla pagina @adolos.it, ottobre 2026)
-- **Copertina**: foto a tutto schermo con un velo rosso/bordeaux sopra (circa 60-70%), titolo bianco
-  MAIUSCOLO in un sans molto spesso e stretto, allineato a sinistra, su 3-6 righe; logo **α rosso** in
-  alto a destra. Struttura frequente: "TEMA:" + riga vuota + la frase forte ("PONTE SULLO STRETTO: / MA QUINDI,
-  QUANTI POSTI DI LAVORO GENERERÀ?").
-- **Slide interne**: fondo rosso pieno o chiaro, testo bianco o nero, "Scorri →" in basso a destra.
-- **Colori** (gli stessi del sito): rosso `#d3202b`, rosso scuro `#9c141c`, bordeaux `#3a0b0e` / `#521116`,
-  giallo `#ffd400` solo per gli accenti (es. "Punto cieco italiano"), bianco, carta `#f7f2eb`.
-- **Font**: sul sito Archivo (titoli, stretto e spesso) e Newsreader (testo). Nei caroselli del motore
-  Instrument Sans e Lora. Nel modello Canva usate un sans spesso e stretto simile ad Archivo.
-- **Formati**: carosello 1080×1350 (4:5), video 1080×1920 (9:16). Ultima slide sempre con le fonti.
-- **Foto della copertina**: SOLO con licenza libera (Wikimedia, con crediti) o vostre. Le foto prese da
-  articoli o da Google non si usano più, anche sotto il velo rosso: il velo non toglie i diritti del fotografo.
-  Senza foto adatta: fondo rosso pieno con il titolo, come nei post "Il mercato azionario sta per crollare?".
+## Grafica: stile A "Prima pagina" (scelto da Tommaso il 13 novembre 2026)
+Il codice è in `engine/social.py` (funzione `carosello`). Il vecchio stile tutto rosso non si usa più.
+- **Fondo carta** `#f7f2eb`, **testo nero** `#111111`. Il rosso `#d3202b` resta per la α e per i numeri grandi
+  (`#b3151f` per le etichette piccole, che si leggono meglio). **Giallo** `#ffd400` solo come evidenziatore.
+- **Riga in alto, uguale su ogni slide**: etichetta in maiuscolo spaziato a sinistra, **α rossa** a destra, filetto nero spesso.
+- **Copertina**: titolo MAIUSCOLO, Archivo 900 stretto, molto grande, allineato a sinistra. **Una sola parola
+  evidenziata in giallo**: l'ultima che contiene un numero, altrimenti l'ultima parola lunga. Sotto, una frase in
+  Newsreader. Se il Titolo Adolos ha i due punti ("Spagna, primo sciopero dal 2012: la protesta è per la casa"),
+  la parte prima diventa l'etichetta e la parte dopo il titolo grande: scrivi i titoli così.
+- **Barra "Chi ne parla" in fondo alla copertina**: un quadratino nero per testata + "7 testate · 6 paesi".
+  È il segno fisso di Adolos: non toglierla e non cambiarle posto.
+- **Slide dei fatti**: una frase grande per slide. Se la frase ha un dato con unità (1.170 euro, 48%, 3 miliardi)
+  il numero va enorme e rosso, la frase sotto in Newsreader. Quindi: un numero forte per punto, non due.
+- **"Chi ne parla"**: fondo nero, testo carta, etichette gialle, elenco testate e paesi, barra dei continenti.
+- **Ultima slide**: "Tutti i link agli articoli su adolos.it" con adolos.it in giallo, elenco delle testate,
+  nota sull'AI e credito della foto.
+- **Foto in copertina**: in un riquadro sotto la riga in alto, a colori, senza filtri né veli, con il credito sotto.
+  SOLO licenza libera (Wikimedia, con autore e licenza) o foto vostre. Una foto senza licenza scritta NON è libera,
+  anche se ritrae una persona pubblica: i diritti sono del fotografo. Senza foto adatta: solo titolo.
+- **Punto cieco**: etichetta gialla "IL MONDO NE PARLA, L'ITALIA NO" sopra il titolo.
+- **Font**: Archivo (titoli) e Newsreader (testo), gli stessi del sito. **Formati**: carosello 1080×1350 (4:5),
+  video 1080×1920 (9:16).
+- **Titoli che funzionano**: massimo 8-10 parole dopo i due punti, il fatto o il dato per primo, la parola più
+  forte in fondo (è quella che finisce in giallo). Il gancio non dice mai più della sintesi (skill `adolos-viralita`).
 
 ## Il tratto che ci distingue: "Chi ne parla" e "Punto cieco"
 - Su ogni notizia mostriamo quante testate italiane ed estere la raccontano e da quali continenti.
