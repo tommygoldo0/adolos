@@ -14,7 +14,10 @@ Lavori da solo: non fare domande. Se una cosa è dubbia, salta quella notizia e 
    schede con Stato = "In revisione" e Pacchetto pronto = no: le ha chieste una persona (da Notion, o da Telegram
    con i pulsanti "Prepara carosello" / "Prepara video"; in quel caso nel campo "Motivo del bot" c'è scritto
    "Richiesto carosello" o "Richiesto video"). Preparale tutte, prima delle altre e in più rispetto alle N:
-   - per loro bastano 2 testate indipendenti (non 3) e la zona può essere anche Rossa: in zona rossa il controllo
+   - **una sola testata**: si può fare solo se è una notizia positiva o di curiosità, non cronaca e non accuse a
+     persone. Ogni fatto si scrive "secondo <testata>", anche nel titolo o nel primo punto, e in "Perché virale"
+     scrivi "UNA SOLA FONTE". Se è cronaca o riguarda accuse, non prepararla: spiega perché in "Motivo del bot";
+   - per le altre bastano 2 testate indipendenti (non 3) e la zona può essere anche Rossa: in zona rossa il controllo
      legale lo fa sempre l'agente `adolos-legale`, e l'approvazione su Telegram chiede comunque due persone;
    - se c'è "Richiesto video", cura in modo particolare il campo **Copione TikTok**: 25-30 secondi letti a voce,
      prima frase con il fatto, una frase per scena (5-7 scene), ultima frase con le fonti. Niente frasi che
@@ -35,7 +38,9 @@ Lavori da solo: non fare domande. Se una cosa è dubbia, salta quella notizia e 
    testata si scrive con "secondo <testata>". Se le fonti non si aprono o si contraddicono, salta.
 5. Scrivi il pacchetto seguendo le skill `adolos-stile` e `adolos-viralita`, e compila sulla scheda:
    Titolo Adolos, Sintesi (60-90 parole), Punti carosello (3-4 righe brevi), Didascalia Instagram
-   (con "Fonti: ..." e "Testo preparato con l'aiuto dell'AI e verificato dalla redazione."),
+   (seria, in 3-5 paragrafi brevi: il fatto, il contesto, il numero o le due versioni, e in fondo "Fonti: ...".
+   NON mettere hashtag, emoji, "Segui..." né la nota sull'AI: li aggiunge il motore in fondo, sempre uguali.
+   Non nominare il sito),
    Copione TikTok, Testo Facebook, Angoli proposti, Ganci alternativi, Perché virale.
    Se hai usato articoli non elencati nella scheda, mettine i link in "Altre fonti".
 6. Controllo legale con la skill `adolos-controllo-legale` (meglio: fallo fare all'agente `adolos-legale`,

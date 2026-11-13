@@ -513,6 +513,8 @@ def carosello(s, testi, nomi_paesi, cont_di):
     _marchio(d)
     parti = _divide_titolo(titolo)
     kicker = parti[0].rstrip(":") if len(parti) == 2 else (s.get("sezione") or "Notizie")
+    if n_test == 1 and testate:            # una sola testata: si dichiara subito da chi arriva la notizia
+        kicker = "Secondo " + testate[0]["fonte"]
     frase = parti[-1]
     cieco = s.get("punto_cieco") == "italia"
     sotto = (testi.get("sintesi") or "").split(". ")[0].strip().rstrip(".") + "."
@@ -599,6 +601,10 @@ def carosello(s, testi, nomi_paesi, cont_di):
     y = _testo_a(d, ", ".join(nomi) + ".", MARGINE, y + 28, larg, _news(44), bianco, 1.25, max_righe=6)
     nota = "Testo preparato con l'aiuto dell'AI e verificato dalla redazione."   # regola 9: sempre dichiarato
     y_nota = H - 250
+    social_riga = "Segui @adolos.it"
+    f_segui = _arch(54, 900)
+    d.rectangle((MARGINE - 12, y_nota - 232, MARGINE + d.textlength(social_riga, font=f_segui) + 16, y_nota - 150), fill=GIALLO)
+    d.text((MARGINE, y_nota - 191), social_riga, font=f_segui, fill=INK_A, anchor="lm")
     if foto.get("credito"):
         _testo_a(d, "Foto di copertina: " + foto["credito"].removeprefix("Foto: "), MARGINE, y_nota - 78, larg, _news(26, corsivo=True), GRIGIO_CHIARO, 1.25, max_righe=2)
     _testo_a(d, nota, MARGINE, y_nota, larg, _news(30, corsivo=True), GRIGIO_CHIARO, 1.25, max_righe=2)
@@ -697,13 +703,36 @@ def genera_caroselli(storie, gruppi=None):
 
 
 # ---------------------------------------------------------------- Instagram (API ufficiale)
+NOTA_AI = "Testo preparato con l'aiuto dell'AI e verificato dalla redazione."
+SEGUI = "Segui @adolos.it per sapere chi ne parla nel mondo."
+HASHTAG_FISSI = ["#adolos", "#oltreifatti", "#notizie", "#informazione"]
+HASHTAG_SEZIONE = {"Italia": "#italia", "Politica": "#politica", "Mondo": "#esteri", "Economia": "#economia",
+                   "Società": "#società", "Tecnologia": "#tecnologia", "Sport": "#sport", "Curiosità": "#curiosità"}
+
+
 def didascalia(s, t):
-    """Didascalia Instagram con i crediti della foto (obbligatori per le licenze CC BY e per le immagini AI)."""
+    """Didascalia Instagram, sempre con la stessa forma seria: testo, fonti, "Segui @adolos.it", nota sull'AI,
+    credito della foto (obbligatorio per le licenze CC BY) e, in fondo dopo tre punti, pochi hashtag sempre uguali.
+    Vale anche per le didascalie scritte su Notion: gli hashtag sparsi nel testo vengono spostati in fondo."""
+    import re
     testo = _didascalia_base(s, t)
+    tag_testo = re.findall(r"#[\wÀ-ÿ]+", testo)
+    testo = re.sub(r"[ \t]*#[\wÀ-ÿ]+", "", testo)
+    # il sito non si nomina finché non è pronto
+    testo = re.sub(r"[:,;]?\s*(?:i link sono sul sito|link agli articoli originali su adolos\.it)\.?", ".", testo, flags=re.I)
+    testo = testo.replace(NOTA_AI, "").replace(SEGUI, "")
+    testo = re.sub(r"\.{2,}", ".", testo)
+    testo = re.sub(r"[ \t]+\n", "\n", testo)
+    testo = re.sub(r"\n{3,}", "\n\n", testo).strip()
+    parti = [testo, SEGUI, NOTA_AI]
     cred = (s.get("immagine") or {}).get("credito")
     if cred and cred not in testo:
-        testo = testo.rstrip() + "\n\n" + cred + "."
-    return testo[:2190]
+        parti.append(cred + ".")
+    tag = list(dict.fromkeys(HASHTAG_FISSI + [HASHTAG_SEZIONE.get(s.get("sezione"), "")] +
+                             [x.lower() for x in tag_testo if x.lower() not in HASHTAG_FISSI][:3]))
+    coda = "\n.\n.\n.\n" + " ".join(x for x in tag if x)
+    corpo = "\n\n".join(parti)
+    return corpo[:2190 - len(coda)].rstrip() + coda
 
 
 def _didascalia_base(s, t):
@@ -713,11 +742,7 @@ def _didascalia_base(s, t):
                               if f.get("tipo") != "social"))[:4]
     altre = s["n_fonti"] - len(nomi)
     fonti = ", ".join(nomi) + (f" e altre {altre} testate" if altre > 0 else "")
-    nota = "Testo preparato con l'aiuto dell'AI e verificato dalla redazione."
-    tag = {"Italia": "#italia", "Politica": "#politica", "Mondo": "#esteri", "Economia": "#economia",
-           "Società": "#società", "Tecnologia": "#tecnologia", "Sport": "#sport", "Curiosità": "#curiosità"}
-    return (f"{t.get('titolo') or s['titolo']}\n\n{t['sintesi']}\n\nFonti: {fonti}.\n\n"
-            f"{nota}\n\n#adolos #oltreifatti {tag.get(s.get('sezione'), '#notizie')}")[:2150]
+    return f"{t.get('titolo') or s['titolo']}\n\n{t['sintesi']}\n\nFonti: {fonti}."
 
 
 def _ig(metodo, percorso, **dati):

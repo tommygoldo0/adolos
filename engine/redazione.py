@@ -409,12 +409,19 @@ def invia_telegram(storie, st, indici=None):
     fatte = 0
     indici = indici or {}
     storie = sorted(storie, key=lambda s: indici.get(s["id"], {}).get("indice", 0), reverse=True)
-    for s in storie:
-        if fatte >= 8:
+    per_sezione = {}               # al massimo 2 avvisi per categoria a ogni giro: così arrivano tutte le categorie,
+    for s in storie:               # non solo quella del giorno (sport, economia, tecnologia, curiosità...)
+        if fatte >= 10:
             break
         if s["bot"] not in etichetta or s["id"] in st["telegram"]:
             continue
-        righe = [f"<b>{etichetta[s['bot']]}</b> · {html.escape(s['sezione'])} · calore {s['calore']}",
+        if per_sezione.get(s["sezione"], 0) >= 2:
+            continue
+        per_sezione[s["sezione"]] = per_sezione.get(s["sezione"], 0) + 1
+        ind0 = indici.get(s["id"]) or {}
+        urgente = ind0.get("indice", 0) >= 85 and s["n_fonti"] >= 5       # punto E: notizia grossa, si vede subito
+        righe = [("🔴 <b>ULTIM'ORA</b> · " if urgente else "") +
+                 f"<b>{html.escape(s['sezione']).upper()}</b> · {etichetta[s['bot']]} · calore {s['calore']}",
                  "", f"<b>{html.escape(s['titolo'])}</b>", "",
                  html.escape(s.get("bot_motivo", "")),
                  "Fonti: " + html.escape(", ".join(f["fonte"] for f in s["fonti"][:5]))]
@@ -429,7 +436,7 @@ def invia_telegram(storie, st, indici=None):
             righe.append(f"Italia {cop.get('italia', 0)} · estero {cop.get('estero', 0)} testate"
                          + (" · PUNTO CIECO ITALIANO" if s.get("punto_cieco") == "italia" else ""))
         if s["n_fonti"] < 2:
-            righe.append("⚠️ Una sola testata: da verificare, non è un pacchetto")
+            righe.append("⚠️ Una sola testata: se la fai preparare esce con scritto da chi arriva")
         if _nota_proprieta(s):
             righe.append(html.escape(_nota_proprieta(s, "Proprietà (da verificare): ")))
         ind = indici.get(s["id"])

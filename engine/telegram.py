@@ -129,7 +129,7 @@ def _testo_pacchetto(p, s, credito=""):
     if zona == "Rossa":
         righe.append("🔴 Zona rossa: controlla nomi, accuse e fonti prima di approvare.")
     if testate is not None:
-        righe.append(f"Testate: {int(testate)}" + (" (meno di 2: non approvare)" if testate < 2 else ""))
+        righe.append(f"Testate: {int(testate)}" + (" (una sola: nel testo deve esserci scritto \"secondo …\")" if testate < 2 else ""))
     fonti = lt(p.get("Fonti")).splitlines()
     if fonti:
         righe.append("Fonti: " + html.escape(fonti[0][:160]))
@@ -352,8 +352,7 @@ def _richiedi(tipo, sid, chi):
     if stato not in DA_DECIDERE:
         return "no", f"Già decisa: la scheda è \"{stato}\"."
     testate = (p.get("Redazioni indipendenti") or {}).get("number") or 0
-    if testate < 2:
-        return "no", "Per ora ne parla una sola testata: serve almeno una seconda fonte prima di prepararla."
+    una_sola = testate < 2         # si può preparare, ma ogni fatto va attribuito: "secondo <testata>"
     nota = lt(p.get("Motivo del bot"))
     if f"Richiesto {cosa}" in nota:
         return "no", f"Il {cosa} è già stato richiesto: arriva con la prossima edizione."
@@ -364,7 +363,8 @@ def _richiedi(tipo, sid, chi):
         "Stato": {"status": {"name": "In revisione"}}, "Motivo del bot": {"rich_text": redazione._testo(nota[-1900:])}}})
     titolo = lt(p.get("Titolo Adolos")) or lt(p.get("Titolo"))
     print(f"Telegram: {sid} richiesto {cosa} (premuto da una persona nel gruppo)")
-    return "richiesta", f"{'🎬' if cosa == 'video' else '🎠'} {chi} ha chiesto il {cosa}: «{titolo[:80]}». Lo prepara la prossima edizione."
+    return "richiesta", (f"{'🎬' if cosa == 'video' else '🎠'} {chi} ha chiesto il {cosa}: «{titolo[:70]}». Lo prepara la prossima edizione."
+                         + (" Una sola testata: uscirà con scritto da chi arriva." if una_sola else ""))
 
 
 def leggi_risposte():
