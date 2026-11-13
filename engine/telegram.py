@@ -183,6 +183,9 @@ def invia_pacchetti(storie, gruppi=None):
                                 "disable_web_page_preview": True, "reply_markup": tasti, **risposta})
             mandati.append(r["id"])
             fatte += 1
+            # nel registro si deve capire come è arrivato ogni pacchetto
+            print(f"Telegram: pacchetto {sid} inviato " + (f"con {len(slide)} slide" + (" e foto" if credito else ", senza foto")
+                  if slide else "solo testo (la notizia non è più tra quelle delle ultime 48 ore: niente slide)"))
         except Exception as e:
             print("Telegram: pacchetto non inviato:", str(e)[:160])
             break
