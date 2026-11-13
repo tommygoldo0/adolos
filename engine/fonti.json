@@ -4124,7 +4124,16 @@
  "instagram": {
   "_info": "Pubblicazione dei caroselli con l'API ufficiale di Meta. Si accende solo con i secret IG_USER_ID e IG_TOKEN. Pubblica solo le schede Notion con la casella 'Pubblica su Instagram' spuntata da una persona.",
   "max_al_giorno": 10,
-  "versione_api": "v23.0"
+  "versione_api": "v23.0",
+  "orari": [
+   "08:00",
+   "12:30",
+   "18:30",
+   "21:00"
+  ],
+  "per_orario": 1,
+  "finestra_minuti": 50,
+  "_info_orari": "Coda di pubblicazione: le notizie approvate con la spunta 'Pubblica su Instagram' escono una per orario (ora italiana), partendo da quella con l'indice più alto. Lista vuota = si pubblica subito."
  },
  "sito": {
   "_info": "Dati che compaiono nelle pagine Fonti e Privacy. Il responsabile (nome e cognome, o la società) è obbligatorio prima di andare online.",

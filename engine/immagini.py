@@ -70,22 +70,60 @@ def _pulisci_html(t):
     return re.sub(r"\s+", " ", t).strip()[:80]
 
 
-def candidati(titolo, titoli_fonti):
-    """Nomi propri della notizia, i più citati prima. Preferisce i nomi completi ("Elon Musk")."""
+def candidati(titolo, titoli_fonti, testo=""):
+    """Chi o cosa cercare per la foto, in ordine. Regole per non sbagliare soggetto:
+    - una PERSONA si cerca solo con nome e cognome (un cognome da solo può essere un'altra persona o un luogo:
+      "Nasser" è anche un ospedale di Gaza). I nomi completi si prendono anche dalla sintesi;
+    - un LUOGO è la parola prima della virgola o dei due punti a inizio titolo ("Spagna, ...", "Gaza: ...");
+    - prima le persone citate nel titolo, poi il luogo, poi le persone citate solo nella sintesi."""
+    titolo = titolo or ""
     conta = {}
-    for t in [titolo] * 3 + list(titoli_fonti):
-        for m in re.finditer(r"(?:[A-ZÀ-Ý][\w'’\-]+)(?:\s+(?:de|di|da|van|von|bin|al|del|la)?\s*[A-ZÀ-Ý][\w'’\-]+)*", t or ""):
+    for t in [titolo] * 3 + list(titoli_fonti) + [testo or ""]:
+        for m in re.finditer(r"(?:[A-ZÀ-Ý][\w'’\-]+)(?:\s+(?:de|di|da|van|von|bin|al|del|la)?\s*[A-ZÀ-Ý][\w'’\-]+)+", t or ""):
             parole = m.group(0).split()
             while parole and parole[0].lower() in INIZI:
                 parole = parole[1:]
-            nome = " ".join(parole)
-            if len(nome) < 4 or all(p.lower() in GENERICHE for p in parole):
+            if len(parole) < 2 or all(x.lower() in GENERICHE for x in parole):
                 continue
-            if not parole or (m.start() == 0 and len(parole) == 1 and nome.lower() not in (titolo or "").lower()[1:]):
-                continue      # parola maiuscola solo perché è a inizio titolo
-            conta[nome] = conta.get(nome, 0) + (3 if len(parole) > 1 else 1)
-    nel_titolo = [n for n in conta if any(p.lower() in (titolo or "").lower() for p in n.split())]
-    return sorted(nel_titolo, key=lambda n: -conta[n])[:5]
+            nome = " ".join(parole)
+            conta[nome] = conta.get(nome, 0) + 1
+    def nel_titolo(n):
+        return any(x.lower() in titolo.lower() for x in n.split() if len(x) > 3)
+    persone_titolo = sorted((n for n in conta if nel_titolo(n)), key=lambda n: -conta[n])
+    altre = sorted((n for n in conta if not nel_titolo(n)), key=lambda n: -conta[n])
+    luogo = re.match(r"\s*([A-ZÀ-Ý][\w'’\-]+(?:\s+[A-ZÀ-Ý][\w'’\-]+)?)\s*[,:]", titolo)
+    luoghi = [luogo.group(1)] if luogo and luogo.group(1).lower() not in INIZI else []
+    visti, out = set(), []
+    for n in persone_titolo[:3] + luoghi + altre[:2]:
+        if n.lower() not in visti:
+            visti.add(n.lower())
+            out.append(n)
+    return out[:5]
+
+
+def _foto_da_wikidata(lingua, nome):
+    """Se la pagina Wikipedia non ha una foto adatta (per paesi e regioni di solito c'è la bandiera), chiede a
+    Wikidata la foto del soggetto o, per un paese o una regione, quella della sua capitale."""
+    import requests
+    r = requests.get(f"https://{lingua}.wikipedia.org/w/api.php", headers=UA, timeout=20, params={
+        "action": "query", "titles": nome, "prop": "pageprops", "ppprop": "wikibase_item", "redirects": 1, "format": "json"}).json()
+    qid = next((p.get("pageprops", {}).get("wikibase_item") for p in r.get("query", {}).get("pages", {}).values()), None)
+    def proprieta(q, prop):
+        e = requests.get("https://www.wikidata.org/w/api.php", headers=UA, timeout=20, params={
+            "action": "wbgetclaims", "entity": q, "property": prop, "format": "json"}).json()
+        v = [c.get("mainsnak", {}).get("datavalue", {}).get("value") for c in e.get("claims", {}).get(prop, [])]
+        return next((x for x in v if x), None)
+    if not qid:
+        return None, ""
+    foto = proprieta(qid, "P18")
+    if isinstance(foto, str) and not foto.lower().endswith((".svg", ".gif")):
+        return foto.replace(" ", "_"), ""
+    capitale = proprieta(qid, "P36")
+    if isinstance(capitale, dict) and capitale.get("id"):
+        foto = proprieta(capitale["id"], "P18")
+        if isinstance(foto, str) and not foto.lower().endswith((".svg", ".gif")):
+            return foto.replace(" ", "_"), " (capitale)"
+    return None, ""
 
 
 def _licenza_ok(nome, ammesse):
@@ -104,11 +142,14 @@ def wikimedia(nomi, ammesse):
                     "redirects": 1, "format": "json"}).json()
                 pagine = list(r.get("query", {}).get("pages", {}).values())
                 file = next((p.get("pageimage") for p in pagine if p.get("pageimage")), None)
-                if not file or file.lower().endswith((".svg", ".gif")):
-                    continue      # niente bandiere, mappe e loghi in svg
+                nota = ""
+                if not file or file.lower().endswith((".svg", ".gif")):      # niente bandiere, mappe e loghi in svg
+                    file, nota = _foto_da_wikidata(lingua, nome)
+                    if not file:
+                        continue
                 info = requests.get("https://commons.wikimedia.org/w/api.php", headers=UA, timeout=20, params={
                     "action": "query", "titles": f"File:{file}", "prop": "imageinfo",
-                    "iiprop": "url|extmetadata|size", "iiurlwidth": 1400, "format": "json"}).json()
+                    "iiprop": "url|extmetadata|size", "iiurlwidth": 2200, "format": "json"}).json()
                 pag = list(info.get("query", {}).get("pages", {}).values())
                 ii = (pag[0].get("imageinfo") or [None])[0] if pag else None
                 if not ii:
@@ -117,11 +158,11 @@ def wikimedia(nomi, ammesse):
                 lic = meta.get("LicenseShortName", {}).get("value", "")
                 if meta.get("NonFree", {}).get("value") or not _licenza_ok(lic, ammesse):
                     continue
-                if min(ii.get("width", 0), ii.get("height", 0)) < 500:
-                    continue
+                if min(ii.get("width", 0), ii.get("height", 0)) < 700:
+                    continue      # troppo piccola per riempire la copertina
                 dati = requests.get(ii.get("thumburl") or ii["url"], headers=UA, timeout=30).content
                 autore = _pulisci_html(meta.get("Artist", {}).get("value", "")) or "autore su Wikimedia Commons"
-                return {"tipo": "wikimedia", "dati": dati, "soggetto": nome,
+                return {"tipo": "wikimedia", "dati": dati, "soggetto": nome + nota,
                         "credito": f"Foto: {autore} · {lic} · Wikimedia Commons",
                         "pagina": ii.get("descriptionurl", "")}
             except Exception as e:
@@ -192,8 +233,9 @@ def ai_scena(scena, c):
 
 
 # ---------------------------------------------------------------- principale
-def per_storia(s, titolo, gruppo, scena=""):
-    """Restituisce {"file": percorso, "credito": ..., "tipo": ...} oppure None. Una sola ricerca per notizia."""
+def per_storia(s, titolo, gruppo, scena="", testo=""):
+    """Restituisce {"file": percorso, "credito": ..., "tipo": ...} oppure None. Una sola ricerca per notizia.
+    'testo' = la sintesi: serve a trovare nome e cognome delle persone citate nel titolo solo per cognome."""
     c = conf()
     reg = _leggi(REGISTRO, {})
     gia = reg.get(s["id"])
@@ -205,7 +247,7 @@ def per_storia(s, titolo, gruppo, scena=""):
     trovata = None
     if c["wikimedia"]:
         titoli = [x.get("titolo_it") or x.get("titolo", "") for x in gruppo if x.get("tipo") != "social"]
-        trovata = wikimedia(candidati(titolo, titoli), c["licenze_ammesse"])
+        trovata = wikimedia(candidati(titolo, titoli, testo), c["licenze_ammesse"])
     if not trovata:
         trovata = ai_scena(scena, c)
     if not trovata:

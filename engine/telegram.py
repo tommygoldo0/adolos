@@ -89,7 +89,8 @@ def _slide(s, gruppo, testi):
     foto = None
     try:
         import immagini
-        foto = immagini.per_storia(s, testi.get("titolo") or s["titolo"], gruppo or [])
+        foto = immagini.per_storia(s, testi.get("titolo") or s["titolo"], gruppo or [], "",
+                                   (testi.get("sintesi") or "") + " " + " ".join(testi.get("punti") or []))
     except Exception as e:
         print("Telegram: foto della copertina non cercata:", str(e)[:120])
     t = {**testi, "_immagine": foto} if foto else testi
@@ -133,8 +134,8 @@ def invia_pacchetti(storie, gruppi=None):
     if not attivo():
         return 0
     st = redazione._leggi_inviati()
-    # "pacchetti_v2": con il nuovo stile e l'album completo i pacchetti ancora da decidere si rimandano una volta
-    mandati = st.setdefault("pacchetti_v2", [])
+    # "pacchetti_v3": con lo stile "Foto" i pacchetti ancora da decidere si rimandano una volta
+    mandati = st.setdefault("pacchetti_v3", [])
     try:
         righe = redazione._tutte_le_righe(redazione._env("NOTION_DB_REDAZIONE"), FILTRO_PRONTI)
     except Exception as e:
@@ -185,7 +186,7 @@ def invia_pacchetti(storie, gruppi=None):
         except Exception as e:
             print("Telegram: pacchetto non inviato:", str(e)[:160])
             break
-    st["pacchetti_v2"] = mandati[-3000:]
+    st["pacchetti_v3"] = mandati[-3000:]
     redazione._scrivi_inviati(st)
     print(f"Telegram: {fatte} pacchetti pronti inviati con i pulsanti")
     return fatte
@@ -282,7 +283,7 @@ def _decidi(azione, sid, chi, uid=""):
     titolo = lt(p.get("Titolo Adolos")) or lt(p.get("Titolo"))
     print(f"Telegram: {sid} -> {nuovo} (premuto da una persona nel gruppo)")
     if azione == "ok":
-        return "fatto", f"✅ Approvata da {firma}: «{titolo[:100]}». Sul sito tra pochi minuti. Per Instagram: spunta su Notion."
+        return "fatto", f"✅ Approvata da {firma}: «{titolo[:100]}». Per Instagram: spunta su Notion, esce al prossimo orario (8:00, 12:30, 18:30, 21:00)."
     return "fatto", f"🗑 Scartata da {chi}: «{titolo[:120]}»."
 
 
