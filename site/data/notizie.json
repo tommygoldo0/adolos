@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-13T06:47:25.100817+00:00",
+ "aggiornato": "2026-11-13T07:03:10.513147+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -136,7 +136,7 @@
  },
  "storie": [],
  "dati": {
-  "articoli_analizzati": 17777,
+  "articoli_analizzati": 17954,
   "storie": 400,
   "paesi_coperti": 97,
   "fonti_diverse": 279,
@@ -144,57 +144,57 @@
    [
     "AR",
     "Argentina",
-    1835
+    1850
    ],
    [
     "FR",
     "Francia",
-    1371
+    1398
    ],
    [
     "BR",
     "Brasile",
-    1348
+    1361
    ],
    [
     "US",
     "Stati Uniti",
-    1255
+    1254
    ],
    [
     "DE",
     "Germania",
-    1179
+    1202
    ],
    [
     "IT",
     "Italia",
-    981
+    1009
    ],
    [
     "ES",
     "Spagna",
-    871
+    877
    ],
    [
     "GB",
     "Regno Unito",
-    780
+    779
    ],
    [
     "IN",
     "India",
-    632
+    636
    ],
    [
     "AU",
     "Australia",
-    496
+    502
    ],
    [
     "NG",
     "Nigeria",
-    472
+    471
    ],
    [
     "MX",
@@ -209,12 +209,12 @@
    [
     "PH",
     "Filippine",
-    311
+    313
    ],
    [
     "AT",
     "Austria",
-    222
+    225
    ],
    [
     "NL",
@@ -224,7 +224,7 @@
    [
     "JP",
     "Giappone",
-    191
+    194
    ],
    [
     "PT",
@@ -234,12 +234,17 @@
    [
     "BE",
     "Belgio",
-    169
+    172
    ],
    [
     "ZA",
     "Sudafrica",
-    160
+    161
+   ],
+   [
+    "HK",
+    "Hong Kong",
+    158
    ],
    [
     "QA",
@@ -247,19 +252,14 @@
     157
    ],
    [
-    "HK",
-    "Hong Kong",
-    157
-   ],
-   [
     "KR",
     "Corea del Sud",
-    154
+    153
    ],
    [
     "PK",
     "Pakistan",
-    151
+    150
    ],
    [
     "SE",
@@ -270,31 +270,31 @@
   "per_lingua": [
    [
     "en",
-    8789
+    8847
    ],
    [
     "es",
-    3237
+    3255
    ],
    [
     "pt",
-    1523
+    1536
    ],
    [
     "de",
-    1367
+    1393
    ],
    [
     "fr",
-    1229
+    1255
    ],
    [
     "it",
-    852
+    880
    ],
    [
     "nl",
-    222
+    225
    ],
    [
     "sv",
@@ -314,21 +314,21 @@
    ],
    [
     "da",
-    52
+    55
    ]
   ],
   "per_categoria": [
    [
     "Altro",
-    217
+    224
    ],
    [
     "Politica",
-    56
+    52
    ],
    [
     "Esteri e conflitti",
-    44
+    42
    ],
    [
     "Cronaca",
@@ -336,19 +336,19 @@
    ],
    [
     "Tecnologia e crypto",
-    19
+    18
    ],
    [
     "Società",
     17
    ],
    [
-    "Economia",
-    8
+    "Sport",
+    7
    ],
    [
-    "Sport",
-    6
+    "Economia",
+    7
    ],
    [
     "Clima e ambiente",
@@ -358,7 +358,7 @@
   "fonti_top": [
    [
     "Infobae",
-    1163
+    1175
    ],
    [
     "G1",
@@ -382,125 +382,125 @@
    ],
    [
     "Punch",
-    292
+    290
    ],
    [
     "Times of India",
-    253
+    255
    ],
    [
     "L'Équipe",
     250
    ],
    [
-    "Clarín",
-    208
+    "Sky TG24",
+    213
    ],
    [
-    "Sky TG24",
-    201
+    "Clarín",
+    211
    ],
    [
     "Inquirer",
-    197
+    199
    ]
   ],
   "per_ora": [
    [
     23,
-    311
+    255
    ],
    [
     22,
-    282
+    304
    ],
    [
     21,
-    375
+    433
    ],
    [
     20,
-    432
+    397
    ],
    [
     19,
-    315
+    256
    ],
    [
     18,
-    215
+    225
    ],
    [
     17,
-    275
+    315
    ],
    [
     16,
-    366
+    374
    ],
    [
     15,
-    367
+    419
    ],
    [
     14,
-    606
+    613
    ],
    [
     13,
-    582
+    629
    ],
    [
     12,
-    722
+    717
    ],
    [
     11,
-    707
+    717
    ],
    [
     10,
-    797
+    783
    ],
    [
     9,
-    784
+    817
    ],
    [
     8,
-    741
+    733
    ],
    [
     7,
-    656
+    677
    ],
    [
     6,
-    669
+    562
    ],
    [
     5,
-    452
+    472
    ],
    [
     4,
-    469
+    521
    ],
    [
     3,
-    503
+    481
    ],
    [
     2,
-    580
+    627
    ],
    [
     1,
-    666
+    651
    ],
    [
     0,
-    685
+    639
    ]
   ],
   "approvate_non_sul_sito": {
@@ -515,10 +515,13 @@
  "errori_fonti": [
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
+  "Telex: 403 Client Error: Forbidden for url: https://telex.hu/rss",
   "The Slovenia Times: 403 Client Error: Forbidden for url: https://sloveniatimes.com/feed",
   "Khmer Times: 403 Client Error: Forbidden for url: https://www.khmertimeskh.com/feed/",
   "The Herald: 403 Client Error: Forbidden for url: https://www.heraldonline.co.zw/feed/",
+  "The EastAfrican Business: 404 Client Error: Not Found for url: https://www.businessdailyafrica.com/bd/rss.xml",
   "La Prensa (Panama): 403 Client Error: Forbidden for url: https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
+  "Commissione europea: HTTPSConnectionPool(host='ec.europa.eu', port=443): Read timed out. (read timeout=20)",
   "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT syria: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:syria&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
