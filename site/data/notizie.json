@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-13T12:10:19.093907+00:00",
+ "aggiornato": "2026-11-13T12:17:26.164903+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -136,7 +136,7 @@
  },
  "storie": [],
  "dati": {
-  "articoli_analizzati": 21912,
+  "articoli_analizzati": 22017,
   "storie": 400,
   "paesi_coperti": 97,
   "fonti_diverse": 279,
@@ -144,32 +144,37 @@
    [
     "AR",
     "Argentina",
-    2415
+    2446
    ],
    [
     "DE",
     "Germania",
-    1739
+    1744
    ],
    [
     "FR",
     "Francia",
-    1687
+    1699
    ],
    [
     "BR",
     "Brasile",
-    1667
+    1675
    ],
    [
     "IT",
     "Italia",
-    1342
+    1348
    ],
    [
     "US",
     "Stati Uniti",
-    1320
+    1327
+   ],
+   [
+    "GB",
+    "Regno Unito",
+    951
    ],
    [
     "ES",
@@ -177,19 +182,14 @@
     951
    ],
    [
-    "GB",
-    "Regno Unito",
-    947
-   ],
-   [
     "IN",
     "India",
-    712
+    716
    ],
    [
     "NG",
     "Nigeria",
-    591
+    590
    ],
    [
     "AU",
@@ -204,17 +204,22 @@
    [
     "PH",
     "Filippine",
-    395
+    393
    ],
    [
     "SG",
     "Singapore",
-    356
+    354
    ],
    [
     "AT",
     "Austria",
-    244
+    245
+   ],
+   [
+    "NL",
+    "Paesi Bassi",
+    241
    ],
    [
     "JP",
@@ -222,19 +227,14 @@
     240
    ],
    [
-    "NL",
-    "Paesi Bassi",
-    239
-   ],
-   [
     "PY",
     "Paraguay",
-    235
+    238
    ],
    [
     "BE",
     "Belgio",
-    229
+    231
    ],
    [
     "PT",
@@ -249,17 +249,17 @@
    [
     "ZA",
     "Sudafrica",
-    191
+    193
    ],
    [
     "PK",
     "Pakistan",
-    181
+    182
    ],
    [
     "NO",
     "Norvegia",
-    173
+    174
    ],
    [
     "CO",
@@ -270,31 +270,31 @@
   "per_lingua": [
    [
     "en",
-    10107
+    10135
    ],
    [
     "es",
-    4103
+    4141
    ],
    [
     "de",
-    1925
+    1931
    ],
    [
     "pt",
-    1882
+    1890
    ],
    [
     "fr",
-    1602
+    1615
    ],
    [
     "it",
-    1180
+    1187
    ],
    [
     "nl",
-    259
+    260
    ],
    [
     "sv",
@@ -302,7 +302,7 @@
    ],
    [
     "pl",
-    114
+    117
    ],
    [
     "ja",
@@ -320,26 +320,26 @@
   "per_categoria": [
    [
     "Altro",
-    211
+    214
    ],
    [
     "Politica",
-    58
+    55
    ],
    [
     "Esteri e conflitti",
-    48
+    49
    ],
    [
     "Cronaca",
     21
    ],
    [
-    "Società",
-    18
+    "Tecnologia e crypto",
+    17
    ],
    [
-    "Tecnologia e crypto",
+    "Società",
     17
    ],
    [
@@ -358,11 +358,11 @@
   "fonti_top": [
    [
     "Infobae",
-    1628
+    1649
    ],
    [
     "G1",
-    706
+    710
    ],
    [
     "El Universal",
@@ -374,7 +374,7 @@
    ],
    [
     "Folha de S.Paulo",
-    354
+    353
    ],
    [
     "Globo Esporte",
@@ -386,121 +386,121 @@
    ],
    [
     "Times of India",
-    303
+    308
    ],
    [
     "Die Zeit",
-    303
+    305
    ],
    [
     "Clarín",
-    288
-   ],
-   [
-    "Inquirer",
-    266
+    298
    ],
    [
     "L'Équipe",
+    269
+   ],
+   [
+    "Inquirer",
     265
    ]
   ],
   "per_ora": [
    [
     23,
-    232
+    250
    ],
    [
     22,
-    327
+    331
    ],
    [
     21,
-    383
+    375
    ],
    [
     20,
-    460
+    514
    ],
    [
     19,
-    601
+    578
    ],
    [
     18,
-    641
+    676
    ],
    [
     17,
-    746
+    732
    ],
    [
     16,
-    723
+    749
    ],
    [
     15,
-    771
+    765
    ],
    [
     14,
-    797
+    781
    ],
    [
     13,
-    788
+    764
    ],
    [
     12,
-    634
+    642
    ],
    [
     11,
-    545
+    515
    ],
    [
     10,
-    464
+    471
    ],
    [
     9,
-    539
+    538
    ],
    [
     8,
-    476
+    496
    ],
    [
     7,
-    649
+    654
    ],
    [
     6,
-    684
+    688
    ],
    [
     5,
-    739
+    724
    ],
    [
     4,
-    684
+    697
    ],
    [
     3,
-    851
+    886
    ],
    [
     2,
-    949
+    954
    ],
    [
     1,
-    1129
+    1141
    ],
    [
     0,
-    1010
+    1022
    ]
   ],
   "approvate_non_sul_sito": {
@@ -515,13 +515,15 @@
  "errori_fonti": [
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
+  "The East African: 404 Client Error: Not Found for url: https://www.theeastafrican.co.ke/rss.xml",
   "Telex: 403 Client Error: Forbidden for url: https://telex.hu/rss",
   "The Slovenia Times: 403 Client Error: Forbidden for url: https://sloveniatimes.com/feed",
   "Khmer Times: 403 Client Error: Forbidden for url: https://www.khmertimeskh.com/feed/",
   "The Herald: 403 Client Error: Forbidden for url: https://www.heraldonline.co.zw/feed/",
+  "Newsweek: 404 Client Error: Not Found for url: https://www.newsweek.com/rss",
   "La Prensa (Panama): 403 Client Error: Forbidden for url: https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
-  "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT syria: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:syria&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
+  "GDELT moldova: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:moldova&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT albania: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:albania&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT bosniaandherzegovina: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:bosniaandherzegovina&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
