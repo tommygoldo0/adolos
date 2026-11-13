@@ -10,8 +10,19 @@ Lavori da solo: non fare domande. Se una cosa è dubbia, salta quella notizia e 
 
 ## Passi
 1. Leggi `CLAUDE.md`. Le regole lì dentro valgono sempre.
-2. Su Notion (data source `collection://57ca1ff1-e682-4f7e-af95-747a0658bb5e`) prendi le schede con
-   Stato = "Da valutare", Pacchetto pronto = no, create nelle ultime 24 ore, ordinate per "Indice virale".
+2. **Prima le richieste.** Su Notion (data source `collection://57ca1ff1-e682-4f7e-af95-747a0658bb5e`) prendi le
+   schede con Stato = "In revisione" e Pacchetto pronto = no: le ha chieste una persona (da Notion, o da Telegram
+   con i pulsanti "Prepara carosello" / "Prepara video"; in quel caso nel campo "Motivo del bot" c'è scritto
+   "Richiesto carosello" o "Richiesto video"). Preparale tutte, prima delle altre e in più rispetto alle N:
+   - per loro bastano 2 testate indipendenti (non 3) e la zona può essere anche Rossa: in zona rossa il controllo
+     legale lo fa sempre l'agente `adolos-legale`, e l'approvazione su Telegram chiede comunque due persone;
+   - se c'è "Richiesto video", cura in modo particolare il campo **Copione TikTok**: 25-30 secondi letti a voce,
+     prima frase con il fatto, una frase per scena (5-7 scene), ultima frase con le fonti. Niente frasi che
+     funzionano solo scritte;
+   - se una richiesta non si può fare (fonti che non si aprono, una sola testata, fatti che si contraddicono) scrivi
+     il motivo nel campo "Motivo del bot" e rimetti Stato = "Da valutare": così chi l'ha chiesta lo vede.
+   Poi prendi le schede con Stato = "Da valutare", Pacchetto pronto = no, create nelle ultime 24 ore, ordinate
+   per "Indice virale".
 3. Scegli le migliori N con queste regole:
    - solo Zona Verde; mai Zona Rossa;
    - almeno 3 "Redazioni indipendenti";

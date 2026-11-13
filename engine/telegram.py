@@ -21,6 +21,10 @@ Regole:
   - Sulla scheda resta scritto chi ha premuto e quando (campo "Motivo del bot").
   - Il token non finisce mai nel registro: gli errori riportano solo il codice e la descrizione di Telegram.
 
+Gli AVVISI (le notizie che crescono) hanno due pulsanti in più: "Prepara carosello" e "Prepara video". Il clic di una
+persona mette la scheda "In revisione" e la prossima edizione la prepara per prima. Ogni pacchetto arriva anche
+come file .zip con tutte le slide in qualità piena, da scaricare.
+
 Serve: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, NOTION_TOKEN, NOTION_DB_REDAZIONE. Se manca qualcosa non fa niente.
 """
 
@@ -41,15 +45,17 @@ def attivo():
     return bool(redazione._env("TELEGRAM_BOT_TOKEN") and redazione._env("TELEGRAM_CHAT_ID") and redazione.notion_attivo())
 
 
-def _tg(metodo, dati=None, foto=None, allegati=None):
+def _tg(metodo, dati=None, foto=None, allegati=None, documento=None):
     """Chiamata all'API ufficiale di Telegram. Gli errori non contengono mai l'indirizzo (che ha dentro il token).
-    foto = una sola immagine (bytes); allegati = {nome: bytes} per un album (sendMediaGroup, "attach://nome")."""
+    foto = una sola immagine (bytes); allegati = {nome: bytes} per un album (sendMediaGroup, "attach://nome");
+    documento = (nome del file, bytes) per mandare un file da scaricare (sendDocument)."""
     import requests
     url = f"https://api.telegram.org/bot{redazione._env('TELEGRAM_BOT_TOKEN')}/{metodo}"
     try:
-        if foto is not None or allegati:
+        if foto is not None or allegati or documento:
             campi = {k: (v if isinstance(v, str) else json.dumps(v)) for k, v in (dati or {}).items()}
             file = {"photo": ("copertina.jpg", foto, "image/jpeg")} if foto is not None else \
+                   {"document": (documento[0], documento[1], "application/zip")} if documento else \
                    {n: (n + ".jpg", b, "image/jpeg") for n, b in allegati.items()}
             r = requests.post(url, data=campi, files=file, timeout=90)
         else:
@@ -187,6 +193,18 @@ def invia_pacchetti(storie, gruppi=None):
                         risposta = {"reply_to_message_id": album[0]["message_id"], "allow_sending_without_reply": True}
                 except Exception as e:
                     print("Telegram: album non inviato, mando solo il testo:", str(e)[:160])
+            if len(slide) >= 2:            # lo stesso carosello come file, in qualità piena, da scaricare con un tocco
+                try:
+                    import zipfile
+                    pacco = io.BytesIO()
+                    with zipfile.ZipFile(pacco, "w", zipfile.ZIP_STORED) as z:
+                        for i, b in enumerate(slide, 1):
+                            z.writestr(f"adolos-{sid}-{i:02d}.jpg", b)
+                    _tg("sendDocument", {"chat_id": chat, "caption": "Carosello da scaricare (tutte le slide, 1080×1350)",
+                                         "disable_notification": True, **risposta},
+                        documento=(f"adolos-carosello-{sid}.zip", pacco.getvalue()))
+                except Exception as e:
+                    print("Telegram: file del carosello non inviato:", str(e)[:160])
             _tg("sendMessage", {"chat_id": chat, "text": testo, "parse_mode": "HTML",
                                 "disable_web_page_preview": True, "reply_markup": tasti, **risposta})
             mandati.append(r["id"])
@@ -321,6 +339,34 @@ def _decidi(azione, sid, chi, uid=""):
     return "scartata", f"🗑 Scartata da {chi}: «{titolo[:120]}»."
 
 
+def _richiedi(tipo, sid, chi):
+    """Una persona chiede dal telefono di preparare il carosello ("req") o il video ("reqv") di una notizia.
+    La scheda passa a "In revisione" (= "mi piace, preparala") e la richiesta resta scritta: la prepara la prossima
+    edizione, con la precedenza sulle altre. Non approva e non pubblica niente."""
+    lt = redazione._leggi_testo
+    pagina = _scheda_per_id(sid)
+    if not pagina:
+        return "no", "Scheda non trovata su Notion."
+    p = pagina["properties"]
+    stato, cosa = lt(p.get("Stato")), "video" if tipo == "reqv" else "carosello"
+    if stato not in DA_DECIDERE:
+        return "no", f"Già decisa: la scheda è \"{stato}\"."
+    testate = (p.get("Redazioni indipendenti") or {}).get("number") or 0
+    if testate < 2:
+        return "no", "Per ora ne parla una sola testata: serve almeno una seconda fonte prima di prepararla."
+    nota = lt(p.get("Motivo del bot"))
+    if f"Richiesto {cosa}" in nota:
+        return "no", f"Il {cosa} è già stato richiesto: arriva con la prossima edizione."
+    if cosa == "carosello" and lt(p.get("Pacchetto pronto")) == "si":
+        return "no", "Il pacchetto è già pronto: cercalo tra i pacchetti con i pulsanti Approva."
+    nota = (nota + f"\nRichiesto {cosa} da Telegram da {chi} il {_ora_roma()}.").strip()
+    redazione._notion("PATCH", f"pages/{pagina['id']}", {"properties": {
+        "Stato": {"status": {"name": "In revisione"}}, "Motivo del bot": {"rich_text": redazione._testo(nota[-1900:])}}})
+    titolo = lt(p.get("Titolo Adolos")) or lt(p.get("Titolo"))
+    print(f"Telegram: {sid} richiesto {cosa} (premuto da una persona nel gruppo)")
+    return "richiesta", f"{'🎬' if cosa == 'video' else '🎠'} {chi} ha chiesto il {cosa}: «{titolo[:80]}». Lo prepara la prossima edizione."
+
+
 def leggi_risposte():
     """Legge i clic sui pulsanti e li applica a Notion. Restituisce quante schede ha cambiato.
     Non tiene memoria: Telegram conserva i clic finché non li confermiamo, quindi nessun clic si perde."""
@@ -354,6 +400,18 @@ def leggi_risposte():
                 _tg("editMessageReplyMarkup", {**dove, "reply_markup": tasti})
                 _tg("answerCallbackQuery", {"callback_query_id": cq["id"], "text":
                     "Annullato." if azione == "indietro" else "Zona rossa: conferma solo se hai controllato nomi, accuse e fonti."})
+                continue
+            if azione in ("req", "reqv") and sid:
+                esito, frase = _richiedi(azione, sid, _nome(cq))
+                _tg("answerCallbackQuery", {"callback_query_id": cq["id"], "text": frase[:190], "show_alert": esito == "no"})
+                if esito == "richiesta":
+                    cambiate += 1
+                    # resta l'altro pulsante (e il link): quello premuto si toglie
+                    righe = [[t for t in riga if t.get("callback_data") != f"{azione}:{sid}"]
+                             for riga in ((msg.get("reply_markup") or {}).get("inline_keyboard") or [])]
+                    _tg("editMessageReplyMarkup", {**dove, "reply_markup": {"inline_keyboard": [r for r in righe if r]}})
+                    _tg("sendMessage", {"chat_id": dove["chat_id"], "text": frase, "reply_to_message_id": dove["message_id"],
+                                        "allow_sending_without_reply": True, "disable_notification": True})
                 continue
             if azione not in ("ok", "ig", "igdopo", "no") or not sid:
                 _tg("answerCallbackQuery", {"callback_query_id": cq["id"], "text": "Pulsante non riconosciuto."})

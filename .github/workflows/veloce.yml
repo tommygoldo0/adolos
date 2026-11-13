@@ -40,6 +40,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_APPROVATORI: ${{ vars.TELEGRAM_APPROVATORI }}
           TELEGRAM_ATTESA_SECONDA: ${{ vars.TELEGRAM_ATTESA_SECONDA }}
+          SITO_URL: ${{ vars.SITO_URL }}
         run: python engine/veloce.py controlla --attesa 14
 
   pubblica:

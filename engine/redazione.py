@@ -437,11 +437,16 @@ def invia_telegram(storie, st, indici=None):
             righe.append(f"Indice virale {ind['indice']}/100 · zona {ind['zona'].lower()}")
         if s.get("controllo"):
             righe.append("⚠️ Controllo obbligatorio")
-        if sito:
-            righe.append(f'<a href="{sito}/storie/{s["id"]}.html">Apri sul sito</a>')
         try:
-            r = requests.post(f"https://api.telegram.org/bot{token}/sendMessage", timeout=15, json={
-                "chat_id": chat, "text": "\n".join(righe), "parse_mode": "HTML", "disable_web_page_preview": True})
+            corpo = {"chat_id": chat, "text": "\n".join(righe), "parse_mode": "HTML", "disable_web_page_preview": True}
+            pagina = st["notion"].get(s["id"])
+            if pagina and notion_attivo():
+                # una persona sceglie dal telefono quali notizie far preparare: il clic mette la scheda "In revisione"
+                corpo["reply_markup"] = {"inline_keyboard": [
+                    [{"text": "🎠 Prepara carosello", "callback_data": f"req:{s['id']}"},
+                     {"text": "🎬 Prepara video", "callback_data": f"reqv:{s['id']}"}],
+                    [{"text": "Apri la scheda su Notion", "url": "https://www.notion.so/" + pagina.replace("-", "")}]]}
+            r = requests.post(f"https://api.telegram.org/bot{token}/sendMessage", timeout=15, json=corpo)
             r.raise_for_status()
             st["telegram"].append(s["id"])
             fatte += 1
