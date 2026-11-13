@@ -333,7 +333,9 @@ def _titolo_a(img, d, testo, x, y, larghezza, altezza, evidenzia=None, colore=IN
         cx = x
         for i, p, w in r:
             if evidenzia is not None and i == evidenzia:
-                d.rectangle((cx - 12, y + alto - size * 0.07, cx + w + 12, y + basso + size * 0.07), fill=colore_evid)
+                # evidenziatore un po' storto, come passato a mano: non un rettangolo perfetto
+                y0, y1, k = y + alto - size * 0.07, y + basso + size * 0.07, size * 0.035
+                d.polygon([(cx - 14, y0 + k), (cx + w + 12, y0 - k), (cx + w + 16, y1 - k * 0.4), (cx - 10, y1 + k)], fill=colore_evid)
                 _scrivi_stretto(img, cx, y, p, font, INK_A, stretto)
             else:
                 _scrivi_stretto(img, cx, y, p, font, colore, stretto)
@@ -353,43 +355,95 @@ def _testo_a(d, testo, x, y, larghezza, font, colore, interlinea=1.22, max_righe
     return y
 
 
-def _testa_a(d, kicker, scuro=False):
+ONDE_ROSSE = [(82, 17, 22), (156, 20, 28), (211, 32, 43)]        # dal fondo al davanti, sulla carta e sul nero
+ONDE_SCURE = [(150, 20, 28), (110, 14, 20), (70, 10, 14)]         # sulle slide a fondo rosso
+TONI = {   # colori della riga in alto e del testo per i tre fondi
+    "carta": {"etichetta": ROSSO_TESTO, "alfa": ROSSO, "filetto": INK_A, "testo": INK_A},
+    "nero": {"etichetta": GIALLO, "alfa": ROSSO_CHIARO, "filetto": CARTA, "testo": CARTA},
+    "rosso": {"etichetta": GIALLO, "alfa": (255, 255, 255), "filetto": (255, 255, 255), "testo": (255, 255, 255)},
+}
+
+
+def _fondo(colore):
+    """Fondo pieno con una grana leggerissima, come la carta stampata (toglie l'effetto "piatto da computer")."""
+    from PIL import Image, ImageChops
+    img = Image.new("RGB", (W, H), colore)
+    try:
+        grana = Image.effect_noise((W // 2, H // 2), 7).resize((W, H)).convert("RGB")
+        img = Image.blend(img, ImageChops.overlay(img, grana), 0.5)
+    except Exception:
+        pass
+    return img
+
+
+def _onde(img, cima, n, seme, palette=ONDE_ROSSE, sposta=0.0, forza=1.0, filo=GIALLO):
+    """Il segno grafico di Adolos: onde in basso, una per ogni continente che parla della notizia (da 2 a 5).
+    La forma dipende dall'ID della notizia (ogni post ha le sue) e si sposta un po' a ogni slide, così
+    sfogliando il carosello sembrano muoversi. Sopra l'onda davanti corre un filo giallo."""
+    import math
+    import random
+    from PIL import Image, ImageDraw
+    n = max(2, min(5, n))
+    rnd = random.Random(str(seme))
+    S, sopra = 2, 90
+    alt = H - cima + sopra
+    strato = Image.new("RGBA", (W * S, alt * S), (0, 0, 0, 0))
+    d = ImageDraw.Draw(strato)
+    passo = (H - cima) * 0.5 / n
+    ultimi = []
+    for k in range(n):
+        colore = palette[min(len(palette) - 1, k * len(palette) // n)] if k < n - 1 else palette[-1]
+        amp = rnd.uniform(24, 44) * forza * (1 - 0.1 * k)
+        lung, fase = rnd.uniform(0.7, 1.3) * W, rnd.uniform(0, 6.28) + sposta * (1 + 0.35 * k)
+        lung2, fase2 = lung * rnd.uniform(0.35, 0.5), rnd.uniform(0, 6.28) - sposta * 0.6
+        base = sopra + k * passo
+        punti = [(x * S, (base + amp * math.sin(6.2832 * x / lung + fase) + amp * 0.33 * math.sin(6.2832 * x / lung2 + fase2)) * S)
+                 for x in range(-12, W + 24, 6)]
+        d.polygon(punti + [(W * S + 60, alt * S), (-60, alt * S)], fill=colore + (255,))
+        ultimi = punti
+    if filo and ultimi:
+        d.line([(x, y - 16 * S * forza) for x, y in ultimi], fill=filo + (255,), width=int(6 * S * max(0.7, forza)), joint="curve")
+    strato = strato.resize((W, alt), Image.LANCZOS)
+    img.paste(strato, (0, cima - sopra), strato)
+
+
+def _testa_a(d, kicker, tono="carta"):
     """Riga in alto: etichetta a sinistra, α a destra, filetto spesso sotto."""
-    f, k = _arch(30, 800), kicker.upper()
-    while _largo_spaziato(d, k, f) > W - 2 * MARGINE - 130 and " " in k:      # non deve toccare la α
+    c = TONI[tono]
+    size, k = 30, kicker.upper()
+    while _largo_spaziato(d, k, _arch(size, 800)) > W - 2 * MARGINE - 130 and size > 22:     # non deve toccare la α:
+        size -= 2                                                                           # prima si rimpicciolisce,
+    f = _arch(size, 800)
+    while _largo_spaziato(d, k, f) > W - 2 * MARGINE - 130 and " " in k:                    # poi si accorcia
         k = k.rsplit(" ", 1)[0].rstrip(",;:")
-    _spaziato(d, MARGINE, 84, k, f, GIALLO if scuro else ROSSO_TESTO)
-    d.text((W - MARGINE, 30), "α", font=_f("DejaVuSerif-BoldItalic.ttf", 104), fill=ROSSO_CHIARO if scuro else ROSSO, anchor="rt")
-    d.rectangle((MARGINE, 164, W - MARGINE, 170), fill=CARTA if scuro else INK_A)
+    _spaziato(d, MARGINE, 84 + (30 - size) // 2, k, f, c["etichetta"])
+    d.text((W - MARGINE, 30), "α", font=_f("DejaVuSerif-BoldItalic.ttf", 104), fill=c["alfa"], anchor="rt")
+    d.rectangle((MARGINE, 164, W - MARGINE, 170), fill=c["filetto"])
 
 
-def _scorri(d, colore):
-    # la freccia con DejaVu: Archivo non ha il carattere →
-    d.text((W - MARGINE, H - 84), "→", font=_f("DejaVuSerif-BoldItalic.ttf", 30), fill=colore, anchor="rm")
-    d.text((W - MARGINE - 42, H - 84), "Scorri", font=_arch(26, 800), fill=colore, anchor="rm")
-
-
-def _piede_a(d, sinistra, destra=None, scuro=False):
-    c = CARTA if scuro else INK_A
-    d.rectangle((MARGINE, H - 132, W - MARGINE, H - 130), fill=c)
-    d.text((MARGINE, H - 84), sinistra, font=_arch(26, 600), fill=c, anchor="lm")
+def _piede_a(d, sinistra, destra=None, colore=(255, 255, 255)):
+    """Scritte in fondo, sopra le onde: numero della slide a sinistra, "Scorri" (o adolos.it) a destra."""
+    y = H - 54
+    d.text((MARGINE, y), sinistra, font=_arch(26, 700), fill=colore, anchor="lm")
     if destra:
-        d.text((W - MARGINE, H - 84), destra, font=_arch(26, 800), fill=c, anchor="rm")
-    else:
-        _scorri(d, c)
+        d.text((W - MARGINE, y), destra, font=_arch(28, 800), fill=colore, anchor="rm")
+    else:   # la freccia con DejaVu: Archivo non ha il carattere →
+        d.text((W - MARGINE, y), "→", font=_f("DejaVuSerif-BoldItalic.ttf", 30), fill=colore, anchor="rm")
+        d.text((W - MARGINE - 42, y), "Scorri", font=_arch(26, 800), fill=colore, anchor="rm")
 
 
-def _barra_chi_ne_parla(d, n_test, n_paesi):
+def _barra_chi_ne_parla(d, n_test, n_paesi, colore=(255, 255, 255)):
     """Il segno fisso di Adolos sulla copertina: un quadratino per testata (al massimo 14 disegnati)."""
-    d.rectangle((MARGINE, H - 132, W - MARGINE, H - 130), fill=INK_A)
-    x = _spaziato(d, MARGINE, H - 100, "CHI NE PARLA", _arch(26, 800), INK_A, 2) + 16
+    y = H - 54
+    x = _spaziato(d, MARGINE, y - 15, "CHI NE PARLA", _arch(26, 800), colore, 2) + 16
     for _ in range(min(n_test, 14)):
-        d.rectangle((x, H - 99, x + 28, H - 71), fill=INK_A)
-        x += 34
+        d.rectangle((x, y - 14, x + 26, y + 12), fill=colore)
+        x += 32
     riga = f"{n_test} {'testata' if n_test == 1 else 'testate'} · {n_paesi} {'paese' if n_paesi == 1 else 'paesi'}"
-    if x + 14 + d.textlength(riga, font=_arch(26, 600)) < W - MARGINE - 150:
-        d.text((x + 14, H - 84), riga, font=_arch(26, 600), fill=INK_A, anchor="lm")
-    _scorri(d, INK_A)
+    if x + 14 + d.textlength(riga, font=_arch(26, 700)) < W - MARGINE - 150:
+        d.text((x + 14, y), riga, font=_arch(26, 700), fill=colore, anchor="lm")
+    d.text((W - MARGINE, y), "→", font=_f("DejaVuSerif-BoldItalic.ttf", 30), fill=colore, anchor="rm")
+    d.text((W - MARGINE - 42, y), "Scorri", font=_arch(26, 800), fill=colore, anchor="rm")
     return riga
 
 
@@ -401,12 +455,12 @@ def _numero_forte(frase):
     global _RE_NUMERO
     import re
     if _RE_NUMERO is None:
-        _RE_NUMERO = re.compile(r"(\d[\d.,]*)\s?(€|euro|%|per cento|miliardi|milioni|mila)\b", re.I)
+        _RE_NUMERO = re.compile(r"(\d[\d.,]*)\s?(€|euro|%|per cento|miliardi|milioni|mila|voti|punti)\b", re.I)
     m = _RE_NUMERO.search(frase.replace("%", "% "))
     if not m:
         return None
     unita = {"euro": "€", "per cento": "%"}.get(m.group(2).lower(), m.group(2).lower())
-    return f"{m.group(1)}{'' if unita == '%' else ' '}{unita}".upper()
+    return f"{m.group(1).rstrip('.,')}{'' if unita == '%' else ' '}{unita}".upper()
 
 
 def _foto_riquadro(img, percorso, x, y, w, h):
@@ -420,9 +474,9 @@ def _foto_riquadro(img, percorso, x, y, w, h):
 
 
 def carosello(s, testi, nomi_paesi, cont_di):
-    """Disegna il carosello nello stile A "Prima pagina". Restituisce la lista di immagini PIL.
+    """Disegna il carosello nello stile "Onde" (carta, nero, giallo, onde rosse). Restituisce la lista di immagini PIL.
     Copertina + una slide per ogni fatto + "Chi ne parla" + fonti. Niente attendibilità: resta su Notion."""
-    from PIL import Image, ImageDraw
+    from PIL import ImageDraw
     titolo = testi.get("titolo") or s["titolo"]
     punti = testi.get("punti") or [p.strip() + "." for p in testi["sintesi"].split(". ") if len(p.strip()) > 20][:4]
     punti = [p for p in punti if p][:4]
@@ -431,10 +485,15 @@ def carosello(s, testi, nomi_paesi, cont_di):
     n_test = max(s.get("n_fonti", 0), len(testate))
     tot = 1 + len(punti) + 2
     larg = W - 2 * MARGINE
+    conti = {}
+    for p in paesi:
+        c = cont_di.get(p, "Altro")
+        conti[c] = conti.get(c, 0) + 1
+    n_onde, seme = len(conti) or 2, s.get("id", titolo)        # un'onda per continente che ne parla
     slide = []
 
-    # 1. copertina: etichetta, titolo con la parola forte in giallo, una frase, barra "Chi ne parla"
-    img = Image.new("RGB", (W, H), CARTA)
+    # 1. copertina: etichetta, titolo enorme con la parola forte in giallo, onde grandi con la barra "Chi ne parla"
+    img = _fondo(CARTA)
     d = ImageDraw.Draw(img)
     parti = _divide_titolo(titolo)
     kicker = parti[0].rstrip(":") if len(parti) == 2 else (s.get("sezione") or "Notizie")
@@ -450,50 +509,51 @@ def carosello(s, testi, nomi_paesi, cont_di):
     foto = testi.get("_immagine") or {}
     if foto.get("file"):
         try:
-            _foto_riquadro(img, foto["file"], MARGINE, y, larg, 390)
+            _foto_riquadro(img, foto["file"], MARGINE, y, larg, 360)
             if foto.get("credito"):
-                d.text((MARGINE, y + 400), foto["credito"][:110], font=_arch(19, 500), fill=GRIGIO_A)
-            y += 446
+                d.text((MARGINE, y + 368), foto["credito"][:110], font=_arch(19, 500), fill=GRIGIO_A)
+            y += 412
         except Exception:
             foto = {}
+    cima = H - 300
+    fondo = cima - 96                       # il testo si ferma prima delle onde
     sotto = (testi.get("sintesi") or "").split(". ")[0].strip().rstrip(".") + "."
-    sotto = sotto if 25 <= len(sotto) <= 170 else ""
-    fondo = H - 170
-    riserva = 250 if sotto else 0
-    parole = frase.split()
-    y_fine = _titolo_a(img, d, frase, MARGINE, y, larg, fondo - y - riserva, evidenzia=_parola_forte(parole),
-                       size=150 if foto.get("file") else 212)
-    if sotto and y_fine + 150 <= fondo:
-        _testo_a(d, sotto, MARGINE, y_fine + 26, larg, _news(48), INK_A, 1.2, max_righe=max(1, int((fondo - y_fine - 30) // 58)))
-    riga = _barra_chi_ne_parla(d, n_test, len(paesi))
+    sotto = sotto if 25 <= len(sotto) <= 150 else ""
+    y_fine = _titolo_a(img, d, frase, MARGINE, y, larg, fondo - y - (190 if sotto and not foto.get("file") else 0),
+                       evidenzia=_parola_forte(frase.split()), size=150 if foto.get("file") else 224)
+    if sotto and y_fine + 130 <= fondo:
+        _testo_a(d, sotto, MARGINE, y_fine + 22, larg, _news(46), INK_A, 1.2, max_righe=max(1, int((fondo - y_fine - 22) // 56)))
+    _onde(img, cima, n_onde, seme)
+    riga = _barra_chi_ne_parla(ImageDraw.Draw(img), n_test, len(paesi))
     slide.append(img)
 
-    # 2. un fatto per slide: se c'è un dato con unità, il numero va grande e rosso
+    # 2. un fatto per slide. Se c'è un dato con unità: slide tutta rossa con il numero enorme (dà ritmo al carosello)
     for i, p in enumerate(punti, 1):
-        img = Image.new("RGB", (W, H), CARTA)
-        d = ImageDraw.Draw(img)
-        _testa_a(d, f"I fatti · {i} di {len(punti)}")
         numero = _numero_forte(p)
         if numero and len(numero) <= 14:
-            y = _titolo_a(img, d, numero, MARGINE, 236, larg, 360, colore=ROSSO, size=380, min_size=150, interlinea=0.86)
-            _testo_a(d, p, MARGINE, y + 30, larg, _news(58), INK_A, 1.18, max_righe=9)
+            img = _fondo(ROSSO)
+            d = ImageDraw.Draw(img)
+            _testa_a(d, f"I fatti · {i} di {len(punti)}", "rosso")
+            y = _titolo_a(img, d, numero, MARGINE, 236, larg, 380, colore=GIALLO, size=400, min_size=150, interlinea=0.86)
+            _testo_a(d, p, MARGINE, y + 30, larg, _news(58, 500), (255, 255, 255), 1.18, max_righe=8)
+            _onde(img, H - 190, n_onde, seme, ONDE_SCURE, sposta=i * 0.9, forza=0.6, filo=None)
         else:
-            _titolo_a(img, d, p, MARGINE, 250, larg, H - 250 - 190, size=124, min_size=54, interlinea=1.04,
+            img = _fondo(CARTA)
+            d = ImageDraw.Draw(img)
+            _testa_a(d, f"I fatti · {i} di {len(punti)}")
+            _titolo_a(img, d, p, MARGINE, 250, larg, H - 250 - 260, size=124, min_size=54, interlinea=1.04,
                       maiuscolo=False, peso=800, stretto=0.86)
-        _piede_a(d, f"{1 + i}/{tot}")
+            _onde(img, H - 190, n_onde, seme, sposta=i * 0.9, forza=0.6)
+        _piede_a(ImageDraw.Draw(img), f"{1 + i}/{tot}")
         slide.append(img)
 
     # 3. chi ne parla (il tratto che ci distingue), su fondo nero
-    img = Image.new("RGB", (W, H), INK_A)
+    img = _fondo(INK_A)
     d = ImageDraw.Draw(img)
-    _testa_a(d, "Chi ne parla", scuro=True)
-    y = _titolo_a(img, d, riga.replace(" · ", ", "), MARGINE, 222, larg, 380, colore=CARTA, size=190, min_size=100)
-    conti = {}
-    for p in paesi:
-        c = cont_di.get(p, "Altro")
-        conti[c] = conti.get(c, 0) + 1
-    y += 30
-    fondo = H - (330 if conti else 170)
+    _testa_a(d, "Chi ne parla", "nero")
+    y = _titolo_a(img, d, riga.replace(" · ", ", "), MARGINE, 222, larg, 320, colore=CARTA, size=160, min_size=100)
+    y += 24
+    fondo = H - (384 if conti else 250)
     mostrate = testate[:max(1, int((fondo - y - 50) // 70))]
     for f in mostrate:
         d.line([(MARGINE, y), (W - MARGINE, y)], fill=(90, 86, 80), width=2)
@@ -503,45 +563,46 @@ def carosello(s, testi, nomi_paesi, cont_di):
     d.line([(MARGINE, y), (W - MARGINE, y)], fill=(90, 86, 80), width=2)
     resto = n_test - len(mostrate)
     if resto > 0:
-        d.text((MARGINE, y + 12), f"e {'un' + chr(39) + 'altra testata' if resto == 1 else f'altre {resto} testate'}",
+        d.text((MARGINE, y + 12), "e un'altra testata" if resto == 1 else f"e altre {resto} testate",
                font=_news(32, corsivo=True), fill=CARTA_SCURA)
     if conti:
-        y0 = H - 290
-        _spaziato(d, MARGINE, y0, "DA DOVE ARRIVA", _arch(26, 800), GIALLO, 2)
+        y0 = H - 344
+        _spaziato(d, MARGINE, y0, "DA DOVE ARRIVA · UN'ONDA PER CONTINENTE", _arch(24, 800), GIALLO, 2)
         x, totale = MARGINE, sum(conti.values())
-        tinte = [(GIALLO, INK_A), (CARTA, INK_A), (ROSSO_CHIARO, INK_A), (150, 146, 140), (90, 86, 80)]
+        tinte = [(GIALLO, INK_A), (CARTA, INK_A), (ROSSO_CHIARO, INK_A), ((150, 146, 140), INK_A), ((90, 86, 80), CARTA)]
         for k, (c, n) in enumerate(sorted(conti.items(), key=lambda kv: -kv[1])):
             w = int(larg * n / totale)
-            tinta = tinte[k % 5]
-            fondo_t, testo_t = tinta if isinstance(tinta[0], tuple) else (tinta, INK_A if k < 4 else CARTA)
-            d.rectangle((x, y0 + 46, x + w - 4, y0 + 100), fill=fondo_t)
+            fondo_t, testo_t = tinte[k % 5]
+            d.rectangle((x, y0 + 44, x + w - 4, y0 + 96), fill=fondo_t)
             if w > 170:
-                d.text((x + 14, y0 + 73), f"{c} {n}"[:int(w / 15)], font=_arch(24, 800), fill=testo_t, anchor="lm")
+                d.text((x + 14, y0 + 70), f"{c} {n}"[:int(w / 15)], font=_arch(24, 800), fill=testo_t, anchor="lm")
             x += w
-    _piede_a(d, f"{tot - 1}/{tot}", scuro=True)
+    _onde(img, H - 190, n_onde, seme, sposta=(len(punti) + 1) * 0.9, forza=0.6)
+    _piede_a(ImageDraw.Draw(img), f"{tot - 1}/{tot}")
     slide.append(img)
 
     # 4. fonti e chiusura
-    img = Image.new("RGB", (W, H), CARTA)
+    img = _fondo(CARTA)
     d = ImageDraw.Draw(img)
     _testa_a(d, "Fonti")
     chiusa = "Tutti i link agli articoli su adolos.it"
-    y = _titolo_a(img, d, chiusa, MARGINE, 222, larg, 520, evidenzia=len(chiusa.split()) - 1, size=170, min_size=90)
+    y = _titolo_a(img, d, chiusa, MARGINE, 222, larg, 480, evidenzia=len(chiusa.split()) - 1, size=170, min_size=90)
     nomi = [f["fonte"] for f in testate[:8]]
     if n_test > len(nomi):
         nomi.append(f"e altre {n_test - len(nomi)}")
-    y = _testo_a(d, "Ne parlano: " + ", ".join(nomi) + ".", MARGINE, y + 34, larg, _news(40), INK_A, 1.25, max_righe=6)
+    y = _testo_a(d, "Ne parlano: " + ", ".join(nomi) + ".", MARGINE, y + 30, larg, _news(40), INK_A, 1.25, max_righe=5)
     nota = "Testo preparato con l'aiuto dell'AI e verificato dalla redazione."   # regola 9: sempre dichiarato
-    y_nota = H - 250
+    y_nota = H - 400
     if foto.get("credito"):
         _testo_a(d, "Foto di copertina: " + foto["credito"], MARGINE, y_nota - 74, larg, _news(26, corsivo=True), GRIGIO_A, 1.25, max_righe=2)
     _testo_a(d, nota, MARGINE, y_nota, larg, _news(30, corsivo=True), GRIGIO_A, 1.25, max_righe=2)
-    _piede_a(d, f"{tot}/{tot}", "adolos.it")
+    _onde(img, H - 300, n_onde, seme, sposta=(len(punti) + 2) * 0.9)
+    _piede_a(ImageDraw.Draw(img), f"{tot}/{tot}", "adolos.it")
     slide.append(img)
     return slide
 
 
-VERSIONE_GRAFICA = 4      # cambiarla ridisegna tutti i caroselli (4 = stile A "Prima pagina")
+VERSIONE_GRAFICA = 5      # cambiarla ridisegna tutti i caroselli (5 = stile "Onde")
 
 
 def _impronta(s, testi):

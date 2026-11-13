@@ -17,30 +17,37 @@ description: Usala per qualsiasi testo o grafica di Adolos: voce del brand, fras
 "Senza precedenti" (se non è vero), "Un vero e proprio", "Andiamo a vedere", "Scopriamolo insieme",
 elenchi di tre aggettivi, frasi con trattini a effetto, domande retoriche in apertura.
 
-## Grafica: stile A "Prima pagina" (scelto da Tommaso il 13 novembre 2026)
-Il codice è in `engine/social.py` (funzione `carosello`). Il vecchio stile tutto rosso non si usa più.
-- **Fondo carta** `#f7f2eb`, **testo nero** `#111111`. Il rosso `#d3202b` resta per la α e per i numeri grandi
-  (`#b3151f` per le etichette piccole, che si leggono meglio). **Giallo** `#ffd400` solo come evidenziatore.
-- **Riga in alto, uguale su ogni slide**: etichetta in maiuscolo spaziato a sinistra, **α rossa** a destra, filetto nero spesso.
-- **Copertina**: titolo MAIUSCOLO, Archivo 900 stretto, molto grande, allineato a sinistra. **Una sola parola
-  evidenziata in giallo**: l'ultima che contiene un numero, altrimenti l'ultima parola lunga. Sotto, una frase in
-  Newsreader. Se il Titolo Adolos ha i due punti ("Spagna, primo sciopero dal 2012: la protesta è per la casa"),
-  la parte prima diventa l'etichetta e la parte dopo il titolo grande: scrivi i titoli così.
-- **Barra "Chi ne parla" in fondo alla copertina**: un quadratino nero per testata + "7 testate · 6 paesi".
-  È il segno fisso di Adolos: non toglierla e non cambiarle posto.
-- **Slide dei fatti**: una frase grande per slide. Se la frase ha un dato con unità (1.170 euro, 48%, 3 miliardi)
-  il numero va enorme e rosso, la frase sotto in Newsreader. Quindi: un numero forte per punto, non due.
-- **"Chi ne parla"**: fondo nero, testo carta, etichette gialle, elenco testate e paesi, barra dei continenti.
-- **Ultima slide**: "Tutti i link agli articoli su adolos.it" con adolos.it in giallo, elenco delle testate,
-  nota sull'AI e credito della foto.
+## Grafica: stile "Onde" (scelto da Tommaso il 13 novembre 2026)
+Il codice è in `engine/social.py` (funzione `carosello`). Nasce dallo stile A "Prima pagina" e ci aggiunge le onde.
+- **Le onde**: in fondo a ogni slide ci sono onde rosse sovrapposte con un filo giallo sopra. **Sono un dato, non un
+  decoro: un'onda per ogni continente che parla della notizia** (da 2 a 5). La forma dipende dalla notizia, quindi
+  ogni post ha le sue, e a ogni slide si spostano un po': sfogliando sembrano muoversi.
+- **Fondo carta** `#f7f2eb` con una grana leggera, **testo nero** `#111111`, rosso `#d3202b`, giallo `#ffd400`.
+- **Riga in alto, uguale su ogni slide**: etichetta in maiuscolo spaziato a sinistra, **α rossa** a destra, filetto spesso.
+- **Copertina**: titolo MAIUSCOLO enorme (Archivo 900 stretto), **una sola parola evidenziata in giallo** con un
+  tratto un po' storto, come fatto a mano: l'ultima che contiene un numero, altrimenti l'ultima parola lunga.
+  Sotto, una frase in Newsreader. In basso le onde grandi con la barra "Chi ne parla" (un quadratino per testata).
+- **Come scrivere il Titolo Adolos perché la copertina venga forte**: "ETICHETTA: frase corta". La parte prima dei
+  due punti diventa l'etichetta piccola, la parte dopo il titolo enorme. Esempio: "Spagna, primo sciopero generale
+  dal 2012: la protesta è per la casa" → in copertina "LA PROTESTA È PER LA **CASA**". Dopo i due punti massimo
+  6-8 parole, con la parola più forte in fondo. Senza i due punti il titolo intero finisce in copertina, più piccolo.
+- **Slide dei fatti**: una frase grande per slide. Se la frase ha un dato con unità (1.170 euro, 48%, 3 miliardi,
+  4.585 voti, 22 punti) la slide diventa **tutta rossa con il numero enorme in giallo**: rompe il ritmo e ferma chi
+  scorre. Quindi: un solo numero forte per punto, e mettilo in un punto dove conta davvero.
+- **"Chi ne parla"**: fondo nero, testate e paesi, barra "Da dove arriva: un'onda per continente".
+- **Ultima slide**: "Tutti i link agli articoli su adolos.it", elenco delle testate, nota sull'AI, credito della foto.
 - **Foto in copertina**: in un riquadro sotto la riga in alto, a colori, senza filtri né veli, con il credito sotto.
   SOLO licenza libera (Wikimedia, con autore e licenza) o foto vostre. Una foto senza licenza scritta NON è libera,
   anche se ritrae una persona pubblica: i diritti sono del fotografo. Senza foto adatta: solo titolo.
 - **Punto cieco**: etichetta gialla "IL MONDO NE PARLA, L'ITALIA NO" sopra il titolo.
 - **Font**: Archivo (titoli) e Newsreader (testo), gli stessi del sito. **Formati**: carosello 1080×1350 (4:5),
   video 1080×1920 (9:16).
-- **Titoli che funzionano**: massimo 8-10 parole dopo i due punti, il fatto o il dato per primo, la parola più
-  forte in fondo (è quella che finisce in giallo). Il gancio non dice mai più della sintesi (skill `adolos-viralita`).
+
+### Perché questo stile (da tenere a mente quando si scrive)
+- La copertina deve fermare il pollice in meno di un secondo: poche parole enormi, un colore che salta, un'idea sola.
+- La seconda slide deve reggersi da sola: Instagram a volte ripropone il carosello partendo da lì.
+- Il post si salva e si manda se dà qualcosa da usare: un numero preciso, due versioni a confronto, "cosa cambia".
+- Niente esche: il titolo non dice mai più della sintesi (skill `adolos-viralita`).
 
 ## Il tratto che ci distingue: "Chi ne parla" e "Punto cieco"
 - Su ogni notizia mostriamo quante testate italiane ed estere la raccontano e da quali continenti.
