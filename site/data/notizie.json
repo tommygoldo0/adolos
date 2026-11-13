@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-13T00:45:07.191932+00:00",
+ "aggiornato": "2026-11-13T00:52:35.087142+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -136,7 +136,7 @@
  },
  "storie": [],
  "dati": {
-  "articoli_analizzati": 15337,
+  "articoli_analizzati": 15356,
   "storie": 400,
   "paesi_coperti": 94,
   "fonti_diverse": 274,
@@ -144,27 +144,27 @@
    [
     "AR",
     "Argentina",
-    1432
+    1431
    ],
    [
     "FR",
     "Francia",
-    1255
+    1257
    ],
    [
     "BR",
     "Brasile",
-    1196
+    1198
    ],
    [
     "US",
     "Stati Uniti",
-    1160
+    1165
    ],
    [
     "DE",
     "Germania",
-    970
+    971
    ],
    [
     "IT",
@@ -174,32 +174,32 @@
    [
     "ES",
     "Spagna",
-    764
+    763
    ],
    [
     "GB",
     "Regno Unito",
-    728
+    727
    ],
    [
     "IN",
     "India",
-    597
+    600
    ],
    [
     "NG",
     "Nigeria",
-    392
+    391
    ],
    [
     "AU",
     "Australia",
-    368
+    372
    ],
    [
     "MX",
     "Messico",
-    334
+    335
    ],
    [
     "SG",
@@ -270,7 +270,7 @@
   "per_lingua": [
    [
     "en",
-    7775
+    7788
    ],
    [
     "es",
@@ -278,15 +278,15 @@
    ],
    [
     "pt",
-    1373
+    1375
    ],
    [
     "de",
-    1150
+    1151
    ],
    [
     "fr",
-    1081
+    1084
    ],
    [
     "it",
@@ -320,7 +320,7 @@
   "per_categoria": [
    [
     "Altro",
-    206
+    205
    ],
    [
     "Politica",
@@ -340,7 +340,7 @@
    ],
    [
     "Sport",
-    15
+    16
    ],
    [
     "Società",
@@ -366,7 +366,7 @@
    ],
    [
     "El Universal",
-    334
+    335
    ],
    [
     "La Nación",
@@ -378,11 +378,11 @@
    ],
    [
     "Globo Esporte",
-    289
+    291
    ],
    [
     "Punch",
-    268
+    267
    ],
    [
     "L'Équipe",
@@ -390,7 +390,7 @@
    ],
    [
     "Times of India",
-    225
+    226
    ],
    [
     "Sky TG24",
@@ -408,67 +408,67 @@
   "per_ora": [
    [
     23,
-    191
+    207
    ],
    [
     22,
-    258
+    232
    ],
    [
     21,
-    74
+    85
    ],
    [
     20,
-    125
+    119
    ],
    [
     19,
-    216
+    223
    ],
    [
     18,
-    216
-   ],
-   [
-    17,
-    305
-   ],
-   [
-    16,
-    286
-   ],
-   [
-    15,
-    371
-   ],
-   [
-    14,
-    427
-   ],
-   [
-    13,
-    311
-   ],
-   [
-    12,
     220
    ],
    [
+    17,
+    309
+   ],
+   [
+    16,
+    285
+   ],
+   [
+    15,
+    397
+   ],
+   [
+    14,
+    401
+   ],
+   [
+    13,
+    310
+   ],
+   [
+    12,
+    228
+   ],
+   [
     11,
-    270
+    273
    ],
    [
     10,
-    357
+    373
    ],
    [
     9,
-    365
+    363
    ],
    [
     8,
-    595
+    611
    ],
    [
     7,
@@ -476,31 +476,31 @@
    ],
    [
     6,
-    702
+    726
    ],
    [
     5,
-    704
+    707
    ],
    [
     4,
-    804
+    801
    ],
    [
     3,
-    788
+    790
    ],
    [
     2,
-    710
+    697
    ],
    [
     1,
-    651
+    646
    ],
    [
     0,
-    608
+    565
    ]
   ],
   "approvate_non_sul_sito": {
@@ -514,15 +514,22 @@
  },
  "errori_fonti": [
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
+  "Hacker News (prima pagina): HTTPSConnectionPool(host='hnrss.org', port=443): Max retries exceeded with url: /frontpage (Caused by ConnectTimeoutError(<HTTPSConnection(host='hnrss.org', port=443) at 0x7f2de38c7620>, 'Connection to hnrss.org timed out. (connect timeout=20)'))",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
   "Telex: 403 Client Error: Forbidden for url: https://telex.hu/rss",
   "The Slovenia Times: 403 Client Error: Forbidden for url: https://sloveniatimes.com/feed",
   "Khmer Times: 403 Client Error: Forbidden for url: https://www.khmertimeskh.com/feed/",
   "The Herald: 403 Client Error: Forbidden for url: https://www.heraldonline.co.zw/feed/",
+  "The EastAfrican Business: 404 Client Error: Not Found for url: https://www.businessdailyafrica.com/bd/rss.xml",
   "La Prensa (Panama): 403 Client Error: Forbidden for url: https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
   "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT syria: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:syria&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT yemen: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)",
   "GDELT sudan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:sudan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT libya: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:libya&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
+  "GDELT democraticrepublicofthecongo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:democraticrepublicofthecongo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT angola: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:angola&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT zambia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:zambia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT rwanda: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:rwanda&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT myanmar: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:myanmar&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
