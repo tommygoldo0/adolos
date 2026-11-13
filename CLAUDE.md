@@ -29,7 +29,9 @@ una persona approva su Notion prima di ogni pubblicazione. Rispondi sempre in it
   Didascalia Instagram, Copione TikTok, Testo Facebook, Link Canva, Controllo legale, Pacchetto pronto.
 - Gli agenti NON mettono mai Stato = Approvata e NON spuntano "Pubblica su Instagram": lo fa una persona.
   Unica eccezione nel codice: `engine/telegram.py` cambia lo Stato quando una persona preme "Approva" o "Scarta"
-  nel gruppo Telegram della redazione (mai la casella Instagram). Senza clic umano non cambia niente.
+  nel gruppo Telegram della redazione, e spunta "Pubblica su Instagram" solo quando una persona preme
+  "Approva + Instagram" o "Metti in coda Instagram" (deciso da Tommaso il 13 novembre 2026).
+  Senza clic umano non cambia niente.
 
 ## Regole che non si discutono (dettagli nella skill `adolos-controllo-legale`)
 1. Solo fatti presenti nelle fonti, almeno 2 testate. Niente numeri, citazioni o fonti inventate.

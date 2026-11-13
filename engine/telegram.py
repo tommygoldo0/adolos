@@ -9,8 +9,10 @@ Regole:
   - Il pulsante lo preme sempre una persona. Qui dentro niente approva da solo.
   - Vale solo un clic fatto nel gruppo della redazione (TELEGRAM_CHAT_ID). Se la variabile TELEGRAM_APPROVATORI
     contiene degli ID utente Telegram (separati da virgola), valgono solo quelli.
-  - "Approva" mette Stato = Approvata: la notizia va sul sito e si disegna il carosello.
-    NON spunta "Pubblica su Instagram": quello si fa su Notion.
+  - "Approva (sito)" mette Stato = Approvata: la notizia va sul sito e si disegna il carosello.
+  - "Approva + Instagram" fa lo stesso e in più spunta "Pubblica su Instagram": il post entra in coda ed esce al
+    primo orario libero. Dopo un "Approva (sito)" resta il pulsante "Metti in coda Instagram".
+    La casella la spunta sempre il clic di una persona: il motore da solo non la tocca mai.
   - Zona Rossa: il primo clic chiede una conferma ("ho controllato nomi, accuse e fonti") e servono DUE persone
     diverse. Se dopo 30 minuti (variabile TELEGRAM_ATTESA_SECONDA) non c'è una seconda persona, la prima può
     confermare da sola: sulla scheda resta scritto che ha approvato una persona sola.
@@ -71,13 +73,19 @@ def _ora_roma():
 
 
 # ---------------------------------------------------------------- 1. mandare i pacchetti pronti
-def _tastiera(sid, zona, conferma=False):
+def _tastiera(sid, zona, conferma=None):
+    """Pulsanti del pacchetto. "ok" = solo sito, "ig" = sito + coda Instagram, "no" = scarta.
+    conferma = "ok" o "ig": secondo passo della zona rossa ("ho controllato")."""
     if conferma:
-        return {"inline_keyboard": [[{"text": "⚠️ Confermo: ho controllato", "callback_data": f"ok:{sid}"}],
+        return {"inline_keyboard": [[{"text": "⚠️ Confermo: ho controllato", "callback_data": f"{conferma}:{sid}"}],
                                     [{"text": "↩️ Annulla", "callback_data": f"indietro:{sid}"}]]}
-    approva = f"chk:{sid}" if zona == "Rossa" else f"ok:{sid}"
-    return {"inline_keyboard": [[{"text": "✅ Approva (sito)", "callback_data": approva},
-                                 {"text": "🗑 Scarta", "callback_data": f"no:{sid}"}]]}
+    rossa = zona == "Rossa"
+    return {"inline_keyboard": [[{"text": "✅ Approva (sito)", "callback_data": f"{'chk' if rossa else 'ok'}:{sid}"},
+                                 {"text": "📸 Approva + Instagram", "callback_data": f"{'chkig' if rossa else 'ig'}:{sid}"}],
+                                [{"text": "🗑 Scarta", "callback_data": f"no:{sid}"}]]}
+
+
+ORARI_IG = "8:00, 12:30, 18:30, 21:00"
 
 
 def _slide(s, gruppo, testi):
@@ -252,8 +260,27 @@ def _decidi(azione, sid, chi, uid=""):
         return "no", "Scheda non trovata su Notion."
     p = pagina["properties"]
     stato = lt(p.get("Stato"))
+    titolo = lt(p.get("Titolo Adolos")) or lt(p.get("Titolo"))
+    if azione == "igdopo":
+        # notizia già approvata per il sito: una persona la mette anche in coda per Instagram
+        if stato != "Approvata":
+            return "no", f"Si può mettere in coda solo una notizia approvata: la scheda è \"{stato}\"."
+        if lt(p.get("Link Instagram")):
+            return "no", "È già stata pubblicata su Instagram."
+        if lt(p.get("Pubblica su Instagram")) == "si":
+            return "no", f"È già in coda per Instagram: esce al primo orario libero ({ORARI_IG})."
+        if lt(p.get("Controllo legale")) == "Da sistemare":
+            return "no", "Bloccata dal controllo legale: va sistemata su Notion."
+        nota = (lt(p.get("Motivo del bot")) + f"\nMessa in coda Instagram da Telegram da {chi} il {_ora_roma()}.").strip()
+        redazione._notion("PATCH", f"pages/{pagina['id']}", {"properties": {
+            "Pubblica su Instagram": {"checkbox": True}, "Motivo del bot": {"rich_text": redazione._testo(nota[-1900:])}}})
+        print(f"Telegram: {sid} messa in coda Instagram (premuto da una persona nel gruppo)")
+        return "fatto", f"📸 In coda per Instagram, messa da {chi}: «{titolo[:90]}». Esce al primo orario libero ({ORARI_IG})."
     if stato not in DA_DECIDERE:
         return "no", f"Già decisa: la scheda è \"{stato}\"."
+    instagram = azione == "ig"              # "ig" = come "ok", più la casella Instagram
+    if instagram:
+        azione = "ok"
     if azione == "ok":
         if lt(p.get("Pacchetto pronto")) != "si":
             return "no", "Il pacchetto non è più segnato come pronto: guarda la scheda su Notion."
@@ -280,14 +307,18 @@ def _decidi(azione, sid, chi, uid=""):
         else:
             firma = f"{prima[0]} e {chi}"
     nuovo = "Approvata" if azione == "ok" else "Scartata"
-    nota = (lt(p.get("Motivo del bot")) + f"\n{nuovo} da Telegram da {firma} il {_ora_roma()}.").strip()
-    redazione._notion("PATCH", f"pages/{pagina['id']}", {"properties": {
-        "Stato": {"status": {"name": nuovo}}, "Motivo del bot": {"rich_text": redazione._testo(nota[-1900:])}}})
-    titolo = lt(p.get("Titolo Adolos")) or lt(p.get("Titolo"))
-    print(f"Telegram: {sid} -> {nuovo} (premuto da una persona nel gruppo)")
+    coda = " e messa in coda Instagram" if instagram else ""
+    nota = (lt(p.get("Motivo del bot")) + f"\n{nuovo}{coda} da Telegram da {firma} il {_ora_roma()}.").strip()
+    proprieta = {"Stato": {"status": {"name": nuovo}}, "Motivo del bot": {"rich_text": redazione._testo(nota[-1900:])}}
+    if instagram:                          # la casella la spunta il clic di una persona, mai il motore da solo
+        proprieta["Pubblica su Instagram"] = {"checkbox": True}
+    redazione._notion("PATCH", f"pages/{pagina['id']}", {"properties": proprieta})
+    print(f"Telegram: {sid} -> {nuovo}{coda} (premuto da una persona nel gruppo)")
+    if instagram:
+        return "fatto_ig", f"✅📸 Approvata da {firma} e in coda per Instagram: «{titolo[:80]}». Esce al primo orario libero ({ORARI_IG})."
     if azione == "ok":
-        return "fatto", f"✅ Approvata da {firma}: «{titolo[:100]}». Per Instagram: spunta su Notion, esce al prossimo orario (8:00, 12:30, 18:30, 21:00)."
-    return "fatto", f"🗑 Scartata da {chi}: «{titolo[:120]}»."
+        return "fatto", f"✅ Approvata da {firma} per il sito: «{titolo[:100]}». Per Instagram c'è il pulsante qui sopra."
+    return "scartata", f"🗑 Scartata da {chi}: «{titolo[:120]}»."
 
 
 def leggi_risposte():
@@ -315,29 +346,34 @@ def leggi_risposte():
                 _tg("answerCallbackQuery", {"callback_query_id": cq["id"], "text": "Non sei tra chi può approvare.", "show_alert": True})
                 print("Telegram: clic ignorato, non arriva dal gruppo della redazione o da una persona autorizzata")
                 continue
-            if azione in ("chk", "indietro") and sid:
+            if azione in ("chk", "chkig", "indietro") and sid:
                 # zona rossa: prima una conferma. Si tengono gli altri tasti (es. il link alla scheda)
                 extra = [riga for riga in ((msg.get("reply_markup") or {}).get("inline_keyboard") or []) if any("url" in t for t in riga)]
-                tasti = _tastiera(sid, "Rossa", conferma=(azione == "chk"))
+                tasti = _tastiera(sid, "Rossa", conferma={"chk": "ok", "chkig": "ig"}.get(azione))
                 tasti["inline_keyboard"] += extra
                 _tg("editMessageReplyMarkup", {**dove, "reply_markup": tasti})
                 _tg("answerCallbackQuery", {"callback_query_id": cq["id"], "text":
-                    "Zona rossa: conferma solo se hai controllato nomi, accuse e fonti." if azione == "chk" else "Annullato."})
+                    "Annullato." if azione == "indietro" else "Zona rossa: conferma solo se hai controllato nomi, accuse e fonti."})
                 continue
-            if azione not in ("ok", "no") or not sid:
+            if azione not in ("ok", "ig", "igdopo", "no") or not sid:
                 _tg("answerCallbackQuery", {"callback_query_id": cq["id"], "text": "Pulsante non riconosciuto."})
                 continue
             esito, frase = _decidi(azione, sid, _nome(cq), str((cq.get("from") or {}).get("id", "")))
-            _tg("answerCallbackQuery", {"callback_query_id": cq["id"], "text": frase[:190], "show_alert": esito != "fatto"})
-            if esito == "attesa":          # zona rossa: resta il pulsante per la seconda persona
-                extra = [riga for riga in ((msg.get("reply_markup") or {}).get("inline_keyboard") or []) if any("url" in t for t in riga)]
+            _tg("answerCallbackQuery", {"callback_query_id": cq["id"], "text": frase[:190], "show_alert": esito in ("no", "attesa")})
+            extra = [riga for riga in ((msg.get("reply_markup") or {}).get("inline_keyboard") or []) if any("url" in t for t in riga)]
+            if esito == "attesa":          # zona rossa: restano i pulsanti per la seconda persona
                 _tg("editMessageReplyMarkup", {**dove, "reply_markup": {"inline_keyboard": [
-                    [{"text": "✅ Seconda approvazione", "callback_data": f"ok:{sid}"}, {"text": "🗑 Scarta", "callback_data": f"no:{sid}"}]] + extra}})
+                    [{"text": "✅ Seconda approvazione", "callback_data": f"ok:{sid}"},
+                     {"text": "📸 Seconda + Instagram", "callback_data": f"ig:{sid}"}],
+                    [{"text": "🗑 Scarta", "callback_data": f"no:{sid}"}]] + extra}})
                 _tg("sendMessage", {"chat_id": dove["chat_id"], "text": frase, "reply_to_message_id": dove["message_id"],
                                     "allow_sending_without_reply": True})
-            if esito == "fatto":
+            if esito in ("fatto", "fatto_ig", "scartata"):
                 cambiate += 1
-                _tg("editMessageReplyMarkup", {**dove, "reply_markup": {"inline_keyboard": []}})
+                # approvata solo per il sito: resta un pulsante per metterla in coda su Instagram più tardi
+                dopo = [[{"text": "📸 Metti in coda Instagram", "callback_data": f"igdopo:{sid}"}]] \
+                    if (esito == "fatto" and azione == "ok") else []
+                _tg("editMessageReplyMarkup", {**dove, "reply_markup": {"inline_keyboard": dopo + (extra if dopo else [])}})
                 _tg("sendMessage", {"chat_id": dove["chat_id"], "text": frase, "reply_to_message_id": dove["message_id"],
                                     "allow_sending_without_reply": True})
         except Exception as e:
