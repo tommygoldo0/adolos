@@ -45,19 +45,20 @@ def attivo():
     return bool(redazione._env("TELEGRAM_BOT_TOKEN") and redazione._env("TELEGRAM_CHAT_ID") and redazione.notion_attivo())
 
 
-def _tg(metodo, dati=None, foto=None, allegati=None, documento=None):
+def _tg(metodo, dati=None, foto=None, allegati=None, documento=None, video=None):
     """Chiamata all'API ufficiale di Telegram. Gli errori non contengono mai l'indirizzo (che ha dentro il token).
     foto = una sola immagine (bytes); allegati = {nome: bytes} per un album (sendMediaGroup, "attach://nome");
     documento = (nome del file, bytes) per mandare un file da scaricare (sendDocument)."""
     import requests
     url = f"https://api.telegram.org/bot{redazione._env('TELEGRAM_BOT_TOKEN')}/{metodo}"
     try:
-        if foto is not None or allegati or documento:
+        if foto is not None or allegati or documento or video:
             campi = {k: (v if isinstance(v, str) else json.dumps(v)) for k, v in (dati or {}).items()}
-            file = {"photo": ("copertina.jpg", foto, "image/jpeg")} if foto is not None else \
+            file = {"video": (video[0], video[1], "video/mp4")} if video else \
+                   {"photo": ("copertina.jpg", foto, "image/jpeg")} if foto is not None else \
                    {"document": (documento[0], documento[1], "application/zip")} if documento else \
                    {n: (n + ".jpg", b, "image/jpeg") for n, b in allegati.items()}
-            r = requests.post(url, data=campi, files=file, timeout=90)
+            r = requests.post(url, data=campi, files=file, timeout=240)
         else:
             r = requests.post(url, json=dati or {}, timeout=25)
         corpo = r.json()
@@ -88,7 +89,8 @@ def _tastiera(sid, zona, conferma=None):
     rossa = zona == "Rossa"
     return {"inline_keyboard": [[{"text": "✅ Approva (sito)", "callback_data": f"{'chk' if rossa else 'ok'}:{sid}"},
                                  {"text": "📸 Approva + Instagram", "callback_data": f"{'chkig' if rossa else 'ig'}:{sid}"}],
-                                [{"text": "🗑 Scarta", "callback_data": f"no:{sid}"}]]}
+                                [{"text": "🎬 Fammi il video", "callback_data": f"reqv:{sid}"},
+                                 {"text": "🗑 Scarta", "callback_data": f"no:{sid}"}]]}
 
 
 ORARI_IG = "8:00, 12:30, 18:30, 21:00"
@@ -165,6 +167,8 @@ def invia_pacchetti(storie, gruppi=None):
         sid = lt(p.get("ID storia"))
         if not sid or r["id"] in mandati:
             continue
+        if "Pacchetto inviato su Telegram" in lt(p.get("Motivo del bot")):
+            continue                       # già mandato dalla regia sul Mac (engine/regia.py)
         if not (lt(p.get("Titolo Adolos")) and lt(p.get("Sintesi"))) or lt(p.get("Controllo legale")) == "Da sistemare":
             continue                       # pacchetto incompleto o bloccato dal controllo legale: niente pulsanti
         s = per_id.get(sid)
@@ -354,8 +358,10 @@ def _richiedi(tipo, sid, chi):
     testate = (p.get("Redazioni indipendenti") or {}).get("number") or 0
     una_sola = testate < 2         # si può preparare, ma ogni fatto va attribuito: "secondo <testata>"
     nota = lt(p.get("Motivo del bot"))
-    if f"Richiesto {cosa}" in nota:
-        return "no", f"Il {cosa} è già stato richiesto: arriva con la prossima edizione."
+    if cosa == "video" and "Video inviato su Telegram" in nota:
+        return "no", "Il video è già stato mandato nel gruppo: cercalo qui sopra."
+    if f"Richiesto {cosa}" in nota and f"{cosa.capitalize()} non fatto" not in nota:
+        return "no", f"Il {cosa} è già stato richiesto: arriva qui appena è pronto."
     if cosa == "carosello" and lt(p.get("Pacchetto pronto")) == "si":
         return "no", "Il pacchetto è già pronto: cercalo tra i pacchetti con i pulsanti Approva."
     nota = (nota + f"\nRichiesto {cosa} da Telegram da {chi} il {_ora_roma()}.").strip()
@@ -363,7 +369,7 @@ def _richiedi(tipo, sid, chi):
         "Stato": {"status": {"name": "In revisione"}}, "Motivo del bot": {"rich_text": redazione._testo(nota[-1900:])}}})
     titolo = lt(p.get("Titolo Adolos")) or lt(p.get("Titolo"))
     print(f"Telegram: {sid} richiesto {cosa} (premuto da una persona nel gruppo)")
-    return "richiesta", (f"{'🎬' if cosa == 'video' else '🎠'} {chi} ha chiesto il {cosa}: «{titolo[:70]}». Lo prepara la prossima edizione."
+    return "richiesta", (f"{'🎬' if cosa == 'video' else '🎠'} {chi} ha chiesto il {cosa}: «{titolo[:70]}». Arriva qui in pochi minuti se il Mac della redazione è acceso, altrimenti con la prossima edizione."
                          + (" Una sola testata: uscirà con scritto da chi arriva." if una_sola else ""))
 
 

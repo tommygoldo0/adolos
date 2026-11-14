@@ -41,16 +41,29 @@ BIANCO = (255, 255, 255)
 
 # ---------------------------------------------------------------- copione
 def scene_dal_copione(copione):
-    """Una scena per riga del copione. Toglie i tempi tra parentesi quadre e le righe di servizio (fonti, nota AI)."""
+    """Una scena per riga del copione. Toglie i tempi ("[0-2s]" oppure "1 (0-3 s)") e le righe di servizio (fonti,
+    nota AI). Se la riga ha la forma "Testo: ... · Voce: ...", si legge la parte "Voce"."""
     scene = []
     for riga in (copione or "").splitlines():
         t = re.sub(r"^\s*\[[^\]]*\]\s*", "", riga).strip()
+        t = re.sub(r"^\d+\s*\(\s*\d+\s*[-–]\s*\d+\s*s\s*\)\s*", "", t).strip()
+        if re.search(r"\bVoce\s*:", t):
+            t = re.split(r"\bVoce\s*:", t, maxsplit=1)[1].strip()
+        t = re.sub(r"^Testo\s*:\s*", "", t).strip(" ·")
         if not t or t.lower().startswith(("fonti", "testo preparato", "scritta", "voce generata")):
             continue
         t = re.sub(r"\s*Testo preparato con l'aiuto dell'AI.*$", "", t).strip()
         if t:
             scene.append(t)
     return scene[:8]
+
+
+def copione_da_punti(titolo, punti):
+    """Se il pacchetto non ha un copione: apertura dal titolo (la parte dopo i due punti) e una scena per punto."""
+    frase = social._divide_titolo(titolo or "")[-1].strip()
+    frase = frase[:1].upper() + frase[1:]
+    righe = [frase.rstrip(".") + "."] + [x.strip() for x in (punti or []) if x.strip()]
+    return "\n".join(righe[:6])
 
 
 def _da_leggere(testo):
@@ -147,6 +160,8 @@ def immagini_scene(p, scene, foto, cartella):
     n_test, n_paesi = int(p.get("n_fonti") or len(p.get("fonti", []))), len(p.get("paesi", []))
     parti = social._divide_titolo(p["titolo"])
     kicker = parti[0].rstrip(":") if len(parti) == 2 else (p.get("sezione") or "Notizie")
+    if n_test == 1 and p.get("fonti"):     # una sola testata: si dichiara subito da chi arriva la notizia
+        kicker = "Secondo " + p["fonti"][0]["fonte"]
     file = []
     for i, testo in enumerate(scene):
         con_numero = bool(i and social._numero_forte(testo) and len(social._numero_forte(testo)) <= 14)
@@ -257,6 +272,8 @@ def genera(file_pacchetto, cartella_uscita=None):
     inizio = time.time()
     p = json.loads(Path(file_pacchetto).read_text(encoding="utf-8"))
     scene = scene_dal_copione(p.get("copione"))
+    if len(scene) < 2:
+        scene = scene_dal_copione(copione_da_punti(p.get("titolo"), p.get("punti")))
     if len(scene) < 2:
         raise SystemExit("ERRORE reel: il copione ha meno di 2 righe utili (campo 'Copione TikTok' del pacchetto)")
     uscita_dir = Path(cartella_uscita or Path.home() / "Desktop" / "Adolos" / "video").expanduser()

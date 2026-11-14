@@ -103,6 +103,22 @@ Le chiavi segrete vanno solo nei Secrets di GitHub, mai nei file o in chat.
 
 ---
 
+## Parte 3b — Regia sul Mac: carosello e video su richiesta, in pochi minuti
+
+Su Telegram ogni avviso ha i pulsanti **Prepara carosello** e **Prepara video**, e ogni pacchetto ha **Fammi il video**. Se il Mac della redazione è acceso, entro 2-4 minuti arrivano nel gruppo il carosello (album + file .zip) e/o il reel, con i pulsanti Approva e Scarta. Se il Mac è spento, li prepara la prossima edizione.
+
+Il programma è `engine/regia.py` e gira da `~/.adolos/adolos` (si aggiorna da solo da GitHub). Le chiavi stanno nel **Portachiavi del Mac**, non in un file. Una volta sola, nel Terminale (ognuno chiede il valore senza mostrarlo):
+
+```
+security add-generic-password -U -a adolos -s adolos-telegram-token -w
+security add-generic-password -U -a adolos -s adolos-telegram-chat -w
+security add-generic-password -U -a adolos -s adolos-notion-token -w
+```
+
+Per i testi delle notizie che non li hanno ancora usa la chiave `ANTHROPIC_API_KEY` del profilo del terminale (Claude Haiku, meno di un decimo di centesimo a notizia, tetto mensile in `fonti.json` → `ai`). Senza chiave aspetta i testi delle edizioni. Controllo: `~/.venvs/faceless/bin/python ~/.adolos/adolos/engine/regia.py stato`. Registro: `~/.adolos/regia.log`.
+
+---
+
 ## Parte 4 — Aggiungere testate
 
 Su Notion, database **Fonti Adolos**: una riga per testata, con tipo **Sito (feed RSS)** o **Agenzia (feed RSS)**. Nell'indirizzo va quello del feed. Spunta **Attiva**, e **Termini verificati** dopo aver letto le condizioni del feed.
