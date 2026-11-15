@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-15T01:19:19.665035+00:00",
+ "aggiornato": "2026-11-15T01:33:46.164497+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -136,7 +136,7 @@
  },
  "storie": [],
  "dati": {
-  "articoli_analizzati": 33186,
+  "articoli_analizzati": 33149,
   "storie": 400,
   "paesi_coperti": 98,
   "fonti_diverse": 288,
@@ -144,17 +144,17 @@
    [
     "AR",
     "Argentina",
-    4727
+    4717
    ],
    [
     "BR",
     "Brasile",
-    2851
+    2848
    ],
    [
     "DE",
     "Germania",
-    2841
+    2840
    ],
    [
     "FR",
@@ -164,47 +164,47 @@
    [
     "IT",
     "Italia",
-    2228
+    2230
    ],
    [
     "US",
     "Stati Uniti",
-    1778
+    1774
    ],
    [
     "ES",
     "Spagna",
-    1171
+    1170
    ],
    [
     "GB",
     "Regno Unito",
-    1084
+    1083
    ],
    [
     "IN",
     "India",
-    916
+    909
    ],
    [
     "PY",
     "Paraguay",
-    903
+    901
    ],
    [
     "NG",
     "Nigeria",
-    861
+    856
    ],
    [
     "AU",
     "Australia",
-    688
+    681
    ],
    [
     "PH",
     "Filippine",
-    562
+    563
    ],
    [
     "MX",
@@ -214,7 +214,7 @@
    [
     "CO",
     "Colombia",
-    511
+    510
    ],
    [
     "EC",
@@ -224,12 +224,12 @@
    [
     "PT",
     "Portogallo",
-    363
+    364
    ],
    [
     "SG",
     "Singapore",
-    344
+    343
    ],
    [
     "SE",
@@ -259,7 +259,7 @@
    [
     "NL",
     "Paesi Bassi",
-    252
+    253
    ],
    [
     "GH",
@@ -270,19 +270,19 @@
   "per_lingua": [
    [
     "en",
-    12286
+    12265
    ],
    [
     "es",
-    8214
+    8198
    ],
    [
     "pt",
-    3214
+    3212
    ],
    [
     "de",
-    3023
+    3022
    ],
    [
     "fr",
@@ -290,11 +290,11 @@
    ],
    [
     "it",
-    2072
+    2074
    ],
    [
     "nl",
-    310
+    311
    ],
    [
     "pl",
@@ -320,7 +320,7 @@
   "per_categoria": [
    [
     "Altro",
-    209
+    210
    ],
    [
     "Politica",
@@ -328,15 +328,15 @@
    ],
    [
     "Esteri e conflitti",
-    41
+    38
    ],
    [
     "Tecnologia e crypto",
-    30
+    31
    ],
    [
     "Società",
-    19
+    20
    ],
    [
     "Cronaca",
@@ -358,23 +358,23 @@
   "fonti_top": [
    [
     "Infobae",
-    3524
+    3518
    ],
    [
     "G1",
-    1351
+    1350
    ],
    [
     "ABC Color",
-    903
+    901
    ],
    [
     "Die Zeit",
-    664
+    666
    ],
    [
     "New York Post",
-    637
+    638
    ],
    [
     "O Globo",
@@ -386,11 +386,11 @@
    ],
    [
     "La Nación",
-    522
+    519
    ],
    [
     "Clarín",
-    489
+    486
    ],
    [
     "Globo Esporte",
@@ -402,73 +402,73 @@
    ],
    [
     "Semana",
-    462
+    461
    ]
   ],
   "per_ora": [
    [
     23,
-    370
+    360
    ],
    [
     22,
-    405
+    384
    ],
    [
     21,
-    452
+    549
    ],
    [
     20,
-    569
+    481
    ],
    [
     19,
-    411
+    454
    ],
    [
     18,
-    522
+    521
    ],
    [
     17,
-    508
+    524
    ],
    [
     16,
-    563
+    568
    ],
    [
     15,
-    634
+    653
    ],
    [
     14,
-    658
+    660
    ],
    [
     13,
-    647
+    655
    ],
    [
     12,
-    691
+    700
    ],
    [
     11,
-    662
+    642
    ],
    [
     10,
-    679
+    684
    ],
    [
     9,
-    694
+    712
    ],
    [
     8,
-    673
+    662
    ],
    [
     7,
@@ -476,31 +476,31 @@
    ],
    [
     6,
-    617
+    588
    ],
    [
     5,
-    571
+    556
    ],
    [
     4,
-    566
+    572
    ],
    [
     3,
-    481
+    463
    ],
    [
     2,
-    456
+    438
    ],
    [
     1,
-    466
+    447
    ],
    [
     0,
-    249
+    248
    ]
   ],
   "approvate_non_sul_sito": {
@@ -514,6 +514,8 @@
  },
  "errori_fonti": [
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
+  "AllAfrica: HTTPSConnectionPool(host='allafrica.com', port=443): Max retries exceeded with url: /tools/headlines/rdf/latest/headlines.rdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='allafrica.com', port=443) at 0x7f1c4dc1fb60>, 'Connection to allafrica.com timed out. (connect timeout=20)'))",
+  "Hacker News (prima pagina): HTTPSConnectionPool(host='hnrss.org', port=443): Max retries exceeded with url: /frontpage (Caused by ConnectTimeoutError(<HTTPSConnection(host='hnrss.org', port=443) at 0x7f1c4dc1d6d0>, 'Connection to hnrss.org timed out. (connect timeout=20)'))",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
   "Telex: 403 Client Error: Forbidden for url: https://telex.hu/rss",
   "The Slovenia Times: 403 Client Error: Forbidden for url: https://sloveniatimes.com/feed",
@@ -521,9 +523,9 @@
   "The Herald: 403 Client Error: Forbidden for url: https://www.heraldonline.co.zw/feed/",
   "La Prensa (Panama): 403 Client Error: Forbidden for url: https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
   "GDELT moldova: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:moldova&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT bosniaandherzegovina: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:bosniaandherzegovina&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT bosniaandherzegovina: Expecting value: line 1 column 1 (char 0)",
+  "GDELT macedonia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:macedonia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT montenegro: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:montenegro&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT kosovo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:kosovo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT iceland: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:iceland&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
+  "GDELT kosovo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:kosovo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
