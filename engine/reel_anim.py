@@ -36,7 +36,8 @@ GRIGIO = (196, 192, 188)
 SCURO_CELLA = (22, 22, 28)
 MESI = "GEN FEB MAR APR MAG GIU LUG AGO SET OTT NOV DIC".split()
 Y_SOTTO = 1480                       # riga dei sottotitoli (sopra la zona coperta da nome utente e didascalia)
-CARTA = (110, 520, 970, 1260)        # riquadro centrale della foto
+CARTA = (110, 520, 970, 1260)
+Y_NUMERO = 1130                      # contatori e linea del tempo: sotto il paese illuminato        # riquadro centrale della foto
 ANNO = re.compile(r"\b(19[5-9]\d|20[0-4]\d)\b")
 FONTI_RE = re.compile(r"\b(ne parla\w*|testat\w+|giornali|riportano|riporta|fonti|media)\b", re.I)
 
@@ -55,6 +56,11 @@ def _salto(x):                       # arriva, supera un poco e torna (effetto "
     x = min(1.0, max(0.0, x))
     c = 1.70158
     return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2
+
+
+def _credito_mappa():
+    import mappa
+    return mappa.CREDITO
 
 
 def _nomi_paesi():
@@ -168,13 +174,13 @@ def _contatore(fr, d, t, numero, etichetta):
     while d.textlength(finale, font=_f(size)) > W - 2 * M and size > 90:
         size -= 10
     size = round(size * (0.8 + 0.2 * _salto(t / 0.35)))
-    d.text((W / 2, 830), testo, font=_f(size), fill=GIALLO, anchor="mm", stroke_width=4, stroke_fill=NERO)
+    d.text((W / 2, Y_NUMERO), testo, font=_f(size), fill=GIALLO, anchor="mm", stroke_width=5, stroke_fill=NERO)
     if etichetta and t > 0.3:
-        d.text((W / 2, 830 + size * 0.62 + 30), etichetta.upper()[:44], font=_f(40, 800), fill=BIANCO, anchor="mm")
+        d.text((W / 2, Y_NUMERO + size * 0.62 + 30), etichetta.upper()[:44], font=_f(40, 800), fill=BIANCO, anchor="mm", stroke_width=4, stroke_fill=NERO)
 
 
 def _linea_tempo(fr, d, t, anno, oggi, etichetta):
-    y, x0, x1 = 900, M + 40, W - M - 40
+    y, x0, x1 = Y_NUMERO - 40, M + 40, W - M - 40
     k = _e((t - 0.2) / 1.4)
     d.text((x0, y - 90), str(anno), font=_f(110), fill=BIANCO, anchor="lm")
     d.text((x1, y - 90), str(oggi), font=_f(110), fill=BIANCO, anchor="rm")
@@ -188,7 +194,7 @@ def _linea_tempo(fr, d, t, anno, oggi, etichetta):
     d.text((W / 2, y + 190), f"{n} {'ANNO' if n == 1 else 'ANNI'}", font=_f(170), fill=GIALLO, anchor="mm",
            stroke_width=4, stroke_fill=NERO)
     if etichetta and t > 0.4:
-        d.text((W / 2, y + 330), etichetta.upper()[:44], font=_f(40, 800), fill=BIANCO, anchor="mm")
+        d.text((W / 2, y + 330), etichetta.upper()[:44], font=_f(40, 800), fill=BIANCO, anchor="mm", stroke_width=4, stroke_fill=NERO)
 
 
 def _griglia(fr, d, t, p, nomi):
@@ -269,6 +275,81 @@ def _parola(fr, d, t, testo):
         d.text((W / 2, 820), testo, font=f, fill=NERO, anchor="mm")
 
 
+# ---------------------------------------------------------------- mappa notturna (engine/mappa.py)
+def _veli(img, alto=0.72, basso=0.5):
+    """Scurisce in alto (testata) e in basso (sottotitoli) senza coprire la mappa al centro."""
+    w, h = img.size
+    m = Image.new("L", (1, h))
+    for y in range(h):
+        a = max(0.0, 1 - y / (h * 0.24)) * alto
+        b = min(1.0, max(0.0, (y / h - 0.66) / 0.30)) * basso
+        m.putpixel((0, y), int(255 * max(a, b)))
+    return Image.composite(Image.new("RGB", img.size, NERO), img, m.resize(img.size))
+
+
+class _MappaFonti:
+    """Mappa del mondo con i paesi delle testate che si accendono uno alla volta, con un punto e il nome."""
+
+    def __init__(self, p, nomi, tela):
+        import mappa
+        fonti = p.get("fonti") or []
+        codici = [c for c in dict.fromkeys(list(p.get("paesi") or []) + [f.get("paese") for f in fonti])
+                  if c and mappa.esiste(c)]
+        self.codici = codici[:12]
+        self.quante = {c: sum(1 for f in fonti if f.get("paese") == c) for c in self.codici}
+        self.nomi = {c: (nomi.get(c) or mappa._paesi()[c]["nome"]).upper() for c in self.codici}
+        wc, hc = tela
+        self.ox, self.oy = (wc - W) // 2, (hc - H) // 2
+        v = mappa.vista_insieme(self.codici, wc, hc, 700 + self.oy)
+        self.punti = [tuple(a - b for a, b in zip(v.xy(*mappa.centro(c)), (self.ox, self.oy))) for c in self.codici]
+        base = Image.alpha_composite(mappa.fondo(v).convert("RGBA"), Image.new("RGBA", (wc, hc), (0, 0, 0, 40)))
+        self.passi = []
+        for j in range(len(self.codici) + 1):
+            img = base if not j else Image.alpha_composite(base, mappa.strato_paesi(v, self.codici[:j], forte=False))
+            self.passi.append(_veli(img.convert("RGB"), 0.75, 0.62).crop((self.ox, self.oy, self.ox + W, self.oy + H)))
+        self.passo = min(0.22, 1.2 / max(1, len(self.codici)))
+
+    def fondo(self, t):
+        return self.passi[sum(1 for j in range(len(self.codici)) if t >= 0.15 + j * self.passo)]
+
+    def disegna(self, fr, d, t, p):
+        occupati = []
+        for j, (c, (x, y)) in enumerate(zip(self.codici, self.punti)):
+            dt = t - 0.15 - j * self.passo
+            if dt < 0:
+                continue
+            r = 9 + 4 * _salto(dt / 0.25)
+            d.ellipse((x - r, y - r, x + r, y + r), fill=GIALLO, outline=NERO, width=3)
+            if dt < 0.6:                                         # onda che si allarga quando il paese si accende
+                q = dt / 0.6
+                rr = 14 + 46 * q
+                d.ellipse((x - rr, y - rr, x + rr, y + rr), outline=GIALLO + (int(255 * (1 - q)),), width=3)
+            testo = self.nomi[c] + (f" · {self.quante[c]}" if self.quante.get(c, 0) > 1 else "")
+            f = _f(26, 800)
+            lw = d.textlength(testo, font=f) + 20
+            lx = min(max(M - 30, x - lw / 2), W - M + 30 - lw)
+            ly = y + 22
+            while any(abs(ly - oy) < 40 and lx < ox + ow and ox < lx + lw for ox, oy, ow in occupati):
+                ly += 42
+            occupati.append((lx, ly, lw))
+            d.rounded_rectangle((lx, ly, lx + lw, ly + 36), radius=6, fill=(10, 10, 14, 230))
+            d.text((lx + lw / 2, ly + 18), testo, font=f, fill=BIANCO, anchor="mm")
+        n_test = int(p.get("n_fonti") or len(p.get("fonti") or []))
+        n_paesi = len(p.get("paesi") or []) or len(self.codici)
+        k = _e((t - 0.15) / (self.passo * max(1, len(self.codici)) + 0.2))
+        y = 1150
+        d.text((W / 2, y), f"{round(n_test * k)} {'TESTATA' if n_test == 1 else 'TESTATE'}", font=_f(130), fill=GIALLO,
+               anchor="mm", stroke_width=5, stroke_fill=NERO)
+        d.text((W / 2, y + 100), f"DA {n_paesi} {'PAESE' if n_paesi == 1 else 'PAESI'}", font=_f(56, 800), fill=BIANCO,
+               anchor="mm", stroke_width=4, stroke_fill=NERO)
+        if p.get("punto_cieco") == "italia" and t > 0.9:
+            testo = "PUNTO CIECO: NESSUNA TESTATA ITALIANA"
+            f = _f(34)
+            lw = d.textlength(testo, font=f)
+            d.rounded_rectangle((W / 2 - lw / 2 - 20, y + 160, W / 2 + lw / 2 + 20, y + 216), radius=6, fill=GIALLO)
+            d.text((W / 2, y + 189), testo, font=f, fill=NERO, anchor="mm")
+
+
 # ---------------------------------------------------------------- suoni
 def _con_effetti(wav, inizi, uscita):
     """Un "whoosh" leggero a ogni cambio di scena (rumore filtrato, fatto qui: niente file di altri)."""
@@ -304,6 +385,19 @@ def rendi(p, scene, schermi, durate, tempi, foto, wav, uscita, lavoro):
     grande = base.resize((int(W * 1.10), int(H * 1.10)), Image.LANCZOS)
     vivo = _velo(grande) if con_foto else grande
     scuro = Image.blend(grande.filter(ImageFilter.GaussianBlur(24)), Image.new("RGB", grande.size, NERO), 0.76)
+    # mappa notturna: il paese della notizia illuminato (se i file NASA/Natural Earth sono sul Mac e il paese si trova)
+    mappa_ev, mappa_fonti, usata_mappa = None, None, False
+    try:
+        import mappa
+        if mappa.disponibile():
+            evento = mappa.codice_da_testo(etichetta, nomi) or mappa.codice_da_testo(p["titolo"], nomi)
+            if evento:
+                v = mappa.vista_paese(evento, grande.width, grande.height, 680 + (grande.height - H) // 2)
+                mappa_ev = _veli(mappa.fondo(v, [evento]))
+                usata_mappa = True
+    except Exception as e:
+        print("Reel: mappa non disegnata:", str(e)[:160])
+    interno = mappa_ev or scuro
 
     # che cosa va al centro di ogni scena
     piano, gia_griglia = [], False
@@ -317,6 +411,13 @@ def rendi(p, scene, schermi, durate, tempi, foto, wav, uscita, lavoro):
         elif anno and int(anno.group(1)) < oggi.year:
             piano.append(("anno", (int(anno.group(1)), "")))
         elif not gia_griglia and (i == len(scene) - 1 or FONTI_RE.search(voce)):
+            try:
+                import mappa
+                mappa_fonti = _MappaFonti(p, nomi, grande.size) if mappa.disponibile() else None
+                mappa_fonti = mappa_fonti if mappa_fonti and mappa_fonti.codici else None
+                usata_mappa = usata_mappa or bool(mappa_fonti)
+            except Exception as e:
+                print("Reel: mappa delle testate non disegnata:", str(e)[:160])
             piano.append(("fonti", None))
             gia_griglia = True
         elif con_foto:
@@ -356,8 +457,9 @@ def rendi(p, scene, schermi, durate, tempi, foto, wav, uscita, lavoro):
     y = social._testo_a(df, "Fonti: " + ", ".join(nomi_f) + ".", M, y + 50, W - 2 * M, social._news(42), GRIGIO, 1.25, max_righe=4)
     y = social._testo_a(df, "Testo preparato con l'aiuto dell'AI e verificato dalla redazione. Voce generata con AI.",
                         M, y + 26, W - 2 * M, social._news(30, corsivo=True), GRIGIO, 1.25, max_righe=3)
-    if (foto or {}).get("credito"):
-        social._testo_a(df, foto["credito"], M, y + 14, W - 2 * M, social._news(26, corsivo=True), GRIGIO, 1.25, max_righe=2)
+    crediti = " ".join(x for x in ((foto or {}).get("credito", ""), _credito_mappa() if usata_mappa else "") if x)
+    if crediti:
+        social._testo_a(df, crediti, M, y + 14, W - 2 * M, social._news(26, corsivo=True), GRIGIO, 1.25, max_righe=3)
 
     gruppi = reel.gruppi_parole(scene, durate, tempi, quante=3)
     inizi = [sum(durate[:i]) for i in range(len(durate) + 1)]       # l'ultimo è l'inizio della chiusura
@@ -378,7 +480,7 @@ def rendi(p, scene, schermi, durate, tempi, foto, wav, uscita, lavoro):
             if i >= len(scene):                                   # chiusura
                 fr = _pan(scuro, tl, reel.CHIUSURA, 0).convert("RGBA")
                 fr.alpha_composite(fine)
-                d = ImageDraw.Draw(fr)
+                d = ImageDraw.Draw(fr, "RGBA")
                 k = _salto(tl / 0.4)
                 testo = "@ADOLOS.IT"
                 f = _f(round(130 * (0.7 + 0.3 * k)))
@@ -388,15 +490,20 @@ def rendi(p, scene, schermi, durate, tempi, foto, wav, uscita, lavoro):
             else:
                 tipo, dati = piano[i]
                 durata = durate[i]
-                fr = _pan(vivo if tipo == "apertura" else scuro, tl, durata, i).convert("RGBA")
+                if tipo == "fonti" and mappa_fonti:
+                    fr = mappa_fonti.fondo(tl).convert("RGBA")
+                else:
+                    fr = _pan(vivo if tipo == "apertura" else interno, tl, durata, i).convert("RGBA")
                 fr.alpha_composite(strati[i])
                 if titoli[i] is not None:
                     fr.alpha_composite(titoli[i], dest=(0, int((1 - _e(tl / 0.45)) * 70)))
-                d = ImageDraw.Draw(fr)
+                d = ImageDraw.Draw(fr, "RGBA")
                 if tipo == "numero":
                     _contatore(fr, d, tl, *dati)
                 elif tipo == "anno":
                     _linea_tempo(fr, d, tl, dati[0], oggi.year, dati[1])
+                elif tipo == "fonti" and mappa_fonti:
+                    mappa_fonti.disegna(fr, d, tl, p)
                 elif tipo == "fonti":
                     _griglia(fr, d, tl, p, nomi)
                 elif tipo == "foto":
