@@ -282,7 +282,8 @@ def prepara(pagina, st):
         VIDEO.mkdir(parents=True, exist_ok=True)
         pacchetto = {"id": sid, "titolo": testi["titolo"], "sintesi": testi["sintesi"], "punti": testi["punti"],
                      "copione": testi["copione"], "sezione": s["sezione"], "paesi": s["paesi"], "n_fonti": s["n_fonti"],
-                     "fonti": [{"fonte": f["fonte"], "paese": f["paese"]} for f in s["fonti"]]}
+                     "fonti": [{"fonte": f["fonte"], "paese": f["paese"]} for f in s["fonti"]],
+                     "punto_cieco": s.get("punto_cieco", "")}
         f_pacchetto = CASA / f"pacchetto-{sid}.json"
         f_pacchetto.write_text(json.dumps(pacchetto, ensure_ascii=False), encoding="utf-8")
         mp4 = reel.genera(f_pacchetto, VIDEO)
@@ -292,8 +293,10 @@ def prepara(pagina, st):
         except Exception as e:
             log("video non copiato sulla Scrivania:", str(e)[:120])
         telegram._tg("sendVideo", {"chat_id": chat, "supports_streaming": True, "width": 1080, "height": 1920,
-                                   "caption": "Reel pronto. Voce generata con AI. Si scarica da qui: la pubblicazione "
-                                              "automatica dei reel non c'è ancora.", **risposta},
+                                   "caption": "Reel pronto. Voce generata con AI"
+                                              + (f" ({reel.ULTIMA_VOCE})" if reel.ULTIMA_VOCE else "")
+                                              + ". Si scarica da qui: la pubblicazione automatica dei reel non c'è ancora.",
+                                   **risposta},
                      video=(mp4.name, mp4.read_bytes()))
     # il messaggio con i pulsanti (gli stessi dei pacchetti: i clic li legge GitHub)
     testo = telegram._testo_pacchetto(p, s, (foto or {}).get("credito", ""))
@@ -431,6 +434,10 @@ def stato():
     mancano = carica_segreti()
     print("Chiavi nel Portachiavi:", "tutte presenti" if not mancano else "mancano " + ", ".join(mancano))
     print("Chiave AI per i testi:", "presente" if os.environ.get("AI_KEY") else "assente (si aspettano i testi delle edizioni)")
+    import reel
+    uso = reel._uso_mese()
+    print("Voce dei reel:", "ElevenLabs" if os.environ.get("ELEVENLABS_API_KEY", "").strip() else "locale (manca ELEVENLABS_API_KEY)",
+          f"· crediti ElevenLabs usati questo mese: {uso['crediti']} su {reel._imp_voce().get('tetto_crediti_mese', 9000)}")
     st = _leggi_stato()
     print("Ultime richieste fatte:", *(st.get("fatte", [])[-5:] or ["nessuna"]), sep="\n  ")
     for pid, t in st.get("tentativi", {}).items():

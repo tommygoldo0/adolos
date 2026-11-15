@@ -4171,6 +4171,16 @@
   "min_italia_solo": 3
  },
  "_info_uso": "uso: 'completo' (titoli e descrizioni passati all'AI per scrivere titoli e sintesi nuovi) oppure 'conta_e_link' (la testata serve solo a contare chi ne parla e a mettere il link). Sul sito nessun titolo o testo delle testate viene mostrato in ogni caso.",
+ "reel_voce": {
+  "_info": "Voce dei reel fatti sul Mac (engine/reel.py). motore 'elevenlabs' usa la chiave ELEVENLABS_API_KEY del terminale; senza chiave, se ElevenLabs non risponde o se si supera il tetto del mese, si usa la voce locale gratuita Kokoro. Piano gratuito ElevenLabs: 10.000 crediti al mese, niente uso commerciale e niente voci italiane della libreria via API. Con eleven_multilingual_v2 1 carattere = 1 credito. Conteggio del mese in ~/.adolos/elevenlabs.json. Nel video resta sempre 'Voce generata con AI'.",
+  "motore": "elevenlabs",
+  "modello": "eleven_multilingual_v2",
+  "voce_id": "onwK4e9ZLuTAKqWW03F9",
+  "nome_voce": "Daniel",
+  "tetto_crediti_mese": 9000,
+  "stile_video": "infografica",
+  "impostazioni": {"stability": 0.45, "similarity_boost": 0.8, "style": 0.2, "use_speaker_boost": true}
+ },
  "voce": {
   "_info": "Voce AI per video e audio (engine/voce.py, Gemini TTS a pagamento: nell'UE la quota gratuita non si può usare per app e siti). Chiave: GEMINI_API_KEY. Etichetta obbligatoria 'Voce generata con AI'. Solo voci predefinite; replica solo della voce di un membro della redazione con consenso scritto.",
   "attiva": true,

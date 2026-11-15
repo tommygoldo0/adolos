@@ -23,7 +23,10 @@ una persona approva su Notion prima di ogni pubblicazione. Rispondi sempre in it
 - Redazione completa su una notizia approvata: skill `adolos-redazione`
 - Regia locale sul Mac (richieste "Prepara carosello/video" da Telegram → carosello e reel nel gruppo in pochi
   minuti): `engine/regia.py` (`stato`, `una`, `guardia`, `installa`). Gira da `~/.adolos/adolos`, registro in
-  `~/.adolos/regia.log`. Reel: `engine/reel.py` (voce locale Kokoro, ffmpeg-full), venv `~/.venvs/faceless`.
+  `~/.adolos/regia.log`. Reel: `engine/reel.py` + `engine/reel_anim.py` (stile "infografica": contatori, linea del tempo,
+  griglia delle testate, sottotitoli a scatti), venv `~/.venvs/faceless`. Voce: ElevenLabs con `ELEVENLABS_API_KEY` (tetto
+  crediti in `fonti.json` > `reel_voce`, conteggio in `~/.adolos/elevenlabs.json`), altrimenti Kokoro locale gratis.
+  Prove senza consumare crediti: `ADOLOS_VOCE=locale`.
 
 ## Notion
 - Database "Redazione Adolos": data source `collection://57ca1ff1-e682-4f7e-af95-747a0658bb5e`

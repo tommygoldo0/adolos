@@ -40,22 +40,30 @@ BIANCO = (255, 255, 255)
 
 
 # ---------------------------------------------------------------- copione
-def scene_dal_copione(copione):
-    """Una scena per riga del copione. Toglie i tempi ("[0-2s]" oppure "1 (0-3 s)") e le righe di servizio (fonti,
-    nota AI). Se la riga ha la forma "Testo: ... · Voce: ...", si legge la parte "Voce"."""
+def righe_copione(copione):
+    """Una scena per riga del copione: [(testo letto, scritta sullo schermo o "")]. Toglie i tempi ("[0-2s]" oppure
+    "1 (0-3 s)") e le righe di servizio (fonti, nota AI). Se la riga ha la forma "Testo: ... · Voce: ...", si legge
+    la parte "Voce" e la parte "Testo" diventa la scritta della scena."""
     scene = []
     for riga in (copione or "").splitlines():
         t = re.sub(r"^\s*\[[^\]]*\]\s*", "", riga).strip()
         t = re.sub(r"^\d+\s*\(\s*\d+\s*[-–]\s*\d+\s*s\s*\)\s*", "", t).strip()
+        schermo = ""
         if re.search(r"\bVoce\s*:", t):
-            t = re.split(r"\bVoce\s*:", t, maxsplit=1)[1].strip()
+            prima, t = re.split(r"\bVoce\s*:", t, maxsplit=1)
+            schermo = re.sub(r"^\s*Testo\s*:\s*", "", prima).strip(" ·-–\"«»")
+            t = t.strip()
         t = re.sub(r"^Testo\s*:\s*", "", t).strip(" ·")
         if not t or t.lower().startswith(("fonti", "testo preparato", "scritta", "voce generata")):
             continue
         t = re.sub(r"\s*Testo preparato con l'aiuto dell'AI.*$", "", t).strip()
         if t:
-            scene.append(t)
+            scene.append((t, schermo if len(schermo) <= 48 else ""))
     return scene[:8]
+
+
+def scene_dal_copione(copione):
+    return [v for v, _ in righe_copione(copione)]
 
 
 def copione_da_punti(titolo, punti):
@@ -73,9 +81,117 @@ def _da_leggere(testo):
     return re.sub(r"\s+", " ", t).strip()
 
 
-# ---------------------------------------------------------------- voce (Kokoro, locale)
+# ---------------------------------------------------------------- voce
+ULTIMA_VOCE = ""                   # come è stata fatta la voce dell'ultimo reel (la regia lo scrive su Telegram)
+USO_ELEVENLABS = Path.home() / ".adolos" / "elevenlabs.json"
+
+
+def _imp_voce():
+    try:
+        return json.loads((ENGINE / "fonti.json").read_text(encoding="utf-8")).get("reel_voce", {})
+    except Exception:
+        return {}
+
+
+def _n(x):
+    return f"{int(x):,}".replace(",", ".")
+
+
+def _uso_mese():
+    """Crediti ElevenLabs usati questo mese dai reel di Adolos (conteggio nostro, sul Mac)."""
+    import datetime
+    mese = datetime.date.today().strftime("%Y-%m")
+    try:
+        d = json.loads(USO_ELEVENLABS.read_text(encoding="utf-8"))
+    except Exception:
+        d = {}
+    return d if d.get("mese") == mese else {"mese": mese, "crediti": 0, "reel": 0}
+
+
+def _segna_uso(crediti):
+    d = _uso_mese()
+    d["crediti"] += int(crediti)
+    d["reel"] += 1
+    USO_ELEVENLABS.parent.mkdir(parents=True, exist_ok=True)
+    USO_ELEVENLABS.write_text(json.dumps(d), encoding="utf-8")
+    return d
+
+
 def voce(scene, cartella):
-    """Legge ogni scena. Restituisce (file wav unico, [durata di ogni scena in secondi])."""
+    """Legge ogni scena. Restituisce (file wav unico, [durata di ogni scena], [tempi delle parole o None]).
+    Prima prova ElevenLabs (se c'è la chiave ELEVENLABS_API_KEY e non si supera il tetto del mese), altrimenti Kokoro."""
+    global ULTIMA_VOCE
+    import os
+    imp = _imp_voce()
+    chiave = os.environ.get("ELEVENLABS_API_KEY", "").strip()
+    if os.environ.get("ADOLOS_VOCE") == "locale":         # per le prove: non consuma crediti
+        chiave = ""
+    if imp.get("motore") == "elevenlabs" and chiave:
+        servono = sum(len(_da_leggere(t)) for t in scene)
+        uso = _uso_mese()
+        tetto = int(imp.get("tetto_crediti_mese", 9000))
+        if uso["crediti"] + servono > tetto:
+            ULTIMA_VOCE = f"voce locale gratuita (tetto ElevenLabs del mese raggiunto: {_n(uso['crediti'])} su {_n(tetto)} crediti)"
+        else:
+            try:
+                return _voce_elevenlabs(scene, cartella, imp, chiave, tetto)
+            except Exception as e:      # mai il testo della chiave: solo il tipo di errore
+                print("Reel: ElevenLabs non ha risposto, uso la voce locale:", str(e)[:160])
+                ULTIMA_VOCE = "voce locale gratuita (ElevenLabs non ha risposto)"
+    else:
+        ULTIMA_VOCE = "voce locale gratuita (Kokoro)"
+    wav, durate = _voce_kokoro(scene, cartella)
+    return wav, durate, None
+
+
+def _voce_elevenlabs(scene, cartella, imp, chiave, tetto):
+    """Una richiesta per scena, con i tempi di ogni lettera (servono ai sottotitoli a tempo esatto).
+    Ogni richiesta riceve anche la frase prima e dopo, così l'intonazione resta continua."""
+    global ULTIMA_VOCE
+    import base64
+    import urllib.request
+    import numpy as np
+    import soundfile as sf
+    sr, pezzi, durate, tempi, costo = 44100, [], [], [], 0
+    testi = [_da_leggere(t) for t in scene]
+    for i, testo in enumerate(testi):
+        corpo = {"text": testo, "model_id": imp.get("modello", "eleven_multilingual_v2"), "language_code": "it",
+                 "voice_settings": imp.get("impostazioni", {"stability": 0.45, "similarity_boost": 0.8, "style": 0.2,
+                                                            "use_speaker_boost": True})}
+        if i:
+            corpo["previous_text"] = testi[i - 1]
+        if i + 1 < len(testi):
+            corpo["next_text"] = testi[i + 1]
+        req = urllib.request.Request(
+            f"https://api.elevenlabs.io/v1/text-to-speech/{imp.get('voce_id', 'onwK4e9ZLuTAKqWW03F9')}/with-timestamps"
+            "?output_format=mp3_44100_128", data=json.dumps(corpo).encode(),
+            headers={"xi-api-key": chiave, "Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=90) as r:
+            costo += int(r.headers.get("character-cost") or len(testo))
+            dati = json.load(r)
+        mp3, wav = cartella / f"el_{i:02d}.mp3", cartella / f"el_{i:02d}.wav"
+        mp3.write_bytes(base64.b64decode(dati["audio_base64"]))
+        _ffmpeg("-i", str(mp3), "-ar", str(sr), "-ac", "1", str(wav))
+        a, _ = sf.read(str(wav), dtype="float32")
+        al = dati.get("alignment") or {}
+        fine = al.get("character_end_times_seconds") or []
+        n = max(1, len(al.get("characters") or []))
+        # (frazione del testo letto, secondo) -> per mettere i sottotitoli esattamente sulle parole
+        tempi.append([(k / n, t) for k, t in enumerate([0.0] + list(fine))] if fine else None)
+        a = np.concatenate([a, np.zeros(int(sr * PAUSA), dtype=a.dtype)])
+        pezzi.append(a)
+        durate.append(len(a) / sr)
+    pezzi.append(np.zeros(int(sr * CHIUSURA), dtype=pezzi[0].dtype))
+    file = cartella / "voce.wav"
+    sf.write(str(file), np.concatenate(pezzi), sr)
+    uso = _segna_uso(costo)
+    ULTIMA_VOCE = (f"ElevenLabs, voce {imp.get('nome_voce', '')}: {_n(costo)} crediti per questo reel, "
+                   f"questo mese {_n(uso['crediti'])} su {_n(tetto)}")
+    return file, durate, tempi
+
+
+def _voce_kokoro(scene, cartella):
+    """Voce locale gratuita. Restituisce (file wav unico, [durata di ogni scena in secondi])."""
     import numpy as np
     import soundfile as sf
     from kokoro_onnx import Kokoro
@@ -210,27 +326,54 @@ def _tempo(t):
     return f"{h}:{m:02d}:{s:05.2f}"
 
 
-def sottotitoli(scene, durate, cartella):
-    """Tre parole alla volta, grandi e al centro. I tempi sono stimati dalla lunghezza delle parole dentro ogni scena."""
+def _quando(tempi, frazione):
+    """Secondo in cui la voce arriva a quella frazione del testo (dai tempi di ElevenLabs)."""
+    for (f0, t0), (f1, t1) in zip(tempi, tempi[1:]):
+        if frazione <= f1:
+            return t0 + (t1 - t0) * ((frazione - f0) / (f1 - f0) if f1 > f0 else 0)
+    return tempi[-1][1]
+
+
+def sottotitoli(scene, durate, cartella, tempi=None):
+    """Tre parole alla volta, grandi e al centro. Con ElevenLabs i tempi sono quelli veri della voce; con la voce locale
+    sono stimati dalla lunghezza delle parole dentro ogni scena."""
+    return _ass(scene, gruppi_parole(scene, durate, tempi), cartella)
+
+
+def gruppi_parole(scene, durate, tempi=None, quante=3):
+    """[(inizio, fine, [parole], indice della scena)]: poche parole alla volta, a tempo con la voce.
+    Con ElevenLabs i tempi sono quelli veri; con la voce locale sono stimati dalla lunghezza delle parole."""
+    out, t0 = [], 0.0
+    for i, (testo, durata) in enumerate(zip(scene, durate)):
+        parole = testo.split()
+        gruppi = [parole[k:k + quante] for k in range(0, len(parole), quante)]
+        peso = [sum(len(x) for x in g) + len(g) for g in gruppi]
+        tot, utile = sum(peso), durata - PAUSA
+        tm = (tempi or [None] * len(scene))[i]
+        fatti, t = 0, t0
+        for k, (g, w) in enumerate(zip(gruppi, peso)):
+            if tm:
+                a = t0 + _quando(tm, fatti / tot)
+                b = t0 + (_quando(tm, (fatti + w) / tot) if k + 1 < len(gruppi) else utile)
+            else:
+                a, b = t, t + utile * w / tot
+            out.append((a, max(a + 0.12, b), g, i))
+            t, fatti = b, fatti + w
+        t0 += durata
+    return out
+
+
+def _ass(scene, gruppi, cartella):
     righe = ["[Script Info]", "ScriptType: v4.00+", f"PlayResX: {W}", f"PlayResY: {H}", "WrapStyle: 2", "",
              "[V4+ Styles]",
              "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, "
              "StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding",
              "Style: A,Instrument Sans,86,&H00FFFFFF,&H00FFFFFF,&H00090810,&H96000000,-1,0,0,0,100,100,0,0,1,7,2,5,60,60,0,1", "",
              "[Events]", "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"]
-    t0 = 0.0
-    for i, (testo, durata) in enumerate(zip(scene, durate)):
-        parole = testo.split()
-        gruppi = [parole[k:k + 3] for k in range(0, len(parole), 3)]
-        peso = [sum(len(x) for x in g) + len(g) for g in gruppi]
-        utile, t = durata - PAUSA, t0
-        y = 1050 if (i and social._numero_forte(testo)) else 1330
-        for g, w in zip(gruppi, peso):
-            dt = utile * w / sum(peso)
-            frase = " ".join(g).upper().replace("{", "(").replace("}", ")")
-            righe.append(f"Dialogue: 0,{_tempo(t)},{_tempo(t + dt)},A,,0,0,0,,{{\\an5\\pos({W // 2},{y})}}{frase}")
-            t += dt
-        t0 += durata
+    for a, b, g, i in gruppi:
+        y = 1050 if (i and social._numero_forte(scene[i])) else 1330
+        frase = " ".join(g).upper().replace("{", "(").replace("}", ")")
+        righe.append(f"Dialogue: 0,{_tempo(a)},{_tempo(b)},A,,0,0,0,,{{\\an5\\pos({W // 2},{y})}}{frase}")
     file = cartella / "sottotitoli.ass"
     file.write_text("\n".join(righe) + "\n", encoding="utf-8")
     return file
@@ -271,9 +414,10 @@ def genera(file_pacchetto, cartella_uscita=None):
     import time
     inizio = time.time()
     p = json.loads(Path(file_pacchetto).read_text(encoding="utf-8"))
-    scene = scene_dal_copione(p.get("copione"))
-    if len(scene) < 2:
-        scene = scene_dal_copione(copione_da_punti(p.get("titolo"), p.get("punti")))
+    righe = righe_copione(p.get("copione"))
+    if len(righe) < 2:
+        righe = righe_copione(copione_da_punti(p.get("titolo"), p.get("punti")))
+    scene, schermi = [v for v, _ in righe], [s for _, s in righe]
     if len(scene) < 2:
         raise SystemExit("ERRORE reel: il copione ha meno di 2 righe utili (campo 'Copione TikTok' del pacchetto)")
     uscita_dir = Path(cartella_uscita or Path.home() / "Desktop" / "Adolos" / "video").expanduser()
@@ -287,13 +431,17 @@ def genera(file_pacchetto, cartella_uscita=None):
         foto = immagini.per_storia(s, p["titolo"], [], "", (p.get("sintesi") or "") + " " + " ".join(p.get("punti") or []))
     except Exception as e:
         print("Reel: foto non cercata:", str(e)[:120])
-    wav, durate = voce(scene, lavoro)
-    file_scene = immagini_scene(p, scene, foto, lavoro)
-    ass = sottotitoli(scene, durate, lavoro)
+    wav, durate, tempi = voce(scene, lavoro)
     uscita = uscita_dir / f"adolos-{p['id']}.mp4"
-    monta(file_scene, durate, wav, ass, uscita, lavoro)
+    if _imp_voce().get("stile_video", "infografica") == "infografica":
+        import reel_anim
+        reel_anim.rendi(p, scene, schermi, durate, tempi, foto, wav, uscita, lavoro)
+    else:                                        # stile di prima: foto che si muove + sottotitoli ASS
+        file_scene = immagini_scene(p, scene, foto, lavoro)
+        ass = sottotitoli(scene, durate, lavoro, tempi)
+        monta(file_scene, durate, wav, ass, uscita, lavoro)
     print(f"Reel pronto in {time.time() - inizio:.0f} secondi: {uscita} ({sum(durate) + CHIUSURA:.0f} s, "
-          f"{uscita.stat().st_size // 1024} KB, {'con foto' if foto else 'senza foto'})")
+          f"{uscita.stat().st_size // 1024} KB, {'con foto' if foto else 'senza foto'}) · {ULTIMA_VOCE}")
     return uscita
 
 
