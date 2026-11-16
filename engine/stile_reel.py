@@ -16,6 +16,7 @@ Come è fatto un reel Adolos
     foto con licenza libera. Una scena nuova a ogni frase.
   - Numeri e dati di una sola testata: sotto c'è sempre "Secondo <testata>" (riga della fonte).
   - Chiusura: "Segui @adolos.it" in un riquadro giallo, fonti, nota sull'AI, crediti di foto e mappa.
+  - Niente scena sulle testate ("24 testate da 15 paesi"): per scelta. Le fonti si citano comunque (regola legale).
   - Mai: volti di persone create con AI, foto di giornali, bandiere finte, scritte fuori dalla zona sicura.
 Copiamo il formato (scene brevi, testo in alto, mappe luminose), mai i personaggi o i testi di altri account.
 """
@@ -60,6 +61,7 @@ PAUSA_S = 0.22
 STACCO_S = 0.12
 PAROLE_PER_PEZZO = 3
 MAX_SCENE = 12                     # circa un minuto di voce
+SCENA_TESTATE = False              # niente scena "chi ne parla" nei reel (scelta di Tommaso, 16 novembre 2026); le fonti restano in chiusura e sotto i dati
 GLOBO_FPS = 30
 GLOBO_CAMPIONI = 8                 # qualità di Blender: 8 basta per un video che scorre
 

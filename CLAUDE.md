@@ -24,7 +24,7 @@ una persona approva su Notion prima di ogni pubblicazione. Rispondi sempre in it
 - Regia locale sul Mac (richieste "Prepara carosello/video" da Telegram → carosello e reel nel gruppo in pochi
   minuti): `engine/regia.py` (`stato`, `una`, `guardia`, `installa`). Gira da `~/.adolos/adolos`, registro in
   `~/.adolos/regia.log`. Reel: `engine/reel.py` + `engine/reel_anim.py` (stile "infografica": contatori, linea del tempo,
-  griglia delle testate, sottotitoli a scatti), venv `~/.venvs/faceless`. Voce: ElevenLabs con `ELEVENLABS_API_KEY` (tetto
+  mappe per scena, parole in alto), venv `~/.venvs/faceless`. Voce: ElevenLabs con `ELEVENLABS_API_KEY` (tetto
   crediti in `fonti.json` > `reel_voce`, conteggio in `~/.adolos/elevenlabs.json`), altrimenti Kokoro locale gratis.
   Prove senza consumare crediti: `ADOLOS_VOCE=locale`.
   Stile unico dei reel: `engine/stile_reel.py` ("adolos-reel-v2", regole nella skill `adolos-stile`); globo 3D con Blender:

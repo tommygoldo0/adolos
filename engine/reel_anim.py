@@ -9,7 +9,7 @@ Per ogni scena del copione si sceglie l'elemento centrale dal contenuto (niente 
   - prima scena                                      -> globo 3D (Blender) con i protagonisti e il luogo, o la foto
   - "Numero: ..." nel copione, o un numero con unità -> contatore giallo che sale fino al dato
   - un anno passato (1945)                           -> linea del tempo che si riempie fino a oggi
-  - "ne parlano", "testate", ultima scena            -> globo con i paesi delle testate che si accendono
+  - ("ne parlano", "testate": scena spenta, vedi ST.SCENA_TESTATE) -> globo con i paesi delle testate che si accendono
   - altrimenti                                       -> la foto con licenza libera in un riquadro che si muove
 Le parole della voce stanno in alto, a pezzi di 2-4 parole, sottili; la parola chiave in grassetto, i numeri in giallo.
 Se la scena ha una "Fonte", sotto compare "Secondo <testata>". Chiusura: "Segui @adolos.it", fonti, nota AI, crediti.
@@ -469,7 +469,7 @@ def rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro):
             piano.append(("numero", (numero, schermo if r.get("numero") else _etichetta_numero(voce, schermo))))
         elif anno and int(anno.group(1)) < oggi.year:
             piano.append(("anno", (int(anno.group(1)), "")))
-        elif not gia_fonti and (i == len(righe) - 1 or FONTI_RE.search(voce)):
+        elif ST.SCENA_TESTATE and not gia_fonti and (i == len(righe) - 1 or FONTI_RE.search(voce)):
             piano.append(("fonti", None))
             gia_fonti = True
         elif con_foto:

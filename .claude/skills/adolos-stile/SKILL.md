@@ -69,6 +69,8 @@ cambia quel file, una volta, e cambiano tutti i reel.
   linea del tempo, foto con licenza libera. Una scena nuova a ogni frase, circa un minuto in tutto.
 - Un dato che arriva da una sola testata ha sotto "Secondo <testata>" (campo `Fonte:` del copione).
 - Chiusura: "Segui @adolos.it" in un riquadro giallo, fonti, nota sull'AI, crediti foto e mappa (NASA, Natural Earth).
+- Niente scena "chi ne parla" (testate e paesi): tolta da Tommaso il 16/11 (`SCENA_TESTATE = False`). Le fonti restano
+  citate sotto i dati e in chiusura: è una regola legale.
 - Formato di una riga del copione:
   `1 (0-6 s) Testo: SCRITTA · Voce: frase letta · Numero: 11.000 · Fonte: El Mundo · Paese: US, CN`
 - Si copia il formato (scene brevi, testo in alto, mappe luminose), mai personaggi, testi o grafiche di altri account.
