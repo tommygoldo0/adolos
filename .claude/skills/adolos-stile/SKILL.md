@@ -55,6 +55,26 @@ Il codice è in `engine/social.py` (funzione `carosello`). Gli stili "Prima pagi
 - Senza i due punti il titolo intero finisce in copertina, più piccolo, e l'etichetta è la sezione.
 - Un solo numero forte per punto. Niente esche: il titolo non dice mai più della sintesi (skill `adolos-viralita`).
 
+## Reel: lo stile unico "adolos-reel-v2" (16 novembre 2026)
+Tutti i reel hanno lo stesso aspetto. Le regole stanno nel codice, in `engine/stile_reel.py` (colori e caratteri vengono
+da `engine/social.py`, gli stessi dei caroselli). `reel_anim.py` e `reel_globo.py` non possono scrivere colori o caratteri
+a mano: `python engine/stile_reel.py` controlla e il reel non parte se qualcuno li aggira. Per cambiare lo stile si
+cambia quel file, una volta, e cambiano tutti i reel.
+- Fondo nero caldo con la Terra di notte (foto NASA) e luci dorate. Il paese di cui si parla è illuminato in giallo.
+- In alto a sinistra il marchio (cerchio rosso con la α), a destra "Voce generata con AI", sotto l'etichetta ROSSA piena
+  (argomento o "Secondo <testata>"): la stessa dei caroselli.
+- Le parole della voce stanno IN ALTO, a pezzi di 2-4 parole, in carattere sottile; la parola chiave in grassetto, i numeri
+  in giallo. Mai in basso (lì c'è l'interfaccia di Instagram e TikTok). Niente maiuscolo urlato.
+- Al centro una sola cosa che si muove per scena: globo 3D (Blender), mappa con i paesi illuminati, contatore giallo,
+  linea del tempo, foto con licenza libera. Una scena nuova a ogni frase, circa un minuto in tutto.
+- Un dato che arriva da una sola testata ha sotto "Secondo <testata>" (campo `Fonte:` del copione).
+- Chiusura: "Segui @adolos.it" in un riquadro giallo, fonti, nota sull'AI, crediti foto e mappa (NASA, Natural Earth).
+- Formato di una riga del copione:
+  `1 (0-6 s) Testo: SCRITTA · Voce: frase letta · Numero: 11.000 · Fonte: El Mundo · Paese: US, CN`
+- Si copia il formato (scene brevi, testo in alto, mappe luminose), mai personaggi, testi o grafiche di altri account.
+- Regole di sempre: solo fatti presenti in almeno 2 testate, "secondo <testata>" per i dati di una sola, notizie in
+  evoluzione da ricontrollare prima di pubblicare, nessuna persona reale creata con l'AI.
+
 ## Il tratto che ci distingue: "Chi ne parla" e "Punto cieco"
 - Su ogni notizia mostriamo quante testate italiane ed estere la raccontano e da quali continenti.
 - "Punto cieco italiano" = molte testate straniere, nessuna italiana tra quelle che leggiamo.

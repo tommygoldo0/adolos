@@ -29,6 +29,7 @@ from pathlib import Path
 ENGINE = Path(__file__).resolve().parent
 sys.path.insert(0, str(ENGINE))
 import social                      # noqa: E402  (stessi caratteri, colori e marchio dei caroselli)
+import stile_reel                  # noqa: E402  (lo stile unico dei reel)
 
 W, H, FPS = 1080, 1920, 30
 MARGINE = 72
@@ -41,29 +42,37 @@ BIANCO = (255, 255, 255)
 
 # ---------------------------------------------------------------- copione
 def righe_copione(copione):
-    """Una scena per riga del copione: [(testo letto, scritta sullo schermo o "")]. Toglie i tempi ("[0-2s]" oppure
-    "1 (0-3 s)") e le righe di servizio (fonti, nota AI). Se la riga ha la forma "Testo: ... · Voce: ...", si legge
-    la parte "Voce" e la parte "Testo" diventa la scritta della scena."""
+    """Una scena per riga del copione: [{"voce", "schermo", "numero", "fonte"}]. Toglie i tempi ("[0-2s]" oppure
+    "1 (0-3 s)") e le righe di servizio (fonti, nota AI). Forma completa di una riga:
+        1 (0-3 s) Testo: scritta breve · Voce: frase letta · Numero: 11.000 · Fonte: El Mundo · Paese: US, CN
+    "Testo" diventa la scritta della scena, "Voce" è letta dalla voce, "Numero" (facoltativo) è il dato da scrivere
+    grande, "Fonte" (facoltativa) è la testata che compare sotto ("Secondo El Mundo"), "Paese" (facoltativo) sono i paesi
+    da illuminare sulla mappa di quella scena (codici come US, CN o nomi come Cina)."""
     scene = []
     for riga in (copione or "").splitlines():
         t = re.sub(r"^\s*\[[^\]]*\]\s*", "", riga).strip()
         t = re.sub(r"^\d+\s*\(\s*\d+\s*[-–]\s*\d+\s*s\s*\)\s*", "", t).strip()
-        schermo = ""
+        schermo, extra = "", {}
         if re.search(r"\bVoce\s*:", t):
             prima, t = re.split(r"\bVoce\s*:", t, maxsplit=1)
             schermo = re.sub(r"^\s*Testo\s*:\s*", "", prima).strip(" ·-–\"«»")
-            t = t.strip()
+            pezzi = re.split(r"\s*·\s*(?=(?:Numero|Fonte|Paese)\s*:)", t.strip())
+            t = pezzi[0]
+            for seg in pezzi[1:]:
+                k, _, v = seg.partition(":")
+                extra[k.strip().lower()] = v.strip()
         t = re.sub(r"^Testo\s*:\s*", "", t).strip(" ·")
         if not t or t.lower().startswith(("fonti", "testo preparato", "scritta", "voce generata")):
             continue
         t = re.sub(r"\s*Testo preparato con l'aiuto dell'AI.*$", "", t).strip()
         if t:
-            scene.append((t, schermo if len(schermo) <= 48 else ""))
-    return scene[:8]
+            scene.append({"voce": t, "schermo": schermo if len(schermo) <= 48 else "",
+                          "numero": extra.get("numero", ""), "fonte": extra.get("fonte", ""), "paese": extra.get("paese", "")})
+    return scene[:stile_reel.MAX_SCENE]
 
 
 def scene_dal_copione(copione):
-    return [v for v, _ in righe_copione(copione)]
+    return [r["voce"] for r in righe_copione(copione)]
 
 
 def copione_da_punti(titolo, punti):
@@ -108,10 +117,10 @@ def _uso_mese():
     return d if d.get("mese") == mese else {"mese": mese, "crediti": 0, "reel": 0}
 
 
-def _segna_uso(crediti):
+def _segna_uso(crediti, reel=1):
     d = _uso_mese()
     d["crediti"] += int(crediti)
-    d["reel"] += 1
+    d["reel"] += reel
     USO_ELEVENLABS.parent.mkdir(parents=True, exist_ok=True)
     USO_ELEVENLABS.write_text(json.dumps(d), encoding="utf-8")
     return d
@@ -162,13 +171,28 @@ def _voce_elevenlabs(scene, cartella, imp, chiave, tetto):
             corpo["previous_text"] = testi[i - 1]
         if i + 1 < len(testi):
             corpo["next_text"] = testi[i + 1]
-        req = urllib.request.Request(
-            f"https://api.elevenlabs.io/v1/text-to-speech/{imp.get('voce_id', 'onwK4e9ZLuTAKqWW03F9')}/with-timestamps"
-            "?output_format=mp3_44100_128", data=json.dumps(corpo).encode(),
-            headers={"xi-api-key": chiave, "Content-Type": "application/json"})
-        with urllib.request.urlopen(req, timeout=90) as r:
-            costo += int(r.headers.get("character-cost") or len(testo))
-            dati = json.load(r)
+        # stessa frase, stessa voce, stesse impostazioni: si riusa l'audio già fatto (niente crediti spesi due volte)
+        import hashlib
+        impronta = hashlib.sha1(json.dumps([corpo, imp.get("voce_id")], sort_keys=True).encode()).hexdigest()
+        f_cache = cartella / f"el_{i:02d}.json"
+        dati = None
+        try:
+            c = json.loads(f_cache.read_text(encoding="utf-8"))
+            if c.get("impronta") == impronta:
+                dati = c["dati"]
+        except Exception:
+            pass
+        if dati is None:
+            req = urllib.request.Request(
+                f"https://api.elevenlabs.io/v1/text-to-speech/{imp.get('voce_id', 'onwK4e9ZLuTAKqWW03F9')}/with-timestamps"
+                "?output_format=mp3_44100_128", data=json.dumps(corpo).encode(),
+                headers={"xi-api-key": chiave, "Content-Type": "application/json"})
+            with urllib.request.urlopen(req, timeout=90) as r:
+                spesi = int(r.headers.get("character-cost") or len(testo))
+                dati = json.load(r)
+            costo += spesi
+            _segna_uso(spesi, reel=0)               # i crediti si contano subito, anche se un'altra scena poi fallisce
+            f_cache.write_text(json.dumps({"impronta": impronta, "dati": dati}), encoding="utf-8")
         mp3, wav = cartella / f"el_{i:02d}.mp3", cartella / f"el_{i:02d}.wav"
         mp3.write_bytes(base64.b64decode(dati["audio_base64"]))
         _ffmpeg("-i", str(mp3), "-ar", str(sr), "-ac", "1", str(wav))
@@ -184,8 +208,8 @@ def _voce_elevenlabs(scene, cartella, imp, chiave, tetto):
     pezzi.append(np.zeros(int(sr * CHIUSURA), dtype=pezzi[0].dtype))
     file = cartella / "voce.wav"
     sf.write(str(file), np.concatenate(pezzi), sr)
-    uso = _segna_uso(costo)
-    ULTIMA_VOCE = (f"ElevenLabs, voce {imp.get('nome_voce', '')}: {_n(costo)} crediti per questo reel, "
+    uso = _segna_uso(0, reel=1)
+    ULTIMA_VOCE = (f"ElevenLabs, voce {imp.get('nome_voce', '')}: {_n(costo)} crediti spesi per questo reel, "
                    f"questo mese {_n(uso['crediti'])} su {_n(tetto)}")
     return file, durate, tempi
 
@@ -414,14 +438,15 @@ def genera(file_pacchetto, cartella_uscita=None):
     import time
     inizio = time.time()
     p = json.loads(Path(file_pacchetto).read_text(encoding="utf-8"))
+    stile_reel.controlla()                       # un solo stile Adolos: se i file del reel escono dallo stile, si ferma
     righe = righe_copione(p.get("copione"))
     if len(righe) < 2:
         righe = righe_copione(copione_da_punti(p.get("titolo"), p.get("punti")))
-    scene, schermi = [v for v, _ in righe], [s for _, s in righe]
+    scene = [r["voce"] for r in righe]
     if len(scene) < 2:
         raise SystemExit("ERRORE reel: il copione ha meno di 2 righe utili (campo 'Copione TikTok' del pacchetto)")
     uscita_dir = Path(cartella_uscita or Path.home() / "Desktop" / "Adolos" / "video").expanduser()
-    lavoro = ENGINE / "cache" / "reel" / p["id"]
+    lavoro = Path.home() / ".adolos" / "lavoro" / "reel" / p["id"]        # fuori dalla Scrivania: iCloud non deve sincronizzare i fotogrammi
     lavoro.mkdir(parents=True, exist_ok=True)
     uscita_dir.mkdir(parents=True, exist_ok=True)
     foto = None
@@ -435,7 +460,7 @@ def genera(file_pacchetto, cartella_uscita=None):
     uscita = uscita_dir / f"adolos-{p['id']}.mp4"
     if _imp_voce().get("stile_video", "infografica") == "infografica":
         import reel_anim
-        reel_anim.rendi(p, scene, schermi, durate, tempi, foto, wav, uscita, lavoro)
+        reel_anim.rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro)
     else:                                        # stile di prima: foto che si muove + sottotitoli ASS
         file_scene = immagini_scene(p, scene, foto, lavoro)
         ass = sottotitoli(scene, durate, lavoro, tempi)

@@ -27,6 +27,8 @@ una persona approva su Notion prima di ogni pubblicazione. Rispondi sempre in it
   griglia delle testate, sottotitoli a scatti), venv `~/.venvs/faceless`. Voce: ElevenLabs con `ELEVENLABS_API_KEY` (tetto
   crediti in `fonti.json` > `reel_voce`, conteggio in `~/.adolos/elevenlabs.json`), altrimenti Kokoro locale gratis.
   Prove senza consumare crediti: `ADOLOS_VOCE=locale`.
+  Stile unico dei reel: `engine/stile_reel.py` ("adolos-reel-v2", regole nella skill `adolos-stile`); globo 3D con Blender:
+  `engine/reel_globo.py` + `engine/blender_globo.py` (circa 0,35 s a fotogramma). Prove veloci senza Blender: `ADOLOS_SENZA_GLOBO=1`.
   Mappa notturna (paese illuminato, paesi delle testate): `engine/mappa.py`, file NASA Black Marble + Natural Earth
   (pubblico dominio) in `~/.adolos/mappe`, fuori dal repo; se mancano: `python engine/mappa.py scarica`.
 
