@@ -111,7 +111,18 @@ def _testa(img, etichetta):
     d = ImageDraw.Draw(img)
     social._marchio(d, M, ST.Y_MARCHIO)
     d.text((W - M, ST.Y_MARCHIO + 42), ST.SCRITTA_VOCE, font=_f(24, ST.PESO_MEDIO), fill=ST.GRIGIO, anchor="rm")
-    social._pillola_a(img, d, M, ST.Y_ETICHETTA, etichetta, size=34)
+    _etichetta_rossa(d, M, ST.Y_ETICHETTA, etichetta)
+
+
+def _etichetta_rossa(d, x, y, testo, size=32):
+    """Etichetta rossa piena col testo maiuscolo (la stessa dei caroselli), nel carattere del reel."""
+    testo = testo.upper()
+    f = _f(size, ST.PESO_FORTE)
+    while d.textlength(testo, font=f) > W - 2 * M - 60 and " " in testo:
+        testo = testo.rsplit(" ", 1)[0].rstrip(",;:")
+    lw, h = d.textlength(testo, font=f), int(size * 1.7)
+    d.rounded_rectangle((x, y, x + lw + 52, y + h), radius=10, fill=ST.ROSSO)
+    d.text((x + 26, y + h / 2), testo, font=f, fill=ST.BIANCO, anchor="lm")
 
 
 def _didascalia(fr, parole, dt, forti):
@@ -526,9 +537,10 @@ def rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro):
             t_strato = Image.new("RGBA", (W, H), ST.TRASPARENTE)
             dt = ImageDraw.Draw(t_strato)
             frase = parti[-1]
-            alt = social._titolo_a(t_strato, dt, frase, M, 0, W - 2 * M, 430, colore=ST.BIANCO, size=120, min_size=70, prova=True)
+            alt = social._titolo_a(t_strato, dt, frase, M, 0, W - 2 * M, 430, colore=ST.BIANCO, size=120, min_size=64, stretto=ST.STRETTO_TITOLO, peso=ST.PESO_TITOLO, prova=True)
             social._titolo_a(t_strato, dt, frase, M, ST.Y_SICURO - alt - 20, W - 2 * M, 430,
-                             evidenzia=social._parola_forte(frase.split()), colore=ST.BIANCO, size=120, min_size=70)
+                             evidenzia=social._parola_forte(frase.split()), colore=ST.BIANCO, size=120, min_size=64,
+                             stretto=ST.STRETTO_TITOLO, peso=ST.PESO_TITOLO)
         titoli.append(t_strato)
     forti = []
     for voce in scene:

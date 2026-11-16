@@ -460,7 +460,8 @@ def genera(file_pacchetto, cartella_uscita=None):
     uscita = uscita_dir / f"adolos-{p['id']}.mp4"
     if _imp_voce().get("stile_video", "infografica") == "infografica":
         import reel_anim
-        reel_anim.rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro)
+        with stile_reel.carattere_reel():
+            reel_anim.rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro)
     else:                                        # stile di prima: foto che si muove + sottotitoli ASS
         file_scene = immagini_scene(p, scene, foto, lavoro)
         ass = sottotitoli(scene, durate, lavoro, tempi)

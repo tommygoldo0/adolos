@@ -22,6 +22,7 @@ Copiamo il formato (scene brevi, testo in alto, mappe luminose), mai i personagg
 """
 
 import re
+from contextlib import contextmanager
 from pathlib import Path
 
 import social
@@ -39,8 +40,12 @@ LINEA = (88, 78, 78)               # linee deboli (linea del tempo)
 TRASPARENTE = (0, 0, 0, 0)
 OMBRA = (0, 0, 0, 175)             # ombra sotto le scritte sottili
 
-# ---------------------------------------------------------------- caratteri (Archivo, come il sito; pesi da 100 a 900)
-PESO_SOTTILE, PESO_MEDIO, PESO_FORTE, PESO_TITOLO = 300, 600, 800, 900
+# ---------------------------------------------------------------- carattere dei reel: Funnel Display (scelto da Tommaso il 16/11)
+# Variabile, pesi da 300 a 800, licenza OFL (engine/fonts/FunnelDisplay-OFL.txt). I caroselli e il sito restano in Archivo.
+NOME_CARATTERE = "Funnel Display"
+FILE_CARATTERE = Path(__file__).resolve().parent / "fonts" / "FunnelDisplay-Variable.ttf"
+PESO_SOTTILE, PESO_MEDIO, PESO_FORTE, PESO_TITOLO = 300, 600, 700, 800
+STRETTO_TITOLO = 1.0               # i titoli dei caroselli sono schiacciati al 70% (Archivo); qui il carattere resta naturale
 
 # ---------------------------------------------------------------- misure (video 1080 x 1920)
 LARGHEZZA, ALTEZZA, FPS = 1080, 1920, 30
@@ -69,6 +74,31 @@ GLOBO_CAMPIONI = 8                 # qualità di Blender: 8 basta per un video c
 NOTA_AI = "Testo preparato con l'aiuto dell'AI e verificato dalla redazione. Voce generata con AI."
 SCRITTA_VOCE = "Voce generata con AI"
 CODA = "@ADOLOS.IT"
+
+def _carattere(size, peso=PESO_TITOLO):
+    """Funnel Display alla misura e al peso chiesti (il peso si porta dentro i limiti 300-800 del carattere)."""
+    from PIL import ImageFont
+    f = ImageFont.truetype(str(FILE_CARATTERE), int(size))
+    asse = f.get_variation_axes()[0]
+    f.set_variation_by_axes([min(max(peso, asse["minimum"]), asse["maximum"])])
+    return f
+
+
+@contextmanager
+def carattere_reel():
+    """Dentro questo blocco tutto quello che disegna social.py (marchio, titoli) usa Funnel Display. Fuori, Archivo come
+    prima: così i caroselli fatti nello stesso programma non cambiano."""
+    if not FILE_CARATTERE.exists():
+        print(f"ATTENZIONE: manca {FILE_CARATTERE.name}: il reel esce in Archivo (carattere dei caroselli)")
+        yield
+        return
+    originale = social._arch
+    social._arch = _carattere
+    try:
+        yield
+    finally:
+        social._arch = originale
+
 
 FILE_DA_CONTROLLARE = ("reel_anim.py", "reel_globo.py")
 _RE_COLORE = re.compile(r"\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*(?:,\s*\d{1,3}\s*)?\)")

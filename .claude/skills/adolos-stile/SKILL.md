@@ -56,8 +56,9 @@ Il codice è in `engine/social.py` (funzione `carosello`). Gli stili "Prima pagi
 - Un solo numero forte per punto. Niente esche: il titolo non dice mai più della sintesi (skill `adolos-viralita`).
 
 ## Reel: lo stile unico "adolos-reel-v2" (16 novembre 2026)
-Tutti i reel hanno lo stesso aspetto. Le regole stanno nel codice, in `engine/stile_reel.py` (colori e caratteri vengono
-da `engine/social.py`, gli stessi dei caroselli). `reel_anim.py` e `reel_globo.py` non possono scrivere colori o caratteri
+Tutti i reel hanno lo stesso aspetto. Le regole stanno nel codice, in `engine/stile_reel.py` (i colori vengono da
+`engine/social.py`, gli stessi dei caroselli). Il carattere dei reel è **Funnel Display** (scelto da Tommaso il 16/11,
+licenza OFL, file in `engine/fonts/`); caroselli e sito restano in Archivo. `reel_anim.py` e `reel_globo.py` non possono scrivere colori o caratteri
 a mano: `python engine/stile_reel.py` controlla e il reel non parte se qualcuno li aggira. Per cambiare lo stile si
 cambia quel file, una volta, e cambiano tutti i reel.
 - Fondo nero caldo con la Terra di notte (foto NASA) e luci dorate. Il paese di cui si parla è illuminato in giallo.
