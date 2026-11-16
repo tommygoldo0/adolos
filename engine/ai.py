@@ -38,13 +38,15 @@ PREZZI = {
 _conf = None
 
 
-def _corpo_anthropic(modello, max_token, sistema, testo):
+def _corpo_anthropic(modello, max_token, sistema, testo, schema=None):
     """Testi brevi e semplici: sforzo basso. Su Claude Haiku 5.5 il "ragionamento" è acceso di serie e consuma i token
     della risposta (risposta vuota): qui si spegne, cosa permessa con sforzo basso."""
     corpo = {"model": modello, "max_tokens": max_token, "system": sistema,
              "messages": [{"role": "user", "content": testo}], "output_config": {"effort": "low"}}
     if "haiku" in modello:
         corpo["thinking"] = {"type": "disabled"}
+    if schema:                                  # risposta JSON garantita valida (structured outputs)
+        corpo["output_config"]["format"] = {"type": "json_schema", "schema": schema}
     return corpo
 
 
@@ -94,7 +96,7 @@ class TettoRaggiunto(Exception):
     pass
 
 
-def chiedi(sistema, testo, max_token=1200):
+def chiedi(sistema, testo, max_token=1200, schema=None):
     """Manda una richiesta al modello e restituisce il testo della risposta.
     Conta i token e rispetta il tetto di spesa mensile."""
     import requests
@@ -111,7 +113,7 @@ def chiedi(sistema, testo, max_token=1200):
         if provider == "anthropic":
             r = requests.post("https://api.anthropic.com/v1/messages", timeout=90, headers={
                 "x-api-key": chiave, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-                json=_corpo_anthropic(modello, max_token, sistema, testo))
+                json=_corpo_anthropic(modello, max_token, sistema, testo, schema))
         else:
             base = OPENAI_COMPATIBILI.get(provider)
             if not base:

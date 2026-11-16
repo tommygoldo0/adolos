@@ -180,7 +180,7 @@ def scrivi_testi(pagina, s, fonti):
                       materiale[0]["fonte"] + "\", anche nel titolo, e non aggiungere niente che non sia nel titolo.")
     bozza, avviso = None, ""
     for _ in range(2):
-        b = ai.json_da(ai.chiedi(sintesi.SISTEMA, richiesta + avviso, max_token=1500))
+        b = ai.json_da(ai.chiedi(sintesi.SISTEMA, richiesta + avviso, max_token=2500, schema=sintesi.SCHEMA))
         tutto = " ".join([b.get("titolo", ""), b.get("sintesi", ""), b.get("copione_tiktok", "")] + list(b.get("punti", [])))
         copiate = sintesi.frasi_copiate(tutto, testi_fonti)
         if not copiate:

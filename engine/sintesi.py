@@ -54,6 +54,19 @@ Regole per i testi social: italiano semplice e diretto, niente frasi da intellig
 insieme", "Questo cambia tutto", "Non è solo... è..."), niente emoji, niente punti esclamativi. Numeri in cifre."""
 
 
+_T = {"type": "string"}
+SCHEMA = {"type": "object", "additionalProperties": False,
+          "required": ["titolo", "sintesi", "fatti", "punti", "versioni_diverse", "persone_accusate", "copione_tiktok",
+                       "testo_facebook", "scena_immagine"],
+          "properties": {"titolo": _T, "sintesi": _T,
+                         "fatti": {"type": "object", "additionalProperties": False,
+                                   "required": ["chi", "cosa", "dove", "quando", "perche"],
+                                   "properties": {k: _T for k in ("chi", "cosa", "dove", "quando", "perche")}},
+                         "punti": {"type": "array", "items": _T}, "versioni_diverse": _T,
+                         "persone_accusate": {"type": "boolean"}, "copione_tiktok": _T, "testo_facebook": _T,
+                         "scena_immagine": _T}}
+
+
 # ---------------------------------------------------------------- utilità
 def _norm(t):
     t = unicodedata.normalize("NFKD", (t or "").lower())
@@ -144,7 +157,7 @@ def prepara(storie, gruppi, max_al_giro=8):
         bozza, avviso = None, ""
         for tentativo in range(2):
             try:
-                risposta = ai.chiedi(SISTEMA, richiesta + avviso, max_token=1500)
+                risposta = ai.chiedi(SISTEMA, richiesta + avviso, max_token=2500, schema=SCHEMA)
                 b = ai.json_da(risposta)
             except ai.TettoRaggiunto:
                 print("Sintesi: tetto di spesa mensile raggiunto")
