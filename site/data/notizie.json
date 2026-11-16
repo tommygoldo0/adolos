@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-16T00:38:17.261926+00:00",
+ "aggiornato": "2026-11-16T00:47:23.155864+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -136,7 +136,7 @@
  },
  "storie": [],
  "dati": {
-  "articoli_analizzati": 26153,
+  "articoli_analizzati": 26192,
   "storie": 400,
   "paesi_coperti": 94,
   "fonti_diverse": 263,
@@ -144,67 +144,67 @@
    [
     "AR",
     "Argentina",
-    3938
+    3948
    ],
    [
     "DE",
     "Germania",
-    2134
+    2135
    ],
    [
     "BR",
     "Brasile",
-    2120
+    2116
    ],
    [
     "FR",
     "Francia",
-    1866
+    1872
    ],
    [
     "IT",
     "Italia",
-    1671
+    1670
    ],
    [
     "US",
     "Stati Uniti",
-    1287
+    1283
    ],
    [
     "ES",
     "Spagna",
-    1019
+    1031
    ],
    [
     "IN",
     "India",
-    845
+    850
    ],
    [
     "GB",
     "Regno Unito",
-    812
+    811
    ],
    [
     "NG",
     "Nigeria",
-    703
+    701
    ],
    [
     "PY",
     "Paraguay",
-    673
+    672
    ],
    [
     "AU",
     "Australia",
-    611
+    617
    ],
    [
     "PH",
     "Filippine",
-    558
+    560
    ],
    [
     "MX",
@@ -214,32 +214,32 @@
    [
     "CO",
     "Colombia",
-    336
+    335
    ],
    [
     "PT",
     "Portogallo",
-    317
+    316
    ],
    [
     "EC",
     "Ecuador",
-    291
-   ],
-   [
-    "SG",
-    "Singapore",
-    250
+    292
    ],
    [
     "SE",
     "Svezia",
-    250
+    251
+   ],
+   [
+    "SG",
+    "Singapore",
+    249
    ],
    [
     "NZ",
     "Nuova Zelanda",
-    245
+    246
    ],
    [
     "AT",
@@ -249,7 +249,7 @@
    [
     "JP",
     "Giappone",
-    204
+    207
    ],
    [
     "BE",
@@ -270,27 +270,27 @@
   "per_lingua": [
    [
     "en",
-    9772
+    9785
    ],
    [
     "es",
-    6679
+    6701
    ],
    [
     "pt",
-    2437
+    2432
    ],
    [
     "de",
-    2317
+    2318
    ],
    [
     "fr",
-    2084
+    2092
    ],
    [
     "it",
-    1536
+    1535
    ],
    [
     "nl",
@@ -320,35 +320,35 @@
   "per_categoria": [
    [
     "Altro",
-    172
+    179
    ],
    [
     "Politica",
-    65
+    64
    ],
    [
     "Esteri e conflitti",
     51
    ],
    [
-    "Sport",
-    29
-   ],
-   [
     "Cronaca",
     28
    ],
    [
+    "Sport",
+    27
+   ],
+   [
     "Società",
-    24
+    23
    ],
    [
     "Tecnologia e crypto",
-    16
+    15
    ],
    [
     "Economia",
-    13
+    11
    ],
    [
     "Clima e ambiente",
@@ -362,11 +362,11 @@
    ],
    [
     "G1",
-    991
+    983
    ],
    [
     "ABC Color",
-    673
+    672
    ],
    [
     "Die Zeit",
@@ -374,7 +374,7 @@
    ],
    [
     "New York Post",
-    510
+    509
    ],
    [
     "El Universal",
@@ -382,125 +382,125 @@
    ],
    [
     "La Nación",
-    461
+    463
    ],
    [
     "Times of India",
-    432
+    434
    ],
    [
     "Inquirer",
-    397
+    399
+   ],
+   [
+    "Clarín",
+    374
    ],
    [
     "Globo Esporte",
-    372
+    374
    ],
    [
     "O Globo",
     372
-   ],
-   [
-    "Clarín",
-    369
    ]
   ],
   "per_ora": [
    [
     23,
-    284
+    279
    ],
    [
     22,
-    270
+    281
    ],
    [
     21,
-    318
+    308
    ],
    [
     20,
-    443
+    458
    ],
    [
     19,
-    412
+    405
    ],
    [
     18,
-    474
+    504
    ],
    [
     17,
-    519
+    529
    ],
    [
     16,
-    531
+    517
    ],
    [
     15,
-    570
+    593
    ],
    [
     14,
-    570
+    552
    ],
    [
     13,
-    599
+    617
    ],
    [
     12,
-    657
+    655
    ],
    [
     11,
-    672
+    661
    ],
    [
     10,
-    711
+    709
    ],
    [
     9,
-    701
+    736
    ],
    [
     8,
-    745
+    722
    ],
    [
     7,
-    618
+    627
    ],
    [
     6,
-    741
+    753
    ],
    [
     5,
-    643
+    631
    ],
    [
     4,
-    557
+    547
    ],
    [
     3,
-    466
+    472
    ],
    [
     2,
-    588
+    573
    ],
    [
     1,
-    435
+    407
    ],
    [
     0,
-    412
+    453
    ]
   ],
   "approvate_non_sul_sito": {
@@ -514,22 +514,15 @@
  },
  "errori_fonti": [
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
+  "Hacker News (prima pagina): HTTPSConnectionPool(host='hnrss.org', port=443): Max retries exceeded with url: /frontpage (Caused by ConnectTimeoutError(<HTTPSConnection(host='hnrss.org', port=443) at 0x7a55d742dca0>, 'Connection to hnrss.org timed out. (connect timeout=20)'))",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
   "Telex: 403 Client Error: Forbidden for url: https://telex.hu/rss",
   "The Slovenia Times: 403 Client Error: Forbidden for url: https://sloveniatimes.com/feed",
   "Khmer Times: 403 Client Error: Forbidden for url: https://www.khmertimeskh.com/feed/",
   "The Herald: 403 Client Error: Forbidden for url: https://www.heraldonline.co.zw/feed/",
   "La Prensa (Panama): 403 Client Error: Forbidden for url: https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
-  "GDELT moldova: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:moldova&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT albania: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:albania&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT bosniaandherzegovina: Expecting value: line 1 column 1 (char 0)",
-  "GDELT montenegro: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:montenegro&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT kosovo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:kosovo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT cyprus: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:cyprus&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT luxembourg: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:luxembourg&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT haiti: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)",
-  "GDELT guatemala: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:guatemala&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT honduras: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:honduras&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT panama: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:panama&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
+  "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT syria: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:syria&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
