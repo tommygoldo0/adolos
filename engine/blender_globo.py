@@ -109,6 +109,8 @@ def terra(texture):
 
 
 def punto(p, i, fps):
+    if p.get("nascosto"):                               # serve solo come estremo di un arco
+        return None
     bpy.ops.mesh.primitive_uv_sphere_add(radius=0.018, segments=24, ring_count=12, location=posizione(p["lon"], p["lat"], 1.004))
     o = bpy.context.active_object
     o.name = f"Punto{i}"
@@ -125,14 +127,14 @@ def punto(p, i, fps):
     return o
 
 
-def arco(a, b, da, durata, fps, i):
+def arco(a, b, da, durata, fps, i, altezza=0.075, quota_fine=0.0):
     va, vb = posizione(a["lon"], a["lat"]), posizione(b["lon"], b["lat"])
     ang = va.angle(vb)
     pts = []
     for k in range(64):
         t = k / 63
         v = (va * math.sin((1 - t) * ang) + vb * math.sin(t * ang)) / max(1e-6, math.sin(ang)) if ang > 1e-4 else va
-        pts.append(v.normalized() * (1.004 + 0.075 * ang * math.sin(math.pi * t)))
+        pts.append(v.normalized() * (1.004 + altezza * ang * math.sin(math.pi * t) + quota_fine * t))
     cu = bpy.data.curves.new(f"Arco{i}", "CURVE")
     cu.dimensions = "3D"
     cu.bevel_depth = 0.0042
@@ -149,6 +151,29 @@ def arco(a, b, da, durata, fps, i):
         cu.bevel_factor_end = v
         cu.keyframe_insert("bevel_factor_end", frame=f)
     return o
+
+
+def sciame(c, fps):
+    """Tanti puntini dorati che si staccano da un punto e si disperdono (es. i satelliti persi): schema, non una traiettoria vera."""
+    import random
+    rnd = random.Random(7)
+    centro = posizione(c["lon"], c["lat"], c.get("quota", 1.07))
+    f0, durata = int(c["da"] * fps), max(6, int(c["durata"] * fps))
+    for i in range(int(c.get("n", 40))):
+        bpy.ops.mesh.primitive_uv_sphere_add(radius=0.009, segments=12, ring_count=6, location=centro)
+        o = bpy.context.active_object
+        o.name = f"Sciame{i}"
+        o.data.materials.append(materiale_emissivo(f"Sciame{i}", ORO, 2.6))
+        u = mathutils.Vector((rnd.uniform(-1, 1), rnd.uniform(-1, 1), rnd.uniform(-1, 1))).normalized()
+        v = (u + centro.normalized() * 0.5).normalized() * rnd.uniform(0.12, 0.34)
+        ritardo = rnd.randint(0, 6)
+        for f in range(max(0, f0 - 1), f0 + durata + 1, 3):
+            q = min(1.0, max(0.0, (f - f0 - ritardo) / durata))
+            o.location = centro + v * (q ** 0.8) + centro.normalized() * (-0.05 * q * q)
+            sc = 0.0 if q <= 0 else (1.0 - max(0.0, (q - 0.6) / 0.4)) * min(1.0, q * 12)
+            o.scale = (sc, sc, sc)
+            o.keyframe_insert("location", frame=f)
+            o.keyframe_insert("scale", frame=f)
 
 
 def telecamera(cfg, tot, w, h):
@@ -201,7 +226,10 @@ def main():
     terra(d["texture"])
     punti = [punto(p, i, fps) for i, p in enumerate(d.get("punti", []))]
     for i, r in enumerate(d.get("archi", [])):
-        arco(d["punti"][r["a"]], d["punti"][r["b"]], r.get("da", 0), r.get("durata", 1.0), fps, i)
+        arco(d["punti"][r["a"]], d["punti"][r["b"]], r.get("da", 0), r.get("durata", 1.0), fps, i,
+             r.get("altezza", 0.075), r.get("quota_fine", 0.0))
+    if d.get("sciame"):
+        sciame(d["sciame"], fps)
     telecamera(d["camera"], tot, d["larghezza"], d["altezza"])
     uscita = Path(d["uscita"]).expanduser()
     uscita.mkdir(parents=True, exist_ok=True)

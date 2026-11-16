@@ -87,6 +87,19 @@ def clip_convergenza(p, durata, lavoro):
     return _render({"punti": punti, "archi": archi, "camera": cam}, durata, lavoro, "convergenza")
 
 
+def clip_lancio(p, durata, lavoro):
+    """Un lancio che finisce male: la linea dorata sale dal luogo di partenza, si ferma, e il carico si disperde in tanti
+    puntini. p["globo"] = {"tipo": "lancio", "luogo": {"nome", "lon", "lat"}, "rotta": {"lon", "lat"}} (rotta = schema)."""
+    g = p["globo"]
+    luogo, rotta = g["luogo"], g["rotta"]
+    punti = [dict(luogo, da=0.2), dict(rotta, nascosto=True)]
+    archi = [{"a": 0, "b": 1, "da": durata * 0.10, "durata": durata * 0.45, "altezza": 0.5, "quota_fine": 0.07}]
+    sciame = {"lon": rotta["lon"], "lat": rotta["lat"], "quota": 1.075, "da": durata * 0.56, "durata": durata * 0.42, "n": 40}
+    cam = {"da": {"lon": luogo["lon"] - 32, "lat": 24, "distanza": 3.9},
+           "a": {"lon": (luogo["lon"] + rotta["lon"]) / 2 - 4, "lat": luogo["lat"] + 3, "distanza": 3.0}, "spostamento_y": -0.23}
+    return _render({"punti": punti, "archi": archi, "sciame": sciame, "camera": cam}, durata, lavoro, "lancio")
+
+
 def codici_testate(p, massimo=12):
     """I paesi delle testate che ne parlano, quelli con più testate per primi (senza doppioni)."""
     conta = {}

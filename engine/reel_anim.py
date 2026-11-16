@@ -72,15 +72,19 @@ def _velo(img, alto=0.65, basso=0.92, da=0.28):
     return Image.composite(Image.new("RGB", img.size, ST.NERO), img, m.resize(img.size))
 
 
-def _veli(img, alto=0.72, basso=0.5):
-    """Mappe e globo: scurisce solo la fascia in alto (parole) e quella in basso (fonte), il centro resta libero."""
-    w, h = img.size
+@functools.lru_cache(maxsize=16)
+def _maschera_veli(w, h, alto, basso):
     m = Image.new("L", (1, h))
     for y in range(h):
         a = max(0.0, 1 - y / (h * 0.24)) * alto
         b = min(1.0, max(0.0, (y / h - 0.70) / 0.26)) * basso
         m.putpixel((0, y), int(255 * max(a, b)))
-    return Image.composite(Image.new("RGB", img.size, ST.NERO), img, m.resize(img.size))
+    return m.resize((w, h))
+
+
+def _veli(img, alto=0.72, basso=0.5):
+    """Mappe e globo: scurisce solo la fascia in alto (parole) e quella in basso (fonte), il centro resta libero."""
+    return Image.composite(Image.new("RGB", img.size, ST.NERO), img.convert("RGB"), _maschera_veli(img.width, img.height, alto, basso))
 
 
 def _pan(img, t, durata, verso):
@@ -125,8 +129,9 @@ def _etichetta_rossa(d, x, y, testo, size=32):
     d.text((x + 26, y + h / 2), testo, font=f, fill=ST.BIANCO, anchor="lm")
 
 
-def _didascalia(fr, parole, dt, forti):
-    """Le parole della voce, in alto: sottili, la parola chiave in grassetto, i numeri in giallo. Entrano dal basso."""
+def _didascalia(fr, parole, dt, forti, durata_pezzo=0.8):
+    """Le parole della voce, in alto: sottili, la parola chiave in grassetto, i numeri in giallo. Ogni parola salta
+    fuori al suo turno, con un piccolo "pop"."""
     def peso(p):
         pulita = p.strip(".,:;!?«»\"'()").lower()
         return ST.PESO_FORTE if (any(c.isdigit() for c in p) or pulita in forti) else ST.PESO_SOTTILE
@@ -138,23 +143,27 @@ def _didascalia(fr, parole, dt, forti):
         if larga <= W - 2 * M or size <= 44:
             break
         size -= 4
-    alt = int(size * 1.9)
+    alt = int(size * 2.2)
     strato = Image.new("RGBA", (W, alt), ST.TRASPARENTE)
     ombra = Image.new("RGBA", (W, alt), ST.TRASPARENTE)
     ds, dd = ImageDraw.Draw(ombra), ImageDraw.Draw(strato)
+    passo = min(0.16, max(0.05, durata_pezzo / (len(parole) + 1)))
     x = (W - larga) / 2
-    for p in parole:
-        f = _f(size, peso(p))
-        pulita = p.strip(".,:;!?«»\"'()").lower()
-        colore = ST.GIALLO if any(c.isdigit() for c in p) else ST.BIANCO
-        ds.text((x, alt / 2 + 4), p, font=f, fill=ST.OMBRA, anchor="lm")
-        dd.text((x, alt / 2), p, font=f, fill=colore, anchor="lm")
-        x += d0.textlength(p, font=f) + spazio
+    for j, p in enumerate(parole):
+        larg = d0.textlength(p, font=_f(size, peso(p)))
+        tj = dt - j * passo
+        if tj >= 0:
+            s_pop = 0.7 + 0.3 * _salto(tj / 0.2)
+            f = _f(max(20, round(size * s_pop / 2) * 2), peso(p))
+            colore = ST.GIALLO if any(c.isdigit() for c in p) else ST.BIANCO
+            cx = x + larg / 2
+            sposta = (1 - _e(tj / 0.18)) * 22
+            ds.text((cx, alt / 2 + 5 + sposta), p, font=f, fill=ST.OMBRA, anchor="mm")
+            dd.text((cx, alt / 2 + sposta), p, font=f, fill=colore, anchor="mm")
+        x += larg + spazio
     ombra = ombra.filter(ImageFilter.GaussianBlur(6))
     strato = Image.alpha_composite(ombra, strato)
-    k = _e(dt / 0.14)
-    strato.putalpha(strato.getchannel("A").point(lambda v: int(v * k)))
-    fr.alpha_composite(strato, dest=(0, int(ST.Y_DIDASCALIA - alt / 2 + (1 - _e(dt / 0.2)) * 18)))
+    fr.alpha_composite(strato, dest=(0, int(ST.Y_DIDASCALIA - alt / 2)))
 
 
 def _riga_fonte(fr, t, testo):
@@ -201,6 +210,24 @@ def _etichetta_numero(voce, schermo):
 def _contatore(d, t, numero, etichetta):
     v, nd, unita = _valore(numero)
     k = _e((t - 0.15) / 1.2)
+    if v <= 99 and unita:                       # numero piccolo con unità: un anello che si riempie mentre il numero sale
+        cx, cy, r = W / 2, 1060, 215
+        d.ellipse((cx - r - 24, cy - r - 24, cx + r + 24, cy + r + 24), fill=ST.NERO + (200,))
+        d.arc((cx - r, cy - r, cx + r, cy + r), 0, 360, fill=ST.LINEA, width=16)
+        if k > 0:
+            d.arc((cx - r, cy - r, cx + r, cy + r), -90, -90 + 360 * k, fill=ST.GIALLO, width=16)
+        pop = 0.85 + 0.15 * _salto(t / 0.35)
+        d.text((cx, cy - 25), _scrivi_numero(v * k, nd, ""), font=_f(round(250 * pop)), fill=ST.GIALLO, anchor="mm")
+        d.text((cx, cy + 100), unita.upper(), font=_f(54, ST.PESO_FORTE), fill=ST.BIANCO, anchor="mm")
+        if k >= 1:                                # all'arrivo: un'onda che si allarga
+            q = min(1.0, (t - 1.35) / 0.6)
+            if 0 <= q < 1:
+                rr = r + 30 + 130 * q
+                d.ellipse((cx - rr, cy - rr, cx + rr, cy + rr), outline=ST.GIALLO + (int(255 * (1 - q)),), width=6)
+        if etichetta and t > 0.3:
+            d.text((W / 2, cy + r + 70), etichetta.upper()[:44], font=_f(40, ST.PESO_FORTE), fill=ST.BIANCO, anchor="mm",
+                   stroke_width=4, stroke_fill=ST.NERO)
+        return
     testo = _scrivi_numero(v * k if k < 1 else v, nd, unita)
     finale = _scrivi_numero(v, nd, unita)
     size = 250
@@ -368,6 +395,89 @@ class _MappaFonti:
         _conteggio(d, t, p, n_paesi, _e((t - 0.15) / (self.passo * max(1, len(self.codici)) + 0.2)))
 
 
+# ---------------------------------------------------------------- mappa con telecamera che si muove, marcatori, scene speciali
+class _SfondoMappa:
+    """Mappa notturna disegnata più grande dello schermo. `inquadra` fa zoomare e spostare la telecamera piano piano
+    (verso il luogo della scena, se c'è) e dice dove cade ogni punto (lon, lat) sullo schermo."""
+
+    def __init__(self, img, vista):
+        self.img, self.v = img, vista
+
+    def inquadra(self, t, durata, punto=None):
+        k = _e(min(1.0, t / max(durata, 0.1)))
+        z = ST.ZOOM_DA + (ST.ZOOM_A - ST.ZOOM_DA) * k
+        wc, hc = self.img.size
+        w, h = W / z, H / z
+        cx, cy = wc / 2, hc / 2
+        if punto:
+            px, py = self.v.xy(*punto)
+            cx, cy = cx + (px - cx) * 0.6 * k, cy + (py - cy) * 0.6 * k
+        else:
+            cx += 40 * (k - 0.5)
+        x0 = min(max(cx - w / 2, 0), wc - w)
+        y0 = min(max(cy - h / 2, 0), hc - h)
+        fr = self.img.crop((int(x0), int(y0), int(x0 + w), int(y0 + h))).resize((W, H), Image.BILINEAR)
+
+        def dove(lon, lat):
+            px, py = self.v.xy(lon, lat)
+            return (px - x0) * W / w, (py - y0) * H / h
+        return fr, dove
+
+
+def _marcatore(d, x, y, t, nome):
+    """Il luogo della scena: un punto giallo che pulsa con onde che si allargano, e il nome."""
+    pop = _salto(t / 0.3)
+    for j in range(3):
+        fase = (t * 0.8 + j / 3) % 1
+        rr = 20 + 90 * fase
+        d.ellipse((x - rr, y - rr, x + rr, y + rr), outline=ST.GIALLO + (int(230 * (1 - fase)),), width=4)
+    r = 17 * pop
+    d.ellipse((x - r, y - r, x + r, y + r), fill=ST.GIALLO, outline=ST.NERO, width=4)
+    if pop > 0.6:
+        d.text((x + 34, y), nome.upper(), font=_f(40, ST.PESO_FORTE), fill=ST.BIANCO, anchor="lm", stroke_width=5, stroke_fill=ST.NERO)
+
+
+def _orbite(d, t):
+    """Due costellazioni di satelliti in orbita attorno alla Terra: schema illustrativo, senza numeri."""
+    cx, cy = W / 2, 930
+    d.ellipse((cx - 150, cy - 150, cx + 150, cy + 150), fill=ST.CELLA, outline=ST.GIALLO, width=5)
+    d.text((cx, cy), "TERRA", font=_f(30, ST.PESO_FORTE), fill=ST.GRIGIO, anchor="mm")
+    anelli = [(330, 150, -20, ST.GIALLO, 11, 0.9, "AMAZON LEO"), (440, 215, 24, ST.BIANCO, 16, -0.6, "STARLINK")]
+    for a, b, inclina, colore, n, vel, nome in anelli:
+        fi = math.radians(inclina)
+        pt = []
+        for q in range(0, 360 + 1, 6):
+            th = math.radians(q)
+            pt.append((cx + a * math.cos(th) * math.cos(fi) - b * math.sin(th) * math.sin(fi),
+                       cy + a * math.cos(th) * math.sin(fi) + b * math.sin(th) * math.cos(fi)))
+        d.line(pt, fill=ST.LINEA, width=3)
+        for j in range(n):
+            th = math.radians(360 * j / n) + t * vel
+            x = cx + a * math.cos(th) * math.cos(fi) - b * math.sin(th) * math.sin(fi)
+            y = cy + a * math.cos(th) * math.sin(fi) + b * math.sin(th) * math.cos(fi)
+            d.ellipse((x - 11, y - 11, x + 11, y + 11), fill=colore, outline=ST.NERO, width=3)
+    k = _e((t - 0.3) / 0.4)
+    if k > 0:
+        d.text((M, 1180), "AMAZON LEO", font=_f(44, ST.PESO_FORTE), fill=ST.GIALLO, anchor="lm", stroke_width=5, stroke_fill=ST.NERO)
+        d.text((W - M, 1180), "STARLINK", font=_f(44, ST.PESO_FORTE), fill=ST.BIANCO, anchor="rm", stroke_width=5, stroke_fill=ST.NERO)
+    d.text((W / 2, 1330), "schema illustrativo", font=_f(30, ST.PESO_MEDIO), fill=ST.GRIGIO, anchor="mm")
+
+
+def _domanda(d, t):
+    """La scena della domanda: un punto interrogativo che pulsa e fumetti che salgono (invito a commentare)."""
+    pulsa = 1 + 0.06 * math.sin(t * 5)
+    pop = 0.6 + 0.4 * _salto(t / 0.4)
+    d.text((W / 2, 900), "?", font=_f(round(760 * pulsa * pop)), fill=ST.GIALLO, anchor="mm", stroke_width=6, stroke_fill=ST.NERO)
+    for j, (x0, ritardo) in enumerate(((0.22, 0.0), (0.5, 0.35), (0.78, 0.7))):
+        q = ((t * 0.55 + ritardo) % 1)
+        x, y = W * x0, 1220 - 480 * q
+        alfa = int(255 * min(1.0, q * 4) * (1 - q))
+        d.rounded_rectangle((x - 70, y - 40, x + 70, y + 40), radius=26, outline=ST.BIANCO + (alfa,), width=5)
+        for k2 in range(3):
+            d.ellipse((x - 34 + 34 * k2 - 7, y - 7, x - 34 + 34 * k2 + 7, y + 7), fill=ST.BIANCO + (alfa,))
+    d.text((W / 2, 1300), "SCRIVILO NEI COMMENTI", font=_f(48, ST.PESO_FORTE), fill=ST.BIANCO, anchor="mm", stroke_width=5, stroke_fill=ST.NERO)
+
+
 # ---------------------------------------------------------------- clip del globo (Blender) letti fotogramma per fotogramma
 class _Clip:
     def __init__(self, mp4):
@@ -432,7 +542,7 @@ def rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro):
     globo_ok = reel_globo.disponibile() and not os.environ.get("ADOLOS_SENZA_GLOBO")   # per le prove veloci
     usata_mappa = False
     mappa_fonti = None
-    mappa_ok, evento, luogo = False, None, (p.get("globo") or {}).get("luogo")
+    mappa_ok, evento = False, None
     try:
         import mappa
         mappa_ok = mappa.disponibile()
@@ -443,21 +553,25 @@ def rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro):
     cache_sfondi = {}
 
     def sfondo_mappa(codici, alta=False):
-        """Mappa notturna con questi paesi illuminati (uno solo: ingrandito; più d'uno: vista d'insieme)."""
+        """Mappa notturna con questi paesi illuminati (uno solo: ingrandito; più d'uno: vista d'insieme). La tela è più
+        grande dello schermo (ST.CANVAS_K) per lasciare spazio alla telecamera."""
         chiave = tuple(codici)
         if (chiave, alta) not in cache_sfondi:
-            wc, hc = grande.size
+            wc, hc = int(W * ST.CANVAS_K), int(H * ST.CANVAS_K)
             cy = (700 if alta else 880) + (hc - H) // 2          # alta: sotto c'è un contatore
             v = mappa.vista_paese(chiave[0], wc, hc, cy) if len(chiave) == 1 else mappa.vista_insieme(list(chiave), wc, hc, cy)
-            img = mappa.fondo(v, list(chiave))
-            if luogo and evento in chiave:                          # la città della notizia (es. Shenzhen) sulla mappa
-                dd = ImageDraw.Draw(img)
-                x, y = v.xy(luogo["lon"], luogo["lat"])
-                dd.ellipse((x - 16, y - 16, x + 16, y + 16), fill=ST.GIALLO, outline=ST.NERO, width=4)
-                dd.text((x + 28, y), luogo["nome"].upper(), font=_f(40, ST.PESO_FORTE), fill=ST.BIANCO, anchor="lm",
-                        stroke_width=4, stroke_fill=ST.NERO)
-            cache_sfondi[(chiave, alta)] = _veli(img)
+            cache_sfondi[(chiave, alta)] = _SfondoMappa(mappa.fondo(v, list(chiave)), v)
         return cache_sfondi[(chiave, alta)]
+
+    def luogo_di(nome):
+        """Il posto con questo nome (dal pacchetto: "luoghi", oppure il luogo del globo) -> {"nome", "lon", "lat"} o None."""
+        if not nome:
+            return None
+        for k, val in dict(p.get("luoghi") or {}, **({(p.get("globo") or {}).get("luogo", {}).get("nome", ""): (p.get("globo") or {}).get("luogo")}
+                                                    if (p.get("globo") or {}).get("luogo") else {})).items():
+            if k and k.lower() == nome.strip().lower() and val:
+                return dict(val, nome=k)
+        return None
 
     def codici_scena(testo):
         """"US, CN" o "Stati Uniti, Cina" -> ["US", "CN"] (solo paesi che si trovano sulla mappa)."""
@@ -474,8 +588,11 @@ def rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro):
         voce, schermo = r["voce"], r["schermo"]
         numero = r.get("numero") or social._numero_forte(voce.replace("%", " per cento"))
         anno = ANNO.search(voce)
+        forzata = (r.get("scena") or "").strip().lower()
         if i == 0:
             piano.append(("apertura", None))
+        elif forzata in ("orbite", "domanda"):
+            piano.append((forzata, None))
         elif numero and len(numero) <= 14:
             piano.append(("numero", (numero, schermo if r.get("numero") else _etichetta_numero(voce, schermo))))
         elif anno and int(anno.group(1)) < oggi.year:
@@ -483,6 +600,8 @@ def rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro):
         elif ST.SCENA_TESTATE and not gia_fonti and (i == len(righe) - 1 or FONTI_RE.search(voce)):
             piano.append(("fonti", None))
             gia_fonti = True
+        elif mappa_ok and (r.get("paese") or r.get("luogo")) and (codici_scena(r.get("paese")) or evento):
+            piano.append(("mappa", None))             # se la scena dice quali paesi o luoghi, vince la mappa sulla foto
         elif con_foto:
             piano.append(("foto", _carta_sorgente(base, i)))
         elif mappa_ok and (codici_scena(r.get("paese")) or evento):
@@ -491,10 +610,16 @@ def rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro):
             piano.append(("parola", schermo or voce.split()[social._parola_forte(voce.split())].strip(".,:;!?")))
 
     # sfondo di ogni scena: la mappa con i paesi di QUELLA scena illuminati, oppure la foto sfocata
+    fondo_nero = Image.new("RGB", grande.size, ST.NERO)
+    luogo_scena = [luogo_di(r.get("luogo")) for r in righe]
     sfondo_scena = []
     for i, (tipo, _) in enumerate(piano):
         if tipo == "apertura":
             sfondo_scena.append(vivo)
+        elif tipo == "orbite":
+            sfondo_scena.append(fondo_nero)
+        elif tipo == "domanda":
+            sfondo_scena.append(scuro)
         elif mappa_ok and tipo != "foto" and (codici_scena(righe[i].get("paese")) or evento):
             sfondo_scena.append(sfondo_mappa(codici_scena(righe[i].get("paese")) or [evento], alta=tipo in ("numero", "anno")))
             usata_mappa = True
@@ -508,7 +633,10 @@ def rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro):
             try:
                 if tipo == "apertura" and p.get("globo"):
                     print(f"Reel: globo 3D, scena {i + 1} ({durate[i]:.0f} s)…", flush=True)
-                    clip_file[i] = reel_globo.clip_convergenza(p, durate[i], lavoro)
+                    if (p["globo"].get("tipo") or "") == "lancio":
+                        clip_file[i] = reel_globo.clip_lancio(p, durate[i], lavoro)
+                    else:
+                        clip_file[i] = reel_globo.clip_convergenza(p, durate[i], lavoro)
                 elif tipo == "fonti":
                     print(f"Reel: globo 3D delle testate, scena {i + 1} ({durate[i]:.0f} s)…", flush=True)
                     clip_file[i], _ = reel_globo.clip_testate(p, durate[i], lavoro)
@@ -574,11 +702,14 @@ def rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro):
     nero = Image.new("RGBA", (W, H), ST.NERO + (255,))
     clips = {i: _Clip(f) for i, f in clip_file.items()}
     g = 0
+    ultimo_fr, prec, i_cor = None, None, -1
     try:
         for n in range(round(totale * FPS)):
             t = n / FPS
             i = max(k for k in range(len(inizi)) if inizi[k] <= t + 1e-6)
             tl = t - inizi[i]
+            if i != i_cor:                                        # nuova scena: si tiene l'ultimo fotogramma di quella prima
+                prec, i_cor = ultimo_fr, i
             if i >= len(scene):                                   # chiusura
                 fr = _pan(scuro, tl, reel.CHIUSURA, 0).convert("RGBA")
                 fr.alpha_composite(fine)
@@ -595,6 +726,9 @@ def rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro):
                     fr = _veli(clips[i].fotogramma(), 0.55, 0.78 if tipo == "apertura" else 0.45).convert("RGBA")
                 elif tipo == "fonti" and mappa_fonti:
                     fr = mappa_fonti.fondo(tl).convert("RGBA")
+                elif isinstance(sfondo_scena[i], _SfondoMappa):
+                    fr0, dove = sfondo_scena[i].inquadra(tl, durata, (luogo_scena[i]["lon"], luogo_scena[i]["lat"]) if luogo_scena[i] else None)
+                    fr = _veli(fr0, 0.6, 0.45).convert("RGBA")
                 else:
                     fr = _pan(sfondo_scena[i], tl, durata, i).convert("RGBA")
                 fr.alpha_composite(strati[i])
@@ -616,15 +750,23 @@ def rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro):
                     _carta(fr, d, tl, durata, dati, i)
                 elif tipo == "parola":
                     _parola(d, tl, dati)
+                elif tipo == "orbite":
+                    _orbite(d, tl)
+                elif tipo == "domanda":
+                    _domanda(d, tl)
+                if luogo_scena[i] and isinstance(sfondo_scena[i], _SfondoMappa):
+                    mx, my = dove(luogo_scena[i]["lon"], luogo_scena[i]["lat"])
+                    _marcatore(d, mx, my, tl, luogo_scena[i]["nome"])
                 if fonti_scena[i]:
                     _riga_fonte(fr, tl, fonti_scena[i])
                 while g + 1 < len(gruppi) and gruppi[g + 1][0] <= t:
                     g += 1
                 a, b, parole, si = gruppi[g]
                 if si == i and i > 0 and a <= t < b + 0.05:        # la prima scena è la copertina: titolo, niente parole
-                    _didascalia(fr, parole, t - a, forti[i])
-            if tl < ST.STACCO_S and n:                              # stacco rapido tra le scene
-                fr = Image.blend(fr, nero, 0.55 * (1 - tl / ST.STACCO_S))
+                    _didascalia(fr, parole, t - a, forti[i], b - a)
+            if tl < ST.TRANSIZIONE_S and prec is not None:          # la scena nuova spinge via la vecchia
+                fr = _spinta(prec, fr, tl / ST.TRANSIZIONE_S, i)
+            ultimo_fr = fr
             proc.stdin.write(fr.convert("RGB").tobytes())
         proc.stdin.close()
     except BrokenPipeError:
@@ -636,6 +778,26 @@ def rendi(p, righe, durate, tempi, foto, wav, uscita, lavoro):
     if proc.wait():
         raise RuntimeError("ffmpeg (reel animato): " + errore.strip()[-400:])
     return uscita
+
+
+def _spinta(prec, nuovo, q, i):
+    """Cambio di scena in movimento: la nuova arriva da destra, dal basso o con uno zoom, a turno."""
+    k = _e(q)
+    vecchio, nuovo = prec.convert("RGB"), nuovo.convert("RGB")
+    verso = i % 3
+    if verso == 2:                                   # zoom: la scena nuova arriva grande e si assesta
+        s = 1.22 - 0.22 * k
+        w, h = int(W * s), int(H * s)
+        gr = nuovo.resize((w, h), Image.BILINEAR).crop(((w - W) // 2, (h - H) // 2, (w - W) // 2 + W, (h - H) // 2 + H))
+        return Image.blend(vecchio, gr, k)
+    tela = Image.new("RGB", (W, H), ST.NERO)
+    if verso == 0:
+        tela.paste(vecchio, (-int(k * W * 0.6), 0))
+        tela.paste(nuovo, (int((1 - k) * W), 0))
+    else:
+        tela.paste(vecchio, (0, -int(k * H * 0.6)))
+        tela.paste(nuovo, (0, int((1 - k) * H)))
+    return tela
 
 
 def _credito_mappa():

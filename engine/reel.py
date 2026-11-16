@@ -44,10 +44,11 @@ BIANCO = (255, 255, 255)
 def righe_copione(copione):
     """Una scena per riga del copione: [{"voce", "schermo", "numero", "fonte"}]. Toglie i tempi ("[0-2s]" oppure
     "1 (0-3 s)") e le righe di servizio (fonti, nota AI). Forma completa di una riga:
-        1 (0-3 s) Testo: scritta breve · Voce: frase letta · Numero: 11.000 · Fonte: El Mundo · Paese: US, CN
+        1 (0-3 s) Testo: scritta breve · Voce: frase letta · Numero: 11.000 · Fonte: El Mundo · Paese: US, CN · Luogo: Shenzhen · Scena: orbite
     "Testo" diventa la scritta della scena, "Voce" è letta dalla voce, "Numero" (facoltativo) è il dato da scrivere
     grande, "Fonte" (facoltativa) è la testata che compare sotto ("Secondo El Mundo"), "Paese" (facoltativo) sono i paesi
-    da illuminare sulla mappa di quella scena (codici come US, CN o nomi come Cina)."""
+    da illuminare sulla mappa di quella scena (codici come US, CN o nomi come Cina), "Luogo" un posto del pacchetto
+    ("luoghi") che pulsa sulla mappa, "Scena" forza il tipo di scena (lancio, orbite, domanda)."""
     scene = []
     for riga in (copione or "").splitlines():
         t = re.sub(r"^\s*\[[^\]]*\]\s*", "", riga).strip()
@@ -56,7 +57,7 @@ def righe_copione(copione):
         if re.search(r"\bVoce\s*:", t):
             prima, t = re.split(r"\bVoce\s*:", t, maxsplit=1)
             schermo = re.sub(r"^\s*Testo\s*:\s*", "", prima).strip(" ·-–\"«»")
-            pezzi = re.split(r"\s*·\s*(?=(?:Numero|Fonte|Paese)\s*:)", t.strip())
+            pezzi = re.split(r"\s*·\s*(?=(?:Numero|Fonte|Paese|Luogo|Scena)\s*:)", t.strip())
             t = pezzi[0]
             for seg in pezzi[1:]:
                 k, _, v = seg.partition(":")
@@ -67,7 +68,8 @@ def righe_copione(copione):
         t = re.sub(r"\s*Testo preparato con l'aiuto dell'AI.*$", "", t).strip()
         if t:
             scene.append({"voce": t, "schermo": schermo if len(schermo) <= 48 else "",
-                          "numero": extra.get("numero", ""), "fonte": extra.get("fonte", ""), "paese": extra.get("paese", "")})
+                          "numero": extra.get("numero", ""), "fonte": extra.get("fonte", ""), "paese": extra.get("paese", ""),
+                          "luogo": extra.get("luogo", ""), "scena": extra.get("scena", "")})
     return scene[:stile_reel.MAX_SCENE]
 
 
@@ -434,6 +436,29 @@ def monta(file_scene, durate, wav, ass, uscita, cartella):
             "-shortest", "-movflags", "+faststart", str(uscita))
 
 
+def didascalia_reel(p, righe, foto=None):
+    """La didascalia da incollare sotto il reel (Instagram e TikTok), sempre della stessa forma seria: testo, domanda ai
+    lettori, fonti, "Segui @adolos.it", nota sull'AI, crediti e, dopo tre punti, pochi hashtag sempre uguali."""
+    testo = p.get("testo_post") or " ".join(r["voce"] for r in righe[:2])
+    nomi = [f["fonte"] for f in p.get("fonti", [])][:5]
+    n = int(p.get("n_fonti") or len(p.get("fonti", [])))
+    fonti = "Fonti: " + ", ".join(nomi) + (f" e altre {n - len(nomi)}." if n > len(nomi) else ".")
+    crediti = []
+    if (foto or {}).get("credito"):
+        crediti.append(foto["credito"] + ".")
+    try:
+        import mappa
+        if mappa.disponibile():
+            crediti.append(mappa.CREDITO)
+    except Exception:
+        pass
+    parti = [testo, p.get("didascalia_domanda", ""), fonti, social.SEGUI, social.NOTA_AI + " Voce generata con AI."] + crediti
+    tag = list(dict.fromkeys(list(social.HASHTAG_FISSI) + [social.HASHTAG_SEZIONE.get(p.get("sezione"), "")]))
+    coda = "\n.\n.\n.\n" + " ".join(x for x in tag if x)
+    corpo = "\n\n".join(x for x in parti if x)
+    return corpo[:2190 - len(coda)].rstrip() + coda + "\n"
+
+
 def genera(file_pacchetto, cartella_uscita=None):
     import time
     inizio = time.time()
@@ -451,6 +476,8 @@ def genera(file_pacchetto, cartella_uscita=None):
     uscita_dir.mkdir(parents=True, exist_ok=True)
     foto = None
     try:
+        if p.get("senza_foto"):                  # es. non si sa se la foto trovata mostra proprio quel razzo/luogo/persona
+            raise RuntimeError("foto non cercata (senza_foto)")
         import immagini
         s = {"id": p["id"], "titolo": p["titolo"]}
         foto = immagini.per_storia(s, p["titolo"], [], "", (p.get("sintesi") or "") + " " + " ".join(p.get("punti") or []))
@@ -466,6 +493,10 @@ def genera(file_pacchetto, cartella_uscita=None):
         file_scene = immagini_scene(p, scene, foto, lavoro)
         ass = sottotitoli(scene, durate, lavoro, tempi)
         monta(file_scene, durate, wav, ass, uscita, lavoro)
+    try:
+        (uscita_dir / f"adolos-{p['id']}-didascalia.txt").write_text(didascalia_reel(p, righe, foto), encoding="utf-8")
+    except Exception as e:
+        print("Reel: didascalia non scritta:", str(e)[:120])
     print(f"Reel pronto in {time.time() - inizio:.0f} secondi: {uscita} ({sum(durate) + CHIUSURA:.0f} s, "
           f"{uscita.stat().st_size // 1024} KB, {'con foto' if foto else 'senza foto'}) · {ULTIMA_VOCE}")
     return uscita

@@ -72,8 +72,15 @@ cambia quel file, una volta, e cambiano tutti i reel.
 - Chiusura: "Segui @adolos.it" in un riquadro giallo, fonti, nota sull'AI, crediti foto e mappa (NASA, Natural Earth).
 - Niente scena "chi ne parla" (testate e paesi): tolta da Tommaso il 16/11 (`SCENA_TESTATE = False`). Le fonti restano
   citate sotto i dati e in chiusura: è una regola legale.
+- Movimento (sempre acceso): parole che saltano fuori una alla volta, telecamera che zooma e si sposta sulle mappe,
+  punto che pulsa sul luogo, anello che si riempie nei numeri piccoli, cambio scena a spinta (da destra, dal basso, a zoom).
+- Il reel finisce con una domanda ai lettori ("Scrivilo nei commenti") e produce anche la didascalia
+  (`adolos-<id>-didascalia.txt`: testo, domanda, fonti, "Segui @adolos.it", nota AI, crediti, hashtag in fondo).
 - Formato di una riga del copione:
-  `1 (0-6 s) Testo: SCRITTA · Voce: frase letta · Numero: 11.000 · Fonte: El Mundo · Paese: US, CN`
+  `1 (0-6 s) Testo: SCRITTA · Voce: frase letta · Numero: 10 MINUTI · Fonte: ULA · Paese: US · Luogo: Cape Canaveral · Scena: orbite`
+  `Scena` può essere `lancio` (prima scena, globo 3D con la linea che sale e il carico che si disperde), `orbite` o `domanda`.
+  Nel pacchetto: `luoghi` (nome → lon, lat), `globo` (tipo, luogo, rotta), `senza_foto: true` se non si è sicuri che la
+  foto trovata mostri proprio quella cosa, `testo_post` e `didascalia_domanda` per la didascalia.
 - Si copia il formato (scene brevi, testo in alto, mappe luminose), mai personaggi, testi o grafiche di altri account.
 - Regole di sempre: solo fatti presenti in almeno 2 testate, "secondo <testata>" per i dati di una sola, notizie in
   evoluzione da ricontrollare prima di pubblicare, nessuna persona reale creata con l'AI.
