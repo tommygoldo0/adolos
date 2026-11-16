@@ -38,6 +38,16 @@ PREZZI = {
 _conf = None
 
 
+def _corpo_anthropic(modello, max_token, sistema, testo):
+    """Testi brevi e semplici: sforzo basso. Su Claude Haiku 5.5 il "ragionamento" è acceso di serie e consuma i token
+    della risposta (risposta vuota): qui si spegne, cosa permessa con sforzo basso."""
+    corpo = {"model": modello, "max_tokens": max_token, "system": sistema,
+             "messages": [{"role": "user", "content": testo}], "output_config": {"effort": "low"}}
+    if "haiku" in modello:
+        corpo["thinking"] = {"type": "disabled"}
+    return corpo
+
+
 def conf():
     global _conf
     if _conf is None:
@@ -101,8 +111,7 @@ def chiedi(sistema, testo, max_token=1200):
         if provider == "anthropic":
             r = requests.post("https://api.anthropic.com/v1/messages", timeout=90, headers={
                 "x-api-key": chiave, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-                json={"model": modello, "max_tokens": max_token, "system": sistema,
-                      "messages": [{"role": "user", "content": testo}]})
+                json=_corpo_anthropic(modello, max_token, sistema, testo))
         else:
             base = OPENAI_COMPATIBILI.get(provider)
             if not base:
@@ -121,6 +130,8 @@ def chiedi(sistema, testo, max_token=1200):
     dati = r.json()
     if provider == "anthropic":
         risposta = "".join(b.get("text", "") for b in dati.get("content", []) if b.get("type") == "text")
+        if not risposta.strip():                # mai un errore muto: niente testo = errore visibile
+            raise RuntimeError(f"AI anthropic: risposta vuota (stop_reason={dati.get('stop_reason')})")
         t_in = dati.get("usage", {}).get("input_tokens", 0)
         t_out = dati.get("usage", {}).get("output_tokens", 0)
     else:
