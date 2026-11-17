@@ -436,7 +436,8 @@ def stato():
     print("Chiave AI per i testi:", "presente" if os.environ.get("AI_KEY") else "assente (si aspettano i testi delle edizioni)")
     import reel
     uso = reel._uso_mese()
-    print("Voce dei reel:", "ElevenLabs" if os.environ.get("ELEVENLABS_API_KEY", "").strip() else "locale (manca ELEVENLABS_API_KEY)",
+    attiva = reel._imp_voce().get("motore") == "elevenlabs" and reel._imp_voce().get("elevenlabs_consentito") is True
+    print("Voce dei reel:", ("ElevenLabs" if os.environ.get("ELEVENLABS_API_KEY", "").strip() else "locale (manca ELEVENLABS_API_KEY)") if attiva else "locale gratuita (ElevenLabs SPENTO)",
           f"· crediti ElevenLabs usati questo mese: {uso['crediti']} su {reel._imp_voce().get('tetto_crediti_mese', 9000)}")
     st = _leggi_stato()
     print("Ultime richieste fatte:", *(st.get("fatte", [])[-5:] or ["nessuna"]), sep="\n  ")

@@ -137,7 +137,7 @@ def voce(scene, cartella):
     chiave = os.environ.get("ELEVENLABS_API_KEY", "").strip()
     if os.environ.get("ADOLOS_VOCE") == "locale":         # per le prove: non consuma crediti
         chiave = ""
-    if imp.get("motore") == "elevenlabs" and chiave:
+    if imp.get("motore") == "elevenlabs" and imp.get("elevenlabs_consentito") is True and chiave:
         servono = sum(len(_da_leggere(t)) for t in scene)
         uso = _uso_mese()
         tetto = int(imp.get("tetto_crediti_mese", 9000))
@@ -151,6 +151,8 @@ def voce(scene, cartella):
                 ULTIMA_VOCE = "voce locale gratuita (ElevenLabs non ha risposto)"
     else:
         ULTIMA_VOCE = "voce locale gratuita (Kokoro)"
+        if imp.get("motore") == "elevenlabs" and not imp.get("elevenlabs_consentito"):
+            print("Reel: ElevenLabs è spento in fonti.json (elevenlabs_consentito = false): voce locale")
     wav, durate = _voce_kokoro(scene, cartella)
     return wav, durate, None
 
