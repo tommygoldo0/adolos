@@ -11,26 +11,26 @@
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Der Spiegel",
-   "data": "2026-11-16T04:03:00+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://www.spiegel.de/ausland/nvidia-affaere-handelsminister-lutnick-geraet-in-spionage-und-sexaffaere-unter-druck-a-d5a8dd06-a4ad-4dae-a33c-fb6a530f956a#ref=rss"
-  },
-  "conferma": {
    "fonte": "Die Welt",
    "data": "2026-11-16T04:13:20+00:00",
-   "dopo_min": 10
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.welt.de/politik/ausland/article6afa7e409849eea0701e415c/nvidia-jensen-huang-spricht-schon-ueber-rueckkehr-an-spitze-150-000-unterschreiben-offenen-brief.html"
+  },
+  "conferma": {
+   "fonte": "NDTV",
+   "data": "2026-11-16T04:47:04+00:00",
+   "dopo_min": 34
   },
   "curva": [
    1,
-   19,
-   38,
+   18,
+   36,
    62,
-   87,
-   91,
-   97,
-   100,
+   84,
+   89,
+   95,
+   98,
    106,
    119,
    126,
@@ -45,7 +45,6 @@
    "AR",
    "AT",
    "AU",
-   "AZ",
    "BE",
    "BR",
    "CA",
@@ -53,6 +52,7 @@
    "CO",
    "CR",
    "DE",
+   "DK",
    "DO",
    "EC",
    "EG",
@@ -97,6 +97,7 @@
   ],
   "lingue": [
    "ar",
+   "da",
    "de",
    "en",
    "es",
@@ -108,26 +109,16 @@
    "nl",
    "pl",
    "pt",
-   "ru",
    "sv"
   ],
   "n_fonti": 128,
   "prima_segnalazione": {
-   "fonte": "Der Spiegel",
+   "fonte": "Die Welt",
    "paese": "DE",
-   "data": "2026-11-16T04:03:00+00:00"
+   "data": "2026-11-16T04:13:20+00:00"
   },
-  "aggiornata": "2026-11-18T02:44:50+00:00",
+  "aggiornata": "2026-11-18T03:31:32+00:00",
   "fonti": [
-   {
-    "fonte": "Der Spiegel",
-    "link": "https://www.spiegel.de/ausland/nvidia-affaere-handelsminister-lutnick-geraet-in-spionage-und-sexaffaere-unter-druck-a-d5a8dd06-a4ad-4dae-a33c-fb6a530f956a#ref=rss",
-    "paese": "DE",
-    "lingua": "de",
-    "data": "2026-11-16T04:03:00+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Die Welt",
     "link": "https://www.welt.de/politik/ausland/article6afa7e409849eea0701e415c/nvidia-jensen-huang-spricht-schon-ueber-rueckkehr-an-spitze-150-000-unterschreiben-offenen-brief.html",
@@ -388,18 +379,27 @@
     "data": "2026-11-16T10:27:00+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "The Hill",
+    "link": "https://thehill.com/homenews/administration/6219992-trump-xi-meeting-nvidia-scandals/",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-16T11:00:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
-   "italia": 10,
-   "estero": 118,
+   "italia": 11,
+   "estero": 117,
    "paesi_esteri": 53,
    "continenti": {
-    "Europa": 56,
+    "Europa": 58,
     "Americhe": 35,
-    "Asia e Medio Oriente": 26,
-    "Africa": 5,
+    "Asia e Medio Oriente": 25,
     "Oceania": 5,
+    "Africa": 4,
     "Altro": 1
    }
   },
@@ -1300,9 +1300,9 @@
   "titolo": "Quasi 1.500 migranti arrivano nelle Isole Canarie in un solo giorno",
   "lingua": "en",
   "categoria": "Politica",
-  "curiosita": false,
-  "sezione": "Politica",
-  "calore": 79,
+  "curiosita": true,
+  "sezione": "Curiosità",
+  "calore": 77,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -1321,14 +1321,14 @@
   "curva": [
    1,
    4,
-   7,
-   7,
+   8,
    9,
-   9,
-   9,
-   9,
-   9,
-   9,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
    11,
    11
   ],
@@ -1350,8 +1350,7 @@
   "lingue": [
    "en",
    "es",
-   "fi",
-   "nl"
+   "fi"
   ],
   "n_fonti": 11,
   "prima_segnalazione": {
@@ -1416,6 +1415,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "The Independent",
+    "link": "https://www.independent.co.uk/news/world/europe/canary-islands-spain-migration-emergency-b3085520.html",
+    "paese": "GB",
+    "lingua": "en",
+    "data": "2026-11-16T09:46:30+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "France 24",
     "link": "https://www.france24.com/en/video/20261116-canary-islands-struggle-to-cope-after-massive-influx-of-migrants",
     "paese": "FR",
@@ -1425,11 +1433,11 @@
     "origine": "rss"
    },
    {
-    "fonte": "de Volkskrant",
-    "link": "https://www.volkskrant.nl/buitenland/snelle-toename-van-migratie-uit-senegal-naar-canarische-eilanden-waarom-nu-opeens~b01a9514/",
+    "fonte": "NRC",
+    "link": "https://www.nrc.nl/nieuws/2026/11/16/dit-jaar-vertrokken-minder-migrantenboten-uit-west-afrika-dit-weekend-kwam-ineens-een-recordaantal-migranten-aan-op-de-canarische-eilanden-a4941484",
     "paese": "NL",
-    "lingua": "nl",
-    "data": "2026-11-16T18:17:14+00:00",
+    "lingua": "en",
+    "data": "2026-11-16T15:32:34+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -1439,15 +1447,6 @@
     "paese": "AR",
     "lingua": "es",
     "data": "2026-11-16T20:10:02+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "The Independent",
-    "link": "https://www.independent.co.uk/news/world/europe/spain-canary-islands-north-africa-el-hierro-pedro-sanchez-b3086710.html",
-    "paese": "GB",
-    "lingua": "en",
-    "data": "2026-11-17T19:31:56+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -3463,21 +3462,21 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 94,
+  "calore": 90,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "La Presse de Tunisie",
-   "data": "2026-11-16T18:30:08+00:00",
+   "fonte": "CBS News",
+   "data": "2026-11-16T09:00:31+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.lapresse.tn/2026/11/16/explosions-a-bahrein-le-cgri-revendique-une-attaque-contre-une-base-americaine/"
+   "link": "https://www.cbsnews.com/live-updates/us-iran-war-trump-nuclear-material-no-deal/"
   },
   "conferma": {
    "fonte": "Al-Monitor",
    "data": "2026-11-17T06:46:30+00:00",
-   "dopo_min": 736
+   "dopo_min": 1306
   },
   "curva": [
    1,
@@ -3485,13 +3484,13 @@
    1,
    1,
    1,
-   9,
-   14,
+   1,
+   6,
+   13,
    15,
-   16,
-   16,
-   16,
-   16
+   15,
+   15,
+   15
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -3509,7 +3508,6 @@
    "PY",
    "QA",
    "RU",
-   "TN",
    "TR",
    "US"
   ],
@@ -3517,23 +3515,22 @@
    "el",
    "en",
    "es",
-   "fr",
    "pl"
   ],
-  "n_fonti": 16,
+  "n_fonti": 15,
   "prima_segnalazione": {
-   "fonte": "La Presse de Tunisie",
-   "paese": "TN",
-   "data": "2026-11-16T18:30:08+00:00"
+   "fonte": "CBS News",
+   "paese": "US",
+   "data": "2026-11-16T09:00:31+00:00"
   },
   "aggiornata": "2026-11-17T15:51:21+00:00",
   "fonti": [
    {
-    "fonte": "La Presse de Tunisie",
-    "link": "https://www.lapresse.tn/2026/11/16/explosions-a-bahrein-le-cgri-revendique-une-attaque-contre-une-base-americaine/",
-    "paese": "TN",
-    "lingua": "fr",
-    "data": "2026-11-16T18:30:08+00:00",
+    "fonte": "CBS News",
+    "link": "https://www.cbsnews.com/live-updates/us-iran-war-trump-nuclear-material-no-deal/",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-16T09:00:31+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -3552,15 +3549,6 @@
     "paese": "QA",
     "lingua": "en",
     "data": "2026-11-17T07:35:54+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Ouest-France",
-    "link": "https://www.ouest-france.fr/monde/bahrein/des-explosions-constatees-a-bahrein-liran-revendique-une-attaque-contre-un-systeme-radar-americain-50786bac-e258-11f1-a3b1-0c6de532ce7d?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-17T07:46:22+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -3675,13 +3663,12 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 16,
-   "paesi_esteri": 15,
+   "estero": 15,
+   "paesi_esteri": 14,
    "continenti": {
-    "Europa": 6,
-    "Asia e Medio Oriente": 5,
-    "Americhe": 4,
-    "Africa": 1
+    "Europa": 5,
+    "Americhe": 5,
+    "Asia e Medio Oriente": 5
    }
   },
   "punto_cieco": "italia"
@@ -4745,7 +4732,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 62,
+  "calore": 61,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -6986,30 +6973,30 @@
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "The Express Tribune",
-   "data": "2026-11-16T04:00:13+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://tribune.com.pk/story/2640595/rocket-from-boeing-lockheed-firm-fails-mid-flight-destroys-payload-of-amazon-satellites"
-  },
-  "conferma": {
    "fonte": "NDTV",
    "data": "2026-11-16T04:08:36+00:00",
-   "dopo_min": 8
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.ndtv.com/world-news/amazon-loses-40-satellites-as-ula-rocket-launch-fails-within-10-minutes-12331805#publisher=newsstand"
+  },
+  "conferma": {
+   "fonte": "Deutsche Welle",
+   "data": "2026-11-16T04:27:00+00:00",
+   "dopo_min": 18
   },
   "curva": [
    1,
-   13,
-   17,
+   12,
+   16,
+   22,
+   23,
+   23,
+   23,
+   23,
    23,
    24,
    24,
-   24,
-   24,
-   24,
-   25,
-   25,
-   25
+   24
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -7039,23 +7026,14 @@
    "nl",
    "pt"
   ],
-  "n_fonti": 25,
+  "n_fonti": 24,
   "prima_segnalazione": {
-   "fonte": "The Express Tribune",
-   "paese": "PK",
-   "data": "2026-11-16T04:00:13+00:00"
+   "fonte": "NDTV",
+   "paese": "IN",
+   "data": "2026-11-16T04:08:36+00:00"
   },
   "aggiornata": "2026-11-17T18:48:18+00:00",
   "fonti": [
-   {
-    "fonte": "The Express Tribune",
-    "link": "https://tribune.com.pk/story/2640595/rocket-from-boeing-lockheed-firm-fails-mid-flight-destroys-payload-of-amazon-satellites",
-    "paese": "PK",
-    "lingua": "en",
-    "data": "2026-11-16T04:00:13+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "NDTV",
     "link": "https://www.ndtv.com/world-news/amazon-loses-40-satellites-as-ula-rocket-launch-fails-within-10-minutes-12331805#publisher=newsstand",
@@ -7275,12 +7253,12 @@
   ],
   "copertura": {
    "italia": 4,
-   "estero": 21,
+   "estero": 20,
    "paesi_esteri": 12,
    "continenti": {
     "Europa": 13,
     "Americhe": 7,
-    "Asia e Medio Oriente": 4,
+    "Asia e Medio Oriente": 3,
     "Africa": 1
    }
   },
@@ -7717,15 +7695,15 @@
    1,
    6,
    12,
-   16,
-   24,
-   27,
-   29,
+   17,
+   25,
    29,
    31,
-   31,
-   31,
-   31
+   32,
+   33,
+   33,
+   33,
+   33
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -7757,7 +7735,7 @@
    "fr",
    "it"
   ],
-  "n_fonti": 31,
+  "n_fonti": 33,
   "prima_segnalazione": {
    "fonte": "Die Welt",
    "paese": "DE",
@@ -7879,6 +7857,15 @@
     "paese": "IN",
     "lingua": "en",
     "data": "2026-11-16T13:17:13+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Mirror",
+    "link": "https://www.mirror.co.uk/news/world-news/us-carrier-iran-trump-tehran-37882126",
+    "paese": "GB",
+    "lingua": "en",
+    "data": "2026-11-16T13:45:45+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -8025,23 +8012,14 @@
     "data": "2026-11-17T02:32:44+00:00",
     "tipo": "giornale",
     "origine": "rss"
-   },
-   {
-    "fonte": "France 24",
-    "link": "https://www.france24.com/en/video/20261117-third-us-aircraft-carrier-arrives-in-the-middle-east-as-iran-targets-bahrain",
-    "paese": "FR",
-    "lingua": "en",
-    "data": "2026-11-17T10:46:27+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 1,
-   "estero": 30,
+   "estero": 32,
    "paesi_esteri": 17,
    "continenti": {
-    "Europa": 14,
+    "Europa": 16,
     "Asia e Medio Oriente": 12,
     "Americhe": 5
    }
@@ -12424,44 +12402,42 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 71,
+  "calore": 61,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Le Temps",
-   "data": "2026-11-16T03:57:08+00:00",
+   "fonte": "AllAfrica",
+   "data": "2026-11-16T05:11:32+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.letemps.ch/monde/le-president-sortant-jose-maria-neves-reelu-pour-un-second-mandat-a-la-tete-du-cap-vert"
+   "link": "https://allafrica.com/stories/202611160046.html"
   },
   "conferma": {
-   "fonte": "RFI",
-   "data": "2026-11-16T04:02:42+00:00",
-   "dopo_min": 6
+   "fonte": "Africanews",
+   "data": "2026-11-16T05:53:45+00:00",
+   "dopo_min": 42
   },
   "curva": [
    1,
+   8,
    10,
-   11,
-   13,
-   13,
-   13,
-   13,
-   13,
-   13,
-   13,
-   13,
-   13
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10
   ],
   "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
    "AR",
-   "BR",
    "CG",
-   "CH",
    "FR",
    "IN",
    "MZ",
@@ -12472,35 +12448,16 @@
   "lingue": [
    "en",
    "es",
-   "fr",
-   "pt"
+   "fr"
   ],
-  "n_fonti": 13,
+  "n_fonti": 10,
   "prima_segnalazione": {
-   "fonte": "Le Temps",
-   "paese": "CH",
-   "data": "2026-11-16T03:57:08+00:00"
+   "fonte": "AllAfrica",
+   "paese": "ZA",
+   "data": "2026-11-16T05:11:32+00:00"
   },
   "aggiornata": "2026-11-17T11:40:46+00:00",
   "fonti": [
-   {
-    "fonte": "Le Temps",
-    "link": "https://www.letemps.ch/monde/le-president-sortant-jose-maria-neves-reelu-pour-un-second-mandat-a-la-tete-du-cap-vert",
-    "paese": "CH",
-    "lingua": "fr",
-    "data": "2026-11-16T03:57:08+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "RFI",
-    "link": "https://www.rfi.fr/fr/afrique/20261116-pr%C3%A9sidentielle-au-cap-vert-jos%C3%A9-mar%C3%ADa-neves-rempile-pour-un-second-mandat-de-cinq-ans",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-16T04:02:42+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "AllAfrica",
     "link": "https://allafrica.com/stories/202611160046.html",
@@ -12590,25 +12547,16 @@
     "data": "2026-11-16T13:12:22+00:00",
     "tipo": "giornale",
     "origine": "rss"
-   },
-   {
-    "fonte": "Folha de S.Paulo",
-    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mundo/2026/11/presidente-de-centro-esquerda-de-cabo-verde-e-reeleito-no-primeiro-turno.shtml",
-    "paese": "BR",
-    "lingua": "pt",
-    "data": "2026-11-16T16:21:00+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 0,
-   "estero": 13,
-   "paesi_esteri": 10,
+   "estero": 10,
+   "paesi_esteri": 8,
    "continenti": {
-    "Europa": 5,
     "Africa": 3,
-    "Americhe": 3,
+    "Europa": 3,
+    "Americhe": 2,
     "Asia e Medio Oriente": 2
    }
   },
@@ -15053,7 +15001,7 @@
   "categoria": "Altro",
   "curiosita": true,
   "sezione": "Curiosità",
-  "calore": 71,
+  "calore": 65,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -15319,7 +15267,7 @@
    4,
    4,
    4,
-   4,
+   5,
    7,
    7,
    7,
@@ -16443,30 +16391,30 @@
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Al Jazeera",
-   "data": "2026-11-16T03:54:04+00:00",
+   "fonte": "El Universo",
+   "data": "2026-11-16T04:13:32+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.aljazeera.com/video/newsfeed/2026/11/16/pope-leo-flies-to-mass-in-the-papacoptero?traffic_source=rss"
+   "link": "https://eluniverso.com/internacional/latinoamerica/leon-xiv-regresa-a-lima-para-culminar-su-intensa-gira-por-latinoamerica-nota/"
   },
   "conferma": {
-   "fonte": "RFI",
-   "data": "2026-11-16T04:03:06+00:00",
-   "dopo_min": 9
+   "fonte": "ABC Color",
+   "data": "2026-11-16T04:40:06+00:00",
+   "dopo_min": 27
   },
   "curva": [
    1,
-   7,
-   13,
-   21,
-   34,
-   34,
-   36,
+   4,
+   9,
+   15,
+   28,
+   32,
+   33,
+   38,
    41,
-   43,
-   47,
-   48,
-   49
+   45,
+   46,
+   47
   ],
   "crescita": 1,
   "pubblicata": true,
@@ -16490,12 +16438,10 @@
    "IN",
    "IT",
    "MX",
-   "MZ",
    "PE",
    "PH",
    "PL",
    "PY",
-   "QA",
    "SG",
    "US",
    "VE",
@@ -16511,32 +16457,14 @@
    "pt",
    "ru"
   ],
-  "n_fonti": 49,
+  "n_fonti": 47,
   "prima_segnalazione": {
-   "fonte": "Al Jazeera",
-   "paese": "QA",
-   "data": "2026-11-16T03:54:04+00:00"
+   "fonte": "El Universo",
+   "paese": "EC",
+   "data": "2026-11-16T04:13:32+00:00"
   },
   "aggiornata": "2026-11-18T03:08:40+00:00",
   "fonti": [
-   {
-    "fonte": "Al Jazeera",
-    "link": "https://www.aljazeera.com/video/newsfeed/2026/11/16/pope-leo-flies-to-mass-in-the-papacoptero?traffic_source=rss",
-    "paese": "QA",
-    "lingua": "en",
-    "data": "2026-11-16T03:54:04+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "RFI",
-    "link": "https://www.rfi.fr/fr/am%C3%A9riques/20261116-p%C3%A9rou-en-amazonie-le-pape-l%C3%A9on-xiv-appelle-%C3%A0-%C3%A9couter-le-cri-de-la-terre-et-des-pauvres",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-16T04:03:06+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "El Universo",
     "link": "https://eluniverso.com/internacional/latinoamerica/leon-xiv-regresa-a-lima-para-culminar-su-intensa-gira-por-latinoamerica-nota/",
@@ -16574,24 +16502,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "Il Sole 24 Ore",
-    "link": "https://www.ilsole24ore.com/art/papa-leone-l-angelus-ad-oltre-tremila-metri-e-grido-tutela-dell-amazzonia-AJtGTyHC",
-    "paese": "IT",
-    "lingua": "it",
-    "data": "2026-11-16T08:04:51+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Diario Libre",
-    "link": "https://www.diariolibre.com/videos/mundo/america-latina/2026/11/16/papa-leon-xiv-pide-escuchar-a-los-pobres-en-la-amazonia-de-peru/3721885",
-    "paese": "DO",
-    "lingua": "en",
-    "data": "2026-11-16T08:44:00+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "El Nacional",
     "link": "https://www.elnacional.com/2026/11/una-ola-de-fieles-llega-a-lima-para-despedirse-del-papa-leon-xiv-en-su-ultima-misa-en-peru/",
     "paese": "VE",
@@ -16607,24 +16517,6 @@
     "lingua": "it",
     "data": "2026-11-16T10:10:03+00:00",
     "tipo": "agenzia",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Club of Mozambique",
-    "link": "https://clubofmozambique.com/news/pope-leo-urges-stop-to-amazon-deforestation-decries-murders-of-tribal-leaders/",
-    "paese": "MZ",
-    "lingua": "en",
-    "data": "2026-11-16T10:13:51+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Sky TG24",
-    "link": "https://tg24.sky.it/mondo/video/2026/11/16/papa-leone-xiv-pucallpa-peru-1140258",
-    "paese": "IT",
-    "lingua": "it",
-    "data": "2026-11-16T10:16:25+00:00",
-    "tipo": "giornale",
     "origine": "rss"
    },
    {
@@ -16709,15 +16601,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "Le Monde",
-    "link": "https://www.lemonde.fr/international/article/2026/11/16/des-andes-a-l-amazonie-leon-xiv-insiste-sur-la-protection-des-peuples-et-de-l-environnement-le-cri-de-la-terre-et-le-cri-des-pauvres-s-elevent-ensemble_6812198_3210.html",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-16T17:05:23+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "El Tiempo",
     "link": "https://www.eltiempo.com/mundo/latinoamerica/leon-xiv-se-despide-de-peru-y-suramerica-pide-no-olvidar-a-los-pobres-y-condena-el-machismo-en-una-misa-multitudinaria-3601430",
     "paese": "CO",
@@ -16741,6 +16624,15 @@
     "paese": "AR",
     "lingua": "es",
     "data": "2026-11-16T18:11:26+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Sky TG24",
+    "link": "https://tg24.sky.it/mondo/video/2026/11/16/lima-peru-papa-leone-rosario-folla-1140419",
+    "paese": "IT",
+    "lingua": "it",
+    "data": "2026-11-16T18:58:43+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -16788,17 +16680,71 @@
     "data": "2026-11-16T20:10:00+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "Telex",
+    "link": "https://telex.hu/kulfold/2026/11/16/xiv-leo-papa-del-amerika-korut-helikopter-istentisztelet",
+    "paese": "HU",
+    "lingua": "en",
+    "data": "2026-11-16T20:36:57+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "New York Post",
+    "link": "https://nypost.com/2026/11/16/world-news/pope-leo-struck-in-the-eye-by-thrown-rosary-during-peru-farewell-parade/",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-16T20:49:46+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "La Stampa",
+    "link": "https://www.lastampa.it/esteri/2026/11/16/video/il_papa_a_lima_colpito_da_un_rosario_al_volto_lanciato_dalla_folla-15800324/",
+    "paese": "IT",
+    "lingua": "it",
+    "data": "2026-11-16T21:03:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Daily Maverick",
+    "link": "https://www.dailymaverick.co.za/article/2026-11-16-pope-leo-misses-the-catch-as-rosary-from-crowd-hits-his-eye-in-peru/",
+    "paese": "ZA",
+    "lingua": "en",
+    "data": "2026-11-16T21:04:11+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "G1",
+    "link": "https://g1.globo.com/mundo/noticia/2026/11/16/papa-leao-xiv-e-atingido-por-objeto-no-rosto-a-caminho-de-sua-ultima-missa-no-peru-veja-video.ghtml",
+    "paese": "BR",
+    "lingua": "pt",
+    "data": "2026-11-16T22:03:34+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "PBS NewsHour",
+    "link": "https://www.pbs.org/newshour/world/pope-bids-hasta-luego-to-peru-as-he-wraps-up-marathon-south-america-trip",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-17T00:09:49+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
-   "italia": 9,
-   "estero": 40,
-   "paesi_esteri": 27,
+   "italia": 8,
+   "estero": 39,
+   "paesi_esteri": 25,
    "continenti": {
-    "Europa": 22,
-    "Americhe": 19,
-    "Asia e Medio Oriente": 5,
-    "Africa": 3
+    "Americhe": 22,
+    "Europa": 19,
+    "Asia e Medio Oriente": 4,
+    "Africa": 2
    }
   },
   "punto_cieco": ""
@@ -17590,35 +17536,35 @@
   "categoria": "Sport",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 63,
+  "calore": 58,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "The Japan Times",
-   "data": "2026-11-16T04:00:00+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://www.japantimes.co.jp/sports/2026/11/16/soccer/ronaldinho-soccer-return-ravenna/"
-  },
-  "conferma": {
    "fonte": "Azernews",
    "data": "2026-11-16T09:47:00+00:00",
-   "dopo_min": 347
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.azernews.az/sports/267499.html"
+  },
+  "conferma": {
+   "fonte": "Cyprus Mail",
+   "data": "2026-11-16T10:34:10+00:00",
+   "dopo_min": 47
   },
   "curva": [
    1,
-   1,
    4,
+   5,
+   5,
+   5,
+   5,
+   5,
+   5,
    6,
    6,
    6,
-   6,
-   6,
-   7,
-   7,
-   7,
-   7
+   6
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -17628,8 +17574,7 @@
    "BR",
    "CY",
    "GB",
-   "IT",
-   "JP"
+   "IT"
   ],
   "lingue": [
    "el",
@@ -17638,23 +17583,14 @@
    "pt",
    "ru"
   ],
-  "n_fonti": 7,
+  "n_fonti": 6,
   "prima_segnalazione": {
-   "fonte": "The Japan Times",
-   "paese": "JP",
-   "data": "2026-11-16T04:00:00+00:00"
+   "fonte": "Azernews",
+   "paese": "AZ",
+   "data": "2026-11-16T09:47:00+00:00"
   },
   "aggiornata": "2026-11-17T13:37:07+00:00",
   "fonti": [
-   {
-    "fonte": "The Japan Times",
-    "link": "https://www.japantimes.co.jp/sports/2026/11/16/soccer/ronaldinho-soccer-return-ravenna/",
-    "paese": "JP",
-    "lingua": "en",
-    "data": "2026-11-16T04:00:00+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Azernews",
     "link": "https://www.azernews.az/sports/267499.html",
@@ -17712,12 +17648,12 @@
   ],
   "copertura": {
    "italia": 1,
-   "estero": 6,
-   "paesi_esteri": 5,
+   "estero": 5,
+   "paesi_esteri": 4,
    "continenti": {
     "Europa": 3,
-    "Asia e Medio Oriente": 2,
-    "Americhe": 2
+    "Americhe": 2,
+    "Asia e Medio Oriente": 1
    }
   },
   "punto_cieco": ""
@@ -17964,9 +17900,9 @@
    "link": "https://tg24.sky.it/cronaca/2026/11/16/busto-garolfo-omicidio-uomo-trovato-morto-cava"
   },
   "conferma": {
-   "fonte": "G1",
-   "data": "2026-11-16T09:38:03+00:00",
-   "dopo_min": 48
+   "fonte": "Al Jazeera",
+   "data": "2026-11-16T11:23:43+00:00",
+   "dopo_min": 154
   },
   "curva": [
    1,
@@ -17974,7 +17910,7 @@
    5,
    6,
    7,
-   14,
+   15,
    21,
    24,
    25,
@@ -18034,20 +17970,20 @@
     "origine": "rss"
    },
    {
-    "fonte": "G1",
-    "link": "https://g1.globo.com/pb/paraiba/noticia/2026/11/16/homem-morre-e-duas-pessoas-ficam-feridas-apos-ataque-a-tiros-na-grande-joao-pessoa.ghtml",
-    "paese": "BR",
-    "lingua": "pt",
-    "data": "2026-11-16T09:38:03+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Al Jazeera",
     "link": "https://www.aljazeera.com/news/2026/11/16/jerichos-palestinian-residents-lay-in-wait-of-an-israeli-settler-takeover?traffic_source=rss",
     "paese": "QA",
     "lingua": "en",
     "data": "2026-11-16T11:23:43+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "G1",
+    "link": "https://g1.globo.com/rj/rio-de-janeiro/noticia/2026/11/16/pm-morto-irma-enterrados-cemiterio.ghtml",
+    "paese": "BR",
+    "lingua": "pt",
+    "data": "2026-11-16T11:38:15+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -18398,27 +18334,27 @@
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Al Jazeera",
-   "data": "2026-11-16T08:20:17+00:00",
+   "fonte": "The Japan Times",
+   "data": "2026-11-16T04:12:00+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.aljazeera.com/sports/2026/11/16/russia-out-of-iihf-world-junior-ice-hockey-as-canada-refuses-entry?traffic_source=rss"
+   "link": "https://www.japantimes.co.jp/sports/2026/11/16/more-sports/russia-barred-world-juniors/"
   },
   "conferma": {
-   "fonte": "Die Zeit",
-   "data": "2026-11-16T13:27:15+00:00",
-   "dopo_min": 307
+   "fonte": "Meduza",
+   "data": "2026-11-16T05:54:09+00:00",
+   "dopo_min": 102
   },
   "curva": [
    1,
-   1,
-   5,
-   5,
-   9,
-   9,
-   9,
+   3,
+   3,
+   8,
    10,
    10,
+   10,
+   10,
+   11,
    13,
    15,
    15
@@ -18433,6 +18369,7 @@
    "FI",
    "GB",
    "IN",
+   "JP",
    "LV",
    "QA",
    "RS",
@@ -18448,12 +18385,30 @@
   ],
   "n_fonti": 15,
   "prima_segnalazione": {
-   "fonte": "Al Jazeera",
-   "paese": "QA",
-   "data": "2026-11-16T08:20:17+00:00"
+   "fonte": "The Japan Times",
+   "paese": "JP",
+   "data": "2026-11-16T04:12:00+00:00"
   },
   "aggiornata": "2026-11-17T23:04:47+00:00",
   "fonti": [
+   {
+    "fonte": "The Japan Times",
+    "link": "https://www.japantimes.co.jp/sports/2026/11/16/more-sports/russia-barred-world-juniors/",
+    "paese": "JP",
+    "lingua": "en",
+    "data": "2026-11-16T04:12:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Meduza",
+    "link": "https://meduza.io/en/news/2026/11/16/canada-bars-russia-from-the-world-junior-championship-and-keeps-the-tournament",
+    "paese": "LV",
+    "lingua": "en",
+    "data": "2026-11-16T05:54:09+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
    {
     "fonte": "Al Jazeera",
     "link": "https://www.aljazeera.com/sports/2026/11/16/russia-out-of-iihf-world-junior-ice-hockey-as-canada-refuses-entry?traffic_source=rss",
@@ -18500,6 +18455,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "n-tv",
+    "link": "https://www.n-tv.de/sport/Bundesregierung-schiebt-brisante-Russland-Entscheidung-von-sich-weg-id31539326.html",
+    "paese": "DE",
+    "lingua": "de",
+    "data": "2026-11-16T15:03:11+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "Helsingin Sanomat",
     "link": "https://www.hs.fi/urheilu/art-2000012416372.html",
     "paese": "FI",
@@ -18510,28 +18474,10 @@
    },
    {
     "fonte": "The Guardian Sport",
-    "link": "https://www.theguardian.com/sport/2026/nov/16/usa-canada-womens-ice-hockey-world-championship-final",
+    "link": "https://www.theguardian.com/sport/live/2026/nov/16/usa-canada-womens-ice-hockey-world-championship-final-live",
     "paese": "GB",
     "lingua": "en",
-    "data": "2026-11-16T20:40:16+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Politiken",
-    "link": "https://politiken.dk/sport/ishockey/art11062889/USAs-ishockeykvinder-genvinder-VM-trof%C3%A6et-i-Herning",
-    "paese": "DK",
-    "lingua": "da",
-    "data": "2026-11-16T21:15:09+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "ESPN",
-    "link": "https://www.espn.com/olympics/story/_/id/50504659/us-women-beat-canada-win-gold-world-hockey-tournament",
-    "paese": "US",
-    "lingua": "en",
-    "data": "2026-11-16T22:58:06+00:00",
+    "data": "2026-11-16T21:08:48+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -18563,20 +18509,11 @@
     "origine": "rss"
    },
    {
-    "fonte": "Meduza",
-    "link": "https://meduza.io/en/news/2026/11/17/scared-to-face-russia-hackers-post-taunt-on-international-hockey-federation-s-website-after-it-keeps-russia-out-of-world-juniors-in-canada",
-    "paese": "LV",
+    "fonte": "ESPN",
+    "link": "https://www.espn.com/olympics/hockey/story/_/id/50512070/ice-hockey-federation-website-apparent-hack",
+    "paese": "US",
     "lingua": "en",
-    "data": "2026-11-17T18:29:40+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "n-tv",
-    "link": "https://www.n-tv.de/sport/Hacker-legen-Website-von-Eishockey-Weltverband-lahm-id31545684.html",
-    "paese": "DE",
-    "lingua": "de",
-    "data": "2026-11-17T20:01:44+00:00",
+    "data": "2026-11-17T19:54:20+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -18593,11 +18530,11 @@
   "copertura": {
    "italia": 0,
    "estero": 15,
-   "paesi_esteri": 11,
+   "paesi_esteri": 12,
    "continenti": {
-    "Europa": 10,
-    "Americhe": 3,
-    "Asia e Medio Oriente": 2
+    "Europa": 9,
+    "Asia e Medio Oriente": 3,
+    "Americhe": 3
    }
   },
   "punto_cieco": "italia"
@@ -20234,11 +20171,11 @@
    4,
    7,
    17,
-   21,
-   21,
-   21,
-   23,
+   22,
+   22,
+   22,
    24,
+   25,
    25,
    25,
    25
@@ -20259,8 +20196,8 @@
    "IN",
    "IR",
    "IT",
+   "NL",
    "QA",
-   "RU",
    "SG",
    "US"
   ],
@@ -20269,6 +20206,7 @@
    "es",
    "fr",
    "it",
+   "nl",
    "ru"
   ],
   "n_fonti": 25,
@@ -20433,6 +20371,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "de Volkskrant",
+    "link": "https://www.volkskrant.nl/buitenland/regeringstroepen-jemen-vluchten-voor-oprukkende-houthi-s-aan-de-westkust~bc8bab78/",
+    "paese": "NL",
+    "lingua": "nl",
+    "data": "2026-11-16T17:43:10+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "Tehran Times",
     "link": "https://www.tehrantimes.com/news/532220/Ansarallah-s-advances-in-Yemen-throw-Saudi-Arabia-into-disarray",
     "paese": "IR",
@@ -20493,15 +20440,6 @@
     "lingua": "en",
     "data": "2026-11-17T11:44:12+00:00",
     "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "TASS",
-    "link": "https://tass.com/world/2219887",
-    "paese": "RU",
-    "lingua": "en",
-    "data": "2026-11-17T17:46:26+00:00",
-    "tipo": "agenzia",
     "origine": "rss"
    }
   ],
@@ -29531,7 +29469,7 @@
   "categoria": "Società",
   "curiosita": false,
   "sezione": "Società",
-  "calore": 55,
+  "calore": 54,
   "stato": "confermato",
   "attendibilita": 93,
   "livello": "Certa",
@@ -29998,7 +29936,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 58,
+  "calore": 57,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -36199,7 +36137,7 @@
   "categoria": "Cronaca",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 52,
+  "calore": 51,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -36645,35 +36583,35 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 93,
+  "calore": 87,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "ABC Color",
-   "data": "2026-11-16T03:55:11+00:00",
+   "fonte": "El Universal",
+   "data": "2026-11-16T04:09:18+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.abc.com.py/internacionales/2026/11/16/sheinbaum-llega-a-china-para-su-primera-cumbre-de-la-apec-y-una-reunion-con-xi-jinping/"
+   "link": "https://www.eluniversal.com.mx/nacion/sheinbaum-llega-a-china-para-su-primera-cumbre-de-la-apec-sostendra-reunion-con-xi-jinping/"
   },
   "conferma": {
-   "fonte": "Infobae",
-   "data": "2026-11-16T04:00:39+00:00",
-   "dopo_min": 5
+   "fonte": "ABC Color",
+   "data": "2026-11-16T08:55:06+00:00",
+   "dopo_min": 286
   },
   "curva": [
    1,
+   1,
    3,
    3,
-   4,
-   4,
+   3,
+   3,
    4,
    5,
-   7,
-   11,
-   14,
-   14,
-   14
+   9,
+   12,
+   12,
+   12
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -36683,9 +36621,7 @@
    "BR",
    "CA",
    "GT",
-   "IL",
    "IN",
-   "JP",
    "MX",
    "PE",
    "PY",
@@ -36698,32 +36634,14 @@
    "fr",
    "pt"
   ],
-  "n_fonti": 14,
+  "n_fonti": 12,
   "prima_segnalazione": {
-   "fonte": "ABC Color",
-   "paese": "PY",
-   "data": "2026-11-16T03:55:11+00:00"
+   "fonte": "El Universal",
+   "paese": "MX",
+   "data": "2026-11-16T04:09:18+00:00"
   },
   "aggiornata": "2026-11-17T21:36:19+00:00",
   "fonti": [
-   {
-    "fonte": "ABC Color",
-    "link": "https://www.abc.com.py/internacionales/2026/11/16/sheinbaum-llega-a-china-para-su-primera-cumbre-de-la-apec-y-una-reunion-con-xi-jinping/",
-    "paese": "PY",
-    "lingua": "es",
-    "data": "2026-11-16T03:55:11+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Infobae",
-    "link": "https://www.infobae.com/america/agencias/2026/11/16/sheinbaum-llega-a-china-para-su-primera-cumbre-de-la-apec-y-una-reunion-con-xi-jinping/",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-16T04:00:39+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "El Universal",
     "link": "https://www.eluniversal.com.mx/nacion/sheinbaum-llega-a-china-para-su-primera-cumbre-de-la-apec-sostendra-reunion-con-xi-jinping/",
@@ -36734,11 +36652,20 @@
     "origine": "rss"
    },
    {
-    "fonte": "The Globe and Mail",
-    "link": "https://www.theglobeandmail.com/world/article-trump-xi-apec-meeting/",
-    "paese": "CA",
-    "lingua": "en",
-    "data": "2026-11-16T13:39:03+00:00",
+    "fonte": "ABC Color",
+    "link": "https://www.abc.com.py/internacionales/2026/11/16/una-delegacion-japonesa-solicitara-a-china-retomar-el-prestamo-de-pandas-pese-a-tensiones/",
+    "paese": "PY",
+    "lingua": "es",
+    "data": "2026-11-16T08:55:06+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Infobae",
+    "link": "https://www.infobae.com/america/agencias/2026/11/16/una-delegacion-japonesa-solicitara-a-china-retomar-el-prestamo-de-pandas-pese-a-tensiones/",
+    "paese": "AR",
+    "lingua": "es",
+    "data": "2026-11-16T09:01:45+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -36752,29 +36679,11 @@
     "origine": "rss"
    },
    {
-    "fonte": "The Japan Times",
-    "link": "https://www.japantimes.co.jp/news/2026/11/17/asia-pacific/politics/trump-kim-meeting-odds-rise/",
-    "paese": "JP",
-    "lingua": "en",
-    "data": "2026-11-17T07:25:00+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Times of India",
     "link": "https://timesofindia.indiatimes.com/world/rest-of-world/mexico-china-push-cooperation-despite-tariff-tensions-ahead-of-apec/articleshow/135919521.cms",
     "paese": "IN",
     "lingua": "en",
     "data": "2026-11-17T10:06:50+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "The Jerusalem Post",
-    "link": "https://www.jpost.com/international/article-915149",
-    "paese": "IL",
-    "lingua": "en",
-    "data": "2026-11-17T10:37:32+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -36802,6 +36711,15 @@
     "paese": "CA",
     "lingua": "fr",
     "data": "2026-11-17T13:52:16+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "The Globe and Mail",
+    "link": "https://www.theglobeandmail.com/canada/article-carney-sheinbaum-discuss-future-of-canada-mexico-trade-apec-summit/",
+    "paese": "CA",
+    "lingua": "en",
+    "data": "2026-11-17T14:33:25+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -36835,11 +36753,11 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 14,
-   "paesi_esteri": 12,
+   "estero": 12,
+   "paesi_esteri": 10,
    "continenti": {
     "Americhe": 9,
-    "Asia e Medio Oriente": 5
+    "Asia e Medio Oriente": 3
    }
   },
   "punto_cieco": "italia"
@@ -37944,11 +37862,11 @@
    1,
    3,
    7,
-   12,
+   13,
    15,
    15,
    15,
-   15,
+   16,
    16,
    18,
    18,
@@ -44513,7 +44431,7 @@
   "categoria": "Sport",
   "curiosita": true,
   "sezione": "Sport",
-  "calore": 87,
+  "calore": 100,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -44531,7 +44449,7 @@
   },
   "curva": [
    1,
-   8,
+   9,
    20,
    24,
    24,
@@ -44583,7 +44501,7 @@
    "paese": "PK",
    "data": "2026-11-16T06:43:39+00:00"
   },
-  "aggiornata": "2026-11-17T02:13:00+00:00",
+  "aggiornata": "2026-11-17T12:35:40+00:00",
   "fonti": [
    {
     "fonte": "The Express Tribune",
@@ -44825,8 +44743,8 @@
    "estero": 25,
    "paesi_esteri": 18,
    "continenti": {
-    "Americhe": 8,
     "Europa": 8,
+    "Americhe": 8,
     "Asia e Medio Oriente": 6,
     "Africa": 4
    }
@@ -50035,7 +49953,7 @@
    16,
    16,
    17,
-   17,
+   18,
    21,
    28,
    30,
@@ -50365,79 +50283,62 @@
  "e77fdd602d": {
   "id": "e77fdd602d",
   "titolo": "Zelensky: Washington ha proposto concessioni territoriali in cambio dell'adesione alla NATO",
-  "lingua": "it",
+  "lingua": "en",
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 74,
+  "calore": 52,
   "stato": "confermato",
-  "attendibilita": 99,
+  "attendibilita": 88,
   "livello": "Certa",
   "prima": {
-   "fonte": "Asahi Shimbun",
-   "data": "2026-11-16T04:00:00+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "http://www.asahi.com/articles/ASVCJ0VH5VCJUHBI004M.html?ref=rss"
-  },
-  "conferma": {
    "fonte": "Kyiv Post",
    "data": "2026-11-16T06:52:00+00:00",
-   "dopo_min": 172
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.kyivpost.com/opinion/90155"
+  },
+  "conferma": {
+   "fonte": "Azernews",
+   "data": "2026-11-16T08:09:00+00:00",
+   "dopo_min": 77
   },
   "curva": [
    1,
+   2,
+   3,
    3,
    4,
+   4,
+   4,
+   4,
    5,
-   8,
-   8,
-   8,
-   8,
-   9,
-   9,
-   9,
-   9
+   5,
+   5,
+   5
   ],
   "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
    "AZ",
-   "BE",
-   "DE",
    "FR",
    "IL",
-   "IT",
-   "JP",
    "LV",
    "UA"
   ],
   "lingue": [
-   "de",
    "en",
-   "fr",
-   "it",
-   "ja",
    "ru"
   ],
-  "n_fonti": 9,
+  "n_fonti": 5,
   "prima_segnalazione": {
-   "fonte": "Asahi Shimbun",
-   "paese": "JP",
-   "data": "2026-11-16T04:00:00+00:00"
+   "fonte": "Kyiv Post",
+   "paese": "UA",
+   "data": "2026-11-16T06:52:00+00:00"
   },
   "aggiornata": "2026-11-17T14:14:00+00:00",
   "fonti": [
-   {
-    "fonte": "Asahi Shimbun",
-    "link": "http://www.asahi.com/articles/ASVCJ0VH5VCJUHBI004M.html?ref=rss",
-    "paese": "JP",
-    "lingua": "ja",
-    "data": "2026-11-16T04:00:00+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Kyiv Post",
     "link": "https://www.kyivpost.com/opinion/90155",
@@ -50466,33 +50367,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "Open",
-    "link": "https://www.open.online/2026/11/16/russia-ucraina-nato-donbass-alessandro-minuto-rizzo-intervista/",
-    "paese": "IT",
-    "lingua": "it",
-    "data": "2026-11-16T13:59:12+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "RTBF",
-    "link": "https://www.rtbf.be/article/le-donbass-contre-l-otan-le-prix-de-la-paix-proposee-par-les-etats-unis-en-ukraine-11816350",
-    "paese": "BE",
-    "lingua": "fr",
-    "data": "2026-11-16T17:03:28+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "FAZ",
-    "link": "https://www.faz.net/aktuell/politik/ukraine/ukrainisches-gebiet-gegen-nato-beitritt-die-wichtigsten-antworten-zum-us-vorschlag-201686708.html",
-    "paese": "DE",
-    "lingua": "de",
-    "data": "2026-11-16T19:28:36+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "France 24",
     "link": "https://www.france24.com/en/tv-shows/the-debate/20261116-should-ukraine-trade-donbas-for-nato-membership",
     "paese": "FR",
@@ -50512,15 +50386,15 @@
    }
   ],
   "copertura": {
-   "italia": 1,
-   "estero": 8,
-   "paesi_esteri": 8,
+   "italia": 0,
+   "estero": 5,
+   "paesi_esteri": 5,
    "continenti": {
-    "Europa": 6,
-    "Asia e Medio Oriente": 3
+    "Europa": 3,
+    "Asia e Medio Oriente": 2
    }
   },
-  "punto_cieco": ""
+  "punto_cieco": "italia"
  },
  "388a724915": {
   "id": "388a724915",
@@ -52064,7 +51938,7 @@
   "categoria": "Clima e ambiente",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 92,
+  "calore": 91,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -52083,7 +51957,7 @@
   "curva": [
    1,
    2,
-   3,
+   4,
    5,
    5,
    10,
@@ -60398,27 +60272,27 @@
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "elDiario.es",
-   "data": "2026-11-16T12:45:48+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://www.eldiario.es/economia/yolanda-diaz-anuncia-martes-aprobara-salario-minimo-1-286-euros-pagar-impuestos_1_13667625.html"
-  },
-  "conferma": {
    "fonte": "Infobae",
    "data": "2026-11-16T12:47:56+00:00",
-   "dopo_min": 2
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.infobae.com/espana/agencias/2026/11/16/el-gobierno-aprobara-manana-la-subida-del-salario-minimo-del-53-para-2027/"
+  },
+  "conferma": {
+   "fonte": "20minutos",
+   "data": "2026-11-16T13:14:37+00:00",
+   "dopo_min": 27
   },
   "curva": [
    1,
+   2,
    3,
-   3,
+   6,
+   6,
+   6,
+   6,
+   6,
    7,
-   7,
-   7,
-   7,
-   7,
-   8,
    8,
    8,
    8
@@ -60437,21 +60311,12 @@
   ],
   "n_fonti": 8,
   "prima_segnalazione": {
-   "fonte": "elDiario.es",
-   "paese": "ES",
-   "data": "2026-11-16T12:45:48+00:00"
+   "fonte": "Infobae",
+   "paese": "AR",
+   "data": "2026-11-16T12:47:56+00:00"
   },
   "aggiornata": "2026-11-17T19:46:35+00:00",
   "fonti": [
-   {
-    "fonte": "elDiario.es",
-    "link": "https://www.eldiario.es/economia/yolanda-diaz-anuncia-martes-aprobara-salario-minimo-1-286-euros-pagar-impuestos_1_13667625.html",
-    "paese": "ES",
-    "lingua": "es",
-    "data": "2026-11-16T12:45:48+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Infobae",
     "link": "https://www.infobae.com/espana/agencias/2026/11/16/el-gobierno-aprobara-manana-la-subida-del-salario-minimo-del-53-para-2027/",
@@ -60480,6 +60345,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "elDiario.es",
+    "link": "https://www.eldiario.es/politica/sanchez-anuncia-gobierno-subira-martes-sueldo-funcionarios_1_13669226.html",
+    "paese": "ES",
+    "lingua": "es",
+    "data": "2026-11-16T20:24:58+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "El Mundo",
     "link": "https://www.elmundo.es/economia/empresas/2026/11/16/6afafd7d21efa00b548b45bd.html",
     "paese": "ES",
@@ -60498,20 +60372,20 @@
     "origine": "rss"
    },
    {
-    "fonte": "ABC Color",
-    "link": "https://www.abc.com.py/internacionales/2026/11/16/gobierno-de-portugal-lanza-plan-para-impulsar-politicas-de-mar-con-814-millones-de-euros/",
-    "paese": "PY",
-    "lingua": "es",
-    "data": "2026-11-16T21:25:11+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "ABC (Spagna)",
     "link": "https://www.abc.es/economia/cuentas-corrientes/subida-sueldo-cinco-millones-trabajadores-espana-medidas-20261117125039-nt.html",
     "paese": "ES",
     "lingua": "es",
     "data": "2026-11-17T15:39:04+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "ABC Color",
+    "link": "https://www.abc.com.py/internacionales/2026/11/17/el-gobierno-espanol-aprueba-subidas-salariales-y-la-derecha-lo-acusa-de-electoralista/",
+    "paese": "PY",
+    "lingua": "es",
+    "data": "2026-11-17T19:45:17+00:00",
     "tipo": "giornale",
     "origine": "rss"
    }
@@ -61575,7 +61449,7 @@
    50,
    52,
    54,
-   56,
+   57,
    58,
    59,
    61,
@@ -61948,16 +61822,16 @@
   "curva": [
    1,
    5,
-   43,
-   58,
-   58,
+   45,
+   59,
    59,
    60,
-   63,
+   61,
    65,
    67,
    69,
-   70
+   71,
+   72
   ],
   "crescita": 1,
   "pubblicata": true,
@@ -62010,7 +61884,7 @@
    "pt",
    "ru"
   ],
-  "n_fonti": 70,
+  "n_fonti": 72,
   "prima_segnalazione": {
    "fonte": "la Repubblica",
    "paese": "IT",
@@ -62087,6 +61961,15 @@
     "paese": "GB",
     "lingua": "en",
     "data": "2026-11-16T15:27:30+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "n-tv",
+    "link": "https://www.n-tv.de/sport/fussball/UEFA-benennt-ueberraschenden-Herausforderer-von-Gianni-Infantino-id31540073.html",
+    "paese": "DE",
+    "lingua": "de",
+    "data": "2026-11-16T15:27:33+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -62271,30 +62154,21 @@
     "origine": "rss"
    },
    {
-    "fonte": "Helsingin Sanomat",
-    "link": "https://www.hs.fi/urheilu/art-2000012416949.html",
-    "paese": "FI",
-    "lingua": "fi",
-    "data": "2026-11-16T16:36:00+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Die Welt",
-    "link": "https://www.welt.de/sport/fussball/article6afb2ea0bfa018bfcc9892a7/ueberraschungskandidat-diallo-jetzt-hat-fifa-praesident-infantino-einen-ernstzunehmenden-herausforderer.html",
+    "fonte": "Die Zeit",
+    "link": "https://www.zeit.de/sport/2026-11/uefa-nominiert-franzosen-diallo-gegen-infantino-als-fifa-praesidenten",
     "paese": "DE",
     "lingua": "de",
-    "data": "2026-11-16T16:39:06+00:00",
+    "data": "2026-11-16T16:32:29+00:00",
     "tipo": "giornale",
     "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 6,
-   "estero": 64,
+   "estero": 66,
    "paesi_esteri": 34,
    "continenti": {
-    "Europa": 38,
+    "Europa": 40,
     "Americhe": 16,
     "Asia e Medio Oriente": 10,
     "Africa": 5,
@@ -64451,7 +64325,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 56,
+  "calore": 55,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -74696,7 +74570,7 @@
    1,
    1,
    4,
-   91,
+   92,
    108,
    111,
    113,
@@ -75975,7 +75849,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 58,
+  "calore": 57,
   "stato": "confermato",
   "attendibilita": 88,
   "livello": "Certa",
@@ -79360,7 +79234,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 64,
+  "calore": 63,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -79686,7 +79560,7 @@
   "categoria": "Cronaca",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 54,
+  "calore": 53,
   "stato": "confermato",
   "attendibilita": 93,
   "livello": "Certa",
@@ -83330,7 +83204,7 @@
    2,
    2,
    2,
-   3,
+   4,
    5,
    5,
    5
@@ -83421,7 +83295,7 @@
   "categoria": "Cronaca",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 60,
+  "calore": 59,
   "stato": "confermato",
   "attendibilita": 89,
   "livello": "Certa",
@@ -86062,7 +85936,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 59,
+  "calore": 58,
   "stato": "confermato",
   "attendibilita": 88,
   "livello": "Certa",
@@ -89549,7 +89423,7 @@
   "categoria": "Tecnologia e crypto",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 53,
+  "calore": 52,
   "stato": "confermato",
   "attendibilita": 93,
   "livello": "Certa",
@@ -89676,35 +89550,35 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 81,
+  "calore": 75,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Politiken",
-   "data": "2026-11-16T08:39:13+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://politiken.dk/danmark/art11061226/Hidtil-yngste-dreng-er-kendt-skyldig-i-sag-om-kriminalitet-p%C3%A5-bestilling"
-  },
-  "conferma": {
    "fonte": "Balkan Insight",
    "data": "2026-11-16T11:33:51+00:00",
-   "dopo_min": 175
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://balkaninsight.com/2026/11/16/second-trial-of-kosovos-thaci-for-obstructing-justice-nears-end/btj/"
+  },
+  "conferma": {
+   "fonte": "ABC Color",
+   "data": "2026-11-17T11:10:12+00:00",
+   "dopo_min": 1416
   },
   "curva": [
    1,
-   2,
-   2,
-   2,
-   2,
-   2,
-   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
    5,
-   6,
+   5,
    7,
-   8,
-   8
+   7,
+   7
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -89713,34 +89587,23 @@
    "AR",
    "AT",
    "DE",
-   "DK",
    "PY",
    "RS",
    "SG"
   ],
   "lingue": [
-   "da",
    "de",
    "en",
    "es"
   ],
-  "n_fonti": 8,
+  "n_fonti": 7,
   "prima_segnalazione": {
-   "fonte": "Politiken",
-   "paese": "DK",
-   "data": "2026-11-16T08:39:13+00:00"
+   "fonte": "Balkan Insight",
+   "paese": "RS",
+   "data": "2026-11-16T11:33:51+00:00"
   },
   "aggiornata": "2026-11-17T20:40:00+00:00",
   "fonti": [
-   {
-    "fonte": "Politiken",
-    "link": "https://politiken.dk/danmark/art11061226/Hidtil-yngste-dreng-er-kendt-skyldig-i-sag-om-kriminalitet-p%C3%A5-bestilling",
-    "paese": "DK",
-    "lingua": "da",
-    "data": "2026-11-16T08:39:13+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Balkan Insight",
     "link": "https://balkaninsight.com/2026/11/16/second-trial-of-kosovos-thaci-for-obstructing-justice-nears-end/btj/",
@@ -89807,10 +89670,10 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 8,
-   "paesi_esteri": 7,
+   "estero": 7,
+   "paesi_esteri": 6,
    "continenti": {
-    "Europa": 5,
+    "Europa": 4,
     "Americhe": 2,
     "Asia e Medio Oriente": 1
    }
@@ -92986,10 +92849,10 @@
   "curva": [
    1,
    1,
-   1,
+   2,
    4,
    5,
-   5,
+   6,
    6,
    6,
    6,
@@ -95222,7 +95085,7 @@
    "paese": "NO",
    "data": "2026-11-16T12:06:15+00:00"
   },
-  "aggiornata": "2026-11-18T01:21:17+00:00",
+  "aggiornata": "2026-11-18T03:56:20+00:00",
   "fonti": [
    {
     "fonte": "Aftenposten",
@@ -99236,7 +99099,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 53,
+  "calore": 52,
   "stato": "confermato",
   "attendibilita": 93,
   "livello": "Certa",
@@ -99569,7 +99432,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 94,
+  "calore": 85,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -99587,28 +99450,25 @@
   },
   "curva": [
    1,
-   11,
-   11,
-   18,
-   21,
-   23,
-   23,
-   23,
-   23,
-   23,
-   23,
-   23
+   9,
+   9,
+   15,
+   17,
+   19,
+   19,
+   19,
+   19,
+   19,
+   19,
+   19
   ],
   "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
-   "AR",
    "CH",
    "CO",
-   "CR",
    "DE",
-   "ES",
    "FR",
    "IN",
    "JM",
@@ -99622,10 +99482,9 @@
   "lingue": [
    "de",
    "en",
-   "es",
    "fr"
   ],
-  "n_fonti": 23,
+  "n_fonti": 19,
   "prima_segnalazione": {
    "fonte": "Le Figaro",
    "paese": "FR",
@@ -99666,24 +99525,6 @@
     "paese": "JM",
     "lingua": "en",
     "data": "2026-11-16T21:41:24+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "La Nación (Costa Rica)",
-    "link": "https://www.nacion.com/el-mundo/juez-anula-limites-de-visado-impuestos-por-trump-a/YMJGGGUIG5BH5J6FZPL2XV6CCM/story/",
-    "paese": "CR",
-    "lingua": "es",
-    "data": "2026-11-16T21:55:09+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Punch",
-    "link": "https://punchng.com/us-court-strikes-down-trumps-four-year-limit-on-foreign-students/?utm_source=rss.punchng.com&utm_medium=web",
-    "paese": "NG",
-    "lingua": "en",
-    "data": "2026-11-16T22:00:36+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -99778,15 +99619,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "Infobae",
-    "link": "https://www.infobae.com/america/agencias/2026/11/17/un-juez-federal-anula-el-limite-de-cuatro-anos-de-estancia-impuesto-por-el-gobierno-a-estudiantes-extranjeros/",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-17T04:15:57+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "The Mainichi",
     "link": "https://mainichi.jp/english/articles/20261117/p2g/00m/0in/012000c",
     "paese": "JP",
@@ -99814,15 +99646,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "ABC (Spagna)",
-    "link": "https://www.abc.es/sociedad/juez-federal-anula-limite-cuatro-anos-estancia-20261117085449-nt.html",
-    "paese": "ES",
-    "lingua": "es",
-    "data": "2026-11-17T07:54:49+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Newsweek",
     "link": "https://www.newsweek.com/judge-strikes-down-trumps-new-visa-limit-on-foreign-students-12725643",
     "paese": "US",
@@ -99843,13 +99666,13 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 23,
-   "paesi_esteri": 15,
+   "estero": 19,
+   "paesi_esteri": 12,
    "continenti": {
-    "Europa": 9,
+    "Europa": 8,
     "Asia e Medio Oriente": 7,
-    "Americhe": 5,
-    "Africa": 2
+    "Americhe": 3,
+    "Africa": 1
    }
   },
   "punto_cieco": "italia"
@@ -105014,7 +104837,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 52,
+  "calore": 51,
   "stato": "confermato",
   "attendibilita": 78,
   "livello": "Confermata",
@@ -105879,7 +105702,7 @@
   "categoria": "Sport",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 54,
+  "calore": 53,
   "stato": "confermato",
   "attendibilita": 78,
   "livello": "Confermata",
@@ -108410,7 +108233,7 @@
   "categoria": "Cronaca",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 54,
+  "calore": 53,
   "stato": "confermato",
   "attendibilita": 93,
   "livello": "Certa",
@@ -109537,7 +109360,7 @@
    6,
    6,
    8,
-   9,
+   10,
    11,
    11,
    11,
@@ -110003,30 +109826,27 @@
    1,
    1,
    1,
-   5,
-   12,
-   15,
+   4,
+   11,
+   14,
    37,
-   51,
-   54,
-   56,
-   56
+   48,
+   50,
+   52,
+   52
   ],
   "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
-   "AE",
    "AF",
    "AR",
-   "AU",
    "BG",
    "BR",
    "CA",
    "CY",
    "DE",
    "EG",
-   "ES",
    "FR",
    "GB",
    "GT",
@@ -110036,6 +109856,7 @@
    "MX",
    "NG",
    "PK",
+   "PL",
    "PY",
    "QA",
    "RU",
@@ -110053,15 +109874,16 @@
    "fr",
    "it",
    "ja",
+   "pl",
    "pt"
   ],
-  "n_fonti": 56,
+  "n_fonti": 52,
   "prima_segnalazione": {
    "fonte": "El Universal",
    "paese": "MX",
    "data": "2026-11-16T13:18:16+00:00"
   },
-  "aggiornata": "2026-11-17T22:08:33+00:00",
+  "aggiornata": "2026-11-17T23:32:00+00:00",
   "fonti": [
    {
     "fonte": "El Universal",
@@ -110078,15 +109900,6 @@
     "paese": "PK",
     "lingua": "en",
     "data": "2026-11-17T00:17:11+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Mirror",
-    "link": "https://www.mirror.co.uk/news/us-news/trump-officials-iran-target-bomb-37884178",
-    "paese": "GB",
-    "lingua": "en",
-    "data": "2026-11-17T00:19:54+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -110136,20 +109949,11 @@
     "origine": "rss"
    },
    {
-    "fonte": "Sydney Morning Herald",
-    "link": "https://www.smh.com.au/world/north-america/iran-plots-to-target-trump-officials-with-dirty-bomb-20261117-p61euy.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
-    "paese": "AU",
+    "fonte": "Newsweek",
+    "link": "https://www.newsweek.com/white-house-says-no-credible-threat-after-iran-dirty-bomb-report-12725155",
+    "paese": "US",
     "lingua": "en",
-    "data": "2026-11-17T04:51:58+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "The Age",
-    "link": "https://www.theage.com.au/world/north-america/iran-plots-to-target-trump-officials-with-dirty-bomb-20261117-p61euy.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
-    "paese": "AU",
-    "lingua": "en",
-    "data": "2026-11-17T04:51:58+00:00",
+    "data": "2026-11-17T04:55:10+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -110160,6 +109964,15 @@
     "lingua": "it",
     "data": "2026-11-17T06:04:02+00:00",
     "tipo": "agenzia",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Gazeta.pl",
+    "link": "https://wiadomosci.gazeta.pl/swiat/7,198075,33135784,cnn-iran-przygotowuje-plan-ataku-na-amerykanskich-urzednikow.html?utm_source=RSS&utm_medium=RSS&utm_campaign=10199882",
+    "paese": "PL",
+    "lingua": "pl",
+    "data": "2026-11-17T06:21:00+00:00",
+    "tipo": "giornale",
     "origine": "rss"
    },
    {
@@ -110235,15 +110048,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "20minutos",
-    "link": "https://www.20minutos.es/internacional/estados-unidos-detecta-planes-iran-para-hacer-explotar-una-bomba-sucia-washington-es-un-arma-terror_7062043_0.html",
-    "paese": "ES",
-    "lingua": "en",
-    "data": "2026-11-17T11:44:44+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "ABC Color",
     "link": "https://www.abc.com.py/internacionales/2026/11/17/trump-dice-que-se-toman-muy-en-serio-posible-ataque-bomba-sucia-irani-en-washington/",
     "paese": "PY",
@@ -110267,6 +110071,15 @@
     "paese": "BR",
     "lingua": "pt",
     "data": "2026-11-17T12:08:24+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Der Spiegel",
+    "link": "https://www.spiegel.de/ausland/irankrieg-teheran-weist-bericht-ueber-anschlagsplaene-mit-schmutziger-bombe-gegen-washington-d-c-zurueck-a-b2248849-5811-48d3-a2fa-78896a52fa44#ref=rss",
+    "paese": "DE",
+    "lingua": "de",
+    "data": "2026-11-17T12:09:00+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -110298,15 +110111,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "FAZ",
-    "link": "https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-trump-nehmen-bedrohungen-aus-iran-sehr-ernst-faz-200583539.html",
-    "paese": "DE",
-    "lingua": "de",
-    "data": "2026-11-17T12:29:27+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "BFMTV",
     "link": "https://www.bfmtv.com/international/amerique-nord/etats-unis/donald-trump/donald-trump-dit-prendre-tres-au-serieux-une-potentielle-menace-d-attaque-iranienne-a-washington_AD-202611170547.html",
     "paese": "FR",
@@ -110332,18 +110136,35 @@
     "data": "2026-11-17T12:36:37+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "ANSA",
+    "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/007-usa-iran-sta-sviluppando-piani-per-bomba-sporca-a-washington_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
+    "paese": "IT",
+    "lingua": "en",
+    "data": "2026-11-17T12:36:54+00:00",
+    "tipo": "agenzia",
+    "origine": "rss"
+   },
+   {
+    "fonte": "CNA",
+    "link": "https://www.channelnewsasia.com/world/trump-says-takes-very-seriously-possible-iran-threat-washington-6559151",
+    "paese": "SG",
+    "lingua": "en",
+    "data": "2026-11-17T12:42:24+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 5,
-   "estero": 51,
-   "paesi_esteri": 26,
+   "estero": 47,
+   "paesi_esteri": 24,
    "continenti": {
-    "Europa": 23,
-    "Americhe": 18,
-    "Asia e Medio Oriente": 11,
-    "Africa": 2,
-    "Oceania": 2
+    "Europa": 21,
+    "Americhe": 19,
+    "Asia e Medio Oriente": 10,
+    "Africa": 2
    }
   },
   "punto_cieco": ""
@@ -115923,7 +115744,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 55,
+  "calore": 54,
   "stato": "confermato",
   "attendibilita": 93,
   "livello": "Certa",
@@ -117147,16 +116968,16 @@
   "curva": [
    1,
    3,
-   17,
-   24,
-   28,
+   18,
+   25,
    29,
    30,
-   30,
-   30,
-   30,
-   30,
-   30
+   31,
+   31,
+   31,
+   31,
+   31,
+   31
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -117197,13 +117018,13 @@
    "pt",
    "sv"
   ],
-  "n_fonti": 30,
+  "n_fonti": 31,
   "prima_segnalazione": {
    "fonte": "la Repubblica",
    "paese": "IT",
    "data": "2026-11-16T23:18:12+00:00"
   },
-  "aggiornata": "2026-11-17T13:03:24+00:00",
+  "aggiornata": "2026-11-17T23:04:00+00:00",
   "fonti": [
    {
     "fonte": "la Repubblica",
@@ -117328,6 +117149,15 @@
     "paese": "DE",
     "lingua": "en",
     "data": "2026-11-17T03:29:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Der Spiegel",
+    "link": "https://www.spiegel.de/ausland/japan-beklagt-verletzung-seines-luftraums-durch-russische-flugzeuge-a-39455a93-2683-41c6-aee7-294b6b4da18f#ref=rss",
+    "paese": "DE",
+    "lingua": "de",
+    "data": "2026-11-17T03:48:00+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -117465,23 +117295,14 @@
     "data": "2026-11-17T10:06:03+00:00",
     "tipo": "giornale",
     "origine": "rss"
-   },
-   {
-    "fonte": "Kyiv Post",
-    "link": "https://www.kyivpost.com/post/90360",
-    "paese": "UA",
-    "lingua": "en",
-    "data": "2026-11-17T13:03:24+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 3,
-   "estero": 27,
+   "estero": 28,
    "paesi_esteri": 20,
    "continenti": {
-    "Europa": 19,
+    "Europa": 20,
     "Asia e Medio Oriente": 8,
     "Americhe": 2,
     "Africa": 1
@@ -118859,9 +118680,9 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 57,
+  "calore": 59,
   "stato": "confermato",
-  "attendibilita": 93,
+  "attendibilita": 97,
   "livello": "Certa",
   "prima": {
    "fonte": "Prensa Libre",
@@ -118877,17 +118698,17 @@
   },
   "curva": [
    1,
-   5,
    6,
-   6,
-   6,
-   6,
-   6,
-   6,
-   6,
-   6,
-   6,
-   6
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7,
+   7
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -118902,7 +118723,7 @@
   "lingue": [
    "es"
   ],
-  "n_fonti": 6,
+  "n_fonti": 7,
   "prima_segnalazione": {
    "fonte": "Prensa Libre",
    "paese": "GT",
@@ -118956,6 +118777,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "El Universo",
+    "link": "https://eluniverso.com/economia/finanzas/ecuador-banco-mundial-financiamiento-climatico-ministerio-de-ambiente-y-energia-nota/",
+    "paese": "EC",
+    "lingua": "es",
+    "data": "2026-11-16T22:20:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "El Comercio (Ecuador)",
     "link": "https://www.elcomercio.com/actualidad/negocios/producto-financiero-ella-ofrece-creditos-de-hasta-15-millones-de-dolares/",
     "paese": "EC",
@@ -118967,10 +118797,10 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 6,
+   "estero": 7,
    "paesi_esteri": 5,
    "continenti": {
-    "Americhe": 6
+    "Americhe": 7
    }
   },
   "punto_cieco": "italia"
@@ -124136,13 +123966,13 @@
    4,
    7,
    9,
-   9,
    10,
    11,
-   11,
-   17,
-   17,
-   17
+   12,
+   14,
+   18,
+   18,
+   18
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -124165,7 +123995,7 @@
    "it",
    "pt"
   ],
-  "n_fonti": 17,
+  "n_fonti": 18,
   "prima_segnalazione": {
    "fonte": "Infobae",
    "paese": "AR",
@@ -124255,6 +124085,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "La Nación",
+    "link": "https://www.lanacion.com.ar/sociedad/mega-granizo-en-cordoba-un-temporal-azoto-a-la-provincia-y-hay-alerta-naranja-por-abundantes-nid16112026/",
+    "paese": "AR",
+    "lingua": "es",
+    "data": "2026-11-16T23:00:24+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "Clarín",
     "link": "https://www.clarin.com/sociedad/granizo-fuertes-tormentas-golpearon-varias-provincias-alertas-amarilla-naranja-tormentas-martes_0_qnhGuiLnLE.html",
     "paese": "AR",
@@ -124329,11 +124168,11 @@
   ],
   "copertura": {
    "italia": 4,
-   "estero": 13,
+   "estero": 14,
    "paesi_esteri": 7,
    "continenti": {
     "Europa": 13,
-    "Americhe": 3,
+    "Americhe": 4,
     "Asia e Medio Oriente": 1
    }
   },
@@ -124662,7 +124501,7 @@
    6,
    7,
    7,
-   7,
+   8,
    8,
    8,
    8
@@ -126439,9 +126278,9 @@
   "id": "365bbf1b33",
   "titolo": "Documenti interni riportano ulteriori pagamenti di Deutsche Bank legati a Jeffrey Epstein",
   "lingua": "it",
-  "categoria": "Economia",
+  "categoria": "Esteri e conflitti",
   "curiosita": false,
-  "sezione": "Economia",
+  "sezione": "Mondo",
   "calore": 100,
   "stato": "confermato",
   "attendibilita": 99,
@@ -126460,17 +126299,17 @@
   },
   "curva": [
    2,
-   6,
-   10,
-   12,
-   14,
-   19,
-   26,
-   29,
-   30,
+   7,
+   11,
+   13,
+   16,
+   21,
+   28,
    31,
    31,
-   31
+   32,
+   32,
+   32
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -126489,6 +126328,7 @@
    "IN",
    "IR",
    "IT",
+   "MM",
    "NL",
    "PY",
    "SG",
@@ -126504,7 +126344,7 @@
    "nl",
    "pt"
   ],
-  "n_fonti": 31,
+  "n_fonti": 32,
   "prima_segnalazione": {
    "fonte": "Der Standard",
    "paese": "AT",
@@ -126545,6 +126385,15 @@
     "paese": "ES",
     "lingua": "es",
     "data": "2026-11-17T06:01:47+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Myanmar Now",
+    "link": "https://myanmar-now.org/en/news/deutsche-banks-halliburton-financing-linked-to-myanmar-military-should-have-been-rejected-leaked-documents/",
+    "paese": "MM",
+    "lingua": "en",
+    "data": "2026-11-17T06:47:15+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -126644,6 +126493,15 @@
     "paese": "FR",
     "lingua": "fr",
     "data": "2026-11-17T13:58:36+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Sky TG24",
+    "link": "https://tg24.sky.it/economia/2026/11/17/deutsche-bank-scandalo",
+    "paese": "IT",
+    "lingua": "it",
+    "data": "2026-11-17T14:21:38+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -126763,34 +126621,16 @@
     "data": "2026-11-17T18:46:02+00:00",
     "tipo": "giornale",
     "origine": "rss"
-   },
-   {
-    "fonte": "ABC Color",
-    "link": "https://www.abc.com.py/internacionales/2026/11/17/deutsche-bank-acusada-de-permitir-corrupcion-vinculada-a-epstein-trump-y-oligarcas-rusos/",
-    "paese": "PY",
-    "lingua": "es",
-    "data": "2026-11-17T19:19:35+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "ANSA",
-    "link": "https://www.ansa.it/sito/notizie/economia/2026/11/17/berlino-deutsche-bank-deve-spiegare-in-modo-trasparente_411981b3-1c96-43d1-bfce-a2156ca0d793.html",
-    "paese": "IT",
-    "lingua": "en",
-    "data": "2026-11-17T20:23:24+00:00",
-    "tipo": "agenzia",
-    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 6,
-   "estero": 25,
-   "paesi_esteri": 16,
+   "estero": 26,
+   "paesi_esteri": 17,
    "continenti": {
     "Europa": 20,
     "Americhe": 7,
-    "Asia e Medio Oriente": 4
+    "Asia e Medio Oriente": 5
    }
   },
   "punto_cieco": ""
@@ -128817,7 +128657,7 @@
   "categoria": "Sport",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 90,
+  "calore": 89,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -128837,7 +128677,7 @@
    1,
    3,
    3,
-   6,
+   7,
    8,
    8,
    8,
@@ -129241,7 +129081,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 62,
+  "calore": 61,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -130035,7 +129875,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 52,
+  "calore": 51,
   "stato": "confermato",
   "attendibilita": 78,
   "livello": "Confermata",
@@ -130062,7 +129902,7 @@
    2,
    3,
    3,
-   3,
+   4,
    4
   ],
   "crescita": 0,
@@ -133087,7 +132927,7 @@
    1,
    2,
    3,
-   4,
+   5,
    5,
    6,
    6,
@@ -133291,7 +133131,7 @@
   "categoria": "Sport",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 98,
+  "calore": 97,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -133309,7 +133149,7 @@
   },
   "curva": [
    1,
-   13,
+   14,
    14,
    14,
    15,
@@ -135362,7 +135202,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 56,
+  "calore": 55,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -135919,7 +135759,7 @@
   "categoria": "Tecnologia e crypto",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 57,
+  "calore": 56,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -136164,7 +136004,7 @@
   },
   "curva": [
    1,
-   3,
+   4,
    5,
    5,
    5,
@@ -137437,7 +137277,7 @@
   "categoria": "Economia",
   "curiosita": false,
   "sezione": "Economia",
-  "calore": 56,
+  "calore": 55,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -137455,7 +137295,7 @@
   },
   "curva": [
    1,
-   5,
+   6,
    7,
    7,
    7,
@@ -139136,7 +138976,7 @@
    1,
    2,
    3,
-   3,
+   4,
    4,
    4,
    4,
@@ -142761,7 +142601,7 @@
   "categoria": "Tecnologia e crypto",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 56,
+  "calore": 55,
   "stato": "confermato",
   "attendibilita": 88,
   "livello": "Certa",
@@ -142781,7 +142621,7 @@
    1,
    2,
    3,
-   3,
+   5,
    5,
    5,
    5,
@@ -143893,9 +143733,9 @@
   "categoria": "Società",
   "curiosita": false,
   "sezione": "Società",
-  "calore": 68,
+  "calore": 66,
   "stato": "confermato",
-  "attendibilita": 97,
+  "attendibilita": 93,
   "livello": "Certa",
   "prima": {
    "fonte": "France Info",
@@ -143905,41 +143745,42 @@
    "link": "https://www.franceinfo.fr/societe/il-souffre-et-il-est-choque-la-mere-d-un-jeune-homme-blesse-a-l-il-a-poitiers-lors-de-la-mobilisation-du-24-octobre-lance-un-appel-pour-que-la-violence-cesse_8284607.html#xtor=RSS-3-[lestitres]"
   },
   "conferma": {
-   "fonte": "VG",
-   "data": "2026-11-17T12:43:46+00:00",
-   "dopo_min": 1502
+   "fonte": "VRT NWS",
+   "data": "2026-11-16T16:17:45+00:00",
+   "dopo_min": 276
   },
   "curva": [
    1,
    1,
-   1,
-   1,
-   1,
-   1,
-   1,
-   3,
-   5,
-   5,
-   7,
-   7
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   4,
+   4,
+   6,
+   6
   ],
   "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
    "AR",
+   "BE",
    "DE",
    "ES",
-   "FR",
-   "NO"
+   "FR"
   ],
   "lingue": [
    "de",
    "en",
    "es",
-   "fr"
+   "fr",
+   "nl"
   ],
-  "n_fonti": 7,
+  "n_fonti": 6,
   "prima_segnalazione": {
    "fonte": "France Info",
    "paese": "FR",
@@ -143957,20 +143798,11 @@
     "origine": "rss"
    },
    {
-    "fonte": "VG",
-    "link": "https://www.vg.no/nyheter/i/530jxO/person-kastet-ut-fra-2-etasje-i-skien-hardt-skadet-og-ikke-kontaktbar?utm_medium=rss",
-    "paese": "NO",
-    "lingua": "en",
-    "data": "2026-11-17T12:43:46+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Aftenposten",
-    "link": "https://www.aftenposten.no/norge/i/0vnomM/person-kastet-ut-fra-2-etasje-i-skien-skal-vaere-hardt-skadet?utm_medium=rss",
-    "paese": "NO",
-    "lingua": "en",
-    "data": "2026-11-17T12:45:41+00:00",
+    "fonte": "VRT NWS",
+    "link": "https://vrtnws.be/p.3Bwv9LVQb",
+    "paese": "BE",
+    "lingua": "nl",
+    "data": "2026-11-16T16:17:45+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -144013,10 +143845,10 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 7,
+   "estero": 6,
    "paesi_esteri": 5,
    "continenti": {
-    "Europa": 6,
+    "Europa": 5,
     "Americhe": 1
    }
   },
@@ -145004,7 +144836,7 @@
    1,
    2,
    3,
-   4,
+   5,
    10,
    11,
    13,
@@ -146178,9 +146010,9 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 74,
+  "calore": 65,
   "stato": "confermato",
-  "attendibilita": 99,
+  "attendibilita": 92,
   "livello": "Certa",
   "prima": {
    "fonte": "Yonhap",
@@ -146190,23 +146022,23 @@
    "link": "https://en.yna.co.kr/view/AEN20261116009000315"
   },
   "conferma": {
-   "fonte": "Aftonbladet",
-   "data": "2026-11-16T14:48:10+00:00",
-   "dopo_min": 306
+   "fonte": "PhilStar",
+   "data": "2026-11-17T09:57:00+00:00",
+   "dopo_min": 1455
   },
   "curva": [
    1,
    1,
-   2,
-   2,
-   2,
-   2,
-   2,
-   6,
-   6,
-   6,
-   6,
-   7
+   1,
+   1,
+   1,
+   1,
+   1,
+   4,
+   4,
+   4,
+   4,
+   5
   ],
   "crescita": 1,
   "pubblicata": true,
@@ -146214,13 +146046,12 @@
   "paesi": [
    "KR",
    "PH",
-   "SE",
    "US"
   ],
   "lingue": [
    "en"
   ],
-  "n_fonti": 7,
+  "n_fonti": 5,
   "prima_segnalazione": {
    "fonte": "Yonhap",
    "paese": "KR",
@@ -146238,15 +146069,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "Aftonbladet",
-    "link": "https://www.aftonbladet.se/nyheter/a/R1R1AA/trump-kanske-traffar-kim-i-veckan?utm_medium=rss",
-    "paese": "SE",
-    "lingua": "en",
-    "data": "2026-11-16T14:48:10+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "PhilStar",
     "link": "https://www.philstar.com/headlines/2026/11/17/2570767/trump-lands-philippines-asean-marcos-meeting",
     "paese": "PH",
@@ -146261,15 +146083,6 @@
     "paese": "US",
     "lingua": "en",
     "data": "2026-11-17T11:12:19+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "The Manila Times",
-    "link": "https://www.manilatimes.net/2026/11/17/news/trump-set-to-meet-marcos-in-malacanang-and-possibly-an-old-acquaintance/2471896",
-    "paese": "PH",
-    "lingua": "en",
-    "data": "2026-11-17T12:19:36+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -146294,12 +146107,11 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 7,
-   "paesi_esteri": 4,
+   "estero": 5,
+   "paesi_esteri": 3,
    "continenti": {
-    "Asia e Medio Oriente": 4,
-    "Americhe": 2,
-    "Europa": 1
+    "Asia e Medio Oriente": 3,
+    "Americhe": 2
    }
   },
   "punto_cieco": "italia"
@@ -148089,7 +147901,7 @@
    1,
    1,
    6,
-   15,
+   16,
    21,
    21,
    24,
@@ -150824,35 +150636,35 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 79,
+  "calore": 71,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "El Universal",
-   "data": "2026-11-16T15:06:43+00:00",
+   "fonte": "Olé",
+   "data": "2026-11-16T09:01:23+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.eluniversal.com.mx/deportes/uefa-nations-league-donde-ver-en-vivo-todos-los-partidos-de-hoy-lunes-16-de-noviembre/"
+   "link": "https://www.ole.com.ar/agenda-deportiva/partidos-hoy-lunes-16-noviembre-horario-ver-futbol-vivo-tv-online_0_x0N9vchsBK.html"
   },
   "conferma": {
    "fonte": "Infobae",
-   "data": "2026-11-16T15:53:53+00:00",
-   "dopo_min": 47
+   "data": "2026-11-16T11:52:45+00:00",
+   "dopo_min": 171
   },
   "curva": [
    1,
    2,
-   2,
+   3,
+   3,
    8,
    8,
    9,
    9,
    9,
    9,
-   9,
-   12,
-   12
+   10,
+   10
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -150865,44 +150677,43 @@
    "ES",
    "GT",
    "MX",
-   "PY",
    "VE"
   ],
   "lingue": [
    "es"
   ],
-  "n_fonti": 12,
+  "n_fonti": 10,
   "prima_segnalazione": {
-   "fonte": "El Universal",
-   "paese": "MX",
-   "data": "2026-11-16T15:06:43+00:00"
+   "fonte": "Olé",
+   "paese": "AR",
+   "data": "2026-11-16T09:01:23+00:00"
   },
-  "aggiornata": "2026-11-18T00:29:12+00:00",
+  "aggiornata": "2026-11-17T22:30:55+00:00",
   "fonti": [
+   {
+    "fonte": "Olé",
+    "link": "https://www.ole.com.ar/agenda-deportiva/partidos-hoy-lunes-16-noviembre-horario-ver-futbol-vivo-tv-online_0_x0N9vchsBK.html",
+    "paese": "AR",
+    "lingua": "es",
+    "data": "2026-11-16T09:01:23+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Infobae",
+    "link": "https://www.infobae.com/peru/deportes/2026/11/16/partidos-de-hoy-lunes-16-de-noviembre-de-2026-programacion-canales-tv-y-resultados-en-vivo/",
+    "paese": "AR",
+    "lingua": "es",
+    "data": "2026-11-16T11:52:45+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
    {
     "fonte": "El Universal",
     "link": "https://www.eluniversal.com.mx/deportes/uefa-nations-league-donde-ver-en-vivo-todos-los-partidos-de-hoy-lunes-16-de-noviembre/",
     "paese": "MX",
     "lingua": "es",
     "data": "2026-11-16T15:06:43+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Infobae",
-    "link": "https://www.infobae.com/mexico/deportes/2026/11/16/alemania-vs-paises-bajos-cuando-y-donde-ver-en-vivo-el-partido-de-la-uefa-nations-league-en-mexico/",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-16T15:53:53+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Olé",
-    "link": "https://www.ole.com.ar/futbol-internacional/alemania-paisesbajos-goleada-nationsleague-clasificado-cuartosdefinal-jurgenklopp-xavi_0_41oYi02zsy.html",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-16T22:06:23+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -150968,32 +150779,14 @@
     "data": "2026-11-17T21:48:35+00:00",
     "tipo": "giornale",
     "origine": "rss"
-   },
-   {
-    "fonte": "Clarín",
-    "link": "https://www.clarin.com/deportes/milagro-noruega-nations-league-remonto-0-2-casa-dinamarca-erling-haaland-clasifico-forma-agonica_0_WpZYjXXweT.html",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-17T21:50:26+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "ABC Color",
-    "link": "https://www.abc.com.py/deportes/futbol/internacional/2026/11/17/haaland-desata-la-locura-en-copenhague-con-remontada-agonica-y-billete-a-cuartos-para-noruega/",
-    "paese": "PY",
-    "lingua": "es",
-    "data": "2026-11-17T22:00:12+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 0,
-   "estero": 12,
-   "paesi_esteri": 9,
+   "estero": 10,
+   "paesi_esteri": 8,
    "continenti": {
-    "Americhe": 11,
+    "Americhe": 9,
     "Europa": 1
    }
   },
@@ -152088,7 +151881,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 53,
+  "calore": 52,
   "stato": "confermato",
   "attendibilita": 97,
   "livello": "Certa",
@@ -152335,7 +152128,7 @@
    1,
    1,
    2,
-   2,
+   3,
    3,
    3,
    3,
@@ -153604,7 +153397,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 78,
+  "calore": 77,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -153626,7 +153419,7 @@
    1,
    3,
    3,
-   3,
+   5,
    5,
    6,
    7,
@@ -153751,10 +153544,10 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 54,
+  "calore": 61,
   "stato": "confermato",
-  "attendibilita": 84,
-  "livello": "Confermata",
+  "attendibilita": 93,
+  "livello": "Certa",
   "prima": {
    "fonte": "Clarín",
    "data": "2026-11-16T11:00:09+00:00",
@@ -153775,11 +153568,11 @@
    3,
    3,
    4,
-   4,
-   4,
    5,
    5,
-   5
+   6,
+   6,
+   6
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -153787,14 +153580,16 @@
   "paesi": [
    "AR",
    "CO",
+   "DE",
    "PK",
    "US"
   ],
   "lingue": [
+   "de",
    "en",
    "es"
   ],
-  "n_fonti": 5,
+  "n_fonti": 6,
   "prima_segnalazione": {
    "fonte": "Clarín",
    "paese": "AR",
@@ -153839,6 +153634,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "FAZ",
+    "link": "https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-trump-nehmen-bedrohungen-aus-iran-sehr-ernst-faz-200583539.html",
+    "paese": "DE",
+    "lingua": "de",
+    "data": "2026-11-17T12:29:27+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "Semana",
     "link": "https://www.semana.com/mundo/articulo/estados-unidos-desplego-portaviones-nuclear-en-oriente-medio-tras-la-escalada-de-tensiones-con-iran/202643/",
     "paese": "CO",
@@ -153850,11 +153654,12 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 5,
-   "paesi_esteri": 4,
+   "estero": 6,
+   "paesi_esteri": 5,
    "continenti": {
     "Americhe": 4,
-    "Asia e Medio Oriente": 1
+    "Asia e Medio Oriente": 1,
+    "Europa": 1
    }
   },
   "punto_cieco": "italia"
@@ -154801,7 +154606,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 77,
+  "calore": 76,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -156708,7 +156513,7 @@
    1,
    1,
    3,
-   5,
+   6,
    7,
    8,
    8,
@@ -157665,7 +157470,7 @@
   "categoria": "Società",
   "curiosita": false,
   "sezione": "Società",
-  "calore": 61,
+  "calore": 60,
   "stato": "confermato",
   "attendibilita": 93,
   "livello": "Certa",
@@ -157791,7 +157596,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 53,
+  "calore": 52,
   "stato": "confermato",
   "attendibilita": 93,
   "livello": "Certa",
@@ -158188,7 +157993,7 @@
   "categoria": "Società",
   "curiosita": false,
   "sezione": "Società",
-  "calore": 53,
+  "calore": 52,
   "stato": "confermato",
   "attendibilita": 93,
   "livello": "Certa",
@@ -158509,7 +158314,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 72,
+  "calore": 71,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -159136,7 +158941,7 @@
    1,
    2,
    4,
-   9,
+   11,
    17,
    30,
    31
@@ -159989,7 +159794,7 @@
    1,
    1,
    1,
-   2,
+   3,
    3,
    3,
    3,
@@ -160021,7 +159826,7 @@
    "paese": "BR",
    "data": "2026-11-16T04:39:23+00:00"
   },
-  "aggiornata": "2026-11-17T20:01:23+00:00",
+  "aggiornata": "2026-11-17T20:26:45+00:00",
   "fonti": [
    {
     "fonte": "O Globo",
@@ -161037,7 +160842,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 89,
+  "calore": 88,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -161057,12 +160862,12 @@
    1,
    1,
    2,
-   12,
+   13,
    14,
    15,
    16,
    16,
-   16,
+   17,
    17,
    17,
    17
@@ -161914,73 +161719,61 @@
   "categoria": "Società",
   "curiosita": false,
   "sezione": "Società",
-  "calore": 75,
+  "calore": 57,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Le Figaro",
-   "data": "2026-11-16T21:00:35+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://www.lefigaro.fr/flash-actu/etats-unis-un-juge-federal-annule-les-limites-de-visa-pour-les-etudiants-et-journalistes-etrangers-imposees-par-donald-trump-20261116"
-  },
-  "conferma": {
    "fonte": "El Universo",
    "data": "2026-11-16T21:19:17+00:00",
-   "dopo_min": 19
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://eluniverso.com/internacional/estados-unidos/juez-de-ee-uu-anula-restricciones-de-trump-para-la-permanencia-de-estudiantes-y-periodistas-extranjeros-nota/"
+  },
+  "conferma": {
+   "fonte": "La Nación (Costa Rica)",
+   "data": "2026-11-16T21:55:09+00:00",
+   "dopo_min": 36
   },
   "curva": [
    1,
-   9,
-   9,
-   10,
-   11,
-   11,
-   12,
-   12,
-   12,
-   12,
-   12,
-   12
+   6,
+   6,
+   6,
+   7,
+   7,
+   8,
+   8,
+   8,
+   8,
+   8,
+   8
   ],
   "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
    "AR",
-   "CH",
    "CR",
    "CU",
    "EC",
    "ES",
-   "FR",
    "MX",
    "NG",
    "PY"
   ],
   "lingue": [
    "en",
-   "es",
-   "fr"
+   "es"
   ],
-  "n_fonti": 12,
+  "n_fonti": 8,
   "prima_segnalazione": {
-   "fonte": "Le Figaro",
-   "paese": "FR",
-   "data": "2026-11-16T21:00:35+00:00"
+   "fonte": "El Universo",
+   "paese": "EC",
+   "data": "2026-11-16T21:19:17+00:00"
   },
   "aggiornata": "2026-11-17T12:21:17+00:00",
   "fonti": [
-   {
-    "fonte": "Le Figaro",
-    "link": "https://www.lefigaro.fr/flash-actu/etats-unis-un-juge-federal-annule-les-limites-de-visa-pour-les-etudiants-et-journalistes-etrangers-imposees-par-donald-trump-20261116",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-16T21:00:35+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "El Universo",
     "link": "https://eluniverso.com/internacional/estados-unidos/juez-de-ee-uu-anula-restricciones-de-trump-para-la-permanencia-de-estudiantes-y-periodistas-extranjeros-nota/",
@@ -162027,38 +161820,11 @@
     "origine": "rss"
    },
    {
-    "fonte": "Ouest-France",
-    "link": "https://www.ouest-france.fr/monde/etats-unis/aux-etats-unis-un-juge-annule-les-limites-de-visa-pour-etudiants-et-journalistes-etrangers-imposees-par-donald-trump-812137da-e207-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-16T22:26:07+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Le Monde",
-    "link": "https://www.lemonde.fr/international/article/2026/11/16/un-juge-federal-americain-annule-les-limites-de-sejour-des-etudiants-et-journalistes-etrangers-imposees-par-donald-trump_6812623_3210.html",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-16T22:30:16+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "El Universal",
     "link": "https://www.eluniversal.com.mx/mundo/juez-anula-reforma-de-trump-que-endurece-visas-a-periodistas-y-estudiantes-extranjeros-actuo-de-forma-caprichosa-concluye/",
     "paese": "MX",
     "lingua": "es",
     "data": "2026-11-16T22:41:54+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Le Temps",
-    "link": "https://www.letemps.ch/monde/un-juge-federal-annule-les-limites-de-visa-pour-etudiants-et-journalistes-l-administration-trump-fait-appel",
-    "paese": "CH",
-    "lingua": "fr",
-    "data": "2026-11-17T03:45:15+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -162083,11 +161849,11 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 12,
-   "paesi_esteri": 10,
+   "estero": 8,
+   "paesi_esteri": 8,
    "continenti": {
     "Americhe": 6,
-    "Europa": 5,
+    "Europa": 1,
     "Africa": 1
    }
   },
@@ -163357,7 +163123,7 @@
   "categoria": "Economia",
   "curiosita": false,
   "sezione": "Economia",
-  "calore": 64,
+  "calore": 63,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -163974,7 +163740,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 61,
+  "calore": 60,
   "stato": "confermato",
   "attendibilita": 84,
   "livello": "Confermata",
@@ -163997,7 +163763,7 @@
    3,
    3,
    4,
-   4,
+   5,
    5,
    5,
    5,
@@ -164309,7 +164075,7 @@
   "categoria": "Tecnologia e crypto",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 73,
+  "calore": 72,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -165343,11 +165109,11 @@
  "a80cf35232": {
   "id": "a80cf35232",
   "titolo": "Trump dice che farà pressione su Putin e Xi per fermare la guerra in Ucraina",
-  "lingua": "en",
+  "lingua": "it",
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 86,
+  "calore": 100,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -165365,42 +165131,51 @@
   },
   "curva": [
    1,
-   3,
-   3,
-   5,
-   5,
-   5,
-   5,
-   6,
-   6,
-   6,
+   4,
+   4,
    7,
-   8
+   7,
+   7,
+   8,
+   9,
+   9,
+   10,
+   12,
+   15
   ],
-  "crescita": 0,
+  "crescita": 1,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
    "AR",
+   "BE",
    "BR",
+   "CH",
+   "CO",
+   "EC",
+   "FR",
    "GT",
    "IN",
+   "IT",
+   "MX",
    "PL",
    "RU"
   ],
   "lingue": [
    "en",
    "es",
+   "fr",
+   "it",
    "pl",
    "pt"
   ],
-  "n_fonti": 8,
+  "n_fonti": 15,
   "prima_segnalazione": {
    "fonte": "Gazeta.pl",
    "paese": "PL",
    "data": "2026-11-16T07:17:00+00:00"
   },
-  "aggiornata": "2026-11-18T02:20:48+00:00",
+  "aggiornata": "2026-11-18T03:34:10+00:00",
   "fonti": [
    {
     "fonte": "Gazeta.pl",
@@ -165430,6 +165205,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "RTBF",
+    "link": "https://www.rtbf.be/article/la-revue-de-presse-la-rencontre-entre-donald-trump-vladimir-poutine-et-xi-jinping-un-nouveau-yalta-11816057",
+    "paese": "BE",
+    "lingua": "fr",
+    "data": "2026-11-16T08:47:42+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "Infobae",
     "link": "https://www.infobae.com/estados-unidos/2026/11/16/donald-trump-confirmo-que-se-encontrara-con-xi-jinping-y-putin-y-agrego-tal-vez-me-reuna-con-kim-jong-un-tambien/",
     "paese": "AR",
@@ -165448,11 +165232,47 @@
     "origine": "rss"
    },
    {
+    "fonte": "Askanews",
+    "link": "https://askanews.it/2026/11/16/trump-con-xi-e-putin-parleremo-di-denuclearizzazione-e-iran/",
+    "paese": "IT",
+    "lingua": "it",
+    "data": "2026-11-16T18:22:02+00:00",
+    "tipo": "agenzia",
+    "origine": "rss"
+   },
+   {
+    "fonte": "BFMTV",
+    "link": "https://www.bfmtv.com/economie/international/droits-de-douane-iran-intelligence-artificielle-et-armes-nucleaires-ce-dont-vont-parler-trump-jinping-et-poutine-qui-se-rencontrent-ce-jeudi_AD-202611170138.html",
+    "paese": "FR",
+    "lingua": "fr",
+    "data": "2026-11-17T05:26:41+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "G1",
     "link": "https://g1.globo.com/mundo/noticia/2026/11/17/trump-diz-que-vai-pressionar-putin-e-xi-jinping-pelo-fim-da-guerra-na-ucrania.ghtml",
     "paese": "BR",
     "lingua": "pt",
     "data": "2026-11-17T10:59:40+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "El Universo",
+    "link": "https://eluniverso.com/internacional/europa/vladimir-putin-viaja-a-china-para-cumbre-y-encuentro-con-xi-jinping-y-donald-trump-nota/",
+    "paese": "EC",
+    "lingua": "es",
+    "data": "2026-11-17T16:33:07+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "El Tiempo",
+    "link": "https://www.eltiempo.com/mundo/asia/donald-trump-xi-jinping-y-vladimir-putin-se-reunen-este-jueves-en-china-con-las-guerras-de-iran-ucrania-y-la-proliferacion-nuclear-como-temas-clave-3601790",
+    "paese": "CO",
+    "lingua": "en",
+    "data": "2026-11-17T22:19:56+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -165473,19 +165293,37 @@
     "data": "2026-11-18T02:20:48+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "El Universal",
+    "link": "https://www.eluniversal.com.mx/mundo/vladimir-putin-llega-a-china-para-participar-en-la-apec-tiene-prevista-reunion-con-xi-jinping-y-donald-trump/",
+    "paese": "MX",
+    "lingua": "es",
+    "data": "2026-11-18T02:21:11+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Le Temps",
+    "link": "https://www.letemps.ch/monde/xi-jinping-recoit-vladimir-poutine-avant-un-sommet-inedit-avec-donald-trump",
+    "paese": "CH",
+    "lingua": "fr",
+    "data": "2026-11-18T03:34:10+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
-   "italia": 0,
-   "estero": 8,
-   "paesi_esteri": 6,
+   "italia": 1,
+   "estero": 14,
+   "paesi_esteri": 12,
    "continenti": {
-    "Americhe": 3,
-    "Europa": 3,
+    "Europa": 7,
+    "Americhe": 6,
     "Asia e Medio Oriente": 2
    }
   },
-  "punto_cieco": "italia"
+  "punto_cieco": ""
  },
  "739141b3a1": {
   "id": "739141b3a1",
@@ -167685,7 +167523,7 @@
    1,
    1,
    1,
-   3,
+   4,
    6,
    6,
    6,
@@ -168462,7 +168300,7 @@
   "categoria": "Società",
   "curiosita": false,
   "sezione": "Società",
-  "calore": 58,
+  "calore": 57,
   "stato": "confermato",
   "attendibilita": 88,
   "livello": "Certa",
@@ -168785,7 +168623,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 71,
+  "calore": 68,
   "stato": "confermato",
   "attendibilita": 97,
   "livello": "Certa",
@@ -168810,9 +168648,9 @@
    1,
    2,
    2,
-   3,
    4,
    4,
+   5,
    6
   ],
   "crescita": 0,
@@ -170371,10 +170209,10 @@
   "id": "4f33b004b0",
   "titolo": "JJ Gabriel cambia agente in vista del trasferimento al Real Madrid",
   "lingua": "en",
-  "categoria": "Economia",
+  "categoria": "Sport",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 94,
+  "calore": 97,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -170386,23 +170224,23 @@
    "link": "https://www.skysports.com/football/live-blog/12040/13025492/man-utd-transfer-news-rumours-and-gossip-live-updates-and-latest-on-deals-signings-loans-and-contracts"
   },
   "conferma": {
-   "fonte": "Evening Standard",
-   "data": "2026-11-16T17:59:44+00:00",
-   "dopo_min": 150
+   "fonte": "CNA",
+   "data": "2026-11-16T16:29:24+00:00",
+   "dopo_min": 59
   },
   "curva": [
    1,
-   3,
-   3,
-   3,
    4,
    4,
-   5,
+   4,
+   6,
+   6,
    7,
-   7,
-   12,
+   9,
+   9,
    13,
-   13
+   14,
+   14
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -170415,6 +170253,7 @@
    "FR",
    "GB",
    "NO",
+   "PK",
    "SG",
    "TR",
    "US"
@@ -170426,13 +170265,13 @@
    "fr",
    "pt"
   ],
-  "n_fonti": 13,
+  "n_fonti": 14,
   "prima_segnalazione": {
    "fonte": "Sky Sports",
    "paese": "GB",
    "data": "2026-11-16T15:30:00+00:00"
   },
-  "aggiornata": "2026-11-17T22:31:28+00:00",
+  "aggiornata": "2026-11-17T22:58:00+00:00",
   "fonti": [
    {
     "fonte": "Sky Sports",
@@ -170440,6 +170279,15 @@
     "paese": "GB",
     "lingua": "en",
     "data": "2026-11-16T15:30:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "CNA",
+    "link": "https://www.channelnewsasia.com/sport/pochettino-prepares-quick-switch-us-united-6556381",
+    "paese": "SG",
+    "lingua": "en",
+    "data": "2026-11-16T16:29:24+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -170458,6 +170306,15 @@
     "paese": "GB",
     "lingua": "en",
     "data": "2026-11-16T18:29:04+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "The Express Tribune",
+    "link": "https://tribune.com.pk/story/2640798/pochettino-prepares-for-quick-switch-from-us-to-united",
+    "paese": "PK",
+    "lingua": "en",
+    "data": "2026-11-17T04:24:52+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -170507,15 +170364,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "CNA",
-    "link": "https://www.channelnewsasia.com/sport/man-utd-teenager-gabriel-announces-departure-amid-expected-real-madrid-move-6560216",
-    "paese": "SG",
-    "lingua": "en",
-    "data": "2026-11-17T19:26:51+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Cyprus Mail",
     "link": "https://cyprus-mail.com/2026/11/17/man-utd-teenager-gabriel-announces-departure-amid-expected-real-madrid-move",
     "paese": "CY",
@@ -170554,12 +170402,12 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 13,
-   "paesi_esteri": 10,
+   "estero": 14,
+   "paesi_esteri": 11,
    "continenti": {
     "Europa": 7,
     "Americhe": 4,
-    "Asia e Medio Oriente": 2
+    "Asia e Medio Oriente": 3
    }
   },
   "punto_cieco": "italia"
@@ -170900,7 +170748,7 @@
    5,
    5,
    8,
-   11,
+   12,
    12,
    12,
    12
@@ -171196,32 +171044,32 @@
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Hindustan Times",
-   "data": "2026-11-16T03:52:17+00:00",
+   "fonte": "20minutos",
+   "data": "2026-11-16T04:22:34+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.hindustantimes.com/world-news/us-news/xi-trump-putin-to-hold-first-ever-trilateral-meet-on-nov-19-101794801137497.html"
+   "link": "https://www.20minutos.es/internacional/china-confirma-reunion-entre-xi-trump-putin-este-jueves-shenzhen_7061404_0.html"
   },
   "conferma": {
-   "fonte": "TASS",
-   "data": "2026-11-16T03:59:43+00:00",
-   "dopo_min": 7
+   "fonte": "Aftenposten",
+   "data": "2026-11-16T04:27:59+00:00",
+   "dopo_min": 5
   },
   "curva": [
    1,
-   19,
-   40,
-   62,
+   23,
+   38,
+   60,
    73,
-   79,
-   85,
-   92,
-   97,
-   100,
+   77,
+   86,
+   94,
+   99,
    102,
+   103,
    103
   ],
-  "crescita": 1,
+  "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
@@ -171230,17 +171078,17 @@
    "AR",
    "AU",
    "AZ",
-   "BE",
    "BR",
    "CA",
+   "CG",
    "CH",
    "CO",
-   "CR",
+   "CY",
    "DE",
-   "DO",
    "EC",
    "EG",
    "ES",
+   "FI",
    "FR",
    "GB",
    "HK",
@@ -171256,6 +171104,7 @@
    "NG",
    "NO",
    "NZ",
+   "PG",
    "PH",
    "PK",
    "PY",
@@ -171267,13 +171116,16 @@
    "TR",
    "UA",
    "US",
-   "VE"
+   "VE",
+   "VN"
   ],
   "lingue": [
    "ar",
    "de",
+   "el",
    "en",
    "es",
+   "fi",
    "fr",
    "it",
    "ja",
@@ -171282,30 +171134,12 @@
   ],
   "n_fonti": 103,
   "prima_segnalazione": {
-   "fonte": "Hindustan Times",
-   "paese": "IN",
-   "data": "2026-11-16T03:52:17+00:00"
+   "fonte": "20minutos",
+   "paese": "ES",
+   "data": "2026-11-16T04:22:34+00:00"
   },
-  "aggiornata": "2026-11-18T03:34:10+00:00",
+  "aggiornata": "2026-11-18T02:23:01+00:00",
   "fonti": [
-   {
-    "fonte": "Hindustan Times",
-    "link": "https://www.hindustantimes.com/world-news/us-news/xi-trump-putin-to-hold-first-ever-trilateral-meet-on-nov-19-101794801137497.html",
-    "paese": "IN",
-    "lingua": "en",
-    "data": "2026-11-16T03:52:17+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "TASS",
-    "link": "https://tass.com/world/2218441",
-    "paese": "RU",
-    "lingua": "en",
-    "data": "2026-11-16T03:59:43+00:00",
-    "tipo": "agenzia",
-    "origine": "rss"
-   },
    {
     "fonte": "20minutos",
     "link": "https://www.20minutos.es/internacional/china-confirma-reunion-entre-xi-trump-putin-este-jueves-shenzhen_7061404_0.html",
@@ -171334,12 +171168,30 @@
     "origine": "rss"
    },
    {
+    "fonte": "TASS",
+    "link": "https://tass.com/world/2218449",
+    "paese": "RU",
+    "lingua": "en",
+    "data": "2026-11-16T04:52:41+00:00",
+    "tipo": "agenzia",
+    "origine": "rss"
+   },
+   {
     "fonte": "Yonhap",
     "link": "https://en.yna.co.kr/view/AEN20261116000853315",
     "paese": "KR",
     "lingua": "en",
     "data": "2026-11-16T04:58:01+00:00",
     "tipo": "agenzia",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Hindustan Times",
+    "link": "https://www.hindustantimes.com/world-news/trumps-asia-reset-deals-in-manila-and-shenzhen-then-a-rare-nuclear-summit-with-xi-and-putin-101794807008071.html",
+    "paese": "IN",
+    "lingua": "en",
+    "data": "2026-11-16T05:34:36+00:00",
+    "tipo": "giornale",
     "origine": "rss"
    },
    {
@@ -171388,6 +171240,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "The Manila Times",
+    "link": "https://www.manilatimes.net/2026/11/16/news/takaichi-arrives-in-manila/2470544",
+    "paese": "PH",
+    "lingua": "en",
+    "data": "2026-11-16T07:24:55+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "Ouest-France",
     "link": "https://www.ouest-france.fr/monde/etats-unis/donald-trump/donald-trump-va-rencontrer-vladimir-poutine-et-xi-jinping-en-chine-2db65086-dfc2-11f1-9a29-f4bab172af08?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
     "paese": "FR",
@@ -171406,15 +171267,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "Clarín",
-    "link": "https://www.clarin.com/mundo/xi-jinping-recibira-trump-putin-historica-cumbre-trilateral-china_0_hDFlBlAzPx.html",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-16T07:33:51+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Le Figaro",
     "link": "https://www.lefigaro.fr/international/la-chine-confirme-un-sommet-trilateral-entre-xi-jinping-donald-trump-et-vladimir-poutine-jeudi-a-shenzhen-20261116",
     "paese": "FR",
@@ -171424,20 +171276,11 @@
     "origine": "rss"
    },
    {
-    "fonte": "ABC Color",
-    "link": "https://www.abc.com.py/internacionales/2026/11/16/china-situa-la-estabilidad-estrategica-entre-objetivos-de-cumbre-entre-xi-trump-y-putin/",
-    "paese": "PY",
-    "lingua": "es",
-    "data": "2026-11-16T07:35:08+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "La Nación",
-    "link": "https://www.lanacion.com.ar/el-mundo/china-confirmo-una-cumbre-trilateral-entre-xi-jinping-trump-y-putin-en-shenzhen-nid16112026/",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-16T07:45:52+00:00",
+    "fonte": "Cyprus Mail",
+    "link": "https://cyprus-mail.com/2026/11/16/trump-heads-to-asia-as-china-tensions-cloud-xi-meeting",
+    "paese": "CY",
+    "lingua": "el",
+    "data": "2026-11-16T07:40:58+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -171487,15 +171330,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "Diario Libre",
-    "link": "https://www.diariolibre.com/mundo/asia/2026/11/16/china-dice-que-xi-trump-y-putin-hablaran-de-paz-mundial-en-cumbre/3721869",
-    "paese": "DO",
-    "lingua": "en",
-    "data": "2026-11-16T08:24:00+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "CNBC",
     "link": "https://www.cnbc.com/2026/11/16/trump-xi-putin-ukraine-nuclear-tariffs-russia-iran-.html",
     "paese": "US",
@@ -171532,15 +171366,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "RTBF",
-    "link": "https://www.rtbf.be/article/la-revue-de-presse-la-rencontre-entre-donald-trump-vladimir-poutine-et-xi-jinping-un-nouveau-yalta-11816057",
-    "paese": "BE",
-    "lingua": "fr",
-    "data": "2026-11-16T08:47:42+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "ABC Australia",
     "link": "https://www.abc.net.au/news/2026-11-16/flight-delays-cancellations-at-sydney-airport/107392306",
     "paese": "AU",
@@ -171557,18 +171382,45 @@
     "data": "2026-11-16T09:21:35+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "The Mainichi",
+    "link": "https://mainichi.jp/english/articles/20261116/p2g/00m/0in/029000c",
+    "paese": "JP",
+    "lingua": "en",
+    "data": "2026-11-16T09:30:09+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "NPR",
+    "link": "https://www.npr.org/2026/11/16/nx-s1-6041738/trump-xi-and-putin-china-nvidia",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-16T10:00:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Il Fatto Quotidiano",
+    "link": "https://www.ilfattoquotidiano.it/2026/11/16/vertice-apec-shenzhen-trump-xi-putin-soldi-residenti-per-andarsene-operai-alberi-asfalto/8573364/",
+    "paese": "IT",
+    "lingua": "it",
+    "data": "2026-11-16T10:32:40+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 10,
    "estero": 93,
-   "paesi_esteri": 42,
+   "paesi_esteri": 44,
    "continenti": {
-    "Europa": 43,
-    "Americhe": 27,
-    "Asia e Medio Oriente": 26,
-    "Oceania": 4,
-    "Africa": 3
+    "Europa": 44,
+    "Asia e Medio Oriente": 27,
+    "Americhe": 23,
+    "Oceania": 5,
+    "Africa": 4
    }
   },
   "punto_cieco": ""
@@ -173465,7 +173317,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 52,
+  "calore": 51,
   "stato": "confermato",
   "attendibilita": 86,
   "livello": "Certa",
@@ -173663,7 +173515,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 62,
+  "calore": 61,
   "stato": "confermato",
   "attendibilita": 88,
   "livello": "Certa",
@@ -175141,7 +174993,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 56,
+  "calore": 55,
   "stato": "confermato",
   "attendibilita": 80,
   "livello": "Confermata",
@@ -176170,7 +176022,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 52,
+  "calore": 51,
   "stato": "confermato",
   "attendibilita": 88,
   "livello": "Certa",
@@ -178301,7 +178153,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 93,
+  "calore": 92,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -178324,8 +178176,8 @@
    2,
    2,
    3,
-   5,
-   8,
+   6,
+   10,
    12,
    14,
    14,
@@ -179506,7 +179358,7 @@
   "categoria": "Tecnologia e crypto",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 62,
+  "calore": 61,
   "stato": "confermato",
   "attendibilita": 80,
   "livello": "Confermata",
@@ -179532,7 +179384,7 @@
    4,
    4,
    4,
-   4,
+   5,
    5,
    5
   ],
@@ -179808,7 +179660,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 56,
+  "calore": 55,
   "stato": "confermato",
   "attendibilita": 86,
   "livello": "Certa",
@@ -180473,7 +180325,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 52,
+  "calore": 51,
   "stato": "confermato",
   "attendibilita": 67,
   "livello": "Confermata",
@@ -181052,7 +180904,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 52,
+  "calore": 51,
   "stato": "confermato",
   "attendibilita": 79,
   "livello": "Confermata",
@@ -181075,7 +180927,7 @@
    2,
    2,
    2,
-   2,
+   3,
    3,
    3,
    3,
@@ -181540,7 +181392,7 @@
   "categoria": "Tecnologia e crypto",
   "curiosita": true,
   "sezione": "Curiosità",
-  "calore": 62,
+  "calore": 61,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -182320,7 +182172,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 59,
+  "calore": 58,
   "stato": "confermato",
   "attendibilita": 85,
   "livello": "Certa",
@@ -182346,7 +182198,7 @@
    1,
    1,
    3,
-   4,
+   5,
    6,
    6
   ],
@@ -182821,7 +182673,7 @@
   "categoria": "Tecnologia e crypto",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 68,
+  "calore": 65,
   "stato": "confermato",
   "attendibilita": 97,
   "livello": "Certa",
@@ -183084,7 +182936,7 @@
    2,
    2,
    3,
-   3,
+   4,
    4,
    4
   ],
@@ -183163,7 +183015,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 60,
+  "calore": 59,
   "stato": "confermato",
   "attendibilita": 84,
   "livello": "Confermata",
@@ -183533,7 +183385,7 @@
   "categoria": "Altro",
   "curiosita": true,
   "sezione": "Curiosità",
-  "calore": 54,
+  "calore": 53,
   "stato": "confermato",
   "attendibilita": 82,
   "livello": "Confermata",
@@ -183560,7 +183412,7 @@
    3,
    3,
    3,
-   3,
+   4,
    4
   ],
   "crescita": 0,
