@@ -11,21 +11,21 @@
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "BFMTV",
-   "data": "2026-11-17T15:38:04+00:00",
+   "fonte": "The Hill",
+   "data": "2026-11-17T15:53:00+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.bfmtv.com/economie/entreprises/les-americains-ont-besoin-de-reponses-l-ex-patron-de-nvidia-jensen-huang-sera-entendu-au-congres-le-1er-decembre-lors-d-une-audition-a-huis-clos_AD-202611170692.html"
+   "link": "https://thehill.com/homenews/house/6216614-jensen-huang-congress-testimony/"
   },
   "conferma": {
-   "fonte": "New York Post",
-   "data": "2026-11-17T15:40:18+00:00",
-   "dopo_min": 2
+   "fonte": "The National",
+   "data": "2026-11-17T16:00:48+00:00",
+   "dopo_min": 8
   },
   "curva": [
    1,
-   59,
-   77,
+   57,
+   78,
    79,
    80,
    80,
@@ -45,7 +45,7 @@
    "AT",
    "AU",
    "BE",
-   "CH",
+   "CA",
    "CO",
    "DE",
    "DK",
@@ -55,11 +55,13 @@
    "FR",
    "GB",
    "GH",
+   "GT",
    "HK",
    "IN",
    "IS",
    "IT",
    "JM",
+   "JP",
    "MX",
    "NL",
    "NO",
@@ -72,7 +74,6 @@
    "RU",
    "SA",
    "SG",
-   "TW",
    "US"
   ],
   "lingue": [
@@ -85,52 +86,17 @@
    "fr",
    "is",
    "it",
+   "ja",
    "nl"
   ],
   "n_fonti": 80,
   "prima_segnalazione": {
-   "fonte": "BFMTV",
-   "paese": "FR",
-   "data": "2026-11-17T15:38:04+00:00"
+   "fonte": "The Hill",
+   "paese": "US",
+   "data": "2026-11-17T15:53:00+00:00"
   },
   "aggiornata": "2026-11-18T17:28:58+00:00",
   "fonti": [
-   {
-    "fonte": "BFMTV",
-    "link": "https://www.bfmtv.com/economie/entreprises/les-americains-ont-besoin-de-reponses-l-ex-patron-de-nvidia-jensen-huang-sera-entendu-au-congres-le-1er-decembre-lors-d-une-audition-a-huis-clos_AD-202611170692.html",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-17T15:38:04+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "New York Post",
-    "link": "https://nypost.com/2026/11/17/business/disgraced-ex-nvidia-ceo-jensen-huang-to-testify-before-congress-next-month/",
-    "paese": "US",
-    "lingua": "en",
-    "data": "2026-11-17T15:40:18+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Infobae",
-    "link": "https://www.infobae.com/america/agencias/2026/11/17/wall-street-abre-en-rojo-a-la-espera-de-los-resultados-de-nvidia/",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-17T15:45:33+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Le Figaro",
-    "link": "https://www.lefigaro.fr/secteur/high-tech/affaire-nvidia-l-ex-patron-jensen-huang-entendu-par-le-congres-americain-le-1er-decembre-20261117",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-17T15:51:07+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "The Hill",
     "link": "https://thehill.com/homenews/house/6216614-jensen-huang-congress-testimony/",
@@ -155,6 +121,15 @@
     "paese": "GB",
     "lingua": "en",
     "data": "2026-11-17T16:02:30+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Newsweek",
+    "link": "https://www.newsweek.com/explained-chinas-singapore-washing-at-heart-of-nvidia-scandal-12726172",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-17T16:03:23+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -222,15 +197,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "NZZ",
-    "link": "https://www.nzz.ch/technologie/folgen-aus-der-affaere-huang-die-usa-schraenken-den-handel-mit-computerchips-von-nvidia-weiter-ein-ld.10062950",
-    "paese": "CH",
-    "lingua": "de",
-    "data": "2026-11-17T16:16:36+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "El Universal",
     "link": "https://www.eluniversal.com.mx/mundo/jensen-huang-exdirector-de-nvidia-comparecera-en-diciembre-ante-el-congreso-de-eu-empresa-crea-comite-supervisor-tras-escandalo/",
     "paese": "MX",
@@ -249,6 +215,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "New York Post",
+    "link": "https://nypost.com/2026/11/17/business/jensen-huang-says-hed-return-as-nvidia-ceo-if-board-asks-following-sex-scandal/",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-17T16:20:47+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "Die Welt",
     "link": "https://www.welt.de/wirtschaft/article6afc7df5bf787977ad3dba2d/nach-spionageskandal-waere-mir-eine-ehre-jensen-huang-bietet-rueckkehr-an-doch-nvidia-lehnt-ab.html",
     "paese": "DE",
@@ -263,15 +238,6 @@
     "paese": "US",
     "lingua": "en",
     "data": "2026-11-17T16:22:50+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Newsweek",
-    "link": "https://www.newsweek.com/nvidia-jensen-huang-ceo-update-return-12728504",
-    "paese": "US",
-    "lingua": "en",
-    "data": "2026-11-17T16:28:33+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -364,17 +330,53 @@
     "data": "2026-11-17T16:52:00+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "El Tiempo",
+    "link": "https://www.eltiempo.com/mundo/eeuu-y-canada/jensen-huang-hablo-por-primera-vez-tras-renunciar-a-nvidia-por-escandalo-de-supuesta-espia-admitio-error-y-dijo-que-le-gustaria-regresar-al-cargo-3601671",
+    "paese": "CO",
+    "lingua": "en",
+    "data": "2026-11-17T16:55:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Infobae",
+    "link": "https://www.infobae.com/tecno/2026/11/17/jensen-huang-se-ofrece-a-volver-como-director-ejecutivo-de-nvidia-tras-su-salida-por-presunto-espionaje/",
+    "paese": "AR",
+    "lingua": "es",
+    "data": "2026-11-17T17:01:58+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "La Nación",
+    "link": "https://www.lanacion.com.ar/estados-unidos/jensen-huang-rompio-el-silencio-tras-su-renuncia-a-nvidia-y-dijo-estar-abierto-a-volver-a-su-cargo-nid17112026/",
+    "paese": "AR",
+    "lingua": "es",
+    "data": "2026-11-17T17:02:35+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "The Straits Times",
+    "link": "https://www.straitstimes.com/world/united-states/jensen-huang-says-willing-to-return-as-nvidia-ceo-acknowledges-mistakes-in-personal-life",
+    "paese": "SG",
+    "lingua": "en",
+    "data": "2026-11-17T17:04:15+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 9,
    "estero": 71,
-   "paesi_esteri": 33,
+   "paesi_esteri": 34,
    "continenti": {
-    "Europa": 40,
-    "Americhe": 22,
+    "Europa": 37,
+    "Americhe": 24,
     "Asia e Medio Oriente": 12,
-    "Oceania": 5,
+    "Oceania": 6,
     "Africa": 1
    }
   },
@@ -1844,85 +1846,64 @@
   "categoria": "Società",
   "curiosita": false,
   "sezione": "Società",
-  "calore": 65,
+  "calore": 50,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "The National",
-   "data": "2026-11-17T15:39:19+00:00",
+   "fonte": "Evening Standard",
+   "data": "2026-11-17T16:22:44+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.thenationalnews.com/lifestyle/fashion-beauty/2026/11/17/kate-and-william-champion-indian-fashion-at-earthshot-prize-gala/"
+   "link": "https://www.standard.co.uk/showbiz/celebrity-news/kate-take-that-indian-mumbai-rami-malek-b1305256.html"
   },
   "conferma": {
-   "fonte": "Evening Standard",
-   "data": "2026-11-17T15:40:16+00:00",
-   "dopo_min": 1
+   "fonte": "Sky TG24",
+   "data": "2026-11-17T17:01:36+00:00",
+   "dopo_min": 39
   },
   "curva": [
    1,
+   4,
+   6,
+   7,
    7,
    9,
-   10,
-   10,
-   12,
-   12,
-   12,
-   12,
-   12,
-   12,
-   12
+   9,
+   9,
+   9,
+   9,
+   9,
+   9
   ],
   "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
-   "AE",
-   "EC",
    "GB",
    "IN",
    "IT",
-   "PY",
-   "US"
+   "PY"
   ],
   "lingue": [
    "en",
    "es",
    "it"
   ],
-  "n_fonti": 12,
+  "n_fonti": 9,
   "prima_segnalazione": {
-   "fonte": "The National",
-   "paese": "AE",
-   "data": "2026-11-17T15:39:19+00:00"
+   "fonte": "Evening Standard",
+   "paese": "GB",
+   "data": "2026-11-17T16:22:44+00:00"
   },
   "aggiornata": "2026-11-18T17:22:59+00:00",
   "fonti": [
    {
-    "fonte": "The National",
-    "link": "https://www.thenationalnews.com/lifestyle/fashion-beauty/2026/11/17/kate-and-william-champion-indian-fashion-at-earthshot-prize-gala/",
-    "paese": "AE",
-    "lingua": "en",
-    "data": "2026-11-17T15:39:19+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Evening Standard",
-    "link": "https://www.standard.co.uk/news/uk/william-and-kate-prince-indian-mumbai-b1305239.html",
+    "link": "https://www.standard.co.uk/showbiz/celebrity-news/kate-take-that-indian-mumbai-rami-malek-b1305256.html",
     "paese": "GB",
     "lingua": "en",
-    "data": "2026-11-17T15:40:16+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "El Universo",
-    "link": "https://eluniverso.com/entretenimiento/gente/principe-william-y-kate-middleton-sorprenden-en-su-visita-a-mumbai-nota/",
-    "paese": "EC",
-    "lingua": "es",
-    "data": "2026-11-17T15:41:24+00:00",
+    "data": "2026-11-17T16:22:44+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -1941,15 +1922,6 @@
     "paese": "GB",
     "lingua": "en",
     "data": "2026-11-17T17:23:46+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "New York Post",
-    "link": "https://pagesix.com/2026/11/17/style/kate-middleton-dazzles-in-queen-elizabeths-emeralds-on-earthshot-prize-awards-2026-red-carpet-in-india/",
-    "paese": "US",
-    "lingua": "en",
-    "data": "2026-11-17T17:40:26+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -2010,12 +1982,12 @@
   ],
   "copertura": {
    "italia": 3,
-   "estero": 9,
-   "paesi_esteri": 6,
+   "estero": 6,
+   "paesi_esteri": 3,
    "continenti": {
     "Europa": 7,
-    "Americhe": 3,
-    "Asia e Medio Oriente": 2
+    "Americhe": 1,
+    "Asia e Medio Oriente": 1
    }
   },
   "punto_cieco": ""
@@ -15023,35 +14995,35 @@
   "categoria": "Società",
   "curiosita": false,
   "sezione": "Società",
-  "calore": 48,
+  "calore": 90,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Semana",
-   "data": "2026-11-17T16:12:34+00:00",
+   "fonte": "La República (Perù)",
+   "data": "2026-11-17T15:55:07+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.semana.com/mundo/articulo/esto-dijo-el-papa-leon-xiv-luego-de-haber-sido-golpeado-por-un-rosario-en-peru/202634/"
+   "link": "https://larepublica.pe/politica/2026/11/17/critican-a-carlos-espa-por-deficiencias-en-organizacion-de-la-misa-del-papa-leon-xiv-en-las-palmas-estuvo-fatal-hnews-907035"
   },
   "conferma": {
-   "fonte": "El Comercio (Ecuador)",
-   "data": "2026-11-17T17:11:13+00:00",
-   "dopo_min": 59
+   "fonte": "Semana",
+   "data": "2026-11-17T16:12:34+00:00",
+   "dopo_min": 17
   },
   "curva": [
    1,
-   6,
-   9,
-   10,
+   8,
    11,
-   11,
-   11,
-   11,
-   11,
-   11,
-   11,
-   11
+   12,
+   13,
+   13,
+   13,
+   13,
+   13,
+   13,
+   13,
+   13
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -15062,6 +15034,7 @@
    "CG",
    "CO",
    "EC",
+   "PE",
    "PH",
    "PY",
    "SG",
@@ -15072,14 +15045,23 @@
    "en",
    "es"
   ],
-  "n_fonti": 11,
+  "n_fonti": 13,
   "prima_segnalazione": {
-   "fonte": "Semana",
-   "paese": "CO",
-   "data": "2026-11-17T16:12:34+00:00"
+   "fonte": "La República (Perù)",
+   "paese": "PE",
+   "data": "2026-11-17T15:55:07+00:00"
   },
-  "aggiornata": "2026-11-18T07:50:15+00:00",
+  "aggiornata": "2026-11-19T12:07:06+00:00",
   "fonti": [
+   {
+    "fonte": "La República (Perù)",
+    "link": "https://larepublica.pe/politica/2026/11/17/critican-a-carlos-espa-por-deficiencias-en-organizacion-de-la-misa-del-papa-leon-xiv-en-las-palmas-estuvo-fatal-hnews-907035",
+    "paese": "PE",
+    "lingua": "es",
+    "data": "2026-11-17T15:55:07+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
    {
     "fonte": "Semana",
     "link": "https://www.semana.com/mundo/articulo/esto-dijo-el-papa-leon-xiv-luego-de-haber-sido-golpeado-por-un-rosario-en-peru/202634/",
@@ -15104,6 +15086,15 @@
     "paese": "AR",
     "lingua": "es",
     "data": "2026-11-17T17:36:22+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "La Nación",
+    "link": "https://www.lanacion.com.ar/el-mundo/la-transcripcion-completa-de-la-conferencia-de-prensa-del-papa-leon-xiv-tras-su-viaje-a-uruguay-la-nid17112026/",
+    "paese": "AR",
+    "lingua": "es",
+    "data": "2026-11-17T17:51:05+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -15182,10 +15173,10 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 11,
-   "paesi_esteri": 10,
+   "estero": 13,
+   "paesi_esteri": 11,
    "continenti": {
-    "Americhe": 7,
+    "Americhe": 9,
     "Asia e Medio Oriente": 3,
     "Africa": 1
    }
@@ -31852,25 +31843,25 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 50,
+  "calore": 49,
   "stato": "confermato",
   "attendibilita": 52,
   "livello": "Prime conferme",
   "prima": {
    "fonte": "Infobae",
-   "data": "2026-11-17T20:17:02+00:00",
+   "data": "2026-11-17T16:01:56+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.infobae.com/espana/agencias/2026/11/17/miercoles-18-de-noviembre-de-2026/"
+   "link": "https://www.infobae.com/espana/agencias/2026/11/17/infografias-del-martes-17-de-noviembre-de-2026/"
   },
   "conferma": {
    "fonte": "ABC Color",
    "data": "2026-11-17T22:05:09+00:00",
-   "dopo_min": 108
+   "dopo_min": 363
   },
   "curva": [
    1,
-   2,
+   1,
    2,
    2,
    2,
@@ -31896,16 +31887,16 @@
   "prima_segnalazione": {
    "fonte": "Infobae",
    "paese": "AR",
-   "data": "2026-11-17T20:17:02+00:00"
+   "data": "2026-11-17T16:01:56+00:00"
   },
   "aggiornata": "2026-11-19T15:15:19+00:00",
   "fonti": [
    {
     "fonte": "Infobae",
-    "link": "https://www.infobae.com/espana/agencias/2026/11/17/miercoles-18-de-noviembre-de-2026/",
+    "link": "https://www.infobae.com/espana/agencias/2026/11/17/infografias-del-martes-17-de-noviembre-de-2026/",
     "paese": "AR",
     "lingua": "es",
-    "data": "2026-11-17T20:17:02+00:00",
+    "data": "2026-11-17T16:01:56+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -52249,21 +52240,21 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 47,
+  "calore": 51,
   "stato": "confermato",
   "attendibilita": 60,
   "livello": "Prime conferme",
   "prima": {
-   "fonte": "G1",
-   "data": "2026-11-17T15:47:08+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://g1.globo.com/pe/petrolina-regiao/playlist/videos-gr1-de-terca-feira-17-de-novembro-de-2026.ghtml"
-  },
-  "conferma": {
    "fonte": "Globo Esporte",
    "data": "2026-11-17T16:30:18+00:00",
-   "dopo_min": 43
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://ge.globo.com/ba/playlist/globo-esporte-ba-desta-terca-feira-17-de-novembro-de-2026.ghtml"
+  },
+  "conferma": {
+   "fonte": "G1",
+   "data": "2026-11-17T16:48:38+00:00",
+   "dopo_min": 18
   },
   "curva": [
    1,
@@ -52290,27 +52281,27 @@
   ],
   "n_fonti": 2,
   "prima_segnalazione": {
-   "fonte": "G1",
+   "fonte": "Globo Esporte",
    "paese": "BR",
-   "data": "2026-11-17T15:47:08+00:00"
+   "data": "2026-11-17T16:30:18+00:00"
   },
-  "aggiornata": "2026-11-19T13:48:40+00:00",
+  "aggiornata": "2026-11-19T15:37:07+00:00",
   "fonti": [
-   {
-    "fonte": "G1",
-    "link": "https://g1.globo.com/pe/petrolina-regiao/playlist/videos-gr1-de-terca-feira-17-de-novembro-de-2026.ghtml",
-    "paese": "BR",
-    "lingua": "pt",
-    "data": "2026-11-17T15:47:08+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Globo Esporte",
     "link": "https://ge.globo.com/ba/playlist/globo-esporte-ba-desta-terca-feira-17-de-novembro-de-2026.ghtml",
     "paese": "BR",
     "lingua": "pt",
     "data": "2026-11-17T16:30:18+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "G1",
+    "link": "https://g1.globo.com/go/goias/edicao/2026/11/17/videos-jornal-anhanguera-1-edicao-desta-terca-feira-17-de-novembro-de-2026.ghtml",
+    "paese": "BR",
+    "lingua": "pt",
+    "data": "2026-11-17T16:48:38+00:00",
     "tipo": "giornale",
     "origine": "rss"
    }
@@ -58707,7 +58698,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 58,
+  "calore": 57,
   "stato": "confermato",
   "attendibilita": 74,
   "livello": "Confermata",
@@ -71451,32 +71442,32 @@
   "id": "60315843ef",
   "titolo": "Robert Pattinson sarà il prossimo interprete di James Bond",
   "lingua": "it",
-  "categoria": "Politica",
-  "curiosita": true,
-  "sezione": "Curiosità",
+  "categoria": "Economia",
+  "curiosita": false,
+  "sezione": "Tecnologia",
   "calore": 98,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Clarín",
-   "data": "2026-11-17T15:40:06+00:00",
+   "fonte": "ABC Color",
+   "data": "2026-11-17T15:55:12+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.clarin.com/espectaculos/primer-ministro-britanico-absolutamente-encantado-robert-pattinson-nuevo-james-bond_0_xmhfYXYUxU.html"
+   "link": "https://www.abc.com.py/internacionales/2026/11/17/a-brad-pitt-le-encantaria-ser-el-villano-del-nuevo-james-bond/"
   },
   "conferma": {
-   "fonte": "El Comercio (Ecuador)",
-   "data": "2026-11-17T15:42:59+00:00",
-   "dopo_min": 3
+   "fonte": "Evening Standard",
+   "data": "2026-11-17T15:55:43+00:00",
+   "dopo_min": 1
   },
   "curva": [
    1,
-   17,
-   26,
+   16,
+   24,
+   24,
    26,
    28,
-   29,
    29,
    29,
    29,
@@ -71489,7 +71480,6 @@
   "approvata_a_mano": false,
   "paesi": [
    "AR",
-   "AT",
    "BR",
    "CO",
    "EC",
@@ -71497,77 +71487,31 @@
    "FR",
    "GB",
    "GT",
-   "IS",
    "IT",
    "MX",
    "PH",
+   "PL",
    "PY",
    "RS",
    "SG",
    "US"
   ],
   "lingue": [
-   "de",
    "en",
    "es",
    "fr",
-   "is",
    "it",
+   "pl",
    "pt"
   ],
   "n_fonti": 29,
   "prima_segnalazione": {
-   "fonte": "Clarín",
-   "paese": "AR",
-   "data": "2026-11-17T15:40:06+00:00"
+   "fonte": "ABC Color",
+   "paese": "PY",
+   "data": "2026-11-17T15:55:12+00:00"
   },
   "aggiornata": "2026-11-18T20:17:49+00:00",
   "fonti": [
-   {
-    "fonte": "Clarín",
-    "link": "https://www.clarin.com/espectaculos/primer-ministro-britanico-absolutamente-encantado-robert-pattinson-nuevo-james-bond_0_xmhfYXYUxU.html",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-17T15:40:06+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "El Comercio (Ecuador)",
-    "link": "https://www.elcomercio.com/tendencias/entretenimiento/james-bond-robert-pattinson-corona/",
-    "paese": "EC",
-    "lingua": "es",
-    "data": "2026-11-17T15:42:59+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Rai News",
-    "link": "https://www.rainews.it/articoli/2026/11/pattinson-007-cresce-la-febbre-per-la-prossima-bond-girl-il-toto-nomi-sydney-sweeney-zendaya-deva-cassel-margaret-qualley-hunter-schafer-e-adria-arjona-5a453404-a915-469f-851f-3388ec9a9717.html",
-    "paese": "IT",
-    "lingua": "it",
-    "data": "2026-11-17T15:44:00+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Der Standard",
-    "link": "https://www.derstandard.at/story/3000000349607/zendaya-bis-lupita-nyongo-wer-wird-bond-girl-neben-robert-pattinson?ref=rss",
-    "paese": "AT",
-    "lingua": "de",
-    "data": "2026-11-17T15:44:33+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "New York Post",
-    "link": "https://pagesix.com/2026/11/17/entertainment/brad-pitt-clamors-for-key-james-bond-role-as-he-gushes-over-robert-pattinsons-007-casting/",
-    "paese": "US",
-    "lingua": "en",
-    "data": "2026-11-17T15:49:40+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "ABC Color",
     "link": "https://www.abc.com.py/internacionales/2026/11/17/a-brad-pitt-le-encantaria-ser-el-villano-del-nuevo-james-bond/",
@@ -71641,6 +71585,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "New York Post",
+    "link": "https://pagesix.com/2026/11/17/celebrity-news/robert-pattinsons-james-bond-film-facing-major-hurdles-ahead-of-release/",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-17T16:49:37+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "O Globo",
     "link": "https://oglobo.globo.com/cultura/filmes/noticia/2026/11/17/entre-batman-e-james-bond-robert-pattinson-se-torna-o-rei-das-franquias.ghtml",
     "paese": "BR",
@@ -71677,6 +71630,24 @@
     "origine": "rss"
    },
    {
+    "fonte": "Infobae",
+    "link": "https://www.infobae.com/entretenimiento/2026/11/17/cillian-murphy-idris-elba-y-kristen-stewart-suenan-como-villanos-para-el-nuevo-james-bond/",
+    "paese": "AR",
+    "lingua": "es",
+    "data": "2026-11-17T17:52:37+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "TVN24",
+    "link": "https://tvn24.pl/kultura-i-styl/george-lazenby-najstarszy-zyjacy-james-bond-zwrocil-sie-do-nowego-bonda-roberta-pattinsona-st9344140?source=rss",
+    "paese": "PL",
+    "lingua": "pl",
+    "data": "2026-11-17T19:54:34+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "Le Figaro",
     "link": "https://www.lefigaro.fr/cinema/robert-pattinson-sera-t-il-un-bon-james-bond-le-verdict-de-trois-specialistes-de-l-agent-007-20261117",
     "paese": "FR",
@@ -71687,10 +71658,19 @@
    },
    {
     "fonte": "N1 Serbia",
-    "link": "https://n1info.rs/magazin/showbiz/bred-pit-i-florens-pju-dzejms-bond-uloga/",
+    "link": "https://n1info.rs/magazin/showbiz/sta-ce-biti-sa-betmenom-nakon-sto-je-robert-patinson-dobio-ulogu-dzejmsa-bonda/",
     "paese": "RS",
     "lingua": "en",
-    "data": "2026-11-17T20:09:10+00:00",
+    "data": "2026-11-17T20:25:12+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "El Comercio (Ecuador)",
+    "link": "https://www.elcomercio.com/tendencias/cine/robert-pattinson-batman-james-bond/",
+    "paese": "EC",
+    "lingua": "es",
+    "data": "2026-11-17T20:26:34+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -71700,24 +71680,6 @@
     "paese": "CO",
     "lingua": "es",
     "data": "2026-11-17T20:37:28+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Infobae",
-    "link": "https://www.infobae.com/entretenimiento/2026/11/17/de-harry-potter-a-crepusculo-y-la-odisea-el-camino-de-robert-pattinson-hasta-convertirse-en-james-bond/",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-17T20:51:10+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "RÚV",
-    "link": "https://www.ruv.is/frettir/menning-og-daegurmal/2026-11-17-brad-pitt-vill-verda-illmenni-i-bond-mynd-493091/",
-    "paese": "IS",
-    "lingua": "is",
-    "data": "2026-11-17T21:15:12+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -71749,6 +71711,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "The Verge",
+    "link": "https://www.theverge.com/entertainment/1036110/jeff-bezos-james-bond-casting-amazon",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-17T22:38:41+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "La Nación",
     "link": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/robert-pattinson-el-nuevo-james-bond-sobre-su-mudanza-a-beverly-hills-tal-vez-me-volvi-un-poco-snob-nid17112026/",
     "paese": "AR",
@@ -71776,6 +71747,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "NBC News",
+    "link": "https://www.nbcnews.com/pop-culture/pop-culture-news/jeff-bezos-heavily-involved-casting-robert-pattinson-james-bond-amazon-rcna609958",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-18T09:53:31+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "La Stampa",
     "link": "https://www.lastampa.it/spettacoli/2026/11/18/video/james_bond_bezos_casting_segreto_scelta_robert_pattinson-15801687/",
     "paese": "IT",
@@ -71783,15 +71763,24 @@
     "data": "2026-11-18T11:27:00+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "CBS News",
+    "link": "https://www.cbsnews.com/news/jeff-bezos-james-bond-robert-pattinson-heavily-involved-decision-cast/",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-18T16:04:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
-   "italia": 5,
-   "estero": 24,
-   "paesi_esteri": 16,
+   "italia": 4,
+   "estero": 25,
+   "paesi_esteri": 15,
    "continenti": {
-    "Europa": 15,
-    "Americhe": 12,
+    "Americhe": 14,
+    "Europa": 13,
     "Asia e Medio Oriente": 2
    }
   },
@@ -106488,76 +106477,62 @@
   "id": "14150235ce",
   "titolo": "Iran rivendica un attacco con sei droni contro un radar statunitense in Bahrein e avverte sullo Stretto di Hor",
   "lingua": "it",
-  "categoria": "Economia",
+  "categoria": "Politica",
   "curiosita": false,
-  "sezione": "Economia",
-  "calore": 65,
+  "sezione": "Politica",
+  "calore": 50,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "France 24",
-   "data": "2026-11-17T15:44:54+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://www.france24.com/en/americas/20261117-trump-says-he-takes-possible-iran-bomb-threat-to-washington-very-seriously"
-  },
-  "conferma": {
    "fonte": "Daily Mail",
    "data": "2026-11-17T16:02:56+00:00",
-   "dopo_min": 18
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.dailymail.com/news/article-16298071/Iran-dirty-bomb-attack-Trump-administration.html?ns_mchannel=rss&ns_campaign=1490&ito=1490"
+  },
+  "conferma": {
+   "fonte": "The Guardian",
+   "data": "2026-11-17T16:03:34+00:00",
+   "dopo_min": 1
   },
   "curva": [
    1,
-   14,
-   17,
-   17,
-   18,
-   18,
-   18,
-   18,
-   18,
-   18,
-   18,
-   18
+   10,
+   11,
+   11,
+   12,
+   12,
+   12,
+   12,
+   12,
+   12,
+   12,
+   12
   ],
   "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
-   "AE",
-   "DE",
    "FR",
    "GB",
    "IN",
-   "IR",
    "IT",
-   "NG",
    "PH",
    "US"
   ],
   "lingue": [
-   "de",
    "en",
    "it"
   ],
-  "n_fonti": 18,
+  "n_fonti": 12,
   "prima_segnalazione": {
-   "fonte": "France 24",
-   "paese": "FR",
-   "data": "2026-11-17T15:44:54+00:00"
+   "fonte": "Daily Mail",
+   "paese": "GB",
+   "data": "2026-11-17T16:02:56+00:00"
   },
   "aggiornata": "2026-11-18T07:40:02+00:00",
   "fonti": [
-   {
-    "fonte": "France 24",
-    "link": "https://www.france24.com/en/americas/20261117-trump-says-he-takes-possible-iran-bomb-threat-to-washington-very-seriously",
-    "paese": "FR",
-    "lingua": "en",
-    "data": "2026-11-17T15:44:54+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Daily Mail",
     "link": "https://www.dailymail.com/news/article-16298071/Iran-dirty-bomb-attack-Trump-administration.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
@@ -106586,15 +106561,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "Tagesschau",
-    "link": "https://www.tagesschau.de/ausland/amerika/trump-schmutzige-bombe-iran-100.html",
-    "paese": "DE",
-    "lingua": "de",
-    "data": "2026-11-17T16:36:43+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "CBS News",
     "link": "https://www.cbsnews.com/video/trump-says-us-taking-iranian-dirty-bomb-threat-very-seriously/",
     "paese": "US",
@@ -106604,29 +106570,11 @@
     "origine": "rss"
    },
    {
-    "fonte": "Tehran Times",
-    "link": "https://www.tehrantimes.com/news/532269/Araghchi-meets-Sultan-of-Oman-in-Muscat-on-bilateral-ties-regional",
-    "paese": "IR",
-    "lingua": "en",
-    "data": "2026-11-17T16:57:50+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Al-Monitor",
     "link": "https://www.al-monitor.com/originals/2026/11/araghchi-meets-qatari-mediators-oman-trump-threatens-iran-over-dirty-bomb-report",
     "paese": "US",
     "lingua": "en",
     "data": "2026-11-17T17:01:16+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "The National",
-    "link": "https://www.thenationalnews.com/news/mena/2026/11/17/iran-will-pay-a-price-if-dirty-bomb-is-detonated-in-us/",
-    "paese": "AE",
-    "lingua": "en",
-    "data": "2026-11-17T17:34:02+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -106667,29 +106615,11 @@
     "origine": "rss"
    },
    {
-    "fonte": "Vanguard",
-    "link": "https://www.vanguardngr.com/2026/11/fani-kayode-meets-south-african-official-over-bilateral-ties/",
-    "paese": "NG",
-    "lingua": "en",
-    "data": "2026-11-17T19:22:11+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Los Angeles Times",
     "link": "https://www.latimes.com/politics/story/2026-11-17/trump-faces-questions-on-reported-iran-plot-to-attack-d-c-string-of-outages",
     "paese": "US",
     "lingua": "en",
     "data": "2026-11-17T20:14:01+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Open",
-    "link": "https://www.open.online/2026/11/17/iran-pianifica-esplosione-bomba-sporca-stati-uniti-allarme-intelligence-teheran-smentisce/",
-    "paese": "IT",
-    "lingua": "it",
-    "data": "2026-11-17T22:08:33+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -106713,14 +106643,13 @@
    }
   ],
   "copertura": {
-   "italia": 2,
-   "estero": 16,
-   "paesi_esteri": 9,
+   "italia": 1,
+   "estero": 11,
+   "paesi_esteri": 5,
    "continenti": {
-    "Europa": 7,
     "Americhe": 6,
-    "Asia e Medio Oriente": 4,
-    "Africa": 1
+    "Europa": 4,
+    "Asia e Medio Oriente": 2
    }
   },
   "punto_cieco": ""
@@ -120331,7 +120260,7 @@
   "categoria": "Clima e ambiente",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 59,
+  "calore": 58,
   "stato": "confermato",
   "attendibilita": 97,
   "livello": "Certa",
@@ -144300,35 +144229,35 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 66,
+  "calore": 64,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Olé",
-   "data": "2026-11-17T15:35:12+00:00",
+   "fonte": "Vanguard",
+   "data": "2026-11-17T15:53:20+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.ole.com.ar/futbol-internacional/inglaterra/waynerooney-saludmental-manchesterunited-suicidio_0_l4liu5EyQl.html"
+   "link": "https://www.vanguardngr.com/2026/11/i-contemplated-suicide-at-height-of-man-united-career-rooney-reveals/"
   },
   "conferma": {
-   "fonte": "Adnkronos",
-   "data": "2026-11-17T15:39:23+00:00",
-   "dopo_min": 4
+   "fonte": "Globo Esporte",
+   "data": "2026-11-17T16:00:46+00:00",
+   "dopo_min": 7
   },
   "curva": [
    1,
-   11,
-   15,
-   15,
-   15,
-   16,
-   16,
-   16,
-   16,
-   16,
-   16,
-   16
+   9,
+   13,
+   13,
+   13,
+   14,
+   14,
+   14,
+   14,
+   14,
+   14,
+   14
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -144351,32 +144280,14 @@
    "it",
    "pt"
   ],
-  "n_fonti": 16,
+  "n_fonti": 14,
   "prima_segnalazione": {
-   "fonte": "Olé",
-   "paese": "AR",
-   "data": "2026-11-17T15:35:12+00:00"
+   "fonte": "Vanguard",
+   "paese": "NG",
+   "data": "2026-11-17T15:53:20+00:00"
   },
   "aggiornata": "2026-11-18T10:17:31+00:00",
   "fonti": [
-   {
-    "fonte": "Olé",
-    "link": "https://www.ole.com.ar/futbol-internacional/inglaterra/waynerooney-saludmental-manchesterunited-suicidio_0_l4liu5EyQl.html",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-17T15:35:12+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Adnkronos",
-    "link": "https://www.adnkronos.com/sport/rooney-suicidio-alcol-rivelazione-choc_43UCCZmZTqfB6QvLXPtIHC",
-    "paese": "IT",
-    "lingua": "it",
-    "data": "2026-11-17T15:39:23+00:00",
-    "tipo": "agenzia",
-    "origine": "rss"
-   },
    {
     "fonte": "Vanguard",
     "link": "https://www.vanguardngr.com/2026/11/i-contemplated-suicide-at-height-of-man-united-career-rooney-reveals/",
@@ -144505,13 +144416,13 @@
    }
   ],
   "copertura": {
-   "italia": 3,
-   "estero": 13,
+   "italia": 2,
+   "estero": 12,
    "paesi_esteri": 8,
    "continenti": {
-    "Europa": 8,
-    "Americhe": 4,
+    "Europa": 7,
     "Oceania": 3,
+    "Americhe": 3,
     "Africa": 1
    }
   },
@@ -148238,7 +148149,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 74,
+  "calore": 76,
   "stato": "confermato",
   "attendibilita": 93,
   "livello": "Certa",
@@ -148268,7 +148179,7 @@
    2,
    6
   ],
-  "crescita": 2,
+  "crescita": 1,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
@@ -148285,7 +148196,7 @@
    "paese": "IT",
    "data": "2026-11-18T13:13:00+00:00"
   },
-  "aggiornata": "2026-11-19T14:57:54+00:00",
+  "aggiornata": "2026-11-19T15:42:02+00:00",
   "fonti": [
    {
     "fonte": "La Stampa",
@@ -152123,9 +152034,9 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 67,
+  "calore": 85,
   "stato": "confermato",
-  "attendibilita": 89,
+  "attendibilita": 99,
   "livello": "Certa",
   "prima": {
    "fonte": "Infobae",
@@ -152135,36 +152046,39 @@
    "link": "https://www.infobae.com/colombia/2026/11/17/estas-son-las-medidas-de-seguridad-en-barranquilla-para-la-final-de-la-copa-sudamericana-entre-boca-juniors-y-atletico-mineiro-reforzaran-los-controles-en-los-hoteles/"
   },
   "conferma": {
-   "fonte": "La Nación",
-   "data": "2026-11-17T21:29:53+00:00",
-   "dopo_min": 334
+   "fonte": "Olé",
+   "data": "2026-11-17T16:16:20+00:00",
+   "dopo_min": 21
   },
   "curva": [
    1,
-   1,
-   2,
    3,
-   3,
-   3,
-   4,
+   5,
    6,
    6,
    6,
    6,
-   7
+   8,
+   8,
+   8,
+   8,
+   9
   ],
   "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
    "AR",
+   "BR",
    "CO",
-   "EC"
+   "EC",
+   "VE"
   ],
   "lingue": [
-   "es"
+   "es",
+   "pt"
   ],
-  "n_fonti": 7,
+  "n_fonti": 9,
   "prima_segnalazione": {
    "fonte": "Infobae",
    "paese": "AR",
@@ -152178,6 +152092,33 @@
     "paese": "AR",
     "lingua": "es",
     "data": "2026-11-17T15:55:49+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Olé",
+    "link": "https://www.ole.com.ar/boca-juniors/boca-final-copa-sudamericana-milton-delgado-lesion-rodolfo-vasco-arruabarrena-atletico-mineiro_0_u76DWht2BB.html",
+    "paese": "AR",
+    "lingua": "es",
+    "data": "2026-11-17T16:16:20+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Globo Esporte",
+    "link": "https://ge.globo.com/futebol/times/palmeiras/noticia/2026/11/17/palmeiras-x-estudiantes-conmebol-anuncia-arbitro-da-final-da-libertadores.ghtml",
+    "paese": "BR",
+    "lingua": "pt",
+    "data": "2026-11-17T18:11:32+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "El Nacional",
+    "link": "https://www.elnacional.com/2026/11/conmebol-anuncia-a-jesus-valenzuela-como-arbitro-de-la-final-de-la-copa-libertadores/",
+    "paese": "VE",
+    "lingua": "es",
+    "data": "2026-11-17T20:48:19+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -152196,15 +152137,6 @@
     "paese": "AR",
     "lingua": "es",
     "data": "2026-11-18T00:54:51+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Olé",
-    "link": "https://www.ole.com.ar/boca-juniors/ole-barranquilla-particularidad-estadio-boca-preparara-final-sudamericana_0_O9FXeuZDJC.html",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-18T16:39:55+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -152238,10 +152170,10 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 7,
-   "paesi_esteri": 3,
+   "estero": 9,
+   "paesi_esteri": 5,
    "continenti": {
-    "Americhe": 7
+    "Americhe": 9
    }
   },
   "punto_cieco": "italia"
@@ -154609,7 +154541,7 @@
    1,
    1,
    1,
-   2,
+   3,
    7,
    10,
    10,
@@ -155448,7 +155380,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 91,
+  "calore": 89,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -155467,16 +155399,16 @@
   "curva": [
    1,
    18,
-   29,
-   29,
-   29,
-   29,
-   29,
-   29,
-   29,
-   29,
-   29,
-   29
+   28,
+   28,
+   28,
+   28,
+   28,
+   28,
+   28,
+   28,
+   28,
+   28
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -155487,7 +155419,6 @@
    "ES",
    "FR",
    "GB",
-   "IL",
    "IN",
    "IS",
    "IT",
@@ -155510,7 +155441,7 @@
    "it",
    "nl"
   ],
-  "n_fonti": 29,
+  "n_fonti": 28,
   "prima_segnalazione": {
    "fonte": "La Vanguardia",
    "paese": "ES",
@@ -155735,15 +155666,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "The Jerusalem Post",
-    "link": "https://www.jpost.com/middle-east/iran-news/article-915235",
-    "paese": "IL",
-    "lingua": "en",
-    "data": "2026-11-17T21:35:38+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "RÚV",
     "link": "https://www.ruv.is/frettir/erlent/2026-11-17-bandarikjaher-gerir-aras-a-qeshm-eyju-i-hormussundi-493110/",
     "paese": "IS",
@@ -155782,11 +155704,11 @@
   ],
   "copertura": {
    "italia": 4,
-   "estero": 25,
-   "paesi_esteri": 17,
+   "estero": 24,
+   "paesi_esteri": 16,
    "continenti": {
     "Europa": 15,
-    "Asia e Medio Oriente": 8,
+    "Asia e Medio Oriente": 7,
     "Americhe": 5,
     "Africa": 1
    }
@@ -157353,35 +157275,35 @@
   "categoria": "Tecnologia e crypto",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 88,
+  "calore": 86,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Hacker News (prima pagina)",
-   "data": "2026-11-17T15:38:28+00:00",
+   "fonte": "Hindustan Times",
+   "data": "2026-11-17T15:53:11+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down"
+   "link": "https://www.hindustantimes.com/world-news/highly-classified-network-used-by-us-national-security-agency-down-nsa-updates-trump-administration-101794930739112.html"
   },
   "conferma": {
-   "fonte": "CNA",
-   "data": "2026-11-17T15:42:01+00:00",
-   "dopo_min": 4
+   "fonte": "Adnkronos",
+   "data": "2026-11-17T16:04:00+00:00",
+   "dopo_min": 11
   },
   "curva": [
    1,
-   35,
-   40,
-   42,
-   42,
-   42,
-   42,
-   42,
-   42,
-   42,
-   42,
-   42
+   31,
+   36,
+   38,
+   38,
+   38,
+   38,
+   38,
+   38,
+   38,
+   38,
+   38
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -157419,59 +157341,14 @@
    "it",
    "pt"
   ],
-  "n_fonti": 42,
+  "n_fonti": 38,
   "prima_segnalazione": {
-   "fonte": "Hacker News (prima pagina)",
-   "paese": "WEB",
-   "data": "2026-11-17T15:38:28+00:00"
+   "fonte": "Hindustan Times",
+   "paese": "IN",
+   "data": "2026-11-17T15:53:11+00:00"
   },
   "aggiornata": "2026-11-18T02:45:55+00:00",
   "fonti": [
-   {
-    "fonte": "Hacker News (prima pagina)",
-    "link": "https://www.cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down",
-    "paese": "WEB",
-    "lingua": "en",
-    "data": "2026-11-17T15:38:28+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "CNA",
-    "link": "https://www.channelnewsasia.com/business/classified-us-national-security-communications-network-hit-outage-nsa-says-6559891",
-    "paese": "SG",
-    "lingua": "en",
-    "data": "2026-11-17T15:42:01+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "G1",
-    "link": "https://g1.globo.com/mundo/noticia/2026/11/17/rede-ultrassecreta-de-comunicacoes-de-seguranca-nacional-dos-eua-esta-fora-do-ar-diz-tv.ghtml",
-    "paese": "BR",
-    "lingua": "pt",
-    "data": "2026-11-17T15:44:57+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Times of India",
-    "link": "https://timesofindia.indiatimes.com/world/us/americas-spy-agency-goes-dark-nsas-classified-internal-network-goes-down-no-cyberattack-evidence-yet-report/articleshow/135932100.cms",
-    "paese": "IN",
-    "lingua": "en",
-    "data": "2026-11-17T15:51:29+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Infobae",
-    "link": "https://www.infobae.com/estados-unidos/2026/11/17/estados-unidos-registra-una-caida-de-estudiantes-internacionales-en-sus-universidades-que-muestran-las-nuevas-cifras/",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-17T15:52:00+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Hindustan Times",
     "link": "https://www.hindustantimes.com/world-news/highly-classified-network-used-by-us-national-security-agency-down-nsa-updates-trump-administration-101794930739112.html",
@@ -157696,17 +157573,61 @@
     "data": "2026-11-17T19:00:10+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "Der Standard",
+    "link": "https://www.derstandard.at/story/3000000349745/internes-kommunikationsnetz-des-us-geheimdienstes-nsa-ausgefallen?ref=rss",
+    "paese": "AT",
+    "lingua": "de",
+    "data": "2026-11-17T19:15:15+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Estadão",
+    "link": "https://www.estadao.com.br/internacional/rede-comunicacao-interna-agencia-inteligencia-eua-sai-do-ar-npr/",
+    "paese": "BR",
+    "lingua": "pt",
+    "data": "2026-11-17T19:36:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "La Nación (Costa Rica)",
+    "link": "https://www.nacion.com/el-mundo/ciberataque-o-falla-tecnica-la-misteriosa-caida-de/ZUV7A5R7RJDBFKCGAYP2HXWZ6A/story/",
+    "paese": "CR",
+    "lingua": "es",
+    "data": "2026-11-17T19:40:02+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Handelsblatt",
+    "link": "https://www.handelsblatt.com/politik/international/technik-internes-netzwerk-von-us-geheimdienst-nsa-gestoert/100270731.html",
+    "paese": "DE",
+    "lingua": "de",
+    "data": "2026-11-17T19:47:06+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Stuff",
+    "link": "https://www.stuff.co.nz/world-news/361060530/us-spy-agencys-highly-classified-communications-network-goes-down",
+    "paese": "NZ",
+    "lingua": "en",
+    "data": "2026-11-17T19:54:33+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 2,
-   "estero": 40,
+   "estero": 36,
    "paesi_esteri": 22,
    "continenti": {
     "Europa": 17,
-    "Americhe": 15,
-    "Asia e Medio Oriente": 8,
-    "Altro": 1,
+    "Americhe": 14,
+    "Asia e Medio Oriente": 6,
     "Oceania": 1
    }
   },
@@ -166913,7 +166834,7 @@
   "categoria": "Economia",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 70,
+  "calore": 69,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -172622,7 +172543,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 64,
+  "calore": 59,
   "stato": "confermato",
   "attendibilita": 93,
   "livello": "Certa",
