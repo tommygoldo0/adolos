@@ -11,30 +11,30 @@
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Financial Times",
-   "data": "2026-11-17T11:24:44+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://www.ft.com/content/aeacbf89-5511-4d1c-81c2-b4c227bdfceb?syn-25a6b1a6=1"
-  },
-  "conferma": {
    "fonte": "TGCOM24",
    "data": "2026-11-17T11:36:59+00:00",
-   "dopo_min": 12
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.tgcom24.mediaset.it/mondo/nvidia-risultati-trimestrali-jensen-huang-borsa_119080671-202602k.shtml"
+  },
+  "conferma": {
+   "fonte": "NDTV",
+   "data": "2026-11-17T11:43:39+00:00",
+   "dopo_min": 7
   },
   "curva": [
    1,
-   25,
-   68,
-   87,
-   90,
-   90,
-   90,
-   91,
-   91,
-   91,
-   91,
-   91
+   28,
+   73,
+   92,
+   95,
+   96,
+   97,
+   97,
+   97,
+   97,
+   97,
+   97
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -46,6 +46,7 @@
    "AU",
    "BE",
    "BR",
+   "CA",
    "CH",
    "CO",
    "CR",
@@ -68,6 +69,7 @@
    "JM",
    "JP",
    "MX",
+   "NG",
    "NL",
    "NO",
    "NZ",
@@ -96,23 +98,14 @@
    "nl",
    "pt"
   ],
-  "n_fonti": 91,
+  "n_fonti": 97,
   "prima_segnalazione": {
-   "fonte": "Financial Times",
-   "paese": "GB",
-   "data": "2026-11-17T11:24:44+00:00"
+   "fonte": "TGCOM24",
+   "paese": "IT",
+   "data": "2026-11-17T11:36:59+00:00"
   },
   "aggiornata": "2026-11-18T17:28:58+00:00",
   "fonti": [
-   {
-    "fonte": "Financial Times",
-    "link": "https://www.ft.com/content/aeacbf89-5511-4d1c-81c2-b4c227bdfceb?syn-25a6b1a6=1",
-    "paese": "GB",
-    "lingua": "en",
-    "data": "2026-11-17T11:24:44+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "TGCOM24",
     "link": "https://www.tgcom24.mediaset.it/mondo/nvidia-risultati-trimestrali-jensen-huang-borsa_119080671-202602k.shtml",
@@ -146,6 +139,15 @@
     "paese": "PK",
     "lingua": "en",
     "data": "2026-11-17T11:53:33+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "The Globe and Mail",
+    "link": "https://www.theglobeandmail.com/world/video-nvidia-rules-out-huang-comeback-as-campaign-for-his-return-grows/",
+    "paese": "CA",
+    "lingua": "en",
+    "data": "2026-11-17T11:57:47+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -195,15 +197,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "El Universal",
-    "link": "https://www.eluniversal.com.mx/cartera/wall-street-cierra-en-rojo-esta-pendiente-de-nvidia/",
-    "paese": "MX",
-    "lingua": "es",
-    "data": "2026-11-17T12:39:13+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Newsweek",
     "link": "https://www.newsweek.com/nvidia-first-post-huang-earnings-12726500",
     "paese": "US",
@@ -218,15 +211,6 @@
     "paese": "AR",
     "lingua": "es",
     "data": "2026-11-17T13:15:59+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "La Nación (Costa Rica)",
-    "link": "https://www.nacion.com/el-mundo/nvidia-presenta-resultados-en-medio-de-escandalo/WYSO4SUUKFDU5AYL2OMCCPENXM/story/",
-    "paese": "CR",
-    "lingua": "es",
-    "data": "2026-11-17T13:32:42+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -249,11 +233,29 @@
     "origine": "rss"
    },
    {
+    "fonte": "La Nación (Costa Rica)",
+    "link": "https://www.nacion.com/el-mundo/estados-unidos-investiga-a-esta-empresa-por-el/K747QRJJIVAW7INVRR5IT5NFSY/story/",
+    "paese": "CR",
+    "lingua": "es",
+    "data": "2026-11-17T14:37:30+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "Il Sole 24 Ore",
     "link": "https://www.ilsole24ore.com/art/nvidia-stasera-conti-attesi-ricavi-boom-91percento-ma-occhi-saranno-kress-AJaC0aJC",
     "paese": "IT",
     "lingua": "it",
     "data": "2026-11-17T14:46:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "FAZ",
+    "link": "https://www.faz.net/aktuell/wirtschaft/unternehmen/jensen-huang-elon-musk-und-andere-tech-promis-fordern-nvidia-rueckkehr-201687756.html",
+    "paese": "DE",
+    "lingua": "de",
+    "data": "2026-11-17T14:50:21+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -276,11 +278,29 @@
     "origine": "rss"
    },
    {
-    "fonte": "ABC Color",
-    "link": "https://www.abc.com.py/internacionales/2026/11/17/wall-street-abre-en-rojo-a-la-espera-de-los-resultados-de-nvidia/",
-    "paese": "PY",
-    "lingua": "es",
-    "data": "2026-11-17T15:00:10+00:00",
+    "fonte": "Der Spiegel",
+    "link": "https://www.spiegel.de/wirtschaft/unternehmen/nvidia-warum-die-tech-bosse-jensen-huangs-rueckkehr-fordern-a-7c966f6a-6430-47e6-b5f4-edb6202a2617#ref=rss",
+    "paese": "DE",
+    "lingua": "de",
+    "data": "2026-11-17T15:03:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "The Hill",
+    "link": "https://thehill.com/policy/technology/6224602-nvidia-establishes-national-security-committee/",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-17T15:17:02+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Time",
+    "link": "https://time.com/article/2026/11/17/why-jensen-huang-should-not-be-reinstated-as-nvidia-s-ceo/",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-17T15:17:31+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -303,6 +323,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "Vanguard",
+    "link": "https://www.vanguardngr.com/2026/11/us-house-committees-to-quiz-nvidia-ex-ceo-huang-december-1/",
+    "paese": "NG",
+    "lingua": "en",
+    "data": "2026-11-17T15:37:51+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "BFMTV",
     "link": "https://www.bfmtv.com/economie/entreprises/les-americains-ont-besoin-de-reponses-l-ex-patron-de-nvidia-jensen-huang-sera-entendu-au-congres-le-1er-decembre-lors-d-une-audition-a-huis-clos_AD-202611170692.html",
     "paese": "FR",
@@ -321,20 +350,20 @@
     "origine": "rss"
    },
    {
-    "fonte": "The Hill",
-    "link": "https://thehill.com/policy/technology/6225075-nvidia-counsel-teter-jensen-huang-testimony/",
-    "paese": "US",
-    "lingua": "en",
-    "data": "2026-11-17T15:43:27+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Le Figaro",
     "link": "https://www.lefigaro.fr/secteur/high-tech/affaire-nvidia-l-ex-patron-jensen-huang-entendu-par-le-congres-americain-le-1er-decembre-20261117",
     "paese": "FR",
     "lingua": "fr",
     "data": "2026-11-17T15:51:07+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "NZ Herald",
+    "link": "https://www.nzherald.co.nz/business/personal-finance/investment/nvidia-after-jensen-huangs-departure-what-investors-should-watch-greg-smith/FCHFVIDFJBCKDJZLAOYYN7YRLQ/",
+    "paese": "NZ",
+    "lingua": "en",
+    "data": "2026-11-17T16:00:00+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -346,45 +375,18 @@
     "data": "2026-11-17T16:00:48+00:00",
     "tipo": "giornale",
     "origine": "rss"
-   },
-   {
-    "fonte": "The Verge",
-    "link": "https://www.theverge.com/tech/1035420/jensen-huang-nvidia-return-as-ceo-statement",
-    "paese": "US",
-    "lingua": "en",
-    "data": "2026-11-17T16:09:57+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "HDblog",
-    "link": "https://www.hdblog.it/nvidia/articoli/n677341/jensen-huang-ritorno-nvidia-ceo/",
-    "paese": "IT",
-    "lingua": "it",
-    "data": "2026-11-17T16:10:00+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Asharq Al-Awsat",
-    "link": "https://english.aawsat.com/node/5342409",
-    "paese": "SA",
-    "lingua": "ar",
-    "data": "2026-11-17T16:15:48+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
    }
   ],
   "copertura": {
-   "italia": 9,
-   "estero": 82,
-   "paesi_esteri": 40,
+   "italia": 10,
+   "estero": 87,
+   "paesi_esteri": 42,
    "continenti": {
-    "Europa": 43,
-    "Americhe": 25,
+    "Europa": 44,
+    "Americhe": 28,
     "Asia e Medio Oriente": 16,
-    "Oceania": 5,
-    "Africa": 2
+    "Oceania": 6,
+    "Africa": 3
    }
   },
   "punto_cieco": ""
@@ -1853,7 +1855,7 @@
   "categoria": "Clima e ambiente",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 79,
+  "calore": 78,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -1872,7 +1874,7 @@
   "curva": [
    1,
    5,
-   11,
+   12,
    12,
    13,
    13,
@@ -15060,7 +15062,7 @@
   "categoria": "Società",
   "curiosita": false,
   "sezione": "Società",
-  "calore": 88,
+  "calore": 87,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -16368,39 +16370,39 @@
  "a4af1f81f0": {
   "id": "a4af1f81f0",
   "titolo": "Otto morti e cinque feriti in una serie di sparatorie a Porto Alegre e nell'area metropolitana",
-  "lingua": "en",
+  "lingua": "it",
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 58,
+  "calore": 45,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Cyprus Mail",
-   "data": "2026-11-17T10:40:03+00:00",
+   "fonte": "G1",
+   "data": "2026-11-17T11:43:55+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://cyprus-mail.com/2026/11/17/palestinian-woman-72-shot-dead-in-west-bank-settler-attack"
+   "link": "https://g1.globo.com/mg/centro-oeste/noticia/2026/11/17/homem-e-morto-a-tiros-dentro-de-carro-em-divinopolis.ghtml"
   },
   "conferma": {
-   "fonte": "Al-Monitor",
-   "data": "2026-11-17T10:46:31+00:00",
+   "fonte": "ABC Color",
+   "data": "2026-11-17T11:50:16+00:00",
    "dopo_min": 6
   },
   "curva": [
    1,
+   6,
    9,
-   12,
-   13,
-   13,
-   13,
-   13,
-   13,
-   13,
-   13,
-   13,
-   13
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10,
+   10
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -16408,55 +16410,33 @@
   "paesi": [
    "AR",
    "BR",
-   "CY",
    "GB",
    "IL",
-   "NL",
+   "IT",
+   "NZ",
    "PY",
-   "QA",
-   "RU",
-   "SG",
-   "US"
+   "QA"
   ],
   "lingue": [
-   "el",
    "en",
    "es",
-   "nl",
+   "it",
    "pt"
   ],
-  "n_fonti": 13,
+  "n_fonti": 10,
   "prima_segnalazione": {
-   "fonte": "Cyprus Mail",
-   "paese": "CY",
-   "data": "2026-11-17T10:40:03+00:00"
+   "fonte": "G1",
+   "paese": "BR",
+   "data": "2026-11-17T11:43:55+00:00"
   },
-  "aggiornata": "2026-11-17T22:00:21+00:00",
+  "aggiornata": "2026-11-17T22:34:56+00:00",
   "fonti": [
    {
-    "fonte": "Cyprus Mail",
-    "link": "https://cyprus-mail.com/2026/11/17/palestinian-woman-72-shot-dead-in-west-bank-settler-attack",
-    "paese": "CY",
-    "lingua": "el",
-    "data": "2026-11-17T10:40:03+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Al-Monitor",
-    "link": "https://www.al-monitor.com/originals/2026/11/israeli-settlers-kill-palestinian-woman-72-west-bank",
-    "paese": "US",
-    "lingua": "en",
-    "data": "2026-11-17T10:46:31+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "The New Arab",
-    "link": "https://www.newarab.com/news/west-bank-palestinian-americans-under-attack-settlers",
-    "paese": "GB",
-    "lingua": "en",
-    "data": "2026-11-17T10:52:16+00:00",
+    "fonte": "G1",
+    "link": "https://g1.globo.com/mg/centro-oeste/noticia/2026/11/17/homem-e-morto-a-tiros-dentro-de-carro-em-divinopolis.ghtml",
+    "paese": "BR",
+    "lingua": "pt",
+    "data": "2026-11-17T11:43:55+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -16470,24 +16450,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "G1",
-    "link": "https://g1.globo.com/mundo/noticia/2026/11/17/mulher-palestina-de-72-anos-e-morta-a-tiros-por-colonos-israelenses-na-cisjordania.ghtml",
-    "paese": "BR",
-    "lingua": "pt",
-    "data": "2026-11-17T11:54:03+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Middle East Eye",
-    "link": "https://www.middleeasteye.net/live-blog/live-blog-update/young-palestinian-man-killed-israeli-fire-central-gaza",
-    "paese": "GB",
-    "lingua": "en",
-    "data": "2026-11-17T11:54:29+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Infobae",
     "link": "https://www.infobae.com/america/agencias/2026/11/17/ong-israeli-pide-la-expulsion-de-los-colonos-de-jerico-tras-el-asesinato-de-una-palestina/",
     "paese": "AR",
@@ -16497,20 +16459,29 @@
     "origine": "rss"
    },
    {
-    "fonte": "de Volkskrant",
-    "link": "https://www.volkskrant.nl/buitenland/fotograaf-op-de-westelijke-jordaanoever-bruut-aangevallen-door-kolonisten~bd96d2f5/",
-    "paese": "NL",
-    "lingua": "nl",
-    "data": "2026-11-17T12:51:00+00:00",
+    "fonte": "The New Arab",
+    "link": "https://www.newarab.com/news/elderly-palestinian-woman-killed-israeli-settlers-jericho",
+    "paese": "GB",
+    "lingua": "en",
+    "data": "2026-11-17T12:19:09+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
    {
-    "fonte": "The Straits Times",
-    "link": "https://www.straitstimes.com/world/middle-east/israeli-fire-kills-four-including-a-6-year-old-boy-in-gaza-medics-say",
-    "paese": "SG",
+    "fonte": "Sky TG24",
+    "link": "https://tg24.sky.it/mondo/video/2026/11/17/cisgiordania-spari-coloni-gerico-1140565",
+    "paese": "IT",
+    "lingua": "it",
+    "data": "2026-11-17T12:50:10+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Middle East Eye",
+    "link": "https://www.middleeasteye.net/news/israeli-settlers-kill-palestinian-grandmother-her-home-jericho",
+    "paese": "GB",
     "lingua": "en",
-    "data": "2026-11-17T13:49:45+00:00",
+    "data": "2026-11-17T15:37:54+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -16542,26 +16513,27 @@
     "origine": "rss"
    },
    {
-    "fonte": "TASS",
-    "link": "https://tass.com/world/2219947",
-    "paese": "RU",
+    "fonte": "Stuff",
+    "link": "https://www.stuff.co.nz/nz-news/361060707/man-sitting-car-robbed-and-assaulted-weapon-point-two-men",
+    "paese": "NZ",
     "lingua": "en",
-    "data": "2026-11-17T21:17:01+00:00",
-    "tipo": "agenzia",
+    "data": "2026-11-17T22:34:56+00:00",
+    "tipo": "giornale",
     "origine": "rss"
    }
   ],
   "copertura": {
-   "italia": 0,
-   "estero": 13,
-   "paesi_esteri": 11,
+   "italia": 1,
+   "estero": 9,
+   "paesi_esteri": 7,
    "continenti": {
-    "Europa": 6,
-    "Americhe": 4,
-    "Asia e Medio Oriente": 3
+    "Europa": 4,
+    "Americhe": 3,
+    "Asia e Medio Oriente": 2,
+    "Oceania": 1
    }
   },
-  "punto_cieco": "italia"
+  "punto_cieco": ""
  },
  "818f748b51": {
   "id": "818f748b51",
@@ -18849,22 +18821,22 @@
   "attendibilita": 63,
   "livello": "Prime conferme",
   "prima": {
-   "fonte": "Sydney Morning Herald",
-   "data": "2026-11-17T11:21:17+00:00",
+   "fonte": "The National",
+   "data": "2026-11-18T00:01:00+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.smh.com.au/politics/federal/best-of-cartoons-november-18-2026-20261117-p61f27.html?ref=rss&utm_medium=rss&utm_source=rss_feed"
+   "link": "https://www.thenationalnews.com/opinion/cartoon/2026/11/18/putin-trump-xi-apec-summit-meeting-russia-us-china/"
   },
   "conferma": {
-   "fonte": "The Age",
-   "data": "2026-11-17T11:21:17+00:00",
-   "dopo_min": 0
+   "fonte": "Sydney Morning Herald",
+   "data": "2026-11-18T10:52:52+00:00",
+   "dopo_min": 652
   },
   "curva": [
-   2,
-   2,
-   2,
-   3,
+   1,
+   1,
+   1,
+   1,
    3,
    3,
    3,
@@ -18886,36 +18858,36 @@
   ],
   "n_fonti": 3,
   "prima_segnalazione": {
-   "fonte": "Sydney Morning Herald",
-   "paese": "AU",
-   "data": "2026-11-17T11:21:17+00:00"
+   "fonte": "The National",
+   "paese": "AE",
+   "data": "2026-11-18T00:01:00+00:00"
   },
   "aggiornata": "2026-11-19T10:30:52+00:00",
   "fonti": [
-   {
-    "fonte": "Sydney Morning Herald",
-    "link": "https://www.smh.com.au/politics/federal/best-of-cartoons-november-18-2026-20261117-p61f27.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
-    "paese": "AU",
-    "lingua": "en",
-    "data": "2026-11-17T11:21:17+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "The Age",
-    "link": "https://www.theage.com.au/politics/federal/best-of-cartoons-november-18-2026-20261117-p61f27.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
-    "paese": "AU",
-    "lingua": "en",
-    "data": "2026-11-17T11:21:17+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "The National",
     "link": "https://www.thenationalnews.com/opinion/cartoon/2026/11/18/putin-trump-xi-apec-summit-meeting-russia-us-china/",
     "paese": "AE",
     "lingua": "en",
     "data": "2026-11-18T00:01:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Sydney Morning Herald",
+    "link": "https://www.smh.com.au/politics/federal/best-of-cartoons-november-19-2026-20261118-p61fbq.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+    "paese": "AU",
+    "lingua": "en",
+    "data": "2026-11-18T10:52:52+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "The Age",
+    "link": "https://www.theage.com.au/politics/federal/best-of-cartoons-november-19-2026-20261118-p61fbq.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+    "paese": "AU",
+    "lingua": "en",
+    "data": "2026-11-18T10:52:52+00:00",
     "tipo": "giornale",
     "origine": "rss"
    }
@@ -37139,21 +37111,21 @@
   "categoria": "Altro",
   "curiosita": true,
   "sezione": "Curiosità",
-  "calore": 58,
+  "calore": 66,
   "stato": "confermato",
-  "attendibilita": 84,
-  "livello": "Confermata",
+  "attendibilita": 89,
+  "livello": "Certa",
   "prima": {
-   "fonte": "Rai News",
-   "data": "2026-11-19T02:21:00+00:00",
+   "fonte": "Il Fatto Quotidiano",
+   "data": "2026-11-18T10:52:51+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.rainews.it/articoli/2026/11/sothebys-chtaigniers-en-fleurs-di-van-gogh-venduto-a-1904-milioni-di-dollari-922b91d0-8441-4edf-ad90-84a5ee705d85.html"
+   "link": "https://www.ilfattoquotidiano.it/2026/11/18/castagni-in-fiore-di-van-gogh-da-180-milioni-il-colpo-di-scena-prima-dellasta-la-famiglia-delleditore-ebreo-samuel-fischer-trova-laccordo-con-sothebys/8575841/"
   },
   "conferma": {
-   "fonte": "La Stampa",
-   "data": "2026-11-19T06:03:00+00:00",
-   "dopo_min": 222
+   "fonte": "Rai News",
+   "data": "2026-11-19T02:21:00+00:00",
+   "dopo_min": 928
   },
   "curva": [
    1,
@@ -37161,13 +37133,13 @@
    1,
    1,
    1,
+   1,
+   1,
    2,
-   3,
-   3,
+   2,
    4,
-   5,
-   5,
-   5
+   6,
+   6
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -37178,14 +37150,23 @@
   "lingue": [
    "it"
   ],
-  "n_fonti": 5,
+  "n_fonti": 6,
   "prima_segnalazione": {
-   "fonte": "Rai News",
+   "fonte": "Il Fatto Quotidiano",
    "paese": "IT",
-   "data": "2026-11-19T02:21:00+00:00"
+   "data": "2026-11-18T10:52:51+00:00"
   },
-  "aggiornata": "2026-11-19T09:09:40+00:00",
+  "aggiornata": "2026-11-19T11:53:01+00:00",
   "fonti": [
+   {
+    "fonte": "Il Fatto Quotidiano",
+    "link": "https://www.ilfattoquotidiano.it/2026/11/18/castagni-in-fiore-di-van-gogh-da-180-milioni-il-colpo-di-scena-prima-dellasta-la-famiglia-delleditore-ebreo-samuel-fischer-trova-laccordo-con-sothebys/8575841/",
+    "paese": "IT",
+    "lingua": "it",
+    "data": "2026-11-18T10:52:51+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
    {
     "fonte": "Rai News",
     "link": "https://www.rainews.it/articoli/2026/11/sothebys-chtaigniers-en-fleurs-di-van-gogh-venduto-a-1904-milioni-di-dollari-922b91d0-8441-4edf-ad90-84a5ee705d85.html",
@@ -37233,11 +37214,11 @@
    }
   ],
   "copertura": {
-   "italia": 5,
+   "italia": 6,
    "estero": 0,
    "paesi_esteri": 0,
    "continenti": {
-    "Europa": 5
+    "Europa": 6
    }
   },
   "punto_cieco": "solo_italia"
@@ -52440,25 +52421,25 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 51,
+  "calore": 52,
   "stato": "confermato",
   "attendibilita": 60,
   "livello": "Prime conferme",
   "prima": {
    "fonte": "G1",
-   "data": "2026-11-17T11:21:41+00:00",
+   "data": "2026-11-17T12:43:56+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://g1.globo.com/to/tocantins/edicao/2026/11/17/videos-bom-dia-tocantins-de-17-de-novembro-de-2026.ghtml"
+   "link": "https://g1.globo.com/pa/para/playlist/videos-bdp-de-terca-feira-17-de-novembro-de-2026.ghtml"
   },
   "conferma": {
    "fonte": "Globo Esporte",
    "data": "2026-11-17T16:30:18+00:00",
-   "dopo_min": 309
+   "dopo_min": 226
   },
   "curva": [
    1,
-   1,
+   2,
    2,
    2,
    2,
@@ -52483,16 +52464,16 @@
   "prima_segnalazione": {
    "fonte": "G1",
    "paese": "BR",
-   "data": "2026-11-17T11:21:41+00:00"
+   "data": "2026-11-17T12:43:56+00:00"
   },
-  "aggiornata": "2026-11-19T11:03:05+00:00",
+  "aggiornata": "2026-11-19T11:21:46+00:00",
   "fonti": [
    {
     "fonte": "G1",
-    "link": "https://g1.globo.com/to/tocantins/edicao/2026/11/17/videos-bom-dia-tocantins-de-17-de-novembro-de-2026.ghtml",
+    "link": "https://g1.globo.com/pa/para/playlist/videos-bdp-de-terca-feira-17-de-novembro-de-2026.ghtml",
     "paese": "BR",
     "lingua": "pt",
-    "data": "2026-11-17T11:21:41+00:00",
+    "data": "2026-11-17T12:43:56+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -58898,7 +58879,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 55,
+  "calore": 54,
   "stato": "confermato",
   "attendibilita": 74,
   "livello": "Confermata",
@@ -59190,17 +59171,17 @@
   },
   "curva": [
    1,
-   12,
-   21,
+   11,
+   20,
+   24,
+   25,
+   26,
+   26,
    26,
    27,
-   28,
-   28,
-   28,
-   29,
-   29,
-   29,
-   35
+   27,
+   27,
+   33
   ],
   "crescita": 2,
   "pubblicata": true,
@@ -59222,7 +59203,6 @@
    "GH",
    "IT",
    "JP",
-   "NG",
    "NL",
    "NZ",
    "PY",
@@ -59238,7 +59218,7 @@
    "it",
    "pt"
   ],
-  "n_fonti": 35,
+  "n_fonti": 33,
   "prima_segnalazione": {
    "fonte": "L'Équipe",
    "paese": "FR",
@@ -59324,15 +59304,6 @@
     "paese": "PY",
     "lingua": "es",
     "data": "2026-11-17T14:00:13+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Folha de S.Paulo",
-    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/esporte/2026/11/dirigente-frances-diz-que-conta-com-apoio-fora-da-europa-por-presidencia-da-fifa.shtml",
-    "paese": "BR",
-    "lingua": "pt",
-    "data": "2026-11-17T14:30:00+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -59463,15 +59434,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "Punch",
-    "link": "https://punchng.com/enugu-ndc-gov-candidate-vows-to-end-multiple-taxation/?utm_source=rss.punchng.com&utm_medium=web",
-    "paese": "NG",
-    "lingua": "en",
-    "data": "2026-11-18T00:00:09+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "The Japan Times",
     "link": "https://www.japantimes.co.jp/sports/2026/11/18/soccer/macron-diallo-fifa-tashima/",
     "paese": "JP",
@@ -59515,18 +59477,36 @@
     "data": "2026-11-19T09:15:26+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "O Globo",
+    "link": "https://oglobo.globo.com/esportes/futebol/noticia/2026/11/19/fifa-anuncia-infantino-o-frances-diallo-e-o-japones-tashima-como-candidatos-a-presidencia-da-entidade.ghtml",
+    "paese": "BR",
+    "lingua": "pt",
+    "data": "2026-11-19T09:25:11+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "France 24",
+    "link": "https://www.france24.com/en/sport/20261119-infantino-to-face-france-s-diallo-and-japan-s-tashima-in-fifa-presidential-election",
+    "paese": "FR",
+    "lingua": "en",
+    "data": "2026-11-19T09:39:22+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 2,
-   "estero": 33,
-   "paesi_esteri": 22,
+   "estero": 31,
+   "paesi_esteri": 21,
    "continenti": {
     "Europa": 18,
-    "Americhe": 8,
+    "Americhe": 7,
     "Asia e Medio Oriente": 5,
     "Oceania": 2,
-    "Africa": 2
+    "Africa": 1
    }
   },
   "punto_cieco": ""
@@ -62432,7 +62412,7 @@
   "categoria": "Tecnologia e crypto",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 54,
+  "calore": 53,
   "stato": "una_fonte",
   "attendibilita": 30,
   "livello": "Una fonte",
@@ -62473,7 +62453,7 @@
    "paese": "MX",
    "data": "2026-11-18T07:12:00+00:00"
   },
-  "aggiornata": "2026-11-19T11:04:06+00:00",
+  "aggiornata": "2026-11-19T11:28:18+00:00",
   "fonti": [
    {
     "fonte": "El Universal",
@@ -62692,7 +62672,7 @@
   "categoria": "Tecnologia e crypto",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 50,
+  "calore": 48,
   "stato": "una_fonte",
   "attendibilita": 30,
   "livello": "Una fonte",
@@ -71662,30 +71642,30 @@
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "France 24",
-   "data": "2026-11-17T11:24:30+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://www.france24.com/en/tv-shows/press-review/20261117-weirdo-specialist-is-the-new-bond-papers-react-to-robert-pattinson-as-007"
-  },
-  "conferma": {
    "fonte": "Infobae",
    "data": "2026-11-17T11:48:43+00:00",
-   "dopo_min": 24
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.infobae.com/espana/2026/11/17/los-reyes-carlos-y-camila-reciben-a-robert-pattinson-como-nuevo-james-bond-su-divertido-mensaje-en-redes/"
+  },
+  "conferma": {
+   "fonte": "Courrier international",
+   "data": "2026-11-17T11:54:04+00:00",
+   "dopo_min": 5
   },
   "curva": [
    1,
-   27,
+   26,
    36,
-   42,
-   42,
-   44,
-   44,
-   44,
-   44,
-   44,
-   44,
-   44
+   41,
+   41,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43,
+   43
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -71724,23 +71704,14 @@
    "it",
    "pt"
   ],
-  "n_fonti": 44,
+  "n_fonti": 43,
   "prima_segnalazione": {
-   "fonte": "France 24",
-   "paese": "FR",
-   "data": "2026-11-17T11:24:30+00:00"
+   "fonte": "Infobae",
+   "paese": "AR",
+   "data": "2026-11-17T11:48:43+00:00"
   },
   "aggiornata": "2026-11-18T12:27:30+00:00",
   "fonti": [
-   {
-    "fonte": "France 24",
-    "link": "https://www.france24.com/en/tv-shows/press-review/20261117-weirdo-specialist-is-the-new-bond-papers-react-to-robert-pattinson-as-007",
-    "paese": "FR",
-    "lingua": "en",
-    "data": "2026-11-17T11:24:30+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Infobae",
     "link": "https://www.infobae.com/espana/2026/11/17/los-reyes-carlos-y-camila-reciben-a-robert-pattinson-como-nuevo-james-bond-su-divertido-mensaje-en-redes/",
@@ -72001,14 +71972,23 @@
     "data": "2026-11-17T16:24:42+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "L'Obs",
+    "link": "https://www.nouvelobs.com/cinema/20261117.OBS120206/robert-pattinson-sera-le-prochain-james-bond-10-choses-a-savoir-sur-le-nouveau-007.html",
+    "paese": "FR",
+    "lingua": "fr",
+    "data": "2026-11-17T16:30:20+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 5,
-   "estero": 39,
+   "estero": 38,
    "paesi_esteri": 22,
    "continenti": {
-    "Europa": 24,
+    "Europa": 23,
     "Americhe": 16,
     "Asia e Medio Oriente": 3,
     "Africa": 1
@@ -106710,40 +106690,41 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 99,
+  "calore": 100,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "New York Post",
-   "data": "2026-11-17T11:25:12+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://nypost.com/2026/11/17/us-news/trump-responds-to-reported-dirty-bomb-threat-from-iran-they-happen-to-be-crazy/"
-  },
-  "conferma": {
    "fonte": "Vanguard",
    "data": "2026-11-17T11:38:41+00:00",
-   "dopo_min": 13
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.vanguardngr.com/2026/11/trump-says-takes-very-seriously-possible-iran-threat-to-washington/"
+  },
+  "conferma": {
+   "fonte": "Asharq Al-Awsat",
+   "data": "2026-11-17T11:40:38+00:00",
+   "dopo_min": 2
   },
   "curva": [
    1,
-   32,
-   38,
-   40,
+   31,
    40,
    41,
    41,
-   41,
-   41,
-   41,
-   41,
-   41
+   42,
+   42,
+   42,
+   42,
+   42,
+   42,
+   42
   ],
   "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
+   "AE",
    "AR",
    "BR",
    "CA",
@@ -106773,23 +106754,14 @@
    "it",
    "pt"
   ],
-  "n_fonti": 41,
+  "n_fonti": 42,
   "prima_segnalazione": {
-   "fonte": "New York Post",
-   "paese": "US",
-   "data": "2026-11-17T11:25:12+00:00"
+   "fonte": "Vanguard",
+   "paese": "NG",
+   "data": "2026-11-17T11:38:41+00:00"
   },
   "aggiornata": "2026-11-18T07:40:02+00:00",
   "fonti": [
-   {
-    "fonte": "New York Post",
-    "link": "https://nypost.com/2026/11/17/us-news/trump-responds-to-reported-dirty-bomb-threat-from-iran-they-happen-to-be-crazy/",
-    "paese": "US",
-    "lingua": "en",
-    "data": "2026-11-17T11:25:12+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Vanguard",
     "link": "https://www.vanguardngr.com/2026/11/trump-says-takes-very-seriously-possible-iran-threat-to-washington/",
@@ -106945,10 +106917,10 @@
    },
    {
     "fonte": "TASS",
-    "link": "https://tass.com/world/2219735",
+    "link": "https://tass.com/world/2219729",
     "paese": "RU",
     "lingua": "en",
-    "data": "2026-11-17T13:20:00+00:00",
+    "data": "2026-11-17T13:15:58+00:00",
     "tipo": "agenzia",
     "origine": "rss"
    },
@@ -107050,16 +107022,25 @@
     "data": "2026-11-17T15:00:34+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "Le Figaro",
+    "link": "https://www.lefigaro.fr/international/bombe-sale-arme-chimique-donald-trump-affirme-prendre-tres-au-serieux-une-potentielle-menace-d-attaque-iranienne-a-washington-20261117",
+    "paese": "FR",
+    "lingua": "fr",
+    "data": "2026-11-17T15:03:45+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
-   "italia": 4,
+   "italia": 5,
    "estero": 37,
-   "paesi_esteri": 17,
+   "paesi_esteri": 18,
    "continenti": {
-    "Europa": 20,
-    "Americhe": 13,
-    "Asia e Medio Oriente": 7,
+    "Europa": 21,
+    "Americhe": 12,
+    "Asia e Medio Oriente": 8,
     "Africa": 1
    }
   },
@@ -138476,42 +138457,41 @@
   "categoria": "Cronaca",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 53,
+  "calore": 50,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Infobae",
-   "data": "2026-11-17T11:18:52+00:00",
+   "fonte": "Handelsblatt",
+   "data": "2026-11-17T11:34:49+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.infobae.com/america/agencias/2026/11/17/bruselas-acusa-a-temu-de-no-frenar-la-venta-de-productos-ilegales-en-su-plataforma/"
+   "link": "https://www.handelsblatt.com/politik/deutschland/verbraucherschutz-eu-wirft-temu-mangelnden-einsatz-gegen-illegale-produkte-vor/100270565.html"
   },
   "conferma": {
-   "fonte": "ORF",
-   "data": "2026-11-17T11:22:19+00:00",
-   "dopo_min": 3
+   "fonte": "Die Zeit",
+   "data": "2026-11-17T11:34:49+00:00",
+   "dopo_min": 0
   },
   "curva": [
-   1,
+   2,
+   14,
    15,
-   16,
-   16,
-   16,
-   16,
-   16,
-   16,
-   16,
-   16,
-   16,
-   16
+   15,
+   15,
+   15,
+   15,
+   15,
+   15,
+   15,
+   15,
+   15
   ],
   "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
    "AR",
-   "AT",
    "AZ",
    "BE",
    "BR",
@@ -138532,32 +138512,14 @@
    "pt",
    "ru"
   ],
-  "n_fonti": 16,
+  "n_fonti": 15,
   "prima_segnalazione": {
-   "fonte": "Infobae",
-   "paese": "AR",
-   "data": "2026-11-17T11:18:52+00:00"
+   "fonte": "Handelsblatt",
+   "paese": "DE",
+   "data": "2026-11-17T11:34:49+00:00"
   },
   "aggiornata": "2026-11-17T19:25:00+00:00",
   "fonti": [
-   {
-    "fonte": "Infobae",
-    "link": "https://www.infobae.com/america/agencias/2026/11/17/bruselas-acusa-a-temu-de-no-frenar-la-venta-de-productos-ilegales-en-su-plataforma/",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-17T11:18:52+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "ORF",
-    "link": "https://orf.at/stories/3448452/",
-    "paese": "AT",
-    "lingua": "de",
-    "data": "2026-11-17T11:22:19+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Handelsblatt",
     "link": "https://www.handelsblatt.com/politik/deutschland/verbraucherschutz-eu-wirft-temu-mangelnden-einsatz-gegen-illegale-produkte-vor/100270565.html",
@@ -138600,6 +138562,15 @@
     "paese": "ES",
     "lingua": "es",
     "data": "2026-11-17T11:45:22+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Infobae",
+    "link": "https://www.infobae.com/america/agencias/2026/11/17/bruselas-acusa-a-temu-de-no-tomar-medidas-para-impedir-la-venta-de-productos-ilegales-en-su-plataforma/",
+    "paese": "AR",
+    "lingua": "es",
+    "data": "2026-11-17T11:47:15+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -138687,10 +138658,10 @@
   ],
   "copertura": {
    "italia": 3,
-   "estero": 13,
-   "paesi_esteri": 11,
+   "estero": 12,
+   "paesi_esteri": 10,
    "continenti": {
-    "Europa": 12,
+    "Europa": 11,
     "Americhe": 3,
     "Asia e Medio Oriente": 1
    }
@@ -140955,35 +140926,35 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 47,
+  "calore": 45,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Libération",
-   "data": "2026-11-17T11:21:56+00:00",
+   "fonte": "Le Figaro",
+   "data": "2026-11-17T11:44:40+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.liberation.fr/politique/elections/marine-le-pen-presente-son-projet-de-reforme-des-retraites-20261117_4PGOZBOHAJGRTN5SP3MQA6OCYE/"
+   "link": "https://www.lefigaro.fr/politique/retraites-etes-vous-favorable-a-un-age-de-depart-de-60-a-62-ans-avec-40-a-42-annees-de-cotisations-comme-le-propose-marine-le-pen-20261117"
   },
   "conferma": {
    "fonte": "BFMTV",
-   "data": "2026-11-17T11:30:01+00:00",
-   "dopo_min": 8
+   "data": "2026-11-17T11:55:03+00:00",
+   "dopo_min": 10
   },
   "curva": [
    1,
-   7,
+   5,
+   8,
+   9,
    9,
    10,
    10,
-   11,
-   11,
-   11,
-   11,
-   11,
-   11,
-   11
+   10,
+   10,
+   10,
+   10,
+   10
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -141000,47 +140971,29 @@
    "fr",
    "it"
   ],
-  "n_fonti": 11,
+  "n_fonti": 10,
   "prima_segnalazione": {
-   "fonte": "Libération",
+   "fonte": "Le Figaro",
    "paese": "FR",
-   "data": "2026-11-17T11:21:56+00:00"
+   "data": "2026-11-17T11:44:40+00:00"
   },
   "aggiornata": "2026-11-18T08:35:18+00:00",
   "fonti": [
-   {
-    "fonte": "Libération",
-    "link": "https://www.liberation.fr/politique/elections/marine-le-pen-presente-son-projet-de-reforme-des-retraites-20261117_4PGOZBOHAJGRTN5SP3MQA6OCYE/",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-17T11:21:56+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "BFMTV",
-    "link": "https://www.bfmtv.com/politique/video-le-rassemblement-national-presente-sa-reforme-des-retraites-en-cas-d-accession-a-l-elysee_VN-202611170517.html",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-17T11:30:01+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Le Monde",
-    "link": "https://www.lemonde.fr/politique/article/2026/11/17/presidentielle-2027-marine-le-pen-presente-sa-reforme-des-retraites-et-promet-que-des-centaines-de-milliers-de-travailleurs-partiront-plus-tot-qu-avec-la-reforme-borne_6812963_823448.html",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-17T11:32:16+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Le Figaro",
     "link": "https://www.lefigaro.fr/politique/retraites-etes-vous-favorable-a-un-age-de-depart-de-60-a-62-ans-avec-40-a-42-annees-de-cotisations-comme-le-propose-marine-le-pen-20261117",
     "paese": "FR",
     "lingua": "fr",
     "data": "2026-11-17T11:44:40+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "BFMTV",
+    "link": "https://www.bfmtv.com/economie/patrimoine/retraite/age-d-entree-sur-le-marche-du-travail-depart-legal-entre-60-et-62-ans-decote-durcie-part-de-capitalisation-ce-qu-il-faut-retenir-de-la-reforme-des-retraites-presentee-par-le-rn_AV-202611170518.html",
+    "paese": "FR",
+    "lingua": "fr",
+    "data": "2026-11-17T11:55:03+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -141081,6 +141034,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "Le Monde",
+    "link": "https://www.lemonde.fr/politique/article/2026/11/17/la-droite-et-le-centre-attaquent-le-projet-de-reforme-des-retraites-de-marine-le-pen_6813010_823448.html",
+    "paese": "FR",
+    "lingua": "fr",
+    "data": "2026-11-17T16:58:45+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "RFI",
     "link": "https://www.rfi.fr/fr/france/20261117-pr%C3%A9sidentielle-2027-marine-le-pen-d%C3%A9voile-sa-r%C3%A9forme-des-retraites-qu-elle-veut-engager-d%C3%A8s-son-arriv%C3%A9e-au-pouvoir",
     "paese": "FR",
@@ -141110,10 +141072,10 @@
   ],
   "copertura": {
    "italia": 1,
-   "estero": 10,
+   "estero": 9,
    "paesi_esteri": 3,
    "continenti": {
-    "Europa": 10,
+    "Europa": 9,
     "Americhe": 1
    }
   },
@@ -141667,30 +141629,30 @@
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Daily Sabah",
-   "data": "2026-11-17T11:29:00+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://www.dailysabah.com/world/europe/serbia-swears-in-new-parliament-after-students-led-ballot-revolution"
-  },
-  "conferma": {
    "fonte": "Le Monde",
    "data": "2026-11-17T12:00:01+00:00",
-   "dopo_min": 31
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.lemonde.fr/international/article/2026/11/17/en-serbie-la-liste-etudiante-en-ordre-de-marche-pour-son-entree-au-parlement_6812966_3210.html"
+  },
+  "conferma": {
+   "fonte": "Deutsche Welle",
+   "data": "2026-11-17T12:09:00+00:00",
+   "dopo_min": 9
   },
   "curva": [
    1,
-   9,
    11,
    12,
-   12,
-   12,
-   12,
-   12,
-   12,
-   12,
-   12,
-   12
+   13,
+   13,
+   13,
+   13,
+   13,
+   13,
+   13,
+   13,
+   13
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -141699,12 +141661,12 @@
    "DE",
    "FR",
    "GB",
+   "IE",
    "IT",
    "NL",
    "QA",
    "RS",
-   "SG",
-   "TR"
+   "SG"
   ],
   "lingue": [
    "en",
@@ -141712,23 +141674,14 @@
    "it",
    "nl"
   ],
-  "n_fonti": 12,
+  "n_fonti": 13,
   "prima_segnalazione": {
-   "fonte": "Daily Sabah",
-   "paese": "TR",
-   "data": "2026-11-17T11:29:00+00:00"
+   "fonte": "Le Monde",
+   "paese": "FR",
+   "data": "2026-11-17T12:00:01+00:00"
   },
   "aggiornata": "2026-11-17T23:02:35+00:00",
   "fonti": [
-   {
-    "fonte": "Daily Sabah",
-    "link": "https://www.dailysabah.com/world/europe/serbia-swears-in-new-parliament-after-students-led-ballot-revolution",
-    "paese": "TR",
-    "lingua": "en",
-    "data": "2026-11-17T11:29:00+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Le Monde",
     "link": "https://www.lemonde.fr/international/article/2026/11/17/en-serbie-la-liste-etudiante-en-ordre-de-marche-pour-son-entree-au-parlement_6812966_3210.html",
@@ -141784,6 +141737,24 @@
     "origine": "rss"
    },
    {
+    "fonte": "Euronews",
+    "link": "https://www.euronews.com/video/2026/11/17/serbias-student-led-movement-enters-parliament-after-historic-election-victory",
+    "paese": "FR",
+    "lingua": "en",
+    "data": "2026-11-17T12:55:08+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "RTÉ",
+    "link": "https://www.rte.ie/news/world/2026/1117/1599549-serbia-election/",
+    "paese": "IE",
+    "lingua": "en",
+    "data": "2026-11-17T13:25:49+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "N1 Serbia",
     "link": "https://n1info.rs/english/news/vucic-tells-student-list-mps-he-is-appalled-they-won-election/",
     "paese": "RS",
@@ -141831,11 +141802,11 @@
   ],
   "copertura": {
    "italia": 2,
-   "estero": 10,
+   "estero": 11,
    "paesi_esteri": 8,
    "continenti": {
-    "Europa": 9,
-    "Asia e Medio Oriente": 3
+    "Europa": 11,
+    "Asia e Medio Oriente": 2
    }
   },
   "punto_cieco": ""
@@ -148765,7 +148736,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 77,
+  "calore": 76,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -155129,7 +155100,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 77,
+  "calore": 79,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -155175,7 +155146,7 @@
    "paese": "DE",
    "data": "2026-11-17T16:01:38+00:00"
   },
-  "aggiornata": "2026-11-19T09:56:19+00:00",
+  "aggiornata": "2026-11-19T11:26:18+00:00",
   "fonti": [
    {
     "fonte": "Der Tagesspiegel",
@@ -155969,30 +155940,30 @@
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "CNBC",
-   "data": "2026-11-17T11:22:54+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://www.cnbc.com/2026/11/17/iran-war-trump-hormuz-oil-.html"
-  },
-  "conferma": {
    "fonte": "South China Morning Post",
    "data": "2026-11-17T11:48:51+00:00",
-   "dopo_min": 26
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.scmp.com/news/world/middle-east/article/3374775/iran-fires-drones-us-military-radar-system-bahrain-amid-gulf-tensions"
+  },
+  "conferma": {
+   "fonte": "Stuff",
+   "data": "2026-11-17T11:55:41+00:00",
+   "dopo_min": 7
   },
   "curva": [
    1,
-   9,
-   25,
-   38,
-   38,
-   39,
-   39,
-   39,
-   39,
-   39,
-   39,
-   39
+   11,
+   23,
+   35,
+   35,
+   36,
+   36,
+   36,
+   36,
+   36,
+   36,
+   36
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -156000,12 +155971,12 @@
   "paesi": [
    "AE",
    "AR",
-   "BE",
    "DE",
    "ES",
    "FR",
    "GB",
    "HK",
+   "IL",
    "IN",
    "IR",
    "IS",
@@ -156031,23 +156002,14 @@
    "it",
    "nl"
   ],
-  "n_fonti": 39,
+  "n_fonti": 36,
   "prima_segnalazione": {
-   "fonte": "CNBC",
-   "paese": "US",
-   "data": "2026-11-17T11:22:54+00:00"
+   "fonte": "South China Morning Post",
+   "paese": "HK",
+   "data": "2026-11-17T11:48:51+00:00"
   },
   "aggiornata": "2026-11-18T11:14:51+00:00",
   "fonti": [
-   {
-    "fonte": "CNBC",
-    "link": "https://www.cnbc.com/2026/11/17/iran-war-trump-hormuz-oil-.html",
-    "paese": "US",
-    "lingua": "en",
-    "data": "2026-11-17T11:22:54+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "South China Morning Post",
     "link": "https://www.scmp.com/news/world/middle-east/article/3374775/iran-fires-drones-us-military-radar-system-bahrain-amid-gulf-tensions",
@@ -156076,15 +156038,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "TASS",
-    "link": "https://tass.com/world/2219729",
-    "paese": "RU",
-    "lingua": "en",
-    "data": "2026-11-17T13:15:58+00:00",
-    "tipo": "agenzia",
-    "origine": "rss"
-   },
-   {
     "fonte": "Middle East Eye",
     "link": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-media-reports-blasts-heard-qeshm-island",
     "paese": "GB",
@@ -156103,21 +156056,21 @@
     "origine": "rss"
    },
    {
-    "fonte": "The Washington Post",
-    "link": "https://www.washingtonpost.com/world/2026/11/17/netanyahu-is-pushing-new-iran-attack-bid-stay-power-his-rivals-warn/",
-    "paese": "US",
-    "lingua": "en",
-    "data": "2026-11-17T14:26:31+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Times of India",
     "link": "https://timesofindia.indiatimes.com/india/two-indian-seafarers-hurt-1-missing-after-tanker-targeted-in-hormuz-strait/articleshow/135929328.cms",
     "paese": "IN",
     "lingua": "en",
     "data": "2026-11-17T14:28:07+00:00",
     "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "TASS",
+    "link": "https://tass.com/world/2219815",
+    "paese": "RU",
+    "lingua": "en",
+    "data": "2026-11-17T15:09:04+00:00",
+    "tipo": "agenzia",
     "origine": "rss"
    },
    {
@@ -156211,15 +156164,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "RTBF",
-    "link": "https://www.rtbf.be/article/l-iran-a-profite-de-la-guerre-au-moyen-orient-pour-intensifier-la-repression-selon-amnesty-11817035",
-    "paese": "BE",
-    "lingua": "fr",
-    "data": "2026-11-17T18:34:15+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "NPR",
     "link": "https://www.npr.org/2026/11/17/nx-s1-6044255/us-iran-war-latest-bahrain",
     "paese": "US",
@@ -156308,16 +156252,43 @@
     "data": "2026-11-17T21:02:06+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "The Straits Times",
+    "link": "https://www.straitstimes.com/world/middle-east/us-strikes-irans-qeshm-island-in-strait-of-hormuz-after-guards-target-bahrain",
+    "paese": "SG",
+    "lingua": "en",
+    "data": "2026-11-17T21:11:45+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "The National",
+    "link": "https://www.thenationalnews.com/news/us/2026/11/17/us-jets-strike-irgc-missile-launch-site-on-irans-qeshm-island-in-self-defence/",
+    "paese": "AE",
+    "lingua": "en",
+    "data": "2026-11-17T21:28:37+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "The Jerusalem Post",
+    "link": "https://www.jpost.com/middle-east/iran-news/article-915235",
+    "paese": "IL",
+    "lingua": "en",
+    "data": "2026-11-17T21:35:38+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 5,
-   "estero": 34,
+   "estero": 31,
    "paesi_esteri": 21,
    "continenti": {
-    "Europa": 18,
-    "Asia e Medio Oriente": 10,
-    "Americhe": 9,
+    "Europa": 16,
+    "Asia e Medio Oriente": 11,
+    "Americhe": 7,
     "Africa": 1,
     "Oceania": 1
    }
@@ -157884,35 +157855,35 @@
   "categoria": "Tecnologia e crypto",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 83,
+  "calore": 80,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "The Express Tribune",
-   "data": "2026-11-17T11:26:40+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://tribune.com.pk/story/2640850/highly-classified-us-national-security-communications-network-is-down-cnn-reports"
-  },
-  "conferma": {
    "fonte": "Hacker News (prima pagina)",
    "data": "2026-11-17T15:38:28+00:00",
-   "dopo_min": 252
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down"
+  },
+  "conferma": {
+   "fonte": "CNA",
+   "data": "2026-11-17T15:42:01+00:00",
+   "dopo_min": 4
   },
   "curva": [
    1,
-   3,
-   28,
-   32,
-   33,
-   33,
-   33,
-   33,
-   33,
-   33,
-   33,
-   33
+   24,
+   29,
+   31,
+   31,
+   31,
+   31,
+   31,
+   31,
+   31,
+   31,
+   31
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -157924,7 +157895,6 @@
    "EC",
    "ES",
    "FR",
-   "GB",
    "GT",
    "IL",
    "IN",
@@ -157932,7 +157902,6 @@
    "MX",
    "NZ",
    "PH",
-   "PK",
    "PY",
    "SG",
    "US",
@@ -157944,23 +157913,14 @@
    "fr",
    "pt"
   ],
-  "n_fonti": 33,
+  "n_fonti": 31,
   "prima_segnalazione": {
-   "fonte": "The Express Tribune",
-   "paese": "PK",
-   "data": "2026-11-17T11:26:40+00:00"
+   "fonte": "Hacker News (prima pagina)",
+   "paese": "WEB",
+   "data": "2026-11-17T15:38:28+00:00"
   },
   "aggiornata": "2026-11-18T01:02:38+00:00",
   "fonti": [
-   {
-    "fonte": "The Express Tribune",
-    "link": "https://tribune.com.pk/story/2640850/highly-classified-us-national-security-communications-network-is-down-cnn-reports",
-    "paese": "PK",
-    "lingua": "en",
-    "data": "2026-11-17T11:26:40+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Hacker News (prima pagina)",
     "link": "https://www.cnn.com/2026/11/17/politics/highly-classified-national-security-communications-network-goes-down",
@@ -157976,15 +157936,6 @@
     "paese": "SG",
     "lingua": "en",
     "data": "2026-11-17T15:42:01+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Infobae",
-    "link": "https://www.infobae.com/estados-unidos/2026/11/17/estados-unidos-registra-una-caida-de-estudiantes-internacionales-en-sus-universidades-que-muestran-las-nuevas-cifras/",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-17T15:52:00+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -158160,15 +158111,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "The Independent",
-    "link": "https://www.independent.co.uk/news/world/americas/us-politics/classified-network-down-usa-intelligence-b3086573.html",
-    "paese": "GB",
-    "lingua": "en",
-    "data": "2026-11-17T18:41:13+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Mint",
     "link": "https://www.livemint.com/news/us-news/us-electronic-spy-agency-suffers-classified-network-outage-11794941399379.html",
     "paese": "IN",
@@ -158214,6 +158156,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "Infobae",
+    "link": "https://www.infobae.com/estados-unidos/2026/11/17/la-red-clasificada-de-la-agencia-de-seguridad-nacional-de-eeuu-sufre-una-caida-y-deja-restringidas-las-comunicaciones-internas/",
+    "paese": "AR",
+    "lingua": "es",
+    "data": "2026-11-17T21:04:27+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "The Straits Times",
     "link": "https://www.straitstimes.com/world/united-states/classified-us-national-security-communications-network-hit-by-outage-nsa",
     "paese": "SG",
@@ -158221,16 +158172,34 @@
     "data": "2026-11-17T22:00:00+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "France Info",
+    "link": "https://www.franceinfo.fr/monde/usa/des-systemes-internes-de-la-nsa-l-agence-americaine-de-renseignement-affectes-durant-une-operation-de-maintenance_8287238.html#xtor=RSS-3-[lestitres]",
+    "paese": "FR",
+    "lingua": "en",
+    "data": "2026-11-17T22:23:53+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "ABC (Spagna)",
+    "link": "https://www.abc.es/internacional/caida-sistemas-eeuu-red-informacion-clasificada-agencia-20261117182802-nt.html",
+    "paese": "ES",
+    "lingua": "es",
+    "data": "2026-11-17T23:59:11+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 0,
-   "estero": 33,
-   "paesi_esteri": 19,
+   "estero": 31,
+   "paesi_esteri": 17,
    "continenti": {
     "Americhe": 13,
-    "Europa": 10,
-    "Asia e Medio Oriente": 8,
+    "Europa": 9,
+    "Asia e Medio Oriente": 7,
     "Altro": 1,
     "Oceania": 1
    }
@@ -158266,7 +158235,7 @@
    4,
    4,
    4,
-   7,
+   8,
    9,
    9,
    9,
@@ -160679,7 +160648,7 @@
   "categoria": "Cronaca",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 51,
+  "calore": 50,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -167438,26 +167407,26 @@
   "categoria": "Economia",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 76,
+  "calore": 75,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
    "fonte": "Mundo Deportivo",
-   "data": "2026-11-17T11:28:29+00:00",
+   "data": "2026-11-17T15:10:02+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.mundodeportivo.com/futbol/real-madrid/20261117/1004252070/jj-gabriel-cambia-representante-firmar-real-madrid.html"
+   "link": "https://www.mundodeportivo.com/futbol/real-madrid/20261117/1004252206/real-madrid-anuncia-tribunal-supremo-le-da-razon.html"
   },
   "conferma": {
    "fonte": "Sky Sports",
    "data": "2026-11-17T18:29:00+00:00",
-   "dopo_min": 421
+   "dopo_min": 199
   },
   "curva": [
    1,
-   1,
-   9,
+   3,
+   10,
    10,
    10,
    11,
@@ -167493,16 +167462,16 @@
   "prima_segnalazione": {
    "fonte": "Mundo Deportivo",
    "paese": "ES",
-   "data": "2026-11-17T11:28:29+00:00"
+   "data": "2026-11-17T15:10:02+00:00"
   },
   "aggiornata": "2026-11-18T20:13:23+00:00",
   "fonti": [
    {
     "fonte": "Mundo Deportivo",
-    "link": "https://www.mundodeportivo.com/futbol/real-madrid/20261117/1004252070/jj-gabriel-cambia-representante-firmar-real-madrid.html",
+    "link": "https://www.mundodeportivo.com/futbol/real-madrid/20261117/1004252206/real-madrid-anuncia-tribunal-supremo-le-da-razon.html",
     "paese": "ES",
     "lingua": "en",
-    "data": "2026-11-17T11:28:29+00:00",
+    "data": "2026-11-17T15:10:02+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -179488,7 +179457,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 50,
+  "calore": 49,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
