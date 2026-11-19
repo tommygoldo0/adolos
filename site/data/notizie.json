@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-19T18:32:58.832315+00:00",
+ "aggiornato": "2026-11-19T18:47:35.755052+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -160,17 +160,17 @@
    },
    "curva": [
     1,
-    39,
-    45,
-    45,
-    45,
-    46,
-    46,
-    46,
-    46,
-    46,
-    46,
-    46
+    40,
+    51,
+    53,
+    53,
+    54,
+    54,
+    54,
+    54,
+    54,
+    54,
+    54
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -179,10 +179,10 @@
     "AR",
     "AU",
     "BE",
+    "CA",
     "CH",
     "CO",
     "DE",
-    "DK",
     "EG",
     "ES",
     "FR",
@@ -194,15 +194,16 @@
     "IN",
     "IT",
     "JM",
+    "MX",
+    "NG",
     "NL",
     "NZ",
-    "PY",
+    "PK",
     "RS",
     "SG",
     "US"
    ],
    "lingue": [
-    "da",
     "de",
     "en",
     "es",
@@ -210,7 +211,7 @@
     "it",
     "nl"
    ],
-   "n_fonti": 46,
+   "n_fonti": 54,
    "prima_segnalazione": {
     "fonte": "CNA",
     "paese": "SG",
@@ -282,6 +283,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "ABC Australia",
+     "link": "https://www.abc.net.au/news/2026-11-18/asx-markets-business-live-news-nvidia/107396692",
+     "paese": "AU",
+     "lingua": "en",
+     "data": "2026-11-17T19:56:42+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "Prensa Libre",
      "link": "https://www.prensalibre.com/internacional/bbc-news-mundo-internacional/megaspeed-la-empresa-vinculada-con-la-supuesta-espia-china-que-esta-en-el-centro-del-escandalo-del-gigante-tecnologico-nvidia/",
      "paese": "GT",
@@ -297,15 +307,6 @@
      "lingua": "en",
      "data": "2026-11-17T20:32:55+00:00",
      "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ANSA",
-     "link": "https://www.ansa.it/sito/notizie/economia/2026/11/17/mister-nvidia-fa-mea-culpa-pronto-a-tornare-se-lo-vuole-il-board_ca04ab2c-2e9b-4bb7-b6ba-1d6938cb2d6e.html",
-     "paese": "IT",
-     "lingua": "en",
-     "data": "2026-11-17T20:50:25+00:00",
-     "tipo": "agenzia",
      "origine": "rss"
     },
     {
@@ -332,15 +333,6 @@
      "paese": "IN",
      "lingua": "en",
      "data": "2026-11-17T21:16:29+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ABC Color",
-     "link": "https://www.abc.com.py/internacionales/2026/11/17/wall-street-cierra-en-rojo-tras-fallas-tecnologicas-y-a-la-espera-de-resultados-de-nvidia/",
-     "paese": "PY",
-     "lingua": "es",
-     "data": "2026-11-17T21:20:14+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -377,15 +369,6 @@
      "paese": "BE",
      "lingua": "nl",
      "data": "2026-11-17T21:41:14+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "DR",
-     "link": "https://www.dr.dk/nyheder/seneste/nvidia-fordobler-omsaetning-i-tredje-kvartal",
-     "paese": "DK",
-     "lingua": "da",
-     "data": "2026-11-17T21:41:20+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -444,6 +427,24 @@
      "origine": "rss"
     },
     {
+     "fonte": "ANSA",
+     "link": "https://www.ansa.it/sito/notizie/economia/2026/11/17/huang-pronto-a-tornare-se-lo-vuole-il-board.-nvidia-batte-le-attese-su-utili-e-ricavinel_ca04ab2c-2e9b-4bb7-b6ba-1d6938cb2d6e.html",
+     "paese": "IT",
+     "lingua": "en",
+     "data": "2026-11-17T22:05:58+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "El Universal",
+     "link": "https://www.eluniversal.com.mx/mundo/nvidia-supera-expectativas-en-su-facturacion-del-tercer-trimestre-ingresos-alcanzan-los-115-mil-mdd-pese-a-escandalo-de-jensen-huang/",
+     "paese": "MX",
+     "lingua": "es",
+     "data": "2026-11-17T22:08:39+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "The Hill",
      "link": "https://thehill.com/business/6226457-nvidia-q3-earnings-strong/",
      "paese": "US",
@@ -491,14 +492,14 @@
    ],
    "copertura": {
     "italia": 4,
-    "estero": 42,
-    "paesi_esteri": 23,
+    "estero": 50,
+    "paesi_esteri": 25,
     "continenti": {
-     "Europa": 18,
-     "Americhe": 16,
-     "Asia e Medio Oriente": 6,
-     "Oceania": 4,
-     "Africa": 2
+     "Europa": 20,
+     "Americhe": 17,
+     "Asia e Medio Oriente": 7,
+     "Oceania": 6,
+     "Africa": 4
     }
    },
    "punto_cieco": ""
@@ -528,17 +529,17 @@
    },
    "curva": [
     1,
-    5,
+    4,
+    6,
     7,
-    8,
-    10,
-    10,
-    10,
-    10,
-    10,
-    15,
-    22,
-    25
+    9,
+    9,
+    9,
+    9,
+    9,
+    14,
+    20,
+    22
    ],
    "crescita": 1,
    "pubblicata": true,
@@ -554,7 +555,6 @@
     "EC",
     "ES",
     "FR",
-    "GB",
     "GH",
     "IT",
     "JP",
@@ -572,7 +572,7 @@
     "it",
     "pt"
    ],
-   "n_fonti": 25,
+   "n_fonti": 22,
    "prima_segnalazione": {
     "fonte": "Il Fatto Quotidiano",
     "paese": "IT",
@@ -613,15 +613,6 @@
      "paese": "EC",
      "lingua": "es",
      "data": "2026-11-17T21:27:49+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "El Mundo",
-     "link": "https://www.elmundo.es/deportes/futbol/2026/11/17/6afc9bb021efa01c438b45ad.html",
-     "paese": "ES",
-     "lingua": "es",
-     "data": "2026-11-17T21:48:32+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -689,15 +680,6 @@
      "origine": "rss"
     },
     {
-     "fonte": "Sky News",
-     "link": "https://news.sky.com/story/fifa-confirms-candidates-to-stand-against-gianni-infantino-in-presidential-election-13613862",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-19T09:32:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "France 24",
      "link": "https://www.france24.com/en/sport/20261119-infantino-to-face-france-s-diallo-and-japan-s-tashima-in-fifa-presidential-election",
      "paese": "FR",
@@ -712,6 +694,15 @@
      "paese": "FR",
      "lingua": "fr",
      "data": "2026-11-19T09:48:13+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "El Mundo",
+     "link": "https://www.elmundo.es/deportes/futbol/2026/11/19/6afec25be85ece240e8b457a.html",
+     "paese": "ES",
+     "lingua": "es",
+     "data": "2026-11-19T09:51:34+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -761,29 +752,11 @@
      "origine": "rss"
     },
     {
-     "fonte": "Mundo Deportivo",
-     "link": "https://www.mundodeportivo.com/futbol/20261119/1004252962/uefa-acusa-fifa-carta-no-darle-acceso-documentos-plan-infantino-privatizar-mundial.html",
-     "paese": "ES",
-     "lingua": "en",
-     "data": "2026-11-19T12:34:10+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "Vanguard",
      "link": "https://www.vanguardngr.com/2026/11/fifa-chief-infantino-faces-challenge-from-frances-diallo-japans-tashima/",
      "paese": "NG",
      "lingua": "en",
      "data": "2026-11-19T12:57:21+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Olé",
-     "link": "https://www.ole.com.ar/futbol-internacional/uefa-cuestiono-fifa-falta-respuestas-proyecto-infantino-vender-derechos-mundial_0_viLJwCoOZc.html",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-19T15:19:41+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -808,12 +781,12 @@
    ],
    "copertura": {
     "italia": 1,
-    "estero": 24,
-    "paesi_esteri": 18,
+    "estero": 21,
+    "paesi_esteri": 17,
     "continenti": {
-     "Europa": 12,
-     "Americhe": 5,
+     "Europa": 10,
      "Africa": 4,
+     "Americhe": 4,
      "Asia e Medio Oriente": 3,
      "Oceania": 1
     }
@@ -1018,35 +991,35 @@
    "categoria": "Economia",
    "curiosita": true,
    "sezione": "Tecnologia",
-   "calore": 82,
+   "calore": 81,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "O Globo",
-    "data": "2026-11-17T18:46:37+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://oglobo.globo.com/cultura/noticia/2026/11/17/cena-de-crepusculo-viraliza-por-prever-ha-18-anos-escolha-de-robert-pattinson-como-novo-james-bond.ghtml"
-   },
-   "conferma": {
     "fonte": "Rai News",
     "data": "2026-11-17T18:48:00+00:00",
-    "dopo_min": 1
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.rainews.it/video/2026/11/robert-pattinson-e-il-nuovo-007-lagente-segreto-cambia-volto-e-diventa-millennial-851068cb-6de3-45fc-a109-75c5a9ccdfe1.html"
+   },
+   "conferma": {
+    "fonte": "L'Obs",
+    "data": "2026-11-17T19:30:05+00:00",
+    "dopo_min": 42
    },
    "curva": [
     1,
-    13,
-    15,
-    17,
-    20,
-    22,
-    22,
-    22,
-    22,
-    22,
-    22,
-    22
+    12,
+    14,
+    16,
+    19,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -1074,23 +1047,14 @@
     "pl",
     "pt"
    ],
-   "n_fonti": 22,
+   "n_fonti": 21,
    "prima_segnalazione": {
-    "fonte": "O Globo",
-    "paese": "BR",
-    "data": "2026-11-17T18:46:37+00:00"
+    "fonte": "Rai News",
+    "paese": "IT",
+    "data": "2026-11-17T18:48:00+00:00"
    },
    "aggiornata": "2026-11-18T20:17:49+00:00",
    "fonti": [
-    {
-     "fonte": "O Globo",
-     "link": "https://oglobo.globo.com/cultura/noticia/2026/11/17/cena-de-crepusculo-viraliza-por-prever-ha-18-anos-escolha-de-robert-pattinson-como-novo-james-bond.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T18:46:37+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "Rai News",
      "link": "https://www.rainews.it/video/2026/11/robert-pattinson-e-il-nuovo-007-lagente-segreto-cambia-volto-e-diventa-millennial-851068cb-6de3-45fc-a109-75c5a9ccdfe1.html",
@@ -1283,10 +1247,10 @@
    ],
    "copertura": {
     "italia": 4,
-    "estero": 18,
+    "estero": 17,
     "paesi_esteri": 12,
     "continenti": {
-     "Americhe": 11,
+     "Americhe": 10,
      "Europa": 9,
      "Asia e Medio Oriente": 2
     }
@@ -1547,7 +1511,7 @@
    "categoria": "Politica",
    "curiosita": false,
    "sezione": "Politica",
-   "calore": 75,
+   "calore": 73,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -1711,7 +1675,7 @@
     8,
     9,
     9,
-    9,
+    10,
     10,
     10,
     10
@@ -2015,122 +1979,6 @@
    "punto_cieco": "italia"
   },
   {
-   "id": "bc4780a1d5",
-   "titolo": "Superquiz di lunedì 16 novembre",
-   "lingua": "en",
-   "categoria": "Altro",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 61,
-   "stato": "confermato",
-   "attendibilita": 84,
-   "livello": "Confermata",
-   "prima": {
-    "fonte": "OC Media",
-    "data": "2026-11-18T08:32:19+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://oc-media.org/wednesday-18-november-2026/"
-   },
-   "conferma": {
-    "fonte": "Sydney Morning Herald",
-    "data": "2026-11-18T12:59:00+00:00",
-    "dopo_min": 267
-   },
-   "curva": [
-    1,
-    1,
-    3,
-    4,
-    4,
-    4,
-    4,
-    4,
-    5,
-    5,
-    5,
-    5
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AU",
-    "CU",
-    "GE",
-    "GH"
-   ],
-   "lingue": [
-    "en"
-   ],
-   "n_fonti": 5,
-   "prima_segnalazione": {
-    "fonte": "OC Media",
-    "paese": "GE",
-    "data": "2026-11-18T08:32:19+00:00"
-   },
-   "aggiornata": "2026-11-19T15:39:16+00:00",
-   "fonti": [
-    {
-     "fonte": "OC Media",
-     "link": "https://oc-media.org/wednesday-18-november-2026/",
-     "paese": "GE",
-     "lingua": "en",
-     "data": "2026-11-18T08:32:19+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Sydney Morning Herald",
-     "link": "https://www.smh.com.au/national/superquiz-thursday-november-19-20261118-p61f8t.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
-     "paese": "AU",
-     "lingua": "en",
-     "data": "2026-11-18T12:59:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Age",
-     "link": "https://www.theage.com.au/national/superquiz-thursday-november-19-20261118-p61f8t.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
-     "paese": "AU",
-     "lingua": "en",
-     "data": "2026-11-18T12:59:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Havana Times",
-     "link": "https://havanatimes.org/news/international-news-briefs-for-wednesday-november-18-2026/",
-     "paese": "CU",
-     "lingua": "en",
-     "data": "2026-11-18T16:02:24+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "MyJoyOnline",
-     "link": "https://www.myjoyonline.com/todays-front-pages-thursday-november-19-2026/",
-     "paese": "GH",
-     "lingua": "en",
-     "data": "2026-11-19T08:16:58+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 5,
-    "paesi_esteri": 4,
-    "continenti": {
-     "Oceania": 2,
-     "Asia e Medio Oriente": 1,
-     "Americhe": 1,
-     "Africa": 1
-    }
-   },
-   "punto_cieco": "italia"
-  },
-  {
    "id": "04c33a858a",
    "titolo": "Gli eredi chiedono di bloccare la vendita all'asta di un dipinto di Van Gogh",
    "lingua": "it",
@@ -2161,9 +2009,9 @@
     2,
     2,
     3,
-    3,
+    4,
     7,
-    7,
+    8,
     8,
     8
    ],
@@ -2432,7 +2280,7 @@
     "paese": "BR",
     "data": "2026-11-17T18:52:06+00:00"
    },
-   "aggiornata": "2026-11-19T18:16:33+00:00",
+   "aggiornata": "2026-11-19T18:35:32+00:00",
    "fonti": [
     {
      "fonte": "G1",
@@ -2586,248 +2434,117 @@
    "punto_cieco": ""
   },
   {
-   "id": "4bd7f95852",
-   "titolo": "Interruzione della rete di comunicazione classificata della NSA statunitense, limitate le comunicazioni intern",
+   "id": "bc4780a1d5",
+   "titolo": "Superquiz di lunedì 16 novembre",
    "lingua": "en",
-   "categoria": "Tecnologia e crypto",
+   "categoria": "Altro",
    "curiosita": false,
-   "sezione": "Tecnologia",
-   "calore": 52,
+   "sezione": "Mondo",
+   "calore": 55,
    "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
+   "attendibilita": 84,
+   "livello": "Confermata",
    "prima": {
-    "fonte": "Jamaica Observer",
-    "data": "2026-11-17T18:40:01+00:00",
+    "fonte": "OC Media",
+    "data": "2026-11-18T08:32:19+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://www.jamaicaobserver.com/2026/11/17/us-intelligence-agency-comms-network-suffers-outage-media/"
+    "link": "https://oc-media.org/wednesday-18-november-2026/"
    },
    "conferma": {
-    "fonte": "The Independent",
-    "data": "2026-11-17T18:41:13+00:00",
-    "dopo_min": 1
+    "fonte": "Sydney Morning Herald",
+    "data": "2026-11-18T12:59:00+00:00",
+    "dopo_min": 267
    },
    "curva": [
     1,
-    14,
-    18,
-    18,
-    18,
-    18,
-    18,
-    18,
-    18,
-    18,
-    18,
-    18
+    1,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5
    ],
    "crescita": 0,
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
-    "AR",
-    "AT",
-    "BE",
-    "CH",
-    "CR",
-    "DE",
-    "FR",
-    "GB",
-    "IN",
-    "JM",
-    "NZ",
-    "PH",
-    "QA",
-    "SG",
-    "US"
+    "AU",
+    "CU",
+    "GE",
+    "GH"
    ],
    "lingue": [
-    "de",
-    "en",
-    "es",
-    "fr"
+    "en"
    ],
-   "n_fonti": 18,
+   "n_fonti": 5,
    "prima_segnalazione": {
-    "fonte": "Jamaica Observer",
-    "paese": "JM",
-    "data": "2026-11-17T18:40:01+00:00"
+    "fonte": "OC Media",
+    "paese": "GE",
+    "data": "2026-11-18T08:32:19+00:00"
    },
-   "aggiornata": "2026-11-18T02:45:55+00:00",
+   "aggiornata": "2026-11-19T15:39:16+00:00",
    "fonti": [
     {
-     "fonte": "Jamaica Observer",
-     "link": "https://www.jamaicaobserver.com/2026/11/17/us-intelligence-agency-comms-network-suffers-outage-media/",
-     "paese": "JM",
+     "fonte": "OC Media",
+     "link": "https://oc-media.org/wednesday-18-november-2026/",
+     "paese": "GE",
      "lingua": "en",
-     "data": "2026-11-17T18:40:01+00:00",
+     "data": "2026-11-18T08:32:19+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "The Independent",
-     "link": "https://www.independent.co.uk/news/world/americas/us-politics/classified-network-down-usa-intelligence-b3086573.html",
-     "paese": "GB",
+     "fonte": "Sydney Morning Herald",
+     "link": "https://www.smh.com.au/national/superquiz-thursday-november-19-20261118-p61f8t.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+     "paese": "AU",
      "lingua": "en",
-     "data": "2026-11-17T18:41:13+00:00",
+     "data": "2026-11-18T12:59:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "ORF",
-     "link": "https://orf.at/stories/3448500/",
-     "paese": "AT",
-     "lingua": "de",
-     "data": "2026-11-17T18:46:33+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Mint",
-     "link": "https://www.livemint.com/news/us-news/us-electronic-spy-agency-suffers-classified-network-outage-11794941399379.html",
-     "paese": "IN",
+     "fonte": "The Age",
+     "link": "https://www.theage.com.au/national/superquiz-thursday-november-19-20261118-p61f8t.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+     "paese": "AU",
      "lingua": "en",
-     "data": "2026-11-17T18:49:59+00:00",
+     "data": "2026-11-18T12:59:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "RTBF",
-     "link": "https://www.rtbf.be/article/le-reseau-de-communication-interne-de-l-agence-americaine-de-renseignement-hors-service-11817057",
-     "paese": "BE",
-     "lingua": "fr",
-     "data": "2026-11-17T19:00:10+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Der Standard",
-     "link": "https://www.derstandard.at/story/3000000349745/internes-kommunikationsnetz-des-us-geheimdienstes-nsa-ausgefallen?ref=rss",
-     "paese": "AT",
-     "lingua": "de",
-     "data": "2026-11-17T19:15:15+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "La Nación (Costa Rica)",
-     "link": "https://www.nacion.com/el-mundo/ciberataque-o-falla-tecnica-la-misteriosa-caida-de/ZUV7A5R7RJDBFKCGAYP2HXWZ6A/story/",
-     "paese": "CR",
-     "lingua": "es",
-     "data": "2026-11-17T19:40:02+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Handelsblatt",
-     "link": "https://www.handelsblatt.com/politik/international/technik-internes-netzwerk-von-us-geheimdienst-nsa-gestoert/100270731.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T19:47:06+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Stuff",
-     "link": "https://www.stuff.co.nz/world-news/361060530/us-spy-agencys-highly-classified-communications-network-goes-down",
-     "paese": "NZ",
+     "fonte": "Havana Times",
+     "link": "https://havanatimes.org/news/international-news-briefs-for-wednesday-november-18-2026/",
+     "paese": "CU",
      "lingua": "en",
-     "data": "2026-11-17T19:54:33+00:00",
+     "data": "2026-11-18T16:02:24+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Der Spiegel",
-     "link": "https://www.spiegel.de/ausland/nsa-net-internes-netzwerk-von-us-geheimdienst-nsa-gestoert-a-b392dbb8-8224-430f-a1e7-0e7ccd7a3101#ref=rss",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T20:10:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Ouest-France",
-     "link": "https://www.ouest-france.fr/monde/etats-unis/aux-etats-unis-des-systemes-internes-de-lagence-de-renseignement-americaine-nsa-affectes-lors-dune-maintenance-1ed33296-e2c4-11f1-a3b1-0c6de532ce7d?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T20:37:58+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/estados-unidos/2026/11/17/la-red-clasificada-de-la-agencia-de-seguridad-nacional-de-eeuu-sufre-una-caida-y-deja-restringidas-las-comunicaciones-internas/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T21:04:27+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Straits Times",
-     "link": "https://www.straitstimes.com/world/united-states/classified-us-national-security-communications-network-hit-by-outage-nsa",
-     "paese": "SG",
+     "fonte": "MyJoyOnline",
+     "link": "https://www.myjoyonline.com/todays-front-pages-thursday-november-19-2026/",
+     "paese": "GH",
      "lingua": "en",
-     "data": "2026-11-17T22:00:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "France Info",
-     "link": "https://www.franceinfo.fr/monde/usa/des-systemes-internes-de-la-nsa-l-agence-americaine-de-renseignement-affectes-durant-une-operation-de-maintenance_8287238.html#xtor=RSS-3-[lestitres]",
-     "paese": "FR",
-     "lingua": "en",
-     "data": "2026-11-17T22:23:53+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Al Jazeera",
-     "link": "https://www.aljazeera.com/video/newsfeed/2026/11/17/top-spy-agency-suffers-network-outage-the-latest-us-technical-failure?traffic_source=rss",
-     "paese": "QA",
-     "lingua": "en",
-     "data": "2026-11-17T23:19:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "CBS News",
-     "link": "https://www.cbsnews.com/news/nsa-network-down-classified-fort-meade/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-18T00:22:51+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Inquirer",
-     "link": "https://globalnation.inquirer.net/348645/us-intelligence-agency-comms-network-suffers-outage",
-     "paese": "PH",
-     "lingua": "en",
-     "data": "2026-11-18T01:02:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NZZ",
-     "link": "https://www.nzz.ch/international/medien-internes-netzwerk-von-us-geheimdienst-nsa-gestoert-ld.10066947",
-     "paese": "CH",
-     "lingua": "de",
-     "data": "2026-11-18T02:45:55+00:00",
+     "data": "2026-11-19T08:16:58+00:00",
      "tipo": "giornale",
      "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 0,
-    "estero": 18,
-    "paesi_esteri": 15,
+    "estero": 5,
+    "paesi_esteri": 4,
     "continenti": {
-     "Europa": 9,
-     "Asia e Medio Oriente": 4,
-     "Americhe": 4,
-     "Oceania": 1
+     "Oceania": 2,
+     "Asia e Medio Oriente": 1,
+     "Americhe": 1,
+     "Africa": 1
     }
    },
    "punto_cieco": "italia"
@@ -2946,13 +2663,221 @@
    "punto_cieco": "italia"
   },
   {
+   "id": "4bd7f95852",
+   "titolo": "Interruzione della rete di comunicazione classificata della NSA statunitense, limitate le comunicazioni intern",
+   "lingua": "en",
+   "categoria": "Tecnologia e crypto",
+   "curiosita": false,
+   "sezione": "Tecnologia",
+   "calore": 44,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "Mint",
+    "data": "2026-11-17T18:49:59+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.livemint.com/news/us-news/us-electronic-spy-agency-suffers-classified-network-outage-11794941399379.html"
+   },
+   "conferma": {
+    "fonte": "RTBF",
+    "data": "2026-11-17T19:00:10+00:00",
+    "dopo_min": 10
+   },
+   "curva": [
+    1,
+    11,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AR",
+    "AT",
+    "BE",
+    "CH",
+    "CR",
+    "DE",
+    "FR",
+    "IN",
+    "NZ",
+    "QA",
+    "SG",
+    "US"
+   ],
+   "lingue": [
+    "de",
+    "en",
+    "es",
+    "fr"
+   ],
+   "n_fonti": 14,
+   "prima_segnalazione": {
+    "fonte": "Mint",
+    "paese": "IN",
+    "data": "2026-11-17T18:49:59+00:00"
+   },
+   "aggiornata": "2026-11-18T02:45:55+00:00",
+   "fonti": [
+    {
+     "fonte": "Mint",
+     "link": "https://www.livemint.com/news/us-news/us-electronic-spy-agency-suffers-classified-network-outage-11794941399379.html",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T18:49:59+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "RTBF",
+     "link": "https://www.rtbf.be/article/le-reseau-de-communication-interne-de-l-agence-americaine-de-renseignement-hors-service-11817057",
+     "paese": "BE",
+     "lingua": "fr",
+     "data": "2026-11-17T19:00:10+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Der Standard",
+     "link": "https://www.derstandard.at/story/3000000349745/internes-kommunikationsnetz-des-us-geheimdienstes-nsa-ausgefallen?ref=rss",
+     "paese": "AT",
+     "lingua": "de",
+     "data": "2026-11-17T19:15:15+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "La Nación (Costa Rica)",
+     "link": "https://www.nacion.com/el-mundo/ciberataque-o-falla-tecnica-la-misteriosa-caida-de/ZUV7A5R7RJDBFKCGAYP2HXWZ6A/story/",
+     "paese": "CR",
+     "lingua": "es",
+     "data": "2026-11-17T19:40:02+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Handelsblatt",
+     "link": "https://www.handelsblatt.com/politik/international/technik-internes-netzwerk-von-us-geheimdienst-nsa-gestoert/100270731.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T19:47:06+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Stuff",
+     "link": "https://www.stuff.co.nz/world-news/361060530/us-spy-agencys-highly-classified-communications-network-goes-down",
+     "paese": "NZ",
+     "lingua": "en",
+     "data": "2026-11-17T19:54:33+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Der Spiegel",
+     "link": "https://www.spiegel.de/ausland/nsa-net-internes-netzwerk-von-us-geheimdienst-nsa-gestoert-a-b392dbb8-8224-430f-a1e7-0e7ccd7a3101#ref=rss",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T20:10:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Ouest-France",
+     "link": "https://www.ouest-france.fr/monde/etats-unis/aux-etats-unis-des-systemes-internes-de-lagence-de-renseignement-americaine-nsa-affectes-lors-dune-maintenance-1ed33296-e2c4-11f1-a3b1-0c6de532ce7d?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T20:37:58+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/estados-unidos/2026/11/17/la-red-clasificada-de-la-agencia-de-seguridad-nacional-de-eeuu-sufre-una-caida-y-deja-restringidas-las-comunicaciones-internas/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T21:04:27+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Straits Times",
+     "link": "https://www.straitstimes.com/world/united-states/classified-us-national-security-communications-network-hit-by-outage-nsa",
+     "paese": "SG",
+     "lingua": "en",
+     "data": "2026-11-17T22:00:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "France Info",
+     "link": "https://www.franceinfo.fr/monde/usa/des-systemes-internes-de-la-nsa-l-agence-americaine-de-renseignement-affectes-durant-une-operation-de-maintenance_8287238.html#xtor=RSS-3-[lestitres]",
+     "paese": "FR",
+     "lingua": "en",
+     "data": "2026-11-17T22:23:53+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Al Jazeera",
+     "link": "https://www.aljazeera.com/video/newsfeed/2026/11/17/top-spy-agency-suffers-network-outage-the-latest-us-technical-failure?traffic_source=rss",
+     "paese": "QA",
+     "lingua": "en",
+     "data": "2026-11-17T23:19:12+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "CBS News",
+     "link": "https://www.cbsnews.com/news/nsa-network-down-classified-fort-meade/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-18T00:22:51+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NZZ",
+     "link": "https://www.nzz.ch/international/medien-internes-netzwerk-von-us-geheimdienst-nsa-gestoert-ld.10066947",
+     "paese": "CH",
+     "lingua": "de",
+     "data": "2026-11-18T02:45:55+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 14,
+    "paesi_esteri": 12,
+    "continenti": {
+     "Europa": 7,
+     "Asia e Medio Oriente": 3,
+     "Americhe": 3,
+     "Oceania": 1
+    }
+   },
+   "punto_cieco": "italia"
+  },
+  {
    "id": "5a8c2b6812",
    "titolo": "Hendrik Holt, indagato per truffa nell'eolico, dice di trovarsi a piede libero a Dubai",
    "lingua": "de",
    "categoria": "Altro",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 44,
+   "calore": 20,
    "stato": "confermato",
    "attendibilita": 52,
    "livello": "Prime conferme",
@@ -3027,7 +2952,8 @@
      "Europa": 2
     }
    },
-   "punto_cieco": ""
+   "punto_cieco": "",
+   "archivio": true
   },
   {
    "id": "d58dc8a18d",
@@ -182389,7 +182315,7 @@
   }
  ],
  "dati": {
-  "articoli_analizzati": 43011,
+  "articoli_analizzati": 43008,
   "storie": 400,
   "paesi_coperti": 94,
   "fonti_diverse": 260,
@@ -182397,77 +182323,77 @@
    [
     "AR",
     "Argentina",
-    5829
+    5836
    ],
    [
     "BR",
     "Brasile",
-    3765
+    3769
    ],
    [
     "DE",
     "Germania",
-    3658
-   ],
-   [
-    "IT",
-    "Italia",
-    2944
+    3657
    ],
    [
     "FR",
     "Francia",
-    2935
+    2940
+   ],
+   [
+    "IT",
+    "Italia",
+    2940
    ],
    [
     "US",
     "Stati Uniti",
-    2542
+    2547
    ],
    [
     "GB",
     "Regno Unito",
-    1628
+    1634
    ],
    [
     "ES",
     "Spagna",
-    1518
+    1508
    ],
    [
     "PY",
     "Paraguay",
-    1205
+    1212
    ],
    [
     "IN",
     "India",
-    1020
+    1023
    ],
    [
     "NG",
     "Nigeria",
-    1003
+    993
    ],
    [
     "AU",
     "Australia",
-    931
+    930
    ],
    [
     "PH",
     "Filippine",
-    703
+    707
    ],
    [
     "MX",
     "Messico",
-    673
+    669
    ],
    [
     "CO",
     "Colombia",
-    634
+    629
    ],
    [
     "BE",
@@ -182477,22 +182403,27 @@
    [
     "SG",
     "Singapore",
-    446
+    447
    ],
    [
     "EC",
     "Ecuador",
-    446
+    443
    ],
    [
     "GH",
     "Ghana",
-    398
+    396
    ],
    [
     "CA",
     "Canada",
-    388
+    390
+   ],
+   [
+    "NZ",
+    "Nuova Zelanda",
+    386
    ],
    [
     "PT",
@@ -182500,14 +182431,9 @@
     386
    ],
    [
-    "NZ",
-    "Nuova Zelanda",
-    384
-   ],
-   [
     "RU",
     "Russia",
-    384
+    385
    ],
    [
     "JP",
@@ -182517,45 +182443,45 @@
    [
     "SE",
     "Svezia",
-    364
+    365
    ]
   ],
   "per_lingua": [
    [
     "en",
-    16583
+    16593
    ],
    [
     "es",
-    10244
+    10238
    ],
    [
     "pt",
-    4151
+    4155
    ],
    [
     "de",
-    3958
+    3955
    ],
    [
     "fr",
-    3192
+    3196
    ],
    [
     "it",
-    2740
+    2736
    ],
    [
     "nl",
-    404
+    403
    ],
    [
     "pl",
-    341
+    342
    ],
    [
     "sv",
-    228
+    229
    ],
    [
     "fi",
@@ -182566,14 +182492,14 @@
     199
    ],
    [
-    "da",
-    193
+    "el",
+    184
    ]
   ],
   "per_categoria": [
    [
     "Altro",
-    175
+    170
    ],
    [
     "Esteri e conflitti",
@@ -182581,11 +182507,11 @@
    ],
    [
     "Politica",
-    64
+    63
    ],
    [
     "Cronaca",
-    24
+    25
    ],
    [
     "Tecnologia e crypto",
@@ -182593,151 +182519,151 @@
    ],
    [
     "Economia",
-    11
+    13
    ],
    [
     "Sport",
-    10
+    13
    ],
    [
     "Società",
-    9
+    10
    ],
    [
     "Clima e ambiente",
-    4
+    3
    ]
   ],
   "fonti_top": [
    [
     "Infobae",
-    4490
+    4499
    ],
    [
     "G1",
-    1795
+    1801
    ],
    [
     "ABC Color",
-    1205
+    1212
    ],
    [
     "New York Post",
-    794
+    801
    ],
    [
     "Die Zeit",
-    758
-   ],
-   [
-    "O Globo",
-    722
+    761
    ],
    [
     "BFMTV",
-    721
+    724
+   ],
+   [
+    "O Globo",
+    723
    ],
    [
     "La Nación",
-    698
+    702
    ],
    [
     "El Universal",
-    673
+    669
    ],
    [
     "Globo Esporte",
-    585
+    579
    ],
    [
     "Der Tagesspiegel",
-    571
+    568
    ],
    [
     "Semana",
-    569
+    564
    ]
   ],
   "per_ora": [
    [
     23,
-    1031
+    976
    ],
    [
     22,
-    855
+    848
    ],
    [
     21,
-    773
+    762
    ],
    [
     20,
-    778
+    742
    ],
    [
     19,
-    700
+    685
    ],
    [
     18,
-    618
+    653
    ],
    [
     17,
-    542
+    492
    ],
    [
     16,
-    436
+    448
    ],
    [
     15,
-    547
+    539
    ],
    [
     14,
-    626
+    645
    ],
    [
     13,
-    729
+    741
    ],
    [
     12,
-    797
+    812
    ],
    [
     11,
-    753
+    771
    ],
    [
     10,
-    801
+    845
    ],
    [
     9,
-    982
+    959
    ],
    [
     8,
-    1071
+    1152
    ],
    [
     7,
-    1245
+    1226
    ],
    [
     6,
-    1143
+    1149
    ],
    [
     5,
-    1140
+    1130
    ],
    [
     4,
-    1188
+    1208
    ],
    [
     3,
@@ -182745,15 +182671,15 @@
    ],
    [
     2,
-    1197
+    1182
    ],
    [
     1,
-    1195
+    1142
    ],
    [
     0,
-    1002
+    1022
    ]
   ],
   "approvate_non_sul_sito": {
@@ -182768,15 +182694,13 @@
  "errori_fonti": [
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
-  "VG: 429 Client Error: Too Many Requests for url: https://www.vg.no/rss/feed/",
+  "TVN24: 403 Client Error: Forbidden for url: https://tvn24.pl/najnowsze.xml",
   "The Slovenia Times: 403 Client Error: Forbidden for url: https://sloveniatimes.com/feed",
-  "TASS: HTTPSConnectionPool(host='tass.com', port=443): Max retries exceeded with url: /rss/v2.xml (Caused by ConnectTimeoutError(<HTTPSConnection(host='tass.com', port=443) at 0x7956be61f4d0>, 'Connection to tass.com timed out. (connect timeout=20)'))",
-  "Malay Mail: 404 Client Error: Not Found for url: https://www.malaymail.com/feed/rss/malaysia",
   "Khmer Times: 403 Client Error: Forbidden for url: https://www.khmertimeskh.com/feed/",
   "The Herald: 403 Client Error: Forbidden for url: https://www.heraldonline.co.zw/feed/",
   "La Prensa (Panama): 403 Client Error: Forbidden for url: https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
-  "GDELT moldova: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:moldova&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT albania: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:albania&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT bosniaandherzegovina: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:bosniaandherzegovina&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
+  "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT syria: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:syria&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
