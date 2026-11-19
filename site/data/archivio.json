@@ -11,30 +11,30 @@
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Hindustan Times",
-   "data": "2026-11-17T18:04:46+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://www.hindustantimes.com/world-news/us-news/nvidia-stock-falls-as-jensen-huang-signals-willingness-to-return-as-ceo-101794937274435.html"
-  },
-  "conferma": {
    "fonte": "CNBC",
    "data": "2026-11-17T18:21:03+00:00",
-   "dopo_min": 16
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-statement.html"
+  },
+  "conferma": {
+   "fonte": "Inquirer",
+   "data": "2026-11-17T18:30:31+00:00",
+   "dopo_min": 9
   },
   "curva": [
    1,
-   30,
-   45,
-   45,
-   45,
-   46,
-   46,
-   46,
-   46,
-   46,
-   46,
-   46
+   37,
+   47,
+   47,
+   47,
+   48,
+   48,
+   48,
+   48,
+   48,
+   48,
+   48
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -46,6 +46,7 @@
    "CH",
    "CO",
    "DE",
+   "DK",
    "EG",
    "ES",
    "FR",
@@ -57,6 +58,7 @@
    "IN",
    "IT",
    "JM",
+   "MX",
    "NL",
    "NZ",
    "PH",
@@ -65,6 +67,7 @@
    "US"
   ],
   "lingue": [
+   "da",
    "de",
    "en",
    "es",
@@ -72,23 +75,14 @@
    "it",
    "nl"
   ],
-  "n_fonti": 46,
+  "n_fonti": 48,
   "prima_segnalazione": {
-   "fonte": "Hindustan Times",
-   "paese": "IN",
-   "data": "2026-11-17T18:04:46+00:00"
+   "fonte": "CNBC",
+   "paese": "US",
+   "data": "2026-11-17T18:21:03+00:00"
   },
   "aggiornata": "2026-11-18T13:41:19+00:00",
   "fonti": [
-   {
-    "fonte": "Hindustan Times",
-    "link": "https://www.hindustantimes.com/world-news/us-news/nvidia-stock-falls-as-jensen-huang-signals-willingness-to-return-as-ceo-101794937274435.html",
-    "paese": "IN",
-    "lingua": "en",
-    "data": "2026-11-17T18:04:46+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "CNBC",
     "link": "https://www.cnbc.com/2026/11/17/nvidia-jensen-huang-statement.html",
@@ -216,11 +210,29 @@
     "origine": "rss"
    },
    {
+    "fonte": "Hindustan Times",
+    "link": "https://www.hindustantimes.com/world-news/us-news/nvidia-faces-sec-probe-after-jensen-huang-s-resignation-report-101794950017394.html",
+    "paese": "IN",
+    "lingua": "en",
+    "data": "2026-11-17T21:16:29+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "New York Post",
     "link": "https://nypost.com/2026/11/17/business/nvidia-reports-strong-earnings-as-embattled-ai-giant-reels-from-jensen-huang-scandal/",
     "paese": "US",
     "lingua": "en",
     "data": "2026-11-17T21:35:59+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "The Hill",
+    "link": "https://thehill.com/business/6226369-democrats-oppose-huang-nvidia-return/",
+    "paese": "US",
+    "lingua": "en",
+    "data": "2026-11-17T21:36:42+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -248,6 +260,15 @@
     "paese": "BE",
     "lingua": "nl",
     "data": "2026-11-17T21:41:14+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "DR",
+    "link": "https://www.dr.dk/nyheder/seneste/nvidia-fordobler-omsaetning-i-tredje-kvartal",
+    "paese": "DK",
+    "lingua": "da",
+    "data": "2026-11-17T21:41:20+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -306,11 +327,11 @@
     "origine": "rss"
    },
    {
-    "fonte": "The Hill",
-    "link": "https://thehill.com/business/6226457-nvidia-q3-earnings-strong/",
-    "paese": "US",
-    "lingua": "en",
-    "data": "2026-11-17T22:11:53+00:00",
+    "fonte": "El Universal",
+    "link": "https://www.eluniversal.com.mx/mundo/nvidia-supera-expectativas-en-su-facturacion-del-tercer-trimestre-ingresos-alcanzan-los-115-mil-mdd-pese-a-escandalo-de-jensen-huang/",
+    "paese": "MX",
+    "lingua": "es",
+    "data": "2026-11-17T22:08:39+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -331,33 +352,15 @@
     "data": "2026-11-17T22:17:00+00:00",
     "tipo": "giornale",
     "origine": "rss"
-   },
-   {
-    "fonte": "ABC News",
-    "link": "https://abcnews.com/Business/nvidia-forms-national-security-committee-feds-probe-company/story?id=138206932",
-    "paese": "US",
-    "lingua": "en",
-    "data": "2026-11-17T22:22:41+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Le Figaro",
-    "link": "https://www.lefigaro.fr/secteur/high-tech/nvidia-le-conseil-d-administration-ne-prevoit-pas-de-reintegrer-jensen-huang-20261117",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-17T22:23:22+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 4,
-   "estero": 42,
-   "paesi_esteri": 22,
+   "estero": 44,
+   "paesi_esteri": 24,
    "continenti": {
-    "Europa": 18,
-    "Americhe": 15,
+    "Europa": 19,
+    "Americhe": 16,
     "Asia e Medio Oriente": 7,
     "Oceania": 4,
     "Africa": 2
@@ -1829,7 +1832,7 @@
   "categoria": "Società",
   "curiosita": false,
   "sezione": "Società",
-  "calore": 52,
+  "calore": 51,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -36959,7 +36962,7 @@
    3,
    4,
    4,
-   6,
+   7,
    8,
    9,
    9
@@ -58654,55 +58657,65 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 46,
+  "calore": 61,
   "stato": "confermato",
-  "attendibilita": 74,
+  "attendibilita": 84,
   "livello": "Confermata",
   "prima": {
-   "fonte": "Sydney Morning Herald",
-   "data": "2026-11-18T12:59:00+00:00",
+   "fonte": "OC Media",
+   "data": "2026-11-18T08:32:19+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.smh.com.au/national/superquiz-thursday-november-19-20261118-p61f8t.html?ref=rss&utm_medium=rss&utm_source=rss_feed"
+   "link": "https://oc-media.org/wednesday-18-november-2026/"
   },
   "conferma": {
-   "fonte": "The Age",
+   "fonte": "Sydney Morning Herald",
    "data": "2026-11-18T12:59:00+00:00",
-   "dopo_min": 0
+   "dopo_min": 267
   },
   "curva": [
-   2,
-   2,
-   2,
-   2,
-   2,
-   2,
-   2,
-   2,
+   1,
+   1,
+   3,
    4,
    4,
    4,
-   4
+   4,
+   4,
+   5,
+   5,
+   5,
+   5
   ],
   "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
    "AU",
+   "CU",
    "GE",
    "GH"
   ],
   "lingue": [
    "en"
   ],
-  "n_fonti": 4,
+  "n_fonti": 5,
   "prima_segnalazione": {
-   "fonte": "Sydney Morning Herald",
-   "paese": "AU",
-   "data": "2026-11-18T12:59:00+00:00"
+   "fonte": "OC Media",
+   "paese": "GE",
+   "data": "2026-11-18T08:32:19+00:00"
   },
-  "aggiornata": "2026-11-19T12:59:00+00:00",
+  "aggiornata": "2026-11-19T15:39:16+00:00",
   "fonti": [
+   {
+    "fonte": "OC Media",
+    "link": "https://oc-media.org/wednesday-18-november-2026/",
+    "paese": "GE",
+    "lingua": "en",
+    "data": "2026-11-18T08:32:19+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
    {
     "fonte": "Sydney Morning Herald",
     "link": "https://www.smh.com.au/national/superquiz-thursday-november-19-20261118-p61f8t.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
@@ -58722,6 +58735,15 @@
     "origine": "rss"
    },
    {
+    "fonte": "Havana Times",
+    "link": "https://havanatimes.org/news/international-news-briefs-for-wednesday-november-18-2026/",
+    "paese": "CU",
+    "lingua": "en",
+    "data": "2026-11-18T16:02:24+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
     "fonte": "MyJoyOnline",
     "link": "https://www.myjoyonline.com/todays-front-pages-thursday-november-19-2026/",
     "paese": "GH",
@@ -58729,28 +58751,20 @@
     "data": "2026-11-19T08:16:58+00:00",
     "tipo": "giornale",
     "origine": "rss"
-   },
-   {
-    "fonte": "OC Media",
-    "link": "https://oc-media.org/thursday-19-november-2026/",
-    "paese": "GE",
-    "lingua": "en",
-    "data": "2026-11-19T08:40:12+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 0,
-   "estero": 4,
-   "paesi_esteri": 3,
+   "estero": 5,
+   "paesi_esteri": 4,
    "continenti": {
     "Oceania": 2,
     "Asia e Medio Oriente": 1,
+    "Americhe": 1,
     "Africa": 1
    }
   },
-  "punto_cieco": ""
+  "punto_cieco": "italia"
  },
  "6a60c2b679": {
   "id": "6a60c2b679",
@@ -58946,19 +58960,19 @@
   },
   "curva": [
    1,
-   5,
+   4,
+   6,
    7,
-   8,
    9,
-   10,
-   10,
-   10,
-   10,
+   9,
+   9,
+   9,
+   9,
    12,
-   22,
-   23
+   20,
+   22
   ],
-  "crescita": 0,
+  "crescita": 1,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
@@ -58968,32 +58982,34 @@
    "BE",
    "BR",
    "CH",
+   "DE",
    "EC",
    "ES",
    "FR",
-   "GB",
    "GH",
    "IT",
    "JP",
    "MA",
+   "NA",
    "NG",
    "PY",
    "QA"
   ],
   "lingue": [
+   "de",
    "en",
    "es",
    "fr",
    "it",
    "pt"
   ],
-  "n_fonti": 23,
+  "n_fonti": 22,
   "prima_segnalazione": {
    "fonte": "Il Fatto Quotidiano",
    "paese": "IT",
    "data": "2026-11-17T18:49:09+00:00"
   },
-  "aggiornata": "2026-11-19T15:19:41+00:00",
+  "aggiornata": "2026-11-19T18:11:00+00:00",
   "fonti": [
    {
     "fonte": "Il Fatto Quotidiano",
@@ -59028,15 +59044,6 @@
     "paese": "EC",
     "lingua": "es",
     "data": "2026-11-17T21:27:49+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "El Mundo",
-    "link": "https://www.elmundo.es/deportes/futbol/2026/11/17/6afc9bb021efa01c438b45ad.html",
-    "paese": "ES",
-    "lingua": "es",
-    "data": "2026-11-17T21:48:32+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -59104,15 +59111,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "Sky News",
-    "link": "https://news.sky.com/story/fifa-confirms-candidates-to-stand-against-gianni-infantino-in-presidential-election-13613862",
-    "paese": "GB",
-    "lingua": "en",
-    "data": "2026-11-19T09:32:00+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "France 24",
     "link": "https://www.france24.com/en/sport/20261119-infantino-to-face-france-s-diallo-and-japan-s-tashima-in-fifa-presidential-election",
     "paese": "FR",
@@ -59127,6 +59125,15 @@
     "paese": "FR",
     "lingua": "fr",
     "data": "2026-11-19T09:48:13+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "El Mundo",
+    "link": "https://www.elmundo.es/deportes/futbol/2026/11/19/6afec25be85ece240e8b457a.html",
+    "paese": "ES",
+    "lingua": "es",
+    "data": "2026-11-19T09:51:34+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -59176,15 +59183,6 @@
     "origine": "rss"
    },
    {
-    "fonte": "Mundo Deportivo",
-    "link": "https://www.mundodeportivo.com/futbol/20261119/1004252962/uefa-acusa-fifa-carta-no-darle-acceso-documentos-plan-infantino-privatizar-mundial.html",
-    "paese": "ES",
-    "lingua": "en",
-    "data": "2026-11-19T12:34:10+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
     "fonte": "Vanguard",
     "link": "https://www.vanguardngr.com/2026/11/fifa-chief-infantino-faces-challenge-from-frances-diallo-japans-tashima/",
     "paese": "NG",
@@ -59194,23 +59192,32 @@
     "origine": "rss"
    },
    {
-    "fonte": "Olé",
-    "link": "https://www.ole.com.ar/futbol-internacional/uefa-cuestiono-fifa-falta-respuestas-proyecto-infantino-vender-derechos-mundial_0_viLJwCoOZc.html",
-    "paese": "AR",
-    "lingua": "es",
-    "data": "2026-11-19T15:19:41+00:00",
+    "fonte": "The Namibian",
+    "link": "https://www.namibian.com.na/fifa-chief-infantino-faces-challenge-from-frances-diallo-japans-tashima/",
+    "paese": "NA",
+    "lingua": "en",
+    "data": "2026-11-19T16:33:20+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Der Spiegel",
+    "link": "https://www.spiegel.de/sport/fifa-spitze-philippe-diallo-und-kohzo-tashima-fordern-infantino-heraus-a-1a75be7e-d1c7-44de-b757-40e59817be63#ref=rss",
+    "paese": "DE",
+    "lingua": "de",
+    "data": "2026-11-19T18:11:00+00:00",
     "tipo": "giornale",
     "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 1,
-   "estero": 22,
-   "paesi_esteri": 16,
+   "estero": 21,
+   "paesi_esteri": 17,
    "continenti": {
-    "Europa": 11,
-    "Americhe": 5,
-    "Africa": 3,
+    "Europa": 10,
+    "Africa": 4,
+    "Americhe": 4,
     "Asia e Medio Oriente": 3,
     "Oceania": 1
    }
@@ -120056,32 +120063,32 @@
   "categoria": "Clima e ambiente",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 61,
+  "calore": 57,
   "stato": "confermato",
   "attendibilita": 84,
   "livello": "Confermata",
   "prima": {
    "fonte": "Le Monde",
-   "data": "2026-11-17T18:07:52+00:00",
+   "data": "2026-11-18T05:24:58+00:00",
    "tipo": "giornale",
    "veloce": false,
-   "link": "https://www.lemonde.fr/planete/article/2026/11/17/pluie-et-inondations-le-pas-de-calais-et-la-somme-places-en-vigilance-orange-mardi-a-partir-de-23-heures_6813028_3244.html"
+   "link": "https://www.lemonde.fr/planete/article/2026/11/18/pluie-et-inondations-le-pas-de-calais-et-la-somme-places-en-vigilance-orange_6813028_3245.html"
   },
   "conferma": {
    "fonte": "Ouest-France",
    "data": "2026-11-18T05:38:56+00:00",
-   "dopo_min": 691
+   "dopo_min": 14
   },
   "curva": [
    1,
-   1,
-   1,
-   2,
+   3,
    3,
    3,
    4,
    4,
    4,
+   4,
+   5,
    5,
    5,
    5
@@ -120100,16 +120107,16 @@
   "prima_segnalazione": {
    "fonte": "Le Monde",
    "paese": "FR",
-   "data": "2026-11-17T18:07:52+00:00"
+   "data": "2026-11-18T05:24:58+00:00"
   },
   "aggiornata": "2026-11-19T16:56:37+00:00",
   "fonti": [
    {
     "fonte": "Le Monde",
-    "link": "https://www.lemonde.fr/planete/article/2026/11/17/pluie-et-inondations-le-pas-de-calais-et-la-somme-places-en-vigilance-orange-mardi-a-partir-de-23-heures_6813028_3244.html",
+    "link": "https://www.lemonde.fr/planete/article/2026/11/18/pluie-et-inondations-le-pas-de-calais-et-la-somme-places-en-vigilance-orange_6813028_3245.html",
     "paese": "FR",
     "lingua": "fr",
-    "data": "2026-11-17T18:07:52+00:00",
+    "data": "2026-11-18T05:24:58+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -147852,7 +147859,7 @@
   "categoria": "Politica",
   "curiosita": false,
   "sezione": "Politica",
-  "calore": 76,
+  "calore": 75,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -151755,7 +151762,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 44,
+  "calore": 43,
   "stato": "confermato",
   "attendibilita": 70,
   "livello": "Confermata",
@@ -151782,7 +151789,7 @@
    3,
    3,
    3,
-   3,
+   4,
    4
   ],
   "crescita": 0,
@@ -154189,7 +154196,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 72,
+  "calore": 71,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -155034,7 +155041,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 76,
+  "calore": 75,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -156834,35 +156841,35 @@
   "categoria": "Tecnologia e crypto",
   "curiosita": false,
   "sezione": "Tecnologia",
-  "calore": 53,
+  "calore": 52,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
   "prima": {
-   "fonte": "Le Figaro",
-   "data": "2026-11-17T18:13:49+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://www.lefigaro.fr/international/le-reseau-de-communication-interne-de-la-nsa-l-agence-americaine-de-renseignement-hors-service-selon-cnn-20261117"
-  },
-  "conferma": {
    "fonte": "CBS News",
    "data": "2026-11-17T18:29:36+00:00",
-   "dopo_min": 16
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.cbsnews.com/video/classified-nsa-network-goes-down-sources-say/"
+  },
+  "conferma": {
+   "fonte": "Jamaica Observer",
+   "data": "2026-11-17T18:40:01+00:00",
+   "dopo_min": 10
   },
   "curva": [
    1,
-   16,
-   19,
-   19,
-   19,
-   19,
-   19,
-   19,
-   19,
-   19,
-   19,
-   19
+   15,
+   18,
+   18,
+   18,
+   18,
+   18,
+   18,
+   18,
+   18,
+   18,
+   18
   ],
   "crescita": 0,
   "pubblicata": true,
@@ -156890,23 +156897,14 @@
    "es",
    "fr"
   ],
-  "n_fonti": 19,
+  "n_fonti": 18,
   "prima_segnalazione": {
-   "fonte": "Le Figaro",
-   "paese": "FR",
-   "data": "2026-11-17T18:13:49+00:00"
+   "fonte": "CBS News",
+   "paese": "US",
+   "data": "2026-11-17T18:29:36+00:00"
   },
   "aggiornata": "2026-11-18T02:45:55+00:00",
   "fonti": [
-   {
-    "fonte": "Le Figaro",
-    "link": "https://www.lefigaro.fr/international/le-reseau-de-communication-interne-de-la-nsa-l-agence-americaine-de-renseignement-hors-service-selon-cnn-20261117",
-    "paese": "FR",
-    "lingua": "fr",
-    "data": "2026-11-17T18:13:49+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "CBS News",
     "link": "https://www.cbsnews.com/video/classified-nsa-network-goes-down-sources-say/",
@@ -157072,10 +157070,10 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 19,
+   "estero": 18,
    "paesi_esteri": 15,
    "continenti": {
-    "Europa": 10,
+    "Europa": 9,
     "Asia e Medio Oriente": 4,
     "Americhe": 4,
     "Oceania": 1
@@ -162500,21 +162498,21 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 49,
+  "calore": 44,
   "stato": "confermato",
-  "attendibilita": 63,
+  "attendibilita": 52,
   "livello": "Prime conferme",
   "prima": {
-   "fonte": "n-tv",
-   "data": "2026-11-17T18:14:05+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://www.n-tv.de/panorama/Windkraftbetrueger-Hendrik-Holt-in-Dubai-auf-freiem-Fuss-id31545065.html"
-  },
-  "conferma": {
    "fonte": "Der Spiegel",
    "data": "2026-11-18T19:20:00+00:00",
-   "dopo_min": 1506
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.spiegel.de/panorama/hendrik-holt-windkraftbetrueger-ist-offenbar-in-dubai-wieder-auf-freiem-fuss-a-2c40533e-c1e2-421d-a87f-0061f9d1b698#ref=rss"
+  },
+  "conferma": {
+   "fonte": "Der Standard",
+   "data": "2026-11-19T17:20:50+00:00",
+   "dopo_min": 1321
   },
   "curva": [
    1,
@@ -162523,12 +162521,12 @@
    1,
    1,
    1,
-   2,
-   2,
-   2,
-   2,
-   2,
-   3
+   1,
+   1,
+   1,
+   1,
+   1,
+   2
   ],
   "crescita": 1,
   "pubblicata": true,
@@ -162540,23 +162538,14 @@
   "lingue": [
    "de"
   ],
-  "n_fonti": 3,
+  "n_fonti": 2,
   "prima_segnalazione": {
-   "fonte": "n-tv",
+   "fonte": "Der Spiegel",
    "paese": "DE",
-   "data": "2026-11-17T18:14:05+00:00"
+   "data": "2026-11-18T19:20:00+00:00"
   },
   "aggiornata": "2026-11-19T17:20:50+00:00",
   "fonti": [
-   {
-    "fonte": "n-tv",
-    "link": "https://www.n-tv.de/panorama/Windkraftbetrueger-Hendrik-Holt-in-Dubai-auf-freiem-Fuss-id31545065.html",
-    "paese": "DE",
-    "lingua": "de",
-    "data": "2026-11-17T18:14:05+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Der Spiegel",
     "link": "https://www.spiegel.de/panorama/hendrik-holt-windkraftbetrueger-ist-offenbar-in-dubai-wieder-auf-freiem-fuss-a-2c40533e-c1e2-421d-a87f-0061f9d1b698#ref=rss",
@@ -162578,10 +162567,10 @@
   ],
   "copertura": {
    "italia": 0,
-   "estero": 3,
+   "estero": 2,
    "paesi_esteri": 2,
    "continenti": {
-    "Europa": 3
+    "Europa": 2
    }
   },
   "punto_cieco": ""
@@ -166258,7 +166247,7 @@
   "categoria": "Economia",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 67,
+  "calore": 66,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -169398,7 +169387,7 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 94,
+  "calore": 93,
   "stato": "confermato",
   "attendibilita": 99,
   "livello": "Certa",
@@ -169416,7 +169405,7 @@
   },
   "curva": [
    1,
-   7,
+   8,
    8,
    11,
    11,
@@ -171987,7 +171976,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 56,
+  "calore": 55,
   "stato": "confermato",
   "attendibilita": 93,
   "livello": "Certa",
