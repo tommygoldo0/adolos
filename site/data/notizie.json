@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-19T13:17:39.770356+00:00",
+ "aggiornato": "2026-11-19T13:33:05.532221+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -147,30 +147,30 @@
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "Hindustan Times",
-    "data": "2026-11-17T13:52:42+00:00",
+    "fonte": "El Universal",
+    "data": "2026-11-17T13:37:32+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://www.hindustantimes.com/world-news/nvidia-earnings-jensen-huang-spy-scandal-us-chip-export-curbs-china-ai-restrictions-data-centres-101794907515830.html"
+    "link": "https://www.eluniversal.com.mx/mundo/nvidia-presenta-primeros-resultados-tras-escandalo-de-supuesto-espionaje-inversores-esperan-que-auge-de-la-ia-pueda-resistir-la-crisis/"
    },
    "conferma": {
-    "fonte": "TechCrunch",
-    "data": "2026-11-17T14:05:30+00:00",
-    "dopo_min": 13
+    "fonte": "Hindustan Times",
+    "data": "2026-11-17T13:52:42+00:00",
+    "dopo_min": 15
    },
    "curva": [
     1,
-    51,
-    71,
-    80,
-    80,
-    80,
-    81,
-    81,
-    81,
-    81,
-    81,
-    81
+    54,
+    74,
+    87,
+    87,
+    87,
+    88,
+    88,
+    88,
+    88,
+    88,
+    88
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -181,10 +181,12 @@
     "AT",
     "AU",
     "BE",
+    "CA",
     "CH",
     "CO",
     "DE",
     "DK",
+    "EC",
     "EG",
     "ES",
     "FI",
@@ -227,14 +229,23 @@
     "it",
     "nl"
    ],
-   "n_fonti": 81,
+   "n_fonti": 88,
    "prima_segnalazione": {
-    "fonte": "Hindustan Times",
-    "paese": "IN",
-    "data": "2026-11-17T13:52:42+00:00"
+    "fonte": "El Universal",
+    "paese": "MX",
+    "data": "2026-11-17T13:37:32+00:00"
    },
    "aggiornata": "2026-11-18T17:28:58+00:00",
    "fonti": [
+    {
+     "fonte": "El Universal",
+     "link": "https://www.eluniversal.com.mx/mundo/nvidia-presenta-primeros-resultados-tras-escandalo-de-supuesto-espionaje-inversores-esperan-que-auge-de-la-ia-pueda-resistir-la-crisis/",
+     "paese": "MX",
+     "lingua": "es",
+     "data": "2026-11-17T13:37:32+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
     {
      "fonte": "Hindustan Times",
      "link": "https://www.hindustantimes.com/world-news/nvidia-earnings-jensen-huang-spy-scandal-us-chip-export-curbs-china-ai-restrictions-data-centres-101794907515830.html",
@@ -263,15 +274,6 @@
      "origine": "rss"
     },
     {
-     "fonte": "FAZ",
-     "link": "https://www.faz.net/aktuell/wirtschaft/unternehmen/jensen-huang-elon-musk-und-andere-tech-promis-fordern-nvidia-rueckkehr-201687756.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T14:50:21+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "Deutsche Welle",
      "link": "https://www.dw.com/en/nvidia-forms-national-security-committee-after-huang-affair/a-79970447?maca=en-rss-en-all-1573-rdf",
      "paese": "DE",
@@ -290,11 +292,11 @@
      "origine": "rss"
     },
     {
-     "fonte": "Der Spiegel",
-     "link": "https://www.spiegel.de/wirtschaft/unternehmen/nvidia-warum-die-tech-bosse-jensen-huangs-rueckkehr-fordern-a-7c966f6a-6430-47e6-b5f4-edb6202a2617#ref=rss",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T15:03:00+00:00",
+     "fonte": "ABC Color",
+     "link": "https://www.abc.com.py/internacionales/2026/11/17/wall-street-abre-en-rojo-a-la-espera-de-los-resultados-de-nvidia/",
+     "paese": "PY",
+     "lingua": "es",
+     "data": "2026-11-17T15:00:10+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -344,20 +346,29 @@
      "origine": "rss"
     },
     {
+     "fonte": "The Hill",
+     "link": "https://thehill.com/policy/technology/6225075-nvidia-counsel-teter-jensen-huang-testimony/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T15:43:27+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/america/agencias/2026/11/17/wall-street-abre-en-rojo-a-la-espera-de-los-resultados-de-nvidia/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T15:45:33+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "Le Figaro",
      "link": "https://www.lefigaro.fr/secteur/high-tech/affaire-nvidia-l-ex-patron-jensen-huang-entendu-par-le-congres-americain-le-1er-decembre-20261117",
      "paese": "FR",
      "lingua": "fr",
      "data": "2026-11-17T15:51:07+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Hill",
-     "link": "https://thehill.com/homenews/house/6216614-jensen-huang-congress-testimony/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T15:53:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -416,11 +427,11 @@
      "origine": "rss"
     },
     {
-     "fonte": "NZZ",
-     "link": "https://www.nzz.ch/technologie/folgen-aus-der-affaere-huang-die-usa-schraenken-den-handel-mit-computerchips-von-nvidia-weiter-ein-ld.10062950",
-     "paese": "CH",
-     "lingua": "de",
-     "data": "2026-11-17T16:16:36+00:00",
+     "fonte": "Semana",
+     "link": "https://www.semana.com/mundo/articulo/jensen-huang-ex-ceo-de-nvidia-rompe-su-silencio-tras-escandalo-esto-dijo/202604/",
+     "paese": "CO",
+     "lingua": "es",
+     "data": "2026-11-17T16:16:04+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -495,27 +506,19 @@
      "data": "2026-11-17T16:45:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
-    },
-    {
-     "fonte": "la Repubblica",
-     "link": "https://www.repubblica.it/economia/2026/11/17/news/nvidia_huang_tornare_amministratore_scandalo_amante_spia_cina_scuse-425730193/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T16:46:18+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 8,
-    "estero": 73,
-    "paesi_esteri": 37,
+    "estero": 80,
+    "paesi_esteri": 39,
     "continenti": {
-     "Europa": 41,
-     "Americhe": 19,
+     "Europa": 42,
+     "Americhe": 24,
      "Asia e Medio Oriente": 13,
      "Oceania": 5,
-     "Africa": 3
+     "Africa": 3,
+     "Altro": 1
     }
    },
    "punto_cieco": ""
@@ -546,16 +549,16 @@
    "curva": [
     1,
     26,
-    32,
-    34,
+    33,
     35,
-    37,
-    38,
-    38,
-    38,
-    38,
-    38,
-    38
+    36,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -578,6 +581,7 @@
     "IT",
     "MX",
     "PH",
+    "PL",
     "PY",
     "RS",
     "SG",
@@ -589,9 +593,10 @@
     "es",
     "fr",
     "it",
+    "pl",
     "pt"
    ],
-   "n_fonti": 38,
+   "n_fonti": 39,
    "prima_segnalazione": {
     "fonte": "Egypt Independent",
     "paese": "EG",
@@ -834,6 +839,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "TVN24",
+     "link": "https://tvn24.pl/kultura-i-styl/george-lazenby-najstarszy-zyjacy-james-bond-zwrocil-sie-do-nowego-bonda-roberta-pattinsona-st9344140?source=rss",
+     "paese": "PL",
+     "lingua": "pl",
+     "data": "2026-11-17T19:54:34+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "Le Figaro",
      "link": "https://www.lefigaro.fr/cinema/robert-pattinson-sera-t-il-un-bon-james-bond-le-verdict-de-trois-specialistes-de-l-agent-007-20261117",
      "paese": "FR",
@@ -859,24 +873,15 @@
      "data": "2026-11-17T20:37:28+00:00",
      "tipo": "giornale",
      "origine": "rss"
-    },
-    {
-     "fonte": "La Nación (Costa Rica)",
-     "link": "https://www.nacion.com/viva/muere-actriz-de-star-wars-james-bond-y-batman/WBIJ7RJK5ZCXDDCRVG2LOXJ7KQ/story/",
-     "paese": "CR",
-     "lingua": "es",
-     "data": "2026-11-17T21:05:50+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 5,
-    "estero": 33,
-    "paesi_esteri": 20,
+    "estero": 34,
+    "paesi_esteri": 21,
     "continenti": {
+     "Europa": 18,
      "Americhe": 17,
-     "Europa": 17,
      "Asia e Medio Oriente": 3,
      "Africa": 1
     }
@@ -895,30 +900,30 @@
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "CNA",
-    "data": "2026-11-17T13:23:29+00:00",
+    "fonte": "L'Équipe",
+    "data": "2026-11-17T13:43:12+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://www.channelnewsasia.com/sport/macron-in-his-corner-diallo-enters-fifa-race-seeking-tashima-alliance-6559381"
+    "link": "https://www.lequipe.fr/Football/Actualites/Candidat-a-la-presidence-de-la-fifa-philippe-diallo-veut-en-finir-avec-la-gouvernance-solitaire-de-gianni-infantino/1744228#at_medium=RSS_feeds"
    },
    "conferma": {
-    "fonte": "NRC",
-    "data": "2026-11-17T13:28:33+00:00",
-    "dopo_min": 5
+    "fonte": "ABC Color",
+    "data": "2026-11-17T14:00:13+00:00",
+    "dopo_min": 17
    },
    "curva": [
     1,
-    16,
+    13,
+    17,
     19,
+    21,
+    21,
+    21,
     22,
-    24,
-    24,
-    24,
-    25,
-    25,
-    25,
-    25,
-    34
+    22,
+    22,
+    22,
+    31
    ],
    "crescita": 1,
    "pubblicata": true,
@@ -942,10 +947,8 @@
     "JP",
     "MA",
     "NG",
-    "NL",
     "PY",
     "QA",
-    "SG",
     "TW"
    ],
    "lingue": [
@@ -956,41 +959,14 @@
     "it",
     "pt"
    ],
-   "n_fonti": 34,
+   "n_fonti": 31,
    "prima_segnalazione": {
-    "fonte": "CNA",
-    "paese": "SG",
-    "data": "2026-11-17T13:23:29+00:00"
+    "fonte": "L'Équipe",
+    "paese": "FR",
+    "data": "2026-11-17T13:43:12+00:00"
    },
    "aggiornata": "2026-11-19T12:57:21+00:00",
    "fonti": [
-    {
-     "fonte": "CNA",
-     "link": "https://www.channelnewsasia.com/sport/macron-in-his-corner-diallo-enters-fifa-race-seeking-tashima-alliance-6559381",
-     "paese": "SG",
-     "lingua": "en",
-     "data": "2026-11-17T13:23:29+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NRC",
-     "link": "https://www.nrc.nl/nieuws/2026/11/17/op-de-valreep-vindt-uefa-toch-een-uitdager-voor-fifa-baas-infantino-maakt-de-relatief-onbekende-philippe-diallo-nog-kans-a4941090",
-     "paese": "NL",
-     "lingua": "en",
-     "data": "2026-11-17T13:28:33+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Le Figaro",
-     "link": "https://www.lefigaro.fr/sports/football/detroner-infantino-projet-planetaire-soutien-de-zidane-et-macron-les-verites-de-philippe-diallo-candidat-a-la-presidence-de-la-fifa-20261117",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T13:30:25+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "L'Équipe",
      "link": "https://www.lequipe.fr/Football/Actualites/Candidat-a-la-presidence-de-la-fifa-philippe-diallo-veut-en-finir-avec-la-gouvernance-solitaire-de-gianni-infantino/1744228#at_medium=RSS_feeds",
@@ -1127,6 +1103,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "Le Figaro",
+     "link": "https://www.lefigaro.fr/sports/football/election-fifa-appui-de-l-uefa-campagne-tardive-l-ombre-de-donald-trump-philippe-diallo-peut-il-battre-gianni-infantino-20261117",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T21:00:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "El Universo",
      "link": "https://eluniverso.com/deportes/futbol/gianni-infantino-philippe-diallo-y-alguien-mas-para-las-elecciones-de-la-fifa-nota/",
      "paese": "EC",
@@ -1141,15 +1126,6 @@
      "paese": "TW",
      "lingua": "en",
      "data": "2026-11-18T00:00:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Punch",
-     "link": "https://punchng.com/enugu-ndc-gov-candidate-vows-to-end-multiple-taxation/?utm_source=rss.punchng.com&utm_medium=web",
-     "paese": "NG",
-     "lingua": "en",
-     "data": "2026-11-18T00:00:09+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -1233,17 +1209,44 @@
      "data": "2026-11-19T10:42:23+00:00",
      "tipo": "giornale",
      "origine": "rss"
+    },
+    {
+     "fonte": "Al Jazeera",
+     "link": "https://www.aljazeera.com/sports/2026/11/19/fifa-confirms-diallo-tashima-as-infantinos-challengers-at-2027-election?traffic_source=rss",
+     "paese": "QA",
+     "lingua": "en",
+     "data": "2026-11-19T10:42:53+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "MyJoyOnline",
+     "link": "https://www.myjoyonline.com/infantino-to-face-frances-diallo-and-japans-tashima-in-fifa-presidential-election/",
+     "paese": "GH",
+     "lingua": "en",
+     "data": "2026-11-19T10:49:17+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Hespress English",
+     "link": "https://en.hespress.com/149459-fifa-chief-infantino-faces-challenge-from-frances-diallo-japans-tashima.html",
+     "paese": "MA",
+     "lingua": "en",
+     "data": "2026-11-19T11:34:39+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 2,
-    "estero": 32,
-    "paesi_esteri": 22,
+    "estero": 29,
+    "paesi_esteri": 20,
     "continenti": {
-     "Europa": 17,
+     "Europa": 16,
      "Americhe": 7,
-     "Asia e Medio Oriente": 5,
-     "Africa": 4,
+     "Asia e Medio Oriente": 4,
+     "Africa": 3,
      "Oceania": 1
     }
    },
@@ -1436,7 +1439,7 @@
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 94,
+   "calore": 93,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -1448,23 +1451,23 @@
     "link": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-media-reports-blasts-heard-qeshm-island"
    },
    "conferma": {
-    "fonte": "The Washington Post",
-    "data": "2026-11-17T14:26:31+00:00",
-    "dopo_min": 50
+    "fonte": "TASS",
+    "data": "2026-11-17T15:09:04+00:00",
+    "dopo_min": 93
    },
    "curva": [
     1,
-    14,
+    12,
     25,
-    29,
-    29,
-    29,
-    29,
-    29,
-    29,
-    29,
-    29,
-    29
+    28,
+    28,
+    28,
+    28,
+    28,
+    28,
+    28,
+    28,
+    28
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -1475,13 +1478,13 @@
     "ES",
     "FR",
     "GB",
-    "IL",
     "IN",
     "IS",
     "IT",
     "MX",
     "NG",
     "NL",
+    "NO",
     "PH",
     "RU",
     "SA",
@@ -1497,7 +1500,7 @@
     "it",
     "nl"
    ],
-   "n_fonti": 29,
+   "n_fonti": 28,
    "prima_segnalazione": {
     "fonte": "Middle East Eye",
     "paese": "GB",
@@ -1511,24 +1514,6 @@
      "paese": "GB",
      "lingua": "en",
      "data": "2026-11-17T13:36:31+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Washington Post",
-     "link": "https://www.washingtonpost.com/world/2026/11/17/netanyahu-is-pushing-new-iran-attack-bid-stay-power-his-rivals-warn/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T14:26:31+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Times of India",
-     "link": "https://timesofindia.indiatimes.com/india/two-indian-seafarers-hurt-1-missing-after-tanker-targeted-in-hormuz-strait/articleshow/135929328.cms",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T14:28:07+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -1641,6 +1626,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "Aftenposten",
+     "link": "https://www.aftenposten.no/verden/i/z0GxrO/amerikanske-kampfly-angrep-iransk-missilbase?utm_medium=rss",
+     "paese": "NO",
+     "lingua": "en",
+     "data": "2026-11-17T19:41:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "20 Minutes",
      "link": "https://www.20minutes.fr/monde/etats-unis/4263683-20261117-guerre-iran-etats-unis-frappe-ile-strategique-qeshm-detroit-ormuz?at_medium=display&at_campaign=149",
      "paese": "FR",
@@ -1664,6 +1658,15 @@
      "paese": "IN",
      "lingua": "en",
      "data": "2026-11-17T20:09:50+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Times of India",
+     "link": "https://timesofindia.indiatimes.com/world/middle-east/us-launches-fresh-strikes-on-iran-targets-missile-launch-site-on-qeshm-island/articleshow/135939742.cms",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T20:10:35+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -1722,15 +1725,6 @@
      "origine": "rss"
     },
     {
-     "fonte": "The Jerusalem Post",
-     "link": "https://www.jpost.com/middle-east/iran-news/article-915235",
-     "paese": "IL",
-     "lingua": "en",
-     "data": "2026-11-17T21:35:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "RÚV",
      "link": "https://www.ruv.is/frettir/erlent/2026-11-17-bandarikjaher-gerir-aras-a-qeshm-eyju-i-hormussundi-493110/",
      "paese": "IS",
@@ -1769,25 +1763,200 @@
    ],
    "copertura": {
     "italia": 4,
-    "estero": 25,
+    "estero": 24,
     "paesi_esteri": 16,
     "continenti": {
-     "Europa": 14,
-     "Asia e Medio Oriente": 8,
-     "Americhe": 6,
+     "Europa": 15,
+     "Asia e Medio Oriente": 7,
+     "Americhe": 5,
      "Africa": 1
     }
    },
    "punto_cieco": ""
   },
   {
+   "id": "efbb8d24c0",
+   "titolo": "Mosca accusa la Francia di partecipazione diretta alla guerra in Ucraina",
+   "lingua": "de",
+   "categoria": "Esteri e conflitti",
+   "curiosita": false,
+   "sezione": "Mondo",
+   "calore": 93,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "Der Tagesspiegel",
+    "data": "2026-11-17T16:01:38+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.tagesspiegel.de/internationales/verdeutlicht-russlands-unvermogen-wie-die-beschadigung-der-krim-brucke-jetzt-den-ukraine-krieg-verandern-konnte-16295454.html"
+   },
+   "conferma": {
+    "fonte": "Handelsblatt",
+    "data": "2026-11-17T17:46:54+00:00",
+    "dopo_min": 105
+   },
+   "curva": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    5,
+    8,
+    10,
+    12
+   ],
+   "crescita": 1,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AT",
+    "CH",
+    "DE"
+   ],
+   "lingue": [
+    "de"
+   ],
+   "n_fonti": 12,
+   "prima_segnalazione": {
+    "fonte": "Der Tagesspiegel",
+    "paese": "DE",
+    "data": "2026-11-17T16:01:38+00:00"
+   },
+   "aggiornata": "2026-11-19T13:17:22+00:00",
+   "fonti": [
+    {
+     "fonte": "Der Tagesspiegel",
+     "link": "https://www.tagesspiegel.de/internationales/verdeutlicht-russlands-unvermogen-wie-die-beschadigung-der-krim-brucke-jetzt-den-ukraine-krieg-verandern-konnte-16295454.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T16:01:38+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Handelsblatt",
+     "link": "https://www.handelsblatt.com/politik/international/ukraine-krim-bruecke-nach-zweitem-angriff-teilweise-eingestuerzt/27982126.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T17:46:54+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "n-tv",
+     "link": "https://www.n-tv.de/politik/Ukraine-nutzte-fliegende-Modems-fuer-Angriff-auf-Krim-Bruecke-id31550423.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-18T19:51:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ORF",
+     "link": "https://orf.at/stories/3448615/",
+     "paese": "AT",
+     "lingua": "de",
+     "data": "2026-11-18T23:01:46+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Die Zeit",
+     "link": "https://www.zeit.de/news/2026-11/19/krim-bruecke-zugverkehr-nach-erneutem-angriff-eingestellt",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-18T23:22:22+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Der Spiegel",
+     "link": "https://www.spiegel.de/ausland/ukraine-krieg-nach-erneutem-angriff-steht-zugverkehr-auf-krimbruecke-still-a-9e01117c-8373-480f-ad57-6c08a2bd1af7#ref=rss",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-19T01:50:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Süddeutsche Zeitung",
+     "link": "https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-pistorius-us-kritik-dumm-krim-terrorismus-krim-bruecke-li.3571967",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-19T02:16:57+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Tagesschau",
+     "link": "https://www.tagesschau.de/ausland/europa/krim-bruecke-zug-100.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-19T04:28:24+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Der Standard",
+     "link": "https://www.derstandard.at/jetzt/livebericht/3000000349923/trump-und-putin-fuehrten-gespraech-vor-dreiertreffen-mit-xi?ref=rss",
+     "paese": "AT",
+     "lingua": "de",
+     "data": "2026-11-19T05:50:11+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Die Welt",
+     "link": "https://www.welt.de/politik/video6afe88eb4d1895cf2a8f0846/krim-bruecke-zugverkehr-nach-erneutem-ukrainischem-angriff-vorerst-eingestellt.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-19T06:18:02+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NZZ",
+     "link": "https://www.nzz.ch/international/krieg-in-der-ukraine-zugverkehr-ueber-krim-bruecke-nach-erneutem-angriff-eingestellt-ld.10021245",
+     "paese": "CH",
+     "lingua": "de",
+     "data": "2026-11-19T12:30:19+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "FAZ",
+     "link": "https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-putin-habe-europaeer-zu-gespraechen-nach-moskau-eingeladen-faz-110683325.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-19T13:16:02+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 12,
+    "paesi_esteri": 3,
+    "continenti": {
+     "Europa": 12
+    }
+   },
+   "punto_cieco": "italia"
+  },
+  {
    "id": "4bd7f95852",
    "titolo": "Interruzione della rete di comunicazione classificata della NSA statunitense, limitate le comunicazioni intern",
-   "lingua": "it",
+   "lingua": "en",
    "categoria": "Tecnologia e crypto",
    "curiosita": false,
    "sezione": "Tecnologia",
-   "calore": 91,
+   "calore": 87,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -1805,17 +1974,17 @@
    },
    "curva": [
     1,
-    32,
+    28,
+    35,
     37,
-    40,
-    40,
-    40,
-    40,
-    40,
-    40,
-    40,
-    40,
-    40
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37,
+    37
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -1825,7 +1994,6 @@
     "AT",
     "BE",
     "BR",
-    "CA",
     "CH",
     "CR",
     "DE",
@@ -1836,7 +2004,6 @@
     "GT",
     "IL",
     "IN",
-    "IT",
     "JM",
     "MX",
     "NZ",
@@ -1851,10 +2018,9 @@
     "en",
     "es",
     "fr",
-    "it",
     "pt"
    ],
-   "n_fonti": 40,
+   "n_fonti": 37,
    "prima_segnalazione": {
     "fonte": "Hacker News (prima pagina)",
     "paese": "WEB",
@@ -1881,30 +2047,12 @@
      "origine": "rss"
     },
     {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/estados-unidos/2026/11/17/estados-unidos-registra-una-caida-de-estudiantes-internacionales-en-sus-universidades-que-muestran-las-nuevas-cifras/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T15:52:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "Hindustan Times",
      "link": "https://www.hindustantimes.com/world-news/highly-classified-network-used-by-us-national-security-agency-down-nsa-updates-trump-administration-101794930739112.html",
      "paese": "IN",
      "lingua": "en",
      "data": "2026-11-17T15:53:11+00:00",
      "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Adnkronos",
-     "link": "https://www.adnkronos.com/internazionale/esteri/national-security-agency-usa-ultime-news_2C7Aw4WIJl2Y6U70yNwrhA",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T16:04:00+00:00",
-     "tipo": "agenzia",
      "origine": "rss"
     },
     {
@@ -1994,15 +2142,6 @@
      "paese": "PY",
      "lingua": "es",
      "data": "2026-11-17T17:05:10+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Il Fatto Quotidiano",
-     "link": "https://www.ilfattoquotidiano.it/2026/11/17/nsa-rete-interna-down-notizie/8575152/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T17:10:10+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -2131,343 +2270,48 @@
      "data": "2026-11-17T19:40:02+00:00",
      "tipo": "giornale",
      "origine": "rss"
+    },
+    {
+     "fonte": "Handelsblatt",
+     "link": "https://www.handelsblatt.com/politik/international/technik-internes-netzwerk-von-us-geheimdienst-nsa-gestoert/100270731.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T19:47:06+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Stuff",
+     "link": "https://www.stuff.co.nz/world-news/361060530/us-spy-agencys-highly-classified-communications-network-goes-down",
+     "paese": "NZ",
+     "lingua": "en",
+     "data": "2026-11-17T19:54:33+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Der Spiegel",
+     "link": "https://www.spiegel.de/ausland/nsa-net-internes-netzwerk-von-us-geheimdienst-nsa-gestoert-a-b392dbb8-8224-430f-a1e7-0e7ccd7a3101#ref=rss",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T20:10:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
     }
    ],
    "copertura": {
-    "italia": 2,
-    "estero": 38,
-    "paesi_esteri": 23,
+    "italia": 0,
+    "estero": 37,
+    "paesi_esteri": 22,
     "continenti": {
-     "Europa": 16,
-     "Americhe": 15,
+     "Americhe": 14,
+     "Europa": 14,
      "Asia e Medio Oriente": 7,
      "Altro": 1,
      "Oceania": 1
     }
    },
-   "punto_cieco": ""
-  },
-  {
-   "id": "6b614deab8",
-   "titolo": "Secondo RFI, soldati francesi operano in Ucraina in missioni tecniche",
-   "lingua": "it",
-   "categoria": "Esteri e conflitti",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 86,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "TASS",
-    "data": "2026-11-17T13:19:06+00:00",
-    "tipo": "agenzia",
-    "veloce": false,
-    "link": "https://tass.com/politics/2219733"
-   },
-   "conferma": {
-    "fonte": "ABC Color",
-    "data": "2026-11-17T13:20:19+00:00",
-    "dopo_min": 1
-   },
-   "curva": [
-    1,
-    12,
-    22,
-    23,
-    24,
-    26,
-    26,
-    26,
-    26,
-    26,
-    26,
-    26
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AR",
-    "BE",
-    "DE",
-    "FR",
-    "IN",
-    "IT",
-    "JP",
-    "LV",
-    "MA",
-    "PY",
-    "RO",
-    "RS",
-    "RU",
-    "SA",
-    "SG"
-   ],
-   "lingue": [
-    "ar",
-    "de",
-    "en",
-    "es",
-    "fr",
-    "it",
-    "ja"
-   ],
-   "n_fonti": 26,
-   "prima_segnalazione": {
-    "fonte": "TASS",
-    "paese": "RU",
-    "data": "2026-11-17T13:19:06+00:00"
-   },
-   "aggiornata": "2026-11-18T10:06:53+00:00",
-   "fonti": [
-    {
-     "fonte": "TASS",
-     "link": "https://tass.com/politics/2219733",
-     "paese": "RU",
-     "lingua": "en",
-     "data": "2026-11-17T13:19:06+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ABC Color",
-     "link": "https://www.abc.com.py/internacionales/2026/11/17/rusia-esta-al-tanto-de-la-presencia-de-tropas-extranjeras-en-ucrania-dice-lavrov/",
-     "paese": "PY",
-     "lingua": "es",
-     "data": "2026-11-17T13:20:19+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "BFMTV",
-     "link": "https://www.bfmtv.com/international/europe/ukraine/video-absurde-la-ministre-deleguee-aux-armees-repond-a-moscou-qui-voit-en-la-presence-de-militaires-francais-en-ukraine-une-participation-directe-a-la-guerre_VN-202611170647.html",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T14:25:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Libération",
-     "link": "https://www.liberation.fr/international/europe/soldats-francais-deployes-en-ukraine-moscou-y-voit-une-participation-directe-au-conflit-20261117_2CANBP4NJJGFRNFF6IMDWBYWJE/",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T15:02:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Ouest-France",
-     "link": "https://www.ouest-france.fr/europe/ukraine/soldats-francais-envoyes-en-ukraine-le-gouvernement-confirme-des-missions-ponctuelles-loin-de-la-ligne-de-front-77919f64-e295-11f1-9a72-32f9104dab1b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T15:13:48+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "La Stampa",
-     "link": "https://www.lastampa.it/esteri/2026/11/17/news/soldati_francesi_ucraina_russia-15800937/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T15:36:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NDTV",
-     "link": "https://www.ndtv.com/world-news/french-troops-deployed-in-ukraine-war-france-trashes-russias-absurd-claim-12340343#publisher=newsstand",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T15:45:29+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Hespress English",
-     "link": "https://en.hespress.com/149362-france-rejects-absurd-russian-claim-french-troops-participating-in-ukraine-war.html",
-     "paese": "MA",
-     "lingua": "en",
-     "data": "2026-11-17T15:45:41+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Asharq Al-Awsat",
-     "link": "https://english.aawsat.com/node/5342440",
-     "paese": "SA",
-     "lingua": "ar",
-     "data": "2026-11-17T17:01:14+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "TGCOM24",
-     "link": "https://www.tgcom24.mediaset.it/mondo/guerra-russia-ucraina-ultime-notizie-17-novembre_119074110-202602k.shtml",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T17:15:27+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Digi24",
-     "link": "https://www.digi24.ro/stiri/externe/rusia/lavrov-acuza-franta-ca-are-militari-in-ucraina-care-participa-direct-la-conflict-prezenta-trupelor-straine-nu-e-un-secret-pentru-noi-4040695",
-     "paese": "RO",
-     "lingua": "en",
-     "data": "2026-11-17T17:17:55+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Politico Europe",
-     "link": "https://www.politico.eu/article/sergey-lavrov-france-soldiers-ukraine-direct-participation-war-russia/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-     "paese": "BE",
-     "lingua": "en",
-     "data": "2026-11-17T17:22:15+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "RFI",
-     "link": "https://www.rfi.fr/fr/france/20261117-les-fran%C3%A7ais-ne-sont-pas-cobellig%C3%A9rants-en-ukraine-malgr%C3%A9-la-pr%C3%A9sence-de-soldats-mart%C3%A8le-le-gouvernement",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T17:47:27+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Sky TG24",
-     "link": "https://tg24.sky.it/mondo/2026/11/17/soldati-francesi-ucraina-guerra",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T18:23:51+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "France Info",
-     "link": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/pourquoi-la-russie-accuse-la-france-de-participer-directement-a-la-guerre-en-ukraine_8286422.html#xtor=RSS-3-[lestitres]",
-     "paese": "FR",
-     "lingua": "en",
-     "data": "2026-11-17T18:47:07+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Meduza",
-     "link": "https://meduza.io/en/news/2026/11/17/france-confirms-its-troops-are-in-ukraine-russia-says-they-are-legitimate-targets",
-     "paese": "LV",
-     "lingua": "en",
-     "data": "2026-11-17T18:56:30+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/america/mundo/2026/11/17/amenaza-de-rusia-a-francia-moscu-dijo-que-las-tropas-extranjeras-en-ucrania-son-un-objetivo-legitimo-de-sus-ataques/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T19:26:46+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Asahi Shimbun",
-     "link": "http://www.asahi.com/articles/ASVCK5359VCKUHBI02MM.html?ref=rss",
-     "paese": "JP",
-     "lingua": "ja",
-     "data": "2026-11-17T20:00:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Straits Times",
-     "link": "https://www.straitstimes.com/world/europe/france-is-not-co-belligerent-in-ukraine-french-minister-says",
-     "paese": "SG",
-     "lingua": "en",
-     "data": "2026-11-17T20:04:55+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Handelsblatt",
-     "link": "https://www.handelsblatt.com/politik/international/ukraine-krieg-frankreich-an-russland-wir-sind-keine-kriegspartei/100270736.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T20:14:29+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Die Zeit",
-     "link": "https://www.zeit.de/news/2026-11/17/frankreich-an-russland-wir-sind-keine-kriegspartei",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T20:14:29+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Der Tagesspiegel",
-     "link": "https://www.tagesspiegel.de/internationales/dpa-ukraine-krieg-frankreich-an-russland-wir-sind-keine-kriegspartei-16296674.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T20:15:28+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "N1 Serbia",
-     "link": "https://n1info.rs/svet/sergej-lavrov-francuske-trupe-ukrajina-rat/",
-     "paese": "RS",
-     "lingua": "en",
-     "data": "2026-11-17T22:23:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Open",
-     "link": "https://www.open.online/2026/11/18/missione-soldati-francesi-ucraina-volia-lavrov/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-18T04:04:47+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "la Repubblica",
-     "link": "https://www.repubblica.it/esteri/2026/11/18/news/missione_segreta_soldati_francesi_ucraina_addestramento_truppe_armi_mosca_attacca_partecipazione_diretta_guerra-425731459/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-18T08:14:16+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Adnkronos",
-     "link": "https://www.adnkronos.com/politica/italia-ucraina-guerra-russia-governo_45Rqmj9hISlw7KKEzHF35u",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-18T10:06:53+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 6,
-    "estero": 20,
-    "paesi_esteri": 14,
-    "continenti": {
-     "Europa": 19,
-     "Asia e Medio Oriente": 4,
-     "Americhe": 2,
-     "Africa": 1
-    }
-   },
-   "punto_cieco": ""
+   "punto_cieco": "italia"
   },
   {
    "id": "b2d7dbaf12",
@@ -2476,7 +2320,7 @@
    "categoria": "Sport",
    "curiosita": false,
    "sezione": "Sport",
-   "calore": 84,
+   "calore": 83,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -2782,257 +2626,75 @@
    "punto_cieco": ""
   },
   {
-   "id": "efbb8d24c0",
-   "titolo": "Mosca accusa la Francia di partecipazione diretta alla guerra in Ucraina",
-   "lingua": "de",
-   "categoria": "Esteri e conflitti",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 84,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "Der Tagesspiegel",
-    "data": "2026-11-17T16:01:38+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.tagesspiegel.de/internationales/verdeutlicht-russlands-unvermogen-wie-die-beschadigung-der-krim-brucke-jetzt-den-ukraine-krieg-verandern-konnte-16295454.html"
-   },
-   "conferma": {
-    "fonte": "Handelsblatt",
-    "data": "2026-11-17T17:46:54+00:00",
-    "dopo_min": 105
-   },
-   "curva": [
-    1,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    3,
-    5,
-    8,
-    9,
-    10
-   ],
-   "crescita": 1,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AT",
-    "CH",
-    "DE"
-   ],
-   "lingue": [
-    "de"
-   ],
-   "n_fonti": 10,
-   "prima_segnalazione": {
-    "fonte": "Der Tagesspiegel",
-    "paese": "DE",
-    "data": "2026-11-17T16:01:38+00:00"
-   },
-   "aggiornata": "2026-11-19T12:30:19+00:00",
-   "fonti": [
-    {
-     "fonte": "Der Tagesspiegel",
-     "link": "https://www.tagesspiegel.de/internationales/verdeutlicht-russlands-unvermogen-wie-die-beschadigung-der-krim-brucke-jetzt-den-ukraine-krieg-verandern-konnte-16295454.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T16:01:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Handelsblatt",
-     "link": "https://www.handelsblatt.com/politik/international/ukraine-krim-bruecke-nach-zweitem-angriff-teilweise-eingestuerzt/27982126.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T17:46:54+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "n-tv",
-     "link": "https://www.n-tv.de/politik/Ukraine-nutzte-fliegende-Modems-fuer-Angriff-auf-Krim-Bruecke-id31550423.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-18T19:51:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ORF",
-     "link": "https://orf.at/stories/3448615/",
-     "paese": "AT",
-     "lingua": "de",
-     "data": "2026-11-18T23:01:46+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Die Zeit",
-     "link": "https://www.zeit.de/news/2026-11/19/krim-bruecke-zugverkehr-nach-erneutem-angriff-eingestellt",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-18T23:22:22+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Der Spiegel",
-     "link": "https://www.spiegel.de/ausland/ukraine-krieg-nach-erneutem-angriff-steht-zugverkehr-auf-krimbruecke-still-a-9e01117c-8373-480f-ad57-6c08a2bd1af7#ref=rss",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-19T01:50:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Süddeutsche Zeitung",
-     "link": "https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-pistorius-us-kritik-dumm-krim-terrorismus-krim-bruecke-li.3571967",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-19T02:16:57+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Tagesschau",
-     "link": "https://www.tagesschau.de/ausland/europa/krim-bruecke-zug-100.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-19T04:28:24+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Die Welt",
-     "link": "https://www.welt.de/politik/video6afe88eb4d1895cf2a8f0846/krim-bruecke-zugverkehr-nach-erneutem-ukrainischem-angriff-vorerst-eingestellt.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-19T06:18:02+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NZZ",
-     "link": "https://www.nzz.ch/international/krieg-in-der-ukraine-zugverkehr-ueber-krim-bruecke-nach-erneutem-angriff-eingestellt-ld.10021245",
-     "paese": "CH",
-     "lingua": "de",
-     "data": "2026-11-19T12:30:19+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 10,
-    "paesi_esteri": 3,
-    "continenti": {
-     "Europa": 10
-    }
-   },
-   "punto_cieco": "italia"
-  },
-  {
    "id": "14150235ce",
    "titolo": "Iran rivendica un attacco con sei droni contro un radar statunitense in Bahrein e avverte sullo Stretto di Hor",
    "lingua": "it",
-   "categoria": "Politica",
+   "categoria": "Esteri e conflitti",
    "curiosita": false,
-   "sezione": "Politica",
-   "calore": 79,
+   "sezione": "Mondo",
+   "calore": 82,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "TASS",
-    "data": "2026-11-17T13:20:00+00:00",
-    "tipo": "agenzia",
+    "fonte": "The Globe and Mail",
+    "data": "2026-11-17T13:35:16+00:00",
+    "tipo": "giornale",
     "veloce": false,
-    "link": "https://tass.com/world/2219735"
+    "link": "https://www.theglobeandmail.com/world/article-us-iran-dirty-bomb-plot-washington/"
    },
    "conferma": {
-    "fonte": "Rai News",
-    "data": "2026-11-17T13:25:00+00:00",
-    "dopo_min": 5
+    "fonte": "Al-Monitor",
+    "data": "2026-11-17T13:46:38+00:00",
+    "dopo_min": 11
    },
    "curva": [
     1,
     20,
-    24,
-    26,
     26,
     27,
     27,
-    27,
-    27,
-    27,
-    27,
-    27
+    28,
+    28,
+    28,
+    28,
+    28,
+    28,
+    28
    ],
    "crescita": 0,
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
+    "AR",
     "BR",
     "CA",
     "DE",
     "FR",
     "GB",
     "IN",
+    "IR",
     "IT",
     "PH",
     "QA",
-    "RU",
     "US"
    ],
    "lingue": [
     "de",
     "en",
+    "es",
     "fr",
     "it",
     "pt"
    ],
-   "n_fonti": 27,
+   "n_fonti": 28,
    "prima_segnalazione": {
-    "fonte": "TASS",
-    "paese": "RU",
-    "data": "2026-11-17T13:20:00+00:00"
+    "fonte": "The Globe and Mail",
+    "paese": "CA",
+    "data": "2026-11-17T13:35:16+00:00"
    },
    "aggiornata": "2026-11-18T07:40:02+00:00",
    "fonti": [
-    {
-     "fonte": "TASS",
-     "link": "https://tass.com/world/2219735",
-     "paese": "RU",
-     "lingua": "en",
-     "data": "2026-11-17T13:20:00+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Rai News",
-     "link": "https://www.rainews.it/video/2026/11/la-soffiata-della-cnn-sulla-bomba-sporca-radioattiva-iraniana-su-washington-teheran-smentisce-3e7e6687-252e-4156-ab96-4b129c994054.html",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T13:25:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Hindustan Times",
-     "link": "https://www.hindustantimes.com/world-news/us-news/trump-issues-stark-warning-to-iran-over-alleged-dc-dirty-bomb-plot-we-take-it-very-seriously-101794920834305.html",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T13:31:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "The Globe and Mail",
      "link": "https://www.theglobeandmail.com/world/article-us-iran-dirty-bomb-plot-washington/",
@@ -3178,11 +2840,29 @@
      "origine": "rss"
     },
     {
+     "fonte": "Tagesschau",
+     "link": "https://www.tagesschau.de/ausland/amerika/trump-schmutzige-bombe-iran-100.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T16:36:43+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "CBS News",
      "link": "https://www.cbsnews.com/video/trump-says-us-taking-iranian-dirty-bomb-threat-very-seriously/",
      "paese": "US",
      "lingua": "en",
      "data": "2026-11-17T16:56:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Tehran Times",
+     "link": "https://www.tehrantimes.com/news/532269/Araghchi-meets-Sultan-of-Oman-in-Muscat-on-bilateral-ties-regional",
+     "paese": "IR",
+     "lingua": "en",
+     "data": "2026-11-17T16:57:50+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -3214,6 +2894,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/america/agencias/2026/11/17/los-huties-denuncian-al-menos-14-muertos-en-bombardeos-de-la-coalicion-militar-liderada-por-arabia-saudi/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T20:00:39+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "Los Angeles Times",
      "link": "https://www.latimes.com/politics/story/2026-11-17/trump-faces-questions-on-reported-iran-plot-to-attack-d-c-string-of-outages",
      "paese": "US",
@@ -3241,6 +2930,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "Rai News",
+     "link": "https://www.rainews.it/video/2026/11/allarme-negli-usa-piani-iraniani-per-colpire-funzionari-di-trump-a-washington-f3321196-7fa7-4386-b25d-4512db94ba37.html",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T23:32:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "Inquirer",
      "link": "https://globalnation.inquirer.net/348778/iran-dismisses-report-of-alleged-dirty-bomb-attack-on-washington",
      "paese": "PH",
@@ -3252,12 +2950,305 @@
    ],
    "copertura": {
     "italia": 4,
-    "estero": 23,
-    "paesi_esteri": 10,
+    "estero": 24,
+    "paesi_esteri": 11,
     "continenti": {
      "Europa": 14,
-     "Americhe": 9,
+     "Americhe": 10,
      "Asia e Medio Oriente": 4
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
+   "id": "6b614deab8",
+   "titolo": "Secondo RFI, soldati francesi operano in Ucraina in missioni tecniche",
+   "lingua": "it",
+   "categoria": "Esteri e conflitti",
+   "curiosita": false,
+   "sezione": "Mondo",
+   "calore": 82,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "BFMTV",
+    "data": "2026-11-17T14:25:12+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.bfmtv.com/international/europe/ukraine/video-absurde-la-ministre-deleguee-aux-armees-repond-a-moscou-qui-voit-en-la-presence-de-militaires-francais-en-ukraine-une-participation-directe-a-la-guerre_VN-202611170647.html"
+   },
+   "conferma": {
+    "fonte": "Libération",
+    "data": "2026-11-17T15:02:23+00:00",
+    "dopo_min": 37
+   },
+   "curva": [
+    1,
+    14,
+    20,
+    20,
+    21,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23,
+    23
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AR",
+    "BE",
+    "FR",
+    "IN",
+    "IT",
+    "JP",
+    "LV",
+    "MA",
+    "PY",
+    "RO",
+    "RS",
+    "RU",
+    "SA",
+    "SG"
+   ],
+   "lingue": [
+    "ar",
+    "en",
+    "es",
+    "fr",
+    "it",
+    "ja"
+   ],
+   "n_fonti": 23,
+   "prima_segnalazione": {
+    "fonte": "BFMTV",
+    "paese": "FR",
+    "data": "2026-11-17T14:25:12+00:00"
+   },
+   "aggiornata": "2026-11-18T10:06:53+00:00",
+   "fonti": [
+    {
+     "fonte": "BFMTV",
+     "link": "https://www.bfmtv.com/international/europe/ukraine/video-absurde-la-ministre-deleguee-aux-armees-repond-a-moscou-qui-voit-en-la-presence-de-militaires-francais-en-ukraine-une-participation-directe-a-la-guerre_VN-202611170647.html",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T14:25:12+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Libération",
+     "link": "https://www.liberation.fr/international/europe/soldats-francais-deployes-en-ukraine-moscou-y-voit-une-participation-directe-au-conflit-20261117_2CANBP4NJJGFRNFF6IMDWBYWJE/",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T15:02:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Ouest-France",
+     "link": "https://www.ouest-france.fr/europe/ukraine/soldats-francais-envoyes-en-ukraine-le-gouvernement-confirme-des-missions-ponctuelles-loin-de-la-ligne-de-front-77919f64-e295-11f1-9a72-32f9104dab1b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T15:13:48+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "La Stampa",
+     "link": "https://www.lastampa.it/esteri/2026/11/17/news/soldati_francesi_ucraina_russia-15800937/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T15:36:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NDTV",
+     "link": "https://www.ndtv.com/world-news/french-troops-deployed-in-ukraine-war-france-trashes-russias-absurd-claim-12340343#publisher=newsstand",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T15:45:29+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Hespress English",
+     "link": "https://en.hespress.com/149362-france-rejects-absurd-russian-claim-french-troops-participating-in-ukraine-war.html",
+     "paese": "MA",
+     "lingua": "en",
+     "data": "2026-11-17T15:45:41+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "TASS",
+     "link": "https://tass.com/world/2219855",
+     "paese": "RU",
+     "lingua": "en",
+     "data": "2026-11-17T16:22:26+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Asharq Al-Awsat",
+     "link": "https://english.aawsat.com/node/5342440",
+     "paese": "SA",
+     "lingua": "ar",
+     "data": "2026-11-17T17:01:14+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "TGCOM24",
+     "link": "https://www.tgcom24.mediaset.it/mondo/guerra-russia-ucraina-ultime-notizie-17-novembre_119074110-202602k.shtml",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T17:15:27+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Digi24",
+     "link": "https://www.digi24.ro/stiri/externe/rusia/lavrov-acuza-franta-ca-are-militari-in-ucraina-care-participa-direct-la-conflict-prezenta-trupelor-straine-nu-e-un-secret-pentru-noi-4040695",
+     "paese": "RO",
+     "lingua": "en",
+     "data": "2026-11-17T17:17:55+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Politico Europe",
+     "link": "https://www.politico.eu/article/sergey-lavrov-france-soldiers-ukraine-direct-participation-war-russia/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+     "paese": "BE",
+     "lingua": "en",
+     "data": "2026-11-17T17:22:15+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ABC Color",
+     "link": "https://www.abc.com.py/internacionales/2026/11/17/rusia-advierte-a-francia-que-las-tropas-extranjeras-en-ucrania-son-objetivo-legitimo/",
+     "paese": "PY",
+     "lingua": "es",
+     "data": "2026-11-17T17:30:17+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "RFI",
+     "link": "https://www.rfi.fr/fr/france/20261117-les-fran%C3%A7ais-ne-sont-pas-cobellig%C3%A9rants-en-ukraine-malgr%C3%A9-la-pr%C3%A9sence-de-soldats-mart%C3%A8le-le-gouvernement",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T17:47:27+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Sky TG24",
+     "link": "https://tg24.sky.it/mondo/2026/11/17/soldati-francesi-ucraina-guerra",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T18:23:51+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "France Info",
+     "link": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/pourquoi-la-russie-accuse-la-france-de-participer-directement-a-la-guerre-en-ukraine_8286422.html#xtor=RSS-3-[lestitres]",
+     "paese": "FR",
+     "lingua": "en",
+     "data": "2026-11-17T18:47:07+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Meduza",
+     "link": "https://meduza.io/en/news/2026/11/17/france-confirms-its-troops-are-in-ukraine-russia-says-they-are-legitimate-targets",
+     "paese": "LV",
+     "lingua": "en",
+     "data": "2026-11-17T18:56:30+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/america/mundo/2026/11/17/amenaza-de-rusia-a-francia-moscu-dijo-que-las-tropas-extranjeras-en-ucrania-son-un-objetivo-legitimo-de-sus-ataques/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T19:26:46+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Asahi Shimbun",
+     "link": "http://www.asahi.com/articles/ASVCK5359VCKUHBI02MM.html?ref=rss",
+     "paese": "JP",
+     "lingua": "ja",
+     "data": "2026-11-17T20:00:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Straits Times",
+     "link": "https://www.straitstimes.com/world/europe/france-is-not-co-belligerent-in-ukraine-french-minister-says",
+     "paese": "SG",
+     "lingua": "en",
+     "data": "2026-11-17T20:04:55+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "N1 Serbia",
+     "link": "https://n1info.rs/svet/sergej-lavrov-francuske-trupe-ukrajina-rat/",
+     "paese": "RS",
+     "lingua": "en",
+     "data": "2026-11-17T22:23:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Open",
+     "link": "https://www.open.online/2026/11/18/missione-soldati-francesi-ucraina-volia-lavrov/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-18T04:04:47+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "la Repubblica",
+     "link": "https://www.repubblica.it/esteri/2026/11/18/news/missione_segreta_soldati_francesi_ucraina_addestramento_truppe_armi_mosca_attacca_partecipazione_diretta_guerra-425731459/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-18T08:14:16+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Adnkronos",
+     "link": "https://www.adnkronos.com/politica/italia-ucraina-guerra-russia-governo_45Rqmj9hISlw7KKEzHF35u",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-18T10:06:53+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 6,
+    "estero": 17,
+    "paesi_esteri": 13,
+    "continenti": {
+     "Europa": 16,
+     "Asia e Medio Oriente": 4,
+     "Americhe": 2,
+     "Africa": 1
     }
    },
    "punto_cieco": ""
@@ -3269,7 +3260,7 @@
    "categoria": "Altro",
    "curiosita": true,
    "sezione": "Curiosità",
-   "calore": 79,
+   "calore": 78,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -3299,7 +3290,7 @@
     8,
     9
    ],
-   "crescita": 1,
+   "crescita": 0,
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
@@ -3406,208 +3397,6 @@
     "paesi_esteri": 1,
     "continenti": {
      "Europa": 9
-    }
-   },
-   "punto_cieco": ""
-  },
-  {
-   "id": "1945deff20",
-   "titolo": "Il principe William e Kate arrivano in India per un viaggio legato all'Earthshot Prize",
-   "lingua": "it",
-   "categoria": "Società",
-   "curiosita": false,
-   "sezione": "Società",
-   "calore": 75,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "Infobae",
-    "data": "2026-11-17T13:21:39+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.infobae.com/espana/2026/11/17/kate-middleton-y-el-principe-guillermo-se-montan-en-tuktuk-durante-su-viaje-a-la-india-no-he-chocado-asi-que-podeis-estar-tranquilos/"
-   },
-   "conferma": {
-    "fonte": "Daily Mail",
-    "data": "2026-11-17T15:19:39+00:00",
-    "dopo_min": 118
-   },
-   "curva": [
-    1,
-    8,
-    11,
-    12,
-    12,
-    12,
-    14,
-    14,
-    14,
-    14,
-    14,
-    14
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AE",
-    "AR",
-    "EC",
-    "GB",
-    "IN",
-    "IT",
-    "PY",
-    "US"
-   ],
-   "lingue": [
-    "en",
-    "es",
-    "it"
-   ],
-   "n_fonti": 14,
-   "prima_segnalazione": {
-    "fonte": "Infobae",
-    "paese": "AR",
-    "data": "2026-11-17T13:21:39+00:00"
-   },
-   "aggiornata": "2026-11-18T17:22:59+00:00",
-   "fonti": [
-    {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/espana/2026/11/17/kate-middleton-y-el-principe-guillermo-se-montan-en-tuktuk-durante-su-viaje-a-la-india-no-he-chocado-asi-que-podeis-estar-tranquilos/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T13:21:39+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Daily Mail",
-     "link": "https://www.dailymail.com/news/royals/article-16298977/kate-escalator-nerves-william-reassurance-stumble-mumbai.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T15:19:39+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The National",
-     "link": "https://www.thenationalnews.com/lifestyle/fashion-beauty/2026/11/17/kate-and-william-champion-indian-fashion-at-earthshot-prize-gala/",
-     "paese": "AE",
-     "lingua": "en",
-     "data": "2026-11-17T15:39:19+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Evening Standard",
-     "link": "https://www.standard.co.uk/news/uk/william-and-kate-prince-indian-mumbai-b1305239.html",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T15:40:16+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "El Universo",
-     "link": "https://eluniverso.com/entretenimiento/gente/principe-william-y-kate-middleton-sorprenden-en-su-visita-a-mumbai-nota/",
-     "paese": "EC",
-     "lingua": "es",
-     "data": "2026-11-17T15:41:24+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Sky TG24",
-     "link": "https://tg24.sky.it/mondo/2026/11/17/kate-middleton-abito-indiano-earthshot-prize",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T17:01:36+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Mirror",
-     "link": "https://www.mirror.co.uk/news/royals/william-kate-earthshot-prize-live-37885416",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T17:23:46+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "New York Post",
-     "link": "https://pagesix.com/2026/11/17/style/kate-middleton-dazzles-in-queen-elizabeths-emeralds-on-earthshot-prize-awards-2026-red-carpet-in-india/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T17:40:26+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Independent",
-     "link": "https://www.independent.co.uk/news/world/europe/prince-william-india-bhutan-france-narendra-modi-b3086653.html",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T17:44:51+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Sky News",
-     "link": "https://news.sky.com/story/william-and-kate-host-glittering-earthshot-prize-ceremony-in-mumbai-13613397",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T21:08:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ANSA",
-     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/william-e-kate-alla-consegna-dei-premi-per-lambiente-a-mumbai_41dac146-f038-42e1-8558-821b5d08503b.html",
-     "paese": "IT",
-     "lingua": "en",
-     "data": "2026-11-17T21:11:27+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NDTV",
-     "link": "https://www.ndtv.com/world-news/prince-william-presents-5-earthshot-prize-winners-with-1-3-million-each-12341671#publisher=newsstand",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-18T01:59:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Askanews",
-     "link": "https://askanews.it/2026/11/18/kate-visita-un-ospedale-a-mumbai-bollywood-per-il-principe-william/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-18T11:14:05+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ABC Color",
-     "link": "https://www.abc.com.py/gente/2026/11/18/william-y-kate-middleton-radiantes-en-los-premios-earthshot-en-india/",
-     "paese": "PY",
-     "lingua": "es",
-     "data": "2026-11-18T13:10:13+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 3,
-    "estero": 11,
-    "paesi_esteri": 7,
-    "continenti": {
-     "Europa": 8,
-     "Americhe": 4,
-     "Asia e Medio Oriente": 2
     }
    },
    "punto_cieco": ""
@@ -3800,126 +3589,196 @@
    "punto_cieco": "italia"
   },
   {
-   "id": "8bfea60591",
-   "titolo": "Domínguez commenta la finale di Copa Sudamericana contro il Boca, che non vince un titolo internazionale da 18",
-   "lingua": "es",
-   "categoria": "Altro",
+   "id": "1945deff20",
+   "titolo": "Il principe William e Kate arrivano in India per un viaggio legato all'Earthshot Prize",
+   "lingua": "it",
+   "categoria": "Società",
    "curiosita": false,
-   "sezione": "Sport",
-   "calore": 72,
+   "sezione": "Società",
+   "calore": 71,
    "stato": "confermato",
-   "attendibilita": 97,
+   "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "Infobae",
-    "data": "2026-11-17T15:55:49+00:00",
+    "fonte": "Daily Mail",
+    "data": "2026-11-17T15:19:39+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://www.infobae.com/colombia/2026/11/17/estas-son-las-medidas-de-seguridad-en-barranquilla-para-la-final-de-la-copa-sudamericana-entre-boca-juniors-y-atletico-mineiro-reforzaran-los-controles-en-los-hoteles/"
+    "link": "https://www.dailymail.com/news/royals/article-16298977/kate-escalator-nerves-william-reassurance-stumble-mumbai.html?ns_mchannel=rss&ns_campaign=1490&ito=1490"
    },
    "conferma": {
-    "fonte": "Globo Esporte",
-    "data": "2026-11-17T21:25:51+00:00",
-    "dopo_min": 330
+    "fonte": "The National",
+    "data": "2026-11-17T15:39:19+00:00",
+    "dopo_min": 20
    },
    "curva": [
     1,
-    1,
-    4,
-    5,
-    5,
-    5,
-    5,
-    6,
-    6,
-    6,
-    6,
-    6
+    8,
+    10,
+    11,
+    11,
+    12,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13
    ],
    "crescita": 0,
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
-    "AR",
-    "BR",
-    "PY"
+    "AE",
+    "EC",
+    "GB",
+    "IN",
+    "IT",
+    "PY",
+    "US"
    ],
    "lingue": [
+    "en",
     "es",
-    "pt"
+    "it"
    ],
-   "n_fonti": 6,
+   "n_fonti": 13,
    "prima_segnalazione": {
-    "fonte": "Infobae",
-    "paese": "AR",
-    "data": "2026-11-17T15:55:49+00:00"
+    "fonte": "Daily Mail",
+    "paese": "GB",
+    "data": "2026-11-17T15:19:39+00:00"
    },
-   "aggiornata": "2026-11-19T13:04:00+00:00",
+   "aggiornata": "2026-11-18T17:22:59+00:00",
    "fonti": [
     {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/colombia/2026/11/17/estas-son-las-medidas-de-seguridad-en-barranquilla-para-la-final-de-la-copa-sudamericana-entre-boca-juniors-y-atletico-mineiro-reforzaran-los-controles-en-los-hoteles/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T15:55:49+00:00",
+     "fonte": "Daily Mail",
+     "link": "https://www.dailymail.com/news/royals/article-16298977/kate-escalator-nerves-william-reassurance-stumble-mumbai.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T15:19:39+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Globo Esporte",
-     "link": "https://ge.globo.com/futebol/times/atletico-mg/noticia/2026/11/17/como-jogo-contra-o-boca-juniors-foi-crucial-para-trajetoria-de-everson-no-atletico-mg.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T21:25:51+00:00",
+     "fonte": "The National",
+     "link": "https://www.thenationalnews.com/lifestyle/fashion-beauty/2026/11/17/kate-and-william-champion-indian-fashion-at-earthshot-prize-gala/",
+     "paese": "AE",
+     "lingua": "en",
+     "data": "2026-11-17T15:39:19+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "La Nación",
-     "link": "https://www.lanacion.com.ar/deportes/futbol/cuando-juega-boca-la-final-de-la-copa-sudamericana-ante-atletico-mineiro-nid17112026/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T21:29:53+00:00",
+     "fonte": "Evening Standard",
+     "link": "https://www.standard.co.uk/news/uk/william-and-kate-prince-indian-mumbai-b1305239.html",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T15:40:16+00:00",
      "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "El Universo",
+     "link": "https://eluniverso.com/entretenimiento/gente/principe-william-y-kate-middleton-sorprenden-en-su-visita-a-mumbai-nota/",
+     "paese": "EC",
+     "lingua": "es",
+     "data": "2026-11-17T15:41:24+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Sky TG24",
+     "link": "https://tg24.sky.it/mondo/2026/11/17/kate-middleton-abito-indiano-earthshot-prize",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T17:01:36+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Mirror",
+     "link": "https://www.mirror.co.uk/news/royals/william-kate-earthshot-prize-live-37885416",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T17:23:46+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "New York Post",
+     "link": "https://pagesix.com/2026/11/17/style/kate-middleton-dazzles-in-queen-elizabeths-emeralds-on-earthshot-prize-awards-2026-red-carpet-in-india/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T17:40:26+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Independent",
+     "link": "https://www.independent.co.uk/news/world/europe/prince-william-india-bhutan-france-narendra-modi-b3086653.html",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T17:44:51+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Sky News",
+     "link": "https://news.sky.com/story/william-and-kate-host-glittering-earthshot-prize-ceremony-in-mumbai-13613397",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T21:08:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ANSA",
+     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/william-e-kate-alla-consegna-dei-premi-per-lambiente-a-mumbai_41dac146-f038-42e1-8558-821b5d08503b.html",
+     "paese": "IT",
+     "lingua": "en",
+     "data": "2026-11-17T21:11:27+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NDTV",
+     "link": "https://www.ndtv.com/world-news/prince-william-presents-5-earthshot-prize-winners-with-1-3-million-each-12341671#publisher=newsstand",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-18T01:59:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Askanews",
+     "link": "https://askanews.it/2026/11/18/kate-visita-un-ospedale-a-mumbai-bollywood-per-il-principe-william/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-18T11:14:05+00:00",
+     "tipo": "agenzia",
      "origine": "rss"
     },
     {
      "fonte": "ABC Color",
-     "link": "https://www.abc.com.py/deportes/futbol/copa-paraguay/2026/11/17/recoleta-y-sol-de-america-ya-tienen-fecha-hora-y-escenario-para-la-final-de-la-copa-paraguay/",
+     "link": "https://www.abc.com.py/gente/2026/11/18/william-y-kate-middleton-radiantes-en-los-premios-earthshot-en-india/",
      "paese": "PY",
      "lingua": "es",
-     "data": "2026-11-17T23:03:09+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Clarín",
-     "link": "https://www.clarin.com/deportes/boca-palpita-final-copa-sudamericana-vuelos-llenos-hinchas-rumbo-barranquilla-equipo-confirmado-preocupacion-mineiro_0_3CEAVnnB2E.html",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-18T00:54:51+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Olé",
-     "link": "https://www.ole.com.ar/boca-juniors/boca-final-sudamericana-hinchas-xeneizes-colombianos-barranquilla_0_Ucieb4rX2o.html",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-18T18:14:01+00:00",
+     "data": "2026-11-18T13:10:13+00:00",
      "tipo": "giornale",
      "origine": "rss"
     }
    ],
    "copertura": {
-    "italia": 0,
-    "estero": 6,
-    "paesi_esteri": 3,
+    "italia": 3,
+    "estero": 10,
+    "paesi_esteri": 6,
     "continenti": {
-     "Americhe": 6
+     "Europa": 8,
+     "Americhe": 3,
+     "Asia e Medio Oriente": 2
     }
    },
-   "punto_cieco": "italia"
+   "punto_cieco": ""
   },
   {
    "id": "92fb6e2b9f",
@@ -3928,7 +3787,7 @@
    "categoria": "Politica",
    "curiosita": false,
    "sezione": "Politica",
-   "calore": 67,
+   "calore": 66,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -4072,7 +3931,7 @@
     3,
     3,
     3,
-    3,
+    4,
     4
    ],
    "crescita": 0,
@@ -4151,7 +4010,7 @@
    "categoria": "Altro",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 61,
+   "calore": 60,
    "stato": "confermato",
    "attendibilita": 74,
    "livello": "Confermata",
@@ -4253,38 +4112,38 @@
    "id": "a4af1f81f0",
    "titolo": "Otto morti e cinque feriti in una serie di sparatorie a Porto Alegre e nell'area metropolitana",
    "lingua": "en",
-   "categoria": "Cronaca",
+   "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 59,
+   "calore": 55,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "El Tiempo",
-    "data": "2026-11-17T13:37:44+00:00",
+    "fonte": "G1",
+    "data": "2026-11-17T13:58:10+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://www.eltiempo.com/mundo/eeuu-y-canada/ordenan-repetir-el-juicio-de-lindsay-clancy-la-mujer-acusada-de-matar-a-sus-3-hijos-en-estados-unidos-3601590"
+    "link": "https://g1.globo.com/mg/vales-mg/noticia/2026/11/17/homem-mata-vizinho-a-tiros-apos-desentendimento-em-ipatinga.ghtml"
    },
    "conferma": {
-    "fonte": "G1",
-    "data": "2026-11-17T13:37:50+00:00",
-    "dopo_min": 0
+    "fonte": "Middle East Eye",
+    "data": "2026-11-17T15:37:54+00:00",
+    "dopo_min": 100
    },
    "curva": [
     1,
-    10,
-    12,
-    13,
-    14,
-    14,
-    14,
-    14,
-    14,
-    14,
-    14,
-    14
+    5,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -4292,60 +4151,29 @@
    "paesi": [
     "AR",
     "BR",
-    "CO",
     "GB",
     "IL",
-    "NA",
-    "NG",
-    "QA",
-    "US"
+    "QA"
    ],
    "lingue": [
     "en",
     "es",
     "pt"
    ],
-   "n_fonti": 14,
+   "n_fonti": 7,
    "prima_segnalazione": {
-    "fonte": "El Tiempo",
-    "paese": "CO",
-    "data": "2026-11-17T13:37:44+00:00"
+    "fonte": "G1",
+    "paese": "BR",
+    "data": "2026-11-17T13:58:10+00:00"
    },
-   "aggiornata": "2026-11-18T06:17:54+00:00",
+   "aggiornata": "2026-11-18T19:27:42+00:00",
    "fonti": [
     {
-     "fonte": "El Tiempo",
-     "link": "https://www.eltiempo.com/mundo/eeuu-y-canada/ordenan-repetir-el-juicio-de-lindsay-clancy-la-mujer-acusada-de-matar-a-sus-3-hijos-en-estados-unidos-3601590",
-     "paese": "CO",
-     "lingua": "en",
-     "data": "2026-11-17T13:37:44+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "G1",
-     "link": "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/11/17/mulher-e-presa-suspeita-de-mandar-adolescentes-incendiarem-escola-apos-expulsao-da-namorada-em-ms.ghtml",
+     "link": "https://g1.globo.com/mg/vales-mg/noticia/2026/11/17/homem-mata-vizinho-a-tiros-apos-desentendimento-em-ipatinga.ghtml",
      "paese": "BR",
      "lingua": "pt",
-     "data": "2026-11-17T13:37:50+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "New York Post",
-     "link": "https://nypost.com/2026/11/17/us-news/sadist-accused-of-killing-sonia-exelby-after-meeting-on-fetish-site-had-ultra-violent-videos-on-phone-court-hears/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T15:09:45+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The New York Times",
-     "link": "https://www.nytimes.com/es/2026/11/17/espanol/america-latina/christian-sanon-juicio-haiti-asesinato-presidente.html",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T15:27:11+00:00",
+     "data": "2026-11-17T13:58:10+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -4359,29 +4187,11 @@
      "origine": "rss"
     },
     {
-     "fonte": "The Namibian",
-     "link": "https://www.namibian.com.na/ohangwena-man-accused-of-murdering-girlfriend-in-custody-until-april/",
-     "paese": "NA",
-     "lingua": "en",
-     "data": "2026-11-17T16:16:26+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "The New Arab",
      "link": "https://www.newarab.com/analysis/hebron-model-israeli-settlers-turn-their-sights-jericho",
      "paese": "GB",
      "lingua": "en",
      "data": "2026-11-17T16:56:17+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Evening Standard",
-     "link": "https://www.standard.co.uk/news/crime/liverpool-merseyside-police-portugal-liverpool-crown-court-bbc-b1305267.html",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T17:09:22+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -4420,35 +4230,16 @@
      "data": "2026-11-17T22:00:21+00:00",
      "tipo": "giornale",
      "origine": "rss"
-    },
-    {
-     "fonte": "Punch",
-     "link": "https://punchng.com/uk-man-jailed-for-life-for-killing-girlfriends-baby-over-crying/?utm_source=rss.punchng.com&utm_medium=web",
-     "paese": "NG",
-     "lingua": "en",
-     "data": "2026-11-17T23:20:07+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Mirror",
-     "link": "https://www.mirror.co.uk/news/uk-news/delia-mcinerney-murder-liverpool-court-37888268",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-18T06:17:54+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 0,
-    "estero": 14,
-    "paesi_esteri": 9,
+    "estero": 7,
+    "paesi_esteri": 5,
     "continenti": {
-     "Europa": 5,
-     "Americhe": 5,
-     "Africa": 2,
-     "Asia e Medio Oriente": 2
+     "Europa": 3,
+     "Asia e Medio Oriente": 2,
+     "Americhe": 2
     }
    },
    "punto_cieco": "italia"
@@ -4567,13 +4358,225 @@
    "punto_cieco": "italia"
   },
   {
+   "id": "af77b09102",
+   "titolo": "Tocantins avrà una delegazione alle Paralimpiadi Scolastiche 2026",
+   "lingua": "pt",
+   "categoria": "Altro",
+   "curiosita": false,
+   "sezione": "Sport",
+   "calore": 55,
+   "stato": "confermato",
+   "attendibilita": 60,
+   "livello": "Prime conferme",
+   "prima": {
+    "fonte": "G1",
+    "data": "2026-11-17T14:28:35+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://g1.globo.com/al/alagoas/edicao/2026/11/17/videos-jornal-da-manha-alagoas-de-terca-feira-17-de-novembro.ghtml"
+   },
+   "conferma": {
+    "fonte": "Globo Esporte",
+    "data": "2026-11-17T16:30:18+00:00",
+    "dopo_min": 122
+   },
+   "curva": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "BR"
+   ],
+   "lingue": [
+    "pt"
+   ],
+   "n_fonti": 2,
+   "prima_segnalazione": {
+    "fonte": "G1",
+    "paese": "BR",
+    "data": "2026-11-17T14:28:35+00:00"
+   },
+   "aggiornata": "2026-11-19T13:16:01+00:00",
+   "fonti": [
+    {
+     "fonte": "G1",
+     "link": "https://g1.globo.com/al/alagoas/edicao/2026/11/17/videos-jornal-da-manha-alagoas-de-terca-feira-17-de-novembro.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T14:28:35+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Globo Esporte",
+     "link": "https://ge.globo.com/ba/playlist/globo-esporte-ba-desta-terca-feira-17-de-novembro-de-2026.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T16:30:18+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 2,
+    "paesi_esteri": 1,
+    "continenti": {
+     "Americhe": 2
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
+   "id": "e0d6f0e152",
+   "titolo": "Allerta gialla per vento e temporali in Sarthe martedì, non esclusa l'arancione",
+   "lingua": "en",
+   "categoria": "Clima e ambiente",
+   "curiosita": false,
+   "sezione": "Mondo",
+   "calore": 54,
+   "stato": "confermato",
+   "attendibilita": 93,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "BFMTV",
+    "data": "2026-11-17T15:03:02+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.bfmtv.com/meteo/intemperies/deux-departements-des-hauts-de-france-places-en-vigilance-orange-pluie-inondation-ce-mardi-soir_AN-202611170670.html"
+   },
+   "conferma": {
+    "fonte": "Ouest-France",
+    "data": "2026-11-17T15:20:11+00:00",
+    "dopo_min": 17
+   },
+   "curva": [
+    1,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    7,
+    7
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "FR"
+   ],
+   "lingue": [
+    "en",
+    "fr"
+   ],
+   "n_fonti": 7,
+   "prima_segnalazione": {
+    "fonte": "BFMTV",
+    "paese": "FR",
+    "data": "2026-11-17T15:03:02+00:00"
+   },
+   "aggiornata": "2026-11-19T09:48:11+00:00",
+   "fonti": [
+    {
+     "fonte": "BFMTV",
+     "link": "https://www.bfmtv.com/meteo/intemperies/deux-departements-des-hauts-de-france-places-en-vigilance-orange-pluie-inondation-ce-mardi-soir_AN-202611170670.html",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T15:03:02+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Ouest-France",
+     "link": "https://www.ouest-france.fr/meteo/meteo-france-place-les-departements-de-la-somme-et-du-pas-de-calais-en-vigilance-orange-pluie-inondations-98435684-e28c-11f1-a3b1-0c6de532ce7d?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T15:20:11+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "France Info",
+     "link": "https://www.franceinfo.fr/environnement/meteo/la-somme-et-le-pas-de-calais-places-en-vigilance-orange-pluie-inondation-a-partir-de-23-heures_8286704.html#xtor=RSS-3-[lestitres]",
+     "paese": "FR",
+     "lingua": "en",
+     "data": "2026-11-17T15:55:22+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Le Figaro",
+     "link": "https://www.lefigaro.fr/meteo/deux-departements-places-en-vigilance-orange-pluie-inondation-de-fortes-rafales-de-vent-attendues-decouvrez-la-meteo-du-18-novembre-20261117",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T16:42:45+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Libération",
+     "link": "https://www.liberation.fr/environnement/climat/pluie-inondation-le-pas-de-calais-et-la-somme-en-vigilance-orange-a-partir-de-ce-mardi-soir-20261117_KWNKYH4GIZAILOZYKYPNFDQDEA/",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T16:43:54+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Le Monde",
+     "link": "https://www.lemonde.fr/planete/article/2026/11/17/pluie-et-inondations-le-pas-de-calais-et-la-somme-places-en-vigilance-orange-mardi-a-partir-de-23-heures_6813028_3244.html",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T18:07:52+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "20 Minutes",
+     "link": "https://www.20minutes.fr/planete/4264028-20261119-intemperies-pluies-inondations-crues-cinq-departements-vigilance-orange?at_medium=display&at_campaign=149",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-19T07:37:56+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 7,
+    "paesi_esteri": 1,
+    "continenti": {
+     "Europa": 7
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
    "id": "f73f644a28",
    "titolo": "Papa Leone XIV a Cusco, in Perù, a 3.400 metri di quota",
    "lingua": "en",
    "categoria": "Società",
    "curiosita": false,
    "sezione": "Società",
-   "calore": 54,
+   "calore": 53,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -4754,160 +4757,31 @@
    "punto_cieco": "italia"
   },
   {
-   "id": "e0d6f0e152",
-   "titolo": "Allerta gialla per vento e temporali in Sarthe martedì, non esclusa l'arancione",
-   "lingua": "en",
-   "categoria": "Clima e ambiente",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 54,
-   "stato": "confermato",
-   "attendibilita": 93,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "BFMTV",
-    "data": "2026-11-17T15:03:02+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.bfmtv.com/meteo/intemperies/deux-departements-des-hauts-de-france-places-en-vigilance-orange-pluie-inondation-ce-mardi-soir_AN-202611170670.html"
-   },
-   "conferma": {
-    "fonte": "Ouest-France",
-    "data": "2026-11-17T15:20:11+00:00",
-    "dopo_min": 17
-   },
-   "curva": [
-    1,
-    6,
-    6,
-    6,
-    6,
-    6,
-    6,
-    6,
-    6,
-    6,
-    7,
-    7
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "FR"
-   ],
-   "lingue": [
-    "en",
-    "fr"
-   ],
-   "n_fonti": 7,
-   "prima_segnalazione": {
-    "fonte": "BFMTV",
-    "paese": "FR",
-    "data": "2026-11-17T15:03:02+00:00"
-   },
-   "aggiornata": "2026-11-19T09:48:11+00:00",
-   "fonti": [
-    {
-     "fonte": "BFMTV",
-     "link": "https://www.bfmtv.com/meteo/intemperies/deux-departements-des-hauts-de-france-places-en-vigilance-orange-pluie-inondation-ce-mardi-soir_AN-202611170670.html",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T15:03:02+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Ouest-France",
-     "link": "https://www.ouest-france.fr/meteo/meteo-france-place-les-departements-de-la-somme-et-du-pas-de-calais-en-vigilance-orange-pluie-inondations-98435684-e28c-11f1-a3b1-0c6de532ce7d?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T15:20:11+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "France Info",
-     "link": "https://www.franceinfo.fr/environnement/meteo/la-somme-et-le-pas-de-calais-places-en-vigilance-orange-pluie-inondation-a-partir-de-23-heures_8286704.html#xtor=RSS-3-[lestitres]",
-     "paese": "FR",
-     "lingua": "en",
-     "data": "2026-11-17T15:55:22+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Le Figaro",
-     "link": "https://www.lefigaro.fr/meteo/deux-departements-places-en-vigilance-orange-pluie-inondation-de-fortes-rafales-de-vent-attendues-decouvrez-la-meteo-du-18-novembre-20261117",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T16:42:45+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Libération",
-     "link": "https://www.liberation.fr/environnement/climat/pluie-inondation-le-pas-de-calais-et-la-somme-en-vigilance-orange-a-partir-de-ce-mardi-soir-20261117_KWNKYH4GIZAILOZYKYPNFDQDEA/",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T16:43:54+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Le Monde",
-     "link": "https://www.lemonde.fr/planete/article/2026/11/17/pluie-et-inondations-le-pas-de-calais-et-la-somme-places-en-vigilance-orange-mardi-a-partir-de-23-heures_6813028_3244.html",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T18:07:52+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "20 Minutes",
-     "link": "https://www.20minutes.fr/planete/4264028-20261119-intemperies-pluies-inondations-crues-cinq-departements-vigilance-orange?at_medium=display&at_campaign=149",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-19T07:37:56+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 7,
-    "paesi_esteri": 1,
-    "continenti": {
-     "Europa": 7
-    }
-   },
-   "punto_cieco": ""
-  },
-  {
-   "id": "af77b09102",
-   "titolo": "Tocantins avrà una delegazione alle Paralimpiadi Scolastiche 2026",
-   "lingua": "pt",
+   "id": "1cbee4561b",
+   "titolo": "Scaloni modifica il programma dell'Argentina per il maltempo prima dell'amichevole con la Costa Rica",
+   "lingua": "es",
    "categoria": "Altro",
    "curiosita": false,
    "sezione": "Sport",
-   "calore": 52,
+   "calore": 53,
    "stato": "confermato",
-   "attendibilita": 60,
+   "attendibilita": 64,
    "livello": "Prime conferme",
    "prima": {
-    "fonte": "G1",
-    "data": "2026-11-17T14:28:35+00:00",
+    "fonte": "Globo Esporte",
+    "data": "2026-11-17T16:51:57+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://g1.globo.com/al/alagoas/edicao/2026/11/17/videos-jornal-da-manha-alagoas-de-terca-feira-17-de-novembro.ghtml"
+    "link": "https://ge.globo.com/ba/futebol/jogo/27-11-2026/costa-rica-brasil-mundial-sub-17.ghtml"
    },
    "conferma": {
-    "fonte": "Globo Esporte",
-    "data": "2026-11-17T16:30:18+00:00",
-    "dopo_min": 122
+    "fonte": "La Nación (Costa Rica)",
+    "data": "2026-11-17T20:58:26+00:00",
+    "dopo_min": 246
    },
    "curva": [
     1,
-    2,
+    1,
     2,
     2,
     2,
@@ -4923,34 +4797,36 @@
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
-    "BR"
+    "BR",
+    "CR"
    ],
    "lingue": [
+    "es",
     "pt"
    ],
    "n_fonti": 2,
    "prima_segnalazione": {
-    "fonte": "G1",
+    "fonte": "Globo Esporte",
     "paese": "BR",
-    "data": "2026-11-17T14:28:35+00:00"
+    "data": "2026-11-17T16:51:57+00:00"
    },
-   "aggiornata": "2026-11-19T12:25:02+00:00",
+   "aggiornata": "2026-11-19T13:18:48+00:00",
    "fonti": [
     {
-     "fonte": "G1",
-     "link": "https://g1.globo.com/al/alagoas/edicao/2026/11/17/videos-jornal-da-manha-alagoas-de-terca-feira-17-de-novembro.ghtml",
+     "fonte": "Globo Esporte",
+     "link": "https://ge.globo.com/ba/futebol/jogo/27-11-2026/costa-rica-brasil-mundial-sub-17.ghtml",
      "paese": "BR",
      "lingua": "pt",
-     "data": "2026-11-17T14:28:35+00:00",
+     "data": "2026-11-17T16:51:57+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Globo Esporte",
-     "link": "https://ge.globo.com/ba/playlist/globo-esporte-ba-desta-terca-feira-17-de-novembro-de-2026.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T16:30:18+00:00",
+     "fonte": "La Nación (Costa Rica)",
+     "link": "https://www.nacion.com/viva/cuando-es-el-miss-universo-2026/TMJ2CAMAPJGC7A6UOKUJ2FWMAA/story/",
+     "paese": "CR",
+     "lingua": "es",
+     "data": "2026-11-17T20:58:26+00:00",
      "tipo": "giornale",
      "origine": "rss"
     }
@@ -4958,7 +4834,7 @@
    "copertura": {
     "italia": 0,
     "estero": 2,
-    "paesi_esteri": 1,
+    "paesi_esteri": 2,
     "continenti": {
      "Americhe": 2
     }
@@ -5222,100 +5098,6 @@
     "paesi_esteri": 2,
     "continenti": {
      "Americhe": 2
-    }
-   },
-   "punto_cieco": ""
-  },
-  {
-   "id": "2b1829f11c",
-   "titolo": "Vignette del 16 novembre 2026",
-   "lingua": "en",
-   "categoria": "Altro",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 49,
-   "stato": "confermato",
-   "attendibilita": 63,
-   "livello": "Prime conferme",
-   "prima": {
-    "fonte": "The National",
-    "data": "2026-11-18T00:01:00+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.thenationalnews.com/opinion/cartoon/2026/11/18/putin-trump-xi-apec-summit-meeting-russia-us-china/"
-   },
-   "conferma": {
-    "fonte": "Sydney Morning Herald",
-    "data": "2026-11-18T10:52:52+00:00",
-    "dopo_min": 652
-   },
-   "curva": [
-    1,
-    1,
-    1,
-    1,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3,
-    3
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AE",
-    "AU"
-   ],
-   "lingue": [
-    "en"
-   ],
-   "n_fonti": 3,
-   "prima_segnalazione": {
-    "fonte": "The National",
-    "paese": "AE",
-    "data": "2026-11-18T00:01:00+00:00"
-   },
-   "aggiornata": "2026-11-19T10:30:52+00:00",
-   "fonti": [
-    {
-     "fonte": "The National",
-     "link": "https://www.thenationalnews.com/opinion/cartoon/2026/11/18/putin-trump-xi-apec-summit-meeting-russia-us-china/",
-     "paese": "AE",
-     "lingua": "en",
-     "data": "2026-11-18T00:01:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Sydney Morning Herald",
-     "link": "https://www.smh.com.au/politics/federal/best-of-cartoons-november-19-2026-20261118-p61fbq.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
-     "paese": "AU",
-     "lingua": "en",
-     "data": "2026-11-18T10:52:52+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Age",
-     "link": "https://www.theage.com.au/politics/federal/best-of-cartoons-november-19-2026-20261118-p61fbq.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
-     "paese": "AU",
-     "lingua": "en",
-     "data": "2026-11-18T10:52:52+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 3,
-    "paesi_esteri": 2,
-    "continenti": {
-     "Oceania": 2,
-     "Asia e Medio Oriente": 1
     }
    },
    "punto_cieco": ""
@@ -5629,6 +5411,107 @@
    "punto_cieco": ""
   },
   {
+   "id": "8bfea60591",
+   "titolo": "Domínguez commenta la finale di Copa Sudamericana contro il Boca, che non vince un titolo internazionale da 18",
+   "lingua": "es",
+   "categoria": "Altro",
+   "curiosita": false,
+   "sezione": "Sport",
+   "calore": 47,
+   "stato": "confermato",
+   "attendibilita": 66,
+   "livello": "Confermata",
+   "prima": {
+    "fonte": "Infobae",
+    "data": "2026-11-17T15:55:49+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.infobae.com/colombia/2026/11/17/estas-son-las-medidas-de-seguridad-en-barranquilla-para-la-final-de-la-copa-sudamericana-entre-boca-juniors-y-atletico-mineiro-reforzaran-los-controles-en-los-hoteles/"
+   },
+   "conferma": {
+    "fonte": "Olé",
+    "data": "2026-11-17T16:16:20+00:00",
+    "dopo_min": 21
+   },
+   "curva": [
+    1,
+    2,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AR"
+   ],
+   "lingue": [
+    "es"
+   ],
+   "n_fonti": 4,
+   "prima_segnalazione": {
+    "fonte": "Infobae",
+    "paese": "AR",
+    "data": "2026-11-17T15:55:49+00:00"
+   },
+   "aggiornata": "2026-11-19T13:04:00+00:00",
+   "fonti": [
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/colombia/2026/11/17/estas-son-las-medidas-de-seguridad-en-barranquilla-para-la-final-de-la-copa-sudamericana-entre-boca-juniors-y-atletico-mineiro-reforzaran-los-controles-en-los-hoteles/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T15:55:49+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Olé",
+     "link": "https://www.ole.com.ar/boca-juniors/boca-final-copa-sudamericana-milton-delgado-lesion-rodolfo-vasco-arruabarrena-atletico-mineiro_0_u76DWht2BB.html",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T16:16:20+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "La Nación",
+     "link": "https://www.lanacion.com.ar/deportes/futbol/cuando-juega-boca-la-final-de-la-copa-sudamericana-ante-atletico-mineiro-nid17112026/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T21:29:53+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Clarín",
+     "link": "https://www.clarin.com/deportes/boca-palpita-final-copa-sudamericana-vuelos-llenos-hinchas-rumbo-barranquilla-equipo-confirmado-preocupacion-mineiro_0_3CEAVnnB2E.html",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-18T00:54:51+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 4,
+    "paesi_esteri": 1,
+    "continenti": {
+     "Americhe": 4
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
    "id": "542e4d1fce",
    "titolo": "Avvistato in Brasile un gruppo indigeno isolato di circa 15 persone che ha avuto contatti con un altro gruppo",
    "lingua": "it",
@@ -5656,7 +5539,7 @@
     3,
     3,
     4,
-    5,
+    6,
     6,
     7,
     7,
@@ -6209,6 +6092,101 @@
     "continenti": {
      "Oceania": 1,
      "Americhe": 1
+    }
+   },
+   "punto_cieco": "",
+   "archivio": true
+  },
+  {
+   "id": "2b1829f11c",
+   "titolo": "Vignette del 16 novembre 2026",
+   "lingua": "en",
+   "categoria": "Altro",
+   "curiosita": false,
+   "sezione": "Mondo",
+   "calore": 20,
+   "stato": "confermato",
+   "attendibilita": 63,
+   "livello": "Prime conferme",
+   "prima": {
+    "fonte": "The National",
+    "data": "2026-11-18T00:01:00+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.thenationalnews.com/opinion/cartoon/2026/11/18/putin-trump-xi-apec-summit-meeting-russia-us-china/"
+   },
+   "conferma": {
+    "fonte": "Sydney Morning Herald",
+    "data": "2026-11-18T10:52:52+00:00",
+    "dopo_min": 652
+   },
+   "curva": [
+    1,
+    1,
+    1,
+    1,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AE",
+    "AU"
+   ],
+   "lingue": [
+    "en"
+   ],
+   "n_fonti": 3,
+   "prima_segnalazione": {
+    "fonte": "The National",
+    "paese": "AE",
+    "data": "2026-11-18T00:01:00+00:00"
+   },
+   "aggiornata": "2026-11-19T10:30:52+00:00",
+   "fonti": [
+    {
+     "fonte": "The National",
+     "link": "https://www.thenationalnews.com/opinion/cartoon/2026/11/18/putin-trump-xi-apec-summit-meeting-russia-us-china/",
+     "paese": "AE",
+     "lingua": "en",
+     "data": "2026-11-18T00:01:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Sydney Morning Herald",
+     "link": "https://www.smh.com.au/politics/federal/best-of-cartoons-november-19-2026-20261118-p61fbq.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+     "paese": "AU",
+     "lingua": "en",
+     "data": "2026-11-18T10:52:52+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Age",
+     "link": "https://www.theage.com.au/politics/federal/best-of-cartoons-november-19-2026-20261118-p61fbq.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+     "paese": "AU",
+     "lingua": "en",
+     "data": "2026-11-18T10:52:52+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 3,
+    "paesi_esteri": 2,
+    "continenti": {
+     "Oceania": 2,
+     "Asia e Medio Oriente": 1
     }
    },
    "punto_cieco": "",
@@ -8843,92 +8821,6 @@
     "continenti": {
      "Europa": 2,
      "Americhe": 1
-    }
-   },
-   "punto_cieco": "",
-   "archivio": true
-  },
-  {
-   "id": "1cbee4561b",
-   "titolo": "Scaloni modifica il programma dell'Argentina per il maltempo prima dell'amichevole con la Costa Rica",
-   "lingua": "es",
-   "categoria": "Altro",
-   "curiosita": false,
-   "sezione": "Sport",
-   "calore": 20,
-   "stato": "confermato",
-   "attendibilita": 64,
-   "livello": "Prime conferme",
-   "prima": {
-    "fonte": "Globo Esporte",
-    "data": "2026-11-17T16:51:57+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://ge.globo.com/ba/futebol/jogo/27-11-2026/costa-rica-brasil-mundial-sub-17.ghtml"
-   },
-   "conferma": {
-    "fonte": "La Nación (Costa Rica)",
-    "data": "2026-11-17T20:58:26+00:00",
-    "dopo_min": 246
-   },
-   "curva": [
-    1,
-    1,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "BR",
-    "CR"
-   ],
-   "lingue": [
-    "es",
-    "pt"
-   ],
-   "n_fonti": 2,
-   "prima_segnalazione": {
-    "fonte": "Globo Esporte",
-    "paese": "BR",
-    "data": "2026-11-17T16:51:57+00:00"
-   },
-   "aggiornata": "2026-11-19T04:39:28+00:00",
-   "fonti": [
-    {
-     "fonte": "Globo Esporte",
-     "link": "https://ge.globo.com/ba/futebol/jogo/27-11-2026/costa-rica-brasil-mundial-sub-17.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T16:51:57+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "La Nación (Costa Rica)",
-     "link": "https://www.nacion.com/viva/cuando-es-el-miss-universo-2026/TMJ2CAMAPJGC7A6UOKUJ2FWMAA/story/",
-     "paese": "CR",
-     "lingua": "es",
-     "data": "2026-11-17T20:58:26+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 2,
-    "paesi_esteri": 2,
-    "continenti": {
-     "Americhe": 2
     }
    },
    "punto_cieco": "",
@@ -183337,7 +183229,7 @@
   }
  ],
  "dati": {
-  "articoli_analizzati": 43208,
+  "articoli_analizzati": 43175,
   "storie": 400,
   "paesi_coperti": 94,
   "fonti_diverse": 260,
@@ -183345,57 +183237,57 @@
    [
     "AR",
     "Argentina",
-    5843
+    5848
    ],
    [
     "BR",
     "Brasile",
-    3751
+    3752
    ],
    [
     "DE",
     "Germania",
-    3601
-   ],
-   [
-    "IT",
-    "Italia",
-    2929
+    3598
    ],
    [
     "FR",
     "Francia",
-    2926
+    2921
+   ],
+   [
+    "IT",
+    "Italia",
+    2921
    ],
    [
     "US",
     "Stati Uniti",
-    2584
+    2589
    ],
    [
     "GB",
     "Regno Unito",
-    1641
+    1647
    ],
    [
     "ES",
     "Spagna",
-    1530
+    1532
    ],
    [
     "PY",
     "Paraguay",
-    1302
+    1296
    ],
    [
     "IN",
     "India",
-    1031
+    1027
    ],
    [
     "NG",
     "Nigeria",
-    972
+    975
    ],
    [
     "AU",
@@ -183405,93 +183297,93 @@
    [
     "PH",
     "Filippine",
-    717
+    716
    ],
    [
     "MX",
     "Messico",
-    683
+    680
    ],
    [
     "CO",
     "Colombia",
-    660
+    655
    ],
    [
     "BE",
     "Belgio",
-    507
+    508
    ],
    [
     "EC",
     "Ecuador",
-    444
+    440
    ],
    [
     "SG",
     "Singapore",
-    437
+    436
    ],
    [
     "RU",
     "Russia",
-    405
-   ],
-   [
-    "GH",
-    "Ghana",
-    397
+    402
    ],
    [
     "CA",
     "Canada",
-    393
+    398
+   ],
+   [
+    "GH",
+    "Ghana",
+    395
    ],
    [
     "NZ",
     "Nuova Zelanda",
-    387
+    388
    ],
    [
     "PT",
     "Portogallo",
-    385
+    387
    ],
    [
     "RS",
     "Serbia",
-    383
+    380
    ],
    [
     "JP",
     "Giappone",
-    377
+    376
    ]
   ],
   "per_lingua": [
    [
     "en",
-    16722
+    16716
    ],
    [
     "es",
-    10376
+    10356
    ],
    [
     "pt",
-    4136
+    4139
    ],
    [
     "de",
-    3898
+    3894
    ],
    [
     "fr",
-    3192
+    3190
    ],
    [
     "it",
-    2716
+    2708
    ],
    [
     "nl",
@@ -183499,15 +183391,15 @@
    ],
    [
     "pl",
-    339
+    340
    ],
    [
     "sv",
-    223
+    224
    ],
    [
     "da",
-    205
+    207
    ],
    [
     "ja",
@@ -183515,41 +183407,41 @@
    ],
    [
     "fi",
-    196
+    198
    ]
   ],
   "per_categoria": [
    [
     "Altro",
-    156
+    158
    ],
    [
     "Esteri e conflitti",
-    84
+    85
    ],
    [
     "Politica",
-    71
+    68
    ],
    [
     "Cronaca",
-    24
+    23
    ],
    [
     "Tecnologia e crypto",
-    23
+    22
+   ],
+   [
+    "Società",
+    14
    ],
    [
     "Sport",
     14
    ],
    [
-    "Società",
-    13
-   ],
-   [
     "Economia",
-    12
+    13
    ],
    [
     "Clima e ambiente",
@@ -183559,15 +183451,15 @@
   "fonti_top": [
    [
     "Infobae",
-    4510
+    4516
    ],
    [
     "G1",
-    1771
+    1779
    ],
    [
     "ABC Color",
-    1302
+    1296
    ],
    [
     "New York Post",
@@ -183575,133 +183467,133 @@
    ],
    [
     "Die Zeit",
-    776
+    777
    ],
    [
     "O Globo",
-    736
+    734
    ],
    [
     "BFMTV",
-    710
-   ],
-   [
-    "El Universal",
-    683
+    707
    ],
    [
     "La Nación",
-    682
+    681
+   ],
+   [
+    "El Universal",
+    680
    ],
    [
     "Semana",
-    589
+    583
    ],
    [
     "Globo Esporte",
-    582
+    579
    ],
    [
     "Der Tagesspiegel",
-    567
+    563
    ]
   ],
   "per_ora": [
    [
     23,
-    1196
+    1237
    ],
    [
     22,
-    1233
+    1180
    ],
    [
     21,
-    1198
+    1262
    ],
    [
     20,
-    1238
+    1172
    ],
    [
     19,
-    1076
+    1097
    ],
    [
     18,
-    1055
+    1033
    ],
    [
     17,
-    918
+    857
    ],
    [
     16,
-    809
+    774
    ],
    [
     15,
-    758
+    779
    ],
    [
     14,
-    739
+    702
    ],
    [
     13,
-    638
+    621
    ],
    [
     12,
-    544
+    545
    ],
    [
     11,
-    467
+    435
    ],
    [
     10,
-    551
+    553
    ],
    [
     9,
-    572
+    627
    ],
    [
     8,
-    722
+    719
    ],
    [
     7,
-    730
+    794
    ],
    [
     6,
-    771
+    753
    ],
    [
     5,
-    777
+    810
    ],
    [
     4,
-    966
+    973
    ],
    [
     3,
-    1013
+    1084
    ],
    [
     2,
-    1270
+    1253
    ],
    [
     1,
-    1157
+    1166
    ],
    [
     0,
-    1127
+    1077
    ]
   ],
   "approvate_non_sul_sito": {
@@ -183714,18 +183606,13 @@
   }
  },
  "errori_fonti": [
+  "France 24: 403 Client Error: Forbidden for url: https://www.france24.com/en/rss",
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
-  "Dawn: 403 Client Error: Forbidden for url: https://www.dawn.com/feeds/home",
-  "Bangkok Post: 451 Client Error:  for url: https://www.bangkokpost.com/rss/data/topstories.xml",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
-  "Radio Prague International: HTTPSConnectionPool(host='english.radio.cz', port=443): Read timed out. (read timeout=20)",
   "The Slovenia Times: 403 Client Error: Forbidden for url: https://sloveniatimes.com/feed",
-  "Malay Mail: 404 Client Error: Not Found for url: https://www.malaymail.com/feed/rss/malaysia",
-  "Antara: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+  "The Korea Times: 403 Client Error: Forbidden for url: https://www.koreatimes.co.kr/www/rss/nation.xml",
   "Khmer Times: 403 Client Error: Forbidden for url: https://www.khmertimeskh.com/feed/",
   "The Herald: 403 Client Error: Forbidden for url: https://www.heraldonline.co.zw/feed/",
-  "Hespress English: 403 Client Error: Forbidden for url: https://en.hespress.com/feed",
-  "Newsweek: 404 Client Error: Not Found for url: https://www.newsweek.com/rss",
   "La Prensa (Panama): 403 Client Error: Forbidden for url: https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
   "GDELT moldova: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:moldova&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT albania: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:albania&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
