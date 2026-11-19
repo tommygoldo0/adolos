@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-19T10:05:04.812501+00:00",
+ "aggiornato": "2026-11-19T10:18:24.982590+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -147,30 +147,30 @@
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "The Economic Times",
-    "data": "2026-11-17T10:05:27+00:00",
+    "fonte": "CNA",
+    "data": "2026-11-17T10:22:08+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/nvidia-shares-crash-24-in-november-so-far-amid-huangs-scandal-why-ubs-is-slamming-draconian-assumptions-sees-54-upside/articleshow/135920398.cms"
+    "link": "https://www.channelnewsasia.com/business/nvidia-board-forms-committee-national-security-and-export-control-oversight-6558711"
    },
    "conferma": {
-    "fonte": "CNBC",
-    "data": "2026-11-17T10:08:32+00:00",
-    "dopo_min": 3
+    "fonte": "Axios",
+    "data": "2026-11-17T10:30:08+00:00",
+    "dopo_min": 8
    },
    "curva": [
     1,
-    26,
-    74,
-    95,
-    101,
-    102,
+    24,
+    75,
+    96,
     102,
     103,
     103,
-    103,
-    103,
-    103
+    104,
+    104,
+    104,
+    104,
+    104
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -203,6 +203,7 @@
     "IS",
     "IT",
     "JM",
+    "JP",
     "MX",
     "NG",
     "NL",
@@ -230,35 +231,18 @@
     "fr",
     "is",
     "it",
+    "ja",
     "nl",
     "pt"
    ],
-   "n_fonti": 103,
+   "n_fonti": 104,
    "prima_segnalazione": {
-    "fonte": "The Economic Times",
-    "paese": "IN",
-    "data": "2026-11-17T10:05:27+00:00"
+    "fonte": "CNA",
+    "paese": "SG",
+    "data": "2026-11-17T10:22:08+00:00"
    },
-   "aggiornata": "2026-11-18T13:41:19+00:00",
+   "aggiornata": "2026-11-18T17:28:58+00:00",
    "fonti": [
-    {
-     "fonte": "The Economic Times",
-     "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/nvidia-shares-crash-24-in-november-so-far-amid-huangs-scandal-why-ubs-is-slamming-draconian-assumptions-sees-54-upside/articleshow/135920398.cms",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T10:05:27+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "CNBC",
-     "link": "https://www.cnbc.com/2026/11/16/trump-nvidia-stock-trades-jensen-huang.html",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T10:08:32+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "CNA",
      "link": "https://www.channelnewsasia.com/business/nvidia-board-forms-committee-national-security-and-export-control-oversight-6558711",
@@ -341,15 +325,6 @@
      "origine": "rss"
     },
     {
-     "fonte": "Der Tagesspiegel",
-     "link": "https://www.tagesspiegel.de/wirtschaft/nach-dem-abgang-des-nvidia-chefs-jensen-huangs-machtige-tochter-konnte-ein-problem-bleiben-16293478.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T11:23:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "Financial Times",
      "link": "https://www.ft.com/content/aeacbf89-5511-4d1c-81c2-b4c227bdfceb?syn-25a6b1a6=1",
      "paese": "GB",
@@ -413,15 +388,6 @@
      "origine": "rss"
     },
     {
-     "fonte": "New York Post",
-     "link": "https://nypost.com/2026/11/17/business/how-jensen-huangs-downfall-slammed-nvidias-stock-and-why-the-next-chapter-could-be-even-worse/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T12:00:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "Stuff",
      "link": "https://www.stuff.co.nz/world-news/361060495/nvidia-establishes-committee-oversee-national-security-af",
      "paese": "NZ",
@@ -463,6 +429,15 @@
      "paese": "NG",
      "lingua": "en",
      "data": "2026-11-17T12:49:22+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Newsweek",
+     "link": "https://www.newsweek.com/nvidia-first-post-huang-earnings-12726500",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T13:14:25+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -510,14 +485,41 @@
      "data": "2026-11-17T14:53:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
+    },
+    {
+     "fonte": "El Tiempo",
+     "link": "https://www.eltiempo.com/mundo/eeuu-y-canada/inversiones-de-donald-trump-en-nvidia-desatan-polemica-el-presidente-acumulo-hasta-us-62-millones-en-la-empresa-de-tecnologia-3601594",
+     "paese": "CO",
+     "lingua": "en",
+     "data": "2026-11-17T14:54:42+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Der Spiegel",
+     "link": "https://www.spiegel.de/wirtschaft/unternehmen/nvidia-warum-die-tech-bosse-jensen-huangs-rueckkehr-fordern-a-7c966f6a-6430-47e6-b5f4-edb6202a2617#ref=rss",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T15:03:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Time",
+     "link": "https://time.com/article/2026/11/17/why-jensen-huang-should-not-be-reinstated-as-nvidia-s-ceo/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T15:17:31+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
     }
    ],
    "copertura": {
-    "italia": 10,
+    "italia": 11,
     "estero": 93,
-    "paesi_esteri": 42,
+    "paesi_esteri": 43,
     "continenti": {
-     "Europa": 45,
+     "Europa": 46,
      "Americhe": 29,
      "Asia e Medio Oriente": 17,
      "Oceania": 6,
@@ -528,41 +530,406 @@
    "punto_cieco": ""
   },
   {
-   "id": "60315843ef",
-   "titolo": "Robert Pattinson sarà il prossimo interprete di James Bond",
+   "id": "14150235ce",
+   "titolo": "Iran rivendica un attacco con sei droni contro un radar statunitense in Bahrein e avverte sullo Stretto di Hor",
    "lingua": "it",
    "categoria": "Politica",
    "curiosita": false,
-   "sezione": "Tecnologia",
+   "sezione": "Politica",
    "calore": 100,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "NRC",
-    "data": "2026-11-17T10:07:12+00:00",
+    "fonte": "The Globe and Mail",
+    "data": "2026-11-17T10:35:14+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://www.nrc.nl/nieuws/2026/11/17/we-hebben-een-sint-we-hebben-een-bond-a4941584"
+    "link": "https://www.theglobeandmail.com/world/article-iran-attacks-us-military-radar-system-in-bahrain-with-drones/"
    },
    "conferma": {
-    "fonte": "El Mundo",
-    "data": "2026-11-17T10:13:07+00:00",
-    "dopo_min": 6
+    "fonte": "The Straits Times",
+    "data": "2026-11-17T10:40:00+00:00",
+    "dopo_min": 5
+   },
+   "curva": [
+    1,
+    32,
+    46,
+    48,
+    48,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AR",
+    "BR",
+    "CA",
+    "CY",
+    "DE",
+    "ES",
+    "FR",
+    "GB",
+    "IN",
+    "IR",
+    "IT",
+    "NG",
+    "NZ",
+    "PH",
+    "PY",
+    "QA",
+    "RU",
+    "SA",
+    "SG",
+    "US"
+   ],
+   "lingue": [
+    "ar",
+    "de",
+    "el",
+    "en",
+    "es",
+    "fr",
+    "it",
+    "pt"
+   ],
+   "n_fonti": 50,
+   "prima_segnalazione": {
+    "fonte": "The Globe and Mail",
+    "paese": "CA",
+    "data": "2026-11-17T10:35:14+00:00"
+   },
+   "aggiornata": "2026-11-18T07:49:10+00:00",
+   "fonti": [
+    {
+     "fonte": "The Globe and Mail",
+     "link": "https://www.theglobeandmail.com/world/article-iran-attacks-us-military-radar-system-in-bahrain-with-drones/",
+     "paese": "CA",
+     "lingua": "en",
+     "data": "2026-11-17T10:35:14+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Straits Times",
+     "link": "https://www.straitstimes.com/world/middle-east/iran-targets-bahrain-as-middle-east-temperatures-rise-again",
+     "paese": "SG",
+     "lingua": "en",
+     "data": "2026-11-17T10:40:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "France 24",
+     "link": "https://www.france24.com/en/video/20261117-third-us-aircraft-carrier-arrives-in-the-middle-east-as-iran-targets-bahrain",
+     "paese": "FR",
+     "lingua": "en",
+     "data": "2026-11-17T10:46:27+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Time",
+     "link": "https://time.com/article/2026/11/17/iran-dirty-bomb-plot-radiological-chemical-weapon-washington-dc-intelligence/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T11:00:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Middle East Eye",
+     "link": "https://www.middleeasteye.net/live-blog/live-blog-update/tehran-denies-report-alleged-iranian-plan-detonate-dirty-bomb-washington",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T11:03:50+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "New York Post",
+     "link": "https://nypost.com/2026/11/17/us-news/trump-responds-to-reported-dirty-bomb-threat-from-iran-they-happen-to-be-crazy/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T11:25:12+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Vanguard",
+     "link": "https://www.vanguardngr.com/2026/11/trump-says-takes-very-seriously-possible-iran-threat-to-washington/",
+     "paese": "NG",
+     "lingua": "en",
+     "data": "2026-11-17T11:38:41+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Asharq Al-Awsat",
+     "link": "https://english.aawsat.com/node/5342277",
+     "paese": "SA",
+     "lingua": "ar",
+     "data": "2026-11-17T11:40:38+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "20minutos",
+     "link": "https://www.20minutos.es/internacional/estados-unidos-detecta-planes-iran-para-hacer-explotar-una-bomba-sucia-washington-es-un-arma-terror_7062043_0.html",
+     "paese": "ES",
+     "lingua": "en",
+     "data": "2026-11-17T11:44:44+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ABC Color",
+     "link": "https://www.abc.com.py/internacionales/2026/11/17/trump-dice-que-se-toman-muy-en-serio-posible-ataque-bomba-sucia-irani-en-washington/",
+     "paese": "PY",
+     "lingua": "es",
+     "data": "2026-11-17T11:50:10+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Stuff",
+     "link": "https://www.stuff.co.nz/world-news/361060486/2month-lull-ends-irans-third-strike-us-targets",
+     "paese": "NZ",
+     "lingua": "en",
+     "data": "2026-11-17T11:55:41+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Clarín",
+     "link": "https://www.clarin.com/estados-unidos/trump-dice-que-se-toman-muy-en-serio-posible-ataque-bomba-sucia-irani-en-washington_0_ZtbGGIKgcW.html",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T12:00:09+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "G1",
+     "link": "https://g1.globo.com/mundo/noticia/2026/11/17/ira-nega-plano-de-ataque-a-washington-mas-trump-nao-descarta-ameaca-eles-sao-loucos.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T12:08:24+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Der Spiegel",
+     "link": "https://www.spiegel.de/ausland/irankrieg-teheran-weist-bericht-ueber-anschlagsplaene-mit-schmutziger-bombe-gegen-washington-d-c-zurueck-a-b2248849-5811-48d3-a2fa-78896a52fa44#ref=rss",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T12:09:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Independent",
+     "link": "https://www.independent.co.uk/asia/southeast-asia/trump-philippines-china-visit-live-updates-b3086099.html",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T12:18:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Hill",
+     "link": "https://thehill.com/policy/defense/6224265-donald-trump-iran-dirty-bomb-threat/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T12:19:18+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "BFMTV",
+     "link": "https://www.bfmtv.com/international/amerique-nord/etats-unis/donald-trump/donald-trump-dit-prendre-tres-au-serieux-une-potentielle-menace-d-attaque-iranienne-a-washington_AD-202611170547.html",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T12:32:56+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Cyprus Mail",
+     "link": "https://cyprus-mail.com/2026/11/17/us-taking-seriously-report-of-possible-iranian-dirty-bomb-plot-in-washington",
+     "paese": "CY",
+     "lingua": "el",
+     "data": "2026-11-17T12:34:07+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Ouest-France",
+     "link": "https://www.ouest-france.fr/monde/etats-unis/donald-trump/donald-trump-dit-prendre-tres-au-serieux-une-potentielle-menace-dattaque-iranienne-a-washington-73efdb3e-e27f-11f1-9a72-32f9104dab1b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T12:36:37+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ANSA",
+     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/007-usa-iran-sta-sviluppando-piani-per-bomba-sporca-a-washington_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
+     "paese": "IT",
+     "lingua": "en",
+     "data": "2026-11-17T12:36:54+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "CNA",
+     "link": "https://www.channelnewsasia.com/world/trump-says-takes-very-seriously-possible-iran-threat-washington-6559151",
+     "paese": "SG",
+     "lingua": "en",
+     "data": "2026-11-17T12:42:24+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Il Fatto Quotidiano",
+     "link": "https://www.ilfattoquotidiano.it/2026/11/17/cnn-iran-prepara-attacco-bomba-sporca-washington-trump/8574379/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T12:53:14+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Newsweek",
+     "link": "https://www.newsweek.com/iran-dirty-bomb-map-impact-washington-dc-12726178",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T12:58:06+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "TASS",
+     "link": "https://tass.com/world/2219729",
+     "paese": "RU",
+     "lingua": "en",
+     "data": "2026-11-17T13:15:58+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Rai News",
+     "link": "https://www.rainews.it/video/2026/11/la-soffiata-della-cnn-sulla-bomba-sporca-radioattiva-iraniana-su-washington-teheran-smentisce-3e7e6687-252e-4156-ab96-4b129c994054.html",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T13:25:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Hindustan Times",
+     "link": "https://www.hindustantimes.com/world-news/us-news/trump-issues-stark-warning-to-iran-over-alleged-dc-dirty-bomb-plot-we-take-it-very-seriously-101794920834305.html",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T13:31:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NDTV",
+     "link": "https://www.ndtv.com/world-news/iran-targets-us-radar-facility-in-bahrain-third-strike-on-country-in-5-days-12339610#publisher=newsstand",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T13:42:38+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Al-Monitor",
+     "link": "https://www.al-monitor.com/originals/2026/11/trump-says-us-taking-seriously-report-possible-iranian-dirty-bomb-plot-washington",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T13:46:38+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "n-tv",
+     "link": "https://www.n-tv.de/politik/Trump-nimmt-Bedrohung-durch-schmutzige-Bombe-sehr-ernst-id31543412.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T13:51:55+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Estadão",
+     "link": "https://www.estadao.com.br/internacional/ira-nega-plano-de-atacar-washington-com-bomba-suja-trump-diz-que-teera-pagaria-preco-jamais-visto-npr/",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T13:53:10+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 6,
+    "estero": 44,
+    "paesi_esteri": 19,
+    "continenti": {
+     "Europa": 23,
+     "Americhe": 16,
+     "Asia e Medio Oriente": 9,
+     "Africa": 1,
+     "Oceania": 1
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
+   "id": "60315843ef",
+   "titolo": "Robert Pattinson sarà il prossimo interprete di James Bond",
+   "lingua": "it",
+   "categoria": "Politica",
+   "curiosita": false,
+   "sezione": "Politica",
+   "calore": 100,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "BFMTV",
+    "data": "2026-11-17T10:25:42+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.bfmtv.com/culture/cinema-series/en-2012-robert-pattinson-se-revait-deja-en-james-bond_AN-202611170455.html"
+   },
+   "conferma": {
+    "fonte": "Today",
+    "data": "2026-11-17T10:27:00+00:00",
+    "dopo_min": 1
    },
    "curva": [
     1,
     23,
-    37,
-    44,
+    35,
+    43,
+    43,
     45,
-    47,
-    47,
-    47,
-    47,
-    47,
-    47,
-    47
+    45,
+    45,
+    45,
+    45,
+    45,
+    45
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -584,8 +951,8 @@
     "HU",
     "IT",
     "MX",
-    "NL",
     "PH",
+    "PL",
     "PY",
     "RS",
     "SG",
@@ -597,34 +964,17 @@
     "es",
     "fr",
     "it",
+    "pl",
     "pt"
    ],
-   "n_fonti": 47,
+   "n_fonti": 45,
    "prima_segnalazione": {
-    "fonte": "NRC",
-    "paese": "NL",
-    "data": "2026-11-17T10:07:12+00:00"
+    "fonte": "BFMTV",
+    "paese": "FR",
+    "data": "2026-11-17T10:25:42+00:00"
    },
-   "aggiornata": "2026-11-18T16:04:00+00:00",
+   "aggiornata": "2026-11-18T12:27:30+00:00",
    "fonti": [
-    {
-     "fonte": "NRC",
-     "link": "https://www.nrc.nl/nieuws/2026/11/17/we-hebben-een-sint-we-hebben-een-bond-a4941584",
-     "paese": "NL",
-     "lingua": "en",
-     "data": "2026-11-17T10:07:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "El Mundo",
-     "link": "https://www.elmundo.es/yodona/moda/2026/11/17/6afc14e2e9cf4a25608b457d.html",
-     "paese": "ES",
-     "lingua": "es",
-     "data": "2026-11-17T10:13:07+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "BFMTV",
      "link": "https://www.bfmtv.com/culture/cinema-series/en-2012-robert-pattinson-se-revait-deja-en-james-bond_AN-202611170455.html",
@@ -876,749 +1226,35 @@
      "data": "2026-11-17T15:42:59+00:00",
      "tipo": "giornale",
      "origine": "rss"
+    },
+    {
+     "fonte": "Rai News",
+     "link": "https://www.rainews.it/articoli/2026/11/pattinson-007-cresce-la-febbre-per-la-prossima-bond-girl-il-toto-nomi-sydney-sweeney-zendaya-deva-cassel-margaret-qualley-hunter-schafer-e-adria-arjona-5a453404-a915-469f-851f-3388ec9a9717.html",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T15:44:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "20 Minutes",
+     "link": "https://www.20minutes.fr/arts-stars/cinema/4263496-20261117-forme-fragilite-cote-brutal-robert-pattinson-beau-bond-fois?at_medium=display&at_campaign=149",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T16:23:02+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 6,
-    "estero": 41,
+    "estero": 39,
     "paesi_esteri": 21,
     "continenti": {
-     "Europa": 26,
-     "Americhe": 17,
+     "Europa": 25,
+     "Americhe": 16,
      "Asia e Medio Oriente": 3,
      "Africa": 1
-    }
-   },
-   "punto_cieco": ""
-  },
-  {
-   "id": "14150235ce",
-   "titolo": "Iran rivendica un attacco con sei droni contro un radar statunitense in Bahrein e avverte sullo Stretto di Hor",
-   "lingua": "it",
-   "categoria": "Esteri e conflitti",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 100,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "Time",
-    "data": "2026-11-17T11:00:00+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://time.com/article/2026/11/17/iran-dirty-bomb-plot-radiological-chemical-weapon-washington-dc-intelligence/"
-   },
-   "conferma": {
-    "fonte": "Middle East Eye",
-    "data": "2026-11-17T11:03:50+00:00",
-    "dopo_min": 4
-   },
-   "curva": [
-    1,
-    34,
-    43,
-    46,
-    46,
-    47,
-    47,
-    47,
-    47,
-    47,
-    47,
-    47
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AR",
-    "BR",
-    "CA",
-    "CY",
-    "DE",
-    "ES",
-    "FR",
-    "GB",
-    "IN",
-    "IR",
-    "IT",
-    "NG",
-    "PH",
-    "PY",
-    "QA",
-    "RU",
-    "SA",
-    "SG",
-    "US"
-   ],
-   "lingue": [
-    "ar",
-    "de",
-    "el",
-    "en",
-    "es",
-    "fr",
-    "it",
-    "pt"
-   ],
-   "n_fonti": 47,
-   "prima_segnalazione": {
-    "fonte": "Time",
-    "paese": "US",
-    "data": "2026-11-17T11:00:00+00:00"
-   },
-   "aggiornata": "2026-11-18T07:40:02+00:00",
-   "fonti": [
-    {
-     "fonte": "Time",
-     "link": "https://time.com/article/2026/11/17/iran-dirty-bomb-plot-radiological-chemical-weapon-washington-dc-intelligence/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T11:00:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Middle East Eye",
-     "link": "https://www.middleeasteye.net/live-blog/live-blog-update/tehran-denies-report-alleged-iranian-plan-detonate-dirty-bomb-washington",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T11:03:50+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Times of India",
-     "link": "https://timesofindia.indiatimes.com/defence/international/from-russia-ukraine-war-to-iran-us-conflict-the-return-of-the-dirty-bomb-threat/articleshow/135921734.cms",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T11:07:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "New York Post",
-     "link": "https://nypost.com/2026/11/17/us-news/trump-responds-to-reported-dirty-bomb-threat-from-iran-they-happen-to-be-crazy/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T11:25:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Vanguard",
-     "link": "https://www.vanguardngr.com/2026/11/trump-says-takes-very-seriously-possible-iran-threat-to-washington/",
-     "paese": "NG",
-     "lingua": "en",
-     "data": "2026-11-17T11:38:41+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Asharq Al-Awsat",
-     "link": "https://english.aawsat.com/node/5342277",
-     "paese": "SA",
-     "lingua": "ar",
-     "data": "2026-11-17T11:40:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "20minutos",
-     "link": "https://www.20minutos.es/internacional/estados-unidos-detecta-planes-iran-para-hacer-explotar-una-bomba-sucia-washington-es-un-arma-terror_7062043_0.html",
-     "paese": "ES",
-     "lingua": "en",
-     "data": "2026-11-17T11:44:44+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ABC Color",
-     "link": "https://www.abc.com.py/internacionales/2026/11/17/trump-dice-que-se-toman-muy-en-serio-posible-ataque-bomba-sucia-irani-en-washington/",
-     "paese": "PY",
-     "lingua": "es",
-     "data": "2026-11-17T11:50:10+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Clarín",
-     "link": "https://www.clarin.com/estados-unidos/trump-dice-que-se-toman-muy-en-serio-posible-ataque-bomba-sucia-irani-en-washington_0_ZtbGGIKgcW.html",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T12:00:09+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "G1",
-     "link": "https://g1.globo.com/mundo/noticia/2026/11/17/ira-nega-plano-de-ataque-a-washington-mas-trump-nao-descarta-ameaca-eles-sao-loucos.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T12:08:24+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Der Spiegel",
-     "link": "https://www.spiegel.de/ausland/irankrieg-teheran-weist-bericht-ueber-anschlagsplaene-mit-schmutziger-bombe-gegen-washington-d-c-zurueck-a-b2248849-5811-48d3-a2fa-78896a52fa44#ref=rss",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T12:09:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Straits Times",
-     "link": "https://www.straitstimes.com/world/united-states/tehran-denies-report-of-a-potential-iranian-plan-to-detonate-dirty-bomb-in-washington",
-     "paese": "SG",
-     "lingua": "en",
-     "data": "2026-11-17T12:10:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Independent",
-     "link": "https://www.independent.co.uk/asia/southeast-asia/trump-philippines-china-visit-live-updates-b3086099.html",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T12:18:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Hill",
-     "link": "https://thehill.com/policy/defense/6224265-donald-trump-iran-dirty-bomb-threat/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T12:19:18+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "BFMTV",
-     "link": "https://www.bfmtv.com/international/amerique-nord/etats-unis/donald-trump/donald-trump-dit-prendre-tres-au-serieux-une-potentielle-menace-d-attaque-iranienne-a-washington_AD-202611170547.html",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T12:32:56+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Cyprus Mail",
-     "link": "https://cyprus-mail.com/2026/11/17/us-taking-seriously-report-of-possible-iranian-dirty-bomb-plot-in-washington",
-     "paese": "CY",
-     "lingua": "el",
-     "data": "2026-11-17T12:34:07+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Ouest-France",
-     "link": "https://www.ouest-france.fr/monde/etats-unis/donald-trump/donald-trump-dit-prendre-tres-au-serieux-une-potentielle-menace-dattaque-iranienne-a-washington-73efdb3e-e27f-11f1-9a72-32f9104dab1b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T12:36:37+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ANSA",
-     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/007-usa-iran-sta-sviluppando-piani-per-bomba-sporca-a-washington_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
-     "paese": "IT",
-     "lingua": "en",
-     "data": "2026-11-17T12:36:54+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "CNA",
-     "link": "https://www.channelnewsasia.com/world/trump-says-takes-very-seriously-possible-iran-threat-washington-6559151",
-     "paese": "SG",
-     "lingua": "en",
-     "data": "2026-11-17T12:42:24+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Il Fatto Quotidiano",
-     "link": "https://www.ilfattoquotidiano.it/2026/11/17/cnn-iran-prepara-attacco-bomba-sporca-washington-trump/8574379/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T12:53:14+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Newsweek",
-     "link": "https://www.newsweek.com/iran-dirty-bomb-map-impact-washington-dc-12726178",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T12:58:06+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "TASS",
-     "link": "https://tass.com/world/2219735",
-     "paese": "RU",
-     "lingua": "en",
-     "data": "2026-11-17T13:20:00+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Rai News",
-     "link": "https://www.rainews.it/video/2026/11/la-soffiata-della-cnn-sulla-bomba-sporca-radioattiva-iraniana-su-washington-teheran-smentisce-3e7e6687-252e-4156-ab96-4b129c994054.html",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T13:25:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Hindustan Times",
-     "link": "https://www.hindustantimes.com/world-news/us-news/trump-issues-stark-warning-to-iran-over-alleged-dc-dirty-bomb-plot-we-take-it-very-seriously-101794920834305.html",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T13:31:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Globe and Mail",
-     "link": "https://www.theglobeandmail.com/world/article-us-iran-dirty-bomb-plot-washington/",
-     "paese": "CA",
-     "lingua": "en",
-     "data": "2026-11-17T13:35:16+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Al-Monitor",
-     "link": "https://www.al-monitor.com/originals/2026/11/trump-says-us-taking-seriously-report-possible-iranian-dirty-bomb-plot-washington",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T13:46:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "n-tv",
-     "link": "https://www.n-tv.de/politik/Trump-nimmt-Bedrohung-durch-schmutzige-Bombe-sehr-ernst-id31543412.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T13:51:55+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Estadão",
-     "link": "https://www.estadao.com.br/internacional/ira-nega-plano-de-atacar-washington-com-bomba-suja-trump-diz-que-teera-pagaria-preco-jamais-visto-npr/",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T13:53:10+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Global News",
-     "link": "https://globalnews.ca/news/12154204/trump-asia-trip-iran-dirty-bomb-threat/",
-     "paese": "CA",
-     "lingua": "en",
-     "data": "2026-11-17T14:13:58+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NDTV",
-     "link": "https://www.ndtv.com/world-news/us-iran-war-they-are-crazy-trump-on-reported-iranian-dirty-bomb-plot-in-washington-12339810#publisher=newsstand",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T14:15:09+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 5,
-    "estero": 42,
-    "paesi_esteri": 18,
-    "continenti": {
-     "Europa": 22,
-     "Americhe": 15,
-     "Asia e Medio Oriente": 9,
-     "Africa": 1
-    }
-   },
-   "punto_cieco": ""
-  },
-  {
-   "id": "ee5d97dbe7",
-   "titolo": "Tensioni con l'Iran in crescita con l'arrivo della portaerei USS Theodore Roosevelt",
-   "lingua": "it",
-   "categoria": "Esteri e conflitti",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 100,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "The Independent",
-    "data": "2026-11-17T10:07:42+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.independent.co.uk/news/world/americas/iran-tehran-donald-trump-persian-gulf-washington-b3086270.html"
-   },
-   "conferma": {
-    "fonte": "Euronews",
-    "data": "2026-11-17T10:11:02+00:00",
-    "dopo_min": 3
-   },
-   "curva": [
-    1,
-    15,
-    29,
-    38,
-    41,
-    42,
-    42,
-    42,
-    42,
-    42,
-    42,
-    42
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AE",
-    "AR",
-    "BR",
-    "CA",
-    "DE",
-    "ES",
-    "FR",
-    "GB",
-    "HK",
-    "IN",
-    "IR",
-    "IS",
-    "IT",
-    "MX",
-    "NG",
-    "NL",
-    "NZ",
-    "PH",
-    "QA",
-    "RU",
-    "SA",
-    "SG",
-    "US"
-   ],
-   "lingue": [
-    "ar",
-    "de",
-    "en",
-    "es",
-    "fr",
-    "is",
-    "it",
-    "nl",
-    "pt"
-   ],
-   "n_fonti": 42,
-   "prima_segnalazione": {
-    "fonte": "The Independent",
-    "paese": "GB",
-    "data": "2026-11-17T10:07:42+00:00"
-   },
-   "aggiornata": "2026-11-18T11:14:51+00:00",
-   "fonti": [
-    {
-     "fonte": "The Independent",
-     "link": "https://www.independent.co.uk/news/world/americas/iran-tehran-donald-trump-persian-gulf-washington-b3086270.html",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T10:07:42+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Euronews",
-     "link": "https://www.euronews.com/2026/11/17/iran-claims-drone-attack-on-us-radar-system-at-sheikh-isa-air-base-in-bahrain",
-     "paese": "FR",
-     "lingua": "en",
-     "data": "2026-11-17T10:11:02+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The National",
-     "link": "https://www.thenationalnews.com/news/gulf/2026/11/17/iran-and-oman-discuss-maritime-security-amid-rising-attacks-in-strait-of-hormuz/",
-     "paese": "AE",
-     "lingua": "en",
-     "data": "2026-11-17T10:28:59+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Globe and Mail",
-     "link": "https://www.theglobeandmail.com/world/article-iran-attacks-us-military-radar-system-in-bahrain-with-drones/",
-     "paese": "CA",
-     "lingua": "en",
-     "data": "2026-11-17T10:35:14+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Straits Times",
-     "link": "https://www.straitstimes.com/world/middle-east/iran-targets-bahrain-as-middle-east-temperatures-rise-again",
-     "paese": "SG",
-     "lingua": "en",
-     "data": "2026-11-17T10:40:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "France 24",
-     "link": "https://www.france24.com/en/video/20261117-third-us-aircraft-carrier-arrives-in-the-middle-east-as-iran-targets-bahrain",
-     "paese": "FR",
-     "lingua": "en",
-     "data": "2026-11-17T10:46:27+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Middle East Eye",
-     "link": "https://www.middleeasteye.net/live-blog/live-blog-update/irans-irgc-says-two-tankers-ablaze-hormuz",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T10:56:42+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "O Globo",
-     "link": "https://oglobo.globo.com/mundo/noticia/2026/11/17/ira-ataca-base-americana-no-bahrein-enquanto-embarcacoes-se-chocam-com-minas-navais-em-ormuz.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T11:14:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "CNBC",
-     "link": "https://www.cnbc.com/2026/11/17/iran-war-trump-hormuz-oil-.html",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T11:22:54+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "South China Morning Post",
-     "link": "https://www.scmp.com/news/world/middle-east/article/3374775/iran-fires-drones-us-military-radar-system-bahrain-amid-gulf-tensions",
-     "paese": "HK",
-     "lingua": "en",
-     "data": "2026-11-17T11:48:51+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Stuff",
-     "link": "https://www.stuff.co.nz/world-news/361060486/2month-lull-ends-irans-third-strike-us-targets",
-     "paese": "NZ",
-     "lingua": "en",
-     "data": "2026-11-17T11:55:41+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "FAZ",
-     "link": "https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-usa-greifen-abermals-iranische-insel-qeschm-in-strasse-von-hormus-an-faz-200583539.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T12:29:27+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NDTV",
-     "link": "https://www.ndtv.com/world-news/iran-targets-us-radar-facility-in-bahrain-third-strike-on-country-in-5-days-12339610#publisher=newsstand",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T13:42:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "TASS",
-     "link": "https://tass.com/world/2219753",
-     "paese": "RU",
-     "lingua": "en",
-     "data": "2026-11-17T13:44:59+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Times of India",
-     "link": "https://timesofindia.indiatimes.com/india/two-indian-seafarers-hurt-1-missing-after-tanker-targeted-in-hormuz-strait/articleshow/135929328.cms",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T14:28:07+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Hill",
-     "link": "https://thehill.com/policy/defense/6225047-iran-bahrain-us-base-strikes/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T15:33:17+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Tehran Times",
-     "link": "https://www.tehrantimes.com/news/532258/Iran-strikes-US-radar-system-in-Bahrain-as-Iran-downs-more-drones",
-     "paese": "IR",
-     "lingua": "en",
-     "data": "2026-11-17T15:51:21+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "La Vanguardia",
-     "link": "https://www.lavanguardia.com/internacional/20261117/11686629/ataques-iranies-disparan-ormuz-trump-rearma.html",
-     "paese": "ES",
-     "lingua": "en",
-     "data": "2026-11-17T15:53:20+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Al-Monitor",
-     "link": "https://www.al-monitor.com/originals/2026/11/iran-steps-hormuz-bahrain-attacks-us-hits-qeshm-again-what-know",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T15:55:27+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/america/mundo/2026/11/17/el-regimen-de-iran-aseguro-que-al-menos-cinco-buques-se-incendiaron-tras-impactar-contra-minas-navales-en-ormuz/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T16:09:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "TGCOM24",
-     "link": "https://www.tgcom24.mediaset.it/mondo/guerra-iran-israele-usa-ultime-notizie-17-novembre_119073910-202602k.shtml",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T16:13:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ANSA",
-     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/iran-gli-usa-hanno-attaccato-lisola-di-qeshm-nello-stretto-di-hormuz_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
-     "paese": "IT",
-     "lingua": "en",
-     "data": "2026-11-17T16:15:43+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NOS",
-     "link": "https://nos.nl/l/2639904",
-     "paese": "NL",
-     "lingua": "nl",
-     "data": "2026-11-17T16:28:27+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Asharq Al-Awsat",
-     "link": "https://english.aawsat.com/node/5342423",
-     "paese": "SA",
-     "lingua": "ar",
-     "data": "2026-11-17T16:39:19+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Il Fatto Quotidiano",
-     "link": "https://www.ilfattoquotidiano.it/2026/11/17/attacco-usa-iran-qeshm-hormuz-notizie/8575146/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T16:42:59+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Punch",
-     "link": "https://punchng.com/iran-reports-us-strikes-on-qeshm-island/?utm_source=rss.punchng.com&utm_medium=web",
-     "paese": "NG",
-     "lingua": "en",
-     "data": "2026-11-17T17:43:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Hindu",
-     "link": "https://www.thehindu.com/news/international/iran-targets-bahrain-slams-fabricated-dirty-bomb-report/article71713177.ece",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T17:46:56+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NPR",
-     "link": "https://www.npr.org/2026/11/17/nx-s1-6044255/us-iran-war-latest-bahrain",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T18:34:31+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "BFMTV",
-     "link": "https://www.bfmtv.com/international/moyen-orient/iran/guerre-au-moyen-orient-un-responsable-local-affirme-que-les-etats-unis-ont-mene-plusieurs-frappes-contre-l-ile-iranienne-de-qeshm_AD-202611170864.html",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T18:50:48+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "PBS NewsHour",
-     "link": "https://www.pbs.org/newshour/world/iran-fires-at-u-s-facility-in-bahrain-as-tehran-resumes-strikes-on-arab-neighbors",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T18:53:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 5,
-    "estero": 37,
-    "paesi_esteri": 22,
-    "continenti": {
-     "Europa": 18,
-     "Americhe": 11,
-     "Asia e Medio Oriente": 11,
-     "Africa": 1,
-     "Oceania": 1
     }
    },
    "punto_cieco": ""
@@ -1635,16 +1271,16 @@
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "Ouest-France",
-    "data": "2026-11-17T10:12:56+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.ouest-france.fr/sport/football/fifa/gianni-infantino-philippe-diallo-ramon-vega-qui-sont-les-candidats-a-la-presidence-de-la-fifa-10d4761e-e260-11f1-9a72-32f9104dab1b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
-   },
-   "conferma": {
     "fonte": "Le Monde",
     "data": "2026-11-17T10:27:27+00:00",
-    "dopo_min": 15
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.lemonde.fr/sport/article/2026/11/17/avec-la-candidature-de-philippe-diallo-a-la-tete-de-la-fifa-la-presse-internationale-decouvre-un-candidat-peu-connu-qui-devra-fissurer-le-bloc-autour-de-gianni-infantino_6812953_3242.html"
+   },
+   "conferma": {
+    "fonte": "Azernews",
+    "data": "2026-11-17T10:34:00+00:00",
+    "dopo_min": 7
    },
    "curva": [
     1,
@@ -1660,7 +1296,7 @@
     31,
     34
    ],
-   "crescita": 3,
+   "crescita": 2,
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
@@ -1699,21 +1335,12 @@
    ],
    "n_fonti": 34,
    "prima_segnalazione": {
-    "fonte": "Ouest-France",
+    "fonte": "Le Monde",
     "paese": "FR",
-    "data": "2026-11-17T10:12:56+00:00"
+    "data": "2026-11-17T10:27:27+00:00"
    },
    "aggiornata": "2026-11-19T09:51:34+00:00",
    "fonti": [
-    {
-     "fonte": "Ouest-France",
-     "link": "https://www.ouest-france.fr/sport/football/fifa/gianni-infantino-philippe-diallo-ramon-vega-qui-sont-les-candidats-a-la-presidence-de-la-fifa-10d4761e-e260-11f1-9a72-32f9104dab1b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T10:12:56+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "Le Monde",
      "link": "https://www.lemonde.fr/sport/article/2026/11/17/avec-la-candidature-de-philippe-diallo-a-la-tete-de-la-fifa-la-presse-internationale-decouvre-un-candidat-peu-connu-qui-devra-fissurer-le-bloc-autour-de-gianni-infantino_6812953_3242.html",
@@ -1922,6 +1549,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "Ouest-France",
+     "link": "https://www.ouest-france.fr/sport/football/fifa/presidence-de-la-fifa-jincarne-une-alternative-credible-philippe-diallo-un-candidat-offensif-et-determine-49dad5da-e296-11f1-a3b1-0c6de532ce7d?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T17:27:31+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "Il Fatto Quotidiano",
      "link": "https://www.ilfattoquotidiano.it/2026/11/17/elezioni-fifa-2027-diallo-sfida-infantino-voti/8575289/",
      "paese": "IT",
@@ -1986,6 +1622,372 @@
      "Asia e Medio Oriente": 6,
      "Africa": 1,
      "Oceania": 1
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
+   "id": "ee5d97dbe7",
+   "titolo": "Tensioni con l'Iran in crescita con l'arrivo della portaerei USS Theodore Roosevelt",
+   "lingua": "it",
+   "categoria": "Esteri e conflitti",
+   "curiosita": false,
+   "sezione": "Mondo",
+   "calore": 100,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "The National",
+    "data": "2026-11-17T10:28:59+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.thenationalnews.com/news/gulf/2026/11/17/iran-and-oman-discuss-maritime-security-amid-rising-attacks-in-strait-of-hormuz/"
+   },
+   "conferma": {
+    "fonte": "Middle East Eye",
+    "data": "2026-11-17T10:56:42+00:00",
+    "dopo_min": 28
+   },
+   "curva": [
+    1,
+    7,
+    19,
+    31,
+    34,
+    34,
+    34,
+    34,
+    34,
+    34,
+    34,
+    34
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AE",
+    "AR",
+    "BR",
+    "DE",
+    "ES",
+    "FR",
+    "GB",
+    "HK",
+    "IN",
+    "IS",
+    "IT",
+    "MX",
+    "NG",
+    "NL",
+    "NO",
+    "PH",
+    "QA",
+    "RU",
+    "SA",
+    "SG",
+    "US"
+   ],
+   "lingue": [
+    "ar",
+    "de",
+    "en",
+    "es",
+    "fr",
+    "is",
+    "it",
+    "nl",
+    "pt"
+   ],
+   "n_fonti": 34,
+   "prima_segnalazione": {
+    "fonte": "The National",
+    "paese": "AE",
+    "data": "2026-11-17T10:28:59+00:00"
+   },
+   "aggiornata": "2026-11-18T11:14:51+00:00",
+   "fonti": [
+    {
+     "fonte": "The National",
+     "link": "https://www.thenationalnews.com/news/gulf/2026/11/17/iran-and-oman-discuss-maritime-security-amid-rising-attacks-in-strait-of-hormuz/",
+     "paese": "AE",
+     "lingua": "en",
+     "data": "2026-11-17T10:28:59+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Middle East Eye",
+     "link": "https://www.middleeasteye.net/live-blog/live-blog-update/irans-irgc-says-two-tankers-ablaze-hormuz",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T10:56:42+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "O Globo",
+     "link": "https://oglobo.globo.com/mundo/noticia/2026/11/17/ira-ataca-base-americana-no-bahrein-enquanto-embarcacoes-se-chocam-com-minas-navais-em-ormuz.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T11:14:12+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "CNBC",
+     "link": "https://www.cnbc.com/2026/11/17/iran-war-trump-hormuz-oil-.html",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T11:22:54+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "South China Morning Post",
+     "link": "https://www.scmp.com/news/world/middle-east/article/3374775/iran-fires-drones-us-military-radar-system-bahrain-amid-gulf-tensions",
+     "paese": "HK",
+     "lingua": "en",
+     "data": "2026-11-17T11:48:51+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "FAZ",
+     "link": "https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-usa-greifen-abermals-iranische-insel-qeschm-in-strasse-von-hormus-an-faz-200583539.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T12:29:27+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Washington Post",
+     "link": "https://www.washingtonpost.com/world/2026/11/17/netanyahu-is-pushing-new-iran-attack-bid-stay-power-his-rivals-warn/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T14:26:31+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "TASS",
+     "link": "https://tass.com/world/2219815",
+     "paese": "RU",
+     "lingua": "en",
+     "data": "2026-11-17T15:09:04+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "La Vanguardia",
+     "link": "https://www.lavanguardia.com/internacional/20261117/11686629/ataques-iranies-disparan-ormuz-trump-rearma.html",
+     "paese": "ES",
+     "lingua": "en",
+     "data": "2026-11-17T15:53:20+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Al-Monitor",
+     "link": "https://www.al-monitor.com/originals/2026/11/iran-steps-hormuz-bahrain-attacks-us-hits-qeshm-again-what-know",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T15:55:27+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/america/mundo/2026/11/17/el-regimen-de-iran-aseguro-que-al-menos-cinco-buques-se-incendiaron-tras-impactar-contra-minas-navales-en-ormuz/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T16:09:12+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "TGCOM24",
+     "link": "https://www.tgcom24.mediaset.it/mondo/guerra-iran-israele-usa-ultime-notizie-17-novembre_119073910-202602k.shtml",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T16:13:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ANSA",
+     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/iran-gli-usa-hanno-attaccato-lisola-di-qeshm-nello-stretto-di-hormuz_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
+     "paese": "IT",
+     "lingua": "en",
+     "data": "2026-11-17T16:15:43+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NDTV",
+     "link": "https://www.ndtv.com/world-news/us-attacks-irans-qeshm-island-in-strait-of-hormuz-report-12340437#publisher=newsstand",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T16:22:57+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NOS",
+     "link": "https://nos.nl/l/2639904",
+     "paese": "NL",
+     "lingua": "nl",
+     "data": "2026-11-17T16:28:27+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Asharq Al-Awsat",
+     "link": "https://english.aawsat.com/node/5342423",
+     "paese": "SA",
+     "lingua": "ar",
+     "data": "2026-11-17T16:39:19+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Il Fatto Quotidiano",
+     "link": "https://www.ilfattoquotidiano.it/2026/11/17/attacco-usa-iran-qeshm-hormuz-notizie/8575146/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T16:42:59+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Punch",
+     "link": "https://punchng.com/iran-reports-us-strikes-on-qeshm-island/?utm_source=rss.punchng.com&utm_medium=web",
+     "paese": "NG",
+     "lingua": "en",
+     "data": "2026-11-17T17:43:12+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "BFMTV",
+     "link": "https://www.bfmtv.com/international/moyen-orient/iran/guerre-au-moyen-orient-un-responsable-local-affirme-que-les-etats-unis-ont-mene-plusieurs-frappes-contre-l-ile-iranienne-de-qeshm_AD-202611170864.html",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T18:50:48+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Aftenposten",
+     "link": "https://www.aftenposten.no/verden/i/z0GxrO/amerikanske-kampfly-angrep-iransk-missilbase?utm_medium=rss",
+     "paese": "NO",
+     "lingua": "en",
+     "data": "2026-11-17T19:41:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "20 Minutes",
+     "link": "https://www.20minutes.fr/monde/etats-unis/4263683-20261117-guerre-iran-etats-unis-frappe-ile-strategique-qeshm-detroit-ormuz?at_medium=display&at_campaign=149",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T19:42:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "de Volkskrant",
+     "link": "https://www.volkskrant.nl/buitenland/iran-beschuldigt-vs-van-aanval-op-eiland-in-straat-van-hormuz~bd96d2f5/",
+     "paese": "NL",
+     "lingua": "nl",
+     "data": "2026-11-17T20:05:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Hindustan Times",
+     "link": "https://www.hindustantimes.com/world-news/us-news/us-fighter-jets-strike-missile-launch-site-on-iran-s-qeshm-island-101794945503003.html",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T20:09:50+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Times of India",
+     "link": "https://timesofindia.indiatimes.com/world/middle-east/us-launches-fresh-strikes-on-iran-targets-missile-launch-site-on-qeshm-island/articleshow/135939742.cms",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T20:10:35+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "El Universal",
+     "link": "https://www.eluniversal.com.mx/mundo/teheran-afirma-que-eu-bombardeo-la-isla-de-qeshm-ocurre-tras-ataque-irani-contra-bahrein/",
+     "paese": "MX",
+     "lingua": "es",
+     "data": "2026-11-17T20:39:46+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "New York Post",
+     "link": "https://nypost.com/2026/11/17/world-news/us-strikes-iranian-missile-launch-site-on-qeshm-island-us-official/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T20:46:45+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Euronews",
+     "link": "https://www.euronews.com/2026/11/17/us-strikes-targets-in-qeshm-island-after-iranian-mines-hit-five-ships-in-hormuz",
+     "paese": "FR",
+     "lingua": "en",
+     "data": "2026-11-17T20:54:43+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "El Mundo",
+     "link": "https://www.elmundo.es/internacional/2026/11/17/6afcbe6ce9cf4a7d7b8b45b2.html",
+     "paese": "ES",
+     "lingua": "es",
+     "data": "2026-11-17T21:02:06+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Straits Times",
+     "link": "https://www.straitstimes.com/world/middle-east/us-strikes-irans-qeshm-island-in-strait-of-hormuz-after-guards-target-bahrain",
+     "paese": "SG",
+     "lingua": "en",
+     "data": "2026-11-17T21:11:45+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "RÚV",
+     "link": "https://www.ruv.is/frettir/erlent/2026-11-17-bandarikjaher-gerir-aras-a-qeshm-eyju-i-hormussundi-493110/",
+     "paese": "IS",
+     "lingua": "is",
+     "data": "2026-11-17T22:17:12+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 4,
+    "estero": 30,
+    "paesi_esteri": 20,
+    "continenti": {
+     "Europa": 16,
+     "Asia e Medio Oriente": 9,
+     "Americhe": 8,
+     "Africa": 1
     }
    },
    "punto_cieco": ""
@@ -2209,13 +2211,342 @@
    "punto_cieco": ""
   },
   {
+   "id": "6b614deab8",
+   "titolo": "Secondo RFI, soldati francesi operano in Ucraina in missioni tecniche",
+   "lingua": "it",
+   "categoria": "Esteri e conflitti",
+   "curiosita": false,
+   "sezione": "Mondo",
+   "calore": 89,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "Ouest-France",
+    "data": "2026-11-17T10:56:49+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-des-soldats-francais-ont-ete-deployes-dans-le-pays-pour-des-missions-de-soutien-d66538b8-e1a8-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+   },
+   "conferma": {
+    "fonte": "BFMTV",
+    "data": "2026-11-17T10:58:06+00:00",
+    "dopo_min": 1
+   },
+   "curva": [
+    1,
+    10,
+    20,
+    24,
+    25,
+    26,
+    27,
+    27,
+    27,
+    27,
+    27,
+    27
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AR",
+    "BE",
+    "FR",
+    "IN",
+    "IT",
+    "JP",
+    "LV",
+    "MA",
+    "PY",
+    "RO",
+    "RS",
+    "RU",
+    "SA",
+    "SG"
+   ],
+   "lingue": [
+    "ar",
+    "en",
+    "es",
+    "fr",
+    "it",
+    "ja"
+   ],
+   "n_fonti": 27,
+   "prima_segnalazione": {
+    "fonte": "Ouest-France",
+    "paese": "FR",
+    "data": "2026-11-17T10:56:49+00:00"
+   },
+   "aggiornata": "2026-11-18T10:06:53+00:00",
+   "fonti": [
+    {
+     "fonte": "Ouest-France",
+     "link": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-des-soldats-francais-ont-ete-deployes-dans-le-pays-pour-des-missions-de-soutien-d66538b8-e1a8-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T10:56:49+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "BFMTV",
+     "link": "https://www.bfmtv.com/international/asie/russie/soldats-francais-en-ukraine-la-russie-estime-qu-il-ne-s-agit-plus-d-un-soutien-mais-d-une-participation-directe-a-la-guerre_AD-202611170475.html",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T10:58:06+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "RFI",
+     "link": "https://www.rfi.fr/fr/europe/20261117-soldats-fran%C3%A7ais-d%C3%A9ploy%C3%A9s-en-ukraine-moscou-y-voit-une-participation-directe-au-conflit",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T11:14:54+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Il Fatto Quotidiano",
+     "link": "https://www.ilfattoquotidiano.it/2026/11/17/soldati-francesi-ucraina-lavrov-guerra-notizie/8574668/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T12:12:55+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Le Figaro",
+     "link": "https://www.lefigaro.fr/international/soldats-francais-deployes-en-ukraine-moscou-met-en-garde-paris-et-denonce-une-participation-directe-au-conflit-20261117",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T12:23:52+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Euractiv",
+     "link": "https://www.rapporteur.com/news/russia-says-french-troops-in-ukraine-a-direct-participation-in-war/",
+     "paese": "BE",
+     "lingua": "en",
+     "data": "2026-11-17T12:28:02+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Euronews",
+     "link": "https://www.euronews.com/2026/11/17/french-troops-deployed-on-secret-mission-in-ukraine-for-months-media-says",
+     "paese": "FR",
+     "lingua": "en",
+     "data": "2026-11-17T13:12:31+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "TASS",
+     "link": "https://tass.com/politics/2219733",
+     "paese": "RU",
+     "lingua": "en",
+     "data": "2026-11-17T13:19:06+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ABC Color",
+     "link": "https://www.abc.com.py/internacionales/2026/11/17/rusia-esta-al-tanto-de-la-presencia-de-tropas-extranjeras-en-ucrania-dice-lavrov/",
+     "paese": "PY",
+     "lingua": "es",
+     "data": "2026-11-17T13:20:19+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Libération",
+     "link": "https://www.liberation.fr/international/europe/soldats-francais-deployes-en-ukraine-moscou-y-voit-une-participation-directe-au-conflit-20261117_2CANBP4NJJGFRNFF6IMDWBYWJE/",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T15:02:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "La Stampa",
+     "link": "https://www.lastampa.it/esteri/2026/11/17/news/soldati_francesi_ucraina_russia-15800937/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T15:36:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NDTV",
+     "link": "https://www.ndtv.com/world-news/french-troops-deployed-in-ukraine-war-france-trashes-russias-absurd-claim-12340343#publisher=newsstand",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T15:45:29+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Hespress English",
+     "link": "https://en.hespress.com/149362-france-rejects-absurd-russian-claim-french-troops-participating-in-ukraine-war.html",
+     "paese": "MA",
+     "lingua": "en",
+     "data": "2026-11-17T15:45:41+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Asharq Al-Awsat",
+     "link": "https://english.aawsat.com/node/5342440",
+     "paese": "SA",
+     "lingua": "ar",
+     "data": "2026-11-17T17:01:14+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "TGCOM24",
+     "link": "https://www.tgcom24.mediaset.it/mondo/guerra-russia-ucraina-ultime-notizie-17-novembre_119074110-202602k.shtml",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T17:15:27+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Digi24",
+     "link": "https://www.digi24.ro/stiri/externe/rusia/lavrov-acuza-franta-ca-are-militari-in-ucraina-care-participa-direct-la-conflict-prezenta-trupelor-straine-nu-e-un-secret-pentru-noi-4040695",
+     "paese": "RO",
+     "lingua": "en",
+     "data": "2026-11-17T17:17:55+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Politico Europe",
+     "link": "https://www.politico.eu/article/sergey-lavrov-france-soldiers-ukraine-direct-participation-war-russia/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+     "paese": "BE",
+     "lingua": "en",
+     "data": "2026-11-17T17:22:15+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Sky TG24",
+     "link": "https://tg24.sky.it/mondo/2026/11/17/soldati-francesi-ucraina-guerra",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T18:23:51+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Meduza",
+     "link": "https://meduza.io/en/news/2026/11/17/france-confirms-its-troops-are-in-ukraine-russia-says-they-are-legitimate-targets",
+     "paese": "LV",
+     "lingua": "en",
+     "data": "2026-11-17T18:56:30+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/america/mundo/2026/11/17/amenaza-de-rusia-a-francia-moscu-dijo-que-las-tropas-extranjeras-en-ucrania-son-un-objetivo-legitimo-de-sus-ataques/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T19:26:46+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Asahi Shimbun",
+     "link": "http://www.asahi.com/articles/ASVCK5359VCKUHBI02MM.html?ref=rss",
+     "paese": "JP",
+     "lingua": "ja",
+     "data": "2026-11-17T20:00:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Straits Times",
+     "link": "https://www.straitstimes.com/world/europe/france-is-not-co-belligerent-in-ukraine-french-minister-says",
+     "paese": "SG",
+     "lingua": "en",
+     "data": "2026-11-17T20:04:55+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "N1 Serbia",
+     "link": "https://n1info.rs/svet/sergej-lavrov-francuske-trupe-ukrajina-rat/",
+     "paese": "RS",
+     "lingua": "en",
+     "data": "2026-11-17T22:23:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "France Info",
+     "link": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/direct-guerre-en-ukraine-la-russie-estime-que-la-presence-de-soldats-francais-sur-le-terrain-equivaut-a-une-participation-directe-au-conflit_8286344.html#xtor=RSS-3-[lestitres]",
+     "paese": "FR",
+     "lingua": "en",
+     "data": "2026-11-17T22:58:08+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Open",
+     "link": "https://www.open.online/2026/11/18/missione-soldati-francesi-ucraina-volia-lavrov/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-18T04:04:47+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "la Repubblica",
+     "link": "https://www.repubblica.it/esteri/2026/11/18/news/missione_segreta_soldati_francesi_ucraina_addestramento_truppe_armi_mosca_attacca_partecipazione_diretta_guerra-425731459/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-18T08:14:16+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Adnkronos",
+     "link": "https://www.adnkronos.com/politica/italia-ucraina-guerra-russia-governo_45Rqmj9hISlw7KKEzHF35u",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-18T10:06:53+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 7,
+    "estero": 20,
+    "paesi_esteri": 13,
+    "continenti": {
+     "Europa": 20,
+     "Asia e Medio Oriente": 4,
+     "Americhe": 2,
+     "Africa": 1
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
    "id": "b2d7dbaf12",
    "titolo": "Wayne Rooney racconta di essere arrivato a considerare il suicidio",
    "lingua": "it",
    "categoria": "Sport",
    "curiosita": false,
    "sezione": "Sport",
-   "calore": 89,
+   "calore": 88,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -2530,326 +2861,6 @@
    "punto_cieco": ""
   },
   {
-   "id": "6b614deab8",
-   "titolo": "Secondo RFI, soldati francesi operano in Ucraina in missioni tecniche",
-   "lingua": "it",
-   "categoria": "Esteri e conflitti",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 88,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "Ouest-France",
-    "data": "2026-11-17T10:56:49+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-des-soldats-francais-ont-ete-deployes-dans-le-pays-pour-des-missions-de-soutien-d66538b8-e1a8-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
-   },
-   "conferma": {
-    "fonte": "BFMTV",
-    "data": "2026-11-17T10:58:06+00:00",
-    "dopo_min": 1
-   },
-   "curva": [
-    1,
-    10,
-    20,
-    23,
-    24,
-    25,
-    26,
-    26,
-    26,
-    26,
-    26,
-    26
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AR",
-    "BE",
-    "FR",
-    "IN",
-    "IT",
-    "JP",
-    "LV",
-    "MA",
-    "PY",
-    "RO",
-    "RS",
-    "RU",
-    "SA",
-    "SG"
-   ],
-   "lingue": [
-    "ar",
-    "en",
-    "es",
-    "fr",
-    "it",
-    "ja"
-   ],
-   "n_fonti": 26,
-   "prima_segnalazione": {
-    "fonte": "Ouest-France",
-    "paese": "FR",
-    "data": "2026-11-17T10:56:49+00:00"
-   },
-   "aggiornata": "2026-11-18T10:06:53+00:00",
-   "fonti": [
-    {
-     "fonte": "Ouest-France",
-     "link": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-des-soldats-francais-ont-ete-deployes-dans-le-pays-pour-des-missions-de-soutien-d66538b8-e1a8-11f1-b029-43a761592972?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T10:56:49+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "BFMTV",
-     "link": "https://www.bfmtv.com/international/asie/russie/soldats-francais-en-ukraine-la-russie-estime-qu-il-ne-s-agit-plus-d-un-soutien-mais-d-une-participation-directe-a-la-guerre_AD-202611170475.html",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T10:58:06+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "RFI",
-     "link": "https://www.rfi.fr/fr/europe/20261117-soldats-fran%C3%A7ais-d%C3%A9ploy%C3%A9s-en-ukraine-moscou-y-voit-une-participation-directe-au-conflit",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T11:14:54+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Il Fatto Quotidiano",
-     "link": "https://www.ilfattoquotidiano.it/2026/11/17/soldati-francesi-ucraina-lavrov-guerra-notizie/8574668/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T12:12:55+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Le Figaro",
-     "link": "https://www.lefigaro.fr/international/soldats-francais-deployes-en-ukraine-moscou-met-en-garde-paris-et-denonce-une-participation-directe-au-conflit-20261117",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T12:23:52+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Euractiv",
-     "link": "https://www.rapporteur.com/news/russia-says-french-troops-in-ukraine-a-direct-participation-in-war/",
-     "paese": "BE",
-     "lingua": "en",
-     "data": "2026-11-17T12:28:02+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Euronews",
-     "link": "https://www.euronews.com/2026/11/17/french-troops-deployed-on-secret-mission-in-ukraine-for-months-media-says",
-     "paese": "FR",
-     "lingua": "en",
-     "data": "2026-11-17T13:12:31+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "TASS",
-     "link": "https://tass.com/politics/2219733",
-     "paese": "RU",
-     "lingua": "en",
-     "data": "2026-11-17T13:19:06+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ABC Color",
-     "link": "https://www.abc.com.py/internacionales/2026/11/17/rusia-esta-al-tanto-de-la-presencia-de-tropas-extranjeras-en-ucrania-dice-lavrov/",
-     "paese": "PY",
-     "lingua": "es",
-     "data": "2026-11-17T13:20:19+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Libération",
-     "link": "https://www.liberation.fr/international/europe/soldats-francais-deployes-en-ukraine-moscou-y-voit-une-participation-directe-au-conflit-20261117_2CANBP4NJJGFRNFF6IMDWBYWJE/",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T15:02:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "La Stampa",
-     "link": "https://www.lastampa.it/esteri/2026/11/17/news/soldati_francesi_ucraina_russia-15800937/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T15:36:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NDTV",
-     "link": "https://www.ndtv.com/world-news/french-troops-deployed-in-ukraine-war-france-trashes-russias-absurd-claim-12340343#publisher=newsstand",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T15:45:29+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Hespress English",
-     "link": "https://en.hespress.com/149362-france-rejects-absurd-russian-claim-french-troops-participating-in-ukraine-war.html",
-     "paese": "MA",
-     "lingua": "en",
-     "data": "2026-11-17T15:45:41+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Asharq Al-Awsat",
-     "link": "https://english.aawsat.com/node/5342440",
-     "paese": "SA",
-     "lingua": "ar",
-     "data": "2026-11-17T17:01:14+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "TGCOM24",
-     "link": "https://www.tgcom24.mediaset.it/mondo/guerra-russia-ucraina-ultime-notizie-17-novembre_119074110-202602k.shtml",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T17:15:27+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Digi24",
-     "link": "https://www.digi24.ro/stiri/externe/rusia/lavrov-acuza-franta-ca-are-militari-in-ucraina-care-participa-direct-la-conflict-prezenta-trupelor-straine-nu-e-un-secret-pentru-noi-4040695",
-     "paese": "RO",
-     "lingua": "en",
-     "data": "2026-11-17T17:17:55+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Politico Europe",
-     "link": "https://www.politico.eu/article/sergey-lavrov-france-soldiers-ukraine-direct-participation-war-russia/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-     "paese": "BE",
-     "lingua": "en",
-     "data": "2026-11-17T17:22:15+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Sky TG24",
-     "link": "https://tg24.sky.it/mondo/2026/11/17/soldati-francesi-ucraina-guerra",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T18:23:51+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Meduza",
-     "link": "https://meduza.io/en/news/2026/11/17/france-confirms-its-troops-are-in-ukraine-russia-says-they-are-legitimate-targets",
-     "paese": "LV",
-     "lingua": "en",
-     "data": "2026-11-17T18:56:30+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/america/mundo/2026/11/17/amenaza-de-rusia-a-francia-moscu-dijo-que-las-tropas-extranjeras-en-ucrania-son-un-objetivo-legitimo-de-sus-ataques/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T19:26:46+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Asahi Shimbun",
-     "link": "http://www.asahi.com/articles/ASVCK5359VCKUHBI02MM.html?ref=rss",
-     "paese": "JP",
-     "lingua": "ja",
-     "data": "2026-11-17T20:00:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Straits Times",
-     "link": "https://www.straitstimes.com/world/europe/france-is-not-co-belligerent-in-ukraine-french-minister-says",
-     "paese": "SG",
-     "lingua": "en",
-     "data": "2026-11-17T20:04:55+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "N1 Serbia",
-     "link": "https://n1info.rs/svet/sergej-lavrov-francuske-trupe-ukrajina-rat/",
-     "paese": "RS",
-     "lingua": "en",
-     "data": "2026-11-17T22:23:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Open",
-     "link": "https://www.open.online/2026/11/18/missione-soldati-francesi-ucraina-volia-lavrov/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-18T04:04:47+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "la Repubblica",
-     "link": "https://www.repubblica.it/esteri/2026/11/18/news/missione_segreta_soldati_francesi_ucraina_addestramento_truppe_armi_mosca_attacca_partecipazione_diretta_guerra-425731459/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-18T08:14:16+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Adnkronos",
-     "link": "https://www.adnkronos.com/politica/italia-ucraina-guerra-russia-governo_45Rqmj9hISlw7KKEzHF35u",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-18T10:06:53+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 7,
-    "estero": 19,
-    "paesi_esteri": 13,
-    "continenti": {
-     "Europa": 19,
-     "Asia e Medio Oriente": 4,
-     "Americhe": 2,
-     "Africa": 1
-    }
-   },
-   "punto_cieco": ""
-  },
-  {
    "id": "4bd7f95852",
    "titolo": "Interruzione della rete di comunicazione classificata della NSA statunitense, limitate le comunicazioni intern",
    "lingua": "en",
@@ -2874,8 +2885,8 @@
    },
    "curva": [
     1,
-    2,
-    27,
+    3,
+    26,
     31,
     32,
     32,
@@ -2947,15 +2958,6 @@
      "paese": "SG",
      "lingua": "en",
      "data": "2026-11-17T15:42:01+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/estados-unidos/2026/11/17/estados-unidos-registra-una-caida-de-estudiantes-internacionales-en-sus-universidades-que-muestran-las-nuevas-cifras/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T15:52:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -3172,6 +3174,15 @@
      "paese": "FR",
      "lingua": "fr",
      "data": "2026-11-17T20:37:58+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/estados-unidos/2026/11/17/la-red-clasificada-de-la-agencia-de-seguridad-nacional-de-eeuu-sufre-una-caida-y-deja-restringidas-las-comunicaciones-internas/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T21:04:27+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -3424,6 +3435,153 @@
      "Europa": 9,
      "Americhe": 5,
      "Asia e Medio Oriente": 2
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
+   "id": "efbb8d24c0",
+   "titolo": "Mosca accusa la Francia di partecipazione diretta alla guerra in Ucraina",
+   "lingua": "de",
+   "categoria": "Esteri e conflitti",
+   "curiosita": false,
+   "sezione": "Mondo",
+   "calore": 79,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "n-tv",
+    "data": "2026-11-18T19:51:23+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.n-tv.de/politik/Ukraine-nutzte-fliegende-Modems-fuer-Angriff-auf-Krim-Bruecke-id31550423.html"
+   },
+   "conferma": {
+    "fonte": "ORF",
+    "data": "2026-11-18T23:01:46+00:00",
+    "dopo_min": 190
+   },
+   "curva": [
+    1,
+    1,
+    1,
+    5,
+    5,
+    7,
+    7,
+    8,
+    9,
+    9,
+    9,
+    9
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AT",
+    "DE"
+   ],
+   "lingue": [
+    "de"
+   ],
+   "n_fonti": 9,
+   "prima_segnalazione": {
+    "fonte": "n-tv",
+    "paese": "DE",
+    "data": "2026-11-18T19:51:23+00:00"
+   },
+   "aggiornata": "2026-11-19T09:56:19+00:00",
+   "fonti": [
+    {
+     "fonte": "n-tv",
+     "link": "https://www.n-tv.de/politik/Ukraine-nutzte-fliegende-Modems-fuer-Angriff-auf-Krim-Bruecke-id31550423.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-18T19:51:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ORF",
+     "link": "https://orf.at/stories/3448615/",
+     "paese": "AT",
+     "lingua": "de",
+     "data": "2026-11-18T23:01:46+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Handelsblatt",
+     "link": "https://www.handelsblatt.com/politik/international/ukraine-krieg-krim-bruecke-zugverkehr-nach-erneutem-angriff-eingestellt/100271082.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-18T23:22:22+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Die Zeit",
+     "link": "https://www.zeit.de/news/2026-11/19/krim-bruecke-zugverkehr-nach-erneutem-angriff-eingestellt",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-18T23:22:22+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Der Tagesspiegel",
+     "link": "https://www.tagesspiegel.de/internationales/dpa-ukraine-krieg-krim-brucke-zugverkehr-nach-erneutem-angriff-eingestellt-16301353.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-18T23:23:34+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Der Spiegel",
+     "link": "https://www.spiegel.de/ausland/ukraine-krieg-nach-erneutem-angriff-steht-zugverkehr-auf-krimbruecke-still-a-9e01117c-8373-480f-ad57-6c08a2bd1af7#ref=rss",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-19T01:50:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Süddeutsche Zeitung",
+     "link": "https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-pistorius-us-kritik-dumm-krim-terrorismus-krim-bruecke-li.3571967",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-19T02:16:57+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Tagesschau",
+     "link": "https://www.tagesschau.de/ausland/europa/krim-bruecke-zug-100.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-19T04:28:24+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Die Welt",
+     "link": "https://www.welt.de/politik/video6afe88eb4d1895cf2a8f0846/krim-bruecke-zugverkehr-nach-erneutem-ukrainischem-angriff-vorerst-eingestellt.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-19T06:18:02+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 9,
+    "paesi_esteri": 2,
+    "continenti": {
+     "Europa": 9
     }
    },
    "punto_cieco": ""
@@ -3757,7 +3915,7 @@
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 77,
+   "calore": 76,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -3931,160 +4089,13 @@
    "punto_cieco": "italia"
   },
   {
-   "id": "efbb8d24c0",
-   "titolo": "Mosca accusa la Francia di partecipazione diretta alla guerra in Ucraina",
-   "lingua": "de",
-   "categoria": "Esteri e conflitti",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 75,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "Der Tagesspiegel",
-    "data": "2026-11-17T16:01:38+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.tagesspiegel.de/internationales/verdeutlicht-russlands-unvermogen-wie-die-beschadigung-der-krim-brucke-jetzt-den-ukraine-krieg-verandern-konnte-16295454.html"
-   },
-   "conferma": {
-    "fonte": "n-tv",
-    "data": "2026-11-18T19:51:23+00:00",
-    "dopo_min": 1670
-   },
-   "curva": [
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    2,
-    7,
-    8,
-    9
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AT",
-    "DE"
-   ],
-   "lingue": [
-    "de"
-   ],
-   "n_fonti": 9,
-   "prima_segnalazione": {
-    "fonte": "Der Tagesspiegel",
-    "paese": "DE",
-    "data": "2026-11-17T16:01:38+00:00"
-   },
-   "aggiornata": "2026-11-19T08:58:28+00:00",
-   "fonti": [
-    {
-     "fonte": "Der Tagesspiegel",
-     "link": "https://www.tagesspiegel.de/internationales/verdeutlicht-russlands-unvermogen-wie-die-beschadigung-der-krim-brucke-jetzt-den-ukraine-krieg-verandern-konnte-16295454.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T16:01:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "n-tv",
-     "link": "https://www.n-tv.de/politik/Ukraine-nutzte-fliegende-Modems-fuer-Angriff-auf-Krim-Bruecke-id31550423.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-18T19:51:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ORF",
-     "link": "https://orf.at/stories/3448615/",
-     "paese": "AT",
-     "lingua": "de",
-     "data": "2026-11-18T23:01:46+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Handelsblatt",
-     "link": "https://www.handelsblatt.com/politik/international/ukraine-krieg-krim-bruecke-zugverkehr-nach-erneutem-angriff-eingestellt/100271082.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-18T23:22:22+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Die Zeit",
-     "link": "https://www.zeit.de/news/2026-11/19/krim-bruecke-zugverkehr-nach-erneutem-angriff-eingestellt",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-18T23:22:22+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Der Spiegel",
-     "link": "https://www.spiegel.de/ausland/ukraine-krieg-nach-erneutem-angriff-steht-zugverkehr-auf-krimbruecke-still-a-9e01117c-8373-480f-ad57-6c08a2bd1af7#ref=rss",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-19T01:50:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Süddeutsche Zeitung",
-     "link": "https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-pistorius-us-kritik-dumm-krim-terrorismus-krim-bruecke-li.3571967",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-19T02:16:57+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Tagesschau",
-     "link": "https://www.tagesschau.de/ausland/europa/krim-bruecke-zug-100.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-19T04:28:24+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Die Welt",
-     "link": "https://www.welt.de/politik/video6afe88eb4d1895cf2a8f0846/krim-bruecke-zugverkehr-nach-erneutem-ukrainischem-angriff-vorerst-eingestellt.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-19T06:18:02+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 9,
-    "paesi_esteri": 2,
-    "continenti": {
-     "Europa": 9
-    }
-   },
-   "punto_cieco": ""
-  },
-  {
    "id": "a97f7085b5",
    "titolo": "L'UE contesta a Temu la mancanza di controlli sulla vendita di prodotti illegali",
    "lingua": "it",
    "categoria": "Cronaca",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 69,
+   "calore": 70,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -4102,17 +4113,17 @@
    },
    "curva": [
     1,
-    21,
-    23,
-    23,
-    23,
-    23,
-    23,
-    23,
-    23,
-    23,
-    23,
-    23
+    22,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24,
+    24
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -4125,6 +4136,7 @@
     "BR",
     "DE",
     "ES",
+    "FR",
     "GB",
     "HU",
     "IS",
@@ -4147,7 +4159,7 @@
     "pt",
     "ru"
    ],
-   "n_fonti": 23,
+   "n_fonti": 24,
    "prima_segnalazione": {
     "fonte": "VRT NWS",
     "paese": "BE",
@@ -4242,6 +4254,15 @@
      "paese": "AT",
      "lingua": "de",
      "data": "2026-11-17T11:22:19+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Le Figaro",
+     "link": "https://www.lefigaro.fr/societes/temu-risque-une-nouvelle-amende-de-l-ue-pour-un-manque-de-controle-des-produits-vendus-20261117",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T11:25:12+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -4365,10 +4386,10 @@
    ],
    "copertura": {
     "italia": 3,
-    "estero": 20,
-    "paesi_esteri": 15,
+    "estero": 21,
+    "paesi_esteri": 16,
     "continenti": {
-     "Europa": 16,
+     "Europa": 17,
      "Asia e Medio Oriente": 4,
      "Americhe": 3
     }
@@ -4758,7 +4779,7 @@
    "categoria": "Altro",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 66,
+   "calore": 65,
    "stato": "confermato",
    "attendibilita": 84,
    "livello": "Confermata",
@@ -4868,177 +4889,123 @@
    "punto_cieco": "italia"
   },
   {
-   "id": "92fb6e2b9f",
-   "titolo": "La Germania propone Markus Brunnermeier come capo economista della BCE",
-   "lingua": "en",
-   "categoria": "Politica",
-   "curiosita": false,
-   "sezione": "Politica",
-   "calore": 63,
+   "id": "04c33a858a",
+   "titolo": "Gli eredi chiedono di bloccare la vendita all'asta di un dipinto di Van Gogh",
+   "lingua": "it",
+   "categoria": "Altro",
+   "curiosita": true,
+   "sezione": "Curiosità",
+   "calore": 62,
    "stato": "confermato",
-   "attendibilita": 99,
+   "attendibilita": 89,
    "livello": "Certa",
    "prima": {
-    "fonte": "Süddeutsche Zeitung",
-    "data": "2026-11-17T10:12:06+00:00",
+    "fonte": "Il Fatto Quotidiano",
+    "data": "2026-11-18T10:52:51+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://www.sueddeutsche.de/wirtschaft/christine-lagarde-ezb-nachfolge-euro-merz-macron-li.3578218"
+    "link": "https://www.ilfattoquotidiano.it/2026/11/18/castagni-in-fiore-di-van-gogh-da-180-milioni-il-colpo-di-scena-prima-dellasta-la-famiglia-delleditore-ebreo-samuel-fischer-trova-laccordo-con-sothebys/8575841/"
    },
    "conferma": {
-    "fonte": "Politico Europe",
-    "data": "2026-11-17T10:15:28+00:00",
-    "dopo_min": 3
+    "fonte": "Rai News",
+    "data": "2026-11-19T02:21:00+00:00",
+    "dopo_min": 928
    },
    "curva": [
     1,
-    7,
-    10,
-    10,
-    10,
-    10,
-    10,
-    11,
-    11,
-    11,
-    11,
-    11
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    4,
+    6
    ],
    "crescita": 0,
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
-    "AR",
-    "BE",
-    "CH",
-    "DE",
-    "FR",
-    "PY"
+    "IT"
    ],
    "lingue": [
-    "de",
-    "en",
-    "es",
-    "fr"
+    "it"
    ],
-   "n_fonti": 11,
+   "n_fonti": 6,
    "prima_segnalazione": {
-    "fonte": "Süddeutsche Zeitung",
-    "paese": "DE",
-    "data": "2026-11-17T10:12:06+00:00"
+    "fonte": "Il Fatto Quotidiano",
+    "paese": "IT",
+    "data": "2026-11-18T10:52:51+00:00"
    },
-   "aggiornata": "2026-11-18T15:36:01+00:00",
+   "aggiornata": "2026-11-19T09:09:40+00:00",
    "fonti": [
     {
-     "fonte": "Süddeutsche Zeitung",
-     "link": "https://www.sueddeutsche.de/wirtschaft/christine-lagarde-ezb-nachfolge-euro-merz-macron-li.3578218",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T10:12:06+00:00",
+     "fonte": "Il Fatto Quotidiano",
+     "link": "https://www.ilfattoquotidiano.it/2026/11/18/castagni-in-fiore-di-van-gogh-da-180-milioni-il-colpo-di-scena-prima-dellasta-la-famiglia-delleditore-ebreo-samuel-fischer-trova-laccordo-con-sothebys/8575841/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-18T10:52:51+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Politico Europe",
-     "link": "https://www.politico.eu/article/germany-set-to-nominate-markus-brunnermeier-ecb-chief-economist/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-     "paese": "BE",
-     "lingua": "en",
-     "data": "2026-11-17T10:15:28+00:00",
+     "fonte": "Rai News",
+     "link": "https://www.rainews.it/articoli/2026/11/sothebys-chtaigniers-en-fleurs-di-van-gogh-venduto-a-1904-milioni-di-dollari-922b91d0-8441-4edf-ad90-84a5ee705d85.html",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-19T02:21:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/america/agencias/2026/11/17/alemania-propone-al-economista-brunnermeier-como-economista-jefe-del-bce/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T11:02:42+00:00",
+     "fonte": "La Stampa",
+     "link": "https://www.lastampa.it/cultura/2026/11/19/news/van_gogh_da_record_venduto_per_1904_milioni_dopo_l_accordo_sulle_ombre_del_passato_nazista-15802303/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-19T06:03:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "ABC Color",
-     "link": "https://www.abc.com.py/internacionales/2026/11/17/berlin-postula-a-brunnermeier-como-economista-jefe-del-bce-y-abre-via-a-hernandez-de-cos/",
-     "paese": "PY",
-     "lingua": "es",
-     "data": "2026-11-17T11:15:16+00:00",
+     "fonte": "TGCOM24",
+     "link": "https://www.tgcom24.mediaset.it/mondo/vincent-van-gogh-record-asta-new-york_119155372-202602k.shtml",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-19T06:25:29+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Handelsblatt",
-     "link": "https://www.handelsblatt.com/politik/deutschland/europaeische-zentralbank-deutscher-oekonom-brunnermeier-soll-ezb-chefvolkswirt-werden/100270483.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T11:50:44+00:00",
+     "fonte": "Sky TG24",
+     "link": "https://tg24.sky.it/mondo/2026/11/19/van-gogh-record-190-milioni-dollari-new-york",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-19T08:47:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Die Zeit",
-     "link": "https://www.zeit.de/news/2026-11/17/deutscher-brunnermeier-soll-chef-volkswirt-bei-ezb-werden",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T11:50:44+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "BFMTV",
-     "link": "https://www.bfmtv.com/economie/economie-social/union-europeenne/un-chef-economiste-allemand-et-le-portefeuille-des-operations-de-marches-pour-une-francaise-berlin-fait-un-pas-vers-paris-et-soutient-la-candidature-de-pablo-hernandez-de-cos-pour-l-apres-lagarde_AV-202611170604.html",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T13:43:01+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NZZ",
-     "link": "https://www.nzz.ch/wirtschaft/die-deutsche-regierung-will-diesen-spitzenoekonomen-zum-ezb-chefsvolkswirt-berufen-und-ermoeglicht-damit-einen-spanier-im-praesidium-ld.10066259",
-     "paese": "CH",
-     "lingua": "de",
-     "data": "2026-11-17T16:02:56+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "taz",
-     "link": "https://taz.de/Europaeische-Zentralbank/!6230829/",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T17:09:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Le Monde",
-     "link": "https://www.lemonde.fr/economie/article/2026/11/17/banque-centrale-europeenne-l-allemagne-propose-l-economiste-markus-brunnermeier-au-directoire-la-presidence-de-pablo-hernandez-de-cos-se-profile_6813020_3234.html",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T17:37:13+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Tagesschau",
-     "link": "https://www.tagesschau.de/wirtschaft/finanzen/bundesregierung-ezb-chefvolkswirt-100.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-18T15:36:01+00:00",
-     "tipo": "giornale",
+     "fonte": "Askanews",
+     "link": "https://askanews.it/2026/11/19/van-gogh-da-record-castagni-in-fiore-venduto-per-1904-milioni/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-19T09:00:10+00:00",
+     "tipo": "agenzia",
      "origine": "rss"
     }
    ],
    "copertura": {
-    "italia": 0,
-    "estero": 11,
-    "paesi_esteri": 6,
+    "italia": 6,
+    "estero": 0,
+    "paesi_esteri": 0,
     "continenti": {
-     "Europa": 9,
-     "Americhe": 2
+     "Europa": 6
     }
    },
-   "punto_cieco": "italia"
+   "punto_cieco": "solo_italia"
   },
   {
    "id": "a4af1f81f0",
@@ -5047,7 +5014,7 @@
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 62,
+   "calore": 58,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -5067,15 +5034,15 @@
     1,
     9,
     12,
-    14,
-    14,
-    14,
-    14,
-    14,
-    14,
-    14,
-    14,
-    14
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -5087,7 +5054,6 @@
     "GB",
     "IL",
     "NL",
-    "NZ",
     "PY",
     "QA",
     "RU",
@@ -5101,13 +5067,13 @@
     "nl",
     "pt"
    ],
-   "n_fonti": 14,
+   "n_fonti": 13,
    "prima_segnalazione": {
     "fonte": "Cyprus Mail",
     "paese": "CY",
     "data": "2026-11-17T10:40:03+00:00"
    },
-   "aggiornata": "2026-11-17T22:34:56+00:00",
+   "aggiornata": "2026-11-17T22:00:21+00:00",
    "fonti": [
     {
      "fonte": "Cyprus Mail",
@@ -5225,139 +5191,172 @@
      "data": "2026-11-17T21:17:01+00:00",
      "tipo": "agenzia",
      "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 13,
+    "paesi_esteri": 11,
+    "continenti": {
+     "Europa": 6,
+     "Americhe": 4,
+     "Asia e Medio Oriente": 3
+    }
+   },
+   "punto_cieco": "italia"
+  },
+  {
+   "id": "92fb6e2b9f",
+   "titolo": "La Germania propone Markus Brunnermeier come capo economista della BCE",
+   "lingua": "fr",
+   "categoria": "Politica",
+   "curiosita": false,
+   "sezione": "Politica",
+   "calore": 56,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "Infobae",
+    "data": "2026-11-17T11:02:42+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.infobae.com/america/agencias/2026/11/17/alemania-propone-al-economista-brunnermeier-como-economista-jefe-del-bce/"
+   },
+   "conferma": {
+    "fonte": "ABC Color",
+    "data": "2026-11-17T11:15:16+00:00",
+    "dopo_min": 13
+   },
+   "curva": [
+    1,
+    5,
+    8,
+    8,
+    8,
+    8,
+    8,
+    9,
+    9,
+    9,
+    9,
+    9
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AR",
+    "CH",
+    "DE",
+    "FR",
+    "PY"
+   ],
+   "lingue": [
+    "de",
+    "es",
+    "fr"
+   ],
+   "n_fonti": 9,
+   "prima_segnalazione": {
+    "fonte": "Infobae",
+    "paese": "AR",
+    "data": "2026-11-17T11:02:42+00:00"
+   },
+   "aggiornata": "2026-11-18T15:36:01+00:00",
+   "fonti": [
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/america/agencias/2026/11/17/alemania-propone-al-economista-brunnermeier-como-economista-jefe-del-bce/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T11:02:42+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
     },
     {
-     "fonte": "Stuff",
-     "link": "https://www.stuff.co.nz/nz-news/361060707/man-sitting-car-robbed-and-assaulted-weapon-point-two-men",
-     "paese": "NZ",
-     "lingua": "en",
-     "data": "2026-11-17T22:34:56+00:00",
+     "fonte": "ABC Color",
+     "link": "https://www.abc.com.py/internacionales/2026/11/17/berlin-postula-a-brunnermeier-como-economista-jefe-del-bce-y-abre-via-a-hernandez-de-cos/",
+     "paese": "PY",
+     "lingua": "es",
+     "data": "2026-11-17T11:15:16+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Handelsblatt",
+     "link": "https://www.handelsblatt.com/politik/deutschland/notenbank-markus-brunnermeier-soll-neuer-ezb-chefoekonom-werden/100270479.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T11:35:34+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Die Zeit",
+     "link": "https://www.zeit.de/news/2026-11/17/deutscher-brunnermeier-soll-chef-volkswirt-bei-ezb-werden",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T11:50:44+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "BFMTV",
+     "link": "https://www.bfmtv.com/economie/economie-social/union-europeenne/un-chef-economiste-allemand-et-le-portefeuille-des-operations-de-marches-pour-une-francaise-berlin-fait-un-pas-vers-paris-et-soutient-la-candidature-de-pablo-hernandez-de-cos-pour-l-apres-lagarde_AV-202611170604.html",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T13:43:01+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NZZ",
+     "link": "https://www.nzz.ch/wirtschaft/die-deutsche-regierung-will-diesen-spitzenoekonomen-zum-ezb-chefsvolkswirt-berufen-und-ermoeglicht-damit-einen-spanier-im-praesidium-ld.10066259",
+     "paese": "CH",
+     "lingua": "de",
+     "data": "2026-11-17T16:02:56+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "taz",
+     "link": "https://taz.de/Europaeische-Zentralbank/!6230829/",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T17:09:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Le Monde",
+     "link": "https://www.lemonde.fr/economie/article/2026/11/17/banque-centrale-europeenne-l-allemagne-propose-l-economiste-markus-brunnermeier-au-directoire-la-presidence-de-pablo-hernandez-de-cos-se-profile_6813020_3234.html",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T17:37:13+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Tagesschau",
+     "link": "https://www.tagesschau.de/wirtschaft/finanzen/bundesregierung-ezb-chefvolkswirt-100.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-18T15:36:01+00:00",
      "tipo": "giornale",
      "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 0,
-    "estero": 14,
-    "paesi_esteri": 12,
+    "estero": 9,
+    "paesi_esteri": 5,
     "continenti": {
-     "Europa": 6,
-     "Americhe": 4,
-     "Asia e Medio Oriente": 3,
-     "Oceania": 1
+     "Europa": 7,
+     "Americhe": 2
     }
    },
    "punto_cieco": "italia"
-  },
-  {
-   "id": "04c33a858a",
-   "titolo": "Gli eredi chiedono di bloccare la vendita all'asta di un dipinto di Van Gogh",
-   "lingua": "it",
-   "categoria": "Altro",
-   "curiosita": true,
-   "sezione": "Curiosità",
-   "calore": 60,
-   "stato": "confermato",
-   "attendibilita": 84,
-   "livello": "Confermata",
-   "prima": {
-    "fonte": "Rai News",
-    "data": "2026-11-19T02:21:00+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.rainews.it/articoli/2026/11/sothebys-chtaigniers-en-fleurs-di-van-gogh-venduto-a-1904-milioni-di-dollari-922b91d0-8441-4edf-ad90-84a5ee705d85.html"
-   },
-   "conferma": {
-    "fonte": "La Stampa",
-    "data": "2026-11-19T06:03:00+00:00",
-    "dopo_min": 222
-   },
-   "curva": [
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    3,
-    3,
-    3,
-    3,
-    5,
-    5
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "IT"
-   ],
-   "lingue": [
-    "it"
-   ],
-   "n_fonti": 5,
-   "prima_segnalazione": {
-    "fonte": "Rai News",
-    "paese": "IT",
-    "data": "2026-11-19T02:21:00+00:00"
-   },
-   "aggiornata": "2026-11-19T09:09:40+00:00",
-   "fonti": [
-    {
-     "fonte": "Rai News",
-     "link": "https://www.rainews.it/articoli/2026/11/sothebys-chtaigniers-en-fleurs-di-van-gogh-venduto-a-1904-milioni-di-dollari-922b91d0-8441-4edf-ad90-84a5ee705d85.html",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-19T02:21:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "La Stampa",
-     "link": "https://www.lastampa.it/cultura/2026/11/19/news/van_gogh_da_record_venduto_per_1904_milioni_dopo_l_accordo_sulle_ombre_del_passato_nazista-15802303/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-19T06:03:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "TGCOM24",
-     "link": "https://www.tgcom24.mediaset.it/mondo/vincent-van-gogh-record-asta-new-york_119155372-202602k.shtml",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-19T06:25:29+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Sky TG24",
-     "link": "https://tg24.sky.it/mondo/2026/11/19/van-gogh-record-190-milioni-dollari-new-york",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-19T08:47:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Askanews",
-     "link": "https://askanews.it/2026/11/19/van-gogh-da-record-castagni-in-fiore-venduto-per-1904-milioni/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-19T09:00:10+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 5,
-    "estero": 0,
-    "paesi_esteri": 0,
-    "continenti": {
-     "Europa": 5
-    }
-   },
-   "punto_cieco": "solo_italia"
   },
   {
    "id": "09959a50d5",
@@ -5366,7 +5365,7 @@
    "categoria": "Altro",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 57,
+   "calore": 56,
    "stato": "confermato",
    "attendibilita": 67,
    "livello": "Confermata",
@@ -5460,7 +5459,7 @@
    "categoria": "Società",
    "curiosita": false,
    "sezione": "Società",
-   "calore": 56,
+   "calore": 55,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -5659,7 +5658,7 @@
     4,
     8,
     8,
-    8,
+    9,
     9,
     9,
     9,
@@ -5782,139 +5781,6 @@
      "Europa": 6,
      "Americhe": 2,
      "Asia e Medio Oriente": 1
-    }
-   },
-   "punto_cieco": "italia"
-  },
-  {
-   "id": "8bfea60591",
-   "titolo": "Domínguez commenta la finale di Copa Sudamericana contro il Boca, che non vince un titolo internazionale da 18",
-   "lingua": "es",
-   "categoria": "Altro",
-   "curiosita": false,
-   "sezione": "Sport",
-   "calore": 53,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "La Nación",
-    "data": "2026-11-17T11:03:35+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.lanacion.com.ar/deportes/futbol/boca-y-atletico-mineiro-menos-distintos-de-lo-que-parecen-los-idolos-compartidos-las-copas-y-una-nid17112026/"
-   },
-   "conferma": {
-    "fonte": "ABC Color",
-    "data": "2026-11-17T12:35:22+00:00",
-    "dopo_min": 92
-   },
-   "curva": [
-    1,
-    3,
-    5,
-    7,
-    7,
-    7,
-    7,
-    7,
-    7,
-    7,
-    7,
-    7
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AR",
-    "BR",
-    "CO",
-    "PY",
-    "VE"
-   ],
-   "lingue": [
-    "es",
-    "pt"
-   ],
-   "n_fonti": 7,
-   "prima_segnalazione": {
-    "fonte": "La Nación",
-    "paese": "AR",
-    "data": "2026-11-17T11:03:35+00:00"
-   },
-   "aggiornata": "2026-11-18T17:54:39+00:00",
-   "fonti": [
-    {
-     "fonte": "La Nación",
-     "link": "https://www.lanacion.com.ar/deportes/futbol/boca-y-atletico-mineiro-menos-distintos-de-lo-que-parecen-los-idolos-compartidos-las-copas-y-una-nid17112026/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T11:03:35+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ABC Color",
-     "link": "https://www.abc.com.py/deportes/futbol/internacional/2026/11/17/arruabarrena-un-referente-en-busca-del-triplete-de-la-sudamericana-para-boca/",
-     "paese": "PY",
-     "lingua": "es",
-     "data": "2026-11-17T12:35:22+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Semana",
-     "link": "https://www.semana.com/deportes/articulo/la-historia-del-hincha-de-boca-que-se-vino-en-moto-a-barranquilla-lleva-mas-de-6000-kilometros/202625/",
-     "paese": "CO",
-     "lingua": "es",
-     "data": "2026-11-17T13:30:25+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/colombia/2026/11/17/estas-son-las-medidas-de-seguridad-en-barranquilla-para-la-final-de-la-copa-sudamericana-entre-boca-juniors-y-atletico-mineiro-reforzaran-los-controles-en-los-hoteles/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T15:55:49+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Globo Esporte",
-     "link": "https://ge.globo.com/futebol/times/palmeiras/noticia/2026/11/17/palmeiras-x-estudiantes-conmebol-anuncia-arbitro-da-final-da-libertadores.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T18:11:32+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Olé",
-     "link": "https://www.ole.com.ar/futbol-internacional/libertadores/arbitros-final-copa-libertadores-estudiantes-palmeiras_0_oXXtuEfOCE.html",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T20:00:42+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "El Nacional",
-     "link": "https://www.elnacional.com/2026/11/conmebol-anuncia-a-jesus-valenzuela-como-arbitro-de-la-final-de-la-copa-libertadores/",
-     "paese": "VE",
-     "lingua": "es",
-     "data": "2026-11-17T20:48:19+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 7,
-    "paesi_esteri": 5,
-    "continenti": {
-     "Americhe": 7
     }
    },
    "punto_cieco": "italia"
@@ -6069,10 +5935,10 @@
    "livello": "Una fonte",
    "prima": {
     "fonte": "El Universal",
-    "data": "2026-11-18T07:12:00+00:00",
+    "data": "2026-11-17T22:41:11+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://www.eluniversal.com.mx/descubre-y-compra/cupon-descuento-avera/"
+    "link": "https://www.eluniversal.com.mx/descubre-y-compra/samsung-galaxy-s26-ultra-de-512-gb-cae-a-19450-mxn-en-bodega-aurrera-usa-este-cupon-y-consiguelo-mas-barato-que-en-otras-tiendas/"
    },
    "conferma": null,
    "curva": [
@@ -6102,16 +5968,16 @@
    "prima_segnalazione": {
     "fonte": "El Universal",
     "paese": "MX",
-    "data": "2026-11-18T07:12:00+00:00"
+    "data": "2026-11-17T22:41:11+00:00"
    },
    "aggiornata": "2026-11-19T09:59:42+00:00",
    "fonti": [
     {
      "fonte": "El Universal",
-     "link": "https://www.eluniversal.com.mx/descubre-y-compra/cupon-descuento-avera/",
+     "link": "https://www.eluniversal.com.mx/descubre-y-compra/samsung-galaxy-s26-ultra-de-512-gb-cae-a-19450-mxn-en-bodega-aurrera-usa-este-cupon-y-consiguelo-mas-barato-que-en-otras-tiendas/",
      "paese": "MX",
      "lingua": "es",
-     "data": "2026-11-18T07:12:00+00:00",
+     "data": "2026-11-17T22:41:11+00:00",
      "tipo": "giornale",
      "origine": "rss"
     }
@@ -6154,8 +6020,8 @@
     3,
     6,
     6,
-    6,
     7,
+    8,
     8,
     8,
     8,
@@ -6441,7 +6307,7 @@
    "categoria": "Altro",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 51,
+   "calore": 50,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -6576,7 +6442,7 @@
    "categoria": "Tecnologia e crypto",
    "curiosita": false,
    "sezione": "Tecnologia",
-   "calore": 49,
+   "calore": 50,
    "stato": "una_fonte",
    "attendibilita": 30,
    "livello": "Una fonte",
@@ -6617,7 +6483,7 @@
     "paese": "MX",
     "data": "2026-11-18T07:13:46+00:00"
    },
-   "aggiornata": "2026-11-19T09:50:23+00:00",
+   "aggiornata": "2026-11-19T10:12:45+00:00",
    "fonti": [
     {
      "fonte": "El Universal",
@@ -6673,7 +6539,7 @@
     1,
     1,
     1,
-    2,
+    4,
     4
    ],
    "crescita": 0,
@@ -7223,6 +7089,89 @@
    "punto_cieco": ""
   },
   {
+   "id": "af77b09102",
+   "titolo": "Tocantins avrà una delegazione alle Paralimpiadi Scolastiche 2026",
+   "lingua": "pt",
+   "categoria": "Altro",
+   "curiosita": false,
+   "sezione": "Sport",
+   "calore": 47,
+   "stato": "confermato",
+   "attendibilita": 60,
+   "livello": "Prime conferme",
+   "prima": {
+    "fonte": "G1",
+    "data": "2026-11-17T10:49:05+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://g1.globo.com/pe/pernambuco/videos-bom-dia-pe/playlist/videos-bom-dia-pe-de-terca-feira-17-de-novembro-de-2026.ghtml"
+   },
+   "conferma": {
+    "fonte": "Globo Esporte",
+    "data": "2026-11-17T16:30:18+00:00",
+    "dopo_min": 341
+   },
+   "curva": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "BR"
+   ],
+   "lingue": [
+    "pt"
+   ],
+   "n_fonti": 2,
+   "prima_segnalazione": {
+    "fonte": "G1",
+    "paese": "BR",
+    "data": "2026-11-17T10:49:05+00:00"
+   },
+   "aggiornata": "2026-11-19T10:05:36+00:00",
+   "fonti": [
+    {
+     "fonte": "G1",
+     "link": "https://g1.globo.com/pe/pernambuco/videos-bom-dia-pe/playlist/videos-bom-dia-pe-de-terca-feira-17-de-novembro-de-2026.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T10:49:05+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Globo Esporte",
+     "link": "https://ge.globo.com/ba/playlist/globo-esporte-ba-desta-terca-feira-17-de-novembro-de-2026.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T16:30:18+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 2,
+    "paesi_esteri": 1,
+    "continenti": {
+     "Americhe": 2
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
    "id": "4b26376149",
    "titolo": "La Nazionale argentina si trasferisce a Córdoba, cambia l'agenda per il maltempo",
    "lingua": "it",
@@ -7490,164 +7439,6 @@
     }
    },
    "punto_cieco": "italia"
-  },
-  {
-   "id": "eefea01353",
-   "titolo": "Gli Stati sfidano il divieto di Butler sui bloccanti della pubertà mentre nuove linee guida ne sostengono l'ac",
-   "lingua": "it",
-   "categoria": "Economia",
-   "curiosita": false,
-   "sezione": "Economia",
-   "calore": 45,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "Il Fatto Quotidiano",
-    "data": "2026-11-17T10:08:59+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.ilfattoquotidiano.it/2026/11/17/choc-e-sgomento-come-e-potuto-succedere-david-beckham-scopre-i-suoi-profumi-nel-cestone-delle-offerte-di-un-distributore-di-benzina-e-fa-causa-per-41-milioni-di-dollari/8574515/"
-   },
-   "conferma": {
-    "fonte": "The Independent",
-    "data": "2026-11-17T13:07:40+00:00",
-    "dopo_min": 179
-   },
-   "curva": [
-    1,
-    2,
-    4,
-    5,
-    6,
-    9,
-    9,
-    9,
-    9,
-    9,
-    9,
-    9
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AU",
-    "GB",
-    "IT",
-    "NZ",
-    "PH",
-    "SA",
-    "SG",
-    "US"
-   ],
-   "lingue": [
-    "ar",
-    "en",
-    "it"
-   ],
-   "n_fonti": 9,
-   "prima_segnalazione": {
-    "fonte": "Il Fatto Quotidiano",
-    "paese": "IT",
-    "data": "2026-11-17T10:08:59+00:00"
-   },
-   "aggiornata": "2026-11-18T04:59:00+00:00",
-   "fonti": [
-    {
-     "fonte": "Il Fatto Quotidiano",
-     "link": "https://www.ilfattoquotidiano.it/2026/11/17/choc-e-sgomento-come-e-potuto-succedere-david-beckham-scopre-i-suoi-profumi-nel-cestone-delle-offerte-di-un-distributore-di-benzina-e-fa-causa-per-41-milioni-di-dollari/8574515/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T10:08:59+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Independent",
-     "link": "https://www.independent.co.uk/news/world/americas/david-beckham-london-poundland-david-inter-miami-b3086408.html",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T13:07:40+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Asharq Al-Awsat",
-     "link": "https://english.aawsat.com/node/5342421",
-     "paese": "SA",
-     "lingua": "ar",
-     "data": "2026-11-17T16:34:37+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Stuff",
-     "link": "https://www.stuff.co.nz/world-news/361060521/david-beckham-sues-41-million-after-his-fragrance-sol",
-     "paese": "NZ",
-     "lingua": "en",
-     "data": "2026-11-17T16:47:17+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "New York Post",
-     "link": "https://nypost.com/2026/11/17/us-news/david-beckham-sues-for-41m-over-perfume-deal/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T19:15:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Inquirer",
-     "link": "https://entertainment.inquirer.net/690513/david-beckham-sues-after-luxury-fragrance-sold-in-gas-stations-discount-stores",
-     "paese": "PH",
-     "lingua": "en",
-     "data": "2026-11-18T01:53:20+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Sydney Morning Herald",
-     "link": "https://www.smh.com.au/business/consumer-affairs/david-beckham-sues-for-61m-after-his-fragrance-is-sold-in-petrol-stations-discount-stores-20261118-p61f2t.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
-     "paese": "AU",
-     "lingua": "en",
-     "data": "2026-11-18T04:45:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Age",
-     "link": "https://www.theage.com.au/business/consumer-affairs/david-beckham-sues-for-61m-after-his-fragrance-is-sold-in-petrol-stations-discount-stores-20261118-p61f2t.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
-     "paese": "AU",
-     "lingua": "en",
-     "data": "2026-11-18T04:45:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "CNA",
-     "link": "https://www.channelnewsasia.com/style-beauty/david-beckham-sues-fragrance-discount-store-bargain-bin-6561466",
-     "paese": "SG",
-     "lingua": "en",
-     "data": "2026-11-18T04:59:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 1,
-    "estero": 8,
-    "paesi_esteri": 7,
-    "continenti": {
-     "Asia e Medio Oriente": 3,
-     "Oceania": 3,
-     "Europa": 2,
-     "Americhe": 1
-    }
-   },
-   "punto_cieco": ""
   },
   {
    "id": "8c28f45943",
@@ -16090,6 +15881,140 @@
    "archivio": true
   },
   {
+   "id": "8bfea60591",
+   "titolo": "Domínguez commenta la finale di Copa Sudamericana contro il Boca, che non vince un titolo internazionale da 18",
+   "lingua": "es",
+   "categoria": "Altro",
+   "curiosita": false,
+   "sezione": "Sport",
+   "calore": 20,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "La Nación",
+    "data": "2026-11-17T11:03:35+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.lanacion.com.ar/deportes/futbol/boca-y-atletico-mineiro-menos-distintos-de-lo-que-parecen-los-idolos-compartidos-las-copas-y-una-nid17112026/"
+   },
+   "conferma": {
+    "fonte": "ABC Color",
+    "data": "2026-11-17T12:35:22+00:00",
+    "dopo_min": 92
+   },
+   "curva": [
+    1,
+    3,
+    5,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AR",
+    "BR",
+    "CO",
+    "PY",
+    "VE"
+   ],
+   "lingue": [
+    "es",
+    "pt"
+   ],
+   "n_fonti": 7,
+   "prima_segnalazione": {
+    "fonte": "La Nación",
+    "paese": "AR",
+    "data": "2026-11-17T11:03:35+00:00"
+   },
+   "aggiornata": "2026-11-18T17:54:39+00:00",
+   "fonti": [
+    {
+     "fonte": "La Nación",
+     "link": "https://www.lanacion.com.ar/deportes/futbol/boca-y-atletico-mineiro-menos-distintos-de-lo-que-parecen-los-idolos-compartidos-las-copas-y-una-nid17112026/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T11:03:35+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ABC Color",
+     "link": "https://www.abc.com.py/deportes/futbol/internacional/2026/11/17/arruabarrena-un-referente-en-busca-del-triplete-de-la-sudamericana-para-boca/",
+     "paese": "PY",
+     "lingua": "es",
+     "data": "2026-11-17T12:35:22+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Semana",
+     "link": "https://www.semana.com/deportes/articulo/la-historia-del-hincha-de-boca-que-se-vino-en-moto-a-barranquilla-lleva-mas-de-6000-kilometros/202625/",
+     "paese": "CO",
+     "lingua": "es",
+     "data": "2026-11-17T13:30:25+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/colombia/2026/11/17/estas-son-las-medidas-de-seguridad-en-barranquilla-para-la-final-de-la-copa-sudamericana-entre-boca-juniors-y-atletico-mineiro-reforzaran-los-controles-en-los-hoteles/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T15:55:49+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Globo Esporte",
+     "link": "https://ge.globo.com/futebol/times/palmeiras/noticia/2026/11/17/palmeiras-x-estudiantes-conmebol-anuncia-arbitro-da-final-da-libertadores.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T18:11:32+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Olé",
+     "link": "https://www.ole.com.ar/futbol-internacional/libertadores/arbitros-final-copa-libertadores-estudiantes-palmeiras_0_oXXtuEfOCE.html",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T20:00:42+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "El Nacional",
+     "link": "https://www.elnacional.com/2026/11/conmebol-anuncia-a-jesus-valenzuela-como-arbitro-de-la-final-de-la-copa-libertadores/",
+     "paese": "VE",
+     "lingua": "es",
+     "data": "2026-11-17T20:48:19+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 7,
+    "paesi_esteri": 5,
+    "continenti": {
+     "Americhe": 7
+    }
+   },
+   "punto_cieco": "italia",
+   "archivio": true
+  },
+  {
    "id": "da9267e1cb",
    "titolo": "ATP Finals: Arthur Fils e Rafa Jódar in campo, partita in diretta",
    "lingua": "en",
@@ -17588,6 +17513,165 @@
    "archivio": true
   },
   {
+   "id": "eefea01353",
+   "titolo": "Gli Stati sfidano il divieto di Butler sui bloccanti della pubertà mentre nuove linee guida ne sostengono l'ac",
+   "lingua": "it",
+   "categoria": "Economia",
+   "curiosita": false,
+   "sezione": "Economia",
+   "calore": 20,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "Il Fatto Quotidiano",
+    "data": "2026-11-17T10:08:59+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.ilfattoquotidiano.it/2026/11/17/choc-e-sgomento-come-e-potuto-succedere-david-beckham-scopre-i-suoi-profumi-nel-cestone-delle-offerte-di-un-distributore-di-benzina-e-fa-causa-per-41-milioni-di-dollari/8574515/"
+   },
+   "conferma": {
+    "fonte": "The Independent",
+    "data": "2026-11-17T13:07:40+00:00",
+    "dopo_min": 179
+   },
+   "curva": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AU",
+    "GB",
+    "IT",
+    "NZ",
+    "PH",
+    "SA",
+    "SG",
+    "US"
+   ],
+   "lingue": [
+    "ar",
+    "en",
+    "it"
+   ],
+   "n_fonti": 9,
+   "prima_segnalazione": {
+    "fonte": "Il Fatto Quotidiano",
+    "paese": "IT",
+    "data": "2026-11-17T10:08:59+00:00"
+   },
+   "aggiornata": "2026-11-18T04:59:00+00:00",
+   "fonti": [
+    {
+     "fonte": "Il Fatto Quotidiano",
+     "link": "https://www.ilfattoquotidiano.it/2026/11/17/choc-e-sgomento-come-e-potuto-succedere-david-beckham-scopre-i-suoi-profumi-nel-cestone-delle-offerte-di-un-distributore-di-benzina-e-fa-causa-per-41-milioni-di-dollari/8574515/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T10:08:59+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Independent",
+     "link": "https://www.independent.co.uk/news/world/americas/david-beckham-london-poundland-david-inter-miami-b3086408.html",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T13:07:40+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Asharq Al-Awsat",
+     "link": "https://english.aawsat.com/node/5342421",
+     "paese": "SA",
+     "lingua": "ar",
+     "data": "2026-11-17T16:34:37+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Stuff",
+     "link": "https://www.stuff.co.nz/world-news/361060521/david-beckham-sues-41-million-after-his-fragrance-sol",
+     "paese": "NZ",
+     "lingua": "en",
+     "data": "2026-11-17T16:47:17+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "New York Post",
+     "link": "https://nypost.com/2026/11/17/us-news/david-beckham-sues-for-41m-over-perfume-deal/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T19:15:12+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Inquirer",
+     "link": "https://entertainment.inquirer.net/690513/david-beckham-sues-after-luxury-fragrance-sold-in-gas-stations-discount-stores",
+     "paese": "PH",
+     "lingua": "en",
+     "data": "2026-11-18T01:53:20+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Sydney Morning Herald",
+     "link": "https://www.smh.com.au/business/consumer-affairs/david-beckham-sues-for-61m-after-his-fragrance-is-sold-in-petrol-stations-discount-stores-20261118-p61f2t.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+     "paese": "AU",
+     "lingua": "en",
+     "data": "2026-11-18T04:45:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Age",
+     "link": "https://www.theage.com.au/business/consumer-affairs/david-beckham-sues-for-61m-after-his-fragrance-is-sold-in-petrol-stations-discount-stores-20261118-p61f2t.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
+     "paese": "AU",
+     "lingua": "en",
+     "data": "2026-11-18T04:45:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "CNA",
+     "link": "https://www.channelnewsasia.com/style-beauty/david-beckham-sues-fragrance-discount-store-bargain-bin-6561466",
+     "paese": "SG",
+     "lingua": "en",
+     "data": "2026-11-18T04:59:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 1,
+    "estero": 8,
+    "paesi_esteri": 7,
+    "continenti": {
+     "Asia e Medio Oriente": 3,
+     "Oceania": 3,
+     "Europa": 2,
+     "Americhe": 1
+    }
+   },
+   "punto_cieco": "",
+   "archivio": true
+  },
+  {
    "id": "45d1122498",
    "titolo": "Ucraina colpisce il ponte della Crimea, Zelensky parla di operazione senza precedenti",
    "lingua": "es",
@@ -18984,90 +19068,6 @@
     "continenti": {
      "Europa": 2,
      "Americhe": 1
-    }
-   },
-   "punto_cieco": "",
-   "archivio": true
-  },
-  {
-   "id": "af77b09102",
-   "titolo": "Tocantins avrà una delegazione alle Paralimpiadi Scolastiche 2026",
-   "lingua": "pt",
-   "categoria": "Altro",
-   "curiosita": false,
-   "sezione": "Sport",
-   "calore": 20,
-   "stato": "confermato",
-   "attendibilita": 60,
-   "livello": "Prime conferme",
-   "prima": {
-    "fonte": "G1",
-    "data": "2026-11-17T09:33:46+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://g1.globo.com/go/goias/edicao/2026/11/17/videos-bom-dia-goias-17-de-novembro-de-2026.ghtml"
-   },
-   "conferma": {
-    "fonte": "Globo Esporte",
-    "data": "2026-11-17T16:30:18+00:00",
-    "dopo_min": 417
-   },
-   "curva": [
-    1,
-    1,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "BR"
-   ],
-   "lingue": [
-    "pt"
-   ],
-   "n_fonti": 2,
-   "prima_segnalazione": {
-    "fonte": "G1",
-    "paese": "BR",
-    "data": "2026-11-17T09:33:46+00:00"
-   },
-   "aggiornata": "2026-11-18T23:50:02+00:00",
-   "fonti": [
-    {
-     "fonte": "G1",
-     "link": "https://g1.globo.com/go/goias/edicao/2026/11/17/videos-bom-dia-goias-17-de-novembro-de-2026.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T09:33:46+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Globo Esporte",
-     "link": "https://ge.globo.com/ba/playlist/globo-esporte-ba-desta-terca-feira-17-de-novembro-de-2026.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T16:30:18+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 2,
-    "paesi_esteri": 1,
-    "continenti": {
-     "Americhe": 2
     }
    },
    "punto_cieco": "",
@@ -183562,7 +183562,7 @@
   }
  ],
  "dati": {
-  "articoli_analizzati": 43077,
+  "articoli_analizzati": 43085,
   "storie": 400,
   "paesi_coperti": 94,
   "fonti_diverse": 260,
@@ -183575,12 +183575,12 @@
    [
     "BR",
     "Brasile",
-    3760
+    3764
    ],
    [
     "DE",
     "Germania",
-    3592
+    3593
    ],
    [
     "FR",
@@ -183590,52 +183590,52 @@
    [
     "IT",
     "Italia",
-    2846
+    2854
    ],
    [
     "US",
     "Stati Uniti",
-    2589
+    2597
    ],
    [
     "GB",
     "Regno Unito",
-    1633
+    1627
    ],
    [
     "ES",
     "Spagna",
-    1553
+    1547
    ],
    [
     "PY",
     "Paraguay",
-    1305
+    1307
    ],
    [
     "IN",
     "India",
-    1019
+    1016
    ],
    [
     "NG",
     "Nigeria",
-    965
+    960
    ],
    [
     "AU",
     "Australia",
-    927
+    923
    ],
    [
     "PH",
     "Filippine",
-    716
+    715
    ],
    [
     "MX",
     "Messico",
-    685
+    684
    ],
    [
     "CO",
@@ -183645,98 +183645,98 @@
    [
     "BE",
     "Belgio",
-    493
+    499
    ],
    [
     "SG",
     "Singapore",
-    443
+    444
    ],
    [
     "EC",
     "Ecuador",
-    440
+    441
    ],
    [
     "RS",
     "Serbia",
-    407
+    406
    ],
    [
     "GH",
     "Ghana",
-    393
-   ],
-   [
-    "NZ",
-    "Nuova Zelanda",
-    387
+    392
    ],
    [
     "CA",
     "Canada",
+    387
+   ],
+   [
+    "NZ",
+    "Nuova Zelanda",
+    386
+   ],
+   [
+    "RU",
+    "Russia",
     386
    ],
    [
     "PT",
     "Portogallo",
-    382
-   ],
-   [
-    "RU",
-    "Russia",
-    381
+    380
    ],
    [
     "JP",
     "Giappone",
-    379
+    376
    ]
   ],
   "per_lingua": [
    [
     "en",
-    16731
+    16732
    ],
    [
     "es",
-    10350
+    10346
    ],
    [
     "pt",
-    4142
+    4144
    ],
    [
     "de",
-    3877
+    3881
    ],
    [
     "fr",
-    3153
+    3158
    ],
    [
     "it",
-    2673
+    2678
    ],
    [
     "nl",
-    413
+    412
    ],
    [
     "pl",
-    339
+    340
    ],
    [
     "sv",
-    218
+    216
    ],
    [
     "ja",
-    208
+    205
    ],
    [
     "da",
-    201
+    200
    ],
    [
     "fi",
@@ -183750,31 +183750,31 @@
    ],
    [
     "Politica",
-    76
+    78
    ],
    [
     "Esteri e conflitti",
-    65
+    67
    ],
    [
     "Cronaca",
-    33
+    32
    ],
    [
     "Tecnologia e crypto",
-    28
+    29
    ],
    [
     "Sport",
-    19
-   ],
-   [
-    "Economia",
     18
    ],
    [
+    "Economia",
+    16
+   ],
+   [
     "Società",
-    10
+    9
    ],
    [
     "Clima e ambiente",
@@ -183784,39 +183784,39 @@
   "fonti_top": [
    [
     "Infobae",
-    4475
+    4480
    ],
    [
     "G1",
-    1772
+    1776
    ],
    [
     "ABC Color",
-    1305
+    1307
    ],
    [
     "New York Post",
-    809
+    807
    ],
    [
     "Die Zeit",
-    792
+    791
    ],
    [
     "O Globo",
-    744
+    747
    ],
    [
     "BFMTV",
-    712
+    708
    ],
    [
     "La Nación",
-    697
+    694
    ],
    [
     "El Universal",
-    685
+    684
    ],
    [
     "Semana",
@@ -183824,45 +183824,45 @@
    ],
    [
     "Globo Esporte",
-    571
+    570
    ],
    [
     "Der Tagesspiegel",
-    564
+    562
    ]
   ],
   "per_ora": [
    [
     23,
-    1173
+    1208
    ],
    [
     22,
-    1238
+    1160
    ],
    [
     21,
-    1128
+    1152
    ],
    [
     20,
-    1186
+    1198
    ],
    [
     19,
-    1239
+    1234
    ],
    [
     18,
-    1185
+    1205
    ],
    [
     17,
-    1269
+    1233
    ],
    [
     16,
-    1086
+    1074
    ],
    [
     15,
@@ -183870,39 +183870,39 @@
    ],
    [
     14,
-    928
+    919
    ],
    [
     13,
-    807
+    810
    ],
    [
     12,
-    795
+    759
    ],
    [
     11,
-    763
+    733
    ],
    [
     10,
-    692
+    645
    ],
    [
     9,
-    558
+    550
    ],
    [
     8,
-    475
+    472
    ],
    [
     7,
-    528
+    560
    ],
    [
     6,
-    551
+    567
    ],
    [
     5,
@@ -183910,23 +183910,23 @@
    ],
    [
     4,
-    705
+    729
    ],
    [
     3,
-    827
+    782
    ],
    [
     2,
-    766
+    784
    ],
    [
     1,
-    906
+    964
    ],
    [
     0,
-    881
+    922
    ]
   ],
   "approvate_non_sul_sito": {
@@ -183940,16 +183940,15 @@
  },
  "errori_fonti": [
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
-  "MercoPress: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
+  "The East African: 404 Client Error: Not Found for url: https://www.theeastafrican.co.ke/rss.xml",
   "The Slovenia Times: 403 Client Error: Forbidden for url: https://sloveniatimes.com/feed",
-  "Malay Mail: 404 Client Error: Not Found for url: https://www.malaymail.com/feed/rss/malaysia",
   "Khmer Times: 403 Client Error: Forbidden for url: https://www.khmertimeskh.com/feed/",
   "The Herald: 403 Client Error: Forbidden for url: https://www.heraldonline.co.zw/feed/",
-  "Newsweek: 404 Client Error: Not Found for url: https://www.newsweek.com/rss",
   "La Prensa (Panama): 403 Client Error: Forbidden for url: https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
-  "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT syria: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:syria&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
+  "GDELT moldova: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:moldova&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT bosniaandherzegovina: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:bosniaandherzegovina&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT macedonia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:macedonia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT montenegro: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:montenegro&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
