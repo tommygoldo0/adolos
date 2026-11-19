@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-19T11:03:18.039709+00:00",
+ "aggiornato": "2026-11-19T11:17:25.560876+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -147,30 +147,30 @@
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "Der Tagesspiegel",
-    "data": "2026-11-17T11:23:38+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.tagesspiegel.de/wirtschaft/nach-dem-abgang-des-nvidia-chefs-jensen-huangs-machtige-tochter-konnte-ein-problem-bleiben-16293478.html"
-   },
-   "conferma": {
     "fonte": "Financial Times",
     "data": "2026-11-17T11:24:44+00:00",
-    "dopo_min": 1
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.ft.com/content/aeacbf89-5511-4d1c-81c2-b4c227bdfceb?syn-25a6b1a6=1"
+   },
+   "conferma": {
+    "fonte": "TGCOM24",
+    "data": "2026-11-17T11:36:59+00:00",
+    "dopo_min": 12
    },
    "curva": [
     1,
-    31,
-    73,
-    92,
-    96,
-    97,
-    97,
-    98,
-    98,
-    98,
-    98,
-    98
+    25,
+    68,
+    87,
+    90,
+    90,
+    90,
+    91,
+    91,
+    91,
+    91,
+    91
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -182,7 +182,6 @@
     "AU",
     "BE",
     "BR",
-    "CA",
     "CH",
     "CO",
     "CR",
@@ -203,8 +202,8 @@
     "IS",
     "IT",
     "JM",
+    "JP",
     "MX",
-    "NG",
     "NL",
     "NO",
     "NZ",
@@ -215,7 +214,6 @@
     "RS",
     "RU",
     "SA",
-    "SE",
     "SG",
     "TW",
     "US"
@@ -230,27 +228,18 @@
     "fr",
     "is",
     "it",
+    "ja",
     "nl",
-    "pt",
-    "sv"
+    "pt"
    ],
-   "n_fonti": 98,
+   "n_fonti": 91,
    "prima_segnalazione": {
-    "fonte": "Der Tagesspiegel",
-    "paese": "DE",
-    "data": "2026-11-17T11:23:38+00:00"
+    "fonte": "Financial Times",
+    "paese": "GB",
+    "data": "2026-11-17T11:24:44+00:00"
    },
    "aggiornata": "2026-11-18T17:28:58+00:00",
    "fonti": [
-    {
-     "fonte": "Der Tagesspiegel",
-     "link": "https://www.tagesspiegel.de/wirtschaft/nach-dem-abgang-des-nvidia-chefs-jensen-huangs-machtige-tochter-konnte-ein-problem-bleiben-16293478.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T11:23:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "Financial Times",
      "link": "https://www.ft.com/content/aeacbf89-5511-4d1c-81c2-b4c227bdfceb?syn-25a6b1a6=1",
@@ -297,29 +286,11 @@
      "origine": "rss"
     },
     {
-     "fonte": "The Globe and Mail",
-     "link": "https://www.theglobeandmail.com/world/video-nvidia-rules-out-huang-comeback-as-campaign-for-his-return-grows/",
-     "paese": "CA",
-     "lingua": "en",
-     "data": "2026-11-17T11:57:47+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "The Independent",
      "link": "https://www.independent.co.uk/news/world/americas/nvidia-ceo-china-donald-trump-japan-b3086356.html",
      "paese": "GB",
      "lingua": "en",
      "data": "2026-11-17T11:58:34+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "New York Post",
-     "link": "https://nypost.com/2026/11/17/business/how-jensen-huangs-downfall-slammed-nvidias-stock-and-why-the-next-chapter-could-be-even-worse/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T12:00:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -423,15 +394,6 @@
      "origine": "rss"
     },
     {
-     "fonte": "FAZ",
-     "link": "https://www.faz.net/aktuell/wirtschaft/unternehmen/jensen-huang-elon-musk-und-andere-tech-promis-fordern-nvidia-rueckkehr-201687756.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T14:50:21+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "Deutsche Welle",
      "link": "https://www.dw.com/en/nvidia-forms-national-security-committee-after-huang-affair/a-79970447?maca=en-rss-en-all-1573-rdf",
      "paese": "DE",
@@ -459,24 +421,6 @@
      "origine": "rss"
     },
     {
-     "fonte": "Der Spiegel",
-     "link": "https://www.spiegel.de/wirtschaft/unternehmen/nvidia-warum-die-tech-bosse-jensen-huangs-rueckkehr-fordern-a-7c966f6a-6430-47e6-b5f4-edb6202a2617#ref=rss",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T15:03:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Time",
-     "link": "https://time.com/article/2026/11/17/why-jensen-huang-should-not-be-reinstated-as-nvidia-s-ceo/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T15:17:31+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "NBC News",
      "link": "https://www.nbcnews.com/business/corporations/jensen-huang-agrees-house-interview-nvidias-chip-smuggling-rcna609803",
      "paese": "US",
@@ -495,15 +439,6 @@
      "origine": "rss"
     },
     {
-     "fonte": "Vanguard",
-     "link": "https://www.vanguardngr.com/2026/11/us-house-committees-to-quiz-nvidia-ex-ceo-huang-december-1/",
-     "paese": "NG",
-     "lingua": "en",
-     "data": "2026-11-17T15:37:51+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "BFMTV",
      "link": "https://www.bfmtv.com/economie/entreprises/les-americains-ont-besoin-de-reponses-l-ex-patron-de-nvidia-jensen-huang-sera-entendu-au-congres-le-1er-decembre-lors-d-une-audition-a-huis-clos_AD-202611170692.html",
      "paese": "FR",
@@ -511,380 +446,81 @@
      "data": "2026-11-17T15:38:04+00:00",
      "tipo": "giornale",
      "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 11,
-    "estero": 87,
-    "paesi_esteri": 42,
-    "continenti": {
-     "Europa": 46,
-     "Americhe": 28,
-     "Asia e Medio Oriente": 15,
-     "Oceania": 6,
-     "Africa": 3
-    }
-   },
-   "punto_cieco": ""
-  },
-  {
-   "id": "14150235ce",
-   "titolo": "Iran rivendica un attacco con sei droni contro un radar statunitense in Bahrein e avverte sullo Stretto di Hor",
-   "lingua": "it",
-   "categoria": "Esteri e conflitti",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 100,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "Middle East Eye",
-    "data": "2026-11-17T11:03:50+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.middleeasteye.net/live-blog/live-blog-update/tehran-denies-report-alleged-iranian-plan-detonate-dirty-bomb-washington"
-   },
-   "conferma": {
-    "fonte": "Times of India",
-    "data": "2026-11-17T11:07:00+00:00",
-    "dopo_min": 3
-   },
-   "curva": [
-    1,
-    34,
-    42,
-    44,
-    44,
-    45,
-    45,
-    45,
-    45,
-    45,
-    45,
-    45
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AR",
-    "BR",
-    "CA",
-    "CY",
-    "DE",
-    "ES",
-    "FR",
-    "GB",
-    "IN",
-    "IT",
-    "NG",
-    "PH",
-    "PY",
-    "QA",
-    "RU",
-    "SA",
-    "SG",
-    "US"
-   ],
-   "lingue": [
-    "ar",
-    "de",
-    "el",
-    "en",
-    "es",
-    "fr",
-    "it",
-    "pt"
-   ],
-   "n_fonti": 45,
-   "prima_segnalazione": {
-    "fonte": "Middle East Eye",
-    "paese": "GB",
-    "data": "2026-11-17T11:03:50+00:00"
-   },
-   "aggiornata": "2026-11-18T07:40:02+00:00",
-   "fonti": [
-    {
-     "fonte": "Middle East Eye",
-     "link": "https://www.middleeasteye.net/live-blog/live-blog-update/tehran-denies-report-alleged-iranian-plan-detonate-dirty-bomb-washington",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T11:03:50+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Times of India",
-     "link": "https://timesofindia.indiatimes.com/defence/international/from-russia-ukraine-war-to-iran-us-conflict-the-return-of-the-dirty-bomb-threat/articleshow/135921734.cms",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T11:07:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
     },
     {
      "fonte": "New York Post",
-     "link": "https://nypost.com/2026/11/17/us-news/trump-responds-to-reported-dirty-bomb-threat-from-iran-they-happen-to-be-crazy/",
+     "link": "https://nypost.com/2026/11/17/business/disgraced-ex-nvidia-ceo-jensen-huang-to-testify-before-congress-next-month/",
      "paese": "US",
      "lingua": "en",
-     "data": "2026-11-17T11:25:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Vanguard",
-     "link": "https://www.vanguardngr.com/2026/11/trump-says-takes-very-seriously-possible-iran-threat-to-washington/",
-     "paese": "NG",
-     "lingua": "en",
-     "data": "2026-11-17T11:38:41+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Asharq Al-Awsat",
-     "link": "https://english.aawsat.com/node/5342277",
-     "paese": "SA",
-     "lingua": "ar",
-     "data": "2026-11-17T11:40:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "20minutos",
-     "link": "https://www.20minutos.es/internacional/estados-unidos-detecta-planes-iran-para-hacer-explotar-una-bomba-sucia-washington-es-un-arma-terror_7062043_0.html",
-     "paese": "ES",
-     "lingua": "en",
-     "data": "2026-11-17T11:44:44+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ABC Color",
-     "link": "https://www.abc.com.py/internacionales/2026/11/17/trump-dice-que-se-toman-muy-en-serio-posible-ataque-bomba-sucia-irani-en-washington/",
-     "paese": "PY",
-     "lingua": "es",
-     "data": "2026-11-17T11:50:10+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Clarín",
-     "link": "https://www.clarin.com/estados-unidos/trump-dice-que-se-toman-muy-en-serio-posible-ataque-bomba-sucia-irani-en-washington_0_ZtbGGIKgcW.html",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T12:00:09+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "G1",
-     "link": "https://g1.globo.com/mundo/noticia/2026/11/17/ira-nega-plano-de-ataque-a-washington-mas-trump-nao-descarta-ameaca-eles-sao-loucos.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T12:08:24+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Der Spiegel",
-     "link": "https://www.spiegel.de/ausland/irankrieg-teheran-weist-bericht-ueber-anschlagsplaene-mit-schmutziger-bombe-gegen-washington-d-c-zurueck-a-b2248849-5811-48d3-a2fa-78896a52fa44#ref=rss",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T12:09:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Straits Times",
-     "link": "https://www.straitstimes.com/world/united-states/tehran-denies-report-of-a-potential-iranian-plan-to-detonate-dirty-bomb-in-washington",
-     "paese": "SG",
-     "lingua": "en",
-     "data": "2026-11-17T12:10:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Independent",
-     "link": "https://www.independent.co.uk/asia/southeast-asia/trump-philippines-china-visit-live-updates-b3086099.html",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T12:18:23+00:00",
+     "data": "2026-11-17T15:40:18+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
      "fonte": "The Hill",
-     "link": "https://thehill.com/policy/defense/6224265-donald-trump-iran-dirty-bomb-threat/",
+     "link": "https://thehill.com/policy/technology/6225075-nvidia-counsel-teter-jensen-huang-testimony/",
      "paese": "US",
      "lingua": "en",
-     "data": "2026-11-17T12:19:18+00:00",
+     "data": "2026-11-17T15:43:27+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "FAZ",
-     "link": "https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-trump-nehmen-bedrohungen-aus-iran-sehr-ernst-faz-200583539.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T12:29:27+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "BFMTV",
-     "link": "https://www.bfmtv.com/international/amerique-nord/etats-unis/donald-trump/donald-trump-dit-prendre-tres-au-serieux-une-potentielle-menace-d-attaque-iranienne-a-washington_AD-202611170547.html",
+     "fonte": "Le Figaro",
+     "link": "https://www.lefigaro.fr/secteur/high-tech/affaire-nvidia-l-ex-patron-jensen-huang-entendu-par-le-congres-americain-le-1er-decembre-20261117",
      "paese": "FR",
      "lingua": "fr",
-     "data": "2026-11-17T12:32:56+00:00",
+     "data": "2026-11-17T15:51:07+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Cyprus Mail",
-     "link": "https://cyprus-mail.com/2026/11/17/us-taking-seriously-report-of-possible-iranian-dirty-bomb-plot-in-washington",
-     "paese": "CY",
-     "lingua": "el",
-     "data": "2026-11-17T12:34:07+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Ouest-France",
-     "link": "https://www.ouest-france.fr/monde/etats-unis/donald-trump/donald-trump-dit-prendre-tres-au-serieux-une-potentielle-menace-dattaque-iranienne-a-washington-73efdb3e-e27f-11f1-9a72-32f9104dab1b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T12:36:37+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ANSA",
-     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/007-usa-iran-sta-sviluppando-piani-per-bomba-sporca-a-washington_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
-     "paese": "IT",
+     "fonte": "The National",
+     "link": "https://www.thenationalnews.com/future/technology/2026/11/17/nvidia-jensen-huang-issues-first-statement/",
+     "paese": "AE",
      "lingua": "en",
-     "data": "2026-11-17T12:36:54+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "CNA",
-     "link": "https://www.channelnewsasia.com/world/trump-says-takes-very-seriously-possible-iran-threat-washington-6559151",
-     "paese": "SG",
-     "lingua": "en",
-     "data": "2026-11-17T12:42:24+00:00",
+     "data": "2026-11-17T16:00:48+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Il Fatto Quotidiano",
-     "link": "https://www.ilfattoquotidiano.it/2026/11/17/cnn-iran-prepara-attacco-bomba-sporca-washington-trump/8574379/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T12:53:14+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Newsweek",
-     "link": "https://www.newsweek.com/iran-dirty-bomb-map-impact-washington-dc-12726178",
+     "fonte": "The Verge",
+     "link": "https://www.theverge.com/tech/1035420/jensen-huang-nvidia-return-as-ceo-statement",
      "paese": "US",
      "lingua": "en",
-     "data": "2026-11-17T12:58:06+00:00",
+     "data": "2026-11-17T16:09:57+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "TASS",
-     "link": "https://tass.com/world/2219735",
-     "paese": "RU",
-     "lingua": "en",
-     "data": "2026-11-17T13:20:00+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Rai News",
-     "link": "https://www.rainews.it/video/2026/11/la-soffiata-della-cnn-sulla-bomba-sporca-radioattiva-iraniana-su-washington-teheran-smentisce-3e7e6687-252e-4156-ab96-4b129c994054.html",
+     "fonte": "HDblog",
+     "link": "https://www.hdblog.it/nvidia/articoli/n677341/jensen-huang-ritorno-nvidia-ceo/",
      "paese": "IT",
      "lingua": "it",
-     "data": "2026-11-17T13:25:00+00:00",
+     "data": "2026-11-17T16:10:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Hindustan Times",
-     "link": "https://www.hindustantimes.com/world-news/us-news/trump-issues-stark-warning-to-iran-over-alleged-dc-dirty-bomb-plot-we-take-it-very-seriously-101794920834305.html",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T13:31:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Globe and Mail",
-     "link": "https://www.theglobeandmail.com/world/article-us-iran-dirty-bomb-plot-washington/",
-     "paese": "CA",
-     "lingua": "en",
-     "data": "2026-11-17T13:35:16+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Al-Monitor",
-     "link": "https://www.al-monitor.com/originals/2026/11/trump-says-us-taking-seriously-report-possible-iranian-dirty-bomb-plot-washington",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T13:46:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "n-tv",
-     "link": "https://www.n-tv.de/politik/Trump-nimmt-Bedrohung-durch-schmutzige-Bombe-sehr-ernst-id31543412.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T13:51:55+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Estadão",
-     "link": "https://www.estadao.com.br/internacional/ira-nega-plano-de-atacar-washington-com-bomba-suja-trump-diz-que-teera-pagaria-preco-jamais-visto-npr/",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T13:53:10+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Global News",
-     "link": "https://globalnews.ca/news/12154204/trump-asia-trip-iran-dirty-bomb-threat/",
-     "paese": "CA",
-     "lingua": "en",
-     "data": "2026-11-17T14:13:58+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NDTV",
-     "link": "https://www.ndtv.com/world-news/us-iran-war-they-are-crazy-trump-on-reported-iranian-dirty-bomb-plot-in-washington-12339810#publisher=newsstand",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T14:15:09+00:00",
+     "fonte": "Asharq Al-Awsat",
+     "link": "https://english.aawsat.com/node/5342409",
+     "paese": "SA",
+     "lingua": "ar",
+     "data": "2026-11-17T16:15:48+00:00",
      "tipo": "giornale",
      "origine": "rss"
     }
    ],
    "copertura": {
-    "italia": 5,
-    "estero": 40,
-    "paesi_esteri": 17,
+    "italia": 9,
+    "estero": 82,
+    "paesi_esteri": 40,
     "continenti": {
-     "Europa": 23,
-     "Americhe": 13,
-     "Asia e Medio Oriente": 8,
-     "Africa": 1
+     "Europa": 43,
+     "Americhe": 25,
+     "Asia e Medio Oriente": 16,
+     "Oceania": 5,
+     "Africa": 2
     }
    },
    "punto_cieco": ""
@@ -901,21 +537,21 @@
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "Der Standard",
-    "data": "2026-11-17T11:04:06+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.derstandard.at/story/3000000349646/neuer-james-bond-robert-pattinson-sorgt-f252r-aufsehen?ref=rss"
-   },
-   "conferma": {
     "fonte": "France 24",
     "data": "2026-11-17T11:24:30+00:00",
-    "dopo_min": 20
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.france24.com/en/tv-shows/press-review/20261117-weirdo-specialist-is-the-new-bond-papers-react-to-robert-pattinson-as-007"
+   },
+   "conferma": {
+    "fonte": "Infobae",
+    "data": "2026-11-17T11:48:43+00:00",
+    "dopo_min": 24
    },
    "curva": [
     1,
-    22,
-    35,
+    27,
+    36,
     42,
     42,
     44,
@@ -965,21 +601,12 @@
    ],
    "n_fonti": 44,
    "prima_segnalazione": {
-    "fonte": "Der Standard",
-    "paese": "AT",
-    "data": "2026-11-17T11:04:06+00:00"
+    "fonte": "France 24",
+    "paese": "FR",
+    "data": "2026-11-17T11:24:30+00:00"
    },
    "aggiornata": "2026-11-18T12:27:30+00:00",
    "fonti": [
-    {
-     "fonte": "Der Standard",
-     "link": "https://www.derstandard.at/story/3000000349646/neuer-james-bond-robert-pattinson-sorgt-f252r-aufsehen?ref=rss",
-     "paese": "AT",
-     "lingua": "de",
-     "data": "2026-11-17T11:04:06+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "France 24",
      "link": "https://www.france24.com/en/tv-shows/press-review/20261117-weirdo-specialist-is-the-new-bond-papers-react-to-robert-pattinson-as-007",
@@ -1215,6 +842,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "Der Standard",
+     "link": "https://www.derstandard.at/story/3000000349607/zendaya-bis-lupita-nyongo-wer-wird-bond-girl-neben-robert-pattinson?ref=rss",
+     "paese": "AT",
+     "lingua": "de",
+     "data": "2026-11-17T15:44:33+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "20 Minutes",
      "link": "https://www.20minutes.fr/arts-stars/cinema/4263496-20261117-forme-fragilite-cote-brutal-robert-pattinson-beau-bond-fois?at_medium=display&at_campaign=149",
      "paese": "FR",
@@ -1256,6 +892,373 @@
    "punto_cieco": ""
   },
   {
+   "id": "ee5d97dbe7",
+   "titolo": "Tensioni con l'Iran in crescita con l'arrivo della portaerei USS Theodore Roosevelt",
+   "lingua": "it",
+   "categoria": "Esteri e conflitti",
+   "curiosita": false,
+   "sezione": "Mondo",
+   "calore": 100,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "CNBC",
+    "data": "2026-11-17T11:22:54+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.cnbc.com/2026/11/17/iran-war-trump-hormuz-oil-.html"
+   },
+   "conferma": {
+    "fonte": "South China Morning Post",
+    "data": "2026-11-17T11:48:51+00:00",
+    "dopo_min": 26
+   },
+   "curva": [
+    1,
+    9,
+    25,
+    38,
+    38,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39,
+    39
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AE",
+    "AR",
+    "BE",
+    "DE",
+    "ES",
+    "FR",
+    "GB",
+    "HK",
+    "IN",
+    "IR",
+    "IS",
+    "IT",
+    "MX",
+    "NG",
+    "NL",
+    "NZ",
+    "PH",
+    "QA",
+    "RU",
+    "SA",
+    "SG",
+    "US"
+   ],
+   "lingue": [
+    "ar",
+    "de",
+    "en",
+    "es",
+    "fr",
+    "is",
+    "it",
+    "nl"
+   ],
+   "n_fonti": 39,
+   "prima_segnalazione": {
+    "fonte": "CNBC",
+    "paese": "US",
+    "data": "2026-11-17T11:22:54+00:00"
+   },
+   "aggiornata": "2026-11-18T11:14:51+00:00",
+   "fonti": [
+    {
+     "fonte": "CNBC",
+     "link": "https://www.cnbc.com/2026/11/17/iran-war-trump-hormuz-oil-.html",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T11:22:54+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "South China Morning Post",
+     "link": "https://www.scmp.com/news/world/middle-east/article/3374775/iran-fires-drones-us-military-radar-system-bahrain-amid-gulf-tensions",
+     "paese": "HK",
+     "lingua": "en",
+     "data": "2026-11-17T11:48:51+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Stuff",
+     "link": "https://www.stuff.co.nz/world-news/361060486/2month-lull-ends-irans-third-strike-us-targets",
+     "paese": "NZ",
+     "lingua": "en",
+     "data": "2026-11-17T11:55:41+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "FAZ",
+     "link": "https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-usa-greifen-abermals-iranische-insel-qeschm-in-strasse-von-hormus-an-faz-200583539.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T12:29:27+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "TASS",
+     "link": "https://tass.com/world/2219729",
+     "paese": "RU",
+     "lingua": "en",
+     "data": "2026-11-17T13:15:58+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Middle East Eye",
+     "link": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-media-reports-blasts-heard-qeshm-island",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T13:36:31+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NDTV",
+     "link": "https://www.ndtv.com/world-news/iran-targets-us-radar-facility-in-bahrain-third-strike-on-country-in-5-days-12339610#publisher=newsstand",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T13:42:38+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Washington Post",
+     "link": "https://www.washingtonpost.com/world/2026/11/17/netanyahu-is-pushing-new-iran-attack-bid-stay-power-his-rivals-warn/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T14:26:31+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Times of India",
+     "link": "https://timesofindia.indiatimes.com/india/two-indian-seafarers-hurt-1-missing-after-tanker-targeted-in-hormuz-strait/articleshow/135929328.cms",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T14:28:07+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Tehran Times",
+     "link": "https://www.tehrantimes.com/news/532258/Iran-strikes-US-radar-system-in-Bahrain-as-Iran-downs-more-drones",
+     "paese": "IR",
+     "lingua": "en",
+     "data": "2026-11-17T15:51:21+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "La Vanguardia",
+     "link": "https://www.lavanguardia.com/internacional/20261117/11686629/ataques-iranies-disparan-ormuz-trump-rearma.html",
+     "paese": "ES",
+     "lingua": "en",
+     "data": "2026-11-17T15:53:20+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Al-Monitor",
+     "link": "https://www.al-monitor.com/originals/2026/11/iran-steps-hormuz-bahrain-attacks-us-hits-qeshm-again-what-know",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T15:55:27+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/america/mundo/2026/11/17/el-regimen-de-iran-aseguro-que-al-menos-cinco-buques-se-incendiaron-tras-impactar-contra-minas-navales-en-ormuz/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T16:09:12+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "TGCOM24",
+     "link": "https://www.tgcom24.mediaset.it/mondo/guerra-iran-israele-usa-ultime-notizie-17-novembre_119073910-202602k.shtml",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T16:13:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ANSA",
+     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/iran-gli-usa-hanno-attaccato-lisola-di-qeshm-nello-stretto-di-hormuz_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
+     "paese": "IT",
+     "lingua": "en",
+     "data": "2026-11-17T16:15:43+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NOS",
+     "link": "https://nos.nl/l/2639904",
+     "paese": "NL",
+     "lingua": "nl",
+     "data": "2026-11-17T16:28:27+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Asharq Al-Awsat",
+     "link": "https://english.aawsat.com/node/5342423",
+     "paese": "SA",
+     "lingua": "ar",
+     "data": "2026-11-17T16:39:19+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Il Fatto Quotidiano",
+     "link": "https://www.ilfattoquotidiano.it/2026/11/17/attacco-usa-iran-qeshm-hormuz-notizie/8575146/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T16:42:59+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Punch",
+     "link": "https://punchng.com/iran-reports-us-strikes-on-qeshm-island/?utm_source=rss.punchng.com&utm_medium=web",
+     "paese": "NG",
+     "lingua": "en",
+     "data": "2026-11-17T17:43:12+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "RTBF",
+     "link": "https://www.rtbf.be/article/l-iran-a-profite-de-la-guerre-au-moyen-orient-pour-intensifier-la-repression-selon-amnesty-11817035",
+     "paese": "BE",
+     "lingua": "fr",
+     "data": "2026-11-17T18:34:15+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NPR",
+     "link": "https://www.npr.org/2026/11/17/nx-s1-6044255/us-iran-war-latest-bahrain",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T18:34:31+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "BFMTV",
+     "link": "https://www.bfmtv.com/international/moyen-orient/iran/guerre-au-moyen-orient-un-responsable-local-affirme-que-les-etats-unis-ont-mene-plusieurs-frappes-contre-l-ile-iranienne-de-qeshm_AD-202611170864.html",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T18:50:48+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "PBS NewsHour",
+     "link": "https://www.pbs.org/newshour/world/iran-fires-at-u-s-facility-in-bahrain-as-tehran-resumes-strikes-on-arab-neighbors",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T18:53:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "20 Minutes",
+     "link": "https://www.20minutes.fr/monde/etats-unis/4263683-20261117-guerre-iran-etats-unis-frappe-ile-strategique-qeshm-detroit-ormuz?at_medium=display&at_campaign=149",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T19:42:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "de Volkskrant",
+     "link": "https://www.volkskrant.nl/buitenland/iran-beschuldigt-vs-van-aanval-op-eiland-in-straat-van-hormuz~bd96d2f5/",
+     "paese": "NL",
+     "lingua": "nl",
+     "data": "2026-11-17T20:05:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Hindustan Times",
+     "link": "https://www.hindustantimes.com/world-news/us-news/us-fighter-jets-strike-missile-launch-site-on-iran-s-qeshm-island-101794945503003.html",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T20:09:50+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "El Universal",
+     "link": "https://www.eluniversal.com.mx/mundo/teheran-afirma-que-eu-bombardeo-la-isla-de-qeshm-ocurre-tras-ataque-irani-contra-bahrein/",
+     "paese": "MX",
+     "lingua": "es",
+     "data": "2026-11-17T20:39:46+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "New York Post",
+     "link": "https://nypost.com/2026/11/17/world-news/us-strikes-iranian-missile-launch-site-on-qeshm-island-us-official/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T20:46:45+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Euronews",
+     "link": "https://www.euronews.com/2026/11/17/us-strikes-targets-in-qeshm-island-after-iranian-mines-hit-five-ships-in-hormuz",
+     "paese": "FR",
+     "lingua": "en",
+     "data": "2026-11-17T20:54:43+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "El Mundo",
+     "link": "https://www.elmundo.es/internacional/2026/11/17/6afcbe6ce9cf4a7d7b8b45b2.html",
+     "paese": "ES",
+     "lingua": "es",
+     "data": "2026-11-17T21:02:06+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 5,
+    "estero": 34,
+    "paesi_esteri": 21,
+    "continenti": {
+     "Europa": 18,
+     "Asia e Medio Oriente": 10,
+     "Americhe": 9,
+     "Africa": 1,
+     "Oceania": 1
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
    "id": "136aae4227",
    "titolo": "Philippe Diallo candidato a sorpresa contro Infantino alla presidenza della Fifa",
    "lingua": "it",
@@ -1267,30 +1270,30 @@
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "France 24",
-    "data": "2026-11-17T11:04:26+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.france24.com/en/video/20261117-uefa-backs-bid-by-france-s-diallo-to-take-on-infantino-as-fifa-chief"
-   },
-   "conferma": {
     "fonte": "L'Équipe",
     "data": "2026-11-17T11:54:53+00:00",
-    "dopo_min": 50
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.lequipe.fr/Medias/Actualites/-choix-tardif-tache-compliquee-candidat-capable-de-mettre-fin-a-la-domination-d-infantino-la-revue-de-presse-internationale-apres-la-candidature-de-philippe-diallo-a-la-presidence-de-la-fifa/1744199#at_medium=RSS_feeds"
+   },
+   "conferma": {
+    "fonte": "BFMTV",
+    "data": "2026-11-17T12:01:52+00:00",
+    "dopo_min": 7
    },
    "curva": [
     1,
-    13,
-    22,
-    25,
+    12,
+    21,
+    26,
     27,
     28,
     28,
     28,
-    28,
-    28,
-    28,
-    33
+    29,
+    29,
+    29,
+    35
    ],
    "crescita": 2,
    "pubblicata": true,
@@ -1312,6 +1315,7 @@
     "GH",
     "IT",
     "JP",
+    "NG",
     "NL",
     "NZ",
     "PY",
@@ -1327,23 +1331,14 @@
     "it",
     "pt"
    ],
-   "n_fonti": 33,
+   "n_fonti": 35,
    "prima_segnalazione": {
-    "fonte": "France 24",
+    "fonte": "L'Équipe",
     "paese": "FR",
-    "data": "2026-11-17T11:04:26+00:00"
+    "data": "2026-11-17T11:54:53+00:00"
    },
    "aggiornata": "2026-11-19T10:49:17+00:00",
    "fonti": [
-    {
-     "fonte": "France 24",
-     "link": "https://www.france24.com/en/video/20261117-uefa-backs-bid-by-france-s-diallo-to-take-on-infantino-as-fifa-chief",
-     "paese": "FR",
-     "lingua": "en",
-     "data": "2026-11-17T11:04:26+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "L'Équipe",
      "link": "https://www.lequipe.fr/Medias/Actualites/-choix-tardif-tache-compliquee-candidat-capable-de-mettre-fin-a-la-domination-d-infantino-la-revue-de-presse-internationale-apres-la-candidature-de-philippe-diallo-a-la-presidence-de-la-fifa/1744199#at_medium=RSS_feeds",
@@ -1561,6 +1556,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "Punch",
+     "link": "https://punchng.com/enugu-ndc-gov-candidate-vows-to-end-multiple-taxation/?utm_source=rss.punchng.com&utm_medium=web",
+     "paese": "NG",
+     "lingua": "en",
+     "data": "2026-11-18T00:00:09+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "The Japan Times",
      "link": "https://www.japantimes.co.jp/sports/2026/11/18/soccer/macron-diallo-fifa-tashima/",
      "paese": "JP",
@@ -1588,6 +1592,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "Rai News",
+     "link": "https://www.rainews.it/articoli/2026/11/il-candidato-giapponeze-kazo-tashima-sfida-gianni-infantino-philippe-diallo-alla-presidenza-fifa-d5fdf1d3-6154-4813-9abe-7ab034c67e0d.html",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-18T19:16:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "Infobae",
      "link": "https://www.infobae.com/america/agencias/2026/11/19/infantino-diallo-y-tashima-trio-de-aspirantes-a-la-presidencia-de-la-fifa/",
      "paese": "AR",
@@ -1595,88 +1608,76 @@
      "data": "2026-11-19T09:15:26+00:00",
      "tipo": "giornale",
      "origine": "rss"
-    },
-    {
-     "fonte": "O Globo",
-     "link": "https://oglobo.globo.com/esportes/futebol/noticia/2026/11/19/fifa-anuncia-infantino-o-frances-diallo-e-o-japones-tashima-como-candidatos-a-presidencia-da-entidade.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-19T09:25:11+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
     }
    ],
    "copertura": {
-    "italia": 1,
-    "estero": 32,
-    "paesi_esteri": 21,
+    "italia": 2,
+    "estero": 33,
+    "paesi_esteri": 22,
     "continenti": {
-     "Europa": 17,
+     "Europa": 18,
      "Americhe": 8,
      "Asia e Medio Oriente": 5,
      "Oceania": 2,
-     "Africa": 1
+     "Africa": 2
     }
    },
    "punto_cieco": ""
   },
   {
-   "id": "ee5d97dbe7",
-   "titolo": "Tensioni con l'Iran in crescita con l'arrivo della portaerei USS Theodore Roosevelt",
+   "id": "14150235ce",
+   "titolo": "Iran rivendica un attacco con sei droni contro un radar statunitense in Bahrein e avverte sullo Stretto di Hor",
    "lingua": "it",
-   "categoria": "Esteri e conflitti",
+   "categoria": "Politica",
    "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 100,
+   "sezione": "Politica",
+   "calore": 99,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "O Globo",
-    "data": "2026-11-17T11:14:12+00:00",
+    "fonte": "New York Post",
+    "data": "2026-11-17T11:25:12+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://oglobo.globo.com/mundo/noticia/2026/11/17/ira-ataca-base-americana-no-bahrein-enquanto-embarcacoes-se-chocam-com-minas-navais-em-ormuz.ghtml"
+    "link": "https://nypost.com/2026/11/17/us-news/trump-responds-to-reported-dirty-bomb-threat-from-iran-they-happen-to-be-crazy/"
    },
    "conferma": {
-    "fonte": "South China Morning Post",
-    "data": "2026-11-17T11:48:51+00:00",
-    "dopo_min": 35
+    "fonte": "Vanguard",
+    "data": "2026-11-17T11:38:41+00:00",
+    "dopo_min": 13
    },
    "curva": [
     1,
-    6,
-    19,
     32,
-    32,
-    32,
-    32,
-    32,
-    32,
-    32,
-    32,
-    32
+    38,
+    40,
+    40,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41,
+    41
    ],
    "crescita": 0,
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
-    "AE",
     "AR",
     "BR",
+    "CA",
+    "CY",
     "DE",
     "ES",
     "FR",
     "GB",
-    "HK",
     "IN",
-    "IS",
     "IT",
-    "MX",
     "NG",
-    "NL",
-    "NO",
     "PH",
+    "PY",
     "QA",
     "RU",
     "SA",
@@ -1686,301 +1687,300 @@
    "lingue": [
     "ar",
     "de",
+    "el",
     "en",
     "es",
     "fr",
-    "is",
     "it",
-    "nl",
     "pt"
    ],
-   "n_fonti": 32,
+   "n_fonti": 41,
    "prima_segnalazione": {
-    "fonte": "O Globo",
-    "paese": "BR",
-    "data": "2026-11-17T11:14:12+00:00"
+    "fonte": "New York Post",
+    "paese": "US",
+    "data": "2026-11-17T11:25:12+00:00"
    },
-   "aggiornata": "2026-11-18T11:14:51+00:00",
+   "aggiornata": "2026-11-18T07:40:02+00:00",
    "fonti": [
     {
-     "fonte": "O Globo",
-     "link": "https://oglobo.globo.com/mundo/noticia/2026/11/17/ira-ataca-base-americana-no-bahrein-enquanto-embarcacoes-se-chocam-com-minas-navais-em-ormuz.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T11:14:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "South China Morning Post",
-     "link": "https://www.scmp.com/news/world/middle-east/article/3374775/iran-fires-drones-us-military-radar-system-bahrain-amid-gulf-tensions",
-     "paese": "HK",
-     "lingua": "en",
-     "data": "2026-11-17T11:48:51+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "FAZ",
-     "link": "https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-usa-greifen-abermals-iranische-insel-qeschm-in-strasse-von-hormus-an-faz-200583539.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T12:29:27+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Middle East Eye",
-     "link": "https://www.middleeasteye.net/live-blog/live-blog-update/iranian-media-reports-blasts-heard-qeshm-island",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T13:36:31+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Times of India",
-     "link": "https://timesofindia.indiatimes.com/india/two-indian-seafarers-hurt-1-missing-after-tanker-targeted-in-hormuz-strait/articleshow/135929328.cms",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T14:28:07+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "TASS",
-     "link": "https://tass.com/world/2219815",
-     "paese": "RU",
-     "lingua": "en",
-     "data": "2026-11-17T15:09:04+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "La Vanguardia",
-     "link": "https://www.lavanguardia.com/internacional/20261117/11686629/ataques-iranies-disparan-ormuz-trump-rearma.html",
-     "paese": "ES",
-     "lingua": "en",
-     "data": "2026-11-17T15:53:20+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Al-Monitor",
-     "link": "https://www.al-monitor.com/originals/2026/11/iran-steps-hormuz-bahrain-attacks-us-hits-qeshm-again-what-know",
+     "fonte": "New York Post",
+     "link": "https://nypost.com/2026/11/17/us-news/trump-responds-to-reported-dirty-bomb-threat-from-iran-they-happen-to-be-crazy/",
      "paese": "US",
      "lingua": "en",
-     "data": "2026-11-17T15:55:27+00:00",
+     "data": "2026-11-17T11:25:12+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/america/mundo/2026/11/17/el-regimen-de-iran-aseguro-que-al-menos-cinco-buques-se-incendiaron-tras-impactar-contra-minas-navales-en-ormuz/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T16:09:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "TGCOM24",
-     "link": "https://www.tgcom24.mediaset.it/mondo/guerra-iran-israele-usa-ultime-notizie-17-novembre_119073910-202602k.shtml",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T16:13:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ANSA",
-     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/iran-gli-usa-hanno-attaccato-lisola-di-qeshm-nello-stretto-di-hormuz_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
-     "paese": "IT",
+     "fonte": "Vanguard",
+     "link": "https://www.vanguardngr.com/2026/11/trump-says-takes-very-seriously-possible-iran-threat-to-washington/",
+     "paese": "NG",
      "lingua": "en",
-     "data": "2026-11-17T16:15:43+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NDTV",
-     "link": "https://www.ndtv.com/world-news/us-attacks-irans-qeshm-island-in-strait-of-hormuz-report-12340437#publisher=newsstand",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T16:22:57+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "NOS",
-     "link": "https://nos.nl/l/2639904",
-     "paese": "NL",
-     "lingua": "nl",
-     "data": "2026-11-17T16:28:27+00:00",
+     "data": "2026-11-17T11:38:41+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
      "fonte": "Asharq Al-Awsat",
-     "link": "https://english.aawsat.com/node/5342423",
+     "link": "https://english.aawsat.com/node/5342277",
      "paese": "SA",
      "lingua": "ar",
-     "data": "2026-11-17T16:39:19+00:00",
+     "data": "2026-11-17T11:40:38+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Il Fatto Quotidiano",
-     "link": "https://www.ilfattoquotidiano.it/2026/11/17/attacco-usa-iran-qeshm-hormuz-notizie/8575146/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T16:42:59+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Punch",
-     "link": "https://punchng.com/iran-reports-us-strikes-on-qeshm-island/?utm_source=rss.punchng.com&utm_medium=web",
-     "paese": "NG",
-     "lingua": "en",
-     "data": "2026-11-17T17:43:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "BFMTV",
-     "link": "https://www.bfmtv.com/international/moyen-orient/iran/guerre-au-moyen-orient-un-responsable-local-affirme-que-les-etats-unis-ont-mene-plusieurs-frappes-contre-l-ile-iranienne-de-qeshm_AD-202611170864.html",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T18:50:48+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Aftenposten",
-     "link": "https://www.aftenposten.no/verden/i/z0GxrO/amerikanske-kampfly-angrep-iransk-missilbase?utm_medium=rss",
-     "paese": "NO",
-     "lingua": "en",
-     "data": "2026-11-17T19:41:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "20 Minutes",
-     "link": "https://www.20minutes.fr/monde/etats-unis/4263683-20261117-guerre-iran-etats-unis-frappe-ile-strategique-qeshm-detroit-ormuz?at_medium=display&at_campaign=149",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T19:42:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "de Volkskrant",
-     "link": "https://www.volkskrant.nl/buitenland/iran-beschuldigt-vs-van-aanval-op-eiland-in-straat-van-hormuz~bd96d2f5/",
-     "paese": "NL",
-     "lingua": "nl",
-     "data": "2026-11-17T20:05:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Hindustan Times",
-     "link": "https://www.hindustantimes.com/world-news/us-news/us-fighter-jets-strike-missile-launch-site-on-iran-s-qeshm-island-101794945503003.html",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T20:09:50+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "El Universal",
-     "link": "https://www.eluniversal.com.mx/mundo/teheran-afirma-que-eu-bombardeo-la-isla-de-qeshm-ocurre-tras-ataque-irani-contra-bahrein/",
-     "paese": "MX",
-     "lingua": "es",
-     "data": "2026-11-17T20:39:46+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "New York Post",
-     "link": "https://nypost.com/2026/11/17/world-news/us-strikes-iranian-missile-launch-site-on-qeshm-island-us-official/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T20:46:45+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Euronews",
-     "link": "https://www.euronews.com/2026/11/17/us-strikes-targets-in-qeshm-island-after-iranian-mines-hit-five-ships-in-hormuz",
-     "paese": "FR",
-     "lingua": "en",
-     "data": "2026-11-17T20:54:43+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "El Mundo",
-     "link": "https://www.elmundo.es/internacional/2026/11/17/6afcbe6ce9cf4a7d7b8b45b2.html",
+     "fonte": "20minutos",
+     "link": "https://www.20minutos.es/internacional/estados-unidos-detecta-planes-iran-para-hacer-explotar-una-bomba-sucia-washington-es-un-arma-terror_7062043_0.html",
      "paese": "ES",
+     "lingua": "en",
+     "data": "2026-11-17T11:44:44+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ABC Color",
+     "link": "https://www.abc.com.py/internacionales/2026/11/17/trump-dice-que-se-toman-muy-en-serio-posible-ataque-bomba-sucia-irani-en-washington/",
+     "paese": "PY",
      "lingua": "es",
-     "data": "2026-11-17T21:02:06+00:00",
+     "data": "2026-11-17T11:50:10+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Clarín",
+     "link": "https://www.clarin.com/estados-unidos/trump-dice-que-se-toman-muy-en-serio-posible-ataque-bomba-sucia-irani-en-washington_0_ZtbGGIKgcW.html",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T12:00:09+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "G1",
+     "link": "https://g1.globo.com/mundo/noticia/2026/11/17/ira-nega-plano-de-ataque-a-washington-mas-trump-nao-descarta-ameaca-eles-sao-loucos.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T12:08:24+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Der Spiegel",
+     "link": "https://www.spiegel.de/ausland/irankrieg-teheran-weist-bericht-ueber-anschlagsplaene-mit-schmutziger-bombe-gegen-washington-d-c-zurueck-a-b2248849-5811-48d3-a2fa-78896a52fa44#ref=rss",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T12:09:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
      "fonte": "The Straits Times",
-     "link": "https://www.straitstimes.com/world/middle-east/us-strikes-irans-qeshm-island-in-strait-of-hormuz-after-guards-target-bahrain",
+     "link": "https://www.straitstimes.com/world/united-states/tehran-denies-report-of-a-potential-iranian-plan-to-detonate-dirty-bomb-in-washington",
      "paese": "SG",
      "lingua": "en",
-     "data": "2026-11-17T21:11:45+00:00",
+     "data": "2026-11-17T12:10:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "The National",
-     "link": "https://www.thenationalnews.com/news/us/2026/11/17/us-jets-strike-irgc-missile-launch-site-on-irans-qeshm-island-in-self-defence/",
-     "paese": "AE",
+     "fonte": "The Independent",
+     "link": "https://www.independent.co.uk/asia/southeast-asia/trump-philippines-china-visit-live-updates-b3086099.html",
+     "paese": "GB",
      "lingua": "en",
-     "data": "2026-11-17T21:28:37+00:00",
+     "data": "2026-11-17T12:18:23+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "RÚV",
-     "link": "https://www.ruv.is/frettir/erlent/2026-11-17-bandarikjaher-gerir-aras-a-qeshm-eyju-i-hormussundi-493110/",
-     "paese": "IS",
-     "lingua": "is",
-     "data": "2026-11-17T22:17:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Inquirer",
-     "link": "https://globalnation.inquirer.net/348627/us-strikes-iranian-island-in-hormuz-after-guards-target-bahrain",
-     "paese": "PH",
+     "fonte": "The Hill",
+     "link": "https://thehill.com/policy/defense/6224265-donald-trump-iran-dirty-bomb-threat/",
+     "paese": "US",
      "lingua": "en",
-     "data": "2026-11-17T23:00:07+00:00",
+     "data": "2026-11-17T12:19:18+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "BFMTV",
+     "link": "https://www.bfmtv.com/international/amerique-nord/etats-unis/donald-trump/donald-trump-dit-prendre-tres-au-serieux-une-potentielle-menace-d-attaque-iranienne-a-washington_AD-202611170547.html",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T12:32:56+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Cyprus Mail",
+     "link": "https://cyprus-mail.com/2026/11/17/us-taking-seriously-report-of-possible-iranian-dirty-bomb-plot-in-washington",
+     "paese": "CY",
+     "lingua": "el",
+     "data": "2026-11-17T12:34:07+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Ouest-France",
+     "link": "https://www.ouest-france.fr/monde/etats-unis/donald-trump/donald-trump-dit-prendre-tres-au-serieux-une-potentielle-menace-dattaque-iranienne-a-washington-73efdb3e-e27f-11f1-9a72-32f9104dab1b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T12:36:37+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ANSA",
+     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/007-usa-iran-sta-sviluppando-piani-per-bomba-sporca-a-washington_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
+     "paese": "IT",
+     "lingua": "en",
+     "data": "2026-11-17T12:36:54+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "CNA",
+     "link": "https://www.channelnewsasia.com/world/trump-says-takes-very-seriously-possible-iran-threat-washington-6559151",
+     "paese": "SG",
+     "lingua": "en",
+     "data": "2026-11-17T12:42:24+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Il Fatto Quotidiano",
+     "link": "https://www.ilfattoquotidiano.it/2026/11/17/cnn-iran-prepara-attacco-bomba-sporca-washington-trump/8574379/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T12:53:14+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Newsweek",
+     "link": "https://www.newsweek.com/iran-dirty-bomb-map-impact-washington-dc-12726178",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T12:58:06+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "TASS",
+     "link": "https://tass.com/world/2219735",
+     "paese": "RU",
+     "lingua": "en",
+     "data": "2026-11-17T13:20:00+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Rai News",
+     "link": "https://www.rainews.it/video/2026/11/la-soffiata-della-cnn-sulla-bomba-sporca-radioattiva-iraniana-su-washington-teheran-smentisce-3e7e6687-252e-4156-ab96-4b129c994054.html",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T13:25:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Hindustan Times",
+     "link": "https://www.hindustantimes.com/world-news/us-news/trump-issues-stark-warning-to-iran-over-alleged-dc-dirty-bomb-plot-we-take-it-very-seriously-101794920834305.html",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T13:31:23+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Globe and Mail",
+     "link": "https://www.theglobeandmail.com/world/article-us-iran-dirty-bomb-plot-washington/",
+     "paese": "CA",
+     "lingua": "en",
+     "data": "2026-11-17T13:35:16+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Al-Monitor",
+     "link": "https://www.al-monitor.com/originals/2026/11/trump-says-us-taking-seriously-report-possible-iranian-dirty-bomb-plot-washington",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T13:46:38+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "n-tv",
+     "link": "https://www.n-tv.de/politik/Trump-nimmt-Bedrohung-durch-schmutzige-Bombe-sehr-ernst-id31543412.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T13:51:55+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Estadão",
+     "link": "https://www.estadao.com.br/internacional/ira-nega-plano-de-atacar-washington-com-bomba-suja-trump-diz-que-teera-pagaria-preco-jamais-visto-npr/",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T13:53:10+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Global News",
+     "link": "https://globalnews.ca/news/12154204/trump-asia-trip-iran-dirty-bomb-threat/",
+     "paese": "CA",
+     "lingua": "en",
+     "data": "2026-11-17T14:13:58+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "NDTV",
+     "link": "https://www.ndtv.com/world-news/us-iran-war-they-are-crazy-trump-on-reported-iranian-dirty-bomb-plot-in-washington-12339810#publisher=newsstand",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T14:15:09+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Deutsche Welle",
+     "link": "https://www.dw.com/en/iran-dismisses-report-of-alleged-dirty-bomb-attack-on-washington/a-79970741?maca=en-rss-en-all-1573-rdf",
+     "paese": "DE",
+     "lingua": "en",
+     "data": "2026-11-17T14:39:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
      "fonte": "Al Jazeera",
-     "link": "https://www.aljazeera.com/news/2026/11/17/kuwait-reports-drone-attacks-as-iran-us-trade-attacks-on-qeshm-and-bahrain?traffic_source=rss",
+     "link": "https://www.aljazeera.com/news/2026/11/17/is-iran-plotting-a-dirty-bomb-attack-in-the-us-what-we-know?traffic_source=rss",
      "paese": "QA",
      "lingua": "en",
-     "data": "2026-11-17T23:38:38+00:00",
+     "data": "2026-11-17T14:59:39+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "France Info",
+     "link": "https://www.franceinfo.fr/monde/iran/guerre-entre-les-etats-unis-israel-et-l-iran/donald-trump-prend-tres-au-serieux-une-possible-menace-d-attaque-iranienne-contre-la-ville-de-washington-l-iran-denonce-des-informations-fabriquees_8286563.html#xtor=RSS-3-[lestitres]",
+     "paese": "FR",
+     "lingua": "en",
+     "data": "2026-11-17T15:00:34+00:00",
      "tipo": "giornale",
      "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 4,
-    "estero": 28,
-    "paesi_esteri": 20,
+    "estero": 37,
+    "paesi_esteri": 17,
     "continenti": {
-     "Europa": 16,
-     "Asia e Medio Oriente": 9,
-     "Americhe": 6,
+     "Europa": 20,
+     "Americhe": 13,
+     "Asia e Medio Oriente": 7,
      "Africa": 1
     }
    },
@@ -1993,35 +1993,35 @@
    "categoria": "Società",
    "curiosita": false,
    "sezione": "Società",
-   "calore": 93,
+   "calore": 88,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "Askanews",
-    "data": "2026-11-17T11:09:03+00:00",
-    "tipo": "agenzia",
+    "fonte": "Diario Libre",
+    "data": "2026-11-17T12:02:00+00:00",
+    "tipo": "giornale",
     "veloce": false,
-    "link": "https://askanews.it/2026/11/17/papa-leone-sono-un-gringo-ma-la-mia-fede-si-e-trasformata-in-peru/"
+    "link": "https://www.diariolibre.com/mundo/america-latina/2026/11/17/incidente-con-el-papa-leon-xiv-en-peru-durante-su-visita/3723248"
    },
    "conferma": {
-    "fonte": "Le Figaro",
-    "data": "2026-11-17T11:10:53+00:00",
-    "dopo_min": 2
+    "fonte": "Rai News",
+    "data": "2026-11-17T12:44:00+00:00",
+    "dopo_min": 42
    },
    "curva": [
     1,
-    5,
-    11,
+    4,
+    9,
+    12,
+    13,
     14,
-    15,
-    16,
-    16,
-    16,
-    16,
-    16,
-    16,
-    16
+    14,
+    14,
+    14,
+    14,
+    14,
+    14
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -2034,7 +2034,6 @@
     "DE",
     "DO",
     "EC",
-    "FR",
     "IT",
     "PH",
     "PY",
@@ -2045,35 +2044,16 @@
    "lingue": [
     "en",
     "es",
-    "fr",
     "it"
    ],
-   "n_fonti": 16,
+   "n_fonti": 14,
    "prima_segnalazione": {
-    "fonte": "Askanews",
-    "paese": "IT",
-    "data": "2026-11-17T11:09:03+00:00"
+    "fonte": "Diario Libre",
+    "paese": "DO",
+    "data": "2026-11-17T12:02:00+00:00"
    },
    "aggiornata": "2026-11-19T01:46:47+00:00",
    "fonti": [
-    {
-     "fonte": "Askanews",
-     "link": "https://askanews.it/2026/11/17/papa-leone-sono-un-gringo-ma-la-mia-fede-si-e-trasformata-in-peru/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T11:09:03+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Le Figaro",
-     "link": "https://www.lefigaro.fr/flash-actu/rite-tridentin-ordinations-d-hommes-maries-politique-ce-qu-a-dit-leon-xvi-lors-de-la-conference-de-presse-dans-l-avion-au-retour-du-perou-20261117",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T11:10:53+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "Diario Libre",
      "link": "https://www.diariolibre.com/mundo/america-latina/2026/11/17/incidente-con-el-papa-leon-xiv-en-peru-durante-su-visita/3723248",
@@ -2202,13 +2182,13 @@
     }
    ],
    "copertura": {
-    "italia": 2,
-    "estero": 14,
-    "paesi_esteri": 13,
+    "italia": 1,
+    "estero": 13,
+    "paesi_esteri": 12,
     "continenti": {
      "Americhe": 8,
-     "Europa": 4,
      "Asia e Medio Oriente": 3,
+     "Europa": 2,
      "Africa": 1
     }
    },
@@ -2221,26 +2201,26 @@
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 88,
+   "calore": 87,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "RFI",
-    "data": "2026-11-17T11:14:54+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.rfi.fr/fr/europe/20261117-soldats-fran%C3%A7ais-d%C3%A9ploy%C3%A9s-en-ukraine-moscou-y-voit-une-participation-directe-au-conflit"
-   },
-   "conferma": {
     "fonte": "BFMTV",
     "data": "2026-11-17T11:41:15+00:00",
-    "dopo_min": 26
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.bfmtv.com/international/asie/russie/video-soldats-francais-deployes-en-ukraine-le-ministre-russe-des-affaires-etrangeres-serguei-lavrov-estime-qu-il-s-agit-d-une-participation-directe-au-conflit_VN-202611170509.html"
+   },
+   "conferma": {
+    "fonte": "Il Fatto Quotidiano",
+    "data": "2026-11-17T12:12:55+00:00",
+    "dopo_min": 32
    },
    "curva": [
     1,
-    10,
-    21,
+    12,
+    23,
     24,
     25,
     26,
@@ -2280,21 +2260,12 @@
    ],
    "n_fonti": 27,
    "prima_segnalazione": {
-    "fonte": "RFI",
+    "fonte": "BFMTV",
     "paese": "FR",
-    "data": "2026-11-17T11:14:54+00:00"
+    "data": "2026-11-17T11:41:15+00:00"
    },
    "aggiornata": "2026-11-18T10:06:53+00:00",
    "fonti": [
-    {
-     "fonte": "RFI",
-     "link": "https://www.rfi.fr/fr/europe/20261117-soldats-fran%C3%A7ais-d%C3%A9ploy%C3%A9s-en-ukraine-moscou-y-voit-une-participation-directe-au-conflit",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T11:14:54+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "BFMTV",
      "link": "https://www.bfmtv.com/international/asie/russie/video-soldats-francais-deployes-en-ukraine-le-ministre-russe-des-affaires-etrangeres-serguei-lavrov-estime-qu-il-s-agit-d-une-participation-directe-au-conflit_VN-202611170509.html",
@@ -2436,6 +2407,15 @@
      "paese": "BE",
      "lingua": "en",
      "data": "2026-11-17T17:22:15+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "RFI",
+     "link": "https://www.rfi.fr/fr/france/20261117-les-fran%C3%A7ais-ne-sont-pas-cobellig%C3%A9rants-en-ukraine-malgr%C3%A9-la-pr%C3%A9sence-de-soldats-mart%C3%A8le-le-gouvernement",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T17:47:27+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -2890,7 +2870,7 @@
    "curva": [
     1,
     3,
-    26,
+    28,
     32,
     33,
     33,
@@ -2911,6 +2891,7 @@
     "EC",
     "ES",
     "FR",
+    "GB",
     "GT",
     "IL",
     "IN",
@@ -2920,7 +2901,6 @@
     "PH",
     "PK",
     "PY",
-    "QA",
     "SG",
     "US",
     "VE"
@@ -2963,6 +2943,15 @@
      "paese": "SG",
      "lingua": "en",
      "data": "2026-11-17T15:42:01+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/estados-unidos/2026/11/17/estados-unidos-registra-una-caida-de-estudiantes-internacionales-en-sus-universidades-que-muestran-las-nuevas-cifras/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T15:52:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -3138,6 +3127,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "The Independent",
+     "link": "https://www.independent.co.uk/news/world/americas/us-politics/classified-network-down-usa-intelligence-b3086573.html",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T18:41:13+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "Mint",
      "link": "https://www.livemint.com/news/us-news/us-electronic-spy-agency-suffers-classified-network-outage-11794941399379.html",
      "paese": "IN",
@@ -3183,29 +3181,11 @@
      "origine": "rss"
     },
     {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/estados-unidos/2026/11/17/la-red-clasificada-de-la-agencia-de-seguridad-nacional-de-eeuu-sufre-una-caida-y-deja-restringidas-las-comunicaciones-internas/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T21:04:27+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "The Straits Times",
      "link": "https://www.straitstimes.com/world/united-states/classified-us-national-security-communications-network-hit-by-outage-nsa",
      "paese": "SG",
      "lingua": "en",
      "data": "2026-11-17T22:00:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "France Info",
-     "link": "https://www.franceinfo.fr/monde/usa/des-systemes-internes-de-la-nsa-l-agence-americaine-de-renseignement-affectes-durant-une-operation-de-maintenance_8287238.html#xtor=RSS-3-[lestitres]",
-     "paese": "FR",
-     "lingua": "en",
-     "data": "2026-11-17T22:23:53+00:00",
      "tipo": "giornale",
      "origine": "rss"
     }
@@ -3216,8 +3196,8 @@
     "paesi_esteri": 19,
     "continenti": {
      "Americhe": 13,
-     "Asia e Medio Oriente": 9,
-     "Europa": 9,
+     "Europa": 10,
+     "Asia e Medio Oriente": 8,
      "Altro": 1,
      "Oceania": 1
     }
@@ -3250,7 +3230,7 @@
    "curva": [
     1,
     5,
-    10,
+    11,
     12,
     13,
     13,
@@ -3442,7 +3422,7 @@
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 78,
+   "calore": 77,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -3467,7 +3447,7 @@
     1,
     1,
     1,
-    3,
+    5,
     7,
     9,
     9
@@ -3607,7 +3587,7 @@
    },
    "curva": [
     1,
-    2,
+    3,
     3,
     3,
     3,
@@ -4085,13 +4065,142 @@
    "punto_cieco": "italia"
   },
   {
+   "id": "e0d6f0e152",
+   "titolo": "Allerta gialla per vento e temporali in Sarthe martedì, non esclusa l'arancione",
+   "lingua": "en",
+   "categoria": "Clima e ambiente",
+   "curiosita": false,
+   "sezione": "Mondo",
+   "calore": 65,
+   "stato": "confermato",
+   "attendibilita": 93,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "BFMTV",
+    "data": "2026-11-17T15:03:02+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.bfmtv.com/meteo/intemperies/deux-departements-des-hauts-de-france-places-en-vigilance-orange-pluie-inondation-ce-mardi-soir_AN-202611170670.html"
+   },
+   "conferma": {
+    "fonte": "Ouest-France",
+    "data": "2026-11-17T15:20:11+00:00",
+    "dopo_min": 17
+   },
+   "curva": [
+    1,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    7
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "FR"
+   ],
+   "lingue": [
+    "en",
+    "fr"
+   ],
+   "n_fonti": 7,
+   "prima_segnalazione": {
+    "fonte": "BFMTV",
+    "paese": "FR",
+    "data": "2026-11-17T15:03:02+00:00"
+   },
+   "aggiornata": "2026-11-19T09:48:11+00:00",
+   "fonti": [
+    {
+     "fonte": "BFMTV",
+     "link": "https://www.bfmtv.com/meteo/intemperies/deux-departements-des-hauts-de-france-places-en-vigilance-orange-pluie-inondation-ce-mardi-soir_AN-202611170670.html",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T15:03:02+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Ouest-France",
+     "link": "https://www.ouest-france.fr/meteo/meteo-france-place-les-departements-de-la-somme-et-du-pas-de-calais-en-vigilance-orange-pluie-inondations-98435684-e28c-11f1-a3b1-0c6de532ce7d?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T15:20:11+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "France Info",
+     "link": "https://www.franceinfo.fr/environnement/meteo/la-somme-et-le-pas-de-calais-places-en-vigilance-orange-pluie-inondation-a-partir-de-23-heures_8286704.html#xtor=RSS-3-[lestitres]",
+     "paese": "FR",
+     "lingua": "en",
+     "data": "2026-11-17T15:55:22+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Le Figaro",
+     "link": "https://www.lefigaro.fr/meteo/deux-departements-places-en-vigilance-orange-pluie-inondation-de-fortes-rafales-de-vent-attendues-decouvrez-la-meteo-du-18-novembre-20261117",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T16:42:45+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Libération",
+     "link": "https://www.liberation.fr/environnement/climat/pluie-inondation-le-pas-de-calais-et-la-somme-en-vigilance-orange-a-partir-de-ce-mardi-soir-20261117_KWNKYH4GIZAILOZYKYPNFDQDEA/",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T16:43:54+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Le Monde",
+     "link": "https://www.lemonde.fr/planete/article/2026/11/17/pluie-et-inondations-le-pas-de-calais-et-la-somme-places-en-vigilance-orange-mardi-a-partir-de-23-heures_6813028_3244.html",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T18:07:52+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "20 Minutes",
+     "link": "https://www.20minutes.fr/planete/4264028-20261119-intemperies-pluies-inondations-crues-cinq-departements-vigilance-orange?at_medium=display&at_campaign=149",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-19T07:37:56+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 7,
+    "paesi_esteri": 1,
+    "continenti": {
+     "Europa": 7
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
    "id": "23a29a81bd",
    "titolo": "Ancelotti convoca sei esordienti e Endrick per la sfida di Singapore con il Brasile",
    "lingua": "en",
    "categoria": "Sport",
    "curiosita": false,
    "sezione": "Sport",
-   "calore": 65,
+   "calore": 64,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -4109,7 +4218,7 @@
    },
    "curva": [
     1,
-    14,
+    15,
     17,
     17,
     18,
@@ -4332,142 +4441,13 @@
    "punto_cieco": "italia"
   },
   {
-   "id": "e0d6f0e152",
-   "titolo": "Allerta gialla per vento e temporali in Sarthe martedì, non esclusa l'arancione",
-   "lingua": "en",
-   "categoria": "Clima e ambiente",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 65,
-   "stato": "confermato",
-   "attendibilita": 93,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "BFMTV",
-    "data": "2026-11-17T15:03:02+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.bfmtv.com/meteo/intemperies/deux-departements-des-hauts-de-france-places-en-vigilance-orange-pluie-inondation-ce-mardi-soir_AN-202611170670.html"
-   },
-   "conferma": {
-    "fonte": "Ouest-France",
-    "data": "2026-11-17T15:20:11+00:00",
-    "dopo_min": 17
-   },
-   "curva": [
-    1,
-    6,
-    6,
-    6,
-    6,
-    6,
-    6,
-    6,
-    6,
-    6,
-    6,
-    7
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "FR"
-   ],
-   "lingue": [
-    "en",
-    "fr"
-   ],
-   "n_fonti": 7,
-   "prima_segnalazione": {
-    "fonte": "BFMTV",
-    "paese": "FR",
-    "data": "2026-11-17T15:03:02+00:00"
-   },
-   "aggiornata": "2026-11-19T09:48:11+00:00",
-   "fonti": [
-    {
-     "fonte": "BFMTV",
-     "link": "https://www.bfmtv.com/meteo/intemperies/deux-departements-des-hauts-de-france-places-en-vigilance-orange-pluie-inondation-ce-mardi-soir_AN-202611170670.html",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T15:03:02+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Ouest-France",
-     "link": "https://www.ouest-france.fr/meteo/meteo-france-place-les-departements-de-la-somme-et-du-pas-de-calais-en-vigilance-orange-pluie-inondations-98435684-e28c-11f1-a3b1-0c6de532ce7d?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T15:20:11+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "France Info",
-     "link": "https://www.franceinfo.fr/environnement/meteo/la-somme-et-le-pas-de-calais-places-en-vigilance-orange-pluie-inondation-a-partir-de-23-heures_8286704.html#xtor=RSS-3-[lestitres]",
-     "paese": "FR",
-     "lingua": "en",
-     "data": "2026-11-17T15:55:22+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Le Figaro",
-     "link": "https://www.lefigaro.fr/meteo/deux-departements-places-en-vigilance-orange-pluie-inondation-de-fortes-rafales-de-vent-attendues-decouvrez-la-meteo-du-18-novembre-20261117",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T16:42:45+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Libération",
-     "link": "https://www.liberation.fr/environnement/climat/pluie-inondation-le-pas-de-calais-et-la-somme-en-vigilance-orange-a-partir-de-ce-mardi-soir-20261117_KWNKYH4GIZAILOZYKYPNFDQDEA/",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T16:43:54+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Le Monde",
-     "link": "https://www.lemonde.fr/planete/article/2026/11/17/pluie-et-inondations-le-pas-de-calais-et-la-somme-places-en-vigilance-orange-mardi-a-partir-de-23-heures_6813028_3244.html",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T18:07:52+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "20 Minutes",
-     "link": "https://www.20minutes.fr/planete/4264028-20261119-intemperies-pluies-inondations-crues-cinq-departements-vigilance-orange?at_medium=display&at_campaign=149",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-19T07:37:56+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 7,
-    "paesi_esteri": 1,
-    "continenti": {
-     "Europa": 7
-    }
-   },
-   "punto_cieco": ""
-  },
-  {
    "id": "3b0815c3a1",
    "titolo": "Sisma di magnitudo 4.1 registrato a Pinotepa Nacional, Oaxaca",
    "lingua": "es",
    "categoria": "Clima e ambiente",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 64,
+   "calore": 63,
    "stato": "confermato",
    "attendibilita": 84,
    "livello": "Confermata",
@@ -4497,7 +4477,7 @@
     4,
     5
    ],
-   "crescita": 1,
+   "crescita": 0,
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
@@ -4580,21 +4560,21 @@
    "categoria": "Altro",
    "curiosita": true,
    "sezione": "Curiosità",
-   "calore": 61,
+   "calore": 58,
    "stato": "confermato",
-   "attendibilita": 89,
-   "livello": "Certa",
+   "attendibilita": 84,
+   "livello": "Confermata",
    "prima": {
-    "fonte": "Il Fatto Quotidiano",
-    "data": "2026-11-18T10:52:51+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.ilfattoquotidiano.it/2026/11/18/castagni-in-fiore-di-van-gogh-da-180-milioni-il-colpo-di-scena-prima-dellasta-la-famiglia-delleditore-ebreo-samuel-fischer-trova-laccordo-con-sothebys/8575841/"
-   },
-   "conferma": {
     "fonte": "Rai News",
     "data": "2026-11-19T02:21:00+00:00",
-    "dopo_min": 928
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.rainews.it/articoli/2026/11/sothebys-chtaigniers-en-fleurs-di-van-gogh-venduto-a-1904-milioni-di-dollari-922b91d0-8441-4edf-ad90-84a5ee705d85.html"
+   },
+   "conferma": {
+    "fonte": "La Stampa",
+    "data": "2026-11-19T06:03:00+00:00",
+    "dopo_min": 222
    },
    "curva": [
     1,
@@ -4602,13 +4582,13 @@
     1,
     1,
     1,
-    1,
-    1,
-    1,
     2,
+    3,
+    3,
     4,
     5,
-    6
+    5,
+    5
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -4619,23 +4599,14 @@
    "lingue": [
     "it"
    ],
-   "n_fonti": 6,
+   "n_fonti": 5,
    "prima_segnalazione": {
-    "fonte": "Il Fatto Quotidiano",
+    "fonte": "Rai News",
     "paese": "IT",
-    "data": "2026-11-18T10:52:51+00:00"
+    "data": "2026-11-19T02:21:00+00:00"
    },
    "aggiornata": "2026-11-19T09:09:40+00:00",
    "fonti": [
-    {
-     "fonte": "Il Fatto Quotidiano",
-     "link": "https://www.ilfattoquotidiano.it/2026/11/18/castagni-in-fiore-di-van-gogh-da-180-milioni-il-colpo-di-scena-prima-dellasta-la-famiglia-delleditore-ebreo-samuel-fischer-trova-laccordo-con-sothebys/8575841/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-18T10:52:51+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "Rai News",
      "link": "https://www.rainews.it/articoli/2026/11/sothebys-chtaigniers-en-fleurs-di-van-gogh-venduto-a-1904-milioni-di-dollari-922b91d0-8441-4edf-ad90-84a5ee705d85.html",
@@ -4683,273 +4654,14 @@
     }
    ],
    "copertura": {
-    "italia": 6,
+    "italia": 5,
     "estero": 0,
     "paesi_esteri": 0,
     "continenti": {
-     "Europa": 6
+     "Europa": 5
     }
    },
    "punto_cieco": "solo_italia"
-  },
-  {
-   "id": "a97f7085b5",
-   "titolo": "L'UE contesta a Temu la mancanza di controlli sulla vendita di prodotti illegali",
-   "lingua": "it",
-   "categoria": "Cronaca",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 60,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "Asahi Shimbun",
-    "data": "2026-11-17T11:05:00+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "http://www.asahi.com/articles/ASVCK31D1VCKUHBI00CM.html?ref=rss"
-   },
-   "conferma": {
-    "fonte": "Daily Sabah",
-    "data": "2026-11-17T11:06:00+00:00",
-    "dopo_min": 1
-   },
-   "curva": [
-    1,
-    18,
-    19,
-    19,
-    19,
-    19,
-    19,
-    19,
-    19,
-    19,
-    19,
-    19
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AR",
-    "AT",
-    "AZ",
-    "BE",
-    "BR",
-    "DE",
-    "ES",
-    "GB",
-    "HU",
-    "IT",
-    "JP",
-    "NO",
-    "PY",
-    "SG",
-    "TR"
-   ],
-   "lingue": [
-    "de",
-    "en",
-    "es",
-    "fr",
-    "it",
-    "ja",
-    "pt",
-    "ru"
-   ],
-   "n_fonti": 19,
-   "prima_segnalazione": {
-    "fonte": "Asahi Shimbun",
-    "paese": "JP",
-    "data": "2026-11-17T11:05:00+00:00"
-   },
-   "aggiornata": "2026-11-17T19:25:00+00:00",
-   "fonti": [
-    {
-     "fonte": "Asahi Shimbun",
-     "link": "http://www.asahi.com/articles/ASVCK31D1VCKUHBI00CM.html?ref=rss",
-     "paese": "JP",
-     "lingua": "ja",
-     "data": "2026-11-17T11:05:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Daily Sabah",
-     "link": "https://www.dailysabah.com/business/economy/temu-could-be-hit-with-2nd-large-eu-fine-over-sale-of-illegal-items",
-     "paese": "TR",
-     "lingua": "en",
-     "data": "2026-11-17T11:06:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "CNA",
-     "link": "https://www.channelnewsasia.com/business/eu-charges-temu-not-doing-enough-stop-illegal-product-sales-its-platforms-6558886",
-     "paese": "SG",
-     "lingua": "en",
-     "data": "2026-11-17T11:10:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Handelsblatt",
-     "link": "https://www.handelsblatt.com/unternehmen/handel-konsumgueter/verbraucherschutz-eu-wirft-temu-mangelnden-einsatz-gegen-illegale-produkte-vor/100270562.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T11:11:48+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/america/agencias/2026/11/17/bruselas-acusa-a-temu-de-no-frenar-la-venta-de-productos-ilegales-en-su-plataforma/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T11:18:52+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ORF",
-     "link": "https://orf.at/stories/3448452/",
-     "paese": "AT",
-     "lingua": "de",
-     "data": "2026-11-17T11:22:19+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Die Zeit",
-     "link": "https://www.zeit.de/news/2026-11/17/eu-wirft-temu-mangelnden-einsatz-gegen-illegale-produkte-vor",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T11:34:49+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ABC Color",
-     "link": "https://www.abc.com.py/ciencia/2026/11/17/bruselas-acusa-a-temu-de-no-frenar-la-venta-de-productos-ilegales-en-su-plataforma/",
-     "paese": "PY",
-     "lingua": "es",
-     "data": "2026-11-17T11:35:15+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "TGCOM24",
-     "link": "https://www.tgcom24.mediaset.it/economia/temu-multa-ue_119081579-202602k.shtml",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T11:44:39+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ABC (Spagna)",
-     "link": "https://www.abc.es/economia/bruselas-acusa-temu-tomar-medidas-impedir-venta-20261117124521-nt.html",
-     "paese": "ES",
-     "lingua": "es",
-     "data": "2026-11-17T11:45:22+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "G1",
-     "link": "https://g1.globo.com/tecnologia/noticia/2026/11/17/ue-diz-que-temu-falhou-em-combater-venda-de-produtos-ilegais-apos-investigacao-preliminar.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T11:48:48+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "VG",
-     "link": "https://www.vg.no/nyheter/i/VxbGA1/temu-kan-faa-eu-bot-for-illegale-produkter?utm_medium=rss",
-     "paese": "NO",
-     "lingua": "en",
-     "data": "2026-11-17T12:26:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Sky TG24",
-     "link": "https://tg24.sky.it/mondo/2026/11/17/temu-ue-viola-regole",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T12:55:09+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Telex",
-     "link": "https://telex.hu/gazdasag/2026/11/17/eu-europai-bizottsag-temu-dsa",
-     "paese": "HU",
-     "lingua": "en",
-     "data": "2026-11-17T13:02:56+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Independent",
-     "link": "https://www.independent.co.uk/news/world/europe/temu-illegal-products-fine-eu-b3086401.html",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T13:16:50+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Tagesschau",
-     "link": "https://www.tagesschau.de/wirtschaft/verbraucher/eu-temu-illegale-produkte-100.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T13:24:48+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Today",
-     "link": "https://www.today.it/europa/economia/commissione-ue-temu-regole-prodotti-pericolosi.html",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T13:52:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "RTBF",
-     "link": "https://www.rtbf.be/article/l-ue-epingle-temu-pour-son-laxisme-face-aux-produits-illegaux-11816763",
-     "paese": "BE",
-     "lingua": "fr",
-     "data": "2026-11-17T15:25:49+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Azernews",
-     "link": "https://www.azernews.az/region/267604.html",
-     "paese": "AZ",
-     "lingua": "ru",
-     "data": "2026-11-17T19:25:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 3,
-    "estero": 16,
-    "paesi_esteri": 14,
-    "continenti": {
-     "Europa": 12,
-     "Asia e Medio Oriente": 4,
-     "Americhe": 3
-    }
-   },
-   "punto_cieco": ""
   },
   {
    "id": "bc4780a1d5",
@@ -4958,7 +4670,7 @@
    "categoria": "Altro",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 58,
+   "calore": 55,
    "stato": "confermato",
    "attendibilita": 74,
    "livello": "Confermata",
@@ -5375,7 +5087,7 @@
     "paese": "MX",
     "data": "2026-11-18T07:12:00+00:00"
    },
-   "aggiornata": "2026-11-19T10:54:54+00:00",
+   "aggiornata": "2026-11-19T11:04:06+00:00",
    "fonti": [
     {
      "fonte": "El Universal",
@@ -5393,6 +5105,234 @@
     "paesi_esteri": 1,
     "continenti": {
      "Americhe": 1
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
+   "id": "a97f7085b5",
+   "titolo": "L'UE contesta a Temu la mancanza di controlli sulla vendita di prodotti illegali",
+   "lingua": "it",
+   "categoria": "Cronaca",
+   "curiosita": false,
+   "sezione": "Mondo",
+   "calore": 53,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "Infobae",
+    "data": "2026-11-17T11:18:52+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.infobae.com/america/agencias/2026/11/17/bruselas-acusa-a-temu-de-no-frenar-la-venta-de-productos-ilegales-en-su-plataforma/"
+   },
+   "conferma": {
+    "fonte": "ORF",
+    "data": "2026-11-17T11:22:19+00:00",
+    "dopo_min": 3
+   },
+   "curva": [
+    1,
+    15,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16,
+    16
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AR",
+    "AT",
+    "AZ",
+    "BE",
+    "BR",
+    "DE",
+    "ES",
+    "GB",
+    "HU",
+    "IT",
+    "NO",
+    "PY"
+   ],
+   "lingue": [
+    "de",
+    "en",
+    "es",
+    "fr",
+    "it",
+    "pt",
+    "ru"
+   ],
+   "n_fonti": 16,
+   "prima_segnalazione": {
+    "fonte": "Infobae",
+    "paese": "AR",
+    "data": "2026-11-17T11:18:52+00:00"
+   },
+   "aggiornata": "2026-11-17T19:25:00+00:00",
+   "fonti": [
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/america/agencias/2026/11/17/bruselas-acusa-a-temu-de-no-frenar-la-venta-de-productos-ilegales-en-su-plataforma/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T11:18:52+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ORF",
+     "link": "https://orf.at/stories/3448452/",
+     "paese": "AT",
+     "lingua": "de",
+     "data": "2026-11-17T11:22:19+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Handelsblatt",
+     "link": "https://www.handelsblatt.com/politik/deutschland/verbraucherschutz-eu-wirft-temu-mangelnden-einsatz-gegen-illegale-produkte-vor/100270565.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T11:34:49+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Die Zeit",
+     "link": "https://www.zeit.de/news/2026-11/17/eu-wirft-temu-mangelnden-einsatz-gegen-illegale-produkte-vor",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T11:34:49+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ABC Color",
+     "link": "https://www.abc.com.py/ciencia/2026/11/17/bruselas-acusa-a-temu-de-no-frenar-la-venta-de-productos-ilegales-en-su-plataforma/",
+     "paese": "PY",
+     "lingua": "es",
+     "data": "2026-11-17T11:35:15+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "TGCOM24",
+     "link": "https://www.tgcom24.mediaset.it/economia/temu-multa-ue_119081579-202602k.shtml",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T11:44:39+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ABC (Spagna)",
+     "link": "https://www.abc.es/economia/bruselas-acusa-temu-tomar-medidas-impedir-venta-20261117124521-nt.html",
+     "paese": "ES",
+     "lingua": "es",
+     "data": "2026-11-17T11:45:22+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "G1",
+     "link": "https://g1.globo.com/tecnologia/noticia/2026/11/17/ue-diz-que-temu-falhou-em-combater-venda-de-produtos-ilegais-apos-investigacao-preliminar.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T11:48:48+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "VG",
+     "link": "https://www.vg.no/nyheter/i/VxbGA1/temu-kan-faa-eu-bot-for-illegale-produkter?utm_medium=rss",
+     "paese": "NO",
+     "lingua": "en",
+     "data": "2026-11-17T12:26:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Sky TG24",
+     "link": "https://tg24.sky.it/mondo/2026/11/17/temu-ue-viola-regole",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T12:55:09+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Telex",
+     "link": "https://telex.hu/gazdasag/2026/11/17/eu-europai-bizottsag-temu-dsa",
+     "paese": "HU",
+     "lingua": "en",
+     "data": "2026-11-17T13:02:56+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Independent",
+     "link": "https://www.independent.co.uk/news/world/europe/temu-illegal-products-fine-eu-b3086401.html",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T13:16:50+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Tagesschau",
+     "link": "https://www.tagesschau.de/wirtschaft/verbraucher/eu-temu-illegale-produkte-100.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T13:24:48+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Today",
+     "link": "https://www.today.it/europa/economia/commissione-ue-temu-regole-prodotti-pericolosi.html",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T13:52:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "RTBF",
+     "link": "https://www.rtbf.be/article/l-ue-epingle-temu-pour-son-laxisme-face-aux-produits-illegaux-11816763",
+     "paese": "BE",
+     "lingua": "fr",
+     "data": "2026-11-17T15:25:49+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Azernews",
+     "link": "https://www.azernews.az/region/267604.html",
+     "paese": "AZ",
+     "lingua": "ru",
+     "data": "2026-11-17T19:25:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 3,
+    "estero": 13,
+    "paesi_esteri": 11,
+    "continenti": {
+     "Europa": 12,
+     "Americhe": 3,
+     "Asia e Medio Oriente": 1
     }
    },
    "punto_cieco": ""
@@ -5639,6 +5579,89 @@
    "punto_cieco": "italia"
   },
   {
+   "id": "af77b09102",
+   "titolo": "Tocantins avrà una delegazione alle Paralimpiadi Scolastiche 2026",
+   "lingua": "pt",
+   "categoria": "Altro",
+   "curiosita": false,
+   "sezione": "Sport",
+   "calore": 51,
+   "stato": "confermato",
+   "attendibilita": 60,
+   "livello": "Prime conferme",
+   "prima": {
+    "fonte": "G1",
+    "data": "2026-11-17T11:21:41+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://g1.globo.com/to/tocantins/edicao/2026/11/17/videos-bom-dia-tocantins-de-17-de-novembro-de-2026.ghtml"
+   },
+   "conferma": {
+    "fonte": "Globo Esporte",
+    "data": "2026-11-17T16:30:18+00:00",
+    "dopo_min": 309
+   },
+   "curva": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "BR"
+   ],
+   "lingue": [
+    "pt"
+   ],
+   "n_fonti": 2,
+   "prima_segnalazione": {
+    "fonte": "G1",
+    "paese": "BR",
+    "data": "2026-11-17T11:21:41+00:00"
+   },
+   "aggiornata": "2026-11-19T11:03:05+00:00",
+   "fonti": [
+    {
+     "fonte": "G1",
+     "link": "https://g1.globo.com/to/tocantins/edicao/2026/11/17/videos-bom-dia-tocantins-de-17-de-novembro-de-2026.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T11:21:41+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Globo Esporte",
+     "link": "https://ge.globo.com/ba/playlist/globo-esporte-ba-desta-terca-feira-17-de-novembro-de-2026.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T16:30:18+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 2,
+    "paesi_esteri": 1,
+    "continenti": {
+     "Americhe": 2
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
    "id": "9344b0dae7",
    "titolo": "La California vieta ai robotaxi Waymo di circolare sulle autostrade statali",
    "lingua": "it",
@@ -5665,7 +5688,7 @@
     1,
     3,
     7,
-    8,
+    9,
     9,
     10,
     10,
@@ -5800,134 +5823,6 @@
    "punto_cieco": ""
   },
   {
-   "id": "c6ca5da13f",
-   "titolo": "NATO e OpenAI avviano una collaborazione sulla cybersicurezza",
-   "lingua": "it",
-   "categoria": "Tecnologia e crypto",
-   "curiosita": false,
-   "sezione": "Tecnologia",
-   "calore": 50,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "Aftenposten",
-    "data": "2026-11-17T17:59:17+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.aftenposten.no/okonomi/i/2vGq24/nato-samarbeider-med-openai-om-datasikkerhet?utm_medium=rss"
-   },
-   "conferma": {
-    "fonte": "CNA",
-    "data": "2026-11-17T18:18:22+00:00",
-    "dopo_min": 19
-   },
-   "curva": [
-    1,
-    4,
-    5,
-    5,
-    5,
-    5,
-    6,
-    6,
-    6,
-    6,
-    6,
-    6
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "CA",
-    "DE",
-    "IT",
-    "NO",
-    "SG"
-   ],
-   "lingue": [
-    "de",
-    "en",
-    "fr",
-    "it"
-   ],
-   "n_fonti": 6,
-   "prima_segnalazione": {
-    "fonte": "Aftenposten",
-    "paese": "NO",
-    "data": "2026-11-17T17:59:17+00:00"
-   },
-   "aggiornata": "2026-11-18T15:02:51+00:00",
-   "fonti": [
-    {
-     "fonte": "Aftenposten",
-     "link": "https://www.aftenposten.no/okonomi/i/2vGq24/nato-samarbeider-med-openai-om-datasikkerhet?utm_medium=rss",
-     "paese": "NO",
-     "lingua": "en",
-     "data": "2026-11-17T17:59:17+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "CNA",
-     "link": "https://www.channelnewsasia.com/business/microsoft-unveils-ai-models-coding-cybersecurity-it-takes-anthropic-openai-6560116",
-     "paese": "SG",
-     "lingua": "en",
-     "data": "2026-11-17T18:18:22+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Straits Times",
-     "link": "https://www.straitstimes.com/world/europe/defence-alliance-nato-partners-with-openai-on-cybersecurity",
-     "paese": "SG",
-     "lingua": "en",
-     "data": "2026-11-17T18:50:24+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Die Zeit",
-     "link": "https://www.zeit.de/politik/ausland/2026-11/openai-nato-abkommen-kuenstliche-intelligenz-cyberangriffe-daybreak",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T19:14:30+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Le Devoir",
-     "link": "https://www.ledevoir.com/monde/1025792/openai-travaillera-otan-cybersecurite",
-     "paese": "CA",
-     "lingua": "fr",
-     "data": "2026-11-17T21:54:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Sky TG24",
-     "link": "https://tg24.sky.it/tecnologia/2026/11/18/nato-openai-accordo-cybersecurity-programma-daybreak",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-18T15:02:51+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 1,
-    "estero": 5,
-    "paesi_esteri": 4,
-    "continenti": {
-     "Europa": 3,
-     "Asia e Medio Oriente": 2,
-     "Americhe": 1
-    }
-   },
-   "punto_cieco": ""
-  },
-  {
    "id": "d58dc8a18d",
    "titolo": "Petco pubblica un codice promozionale per novembre 2026",
    "lingua": "es",
@@ -5993,151 +5888,6 @@
     "paesi_esteri": 1,
     "continenti": {
      "Americhe": 1
-    }
-   },
-   "punto_cieco": ""
-  },
-  {
-   "id": "3a495b696b",
-   "titolo": "Il Governo stanzia altri cinque milioni per l'impatto sanitario della migrazione a El Hierro",
-   "lingua": "it",
-   "categoria": "Politica",
-   "curiosita": false,
-   "sezione": "Politica",
-   "calore": 49,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "Semana",
-    "data": "2026-11-17T11:49:56+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.semana.com/mundo/articulo/el-gobierno-de-pedro-sanchez-aprueba-el-aumento-del-salario-minimo-a-unos-dias-de-las-elecciones/202656/"
-   },
-   "conferma": {
-    "fonte": "El País",
-    "data": "2026-11-17T11:50:39+00:00",
-    "dopo_min": 1
-   },
-   "curva": [
-    1,
-    4,
-    7,
-    8,
-    8,
-    8,
-    8,
-    8,
-    8,
-    8,
-    8,
-    8
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AR",
-    "BR",
-    "CO",
-    "ES",
-    "IT"
-   ],
-   "lingue": [
-    "en",
-    "es",
-    "it",
-    "pt"
-   ],
-   "n_fonti": 8,
-   "prima_segnalazione": {
-    "fonte": "Semana",
-    "paese": "CO",
-    "data": "2026-11-17T11:49:56+00:00"
-   },
-   "aggiornata": "2026-11-18T11:19:21+00:00",
-   "fonti": [
-    {
-     "fonte": "Semana",
-     "link": "https://www.semana.com/mundo/articulo/el-gobierno-de-pedro-sanchez-aprueba-el-aumento-del-salario-minimo-a-unos-dias-de-las-elecciones/202656/",
-     "paese": "CO",
-     "lingua": "es",
-     "data": "2026-11-17T11:49:56+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "El País",
-     "link": "https://elpais.com/economia/2026-11-17/el-gobierno-aprueba-subir-el-salario-minimo-un-53-y-el-sueldo-de-los-funcionarios-un-45.html",
-     "paese": "ES",
-     "lingua": "es",
-     "data": "2026-11-17T11:50:39+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/espana/agencias/2026/11/17/el-gobierno-aprueba-la-subida-del-53-del-salario-minimo-hasta-los-1286-euros-al-mes/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T12:05:03+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "La Vanguardia",
-     "link": "https://www.lavanguardia.com/economia/20261117/11686401/sueldo-funcionarios-subira-5-2027.html",
-     "paese": "ES",
-     "lingua": "en",
-     "data": "2026-11-17T12:20:43+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ABC (Spagna)",
-     "link": "https://www.abc.es/economia/sueldo-funcionarios-subira-2027-20261117172419-nt.html",
-     "paese": "ES",
-     "lingua": "es",
-     "data": "2026-11-17T16:30:28+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Adnkronos",
-     "link": "https://www.adnkronos.com/internazionale/esteri/salario-minimo-spagna-2027_5FhshkBggk5naPoxsN4Uii",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T17:11:51+00:00",
-     "tipo": "agenzia",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Today",
-     "link": "https://www.today.it/europa/economia/aumento-salario-minimo-spagna.html",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T18:01:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "G1",
-     "link": "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/11/17/governo-propoe-pagar-um-salario-minimo-para-mulheres-vitimas-de-violencia-fazerem-faculdade-em-ms-entenda.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T21:50:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 2,
-    "estero": 6,
-    "paesi_esteri": 4,
-    "continenti": {
-     "Europa": 5,
-     "Americhe": 3
     }
    },
    "punto_cieco": ""
@@ -6278,84 +6028,274 @@
    "punto_cieco": ""
   },
   {
-   "id": "af77b09102",
-   "titolo": "Tocantins avrà una delegazione alle Paralimpiadi Scolastiche 2026",
-   "lingua": "pt",
-   "categoria": "Altro",
+   "id": "c6ca5da13f",
+   "titolo": "NATO e OpenAI avviano una collaborazione sulla cybersicurezza",
+   "lingua": "it",
+   "categoria": "Tecnologia e crypto",
    "curiosita": false,
-   "sezione": "Sport",
+   "sezione": "Tecnologia",
    "calore": 49,
    "stato": "confermato",
-   "attendibilita": 60,
-   "livello": "Prime conferme",
+   "attendibilita": 99,
+   "livello": "Certa",
    "prima": {
-    "fonte": "G1",
-    "data": "2026-11-17T11:21:41+00:00",
+    "fonte": "Aftenposten",
+    "data": "2026-11-17T17:59:17+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://g1.globo.com/to/tocantins/edicao/2026/11/17/videos-bom-dia-tocantins-de-17-de-novembro-de-2026.ghtml"
+    "link": "https://www.aftenposten.no/okonomi/i/2vGq24/nato-samarbeider-med-openai-om-datasikkerhet?utm_medium=rss"
    },
    "conferma": {
-    "fonte": "Globo Esporte",
-    "data": "2026-11-17T16:30:18+00:00",
-    "dopo_min": 309
+    "fonte": "CNA",
+    "data": "2026-11-17T18:18:22+00:00",
+    "dopo_min": 19
    },
    "curva": [
     1,
-    1,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2
+    4,
+    5,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6
    ],
    "crescita": 0,
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
-    "BR"
+    "CA",
+    "DE",
+    "IT",
+    "NO",
+    "SG"
    ],
    "lingue": [
-    "pt"
+    "de",
+    "en",
+    "fr",
+    "it"
    ],
-   "n_fonti": 2,
+   "n_fonti": 6,
    "prima_segnalazione": {
-    "fonte": "G1",
-    "paese": "BR",
-    "data": "2026-11-17T11:21:41+00:00"
+    "fonte": "Aftenposten",
+    "paese": "NO",
+    "data": "2026-11-17T17:59:17+00:00"
    },
-   "aggiornata": "2026-11-19T10:52:21+00:00",
+   "aggiornata": "2026-11-18T15:02:51+00:00",
    "fonti": [
     {
-     "fonte": "G1",
-     "link": "https://g1.globo.com/to/tocantins/edicao/2026/11/17/videos-bom-dia-tocantins-de-17-de-novembro-de-2026.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T11:21:41+00:00",
+     "fonte": "Aftenposten",
+     "link": "https://www.aftenposten.no/okonomi/i/2vGq24/nato-samarbeider-med-openai-om-datasikkerhet?utm_medium=rss",
+     "paese": "NO",
+     "lingua": "en",
+     "data": "2026-11-17T17:59:17+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Globo Esporte",
-     "link": "https://ge.globo.com/ba/playlist/globo-esporte-ba-desta-terca-feira-17-de-novembro-de-2026.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T16:30:18+00:00",
+     "fonte": "CNA",
+     "link": "https://www.channelnewsasia.com/business/microsoft-unveils-ai-models-coding-cybersecurity-it-takes-anthropic-openai-6560116",
+     "paese": "SG",
+     "lingua": "en",
+     "data": "2026-11-17T18:18:22+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Straits Times",
+     "link": "https://www.straitstimes.com/world/europe/defence-alliance-nato-partners-with-openai-on-cybersecurity",
+     "paese": "SG",
+     "lingua": "en",
+     "data": "2026-11-17T18:50:24+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Die Zeit",
+     "link": "https://www.zeit.de/politik/ausland/2026-11/openai-nato-abkommen-kuenstliche-intelligenz-cyberangriffe-daybreak",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-17T19:14:30+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Le Devoir",
+     "link": "https://www.ledevoir.com/monde/1025792/openai-travaillera-otan-cybersecurite",
+     "paese": "CA",
+     "lingua": "fr",
+     "data": "2026-11-17T21:54:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Sky TG24",
+     "link": "https://tg24.sky.it/tecnologia/2026/11/18/nato-openai-accordo-cybersecurity-programma-daybreak",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-18T15:02:51+00:00",
      "tipo": "giornale",
      "origine": "rss"
     }
    ],
    "copertura": {
-    "italia": 0,
-    "estero": 2,
-    "paesi_esteri": 1,
+    "italia": 1,
+    "estero": 5,
+    "paesi_esteri": 4,
     "continenti": {
-     "Americhe": 2
+     "Europa": 3,
+     "Asia e Medio Oriente": 2,
+     "Americhe": 1
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
+   "id": "3a495b696b",
+   "titolo": "Il Governo stanzia altri cinque milioni per l'impatto sanitario della migrazione a El Hierro",
+   "lingua": "it",
+   "categoria": "Politica",
+   "curiosita": false,
+   "sezione": "Politica",
+   "calore": 48,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "Semana",
+    "data": "2026-11-17T11:49:56+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.semana.com/mundo/articulo/el-gobierno-de-pedro-sanchez-aprueba-el-aumento-del-salario-minimo-a-unos-dias-de-las-elecciones/202656/"
+   },
+   "conferma": {
+    "fonte": "El País",
+    "data": "2026-11-17T11:50:39+00:00",
+    "dopo_min": 1
+   },
+   "curva": [
+    1,
+    4,
+    7,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AR",
+    "BR",
+    "CO",
+    "ES",
+    "IT"
+   ],
+   "lingue": [
+    "en",
+    "es",
+    "it",
+    "pt"
+   ],
+   "n_fonti": 8,
+   "prima_segnalazione": {
+    "fonte": "Semana",
+    "paese": "CO",
+    "data": "2026-11-17T11:49:56+00:00"
+   },
+   "aggiornata": "2026-11-18T11:19:21+00:00",
+   "fonti": [
+    {
+     "fonte": "Semana",
+     "link": "https://www.semana.com/mundo/articulo/el-gobierno-de-pedro-sanchez-aprueba-el-aumento-del-salario-minimo-a-unos-dias-de-las-elecciones/202656/",
+     "paese": "CO",
+     "lingua": "es",
+     "data": "2026-11-17T11:49:56+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "El País",
+     "link": "https://elpais.com/economia/2026-11-17/el-gobierno-aprueba-subir-el-salario-minimo-un-53-y-el-sueldo-de-los-funcionarios-un-45.html",
+     "paese": "ES",
+     "lingua": "es",
+     "data": "2026-11-17T11:50:39+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/espana/agencias/2026/11/17/el-gobierno-aprueba-la-subida-del-53-del-salario-minimo-hasta-los-1286-euros-al-mes/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T12:05:03+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "La Vanguardia",
+     "link": "https://www.lavanguardia.com/economia/20261117/11686401/sueldo-funcionarios-subira-5-2027.html",
+     "paese": "ES",
+     "lingua": "en",
+     "data": "2026-11-17T12:20:43+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ABC (Spagna)",
+     "link": "https://www.abc.es/economia/sueldo-funcionarios-subira-2027-20261117172419-nt.html",
+     "paese": "ES",
+     "lingua": "es",
+     "data": "2026-11-17T16:30:28+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Adnkronos",
+     "link": "https://www.adnkronos.com/internazionale/esteri/salario-minimo-spagna-2027_5FhshkBggk5naPoxsN4Uii",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T17:11:51+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Today",
+     "link": "https://www.today.it/europa/economia/aumento-salario-minimo-spagna.html",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T18:01:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "G1",
+     "link": "https://g1.globo.com/ms/mato-grosso-do-sul/noticia/2026/11/17/governo-propoe-pagar-um-salario-minimo-para-mulheres-vitimas-de-violencia-fazerem-faculdade-em-ms-entenda.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T21:50:38+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 2,
+    "estero": 6,
+    "paesi_esteri": 4,
+    "continenti": {
+     "Europa": 5,
+     "Americhe": 3
     }
    },
    "punto_cieco": ""
@@ -6372,16 +6312,16 @@
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "BFMTV",
-    "data": "2026-11-17T11:07:33+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.bfmtv.com/politique/video-reforme-des-retraites-le-rn-propose-de-transformer-certaines-cotisations-patronales-deja-payees-pour-financer-son-pilier-de-capitalisation_VN-202611170489.html"
-   },
-   "conferma": {
     "fonte": "Libération",
     "data": "2026-11-17T11:21:56+00:00",
-    "dopo_min": 14
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.liberation.fr/politique/elections/marine-le-pen-presente-son-projet-de-reforme-des-retraites-20261117_4PGOZBOHAJGRTN5SP3MQA6OCYE/"
+   },
+   "conferma": {
+    "fonte": "BFMTV",
+    "data": "2026-11-17T11:30:01+00:00",
+    "dopo_min": 8
    },
    "curva": [
     1,
@@ -6414,27 +6354,27 @@
    ],
    "n_fonti": 11,
    "prima_segnalazione": {
-    "fonte": "BFMTV",
+    "fonte": "Libération",
     "paese": "FR",
-    "data": "2026-11-17T11:07:33+00:00"
+    "data": "2026-11-17T11:21:56+00:00"
    },
    "aggiornata": "2026-11-18T08:35:18+00:00",
    "fonti": [
-    {
-     "fonte": "BFMTV",
-     "link": "https://www.bfmtv.com/politique/video-reforme-des-retraites-le-rn-propose-de-transformer-certaines-cotisations-patronales-deja-payees-pour-financer-son-pilier-de-capitalisation_VN-202611170489.html",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T11:07:33+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "Libération",
      "link": "https://www.liberation.fr/politique/elections/marine-le-pen-presente-son-projet-de-reforme-des-retraites-20261117_4PGOZBOHAJGRTN5SP3MQA6OCYE/",
      "paese": "FR",
      "lingua": "fr",
      "data": "2026-11-17T11:21:56+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "BFMTV",
+     "link": "https://www.bfmtv.com/politique/video-le-rassemblement-national-presente-sa-reforme-des-retraites-en-cas-d-accession-a-l-elysee_VN-202611170517.html",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T11:30:01+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -6556,7 +6496,7 @@
    },
    "curva": [
     1,
-    8,
+    9,
     11,
     12,
     12,
@@ -6723,7 +6663,7 @@
    "categoria": "Cronaca",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 46,
+   "calore": 45,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -6873,7 +6813,7 @@
    "categoria": "Tecnologia e crypto",
    "curiosita": false,
    "sezione": "Sport",
-   "calore": 46,
+   "calore": 45,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -7007,129 +6947,6 @@
      "Europa": 5,
      "Americhe": 2,
      "Asia e Medio Oriente": 1
-    }
-   },
-   "punto_cieco": "italia"
-  },
-  {
-   "id": "a9a6e7185e",
-   "titolo": "Circola la notizia di un blackout mondiale di 72 ore previsto per il 17 novembre",
-   "lingua": "en",
-   "categoria": "Altro",
-   "curiosita": true,
-   "sezione": "Curiosità",
-   "calore": 45,
-   "stato": "confermato",
-   "attendibilita": 89,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "El Tiempo",
-    "data": "2026-11-17T11:09:51+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.eltiempo.com/mundo/que-se-sabe-de-un-supuesto-apagon-mundial-este-17-de-noviembre-ojo-con-los-rumores-en-redes-3601542"
-   },
-   "conferma": {
-    "fonte": "Clarín",
-    "data": "2026-11-17T13:01:28+00:00",
-    "dopo_min": 112
-   },
-   "curva": [
-    1,
-    2,
-    5,
-    5,
-    5,
-    5,
-    5,
-    5,
-    6,
-    6,
-    6,
-    6
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AR",
-    "CO",
-    "EC",
-    "US"
-   ],
-   "lingue": [
-    "en",
-    "es"
-   ],
-   "n_fonti": 6,
-   "prima_segnalazione": {
-    "fonte": "El Tiempo",
-    "paese": "CO",
-    "data": "2026-11-17T11:09:51+00:00"
-   },
-   "aggiornata": "2026-11-18T19:52:00+00:00",
-   "fonti": [
-    {
-     "fonte": "El Tiempo",
-     "link": "https://www.eltiempo.com/mundo/que-se-sabe-de-un-supuesto-apagon-mundial-este-17-de-noviembre-ojo-con-los-rumores-en-redes-3601542",
-     "paese": "CO",
-     "lingua": "en",
-     "data": "2026-11-17T11:09:51+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Clarín",
-     "link": "https://www.clarin.com/informacion-general/apagon-mundial-hoy-17-noviembre-verdad-detras-rumor-volvio-viral_0_ITtle9ljxS.html",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T13:01:28+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "El Comercio (Ecuador)",
-     "link": "https://www.elcomercio.com/actualidad/mundo/que-se-sabe-del-supuesto-apagon-mundial-este-martes-17-de-noviembre/",
-     "paese": "EC",
-     "lingua": "es",
-     "data": "2026-11-17T17:33:24+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "PBS NewsHour",
-     "link": "https://www.pbs.org/newshour/nation/debunking-social-media-posts-that-claim-a-90-day-blackout-will-start-nov-17",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T18:17:07+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/estados-unidos/2026/11/17/los-simpson-y-el-17-de-noviembre-el-episodio-que-predijo-un-apagon-mundial-que-segun-las-redes-ocurre-hoy/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T19:26:36+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "La Nación",
-     "link": "https://www.lanacion.com.ar/el-mundo/que-es-el-apagon-mundial-del-17-de-noviembre-la-teoria-conspirativa-que-disparo-el-blackout-17-nid17112026/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-18T19:52:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 6,
-    "paesi_esteri": 4,
-    "continenti": {
-     "Americhe": 6
     }
    },
    "punto_cieco": "italia"
@@ -15342,6 +15159,130 @@
      "Europa": 4,
      "Americhe": 2,
      "Asia e Medio Oriente": 1
+    }
+   },
+   "punto_cieco": "italia",
+   "archivio": true
+  },
+  {
+   "id": "a9a6e7185e",
+   "titolo": "Circola la notizia di un blackout mondiale di 72 ore previsto per il 17 novembre",
+   "lingua": "en",
+   "categoria": "Altro",
+   "curiosita": true,
+   "sezione": "Curiosità",
+   "calore": 20,
+   "stato": "confermato",
+   "attendibilita": 89,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "El Tiempo",
+    "data": "2026-11-17T11:09:51+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.eltiempo.com/mundo/que-se-sabe-de-un-supuesto-apagon-mundial-este-17-de-noviembre-ojo-con-los-rumores-en-redes-3601542"
+   },
+   "conferma": {
+    "fonte": "Clarín",
+    "data": "2026-11-17T13:01:28+00:00",
+    "dopo_min": 112
+   },
+   "curva": [
+    1,
+    2,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    6
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "AR",
+    "CO",
+    "EC",
+    "US"
+   ],
+   "lingue": [
+    "en",
+    "es"
+   ],
+   "n_fonti": 6,
+   "prima_segnalazione": {
+    "fonte": "El Tiempo",
+    "paese": "CO",
+    "data": "2026-11-17T11:09:51+00:00"
+   },
+   "aggiornata": "2026-11-18T19:52:00+00:00",
+   "fonti": [
+    {
+     "fonte": "El Tiempo",
+     "link": "https://www.eltiempo.com/mundo/que-se-sabe-de-un-supuesto-apagon-mundial-este-17-de-noviembre-ojo-con-los-rumores-en-redes-3601542",
+     "paese": "CO",
+     "lingua": "en",
+     "data": "2026-11-17T11:09:51+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Clarín",
+     "link": "https://www.clarin.com/informacion-general/apagon-mundial-hoy-17-noviembre-verdad-detras-rumor-volvio-viral_0_ITtle9ljxS.html",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T13:01:28+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "El Comercio (Ecuador)",
+     "link": "https://www.elcomercio.com/actualidad/mundo/que-se-sabe-del-supuesto-apagon-mundial-este-martes-17-de-noviembre/",
+     "paese": "EC",
+     "lingua": "es",
+     "data": "2026-11-17T17:33:24+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "PBS NewsHour",
+     "link": "https://www.pbs.org/newshour/nation/debunking-social-media-posts-that-claim-a-90-day-blackout-will-start-nov-17",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T18:17:07+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/estados-unidos/2026/11/17/los-simpson-y-el-17-de-noviembre-el-episodio-que-predijo-un-apagon-mundial-que-segun-las-redes-ocurre-hoy/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T19:26:36+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "La Nación",
+     "link": "https://www.lanacion.com.ar/el-mundo/que-es-el-apagon-mundial-del-17-de-noviembre-la-teoria-conspirativa-que-disparo-el-blackout-17-nid17112026/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-18T19:52:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 6,
+    "paesi_esteri": 4,
+    "continenti": {
+     "Americhe": 6
     }
    },
    "punto_cieco": "italia",
@@ -183573,7 +183514,7 @@
   }
  ],
  "dati": {
-  "articoli_analizzati": 43066,
+  "articoli_analizzati": 43122,
   "storie": 400,
   "paesi_coperti": 94,
   "fonti_diverse": 260,
@@ -183581,57 +183522,57 @@
    [
     "AR",
     "Argentina",
-    5832
+    5837
    ],
    [
     "BR",
     "Brasile",
-    3746
+    3759
    ],
    [
     "DE",
     "Germania",
-    3607
+    3635
    ],
    [
     "FR",
     "Francia",
-    2908
+    2912
    ],
    [
     "IT",
     "Italia",
-    2871
+    2869
    ],
    [
     "US",
     "Stati Uniti",
-    2588
+    2591
    ],
    [
     "GB",
     "Regno Unito",
-    1628
+    1624
    ],
    [
     "ES",
     "Spagna",
-    1537
+    1535
    ],
    [
     "PY",
     "Paraguay",
-    1299
+    1304
    ],
    [
     "IN",
     "India",
-    1021
+    1027
    ],
    [
     "NG",
     "Nigeria",
-    956
+    951
    ],
    [
     "AU",
@@ -183641,37 +183582,37 @@
    [
     "PH",
     "Filippine",
-    718
+    720
    ],
    [
     "MX",
     "Messico",
-    684
+    681
    ],
    [
     "CO",
     "Colombia",
-    655
+    657
    ],
    [
     "BE",
     "Belgio",
-    493
-   ],
-   [
-    "SG",
-    "Singapore",
-    436
+    496
    ],
    [
     "EC",
     "Ecuador",
-    436
+    437
+   ],
+   [
+    "SG",
+    "Singapore",
+    430
    ],
    [
     "RS",
     "Serbia",
-    403
+    399
    ],
    [
     "RU",
@@ -183679,51 +183620,51 @@
     393
    ],
    [
+    "CA",
+    "Canada",
+    389
+   ],
+   [
     "GH",
     "Ghana",
-    389
+    388
    ],
    [
     "NZ",
     "Nuova Zelanda",
-    385
-   ],
-   [
-    "CA",
-    "Canada",
-    385
+    386
    ],
    [
     "PT",
     "Portogallo",
-    383
+    384
    ],
    [
     "JP",
     "Giappone",
-    375
+    374
    ]
   ],
   "per_lingua": [
    [
     "en",
-    16711
+    16693
    ],
    [
     "es",
-    10347
+    10361
    ],
    [
     "pt",
-    4129
+    4143
    ],
    [
     "de",
-    3894
+    3925
    ],
    [
     "fr",
-    3151
+    3159
    ],
    [
     "it",
@@ -183731,23 +183672,23 @@
    ],
    [
     "nl",
-    414
+    416
    ],
    [
     "pl",
-    337
+    338
    ],
    [
     "sv",
-    221
-   ],
-   [
-    "ja",
-    204
+    224
    ],
    [
     "da",
-    201
+    204
+   ],
+   [
+    "ja",
+    202
    ],
    [
     "el",
@@ -183757,7 +183698,7 @@
   "per_categoria": [
    [
     "Altro",
-    136
+    140
    ],
    [
     "Politica",
@@ -183765,15 +183706,15 @@
    ],
    [
     "Esteri e conflitti",
-    70
+    67
    ],
    [
     "Cronaca",
-    37
+    35
    ],
    [
     "Tecnologia e crypto",
-    29
+    30
    ],
    [
     "Sport",
@@ -183781,11 +183722,11 @@
    ],
    [
     "Economia",
-    14
+    15
    ],
    [
     "Società",
-    8
+    7
    ],
    [
     "Clima e ambiente",
@@ -183795,27 +183736,27 @@
   "fonti_top": [
    [
     "Infobae",
-    4495
+    4503
    ],
    [
     "G1",
-    1772
+    1774
    ],
    [
     "ABC Color",
-    1299
+    1304
    ],
    [
     "New York Post",
-    806
+    803
    ],
    [
     "Die Zeit",
-    787
+    786
    ],
    [
     "O Globo",
-    744
+    742
    ],
    [
     "BFMTV",
@@ -183823,121 +183764,121 @@
    ],
    [
     "La Nación",
-    689
+    686
    ],
    [
     "El Universal",
-    684
+    681
    ],
    [
     "Semana",
-    583
+    586
    ],
    [
     "Globo Esporte",
-    564
+    573
    ],
    [
     "Der Tagesspiegel",
-    559
+    561
    ]
   ],
   "per_ora": [
    [
     23,
-    1226
+    1162
    ],
    [
     22,
-    1123
+    1143
    ],
    [
     21,
-    1196
+    1201
    ],
    [
     20,
-    1237
+    1235
    ],
    [
     19,
-    1173
+    1202
    ],
    [
     18,
-    1284
+    1235
    ],
    [
     17,
-    1090
+    1074
    ],
    [
     16,
-    1064
+    1061
    ],
    [
     15,
-    927
+    919
    ],
    [
     14,
-    803
+    814
    ],
    [
     13,
-    797
+    759
    ],
    [
     12,
-    746
+    736
    ],
    [
     11,
-    700
+    642
    ],
    [
     10,
-    551
+    550
    ],
    [
     9,
-    486
+    467
    ],
    [
     8,
-    518
+    563
    ],
    [
     7,
-    560
+    571
    ],
    [
     6,
-    713
+    719
    ],
    [
     5,
-    706
+    731
    ],
    [
     4,
-    821
+    779
    ],
    [
     3,
-    763
+    780
    ],
    [
     2,
-    907
+    966
    ],
    [
     1,
-    970
+    1012
    ],
    [
     0,
-    1095
+    1170
    ]
   ],
   "approvate_non_sul_sito": {
@@ -183953,17 +183894,14 @@
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
   "The East African: 404 Client Error: Not Found for url: https://www.theeastafrican.co.ke/rss.xml",
-  "Iceland Review: 520 Server Error: <none> for url: https://www.icelandreview.com/feed/",
-  "Telex: 403 Client Error: Forbidden for url: https://telex.hu/rss",
   "The Slovenia Times: 403 Client Error: Forbidden for url: https://sloveniatimes.com/feed",
-  "The Korea Times: 403 Client Error: Forbidden for url: https://www.koreatimes.co.kr/www/rss/nation.xml",
   "Malay Mail: 404 Client Error: Not Found for url: https://www.malaymail.com/feed/rss/malaysia",
   "Khmer Times: 403 Client Error: Forbidden for url: https://www.khmertimeskh.com/feed/",
   "The Herald: 403 Client Error: Forbidden for url: https://www.heraldonline.co.zw/feed/",
+  "Newsweek: 404 Client Error: Not Found for url: https://www.newsweek.com/rss",
   "La Prensa (Panama): 403 Client Error: Forbidden for url: https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
-  "Commissione europea: HTTPSConnectionPool(host='ec.europa.eu', port=443): Read timed out. (read timeout=20)",
-  "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT syria: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:syria&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
+  "GDELT moldova: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:moldova&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT albania: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:albania&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT bosniaandherzegovina: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:bosniaandherzegovina&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
