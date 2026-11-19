@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-19T14:17:40.391546+00:00",
+ "aggiornato": "2026-11-19T14:35:30.697136+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -147,30 +147,30 @@
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "La Nación (Costa Rica)",
-    "data": "2026-11-17T14:37:30+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.nacion.com/el-mundo/estados-unidos-investiga-a-esta-empresa-por-el/K747QRJJIVAW7INVRR5IT5NFSY/story/"
-   },
-   "conferma": {
     "fonte": "Il Sole 24 Ore",
     "data": "2026-11-17T14:46:00+00:00",
-    "dopo_min": 8
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.ilsole24ore.com/art/nvidia-stasera-conti-attesi-ricavi-boom-91percento-ma-occhi-saranno-kress-AJaC0aJC"
+   },
+   "conferma": {
+    "fonte": "Deutsche Welle",
+    "data": "2026-11-17T14:53:00+00:00",
+    "dopo_min": 7
    },
    "curva": [
     1,
-    59,
+    60,
     80,
-    85,
-    86,
-    86,
-    86,
-    86,
-    86,
-    86,
-    86,
-    86
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83,
+    83
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -184,7 +184,6 @@
     "CA",
     "CH",
     "CO",
-    "CR",
     "DE",
     "DK",
     "EC",
@@ -193,7 +192,6 @@
     "FR",
     "GB",
     "GH",
-    "GT",
     "HK",
     "HU",
     "IN",
@@ -213,6 +211,7 @@
     "RU",
     "SA",
     "SG",
+    "TW",
     "US"
    ],
    "lingue": [
@@ -228,23 +227,14 @@
     "ja",
     "nl"
    ],
-   "n_fonti": 86,
+   "n_fonti": 83,
    "prima_segnalazione": {
-    "fonte": "La Nación (Costa Rica)",
-    "paese": "CR",
-    "data": "2026-11-17T14:37:30+00:00"
+    "fonte": "Il Sole 24 Ore",
+    "paese": "IT",
+    "data": "2026-11-17T14:46:00+00:00"
    },
    "aggiornata": "2026-11-18T17:28:58+00:00",
    "fonti": [
-    {
-     "fonte": "La Nación (Costa Rica)",
-     "link": "https://www.nacion.com/el-mundo/estados-unidos-investiga-a-esta-empresa-por-el/K747QRJJIVAW7INVRR5IT5NFSY/story/",
-     "paese": "CR",
-     "lingua": "es",
-     "data": "2026-11-17T14:37:30+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "Il Sole 24 Ore",
      "link": "https://www.ilsole24ore.com/art/nvidia-stasera-conti-attesi-ricavi-boom-91percento-ma-occhi-saranno-kress-AJaC0aJC",
@@ -255,20 +245,20 @@
      "origine": "rss"
     },
     {
-     "fonte": "FAZ",
-     "link": "https://www.faz.net/aktuell/wirtschaft/unternehmen/jensen-huang-elon-musk-und-andere-tech-promis-fordern-nvidia-rueckkehr-201687756.html",
+     "fonte": "Deutsche Welle",
+     "link": "https://www.dw.com/en/nvidia-forms-national-security-committee-after-huang-affair/a-79970447?maca=en-rss-en-all-1573-rdf",
      "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T14:50:21+00:00",
+     "lingua": "en",
+     "data": "2026-11-17T14:53:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Der Spiegel",
-     "link": "https://www.spiegel.de/wirtschaft/unternehmen/nvidia-warum-die-tech-bosse-jensen-huangs-rueckkehr-fordern-a-7c966f6a-6430-47e6-b5f4-edb6202a2617#ref=rss",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T15:03:00+00:00",
+     "fonte": "South China Morning Post",
+     "link": "https://www.scmp.com/tech/tech-war/article/3374770/china-question-nvidia-crisis-and-new-us-chip-curbs-split-washington-and-silicon-valley",
+     "paese": "HK",
+     "lingua": "en",
+     "data": "2026-11-17T15:00:09+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -287,6 +277,15 @@
      "paese": "FR",
      "lingua": "fr",
      "data": "2026-11-17T15:38:04+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "New York Post",
+     "link": "https://nypost.com/2026/11/17/business/disgraced-ex-nvidia-ceo-jensen-huang-to-testify-before-congress-next-month/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T15:40:18+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -381,6 +380,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "NZZ",
+     "link": "https://www.nzz.ch/technologie/folgen-aus-der-affaere-huang-die-usa-schraenken-den-handel-mit-computerchips-von-nvidia-weiter-ein-ld.10062950",
+     "paese": "CH",
+     "lingua": "de",
+     "data": "2026-11-17T16:16:36+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "El Universal",
      "link": "https://www.eluniversal.com.mx/mundo/jensen-huang-exdirector-de-nvidia-comparecera-en-diciembre-ante-el-congreso-de-eu-empresa-crea-comite-supervisor-tras-escandalo/",
      "paese": "MX",
@@ -395,15 +403,6 @@
      "paese": "DE",
      "lingua": "de",
      "data": "2026-11-17T16:17:57+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "New York Post",
-     "link": "https://nypost.com/2026/11/17/business/jensen-huang-says-hed-return-as-nvidia-ceo-if-board-asks-following-sex-scandal/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T16:20:47+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -508,14 +507,14 @@
     }
    ],
    "copertura": {
-    "italia": 9,
-    "estero": 77,
-    "paesi_esteri": 37,
+    "italia": 8,
+    "estero": 75,
+    "paesi_esteri": 36,
     "continenti": {
-     "Europa": 42,
-     "Americhe": 25,
-     "Asia e Medio Oriente": 12,
-     "Oceania": 6,
+     "Europa": 41,
+     "Americhe": 23,
+     "Asia e Medio Oriente": 13,
+     "Oceania": 5,
      "Africa": 1
     }
    },
@@ -533,30 +532,30 @@
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "Der Spiegel",
-    "data": "2026-11-17T14:28:00+00:00",
+    "fonte": "New York Post",
+    "data": "2026-11-17T14:45:00+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://www.spiegel.de/kultur/kino/james-bond-stimmen-sie-ab-welches-bondgirl-soll-neben-robert-pattinson-auftreten-a-1ef27a0a-4ac5-4660-a3cd-ed9c1b375d62#ref=rss"
+    "link": "https://pagesix.com/2026/11/17/hollywood/new-james-bond-robert-pattinson-shaded-by-a-list-harry-potter-star-in-live-interview/"
    },
    "conferma": {
-    "fonte": "Infobae",
-    "data": "2026-11-17T14:29:13+00:00",
-    "dopo_min": 1
+    "fonte": "O Globo",
+    "data": "2026-11-17T14:55:30+00:00",
+    "dopo_min": 10
    },
    "curva": [
     1,
-    22,
+    20,
     31,
-    32,
-    34,
+    31,
+    33,
+    35,
     36,
-    37,
-    37,
-    37,
-    37,
-    37,
-    37
+    36,
+    36,
+    36,
+    36,
+    36
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -593,50 +592,14 @@
     "pl",
     "pt"
    ],
-   "n_fonti": 37,
+   "n_fonti": 36,
    "prima_segnalazione": {
-    "fonte": "Der Spiegel",
-    "paese": "DE",
-    "data": "2026-11-17T14:28:00+00:00"
+    "fonte": "New York Post",
+    "paese": "US",
+    "data": "2026-11-17T14:45:00+00:00"
    },
    "aggiornata": "2026-11-18T20:17:49+00:00",
    "fonti": [
-    {
-     "fonte": "Der Spiegel",
-     "link": "https://www.spiegel.de/kultur/kino/james-bond-stimmen-sie-ab-welches-bondgirl-soll-neben-robert-pattinson-auftreten-a-1ef27a0a-4ac5-4660-a3cd-ed9c1b375d62#ref=rss",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T14:28:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/entretenimiento/2026/11/17/que-pasara-con-batman-ahora-que-robert-pattinson-es-el-nuevo-james-bond/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T14:29:13+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Daily Mail",
-     "link": "https://www.dailymail.com/tvshowbiz/article-16298003/As-minute-screeching-U-turn-saw-famous-Bond-Robert-Pattinson-land-role-dreams-ALISON-BOSHOFF-reveals-inside-story-race-007-rivals-fed-sharks.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T14:30:27+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Evening Standard",
-     "link": "https://www.standard.co.uk/culture/film/robert-pattinson-bond-prime-minister-rami-malek-andy-burnham-b1305223.html",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T14:33:20+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "New York Post",
      "link": "https://pagesix.com/2026/11/17/hollywood/new-james-bond-robert-pattinson-shaded-by-a-list-harry-potter-star-in-live-interview/",
@@ -683,6 +646,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/america/agencias/2026/11/17/el-primer-ministro-britanico-encantado-con-la-eleccion-de-pattinson-como-james-bond/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T15:32:34+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "Clarín",
      "link": "https://www.clarin.com/espectaculos/primer-ministro-britanico-absolutamente-encantado-robert-pattinson-nuevo-james-bond_0_xmhfYXYUxU.html",
      "paese": "AR",
@@ -715,6 +687,15 @@
      "paese": "AT",
      "lingua": "de",
      "data": "2026-11-17T15:44:33+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Evening Standard",
+     "link": "https://www.standard.co.uk/showbiz/next-james-bond-girl-robert-pattinson-margaret-qualley-b1305190.html",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T15:55:43+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -863,6 +844,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "Daily Mail",
+     "link": "https://www.dailymail.com/tvshowbiz/article-16298633/Katy-Perry-Lindsay-Lohan-Robert-Pattinson-James-Bond.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T21:51:08+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "CNA",
      "link": "https://www.channelnewsasia.com/commentary/james-bond-robert-pattinson-villain-movie-6558496",
      "paese": "SG",
@@ -870,15 +860,24 @@
      "data": "2026-11-17T21:59:00+00:00",
      "tipo": "giornale",
      "origine": "rss"
+    },
+    {
+     "fonte": "The Verge",
+     "link": "https://www.theverge.com/entertainment/1036110/jeff-bezos-james-bond-casting-amazon",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T22:38:41+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 5,
-    "estero": 32,
+    "estero": 31,
     "paesi_esteri": 20,
     "continenti": {
      "Americhe": 17,
-     "Europa": 17,
+     "Europa": 16,
      "Asia e Medio Oriente": 3
     }
    },
@@ -896,30 +895,30 @@
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "Folha de S.Paulo",
-    "data": "2026-11-17T14:30:00+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/esporte/2026/11/dirigente-frances-diz-que-conta-com-apoio-fora-da-europa-por-presidencia-da-fifa.shtml"
-   },
-   "conferma": {
     "fonte": "Libération",
     "data": "2026-11-17T14:47:57+00:00",
-    "dopo_min": 18
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.liberation.fr/sports/football/jai-lexperience-les-convictions-et-les-valeurs-philippe-diallo-lance-sa-campagne-contre-gianni-infantino-pour-la-presidence-de-la-federation-internationale-de-foot-20261117_W3CUJDYG3NA55E57GRHGOIXJ2Y/"
+   },
+   "conferma": {
+    "fonte": "France Info",
+    "data": "2026-11-17T14:56:27+00:00",
+    "dopo_min": 8
    },
    "curva": [
     1,
-    14,
-    17,
+    13,
+    16,
+    19,
     20,
+    21,
     21,
     22,
     22,
-    23,
-    23,
-    23,
-    27,
-    32
+    22,
+    26,
+    31
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -955,23 +954,14 @@
     "it",
     "pt"
    ],
-   "n_fonti": 32,
+   "n_fonti": 31,
    "prima_segnalazione": {
-    "fonte": "Folha de S.Paulo",
-    "paese": "BR",
-    "data": "2026-11-17T14:30:00+00:00"
+    "fonte": "Libération",
+    "paese": "FR",
+    "data": "2026-11-17T14:47:57+00:00"
    },
    "aggiornata": "2026-11-19T13:49:00+00:00",
    "fonti": [
-    {
-     "fonte": "Folha de S.Paulo",
-     "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/esporte/2026/11/dirigente-frances-diz-que-conta-com-apoio-fora-da-europa-por-presidencia-da-fifa.shtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T14:30:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "Libération",
      "link": "https://www.liberation.fr/sports/football/jai-lexperience-les-convictions-et-les-valeurs-philippe-diallo-lance-sa-campagne-contre-gianni-infantino-pour-la-presidence-de-la-federation-internationale-de-foot-20261117_W3CUJDYG3NA55E57GRHGOIXJ2Y/",
@@ -1232,15 +1222,24 @@
      "data": "2026-11-19T10:49:17+00:00",
      "tipo": "giornale",
      "origine": "rss"
+    },
+    {
+     "fonte": "Hespress English",
+     "link": "https://en.hespress.com/149459-fifa-chief-infantino-faces-challenge-from-frances-diallo-japans-tashima.html",
+     "paese": "MA",
+     "lingua": "en",
+     "data": "2026-11-19T11:34:39+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 2,
-    "estero": 30,
+    "estero": 29,
     "paesi_esteri": 20,
     "continenti": {
      "Europa": 16,
-     "Americhe": 8,
+     "Americhe": 7,
      "Asia e Medio Oriente": 4,
      "Africa": 3,
      "Oceania": 1
@@ -1255,7 +1254,7 @@
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 97,
+   "calore": 100,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -1283,9 +1282,9 @@
     11,
     11,
     11,
-    11
+    12
    ],
-   "crescita": 0,
+   "crescita": 1,
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
@@ -1293,6 +1292,7 @@
     "AR",
     "BR",
     "CY",
+    "DE",
     "FR",
     "IN",
     "MX",
@@ -1302,19 +1302,20 @@
     "US"
    ],
    "lingue": [
+    "de",
     "el",
     "en",
     "es",
     "fr",
     "pt"
    ],
-   "n_fonti": 11,
+   "n_fonti": 12,
    "prima_segnalazione": {
     "fonte": "The Straits Times",
     "paese": "SG",
     "data": "2026-11-18T11:25:22+00:00"
    },
-   "aggiornata": "2026-11-19T11:46:29+00:00",
+   "aggiornata": "2026-11-19T14:21:11+00:00",
    "fonti": [
     {
      "fonte": "The Straits Times",
@@ -1414,16 +1415,25 @@
      "data": "2026-11-18T19:01:14+00:00",
      "tipo": "giornale",
      "origine": "rss"
+    },
+    {
+     "fonte": "n-tv",
+     "link": "https://www.n-tv.de/politik/Israel-beendet-groessten-Bodeneinsatz-in-Gaza-seit-Waffenruhe-Beginn-id31553177.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-19T14:21:11+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 0,
-    "estero": 11,
-    "paesi_esteri": 11,
+    "estero": 12,
+    "paesi_esteri": 12,
     "continenti": {
      "Americhe": 5,
      "Asia e Medio Oriente": 4,
-     "Europa": 2
+     "Europa": 3
     }
    },
    "punto_cieco": "italia"
@@ -1435,7 +1445,7 @@
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 96,
+   "calore": 95,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -1460,8 +1470,8 @@
     1,
     1,
     2,
-    6,
-    9,
+    7,
+    10,
     10,
     12
    ],
@@ -1610,35 +1620,35 @@
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 94,
+   "calore": 91,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "Times of India",
-    "data": "2026-11-17T14:28:07+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://timesofindia.indiatimes.com/india/two-indian-seafarers-hurt-1-missing-after-tanker-targeted-in-hormuz-strait/articleshow/135929328.cms"
-   },
-   "conferma": {
     "fonte": "TASS",
     "data": "2026-11-17T15:09:04+00:00",
-    "dopo_min": 41
+    "tipo": "agenzia",
+    "veloce": false,
+    "link": "https://tass.com/world/2219815"
+   },
+   "conferma": {
+    "fonte": "La Vanguardia",
+    "data": "2026-11-17T15:53:20+00:00",
+    "dopo_min": 44
    },
    "curva": [
     1,
     13,
-    27,
-    30,
-    30,
-    30,
-    30,
-    30,
-    30,
-    30,
-    30,
-    30
+    26,
+    28,
+    28,
+    28,
+    28,
+    28,
+    28,
+    28,
+    28,
+    28
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -1649,7 +1659,6 @@
     "ES",
     "FR",
     "GB",
-    "IL",
     "IN",
     "IS",
     "IT",
@@ -1658,7 +1667,6 @@
     "NL",
     "NO",
     "PH",
-    "QA",
     "RU",
     "SA",
     "SG",
@@ -1673,23 +1681,14 @@
     "it",
     "nl"
    ],
-   "n_fonti": 30,
+   "n_fonti": 28,
    "prima_segnalazione": {
-    "fonte": "Times of India",
-    "paese": "IN",
-    "data": "2026-11-17T14:28:07+00:00"
+    "fonte": "TASS",
+    "paese": "RU",
+    "data": "2026-11-17T15:09:04+00:00"
    },
    "aggiornata": "2026-11-18T11:14:51+00:00",
    "fonti": [
-    {
-     "fonte": "Times of India",
-     "link": "https://timesofindia.indiatimes.com/india/two-indian-seafarers-hurt-1-missing-after-tanker-targeted-in-hormuz-strait/articleshow/135929328.cms",
-     "paese": "IN",
-     "lingua": "en",
-     "data": "2026-11-17T14:28:07+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "TASS",
      "link": "https://tass.com/world/2219815",
@@ -1844,6 +1843,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "Times of India",
+     "link": "https://timesofindia.indiatimes.com/world/middle-east/us-launches-fresh-strikes-on-iran-targets-missile-launch-site-on-qeshm-island/articleshow/135939742.cms",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T20:10:35+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "El Universal",
      "link": "https://www.eluniversal.com.mx/mundo/teheran-afirma-que-eu-bombardeo-la-isla-de-qeshm-ocurre-tras-ataque-irani-contra-bahrein/",
      "paese": "MX",
@@ -1898,15 +1906,6 @@
      "origine": "rss"
     },
     {
-     "fonte": "The Jerusalem Post",
-     "link": "https://www.jpost.com/middle-east/iran-news/article-915235",
-     "paese": "IL",
-     "lingua": "en",
-     "data": "2026-11-17T21:35:38+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "RÚV",
      "link": "https://www.ruv.is/frettir/erlent/2026-11-17-bandarikjaher-gerir-aras-a-qeshm-eyju-i-hormussundi-493110/",
      "paese": "IS",
@@ -1921,15 +1920,6 @@
      "paese": "PH",
      "lingua": "en",
      "data": "2026-11-17T23:00:07+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Al Jazeera",
-     "link": "https://www.aljazeera.com/news/2026/11/17/kuwait-reports-drone-attacks-as-iran-us-trade-attacks-on-qeshm-and-bahrain?traffic_source=rss",
-     "paese": "QA",
-     "lingua": "en",
-     "data": "2026-11-17T23:38:38+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -1954,11 +1944,11 @@
    ],
    "copertura": {
     "italia": 4,
-    "estero": 26,
-    "paesi_esteri": 18,
+    "estero": 24,
+    "paesi_esteri": 16,
     "continenti": {
      "Europa": 15,
-     "Asia e Medio Oriente": 9,
+     "Asia e Medio Oriente": 7,
      "Americhe": 5,
      "Africa": 1
     }
@@ -1968,11 +1958,11 @@
   {
    "id": "4bd7f95852",
    "titolo": "Interruzione della rete di comunicazione classificata della NSA statunitense, limitate le comunicazioni intern",
-   "lingua": "en",
+   "lingua": "it",
    "categoria": "Tecnologia e crypto",
    "curiosita": false,
    "sezione": "Tecnologia",
-   "calore": 86,
+   "calore": 88,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -1990,17 +1980,17 @@
    },
    "curva": [
     1,
-    28,
-    35,
-    37,
-    37,
-    37,
-    37,
-    37,
-    37,
-    37,
-    37,
-    37
+    31,
+    38,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -2011,20 +2001,20 @@
     "BE",
     "BR",
     "CH",
-    "CR",
     "DE",
     "EC",
     "ES",
     "FR",
-    "GB",
     "GT",
     "IL",
     "IN",
+    "IT",
     "JM",
     "MX",
     "NZ",
     "PH",
     "PY",
+    "QA",
     "SG",
     "US",
     "VE"
@@ -2034,9 +2024,10 @@
     "en",
     "es",
     "fr",
+    "it",
     "pt"
    ],
-   "n_fonti": 37,
+   "n_fonti": 40,
    "prima_segnalazione": {
     "fonte": "Hacker News (prima pagina)",
     "paese": "WEB",
@@ -2063,12 +2054,39 @@
      "origine": "rss"
     },
     {
+     "fonte": "G1",
+     "link": "https://g1.globo.com/mundo/noticia/2026/11/17/rede-ultrassecreta-de-comunicacoes-de-seguranca-nacional-dos-eua-esta-fora-do-ar-diz-tv.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T15:44:57+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Times of India",
+     "link": "https://timesofindia.indiatimes.com/world/us/americas-spy-agency-goes-dark-nsas-classified-internal-network-goes-down-no-cyberattack-evidence-yet-report/articleshow/135932100.cms",
+     "paese": "IN",
+     "lingua": "en",
+     "data": "2026-11-17T15:51:29+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "Hindustan Times",
      "link": "https://www.hindustantimes.com/world-news/highly-classified-network-used-by-us-national-security-agency-down-nsa-updates-trump-administration-101794930739112.html",
      "paese": "IN",
      "lingua": "en",
      "data": "2026-11-17T15:53:11+00:00",
      "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Adnkronos",
+     "link": "https://www.adnkronos.com/internazionale/esteri/national-security-agency-usa-ultime-news_2C7Aw4WIJl2Y6U70yNwrhA",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T16:04:00+00:00",
+     "tipo": "agenzia",
      "origine": "rss"
     },
     {
@@ -2162,6 +2180,15 @@
      "origine": "rss"
     },
     {
+     "fonte": "Il Fatto Quotidiano",
+     "link": "https://www.ilfattoquotidiano.it/2026/11/17/nsa-rete-interna-down-notizie/8575152/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T17:10:10+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
      "fonte": "NDTV",
      "link": "https://www.ndtv.com/world-news/highly-classified-us-national-security-communications-network-down-report-12340389#publisher=newsstand",
      "paese": "IN",
@@ -2234,15 +2261,6 @@
      "origine": "rss"
     },
     {
-     "fonte": "The Independent",
-     "link": "https://www.independent.co.uk/news/world/americas/us-politics/classified-network-down-usa-intelligence-b3086573.html",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T18:41:13+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "Mint",
      "link": "https://www.livemint.com/news/us-news/us-electronic-spy-agency-suffers-classified-network-outage-11794941399379.html",
      "paese": "IN",
@@ -2279,15 +2297,6 @@
      "origine": "rss"
     },
     {
-     "fonte": "La Nación (Costa Rica)",
-     "link": "https://www.nacion.com/el-mundo/ciberataque-o-falla-tecnica-la-misteriosa-caida-de/ZUV7A5R7RJDBFKCGAYP2HXWZ6A/story/",
-     "paese": "CR",
-     "lingua": "es",
-     "data": "2026-11-17T19:40:02+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "Handelsblatt",
      "link": "https://www.handelsblatt.com/politik/international/technik-internes-netzwerk-von-us-geheimdienst-nsa-gestoert/100270731.html",
      "paese": "DE",
@@ -2295,39 +2304,21 @@
      "data": "2026-11-17T19:47:06+00:00",
      "tipo": "giornale",
      "origine": "rss"
-    },
-    {
-     "fonte": "Stuff",
-     "link": "https://www.stuff.co.nz/world-news/361060530/us-spy-agencys-highly-classified-communications-network-goes-down",
-     "paese": "NZ",
-     "lingua": "en",
-     "data": "2026-11-17T19:54:33+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Der Spiegel",
-     "link": "https://www.spiegel.de/ausland/nsa-net-internes-netzwerk-von-us-geheimdienst-nsa-gestoert-a-b392dbb8-8224-430f-a1e7-0e7ccd7a3101#ref=rss",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-17T20:10:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
     }
    ],
    "copertura": {
-    "italia": 0,
-    "estero": 37,
-    "paesi_esteri": 22,
+    "italia": 2,
+    "estero": 38,
+    "paesi_esteri": 21,
     "continenti": {
+     "Europa": 15,
      "Americhe": 14,
-     "Europa": 14,
-     "Asia e Medio Oriente": 7,
+     "Asia e Medio Oriente": 9,
      "Altro": 1,
      "Oceania": 1
     }
    },
-   "punto_cieco": "italia"
+   "punto_cieco": ""
   },
   {
    "id": "04c33a858a",
@@ -2361,8 +2352,8 @@
     3,
     3,
     4,
-    4,
-    6,
+    5,
+    8,
     8,
     9
    ],
@@ -2739,7 +2730,7 @@
    "categoria": "Economia",
    "curiosita": false,
    "sezione": "Sport",
-   "calore": 72,
+   "calore": 71,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -3112,13 +3103,125 @@
    "punto_cieco": ""
   },
   {
+   "id": "c5c4da1737",
+   "titolo": "Sentenza della CIG sul caso dei Rohingya in Myanmar: cosa cambia e a che punto è il procedimento",
+   "lingua": "it",
+   "categoria": "Politica",
+   "curiosita": false,
+   "sezione": "Politica",
+   "calore": 70,
+   "stato": "confermato",
+   "attendibilita": 88,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "La Stampa",
+    "data": "2026-11-18T13:13:00+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.lastampa.it/esteri/2026/11/18/news/myanmar_sentenza_genocidio_rohingya_cig_trump_israele_gaza-15801785/"
+   },
+   "conferma": {
+    "fonte": "Libération",
+    "data": "2026-11-19T09:04:27+00:00",
+    "dopo_min": 1191
+   },
+   "curva": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    2,
+    4
+   ],
+   "crescita": 3,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "FR",
+    "IT"
+   ],
+   "lingue": [
+    "fr",
+    "it"
+   ],
+   "n_fonti": 5,
+   "prima_segnalazione": {
+    "fonte": "La Stampa",
+    "paese": "IT",
+    "data": "2026-11-18T13:13:00+00:00"
+   },
+   "aggiornata": "2026-11-19T14:57:54+00:00",
+   "fonti": [
+    {
+     "fonte": "La Stampa",
+     "link": "https://www.lastampa.it/esteri/2026/11/18/news/myanmar_sentenza_genocidio_rohingya_cig_trump_israele_gaza-15801785/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-18T13:13:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Libération",
+     "link": "https://www.liberation.fr/international/asie-pacifique/rohingyas-pourquoi-larret-de-la-cij-sur-un-possible-genocide-sera-determinant-20261117_QEERYSR74FETRKDXQBGU43X7W4/",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-19T09:04:27+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Askanews",
+     "link": "https://askanews.it/2026/11/19/la-sentenza-storica-della-corte-di-giustizia-onu-il-myanmar-ha-commesso-genocidio-contro-i-rohingya/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-19T13:48:03+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "TGCOM24",
+     "link": "https://www.tgcom24.mediaset.it/mondo/myanmar-corte-internazionale-giustizia-genocidio-rohingya_119175111-202602k.shtml",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-19T14:22:58+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Sky TG24",
+     "link": "https://tg24.sky.it/mondo/video/2026/11/19/corte-giustizia-condanna-myanmar-per-genocidio-rohingya-1141082",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-19T14:57:54+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 4,
+    "estero": 1,
+    "paesi_esteri": 1,
+    "continenti": {
+     "Europa": 5
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
    "id": "ddc9730407",
    "titolo": "Vox denuncia un reato elettorale dopo la sospensione di un comizio a Siviglia per molestie di gruppi violenti",
    "lingua": "en",
    "categoria": "Altro",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 69,
+   "calore": 68,
    "stato": "confermato",
    "attendibilita": 93,
    "livello": "Certa",
@@ -3229,374 +3332,6 @@
     "continenti": {
      "Europa": 5,
      "Americhe": 1
-    }
-   },
-   "punto_cieco": ""
-  },
-  {
-   "id": "8bfea60591",
-   "titolo": "Domínguez commenta la finale di Copa Sudamericana contro il Boca, che non vince un titolo internazionale da 18",
-   "lingua": "es",
-   "categoria": "Altro",
-   "curiosita": false,
-   "sezione": "Sport",
-   "calore": 69,
-   "stato": "confermato",
-   "attendibilita": 85,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "Infobae",
-    "data": "2026-11-17T15:55:49+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.infobae.com/colombia/2026/11/17/estas-son-las-medidas-de-seguridad-en-barranquilla-para-la-final-de-la-copa-sudamericana-entre-boca-juniors-y-atletico-mineiro-reforzaran-los-controles-en-los-hoteles/"
-   },
-   "conferma": {
-    "fonte": "La Nación",
-    "data": "2026-11-17T21:29:53+00:00",
-    "dopo_min": 334
-   },
-   "curva": [
-    1,
-    1,
-    3,
-    4,
-    4,
-    4,
-    4,
-    5,
-    5,
-    5,
-    5,
-    6
-   ],
-   "crescita": 1,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AR",
-    "CO",
-    "PY"
-   ],
-   "lingue": [
-    "es"
-   ],
-   "n_fonti": 6,
-   "prima_segnalazione": {
-    "fonte": "Infobae",
-    "paese": "AR",
-    "data": "2026-11-17T15:55:49+00:00"
-   },
-   "aggiornata": "2026-11-19T14:11:57+00:00",
-   "fonti": [
-    {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/colombia/2026/11/17/estas-son-las-medidas-de-seguridad-en-barranquilla-para-la-final-de-la-copa-sudamericana-entre-boca-juniors-y-atletico-mineiro-reforzaran-los-controles-en-los-hoteles/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T15:55:49+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "La Nación",
-     "link": "https://www.lanacion.com.ar/deportes/futbol/cuando-juega-boca-la-final-de-la-copa-sudamericana-ante-atletico-mineiro-nid17112026/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T21:29:53+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ABC Color",
-     "link": "https://www.abc.com.py/deportes/futbol/copa-paraguay/2026/11/17/recoleta-y-sol-de-america-ya-tienen-fecha-hora-y-escenario-para-la-final-de-la-copa-paraguay/",
-     "paese": "PY",
-     "lingua": "es",
-     "data": "2026-11-17T23:03:09+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Clarín",
-     "link": "https://www.clarin.com/deportes/boca-palpita-final-copa-sudamericana-vuelos-llenos-hinchas-rumbo-barranquilla-equipo-confirmado-preocupacion-mineiro_0_3CEAVnnB2E.html",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-18T00:54:51+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Olé",
-     "link": "https://www.ole.com.ar/boca-juniors/boca-final-sudamericana-hinchas-xeneizes-colombianos-barranquilla_0_Ucieb4rX2o.html",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-18T18:14:01+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Semana",
-     "link": "https://www.semana.com/deportes/articulo/atletico-mineiro-vs-boca-juniors-canal-y-hora-para-ver-la-final-de-la-copa-sudamericana-2026/202657/",
-     "paese": "CO",
-     "lingua": "es",
-     "data": "2026-11-19T14:11:57+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 6,
-    "paesi_esteri": 3,
-    "continenti": {
-     "Americhe": 6
-    }
-   },
-   "punto_cieco": "italia"
-  },
-  {
-   "id": "14150235ce",
-   "titolo": "Iran rivendica un attacco con sei droni contro un radar statunitense in Bahrein e avverte sullo Stretto di Hor",
-   "lingua": "it",
-   "categoria": "Esteri e conflitti",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 65,
-   "stato": "confermato",
-   "attendibilita": 99,
-   "livello": "Certa",
-   "prima": {
-    "fonte": "Deutsche Welle",
-    "data": "2026-11-17T14:39:00+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.dw.com/en/iran-dismisses-report-of-alleged-dirty-bomb-attack-on-washington/a-79970741?maca=en-rss-en-all-1573-rdf"
-   },
-   "conferma": {
-    "fonte": "The Independent",
-    "data": "2026-11-17T14:43:52+00:00",
-    "dopo_min": 5
-   },
-   "curva": [
-    1,
-    15,
-    18,
-    18,
-    19,
-    19,
-    19,
-    19,
-    19,
-    19,
-    19,
-    19
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "DE",
-    "FR",
-    "GB",
-    "IR",
-    "IT",
-    "PH",
-    "QA",
-    "US"
-   ],
-   "lingue": [
-    "en",
-    "fr",
-    "it"
-   ],
-   "n_fonti": 19,
-   "prima_segnalazione": {
-    "fonte": "Deutsche Welle",
-    "paese": "DE",
-    "data": "2026-11-17T14:39:00+00:00"
-   },
-   "aggiornata": "2026-11-18T07:40:02+00:00",
-   "fonti": [
-    {
-     "fonte": "Deutsche Welle",
-     "link": "https://www.dw.com/en/iran-dismisses-report-of-alleged-dirty-bomb-attack-on-washington/a-79970741?maca=en-rss-en-all-1573-rdf",
-     "paese": "DE",
-     "lingua": "en",
-     "data": "2026-11-17T14:39:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Independent",
-     "link": "https://www.independent.co.uk/news/world/americas/us-politics/iran-dirty-bomb-plot-washington-trump-b3086216.html",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T14:43:52+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Al Jazeera",
-     "link": "https://www.aljazeera.com/news/2026/11/17/is-iran-plotting-a-dirty-bomb-attack-in-the-us-what-we-know?traffic_source=rss",
-     "paese": "QA",
-     "lingua": "en",
-     "data": "2026-11-17T14:59:39+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "France Info",
-     "link": "https://www.franceinfo.fr/monde/iran/guerre-entre-les-etats-unis-israel-et-l-iran/donald-trump-prend-tres-au-serieux-une-possible-menace-d-attaque-iranienne-contre-la-ville-de-washington-l-iran-denonce-des-informations-fabriquees_8286563.html#xtor=RSS-3-[lestitres]",
-     "paese": "FR",
-     "lingua": "en",
-     "data": "2026-11-17T15:00:34+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Le Figaro",
-     "link": "https://www.lefigaro.fr/international/bombe-sale-arme-chimique-donald-trump-affirme-prendre-tres-au-serieux-une-potentielle-menace-d-attaque-iranienne-a-washington-20261117",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T15:03:45+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "France 24",
-     "link": "https://www.france24.com/en/americas/20261117-trump-says-he-takes-possible-iran-bomb-threat-to-washington-very-seriously",
-     "paese": "FR",
-     "lingua": "en",
-     "data": "2026-11-17T15:44:54+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Daily Mail",
-     "link": "https://www.dailymail.com/news/article-16298071/Iran-dirty-bomb-attack-Trump-administration.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T16:02:56+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Guardian",
-     "link": "https://www.theguardian.com/world/2026/nov/17/trump-reported-iranian-plot-dirty-bomb-washington",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T16:03:34+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Euronews",
-     "link": "https://www.euronews.com/2026/11/17/trump-warns-iran-over-allegations-of-dirty-bomb-threat-to-washington",
-     "paese": "FR",
-     "lingua": "en",
-     "data": "2026-11-17T16:10:42+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "CBS News",
-     "link": "https://www.cbsnews.com/video/trump-says-us-taking-iranian-dirty-bomb-threat-very-seriously/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T16:56:00+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Tehran Times",
-     "link": "https://www.tehrantimes.com/news/532269/Araghchi-meets-Sultan-of-Oman-in-Muscat-on-bilateral-ties-regional",
-     "paese": "IR",
-     "lingua": "en",
-     "data": "2026-11-17T16:57:50+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Al-Monitor",
-     "link": "https://www.al-monitor.com/originals/2026/11/araghchi-meets-qatari-mediators-oman-trump-threatens-iran-over-dirty-bomb-report",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T17:01:16+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "CNBC",
-     "link": "https://www.cnbc.com/2026/11/17/trump-iran-dirty-bomb-washington.html",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T17:49:45+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "The Hill",
-     "link": "https://thehill.com/policy/defense/6225006-iran-threat-dirty-bomb-explainer/",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T17:58:06+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Domani",
-     "link": "https://www.editorialedomani.it/politica/mondo/la-bomba-sporca-degli-ayatollah-su-washington-attacco-degli-houthi-in-arabia-saudita-tt2bb5zp",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T18:57:33+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Newsweek",
-     "link": "https://www.newsweek.com/what-iran-needs-to-build-a-dirty-bomb-and-use-it-12727884",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T19:04:56+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Los Angeles Times",
-     "link": "https://www.latimes.com/politics/story/2026-11-17/trump-faces-questions-on-reported-iran-plot-to-attack-d-c-string-of-outages",
-     "paese": "US",
-     "lingua": "en",
-     "data": "2026-11-17T20:14:01+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Open",
-     "link": "https://www.open.online/2026/11/17/iran-pianifica-esplosione-bomba-sporca-stati-uniti-allarme-intelligence-teheran-smentisce/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-17T22:08:33+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Inquirer",
-     "link": "https://globalnation.inquirer.net/348778/iran-dismisses-report-of-alleged-dirty-bomb-attack-on-washington",
-     "paese": "PH",
-     "lingua": "en",
-     "data": "2026-11-18T07:40:02+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 2,
-    "estero": 17,
-    "paesi_esteri": 7,
-    "continenti": {
-     "Europa": 10,
-     "Americhe": 6,
-     "Asia e Medio Oriente": 3
     }
    },
    "punto_cieco": ""
@@ -3719,104 +3454,359 @@
    "punto_cieco": ""
   },
   {
-   "id": "c5c4da1737",
-   "titolo": "Sentenza della CIG sul caso dei Rohingya in Myanmar: cosa cambia e a che punto è il procedimento",
-   "lingua": "it",
-   "categoria": "Politica",
+   "id": "8bfea60591",
+   "titolo": "Domínguez commenta la finale di Copa Sudamericana contro il Boca, che non vince un titolo internazionale da 18",
+   "lingua": "es",
+   "categoria": "Altro",
    "curiosita": false,
-   "sezione": "Politica",
-   "calore": 61,
+   "sezione": "Sport",
+   "calore": 64,
    "stato": "confermato",
-   "attendibilita": 82,
+   "attendibilita": 80,
    "livello": "Confermata",
    "prima": {
-    "fonte": "Le Monde",
-    "data": "2026-11-17T17:15:07+00:00",
+    "fonte": "Infobae",
+    "data": "2026-11-17T16:32:49+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://www.lemonde.fr/international/article/2026/11/17/l-arret-tres-attendu-de-la-cour-internationale-de-justice-sur-la-question-du-genocide-des-rohingya_6813016_3210.html"
+    "link": "https://www.infobae.com/peru/deportes/2026/11/17/boca-juniors-vs-atletico-mineiro-dia-hora-y-canal-tv-en-peru-de-la-gran-final-por-copa-sudamericana-2026/"
    },
    "conferma": {
-    "fonte": "La Stampa",
-    "data": "2026-11-18T13:13:00+00:00",
-    "dopo_min": 1198
+    "fonte": "La Nación",
+    "data": "2026-11-17T21:29:53+00:00",
+    "dopo_min": 297
    },
    "curva": [
     1,
     1,
-    1,
-    1,
-    1,
-    2,
-    2,
-    2,
-    2,
-    2,
     3,
-    4
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    5
    ],
    "crescita": 1,
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
-    "FR",
-    "IT"
+    "AR",
+    "CO",
+    "PY"
    ],
    "lingue": [
-    "fr",
-    "it"
+    "es"
    ],
-   "n_fonti": 4,
+   "n_fonti": 5,
    "prima_segnalazione": {
-    "fonte": "Le Monde",
-    "paese": "FR",
-    "data": "2026-11-17T17:15:07+00:00"
+    "fonte": "Infobae",
+    "paese": "AR",
+    "data": "2026-11-17T16:32:49+00:00"
    },
-   "aggiornata": "2026-11-19T13:48:03+00:00",
+   "aggiornata": "2026-11-19T14:11:57+00:00",
    "fonti": [
     {
-     "fonte": "Le Monde",
-     "link": "https://www.lemonde.fr/international/article/2026/11/17/l-arret-tres-attendu-de-la-cour-internationale-de-justice-sur-la-question-du-genocide-des-rohingya_6813016_3210.html",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-17T17:15:07+00:00",
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/peru/deportes/2026/11/17/boca-juniors-vs-atletico-mineiro-dia-hora-y-canal-tv-en-peru-de-la-gran-final-por-copa-sudamericana-2026/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T16:32:49+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "La Stampa",
-     "link": "https://www.lastampa.it/esteri/2026/11/18/news/myanmar_sentenza_genocidio_rohingya_cig_trump_israele_gaza-15801785/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-18T13:13:00+00:00",
+     "fonte": "La Nación",
+     "link": "https://www.lanacion.com.ar/deportes/futbol/cuando-juega-boca-la-final-de-la-copa-sudamericana-ante-atletico-mineiro-nid17112026/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-17T21:29:53+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Libération",
-     "link": "https://www.liberation.fr/international/asie-pacifique/rohingyas-pourquoi-larret-de-la-cij-sur-un-possible-genocide-sera-determinant-20261117_QEERYSR74FETRKDXQBGU43X7W4/",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-19T09:04:27+00:00",
+     "fonte": "ABC Color",
+     "link": "https://www.abc.com.py/deportes/futbol/copa-paraguay/2026/11/17/recoleta-y-sol-de-america-ya-tienen-fecha-hora-y-escenario-para-la-final-de-la-copa-paraguay/",
+     "paese": "PY",
+     "lingua": "es",
+     "data": "2026-11-17T23:03:09+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
     {
-     "fonte": "Askanews",
-     "link": "https://askanews.it/2026/11/19/la-sentenza-storica-della-corte-di-giustizia-onu-il-myanmar-ha-commesso-genocidio-contro-i-rohingya/",
-     "paese": "IT",
-     "lingua": "it",
-     "data": "2026-11-19T13:48:03+00:00",
-     "tipo": "agenzia",
+     "fonte": "Olé",
+     "link": "https://www.ole.com.ar/boca-juniors/boca-final-sudamericana-hinchas-xeneizes-colombianos-barranquilla_0_Ucieb4rX2o.html",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-18T18:14:01+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Semana",
+     "link": "https://www.semana.com/deportes/articulo/atletico-mineiro-vs-boca-juniors-canal-y-hora-para-ver-la-final-de-la-copa-sudamericana-2026/202657/",
+     "paese": "CO",
+     "lingua": "es",
+     "data": "2026-11-19T14:11:57+00:00",
+     "tipo": "giornale",
      "origine": "rss"
     }
    ],
    "copertura": {
-    "italia": 2,
-    "estero": 2,
-    "paesi_esteri": 1,
+    "italia": 0,
+    "estero": 5,
+    "paesi_esteri": 3,
     "continenti": {
-     "Europa": 4
+     "Americhe": 5
+    }
+   },
+   "punto_cieco": "italia"
+  },
+  {
+   "id": "14150235ce",
+   "titolo": "Iran rivendica un attacco con sei droni contro un radar statunitense in Bahrein e avverte sullo Stretto di Hor",
+   "lingua": "it",
+   "categoria": "Esteri e conflitti",
+   "curiosita": false,
+   "sezione": "Mondo",
+   "calore": 63,
+   "stato": "confermato",
+   "attendibilita": 99,
+   "livello": "Certa",
+   "prima": {
+    "fonte": "Newsweek",
+    "data": "2026-11-17T14:37:26+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.newsweek.com/scary-intel-drops-are-their-own-kind-of-dirty-bomb-12727424"
+   },
+   "conferma": {
+    "fonte": "Deutsche Welle",
+    "data": "2026-11-17T14:39:00+00:00",
+    "dopo_min": 2
+   },
+   "curva": [
+    1,
+    15,
+    18,
+    18,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19,
+    19
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "DE",
+    "FR",
+    "GB",
+    "IT",
+    "PH",
+    "QA",
+    "US"
+   ],
+   "lingue": [
+    "en",
+    "fr",
+    "it"
+   ],
+   "n_fonti": 19,
+   "prima_segnalazione": {
+    "fonte": "Newsweek",
+    "paese": "US",
+    "data": "2026-11-17T14:37:26+00:00"
+   },
+   "aggiornata": "2026-11-18T07:40:02+00:00",
+   "fonti": [
+    {
+     "fonte": "Newsweek",
+     "link": "https://www.newsweek.com/scary-intel-drops-are-their-own-kind-of-dirty-bomb-12727424",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T14:37:26+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Deutsche Welle",
+     "link": "https://www.dw.com/en/iran-dismisses-report-of-alleged-dirty-bomb-attack-on-washington/a-79970741?maca=en-rss-en-all-1573-rdf",
+     "paese": "DE",
+     "lingua": "en",
+     "data": "2026-11-17T14:39:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Independent",
+     "link": "https://www.independent.co.uk/news/world/americas/us-politics/iran-dirty-bomb-plot-washington-trump-b3086216.html",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T14:43:52+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Al Jazeera",
+     "link": "https://www.aljazeera.com/news/2026/11/17/is-iran-plotting-a-dirty-bomb-attack-in-the-us-what-we-know?traffic_source=rss",
+     "paese": "QA",
+     "lingua": "en",
+     "data": "2026-11-17T14:59:39+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "France Info",
+     "link": "https://www.franceinfo.fr/monde/iran/guerre-entre-les-etats-unis-israel-et-l-iran/donald-trump-prend-tres-au-serieux-une-possible-menace-d-attaque-iranienne-contre-la-ville-de-washington-l-iran-denonce-des-informations-fabriquees_8286563.html#xtor=RSS-3-[lestitres]",
+     "paese": "FR",
+     "lingua": "en",
+     "data": "2026-11-17T15:00:34+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Le Figaro",
+     "link": "https://www.lefigaro.fr/international/bombe-sale-arme-chimique-donald-trump-affirme-prendre-tres-au-serieux-une-potentielle-menace-d-attaque-iranienne-a-washington-20261117",
+     "paese": "FR",
+     "lingua": "fr",
+     "data": "2026-11-17T15:03:45+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "France 24",
+     "link": "https://www.france24.com/en/americas/20261117-trump-says-he-takes-possible-iran-bomb-threat-to-washington-very-seriously",
+     "paese": "FR",
+     "lingua": "en",
+     "data": "2026-11-17T15:44:54+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Daily Mail",
+     "link": "https://www.dailymail.com/news/article-16298071/Iran-dirty-bomb-attack-Trump-administration.html?ns_mchannel=rss&ns_campaign=1490&ito=1490",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T16:02:56+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Guardian",
+     "link": "https://www.theguardian.com/world/2026/nov/17/trump-reported-iranian-plot-dirty-bomb-washington",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T16:03:34+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Euronews",
+     "link": "https://www.euronews.com/2026/11/17/trump-warns-iran-over-allegations-of-dirty-bomb-threat-to-washington",
+     "paese": "FR",
+     "lingua": "en",
+     "data": "2026-11-17T16:10:42+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "CBS News",
+     "link": "https://www.cbsnews.com/video/trump-says-us-taking-iranian-dirty-bomb-threat-very-seriously/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T16:56:00+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Al-Monitor",
+     "link": "https://www.al-monitor.com/originals/2026/11/araghchi-meets-qatari-mediators-oman-trump-threatens-iran-over-dirty-bomb-report",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T17:01:16+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "CNBC",
+     "link": "https://www.cnbc.com/2026/11/17/trump-iran-dirty-bomb-washington.html",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T17:49:45+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Hill",
+     "link": "https://thehill.com/policy/defense/6225006-iran-threat-dirty-bomb-explainer/",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T17:58:06+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Domani",
+     "link": "https://www.editorialedomani.it/politica/mondo/la-bomba-sporca-degli-ayatollah-su-washington-attacco-degli-houthi-in-arabia-saudita-tt2bb5zp",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T18:57:33+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Los Angeles Times",
+     "link": "https://www.latimes.com/politics/story/2026-11-17/trump-faces-questions-on-reported-iran-plot-to-attack-d-c-string-of-outages",
+     "paese": "US",
+     "lingua": "en",
+     "data": "2026-11-17T20:14:01+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ANSA",
+     "link": "https://www.ansa.it/sito/notizie/mondo/2026/11/17/lallarme-degli-007-usa-teheran-vuole-colpirci-con-una-bomba_187bd30b-f38c-4795-85cd-e36ed45edec5.html",
+     "paese": "IT",
+     "lingua": "en",
+     "data": "2026-11-17T22:08:20+00:00",
+     "tipo": "agenzia",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Open",
+     "link": "https://www.open.online/2026/11/17/iran-pianifica-esplosione-bomba-sporca-stati-uniti-allarme-intelligence-teheran-smentisce/",
+     "paese": "IT",
+     "lingua": "it",
+     "data": "2026-11-17T22:08:33+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Inquirer",
+     "link": "https://globalnation.inquirer.net/348778/iran-dismisses-report-of-alleged-dirty-bomb-attack-on-washington",
+     "paese": "PH",
+     "lingua": "en",
+     "data": "2026-11-18T07:40:02+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 3,
+    "estero": 16,
+    "paesi_esteri": 6,
+    "continenti": {
+     "Europa": 11,
+     "Americhe": 6,
+     "Asia e Medio Oriente": 2
     }
    },
    "punto_cieco": ""
@@ -3951,7 +3941,7 @@
    },
    "curva": [
     1,
-    6,
+    5,
     7,
     7,
     7,
@@ -4023,20 +4013,20 @@
      "origine": "rss"
     },
     {
-     "fonte": "The Guardian",
-     "link": "https://www.theguardian.com/world/2026/nov/17/costa-rica-journalist-camilo-rodriguez-shot-dead",
-     "paese": "GB",
-     "lingua": "en",
-     "data": "2026-11-17T17:19:12+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
      "fonte": "Al Jazeera",
      "link": "https://www.aljazeera.com/news/2026/11/17/israeli-settler-pogrom-kills-palestinian-woman-wounds-10-people?traffic_source=rss",
      "paese": "QA",
      "lingua": "en",
      "data": "2026-11-17T18:43:46+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "The Guardian",
+     "link": "https://www.theguardian.com/world/2026/nov/17/palestinian-woman-shot-dead-israeli-settlers-near-jericho-witnesses-say",
+     "paese": "GB",
+     "lingua": "en",
+     "data": "2026-11-17T20:21:48+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -4096,7 +4086,7 @@
     1,
     1,
     1,
-    4,
+    5,
     5
    ],
    "crescita": 0,
@@ -4174,89 +4164,6 @@
     }
    },
    "punto_cieco": "italia"
-  },
-  {
-   "id": "af77b09102",
-   "titolo": "Tocantins avrà una delegazione alle Paralimpiadi Scolastiche 2026",
-   "lingua": "pt",
-   "categoria": "Altro",
-   "curiosita": false,
-   "sezione": "Sport",
-   "calore": 54,
-   "stato": "confermato",
-   "attendibilita": 60,
-   "livello": "Prime conferme",
-   "prima": {
-    "fonte": "G1",
-    "data": "2026-11-17T14:28:35+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://g1.globo.com/al/alagoas/edicao/2026/11/17/videos-jornal-da-manha-alagoas-de-terca-feira-17-de-novembro.ghtml"
-   },
-   "conferma": {
-    "fonte": "Globo Esporte",
-    "data": "2026-11-17T16:30:18+00:00",
-    "dopo_min": 122
-   },
-   "curva": [
-    1,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "BR"
-   ],
-   "lingue": [
-    "pt"
-   ],
-   "n_fonti": 2,
-   "prima_segnalazione": {
-    "fonte": "G1",
-    "paese": "BR",
-    "data": "2026-11-17T14:28:35+00:00"
-   },
-   "aggiornata": "2026-11-19T13:48:40+00:00",
-   "fonti": [
-    {
-     "fonte": "G1",
-     "link": "https://g1.globo.com/al/alagoas/edicao/2026/11/17/videos-jornal-da-manha-alagoas-de-terca-feira-17-de-novembro.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T14:28:35+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "Globo Esporte",
-     "link": "https://ge.globo.com/ba/playlist/globo-esporte-ba-desta-terca-feira-17-de-novembro-de-2026.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T16:30:18+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 2,
-    "paesi_esteri": 1,
-    "continenti": {
-     "Americhe": 2
-    }
-   },
-   "punto_cieco": ""
   },
   {
    "id": "e0d6f0e152",
@@ -4388,13 +4295,181 @@
    "punto_cieco": ""
   },
   {
+   "id": "af77b09102",
+   "titolo": "Tocantins avrà una delegazione alle Paralimpiadi Scolastiche 2026",
+   "lingua": "pt",
+   "categoria": "Altro",
+   "curiosita": false,
+   "sezione": "Sport",
+   "calore": 53,
+   "stato": "confermato",
+   "attendibilita": 60,
+   "livello": "Prime conferme",
+   "prima": {
+    "fonte": "G1",
+    "data": "2026-11-17T14:53:25+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://g1.globo.com/rj/rio-de-janeiro/bom-dia-rio/playlist/videos-bom-dia-rio-de-terca-17-de-novembro-de-2026.ghtml"
+   },
+   "conferma": {
+    "fonte": "Globo Esporte",
+    "data": "2026-11-17T16:30:18+00:00",
+    "dopo_min": 97
+   },
+   "curva": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "BR"
+   ],
+   "lingue": [
+    "pt"
+   ],
+   "n_fonti": 2,
+   "prima_segnalazione": {
+    "fonte": "G1",
+    "paese": "BR",
+    "data": "2026-11-17T14:53:25+00:00"
+   },
+   "aggiornata": "2026-11-19T13:48:40+00:00",
+   "fonti": [
+    {
+     "fonte": "G1",
+     "link": "https://g1.globo.com/rj/rio-de-janeiro/bom-dia-rio/playlist/videos-bom-dia-rio-de-terca-17-de-novembro-de-2026.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T14:53:25+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "Globo Esporte",
+     "link": "https://ge.globo.com/ba/playlist/globo-esporte-ba-desta-terca-feira-17-de-novembro-de-2026.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T16:30:18+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 2,
+    "paesi_esteri": 1,
+    "continenti": {
+     "Americhe": 2
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
+   "id": "1cbee4561b",
+   "titolo": "Scaloni modifica il programma dell'Argentina per il maltempo prima dell'amichevole con la Costa Rica",
+   "lingua": "es",
+   "categoria": "Altro",
+   "curiosita": false,
+   "sezione": "Sport",
+   "calore": 52,
+   "stato": "confermato",
+   "attendibilita": 64,
+   "livello": "Prime conferme",
+   "prima": {
+    "fonte": "Globo Esporte",
+    "data": "2026-11-17T16:51:57+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://ge.globo.com/ba/futebol/jogo/27-11-2026/costa-rica-brasil-mundial-sub-17.ghtml"
+   },
+   "conferma": {
+    "fonte": "La Nación (Costa Rica)",
+    "data": "2026-11-17T20:58:26+00:00",
+    "dopo_min": 246
+   },
+   "curva": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "BR",
+    "CR"
+   ],
+   "lingue": [
+    "es",
+    "pt"
+   ],
+   "n_fonti": 2,
+   "prima_segnalazione": {
+    "fonte": "Globo Esporte",
+    "paese": "BR",
+    "data": "2026-11-17T16:51:57+00:00"
+   },
+   "aggiornata": "2026-11-19T13:18:48+00:00",
+   "fonti": [
+    {
+     "fonte": "Globo Esporte",
+     "link": "https://ge.globo.com/ba/futebol/jogo/27-11-2026/costa-rica-brasil-mundial-sub-17.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-17T16:51:57+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "La Nación (Costa Rica)",
+     "link": "https://www.nacion.com/viva/cuando-es-el-miss-universo-2026/TMJ2CAMAPJGC7A6UOKUJ2FWMAA/story/",
+     "paese": "CR",
+     "lingua": "es",
+     "data": "2026-11-17T20:58:26+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 2,
+    "paesi_esteri": 2,
+    "continenti": {
+     "Americhe": 2
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
    "id": "f73f644a28",
    "titolo": "Papa Leone XIV a Cusco, in Perù, a 3.400 metri di quota",
    "lingua": "en",
    "categoria": "Società",
    "curiosita": false,
    "sezione": "Società",
-   "calore": 50,
+   "calore": 49,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -4570,7 +4645,7 @@
    "categoria": "Altro",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 49,
+   "calore": 48,
    "stato": "confermato",
    "attendibilita": 52,
    "livello": "Prime conferme",
@@ -4654,7 +4729,7 @@
    "categoria": "Cronaca",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 47,
+   "calore": 46,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -4801,7 +4876,7 @@
    "categoria": "Altro",
    "curiosita": false,
    "sezione": "Tecnologia",
-   "calore": 46,
+   "calore": 45,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -8142,92 +8217,6 @@
     "continenti": {
      "Europa": 2,
      "Americhe": 1
-    }
-   },
-   "punto_cieco": "",
-   "archivio": true
-  },
-  {
-   "id": "1cbee4561b",
-   "titolo": "Scaloni modifica il programma dell'Argentina per il maltempo prima dell'amichevole con la Costa Rica",
-   "lingua": "es",
-   "categoria": "Altro",
-   "curiosita": false,
-   "sezione": "Sport",
-   "calore": 20,
-   "stato": "confermato",
-   "attendibilita": 64,
-   "livello": "Prime conferme",
-   "prima": {
-    "fonte": "Globo Esporte",
-    "data": "2026-11-17T16:51:57+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://ge.globo.com/ba/futebol/jogo/27-11-2026/costa-rica-brasil-mundial-sub-17.ghtml"
-   },
-   "conferma": {
-    "fonte": "La Nación (Costa Rica)",
-    "data": "2026-11-17T20:58:26+00:00",
-    "dopo_min": 246
-   },
-   "curva": [
-    1,
-    1,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "BR",
-    "CR"
-   ],
-   "lingue": [
-    "es",
-    "pt"
-   ],
-   "n_fonti": 2,
-   "prima_segnalazione": {
-    "fonte": "Globo Esporte",
-    "paese": "BR",
-    "data": "2026-11-17T16:51:57+00:00"
-   },
-   "aggiornata": "2026-11-19T13:18:48+00:00",
-   "fonti": [
-    {
-     "fonte": "Globo Esporte",
-     "link": "https://ge.globo.com/ba/futebol/jogo/27-11-2026/costa-rica-brasil-mundial-sub-17.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-17T16:51:57+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "La Nación (Costa Rica)",
-     "link": "https://www.nacion.com/viva/cuando-es-el-miss-universo-2026/TMJ2CAMAPJGC7A6UOKUJ2FWMAA/story/",
-     "paese": "CR",
-     "lingua": "es",
-     "data": "2026-11-17T20:58:26+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 2,
-    "paesi_esteri": 2,
-    "continenti": {
-     "Americhe": 2
     }
    },
    "punto_cieco": "",
@@ -183067,7 +183056,7 @@
   }
  ],
  "dati": {
-  "articoli_analizzati": 43210,
+  "articoli_analizzati": 43133,
   "storie": 400,
   "paesi_coperti": 94,
   "fonti_diverse": 260,
@@ -183075,57 +183064,57 @@
    [
     "AR",
     "Argentina",
-    5878
+    5863
    ],
    [
     "BR",
     "Brasile",
-    3748
+    3727
    ],
    [
     "DE",
     "Germania",
-    3615
+    3610
    ],
    [
     "FR",
     "Francia",
-    2918
+    2914
    ],
    [
     "IT",
     "Italia",
-    2911
+    2914
    ],
    [
     "US",
     "Stati Uniti",
-    2583
+    2565
    ],
    [
     "GB",
     "Regno Unito",
-    1642
+    1636
    ],
    [
     "ES",
     "Spagna",
-    1538
+    1537
    ],
    [
     "PY",
     "Paraguay",
-    1296
+    1293
    ],
    [
     "IN",
     "India",
-    1022
+    1017
    ],
    [
     "NG",
     "Nigeria",
-    985
+    990
    ],
    [
     "AU",
@@ -183135,47 +183124,47 @@
    [
     "PH",
     "Filippine",
-    706
+    707
    ],
    [
     "MX",
     "Messico",
-    680
+    679
    ],
    [
     "CO",
     "Colombia",
-    654
+    651
    ],
    [
     "BE",
     "Belgio",
-    501
+    497
    ],
    [
     "EC",
     "Ecuador",
-    446
+    448
    ],
    [
     "SG",
     "Singapore",
-    437
+    441
    ],
    [
     "CA",
     "Canada",
-    402
+    400
    ],
    [
     "RU",
     "Russia",
-    398
+    399
    ],
    [
     "GH",
     "Ghana",
-    396
+    397
    ],
    [
     "NZ",
@@ -183185,12 +183174,12 @@
    [
     "PT",
     "Portogallo",
-    385
+    384
    ],
    [
     "RS",
     "Serbia",
-    381
+    379
    ],
    [
     "JP",
@@ -183201,84 +183190,84 @@
   "per_lingua": [
    [
     "en",
-    16724
+    16700
    ],
    [
     "es",
-    10401
+    10376
    ],
    [
     "pt",
-    4133
+    4111
    ],
    [
     "de",
-    3905
+    3902
    ],
    [
     "fr",
-    3178
+    3176
    ],
    [
     "it",
-    2690
+    2693
    ],
    [
     "nl",
-    428
+    422
    ],
    [
     "pl",
-    337
+    339
    ],
    [
     "sv",
-    224
+    222
    ],
    [
     "da",
-    207
+    205
+   ],
+   [
+    "fi",
+    203
    ],
    [
     "ja",
     202
-   ],
-   [
-    "fi",
-    199
    ]
   ],
   "per_categoria": [
    [
     "Altro",
-    162
+    166
    ],
    [
     "Esteri e conflitti",
-    84
+    81
    ],
    [
     "Politica",
-    67
+    68
    ],
    [
     "Cronaca",
-    23
+    24
    ],
    [
     "Tecnologia e crypto",
-    23
+    22
    ],
    [
     "Economia",
-    14
-   ],
-   [
-    "Sport",
-    12
+    13
    ],
    [
     "Società",
+    11
+   ],
+   [
+    "Sport",
     11
    ],
    [
@@ -183289,31 +183278,31 @@
   "fonti_top": [
    [
     "Infobae",
-    4528
+    4514
    ],
    [
     "G1",
-    1781
+    1770
    ],
    [
     "ABC Color",
-    1296
+    1293
    ],
    [
     "New York Post",
-    809
+    804
    ],
    [
     "Die Zeit",
-    780
+    778
    ],
    [
     "O Globo",
-    724
+    723
    ],
    [
     "BFMTV",
-    705
+    702
    ],
    [
     "La Nación",
@@ -183321,109 +183310,109 @@
    ],
    [
     "El Universal",
-    680
-   ],
-   [
-    "Globo Esporte",
-    585
+    679
    ],
    [
     "Semana",
-    582
+    579
+   ],
+   [
+    "Globo Esporte",
+    577
    ],
    [
     "Der Tagesspiegel",
-    570
+    569
    ]
   ],
   "per_ora": [
    [
     23,
-    1231
+    1173
    ],
    [
     22,
-    1197
+    1279
    ],
    [
     21,
-    1237
+    1161
    ],
    [
     20,
-    1075
+    1099
    ],
    [
     19,
-    1055
+    1013
    ],
    [
     18,
-    917
+    851
    ],
    [
     17,
-    810
-   ],
-   [
-    16,
-    757
-   ],
-   [
-    15,
-    739
-   ],
-   [
-    14,
-    638
-   ],
-   [
-    13,
-    541
-   ],
-   [
-    12,
-    466
-   ],
-   [
-    11,
-    546
-   ],
-   [
-    10,
-    571
-   ],
-   [
-    9,
-    726
-   ],
-   [
-    8,
-    731
-   ],
-   [
-    7,
-    769
-   ],
-   [
-    6,
     777
    ],
    [
+    16,
+    773
+   ],
+   [
+    15,
+    694
+   ],
+   [
+    14,
+    632
+   ],
+   [
+    13,
+    542
+   ],
+   [
+    12,
+    426
+   ],
+   [
+    11,
+    544
+   ],
+   [
+    10,
+    634
+   ],
+   [
+    9,
+    734
+   ],
+   [
+    8,
+    789
+   ],
+   [
+    7,
+    751
+   ],
+   [
+    6,
+    817
+   ],
+   [
     5,
-    966
+    965
    ],
    [
     4,
-    1006
+    1108
    ],
    [
     3,
-    1273
+    1253
    ],
    [
     2,
-    1145
+    1157
    ],
    [
     1,
@@ -183431,7 +183420,7 @@
    ],
    [
     0,
-    1132
+    1045
    ]
   ],
   "approvate_non_sul_sito": {
@@ -183445,15 +183434,18 @@
  },
  "errori_fonti": [
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
-  "Hacker News (prima pagina): HTTPSConnectionPool(host='hnrss.org', port=443): Max retries exceeded with url: /frontpage (Caused by ConnectTimeoutError(<HTTPSConnection(host='hnrss.org', port=443) at 0x7a31841dd1f0>, 'Connection to hnrss.org timed out. (connect timeout=20)'))",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
-  "Telex: 403 Client Error: Forbidden for url: https://telex.hu/rss",
   "The Slovenia Times: 403 Client Error: Forbidden for url: https://sloveniatimes.com/feed",
   "Khmer Times: 403 Client Error: Forbidden for url: https://www.khmertimeskh.com/feed/",
   "The Herald: 403 Client Error: Forbidden for url: https://www.heraldonline.co.zw/feed/",
   "La Prensa (Panama): 403 Client Error: Forbidden for url: https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
+  "Commissione europea: HTTPSConnectionPool(host='ec.europa.eu', port=443): Read timed out. (read timeout=20)",
   "GDELT moldova: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:moldova&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT albania: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:albania&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT bosniaandherzegovina: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:bosniaandherzegovina&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
+  "GDELT bosniaandherzegovina: Expecting value: line 1 column 1 (char 0)",
+  "GDELT macedonia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:macedonia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT kosovo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:kosovo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT iceland: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:iceland&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT cyprus: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:cyprus&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
