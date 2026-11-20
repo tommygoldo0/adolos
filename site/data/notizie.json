@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-20T18:47:56.918401+00:00",
+ "aggiornato": "2026-11-20T19:05:22.735701+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -299,7 +299,7 @@
    "categoria": "Altro",
    "curiosita": false,
    "sezione": "Sport",
-   "calore": 69,
+   "calore": 68,
    "stato": "confermato",
    "attendibilita": 84,
    "livello": "Confermata",
@@ -408,39 +408,39 @@
   {
    "id": "5d05c1b463",
    "titolo": "Israele uccide un comandante di Hamas in un attacco nel sud di Gaza",
-   "lingua": "fr",
+   "lingua": "es",
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 63,
+   "calore": 55,
    "stato": "confermato",
-   "attendibilita": 88,
-   "livello": "Certa",
+   "attendibilita": 78,
+   "livello": "Confermata",
    "prima": {
-    "fonte": "Libération",
-    "data": "2026-11-18T19:01:14+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.liberation.fr/international/moyen-orient/israel-lance-une-operation-militaire-terrestre-a-gaza-dans-une-zone-controlee-par-le-hamas-en-depit-du-cessez-le-feu-20261118_PAZCJLTBJNFMHJL7M4KCGEUPBU/"
-   },
-   "conferma": {
     "fonte": "ABC Color",
     "data": "2026-11-18T20:20:14+00:00",
-    "dopo_min": 79
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://www.abc.com.py/internacionales/2026/11/18/israel-afirma-que-su-operacion-en-el-centro-de-gaza-busca-destruir-un-tunel-de-hamas/"
+   },
+   "conferma": {
+    "fonte": "Infobae",
+    "data": "2026-11-18T20:32:00+00:00",
+    "dopo_min": 12
    },
    "curva": [
     1,
+    2,
+    2,
+    2,
+    2,
     3,
     3,
     3,
     3,
     4,
     4,
-    4,
-    4,
-    5,
-    5,
-    5
+    4
    ],
    "crescita": 0,
    "pubblicata": true,
@@ -448,33 +448,22 @@
    "paesi": [
     "AR",
     "DE",
-    "FR",
     "IL",
     "PY"
    ],
    "lingue": [
     "de",
     "en",
-    "es",
-    "fr"
+    "es"
    ],
-   "n_fonti": 5,
+   "n_fonti": 4,
    "prima_segnalazione": {
-    "fonte": "Libération",
-    "paese": "FR",
-    "data": "2026-11-18T19:01:14+00:00"
+    "fonte": "ABC Color",
+    "paese": "PY",
+    "data": "2026-11-18T20:20:14+00:00"
    },
    "aggiornata": "2026-11-20T14:18:32+00:00",
    "fonti": [
-    {
-     "fonte": "Libération",
-     "link": "https://www.liberation.fr/international/moyen-orient/israel-lance-une-operation-militaire-terrestre-a-gaza-dans-une-zone-controlee-par-le-hamas-en-depit-du-cessez-le-feu-20261118_PAZCJLTBJNFMHJL7M4KCGEUPBU/",
-     "paese": "FR",
-     "lingua": "fr",
-     "data": "2026-11-18T19:01:14+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "ABC Color",
      "link": "https://www.abc.com.py/internacionales/2026/11/18/israel-afirma-que-su-operacion-en-el-centro-de-gaza-busca-destruir-un-tunel-de-hamas/",
@@ -514,15 +503,15 @@
    ],
    "copertura": {
     "italia": 0,
-    "estero": 5,
-    "paesi_esteri": 5,
+    "estero": 4,
+    "paesi_esteri": 4,
     "continenti": {
      "Americhe": 2,
-     "Europa": 2,
-     "Asia e Medio Oriente": 1
+     "Asia e Medio Oriente": 1,
+     "Europa": 1
     }
    },
-   "punto_cieco": "italia"
+   "punto_cieco": ""
   },
   {
    "id": "87601f2b02",
@@ -531,10 +520,10 @@
    "categoria": "Altro",
    "curiosita": false,
    "sezione": "Sport",
-   "calore": 46,
+   "calore": 52,
    "stato": "confermato",
-   "attendibilita": 59,
-   "livello": "Prime conferme",
+   "attendibilita": 66,
+   "livello": "Confermata",
    "prima": {
     "fonte": "Olé",
     "data": "2026-11-18T19:46:50+00:00",
@@ -559,9 +548,9 @@
     2,
     2,
     3,
-    3
+    4
    ],
-   "crescita": 0,
+   "crescita": 1,
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
@@ -570,7 +559,7 @@
    "lingue": [
     "es"
    ],
-   "n_fonti": 3,
+   "n_fonti": 4,
    "prima_segnalazione": {
     "fonte": "Olé",
     "paese": "AR",
@@ -604,14 +593,23 @@
      "data": "2026-11-20T11:08:36+00:00",
      "tipo": "giornale",
      "origine": "rss"
+    },
+    {
+     "fonte": "Clarín",
+     "link": "https://www.clarin.com/deportes/velez-vs-belgrano-playoffs-torneo-clausura-vivo-hora-ver-partido-octavos-final_0_Xe8SVIwU07.html",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-20T18:09:22+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 0,
-    "estero": 3,
+    "estero": 4,
     "paesi_esteri": 1,
     "continenti": {
-     "Americhe": 3
+     "Americhe": 4
     }
    },
    "punto_cieco": ""
@@ -181822,7 +181820,7 @@
   }
  ],
  "dati": {
-  "articoli_analizzati": 41843,
+  "articoli_analizzati": 41764,
   "storie": 400,
   "paesi_coperti": 98,
   "fonti_diverse": 301,
@@ -181830,22 +181828,22 @@
    [
     "AR",
     "Argentina",
-    5747
+    5725
    ],
    [
     "DE",
     "Germania",
-    3578
+    3579
    ],
    [
     "BR",
     "Brasile",
-    3516
+    3499
    ],
    [
     "FR",
     "Francia",
-    2928
+    2920
    ],
    [
     "IT",
@@ -181855,37 +181853,37 @@
    [
     "US",
     "Stati Uniti",
-    2399
+    2396
    ],
    [
     "GB",
     "Regno Unito",
-    1676
+    1672
    ],
    [
     "ES",
     "Spagna",
-    1508
+    1499
    ],
    [
     "PY",
     "Paraguay",
-    1190
+    1183
    ],
    [
     "IN",
     "India",
-    1014
+    1024
    ],
    [
     "NG",
     "Nigeria",
-    962
+    956
    ],
    [
     "AU",
     "Australia",
-    895
+    890
    ],
    [
     "PH",
@@ -181895,32 +181893,32 @@
    [
     "MX",
     "Messico",
-    615
+    612
    ],
    [
     "CO",
     "Colombia",
-    580
+    577
    ],
    [
     "BE",
     "Belgio",
-    485
+    486
    ],
    [
     "SG",
     "Singapore",
-    449
+    450
    ],
    [
     "GH",
     "Ghana",
-    437
+    438
    ],
    [
     "EC",
     "Ecuador",
-    412
+    414
    ],
    [
     "RU",
@@ -181928,13 +181926,13 @@
     388
    ],
    [
-    "RS",
-    "Serbia",
-    369
-   ],
-   [
     "JP",
     "Giappone",
+    367
+   ],
+   [
+    "RS",
+    "Serbia",
     367
    ],
    [
@@ -181943,28 +181941,28 @@
     364
    ],
    [
-    "CA",
-    "Canada",
-    357
-   ],
-   [
     "SE",
     "Svezia",
     357
+   ],
+   [
+    "NZ",
+    "Nuova Zelanda",
+    356
    ]
   ],
   "per_lingua": [
    [
     "en",
-    16197
+    16193
    ],
    [
     "es",
-    9939
+    9894
    ],
    [
     "pt",
-    3880
+    3863
    ],
    [
     "de",
@@ -181972,7 +181970,7 @@
    ],
    [
     "fr",
-    3165
+    3160
    ],
    [
     "it",
@@ -181980,7 +181978,7 @@
    ],
    [
     "nl",
-    385
+    384
    ],
    [
     "pl",
@@ -181988,11 +181986,11 @@
    ],
    [
     "sv",
-    225
+    224
    ],
    [
     "fi",
-    196
+    194
    ],
    [
     "ja",
@@ -182006,7 +182004,7 @@
   "per_categoria": [
    [
     "Altro",
-    183
+    186
    ],
    [
     "Politica",
@@ -182014,179 +182012,179 @@
    ],
    [
     "Esteri e conflitti",
-    68
+    69
    ],
    [
     "Cronaca",
-    25
+    24
    ],
    [
     "Tecnologia e crypto",
-    20
+    19
    ],
    [
     "Sport",
-    11
+    10
    ],
    [
     "Società",
     9
    ],
    [
-    "Economia",
-    7
+    "Clima e ambiente",
+    6
    ],
    [
-    "Clima e ambiente",
+    "Economia",
     5
    ]
   ],
   "fonti_top": [
    [
     "Infobae",
-    4471
+    4449
    ],
    [
     "G1",
-    1673
+    1666
    ],
    [
     "ABC Color",
-    1190
+    1183
    ],
    [
     "New York Post",
-    788
+    786
    ],
    [
     "Die Zeit",
-    751
+    753
    ],
    [
     "BFMTV",
-    715
+    714
    ],
    [
     "La Nación",
-    654
+    653
    ],
    [
     "O Globo",
-    616
+    614
    ],
    [
     "El Universal",
-    615
+    612
    ],
    [
     "Globo Esporte",
-    613
+    610
    ],
    [
     "Handelsblatt",
-    542
+    541
    ],
    [
     "Der Tagesspiegel",
-    528
+    526
    ]
   ],
   "per_ora": [
    [
     23,
-    1052
+    996
    ],
    [
     22,
-    815
+    820
    ],
    [
     21,
-    823
+    824
    ],
    [
     20,
-    763
+    801
    ],
    [
     19,
-    777
+    732
    ],
    [
     18,
-    696
+    626
    ],
    [
     17,
-    505
+    470
    ],
    [
     16,
-    449
+    507
    ],
    [
     15,
-    510
+    518
    ],
    [
     14,
-    642
+    713
    ],
    [
     13,
-    701
+    635
    ],
    [
     12,
-    712
+    763
    ],
    [
     11,
-    729
+    743
    ],
    [
     10,
-    840
+    827
    ],
    [
     9,
-    858
+    952
    ],
    [
     8,
-    1086
+    1084
    ],
    [
     7,
-    1095
+    1078
    ],
    [
     6,
-    1114
+    1081
    ],
    [
     5,
-    1006
+    1024
    ],
    [
     4,
-    1121
+    1126
    ],
    [
     3,
-    1120
+    1126
    ],
    [
     2,
-    1097
+    1069
    ],
    [
     1,
-    1098
+    1100
    ],
    [
     0,
-    947
+    882
    ]
   ],
   "approvate_non_sul_sito": {
@@ -182201,13 +182199,17 @@
  "errori_fonti": [
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
-  "The East African: 404 Client Error: Not Found for url: https://www.theeastafrican.co.ke/rss.xml",
   "The Slovenia Times: 403 Client Error: Forbidden for url: https://sloveniatimes.com/feed",
+  "Khaama Press: 502 Server Error: Bad Gateway for url: https://www.khaama.com/feed/",
   "Khmer Times: 403 Client Error: Forbidden for url: https://www.khmertimeskh.com/feed/",
   "The Herald: 403 Client Error: Forbidden for url: https://www.heraldonline.co.zw/feed/",
   "La Prensa (Panama): 403 Client Error: Forbidden for url: https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
-  "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "Commissione europea: HTTPSConnectionPool(host='ec.europa.eu', port=443): Read timed out. (read timeout=20)",
+  "GDELT afghanistan: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)",
   "GDELT syria: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:syria&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
+  "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT libya: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:libya&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT democraticrepublicofthecongo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:democraticrepublicofthecongo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT angola: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:angola&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
