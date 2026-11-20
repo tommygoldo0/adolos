@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-20T19:48:55.487524+00:00",
+ "aggiornato": "2026-11-20T20:04:34.632815+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -142,26 +142,26 @@
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 82,
+   "calore": 85,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
    "prima": {
-    "fonte": "n-tv",
-    "data": "2026-11-18T19:51:23+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.n-tv.de/politik/Ukraine-nutzte-fliegende-Modems-fuer-Angriff-auf-Krim-Bruecke-id31550423.html"
-   },
-   "conferma": {
     "fonte": "ORF",
     "data": "2026-11-18T23:01:46+00:00",
-    "dopo_min": 190
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://orf.at/stories/3448615/"
+   },
+   "conferma": {
+    "fonte": "Handelsblatt",
+    "data": "2026-11-18T23:22:22+00:00",
+    "dopo_min": 21
    },
    "curva": [
     1,
-    5,
-    8,
+    7,
+    9,
     9,
     9,
     9,
@@ -185,21 +185,12 @@
    ],
    "n_fonti": 10,
    "prima_segnalazione": {
-    "fonte": "n-tv",
-    "paese": "DE",
-    "data": "2026-11-18T19:51:23+00:00"
+    "fonte": "ORF",
+    "paese": "AT",
+    "data": "2026-11-18T23:01:46+00:00"
    },
-   "aggiornata": "2026-11-20T17:25:33+00:00",
+   "aggiornata": "2026-11-20T19:46:51+00:00",
    "fonti": [
-    {
-     "fonte": "n-tv",
-     "link": "https://www.n-tv.de/politik/Ukraine-nutzte-fliegende-Modems-fuer-Angriff-auf-Krim-Bruecke-id31550423.html",
-     "paese": "DE",
-     "lingua": "de",
-     "data": "2026-11-18T19:51:23+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
     {
      "fonte": "ORF",
      "link": "https://orf.at/stories/3448615/",
@@ -233,6 +224,15 @@
      "paese": "DE",
      "lingua": "de",
      "data": "2026-11-18T23:23:34+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "n-tv",
+     "link": "https://www.n-tv.de/politik/Russland-bestaetigt-Attacke-Neuer-Angriff-auf-die-Krim-Bruecke-Zugverkehr-eingestellt-id31550758.html",
+     "paese": "DE",
+     "lingua": "de",
+     "data": "2026-11-19T00:43:20+00:00",
      "tipo": "giornale",
      "origine": "rss"
     },
@@ -181819,7 +181819,7 @@
   }
  ],
  "dati": {
-  "articoli_analizzati": 41704,
+  "articoli_analizzati": 41661,
   "storie": 400,
   "paesi_coperti": 98,
   "fonti_diverse": 301,
@@ -181827,82 +181827,82 @@
    [
     "AR",
     "Argentina",
-    5704
+    5690
    ],
    [
     "DE",
     "Germania",
-    3597
+    3605
    ],
    [
     "BR",
     "Brasile",
-    3464
+    3449
    ],
    [
     "FR",
     "Francia",
-    2928
+    2926
    ],
    [
     "IT",
     "Italia",
-    2748
+    2743
    ],
    [
     "US",
     "Stati Uniti",
-    2389
+    2386
    ],
    [
     "GB",
     "Regno Unito",
-    1676
+    1669
    ],
    [
     "ES",
     "Spagna",
-    1491
+    1493
    ],
    [
     "PY",
     "Paraguay",
-    1177
+    1179
    ],
    [
     "IN",
     "India",
-    1017
+    1018
    ],
    [
     "NG",
     "Nigeria",
-    957
+    958
    ],
    [
     "AU",
     "Australia",
-    886
+    885
    ],
    [
     "PH",
     "Filippine",
-    639
+    638
    ],
    [
     "MX",
     "Messico",
-    606
+    607
    ],
    [
     "CO",
     "Colombia",
-    579
+    580
    ],
    [
     "BE",
     "Belgio",
-    489
+    486
    ],
    [
     "SG",
@@ -181912,32 +181912,32 @@
    [
     "GH",
     "Ghana",
-    436
+    434
    ],
    [
     "EC",
     "Ecuador",
-    410
+    407
    ],
    [
     "RU",
     "Russia",
-    390
-   ],
-   [
-    "JP",
-    "Giappone",
-    367
+    391
    ],
    [
     "RS",
     "Serbia",
-    365
+    367
+   ],
+   [
+    "JP",
+    "Giappone",
+    366
    ],
    [
     "PT",
     "Portogallo",
-    363
+    365
    ],
    [
     "NZ",
@@ -181947,25 +181947,25 @@
    [
     "CA",
     "Canada",
-    353
+    352
    ]
   ],
   "per_lingua": [
    [
     "en",
-    16181
+    16171
    ],
    [
     "es",
-    9852
+    9836
    ],
    [
     "de",
-    3880
+    3887
    ],
    [
     "pt",
-    3827
+    3814
    ],
    [
     "fr",
@@ -181973,11 +181973,11 @@
    ],
    [
     "it",
-    2560
+    2557
    ],
    [
     "nl",
-    385
+    381
    ],
    [
     "pl",
@@ -181985,7 +181985,7 @@
    ],
    [
     "sv",
-    221
+    218
    ],
    [
     "fi",
@@ -181993,7 +181993,7 @@
    ],
    [
     "ja",
-    192
+    191
    ],
    [
     "el",
@@ -182003,19 +182003,19 @@
   "per_categoria": [
    [
     "Altro",
-    172
+    175
    ],
    [
     "Politica",
-    76
+    80
    ],
    [
     "Esteri e conflitti",
-    68
+    66
    ],
    [
     "Cronaca",
-    27
+    26
    ],
    [
     "Tecnologia e crypto",
@@ -182023,11 +182023,11 @@
    ],
    [
     "Società",
-    13
+    11
    ],
    [
     "Sport",
-    12
+    11
    ],
    [
     "Clima e ambiente",
@@ -182035,155 +182035,155 @@
    ],
    [
     "Economia",
-    6
+    5
    ]
   ],
   "fonti_top": [
    [
     "Infobae",
-    4432
+    4415
    ],
    [
     "G1",
-    1644
+    1640
    ],
    [
     "ABC Color",
-    1177
+    1179
    ],
    [
     "New York Post",
-    782
+    779
    ],
    [
     "Die Zeit",
-    752
+    754
    ],
    [
     "BFMTV",
-    709
+    705
    ],
    [
     "La Nación",
-    650
+    643
    ],
    [
     "El Universal",
-    606
-   ],
-   [
-    "O Globo",
-    606
+    607
    ],
    [
     "Globo Esporte",
-    605
+    603
+   ],
+   [
+    "O Globo",
+    601
    ],
    [
     "Handelsblatt",
-    547
+    548
    ],
    [
     "Der Tagesspiegel",
-    529
+    531
    ]
   ],
   "per_ora": [
    [
     23,
-    823
-   ],
-   [
-    22,
     821
    ],
    [
+    22,
+    829
+   ],
+   [
     21,
-    758
+    796
    ],
    [
     20,
-    779
+    736
    ],
    [
     19,
-    696
+    630
    ],
    [
     18,
-    500
+    469
    ],
    [
     17,
-    449
+    506
    ],
    [
     16,
-    512
+    515
    ],
    [
     15,
-    640
+    705
    ],
    [
     14,
-    703
+    637
    ],
    [
     13,
-    712
+    767
    ],
    [
     12,
-    724
+    738
    ],
    [
     11,
-    841
+    825
    ],
    [
     10,
-    861
+    942
    ],
    [
     9,
-    1100
+    1092
    ],
    [
     8,
-    1091
+    1071
    ],
    [
     7,
-    1121
+    1082
    ],
    [
     6,
-    997
+    1025
    ],
    [
     5,
-    1115
+    1125
    ],
    [
     4,
-    1121
+    1127
    ],
    [
     3,
-    1088
+    1063
    ],
    [
     2,
-    1081
+    1094
    ],
    [
     1,
-    1037
+    994
    ],
    [
     0,
-    793
+    740
    ]
   ],
   "approvate_non_sul_sito": {
@@ -182198,11 +182198,13 @@
  "errori_fonti": [
   "CBC News: HTTPSConnectionPool(host='www.cbc.ca', port=443): Read timed out. (read timeout=20)",
   "Público: 404 Client Error: Not Found for url: https://www.publico.pt/rss",
-  "The East African: 404 Client Error: Not Found for url: https://www.theeastafrican.co.ke/rss.xml",
+  "TVN24: 403 Client Error: Forbidden for url: https://tvn24.pl/najnowsze.xml",
   "The Slovenia Times: 403 Client Error: Forbidden for url: https://sloveniatimes.com/feed",
+  "Khaama Press: 502 Server Error: Bad Gateway for url: https://www.khaama.com/feed/",
   "Khmer Times: 403 Client Error: Forbidden for url: https://www.khmertimeskh.com/feed/",
   "The Herald: 403 Client Error: Forbidden for url: https://www.heraldonline.co.zw/feed/",
   "La Prensa (Panama): 403 Client Error: Forbidden for url: https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
+  "Commissione europea: HTTPSConnectionPool(host='ec.europa.eu', port=443): Read timed out. (read timeout=20)",
   "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT syria: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:syria&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
   "GDELT sudan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:sudan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
