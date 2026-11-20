@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-11-20T00:34:46.932246+00:00",
+ "aggiornato": "2026-11-20T00:51:49.940467+00:00",
  "modalita": "dal_vivo",
  "paesi_nomi": {
   "US": "Stati Uniti",
@@ -400,7 +400,7 @@
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 85,
+   "calore": 84,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -719,7 +719,7 @@
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 63,
+   "calore": 62,
    "stato": "confermato",
    "attendibilita": 99,
    "livello": "Certa",
@@ -901,7 +901,7 @@
     1,
     1,
     2,
-    5,
+    6,
     8,
     8,
     8
@@ -1015,7 +1015,7 @@
    "categoria": "Altro",
    "curiosita": false,
    "sezione": "Sport",
-   "calore": 58,
+   "calore": 57,
    "stato": "confermato",
    "attendibilita": 60,
    "livello": "Prime conferme",
@@ -1098,7 +1098,7 @@
    "categoria": "Esteri e conflitti",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 57,
+   "calore": 56,
    "stato": "confermato",
    "attendibilita": 67,
    "livello": "Confermata",
@@ -1552,71 +1552,85 @@
    "punto_cieco": ""
   },
   {
-   "id": "1cbee4561b",
-   "titolo": "Scaloni modifica il programma dell'Argentina per il maltempo prima dell'amichevole con la Costa Rica",
-   "lingua": "pt",
+   "id": "09959a50d5",
+   "titolo": "Temi del giorno di EFE Internazionale di sabato 14 novembre (12:00 GMT)",
+   "lingua": "es",
    "categoria": "Altro",
    "curiosita": false,
-   "sezione": "Sport",
+   "sezione": "Mondo",
    "calore": 48,
    "stato": "confermato",
-   "attendibilita": 42,
-   "livello": "Una fonte",
+   "attendibilita": 52,
+   "livello": "Prime conferme",
    "prima": {
-    "fonte": "Globo Esporte",
-    "data": "2026-11-19T13:18:48+00:00",
+    "fonte": "Infobae",
+    "data": "2026-11-18T02:15:55+00:00",
     "tipo": "giornale",
     "veloce": false,
-    "link": "https://ge.globo.com/sc/futebol/brasileirao-serie-b/jogo/22-11-2026/criciuma-fortaleza.ghtml"
+    "link": "https://www.infobae.com/america/agencias/2026/11/18/miercoles-18-de-noviembre-de-2026-0200-gmt/"
    },
-   "conferma": null,
+   "conferma": {
+    "fonte": "ABC Color",
+    "data": "2026-11-18T13:05:18+00:00",
+    "dopo_min": 649
+   },
    "curva": [
     1,
     1,
     1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1,
-    1
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
    ],
    "crescita": 0,
    "pubblicata": true,
    "approvata_a_mano": false,
    "paesi": [
-    "BR"
+    "AR",
+    "PY"
    ],
    "lingue": [
-    "pt"
+    "es"
    ],
-   "n_fonti": 1,
+   "n_fonti": 2,
    "prima_segnalazione": {
-    "fonte": "Globo Esporte",
-    "paese": "BR",
-    "data": "2026-11-19T13:18:48+00:00"
+    "fonte": "Infobae",
+    "paese": "AR",
+    "data": "2026-11-18T02:15:55+00:00"
    },
-   "aggiornata": "2026-11-20T00:21:41+00:00",
+   "aggiornata": "2026-11-20T00:31:24+00:00",
    "fonti": [
     {
-     "fonte": "Globo Esporte",
-     "link": "https://ge.globo.com/sc/futebol/brasileirao-serie-b/jogo/22-11-2026/criciuma-fortaleza.ghtml",
-     "paese": "BR",
-     "lingua": "pt",
-     "data": "2026-11-19T13:18:48+00:00",
+     "fonte": "Infobae",
+     "link": "https://www.infobae.com/america/agencias/2026/11/18/miercoles-18-de-noviembre-de-2026-0200-gmt/",
+     "paese": "AR",
+     "lingua": "es",
+     "data": "2026-11-18T02:15:55+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    },
+    {
+     "fonte": "ABC Color",
+     "link": "https://www.abc.com.py/deportes/polideportivo/2026/11/18/miercoles-18-de-noviembre-de-2026/",
+     "paese": "PY",
+     "lingua": "es",
+     "data": "2026-11-18T13:05:18+00:00",
      "tipo": "giornale",
      "origine": "rss"
     }
    ],
    "copertura": {
     "italia": 0,
-    "estero": 1,
-    "paesi_esteri": 1,
+    "estero": 2,
+    "paesi_esteri": 2,
     "continenti": {
-     "Americhe": 1
+     "Americhe": 2
     }
    },
    "punto_cieco": ""
@@ -1738,13 +1752,83 @@
    "punto_cieco": "italia"
   },
   {
+   "id": "1cbee4561b",
+   "titolo": "Scaloni modifica il programma dell'Argentina per il maltempo prima dell'amichevole con la Costa Rica",
+   "lingua": "pt",
+   "categoria": "Altro",
+   "curiosita": false,
+   "sezione": "Sport",
+   "calore": 47,
+   "stato": "confermato",
+   "attendibilita": 42,
+   "livello": "Una fonte",
+   "prima": {
+    "fonte": "Globo Esporte",
+    "data": "2026-11-19T13:18:48+00:00",
+    "tipo": "giornale",
+    "veloce": false,
+    "link": "https://ge.globo.com/sc/futebol/brasileirao-serie-b/jogo/22-11-2026/criciuma-fortaleza.ghtml"
+   },
+   "conferma": null,
+   "curva": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "crescita": 0,
+   "pubblicata": true,
+   "approvata_a_mano": false,
+   "paesi": [
+    "BR"
+   ],
+   "lingue": [
+    "pt"
+   ],
+   "n_fonti": 1,
+   "prima_segnalazione": {
+    "fonte": "Globo Esporte",
+    "paese": "BR",
+    "data": "2026-11-19T13:18:48+00:00"
+   },
+   "aggiornata": "2026-11-20T00:42:33+00:00",
+   "fonti": [
+    {
+     "fonte": "Globo Esporte",
+     "link": "https://ge.globo.com/sc/futebol/brasileirao-serie-b/jogo/22-11-2026/criciuma-fortaleza.ghtml",
+     "paese": "BR",
+     "lingua": "pt",
+     "data": "2026-11-19T13:18:48+00:00",
+     "tipo": "giornale",
+     "origine": "rss"
+    }
+   ],
+   "copertura": {
+    "italia": 0,
+    "estero": 1,
+    "paesi_esteri": 1,
+    "continenti": {
+     "Americhe": 1
+    }
+   },
+   "punto_cieco": ""
+  },
+  {
    "id": "e0d6f0e152",
    "titolo": "Allerta gialla per vento e temporali in Sarthe martedì, non esclusa l'arancione",
    "lingua": "fr",
    "categoria": "Clima e ambiente",
    "curiosita": false,
    "sezione": "Mondo",
-   "calore": 44,
+   "calore": 43,
    "stato": "confermato",
    "attendibilita": 84,
    "livello": "Confermata",
@@ -2455,91 +2539,6 @@
     }
    },
    "punto_cieco": "italia",
-   "archivio": true
-  },
-  {
-   "id": "09959a50d5",
-   "titolo": "Temi del giorno di EFE Internazionale di sabato 14 novembre (12:00 GMT)",
-   "lingua": "es",
-   "categoria": "Altro",
-   "curiosita": false,
-   "sezione": "Mondo",
-   "calore": 20,
-   "stato": "confermato",
-   "attendibilita": 52,
-   "livello": "Prime conferme",
-   "prima": {
-    "fonte": "Infobae",
-    "data": "2026-11-17T23:16:13+00:00",
-    "tipo": "giornale",
-    "veloce": false,
-    "link": "https://www.infobae.com/espana/agencias/2026/11/17/hoy-sera-noticia-miercoles-18-de-noviembre/"
-   },
-   "conferma": {
-    "fonte": "ABC Color",
-    "data": "2026-11-18T13:05:18+00:00",
-    "dopo_min": 829
-   },
-   "curva": [
-    1,
-    1,
-    1,
-    1,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2,
-    2
-   ],
-   "crescita": 0,
-   "pubblicata": true,
-   "approvata_a_mano": false,
-   "paesi": [
-    "AR",
-    "PY"
-   ],
-   "lingue": [
-    "es"
-   ],
-   "n_fonti": 2,
-   "prima_segnalazione": {
-    "fonte": "Infobae",
-    "paese": "AR",
-    "data": "2026-11-17T23:16:13+00:00"
-   },
-   "aggiornata": "2026-11-19T20:18:43+00:00",
-   "fonti": [
-    {
-     "fonte": "Infobae",
-     "link": "https://www.infobae.com/espana/agencias/2026/11/17/hoy-sera-noticia-miercoles-18-de-noviembre/",
-     "paese": "AR",
-     "lingua": "es",
-     "data": "2026-11-17T23:16:13+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    },
-    {
-     "fonte": "ABC Color",
-     "link": "https://www.abc.com.py/deportes/polideportivo/2026/11/18/miercoles-18-de-noviembre-de-2026/",
-     "paese": "PY",
-     "lingua": "es",
-     "data": "2026-11-18T13:05:18+00:00",
-     "tipo": "giornale",
-     "origine": "rss"
-    }
-   ],
-   "copertura": {
-    "italia": 0,
-    "estero": 2,
-    "paesi_esteri": 2,
-    "continenti": {
-     "Americhe": 2
-    }
-   },
-   "punto_cieco": "",
    "archivio": true
   },
   {
@@ -181965,20 +181964,20 @@
   }
  ],
  "dati": {
-  "articoli_analizzati": 42943,
+  "articoli_analizzati": 42930,
   "storie": 400,
   "paesi_coperti": 97,
-  "fonti_diverse": 276,
+  "fonti_diverse": 280,
   "per_paese": [
    [
     "AR",
     "Argentina",
-    5829
+    5824
    ],
    [
     "BR",
     "Brasile",
-    3742
+    3733
    ],
    [
     "DE",
@@ -181988,47 +181987,47 @@
    [
     "FR",
     "Francia",
-    2926
+    2924
    ],
    [
     "IT",
     "Italia",
-    2881
+    2880
    ],
    [
     "US",
     "Stati Uniti",
-    2483
+    2475
    ],
    [
     "GB",
     "Regno Unito",
-    1674
+    1672
    ],
    [
     "ES",
     "Spagna",
-    1481
+    1485
    ],
    [
     "PY",
     "Paraguay",
-    1236
+    1238
    ],
    [
     "IN",
     "India",
-    1013
+    1020
    ],
    [
     "NG",
     "Nigeria",
-    969
+    954
    ],
    [
     "AU",
     "Australia",
-    941
+    939
    ],
    [
     "PH",
@@ -182038,32 +182037,32 @@
    [
     "MX",
     "Messico",
-    658
+    654
    ],
    [
     "CO",
     "Colombia",
-    598
+    597
    ],
    [
     "BE",
     "Belgio",
-    500
+    501
    ],
    [
     "SG",
     "Singapore",
-    438
+    442
    ],
    [
     "EC",
     "Ecuador",
-    438
+    440
    ],
    [
     "GH",
     "Ghana",
-    408
+    409
    ],
    [
     "RU",
@@ -182071,14 +182070,14 @@
     387
    ],
    [
-    "NZ",
-    "Nuova Zelanda",
+    "CA",
+    "Canada",
     380
    ],
    [
-    "CA",
-    "Canada",
-    377
+    "NZ",
+    "Nuova Zelanda",
+    378
    ],
    [
     "SE",
@@ -182088,30 +182087,30 @@
    [
     "PT",
     "Portogallo",
-    372
+    371
    ],
    [
     "JP",
     "Giappone",
-    371
+    370
    ]
   ],
   "per_lingua": [
    [
     "en",
-    16613
+    16601
    ],
    [
     "es",
-    10146
+    10145
    ],
    [
     "pt",
-    4114
+    4104
    ],
    [
     "de",
-    3942
+    3943
    ],
    [
     "fr",
@@ -182119,7 +182118,7 @@
    ],
    [
     "it",
-    2695
+    2694
    ],
    [
     "nl",
@@ -182149,23 +182148,23 @@
   "per_categoria": [
    [
     "Altro",
-    186
+    189
    ],
    [
     "Politica",
-    69
+    71
    ],
    [
     "Esteri e conflitti",
-    68
-   ],
-   [
-    "Cronaca",
-    23
+    65
    ],
    [
     "Tecnologia e crypto",
     22
+   ],
+   [
+    "Cronaca",
+    21
    ],
    [
     "Sport",
@@ -182173,11 +182172,11 @@
    ],
    [
     "Società",
-    9
+    8
    ],
    [
     "Economia",
-    6
+    7
    ],
    [
     "Clima e ambiente",
@@ -182187,23 +182186,23 @@
   "fonti_top": [
    [
     "Infobae",
-    4502
+    4504
    ],
    [
     "G1",
-    1801
+    1791
    ],
    [
     "ABC Color",
-    1236
+    1238
    ],
    [
     "New York Post",
-    788
+    787
    ],
    [
     "Die Zeit",
-    762
+    763
    ],
    [
     "BFMTV",
@@ -182211,15 +182210,15 @@
    ],
    [
     "O Globo",
-    707
+    710
    ],
    [
     "La Nación",
-    698
+    696
    ],
    [
     "El Universal",
-    658
+    654
    ],
    [
     "Globo Esporte",
@@ -182231,105 +182230,105 @@
    ],
    [
     "Semana",
-    539
+    538
    ]
   ],
   "per_ora": [
    [
     23,
-    534
+    488
    ],
    [
     22,
-    427
+    442
    ],
    [
     21,
-    543
+    554
    ],
    [
     20,
-    640
+    654
    ],
    [
     19,
-    734
+    747
    ],
    [
     18,
-    798
+    805
    ],
    [
     17,
-    748
+    783
    ],
    [
     16,
-    821
+    856
    ],
    [
     15,
-    972
+    981
    ],
    [
     14,
-    1103
+    1147
    ],
    [
     13,
-    1257
+    1247
    ],
    [
     12,
-    1135
+    1177
    ],
    [
     11,
-    1153
+    1120
    ],
    [
     10,
-    1182
+    1221
    ],
    [
     9,
-    1206
+    1153
    ],
    [
     8,
-    1160
+    1205
    ],
    [
     7,
-    1172
+    1099
    ],
    [
     6,
-    1077
+    1060
    ],
    [
     5,
-    1037
+    1030
    ],
    [
     4,
-    859
+    828
    ],
    [
     3,
-    797
+    837
    ],
    [
     2,
-    818
+    741
    ],
    [
     1,
-    737
+    746
    ],
    [
     0,
-    589
+    566
    ]
   ],
   "approvate_non_sul_sito": {
@@ -182348,10 +182347,12 @@
   "Khmer Times: 403 Client Error: Forbidden for url: https://www.khmertimeskh.com/feed/",
   "The Herald: 403 Client Error: Forbidden for url: https://www.heraldonline.co.zw/feed/",
   "La Prensa (Panama): 403 Client Error: Forbidden for url: https://www.prensa.com/arc/outboundfeeds/rss/?outputType=xml",
-  "GDELT moldova: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:moldova&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT bosniaandherzegovina: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:bosniaandherzegovina&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT montenegro: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:montenegro&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT kosovo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:kosovo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
-  "GDELT iceland: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:iceland&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
+  "GDELT afghanistan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:afghanistan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT yemen: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:yemen&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT sudan: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:sudan&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT democraticrepublicofthecongo: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:democraticrepublicofthecongo&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT rwanda: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:rwanda&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT myanmar: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:myanmar&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h",
+  "GDELT cambodia: 429 Client Error: Too Many Requests for url: https://api.gdeltproject.org/api/v2/doc/doc?query=sourcecountry:cambodia&mode=artlist&format=json&maxrecords=40&sort=datedesc&timespan=6h"
  ]
 }
