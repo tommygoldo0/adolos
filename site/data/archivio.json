@@ -150951,7 +150951,7 @@
   "categoria": "Altro",
   "curiosita": false,
   "sezione": "Sport",
-  "calore": 48,
+  "calore": 47,
   "stato": "confermato",
   "attendibilita": 42,
   "livello": "Una fonte",
@@ -153824,62 +153824,54 @@
   "categoria": "Esteri e conflitti",
   "curiosita": false,
   "sezione": "Mondo",
-  "calore": 42,
+  "calore": 50,
   "stato": "confermato",
-  "attendibilita": 96,
-  "livello": "Certa",
+  "attendibilita": 81,
+  "livello": "Confermata",
   "prima": {
-   "fonte": "n-tv",
-   "data": "2026-11-19T00:43:20+00:00",
-   "tipo": "giornale",
-   "veloce": false,
-   "link": "https://www.n-tv.de/politik/Russland-bestaetigt-Attacke-Neuer-Angriff-auf-die-Krim-Bruecke-Zugverkehr-eingestellt-id31550758.html"
-  },
-  "conferma": {
    "fonte": "Der Spiegel",
    "data": "2026-11-19T01:50:00+00:00",
-   "dopo_min": 67
+   "tipo": "giornale",
+   "veloce": false,
+   "link": "https://www.spiegel.de/ausland/ukraine-krieg-nach-erneutem-angriff-steht-zugverkehr-auf-krimbruecke-still-a-9e01117c-8373-480f-ad57-6c08a2bd1af7#ref=rss"
+  },
+  "conferma": {
+   "fonte": "Süddeutsche Zeitung",
+   "data": "2026-11-19T02:16:57+00:00",
+   "dopo_min": 27
   },
   "curva": [
    1,
+   2,
+   3,
+   4,
+   4,
+   4,
+   4,
+   5,
+   5,
+   5,
    6,
-   7,
-   8,
-   8,
-   8,
-   8,
-   8,
-   8,
-   8,
-   8,
-   8
+   6
   ],
   "crescita": 0,
   "pubblicata": true,
   "approvata_a_mano": false,
   "paesi": [
+   "CH",
    "DE"
   ],
   "lingue": [
    "de"
   ],
-  "n_fonti": 8,
+  "n_fonti": 6,
   "prima_segnalazione": {
-   "fonte": "n-tv",
+   "fonte": "Der Spiegel",
    "paese": "DE",
-   "data": "2026-11-19T00:43:20+00:00"
+   "data": "2026-11-19T01:50:00+00:00"
   },
-  "aggiornata": "2026-11-20T09:00:00+00:00",
+  "aggiornata": "2026-11-20T19:46:51+00:00",
   "fonti": [
-   {
-    "fonte": "n-tv",
-    "link": "https://www.n-tv.de/politik/Russland-bestaetigt-Attacke-Neuer-Angriff-auf-die-Krim-Bruecke-Zugverkehr-eingestellt-id31550758.html",
-    "paese": "DE",
-    "lingua": "de",
-    "data": "2026-11-19T00:43:20+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
    {
     "fonte": "Der Spiegel",
     "link": "https://www.spiegel.de/ausland/ukraine-krieg-nach-erneutem-angriff-steht-zugverkehr-auf-krimbruecke-still-a-9e01117c-8373-480f-ad57-6c08a2bd1af7#ref=rss",
@@ -153895,33 +153887,6 @@
     "paese": "DE",
     "lingua": "de",
     "data": "2026-11-19T02:16:57+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Die Zeit",
-    "link": "https://www.zeit.de/politik/ausland/2026-11/krim-bruecke-kertsch-bruecke-russland-ukraine-angriffe",
-    "paese": "DE",
-    "lingua": "de",
-    "data": "2026-11-19T03:19:59+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Der Tagesspiegel",
-    "link": "https://www.tagesspiegel.de/internationales/der-dritte-angriff-in-nur-einer-woche-russland-muss-erneut-die-krim-brucke-sperren-16301430.html",
-    "paese": "DE",
-    "lingua": "de",
-    "data": "2026-11-19T03:51:27+00:00",
-    "tipo": "giornale",
-    "origine": "rss"
-   },
-   {
-    "fonte": "Tagesschau",
-    "link": "https://www.tagesschau.de/ausland/europa/krim-bruecke-zug-100.html",
-    "paese": "DE",
-    "lingua": "de",
-    "data": "2026-11-19T04:28:24+00:00",
     "tipo": "giornale",
     "origine": "rss"
    },
@@ -153942,14 +153907,32 @@
     "data": "2026-11-19T13:15:00+00:00",
     "tipo": "giornale",
     "origine": "rss"
+   },
+   {
+    "fonte": "NZZ",
+    "link": "https://www.nzz.ch/international/angriff-auf-krim-bruecke-ukraine-setzt-auf-fliegende-funktuerme-statt-starlink-ld.10068407",
+    "paese": "CH",
+    "lingua": "de",
+    "data": "2026-11-20T04:30:00+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
+   },
+   {
+    "fonte": "Die Zeit",
+    "link": "https://www.zeit.de/news/2026-11/20/regierung-drei-russische-flugobjekte-in-polen-abgestuerzt",
+    "paese": "DE",
+    "lingua": "de",
+    "data": "2026-11-20T19:46:51+00:00",
+    "tipo": "giornale",
+    "origine": "rss"
    }
   ],
   "copertura": {
    "italia": 0,
-   "estero": 8,
-   "paesi_esteri": 1,
+   "estero": 6,
+   "paesi_esteri": 2,
    "continenti": {
-    "Europa": 8
+    "Europa": 6
    }
   },
   "punto_cieco": ""
@@ -170048,7 +170031,7 @@
    "paese": "AR",
    "data": "2026-11-19T11:00:00+00:00"
   },
-  "aggiornata": "2026-11-21T00:22:54+00:00",
+  "aggiornata": "2026-11-21T00:30:41+00:00",
   "fonti": [
    {
     "fonte": "Olé",
@@ -170082,7 +170065,7 @@
     "link": "https://www.infobae.com/deportes/2026/11/20/velez-recibira-a-belgrano-de-cordoba-en-el-inicio-de-los-octavos-de-final-del-torneo-clausura-hora-tv-y-formaciones/",
     "paese": "AR",
     "lingua": "es",
-    "data": "2026-11-21T00:22:54+00:00",
+    "data": "2026-11-21T00:30:41+00:00",
     "tipo": "giornale",
     "origine": "rss"
    }
